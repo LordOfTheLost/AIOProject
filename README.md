@@ -3,6 +3,7 @@
 
 <a href="https://sourceforge.net/projects/aioproject/"]SF[/url]
 <a href="https://github.com/xerta555/Detach-Files/raw/master/Detach.txt">Detach.txt</a>
+<a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a>
 
 [size=3][color=crimson][b]AIO Project[/b][/color][/size] [offtop]<a href="https://sourceforge.net/projects/aioproject/"]SF[/url] || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK"]GD[/url] || (<a href="https://4pda.ru/forum/index.php?showuser=6892995/"]TG в профиле (беты и обсуждение)[/url])[/offtop]
 [b][color=teal]Версия AIOPFMD:[/color][/b] 25.04.21 (36).
