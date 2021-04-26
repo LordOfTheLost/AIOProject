@@ -823,7 +823,8 @@ TrebuchetQuickStep
 	- С подтверждением для каждого;
 	- Без подтверждением;
 
-<a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a>
+
+<h3 align=center><a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a></h3>
 
 [color=Teal]Полезная информация/Доп. Информация[/color][/b]
 <h3 align=center>Что на чем и где было протестировано</h3>
