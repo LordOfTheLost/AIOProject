@@ -16,13 +16,12 @@
 	- SqLite для модулей которым он нужен.
 * Описание работы, функционал: Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
 
-<img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="600" width="300"><br />
-
 <details> 
-  <summary>Удаление лаунчеров:</summary>
+  <summary>Скиншоты:</summary>
 
-![Alt text](https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1e)
-
+![](https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1e)
+![](https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1)
+![](https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1)
 
 </details>
 
