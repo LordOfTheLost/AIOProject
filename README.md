@@ -877,6 +877,7 @@ TrebuchetQuickStep
 • (//) - Если не выбирать этот пункт, будет выход/завершение работы патча.
 
 <h3 align=center>Связь (до связи) и отзывы/пожелания</h3>
+
 • Патчи буду добавляться/улучшаться по мере их нахождения/тестирования/времени и желания.  
 • Если есть проблемы/пожелания в <a href="https://4pda.ru/forum/index.php?act=qms&code=no">QMS</a> (желательно с логами если были ошибки или что-то не сработало как надо).  
 • Этот пост объединение трех постов из тем <a href="https://4pda.ru/forum/index.php?s=&showtopic=917843&view=findpost&p=83605714">Mi8</a>, <a href="https://4pda.ru/forum/index.php?s=&showtopic=894598&view=findpost&p=86009065">RN5</a> и <a href="https://4pda.ru/forum/index.php?s=&showtopic=959481&view=findpost&p=89516033">K20Pro</a>  
