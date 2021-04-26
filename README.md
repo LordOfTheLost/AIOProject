@@ -18,7 +18,7 @@
 • Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a>
 
 ## Принцип/Порядок работы AIOPFMD
-## UI: Pills/NavBar/Gboard Themes
+<h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
 • Пункт (All) (10-11) (\) - Установка разных видов/размеров жестовой "таблетки":
 	- Прозрачная зона таблетки;
 	- Не прозрачная зона таблетки;
