@@ -3,16 +3,16 @@
 <img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="600" width="300"><br />
 
 <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="@AIOProject">TG</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a>
-[b][color=teal]Версия AIOPFMD:[/color][/b] 25.04.21 (36).
-[b][color=teal]Версия AIOCPFMD:[/color][/b] 28.03.21 (32) (EOL).
-[b][color=teal]Версия AIOIARPFMD:[/color][/b] 28.03.21 (23) (EOL).
-[b][color=teal]Последние обновление:[/color][/b] 28.03.2021.
+[b][color=teal]Версия AIOPFMD:[/color][/b] 25.04.21 (36).<br>
+[b][color=teal]Версия AIOCPFMD:[/color][/b] 28.03.21 (32) (EOL).<br>
+[b][color=teal]Версия AIOIARPFMD:[/color][/b] 28.03.21 (23) (EOL).<br>
+[b][color=teal]Последние обновление:[/color][/b] 28.03.2021.<br>
 [b][color=teal]Разработчик:[/color][/b] <a href="https://4pda.ru/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
 [b][color=teal]Русский интерфейс:[/color][/b] Нет, и не имеет смысла.
 [b][color=teal]Технические требования:[/color][/b] Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) или TWRP. Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники). Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом)). SeLinux в Permissive (для аудиомодов как минимум), Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)) и SqLite для модулей которым он нужен.
 [b][color=teal]Описание работы, функционал:[/color][/b] Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
-* [color=Teal]Скриншоты[/color][/b]][attachment="22498046:AIOPFMD…21-(31).jpg"][attachment="22498045:AIOCPFM…21-(31).jpg"][attachment="22498044:AIOIARP…21-(22).jpg"][color=Teal]All In One Patch For More Devices (AIOPFMD)[/color][/b]]• В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.
-* • Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a>
+[color=Teal]Скриншоты[/color][/b]][attachment="22498046:AIOPFMD…21-(31).jpg"][attachment="22498045:AIOCPFM…21-(31).jpg"][attachment="22498044:AIOIARP…21-(22).jpg"][color=Teal]All In One Patch For More Devices (AIOPFMD)[/color][/b]]• В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.
+• Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a>
 
 <h3 align=center>Принцип/Порядок работы AIOPFMD</h3>
 <h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
