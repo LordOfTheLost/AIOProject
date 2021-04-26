@@ -18,6 +18,14 @@
 
 <img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="600" width="300"><br />
 
+<details> 
+  <summary>Удаление лаунчеров:</summary>
+
+![Alt text](https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1e)
+
+
+</details>
+
 ## All In One Patch For More Devices (AIOPFMD)
 * В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.<br>
 
