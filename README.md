@@ -1,14 +1,14 @@
 ## AIO Project
 
-<a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="@AIOProject">TG</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
-Версия AIOPFMD: 25.04.21 (36).<br>
-Версия AIOCPFMD: 28.03.21 (32) (EOL).<br>
-Версия AIOIARPFMD: 28.03.21 (23) (EOL).<br>
-Последние обновление: 28.03.2021.<br>
-Разработчик: <a href="https://4pda.ru/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.<br>
-Русский интерфейс: Нет, и не имеет смысла.<br>
-Технические требования: Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) или TWRP. Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники). Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом)). SeLinux в Permissive (для аудиомодов как минимум), Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)) и SqLite для модулей которым он нужен.<br>
-Описание работы, функционал: Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.<br>
+<a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="@AIOProject">TG</a> || <a href="@AIOProject_Chat>TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
+* Версия AIOPFMD: 25.04.21 (36).
+* Версия AIOCPFMD: 28.03.21 (32) (EOL).
+* Версия AIOIARPFMD: 28.03.21 (23) (EOL).
+* Последние обновление: 28.03.2021.
+* Разработчик: <a href="https://4pda.ru/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
+* Русский интерфейс: Нет, и не имеет смысла.
+* Технические требования: Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) или TWRP. Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники). Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом)). SeLinux в Permissive (для аудиомодов как минимум), Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)) и SqLite для модулей которым он нужен.
+* Описание работы, функционал: Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
 
 <img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="600" width="300"><br />
 
