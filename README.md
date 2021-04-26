@@ -841,12 +841,17 @@ TrebuchetQuickStep
 
 <h3 align=center>Принцип/Порядок работы AIOIARPFMD</h3>
 
+<details> 
+  <summary>Принцип/Порядок работы AIOIARPFMD</summary>
+
 * Пункт (All) - Начать удаление и установку;
 	- Режим удаления/replace - полная копия с AIOPFMD;
 	- Если Android ниже 10-ки предлагает установку Lawnchair;
 * Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
 	- С подтверждением для каждого;
 	- Без подтверждением;
+
+</details>
 
 
 <h3 align=center><a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a></h3>
