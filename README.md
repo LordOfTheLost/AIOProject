@@ -206,14 +206,14 @@
 	
 <h3 align=center>Audio: VFX(P)/DSP/DTS/AML/AN</h3>
 
-* Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - Установка ViperFX:
+* Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - Установка ViperFX:
 	- Установка ViperFX v2.5.0.5:
 	- Установка ViperFX v2.7.1.6;
 		- Если установка через MM, будет дан выбор:
 			- Установка в data/app;
 			- Установка в system/priv-app;
 * Пункт (All) - Установка ViperFX Presets;
-* Пункт (Only M) (5.1.1+) <a href="https://github.com/Magisk-Modules-Repo/ainur_jamesdsp">GITHUB</a> <a href="https://github.com/therealahrion/JamesDSPManager">GITHUB</a> <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> - Установка James DSP Manager:
+* Пункт (Only M) (5.1.1+) <a href="https://github.com/Magisk-Modules-Repo/ainur_jamesdsp">GITHUB</a> || <a href="https://github.com/therealahrion/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> - Установка James DSP Manager:
 	- Новый менеджер;
 	- Старый менеджер:
 		- Драйвера Full Feature;
@@ -221,8 +221,8 @@
 * Пункт (Only M) (9-11) <a href="https://forum.xda-developers.com/t/port-pie-dts-x-ultra-dts-headphone-x-27-03-update.3896233/">XDA</a> - Установка DTS HPX:
 	- Новый менеджер;
 	- Старый менеджер;
-* Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> - Установка Audio Modification Library;
-* Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
+* Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> - Установка Audio Modification Library;
+* Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
 * Пункт (All) - Установка Increase Bitrate - патчит все media_profiles*.xml в /vendor - Улучшает качество записи аудио во многих местах;
 
 <h3 align=center>Other Fixes: FBFM/FBFM/UAA</h3>
@@ -709,7 +709,7 @@
 <h3 align=center>Net: GPS/TTL/DNS/WB</h3>
 
 * Пункт (All) (Only MSM/SDM) <a href="https://github.com/Magisk-Modules-Repo/optmizedgpsconf">GITHUB</a> - Установка Global Optimized GPS (добавляет оптимизированные строки в gps.conf (поддержку CN оставил));
-* Пункт (Only M) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - Установка TTL Fix;
+* Пункт (Only M) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - Установка TTL Fix;
 * Пункт (All) - Установка Network Tweak - альтернативный DNS-сервер от Google или CloudFlare:
 	- Google и CloudFlare DNS;
 	- По отдельности:
@@ -719,26 +719,26 @@
 
 <h3 align=center>Utilities: BB/ZSigner/SELC/ASTE/CC</h3>
 
-* Пункт (All) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - Установка Busybox с активацией симлинков (для bin или xbin);
-* Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/zipsigner">GITHUB</a> <a href="https://forum.xda-developers.com/showthread.php?t=2239421&__cf_chl_jschl_tk__=4984b5a76074a8f92f17c55fee2071aa1574e768-1594480192-0-ATXVAJgNEEJLDRbUbS3P4jRknd7-87y5tw9mUcw2j7kUIuWKvH37sHd2Oyii9vwlK2Q9DPkZkpv-x5cOt_BLvYCk_tL_4nAeUjS0UMBrPyLD8Kc7hA0joixn6aAvHGrSnlYn4KjFKCmnrf6zX1uAo53Kbs-REH3waSfoI1Zdsj8sEIXmA5bsgRPuqirEXvB2T9TXYtt61Y4smtb2beJ3NxoXAjdZTM9G3VB89h8FhEmzdGycuafim2fS9tLKWCHlZoaiKtlGe2cEy7wU8j-RVJen3l91-_jFZdClbNRogoIy2U92RkejzrXO81FV-pANEp-8-Qe6YkXevo564gBm_ChO0TxyJEbMI9YoZLRlM5Av">XDA</a> - Установка ZipSigner и aapt;
+* Пункт (All) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - Установка Busybox с активацией симлинков (для bin или xbin);
+* Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/zipsigner">GITHUB</a> || <a href="https://forum.xda-developers.com/showthread.php?t=2239421&__cf_chl_jschl_tk__=4984b5a76074a8f92f17c55fee2071aa1574e768-1594480192-0-ATXVAJgNEEJLDRbUbS3P4jRknd7-87y5tw9mUcw2j7kUIuWKvH37sHd2Oyii9vwlK2Q9DPkZkpv-x5cOt_BLvYCk_tL_4nAeUjS0UMBrPyLD8Kc7hA0joixn6aAvHGrSnlYn4KjFKCmnrf6zX1uAo53Kbs-REH3waSfoI1Zdsj8sEIXmA5bsgRPuqirEXvB2T9TXYtt61Y4smtb2beJ3NxoXAjdZTM9G3VB89h8FhEmzdGycuafim2fS9tLKWCHlZoaiKtlGe2cEy7wU8j-RVJen3l91-_jFZdClbNRogoIy2U92RkejzrXO81FV-pANEp-8-Qe6YkXevo564gBm_ChO0TxyJEbMI9YoZLRlM5Av">XDA</a> - Установка ZipSigner и aapt;
 * Пункт (Only М) - Установка патча SeLinux Changer - что бы ViperFX и подобные программы нормально работали:
 	- Переключить в Permissive;
 	- Переключить в Enforcing;
-* Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);
+* Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);
 * Пункт (All) - Установка Cache Cleaner - микро аналог SdMaid через терминал - удаляет все пустые папки в /sdcard и подкаталогах, а так же некоторые не нужные временные папки с кешем и тд. (нужно в терминале написать su; CC);
-* Пункт (Only М In BootMode) <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> - Установка Detach - установка из под своего архива;
+* Пункт (Only М In BootMode) <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> - Установка Detach - установка из под своего архива;
 * Пункт (All) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - Установка ISQLite3 - необходим для некоторых модулей;
-* Пункт (Only М) <a href="https://github.com/Rikj000/mm">GITHUB</a> <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;
+* Пункт (Only М) <a href="https://github.com/Rikj000/mm">GITHUB</a> || <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;
 
 <h3 align=center>Other: GPay/DFO/STZD/DDVFE/FA</h3>
 
-* Пункт (All) <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
+* Пункт (All) <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
 * Пункт (All) Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;
 * Пункт (9-11) - Фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в TWRP, или принудительное отключение HIDE на GMS который не влияет на GPay:
 	- Перенос оверлеев (TWRP Only);
 	- UnHide Method (Only М); 
 * Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/Systemless_TZData">GITHUB</a> - Установка Systemless TZData - для обновления на не обновляемых tzdata в древних прошивках;
-* Пункт (Only TWRP) <a href="https://github.com/Zackptg5/Disable_Dm-Verity_ForceEncrypt">GITHUB</a> <a href="https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389/post77091359">XDA</a> - Установка Disable Dm Verity Force Encrypt из под своего бинирника;
+* Пункт (Only TWRP) <a href="https://github.com/Zackptg5/Disable_Dm-Verity_ForceEncrypt">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389/post77091359">XDA</a> - Установка Disable Dm Verity Force Encrypt из под своего бинирника;
 * Пункт (All) (\\) - Установка Fingerprint Actions Mod для многих прошивок с выборами (выбор появляется только если в телефоне есть сканер отпечатка пальца):
 	- Кнопка Включения;
 	- Включение экрана;
@@ -763,14 +763,14 @@
 * Пункт (Only М) (\\) <a href="https://4pda.ru/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - Установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;
 	- 1-й SafetyNet патч;
 	- 2-й SafetyNet патч <a href="https://forum.xda-developers.com/t/module-safetypatcher.3809879/">XDA</a>;
-	- 3-й SafetyNet патч (7-11) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
+	- 3-й SafetyNet патч (7-11) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> || <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
 * Пункт (All) (10-11) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro будет называться BASIC);
-* Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config - из под своего бинирника (об этом способе я в чейнджлоге упоминал);
+* Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config - из под своего бинирника (об этом способе я в чейнджлоге упоминал);
 
 <h3 align=center>Riru & EdXposed</h3>
 
 * Пункт (Only М) (8.1, 9.0, 10.0, 11.0) <a href="https://github.com/RikkaApps/Riru">GITHUB</a> - Установка Riru Core - Установка не из под своего архива;
-* Пункт (Only М) (8.1, 9.0, 10.0, 11.0) <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> - Установка EdXposed - Установка не из под своего архива:
+* Пункт (Only М) (8.1, 9.0, 10.0, 11.0) <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> - Установка EdXposed - Установка не из под своего архива:
 	- Если установка через MM, будет дан выбор на установку менеджера:
 		- Установка в /data/app;
 		- Установка в /system/priv-app;
@@ -802,7 +802,7 @@
 		- Вспышка и хардклавишы;
 		- Светодиод и хардклавишы;
 		- Светодиод, вспышка и хардклавишы.
-* Пункт (Only М) (6-11) <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;
+* Пункт (Only М) (6-11) <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;
 * Пункт (Only BootMode & Universal GMS Doze) - Проверка работы/оптимизации Universal GMS Doze;
 * Пункт (All) - Проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
 * Пункт (All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен, тот знает - работает как есть;
