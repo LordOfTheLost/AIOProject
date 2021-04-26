@@ -10,7 +10,8 @@
 [b][color=teal]Русский интерфейс:[/color][/b] Нет, и не имеет смысла.<br>
 [b][color=teal]Технические требования:[/color][/b] Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) или TWRP. Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники). Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом)). SeLinux в Permissive (для аудиомодов как минимум), Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)) и SqLite для модулей которым он нужен.
 [b][color=teal]Описание работы, функционал:[/color][/b] Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.<br>
-<h3 align=center>Скриншоты</h3> <img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="600" width="300"><br />
+<h3 align=center>Скриншоты</h3>
+<img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="600" width="300"><br />
 
 <h3 align=center>All In One Patch For More Devices (AIOPFMD)</h3>
 • В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.
