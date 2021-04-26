@@ -19,221 +19,221 @@
 
 <h3 align=center>Принцип/Порядок работы AIOPFMD</h3>
 <h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
-• Пункт (All) (10-11) (\) - Установка разных видов/размеров жестовой "таблетки":<br>
-	- Прозрачная зона таблетки;<br><br>
-	- Не прозрачная зона таблетки;<br><br>
-		- Ширина таблетки (Точка);<br><br>
-		- Ширина таблетки (0) - скрытие жестовой таблеткой отступа с/без отступа в зависимости от прозрачности;<br><br>
-		- Ширина таблетки (60);<br><br>
-		- Ширина таблетки (120);<br><br>
-		- Ширина таблетки (180);<br><br>
-		- Ширина таблетки (240);<br><br>
-		- Ширина таблетки (300);<br><br>
-			- Размер таблетки (1 (Сток));<br><br>
-			- Размер таблетки (2);<br><br>
-			- Размер таблетки (3);<br><br>
-			- Размер таблетки (4);<br><br>
-• Пункт (All) (10-11) (\) - Установка разного цвета жестовой "таблетки":<br>
-	- Выбрать один цвет для Light и Dark который определяется самим приложением;<br><br>
-	- Выбрать разный цвет для Light и Dark который определяется самим приложением;<br><br>
-		- Blue (ff1a73e8);<br><br>
-		- Light Blue (ff5e97f6);<br><br>
-		- Red (ffb31818);<br><br>
-		- Light Red (ffff4151);<br><br>
-		- Green (ff1ed760);<br><br>
-		- Light Green (ff47ae84);<br><br>
-		- Yellow (ffffa842);<br><br>
-		- Orange (ffff8055);<br><br>
-		- Violet (ffa86bd5);<br><br>
-• Пункт (All) (10-11) (\) - Установка высоты жестовой "таблетки" в значениях:<br>
-	- Значение 1;<br><br>
-	- Значение 2;<br><br>
-	- Значение 3;<br><br>
-	- Значение 4;<br><br>
-	- Значение 5;<br><br>
-	- Значение 6 (Сток);<br><br>
-	- Значение 7;<br><br>
-	- Значение 8;<br><br>
-	- Значение 9;<br><br>
-	- Значение 10;<br><br>
-• Пункт (All) <a href="https://github.com/null4n/navbar-overlay">GITHUB</a> - Hide Or Show Nav Bar:<br>
-	- Build.prop вариант:<br>
-		- Показать;<br><br>
-		- Скрыть;<br><br>
-	- Вариант с Файлом оверлея:<br>
-		- Показать;<br><br>
-		- Скрыть;<br><br>
-• Пункт (All) (10-11) (\) - Установка патча на увеличение отступов при использовании клавиатуры:<br>
-	- Значение 0 (Сток);<br><br>
-	- Значение 5;<br><br>
-	- Значение 10;<br><br>
-	- Значение 15;<br><br>
-	- Значение 20;<br><br>
-	- Значение 25;<br><br>
-	- Значение 30;<br><br>
-	- Значение 35;<br><br>
-	- Значение 40;<br><br>
-• Пункт (All) (10-11) (\) - Установка патча на увеличение скругления нижних клавиш для GBoard (работает только на темах с контурами):<br>
-	- Значение 0 (Сток);<br><br>
-	- Значение 5;<br><br>
-	- Значение 10;<br><br>
-	- Значение 15;<br><br>
-	- Значение 20;<br><br>
-	- Значение 25;<br><br>
-	- Значение 30;<br><br>
-	- Значение 35;<br><br>
-	- Значение 40;<br><br>
-	- Значение 45;<br><br>
-	- Значение 50;<br><br>
-• Пункт (All) - Установка GBoard тем для многих прошивок (в MD2 и разными цветами и видами);<br><br>
-• Пункт (All) (9-11) (\) - Cutout Increase Number Notification Icons для многих прошивок с выборами:<br> 
-	- 20dip (Немного уменьшенная строка состояния в ландшафтном режиме);<br><br>
-	- 24dip (Обычная строка состояния в ландшафтном режиме);<br><br>
-	- 34dip (Строка состояния в ландшафтном режиме для DSB);<br><br>
-		- 4 иконки;<br><br>
-		- 5 иконок;<br><br>
-		- 6 иконок;<br><br>
-		- 7 иконок;<br><br>
-• Пункт (Only M) (10) - Установка GPay Power Menu (он же альтернатива меню выключения расположена с низу);<br><br>
-• Пункт (All) (10-11) (\) - Установка патча на разную степень скругления системы, лаунчеров и приложений:<br>
-	- Значение 0;<br><br>
-	- Значение 5;<br><br>
-	- Значение 10;<br><br>
-	- Значение 15;<br><br>
-	- Значение 20;<br><br>
-	- Значение 25;<br><br>
-	- Значение 30;<br><br>
-	- Значение 35;<br><br>
-	- Значение 40;<br><br>
-• Пункт (All) (10-11) (\) - Burn In Protection (конфликтует с Cutout Increase Number Notification Icons и подобным что принудительно включается поверх (так же полон рандома))- Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроенно но отключено):<br>
-	- Время смещения (в секундах):<br>
-		- Значение 20;<br><br>
-		- Значение 40;<br><br>
-		- Значение 60;<br><br>
-		- Значение 80;<br><br>
-		- Значение 100;<br><br>
-		- Значение 120;<br><br>
-			- Количество dip смещения по горизонтали:<br>
-				- Значение 4dip;<br><br>
-				- Значение 6dip;<br><br>
-				- Значение 8dip;<br><br>
-				- Значение 10dip;<br><br>
-					- Количество dip смещения по вертикали:<br>
-						- Значение 4dip;<br><br>
-						- Значение 6dip;<br><br>
-						- Значение 8dip;<br><br>
-						- Значение 10dip;<br><br>
-							- Cutout Increase Number Notification Icons с Burn In Protection:<br>
-								- 24dip (Обычная строка состояния в ландшафтном режиме);<br><br>
-								- 34dip (Строка состояния в ландшафтном режиме для DSB);<br><br>
-• Пункт (Only M) - Single User Mod - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;<br><br>
-• Пункт (Only M) (8.1-11) (\) - Установка патча SUI Content Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара если доступно прошивкой;<br><br>
-	- Значение 0;<br><br>
-	- Значение 5;<br><br>
-	- Значение 10;<br><br>
-	- Значение 15;<br><br>
-	- Значение 20;<br><br>
-	- Значение 25;<br><br>
-	- Значение 30;<br><br>
-	- Значение 35;<br><br>
-	- Значение 40;<br><br>
-• Пункт (Only M) (8.1-11) (\) - Установка патча QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой:<br>
-	- Значение 0;<br><br>
-	- Значение 5;<br><br>
-	- Значение 10;<br><br>
-	- Значение 15;<br><br>
-	- Значение 20;<br><br>
-	- Значение 25;<br><br>
-	- Значение 30;<br><br>
-	- Значение 35;<br><br>
-	- Значение 40;<br><br>
-• Пункт (Only M) (8.1-11) (\) - Установка патча SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой:<br>
-	- Значение 10;<br><br>
-	- Значение 20;<br><br>
-	- Значение 30;<br><br>
-	- Значение 40;<br><br>
-	- Значение 50;<br><br>
-	- Значение 60;<br><br>
-	- Значение 70;<br><br>
-	- Значение 80;<br><br>
-	- Значение 90;<br><br>
-	- Значение 100;<br><br>
-• Пункт (All) (\) - Установка Boot Animation:<br>
-	- Pixel:<br>
-		- Black;<br><br>
-		- White;<br><br>
-	- OnePlus;<br><br>
-	- TenX-OS:<br>
-		- Black;<br><br>
-		- White;<br><br>
-• Пункт (All) - Установка IOS EMOJI;<br><br>
-• Пункт (All) - Установка Media Ui:<br>
-	- Masik:<br>
-		- Альтернативный звук разблокировки из Masik;<br><br>
-	- OnePlus;<br><br>
-	- Pixel;<br><br>
-	- Samsung;<br><br>
+• Пункт (All) (10-11) (\) - Установка разных видов/размеров жестовой "таблетки":
+	- Прозрачная зона таблетки;
+	- Не прозрачная зона таблетки;
+		- Ширина таблетки (Точка);
+		- Ширина таблетки (0) - скрытие жестовой таблеткой отступа с/без отступа в зависимости от прозрачности;
+		- Ширина таблетки (60);
+		- Ширина таблетки (120);
+		- Ширина таблетки (180);
+		- Ширина таблетки (240);
+		- Ширина таблетки (300);
+			- Размер таблетки (1 (Сток));
+			- Размер таблетки (2);
+			- Размер таблетки (3);
+			- Размер таблетки (4);
+• Пункт (All) (10-11) (\) - Установка разного цвета жестовой "таблетки":
+	- Выбрать один цвет для Light и Dark который определяется самим приложением;
+	- Выбрать разный цвет для Light и Dark который определяется самим приложением;
+		- Blue (ff1a73e8);
+		- Light Blue (ff5e97f6);
+		- Red (ffb31818);
+		- Light Red (ffff4151);
+		- Green (ff1ed760);
+		- Light Green (ff47ae84);
+		- Yellow (ffffa842);
+		- Orange (ffff8055);
+		- Violet (ffa86bd5);
+• Пункт (All) (10-11) (\) - Установка высоты жестовой "таблетки" в значениях:
+	- Значение 1;
+	- Значение 2;
+	- Значение 3;
+	- Значение 4;
+	- Значение 5;
+	- Значение 6 (Сток);
+	- Значение 7;
+	- Значение 8;
+	- Значение 9;
+	- Значение 10;
+• Пункт (All) <a href="https://github.com/null4n/navbar-overlay">GITHUB</a> - Hide Or Show Nav Bar:
+	- Build.prop вариант:
+		- Показать;
+		- Скрыть;
+	- Вариант с Файлом оверлея:
+		- Показать;
+		- Скрыть;
+• Пункт (All) (10-11) (\) - Установка патча на увеличение отступов при использовании клавиатуры:
+	- Значение 0 (Сток);
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+• Пункт (All) (10-11) (\) - Установка патча на увеличение скругления нижних клавиш для GBoard (работает только на темах с контурами):
+	- Значение 0 (Сток);
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+	- Значение 45;
+	- Значение 50;
+• Пункт (All) - Установка GBoard тем для многих прошивок (в MD2 и разными цветами и видами);
+• Пункт (All) (9-11) (\) - Cutout Increase Number Notification Icons для многих прошивок с выборами: 
+	- 20dip (Немного уменьшенная строка состояния в ландшафтном режиме);
+	- 24dip (Обычная строка состояния в ландшафтном режиме);
+	- 34dip (Строка состояния в ландшафтном режиме для DSB);
+		- 4 иконки;
+		- 5 иконок;
+		- 6 иконок;
+		- 7 иконок;
+• Пункт (Only M) (10) - Установка GPay Power Menu (он же альтернатива меню выключения расположена с низу);
+• Пункт (All) (10-11) (\) - Установка патча на разную степень скругления системы, лаунчеров и приложений:
+	- Значение 0;
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+• Пункт (All) (10-11) (\) - Burn In Protection (конфликтует с Cutout Increase Number Notification Icons и подобным что принудительно включается поверх (так же полон рандома))- Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроенно но отключено):
+	- Время смещения (в секундах):
+		- Значение 20;
+		- Значение 40;
+		- Значение 60;
+		- Значение 80;
+		- Значение 100;
+		- Значение 120;
+			- Количество dip смещения по горизонтали:
+				- Значение 4dip;
+				- Значение 6dip;
+				- Значение 8dip;
+				- Значение 10dip;
+					- Количество dip смещения по вертикали:
+						- Значение 4dip;
+						- Значение 6dip;
+						- Значение 8dip;
+						- Значение 10dip;
+							- Cutout Increase Number Notification Icons с Burn In Protection:
+								- 24dip (Обычная строка состояния в ландшафтном режиме);
+								- 34dip (Строка состояния в ландшафтном режиме для DSB);
+• Пункт (Only M) - Single User Mod - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
+• Пункт (Only M) (8.1-11) (\) - Установка патча SUI Content Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара если доступно прошивкой;
+	- Значение 0;
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+• Пункт (Only M) (8.1-11) (\) - Установка патча QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
+	- Значение 0;
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+• Пункт (Only M) (8.1-11) (\) - Установка патча SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
+	- Значение 10;
+	- Значение 20;
+	- Значение 30;
+	- Значение 40;
+	- Значение 50;
+	- Значение 60;
+	- Значение 70;
+	- Значение 80;
+	- Значение 90;
+	- Значение 100;
+• Пункт (All) (\) - Установка Boot Animation:
+	- Pixel:
+		- Black;
+		- White;
+	- OnePlus;
+	- TenX-OS:
+		- Black;
+		- White;
+• Пункт (All) - Установка IOS EMOJI;
+• Пункт (All) - Установка Media Ui:
+	- Masik:
+		- Альтернативный звук разблокировки из Masik;
+	- OnePlus;
+	- Pixel;
+	- Samsung;
 
 <h3 align=center>Apps: GFU/GSF/SL/IA</h3>
-• Пункт (All) (7.1.2, 8.1 и 9) (Arm, Arm64)- Установка Разблокировки по лицу при Gapps Pico (на практике уже не работает с новыми патчами безопасности на этих версия Android);<br><br>
-• Пункт (All) (8.1, 9 и 10) - Устанавливает "заглушку" для работы GCam без Gapps;<br><br>
-• Пункт (All) (10-11) (\) - Установка Systemless Launcher (Alt Variant Quick Switch):<br>
-	- Установка Lawnchair Plus;<br><br>
-	- Установка OPLauncher <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a>;<br><br>
-	- Установка OneUIHome;<br><br>
-	- Установка PixelLauncherX <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a>;<br><br>
-	- Установка ShadyLauncher;<br><br>
-	- Установка AsusLauncher <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a>;<br><br>
-• Пункт (All) (10-11) - Установка ASUS Screenshot;<br><br>
-• Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;<br><br>
-	- С подтверждением для каждого;<br><br>
-	- Без подтверждением;<br><br>
+• Пункт (All) (7.1.2, 8.1 и 9) (Arm, Arm64)- Установка Разблокировки по лицу при Gapps Pico (на практике уже не работает с новыми патчами безопасности на этих версия Android);
+• Пункт (All) (8.1, 9 и 10) - Устанавливает "заглушку" для работы GCam без Gapps;
+• Пункт (All) (10-11) (\) - Установка Systemless Launcher (Alt Variant Quick Switch):
+	- Установка Lawnchair Plus;
+	- Установка OPLauncher <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a>;
+	- Установка OneUIHome;
+	- Установка PixelLauncherX <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a>;
+	- Установка ShadyLauncher;
+	- Установка AsusLauncher <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a>;
+• Пункт (All) (10-11) - Установка ASUS Screenshot;
+• Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
+	- С подтверждением для каждого;
+	- Без подтверждением;
 	
 <h3 align=center>Audio: VFX(P)/DSP/DTS/AML/AN</h3>
 • Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - Установка ViperFX:
-	- Установка ViperFX v2.5.0.5;<br><br>
-	- Установка ViperFX v2.7.1.6;<br><br>
-		- Если установка через MM, будет дан выбор:<br>
-			- Установка в data/app;<br><br>
-			- Установка в system/priv-app;<br><br>
-• Пункт (All) - Установка ViperFX Presets;<br><br>
-• Пункт (Only M) (5.1.1+) <a href="https://github.com/Magisk-Modules-Repo/ainur_jamesdsp">GITHUB</a> <a href="https://github.com/therealahrion/JamesDSPManager">GITHUB</a> <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> - Установка James DSP Manager:<br>
-	- Новый менеджер;<br><br>
-	- Старый менеджер:<br>
-		- Драйвера Full Feature;<br><br>
-		- Драйвера Bit Perfect;<br><br>
-• Пункт (Only M) (9-11) <a href="https://forum.xda-developers.com/t/port-pie-dts-x-ultra-dts-headphone-x-27-03-update.3896233/">XDA</a> - Установка DTS HPX:<br>
-	- Новый менеджер;<br><br>
-	- Старый менеджер;<br><br>
-• Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> - Установка Audio Modification Library;<br><br>
-• Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;<br><br>
-• Пункт (All) - Установка Increase Bitrate - патчит все media_profiles*.xml в /vendor - Улучшает качество записи аудио во многих местах;<br><br>
+	- Установка ViperFX v2.5.0.5:
+	- Установка ViperFX v2.7.1.6;
+		- Если установка через MM, будет дан выбор:
+			- Установка в data/app;
+			- Установка в system/priv-app;
+• Пункт (All) - Установка ViperFX Presets;
+• Пункт (Only M) (5.1.1+) <a href="https://github.com/Magisk-Modules-Repo/ainur_jamesdsp">GITHUB</a> <a href="https://github.com/therealahrion/JamesDSPManager">GITHUB</a> <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> - Установка James DSP Manager:
+	- Новый менеджер;
+	- Старый менеджер:
+		- Драйвера Full Feature;
+		- Драйвера Bit Perfect;
+• Пункт (Only M) (9-11) <a href="https://forum.xda-developers.com/t/port-pie-dts-x-ultra-dts-headphone-x-27-03-update.3896233/">XDA</a> - Установка DTS HPX:
+	- Новый менеджер;
+	- Старый менеджер;
+• Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> - Установка Audio Modification Library;
+• Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
+• Пункт (All) - Установка Increase Bitrate - патчит все media_profiles*.xml в /vendor - Улучшает качество записи аудио во многих местах;
 
 <h3 align=center>Other Fixes: FBFM/FBFM/UAA</h3>
-• Пункт (Only TWRP) (9-11) - Появляется если находит service.sh и удаляет в модуле ViperFX (на обычной и Legacy) и/или Ainur Sauron;<br><br>
-• Пункт (Only М In TWRP) - Установка фикса бутлупа на Miui при DPI 800+ (кто сталкивался, тот знает зачем он);<br><br>
-• Пункт (Only TWRP) - Разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);<br><br>
+• Пункт (Only TWRP) (9-11) - Появляется если находит service.sh и удаляет в модуле ViperFX (на обычной и Legacy) и/или Ainur Sauron;
+• Пункт (Only М In TWRP) - Установка фикса бутлупа на Miui при DPI 800+ (кто сталкивался, тот знает зачем он);
+• Пункт (Only TWRP) - Разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);
 
 <h3 align=center>Removal: RSL/RSO/RSTA/RWFSB</h3>
-• Пункт (Only TWRP) - Удаляет Пароль/Граф.Ключ/Пин-Код/и тд. (прошивать если пишет неверный пароль и тд.);<br><br>
-• Пункт (Only TWRP) - Удаление слоев Swift Installer, его кеша и модуля Magisk (APK не удаляет, полезно если у вас с ним проблемы/bootloop/softloop и тд.);<br><br>
-• Пункт (All) (\) - Режим удаления/replace (список будет пополнятся). Удаляйте что знаете, я разжёвывать не буду - <a href="https://4pda.ru/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску</a>. Выбор в самом ММ появляется без своей категории:<br>
-	- Удалять приложения (в TWRP и если есть Magisk будет этот выбор);<br><br>
-	- Отправлять их в replace (в bootmode по умолчанию он) (в TWRP и если есть Magisk будет этот выбор);<br><br>
-		- Удаление найденных Apk с подтверждением каждого найденного (не касается того что в патче, там всегда с выбором);<br><br>
-		- Удаление найденных Apk без подтверждения каждого найденного (не касается того что в патче, там всегда с выбором);<br><br>
-			- Если находит /sdcard/rmlist.sh:<br>
-				- Искать что содержится в rmlist.sh и в патче;<br><br>
-				- Искать только то, что содержится в rmlist.sh (что в патче пропускается);<br><br>
-			- Если не находит /sdcard/rmlist.sh:<br> пойдёт поиск приложений, и если был выбран выбор на подтверждение каждого удаления будет дан выбор: удалить его или искать следующие
-				- Удаление из под AIL.txt (AIL.txt List) который создается в /system/bin/aiopfmdph если устанавливать приложения из под Пункта установки своих приложений без Magisk - Потому что в патче нету Package Name всех приложений в мире - выбор появляется только если находит AIL.txt;<br><br>
-				- Удаление приложений которые не влияют на работу прошивки (перенос с AIOIARPFMD и улучшенный список - для обычных пользователей рекомендую с выбором на каждый разумеется но я пользуюсь этим списком и удаляю все что в нем);<br><br>
-				- Удаление приложений которые могут повлиять на работу прошивки - они лишают GApps и много другого (список смотрите);<br><br>
-				- Удаление лаунчеров;<br>
+• Пункт (Only TWRP) - Удаляет Пароль/Граф.Ключ/Пин-Код/и тд. (прошивать если пишет неверный пароль и тд.);
+• Пункт (Only TWRP) - Удаление слоев Swift Installer, его кеша и модуля Magisk (APK не удаляет, полезно если у вас с ним проблемы/bootloop/softloop и тд.);
+• Пункт (All) (\) - Режим удаления/replace (список будет пополнятся). Удаляйте что знаете, я разжёвывать не буду - <a href="https://4pda.ru/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску</a>. Выбор в самом ММ появляется без своей категории:
+	- Удалять приложения (в TWRP и если есть Magisk будет этот выбор);
+	- Отправлять их в replace (в bootmode по умолчанию он) (в TWRP и если есть Magisk будет этот выбор);
+		- Удаление найденных Apk с подтверждением каждого найденного (не касается того что в патче, там всегда с выбором);
+		- Удаление найденных Apk без подтверждения каждого найденного (не касается того что в патче, там всегда с выбором);
+			- Если находит /sdcard/rmlist.sh:
+				- Искать что содержится в rmlist.sh и в патче;
+				- Искать только то, что содержится в rmlist.sh (что в патче пропускается);
+			- Если не находит /sdcard/rmlist.sh: пойдёт поиск приложений, и если был выбран выбор на подтверждение каждого удаления будет дан выбор: удалить его или искать следующие
+				- Удаление из под AIL.txt (AIL.txt List) который создается в /system/bin/aiopfmdph если устанавливать приложения из под Пункта установки своих приложений без Magisk - Потому что в патче нету Package Name всех приложений в мире - выбор появляется только если находит AIL.txt;
+				- Удаление приложений которые не влияют на работу прошивки (перенос с AIOIARPFMD и улучшенный список - для обычных пользователей рекомендую с выбором на каждый разумеется но я пользуюсь этим списком и удаляю все что в нем);
+				- Удаление приложений которые могут повлиять на работу прошивки - они лишают GApps и много другого (список смотрите);
+				- Удаление лаунчеров;
 
 <h3 align=center>Списки приложений которые удаляются:</h3>
 <h3 align=center>Удаление приложений которые не влияют на работу прошивки:</h3>
-Удаляется если не Miui, но в режиме с выбором если Miui - появляется:<br>
+Удаляется если не Miui, но в режиме с выбором если Miui - появляется:
 Calculator
 Calendar
 Contacts
@@ -241,7 +241,7 @@ DeskClock
 MiuiCamera
 Mms
 
-Другие приложения:<br>
+Другие приложения:
 AEXPapers
 Abstruct
 AccuweatherPhone2015_MASS_HD_SWS
@@ -663,157 +663,157 @@ TWLauncherESS
 Trebuchet
 TrebuchetQuickStep
 
-• Пункт (Only TWRP) - Удаление обоев (Fix Softloop (кто сталкивался, тот знает зачем он)) - появляется только если у вас стоят обои картинкой;<br>
-• Пункт (Only TWRP) - Удаление runtime-permissions.xml в /data/misc_de/0/apexdata/com.android.permission - не обращайте на него внимание, это для моих постоянных softlooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);<br>
+• Пункт (Only TWRP) - Удаление обоев (Fix Softloop (кто сталкивался, тот знает зачем он)) - появляется только если у вас стоят обои картинкой;
+• Пункт (Only TWRP) - Удаление runtime-permissions.xml в /data/misc_de/0/apexdata/com.android.permission - не обращайте на него внимание, это для моих постоянных softlooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
 
 <h3 align=center>AdBlock/Hosts</h3>
-• Пункт (All) (\) - Установка одного из пяти Hosts файлов:<br>
-	- Пустой Hosts (Отключение блокировки);<br>
-	- Hosts из AdAway (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;<br>
-	- Hosts из LP от chelpa (67000+ строк) <a href="https://4pda.ru/forum/index.php?s=&showtopic=298302&view=findpost&p=10727871">4PDA</a>;<br>
-	- От gloeyisk (90000+ строк) <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;<br>
-	- Альтернативный (в нем строки из MiRoom и других) (190000+ строк);<br>
+• Пункт (All) (\) - Установка одного из пяти Hosts файлов:
+	- Пустой Hosts (Отключение блокировки);
+	- Hosts из AdAway (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
+	- Hosts из LP от chelpa (67000+ строк) <a href="https://4pda.ru/forum/index.php?s=&showtopic=298302&view=findpost&p=10727871">4PDA</a>;
+	- От gloeyisk (90000+ строк) <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
+	- Альтернативный (в нем строки из MiRoom и других) (190000+ строк);
 
 <h3 align=center>Net: GPS/TTL/DNS/WB</h3>
-• Пункт (All) (Only MSM/SDM) <a href="https://github.com/Magisk-Modules-Repo/optmizedgpsconf">GITHUB</a> - Установка Global Optimized GPS (добавляет оптимизированные строки в gps.conf (поддержку CN оставил));<br>
-• Пункт (Only M) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - Установка TTL Fix;<br>
-• Пункт (All) - Установка Network Tweak - альтернативный DNS-сервер от Google или CloudFlare:<br>
-	- Google и CloudFlare DNS;<br>
-	- По отдельности:<br>
-		- Google DNS;<br>
-		- CloudFlare DNS;<br>
-• Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/wifi-bonding">GITHUB</a> - Установка Wifi Bonding для увеличения пропускной способности Wifi;<br>
+• Пункт (All) (Only MSM/SDM) <a href="https://github.com/Magisk-Modules-Repo/optmizedgpsconf">GITHUB</a> - Установка Global Optimized GPS (добавляет оптимизированные строки в gps.conf (поддержку CN оставил));
+• Пункт (Only M) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - Установка TTL Fix;
+• Пункт (All) - Установка Network Tweak - альтернативный DNS-сервер от Google или CloudFlare:
+	- Google и CloudFlare DNS;
+	- По отдельности:
+		- Google DNS;
+		- CloudFlare DNS;
+• Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/wifi-bonding">GITHUB</a> - Установка Wifi Bonding для увеличения пропускной способности Wifi;
 
 <h3 align=center>Utilities: BB/ZSigner/SELC/ASTE/CC</h3>
-• Пункт (All) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - Установка Busybox с активацией симлинков (для bin или xbin);<br>
-• Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/zipsigner">GITHUB</a> <a href="https://forum.xda-developers.com/showthread.php?t=2239421&__cf_chl_jschl_tk__=4984b5a76074a8f92f17c55fee2071aa1574e768-1594480192-0-ATXVAJgNEEJLDRbUbS3P4jRknd7-87y5tw9mUcw2j7kUIuWKvH37sHd2Oyii9vwlK2Q9DPkZkpv-x5cOt_BLvYCk_tL_4nAeUjS0UMBrPyLD8Kc7hA0joixn6aAvHGrSnlYn4KjFKCmnrf6zX1uAo53Kbs-REH3waSfoI1Zdsj8sEIXmA5bsgRPuqirEXvB2T9TXYtt61Y4smtb2beJ3NxoXAjdZTM9G3VB89h8FhEmzdGycuafim2fS9tLKWCHlZoaiKtlGe2cEy7wU8j-RVJen3l91-_jFZdClbNRogoIy2U92RkejzrXO81FV-pANEp-8-Qe6YkXevo564gBm_ChO0TxyJEbMI9YoZLRlM5Av">XDA</a> - Установка ZipSigner и aapt;<br>
-• Пункт (Only М) - Установка патча SeLinux Changer - что бы ViperFX и подобные программы нормально работали:<br>
-	- Переключить в Permissive;<br>
-	- Переключить в Enforcing;<br>
-• Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);<br>
-• Пункт (All) - Установка Cache Cleaner - микро аналог SdMaid через терминал - удаляет все пустые папки в /sdcard и подкаталогах, а так же некоторые не нужные временные папки с кешем и тд. (нужно в терминале написать su;<br> CC);<br>
-• Пункт (Only М In BootMode) <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> - Установка Detach - установка из под своего архива;<br>
-• Пункт (All) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - Установка ISQLite3 - необходим для некоторых модулей;<br>
-• Пункт (Only М) <a href="https://github.com/Rikj000/mm">GITHUB</a> <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;<br>
+• Пункт (All) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - Установка Busybox с активацией симлинков (для bin или xbin);
+• Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/zipsigner">GITHUB</a> <a href="https://forum.xda-developers.com/showthread.php?t=2239421&__cf_chl_jschl_tk__=4984b5a76074a8f92f17c55fee2071aa1574e768-1594480192-0-ATXVAJgNEEJLDRbUbS3P4jRknd7-87y5tw9mUcw2j7kUIuWKvH37sHd2Oyii9vwlK2Q9DPkZkpv-x5cOt_BLvYCk_tL_4nAeUjS0UMBrPyLD8Kc7hA0joixn6aAvHGrSnlYn4KjFKCmnrf6zX1uAo53Kbs-REH3waSfoI1Zdsj8sEIXmA5bsgRPuqirEXvB2T9TXYtt61Y4smtb2beJ3NxoXAjdZTM9G3VB89h8FhEmzdGycuafim2fS9tLKWCHlZoaiKtlGe2cEy7wU8j-RVJen3l91-_jFZdClbNRogoIy2U92RkejzrXO81FV-pANEp-8-Qe6YkXevo564gBm_ChO0TxyJEbMI9YoZLRlM5Av">XDA</a> - Установка ZipSigner и aapt;
+• Пункт (Only М) - Установка патча SeLinux Changer - что бы ViperFX и подобные программы нормально работали:
+	- Переключить в Permissive;
+	- Переключить в Enforcing;
+• Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);
+• Пункт (All) - Установка Cache Cleaner - микро аналог SdMaid через терминал - удаляет все пустые папки в /sdcard и подкаталогах, а так же некоторые не нужные временные папки с кешем и тд. (нужно в терминале написать su; CC);
+• Пункт (Only М In BootMode) <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> - Установка Detach - установка из под своего архива;
+• Пункт (All) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - Установка ISQLite3 - необходим для некоторых модулей;
+• Пункт (Only М) <a href="https://github.com/Rikj000/mm">GITHUB</a> <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;
 
 <h3 align=center>Other: GPay/DFO/STZD/DDVFE/FA</h3>
-• Пункт (All) <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);<br>
-• Пункт (All) Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;<br>
-• Пункт (9-11) - Фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в TWRP, или принудительное отключение HIDE на GMS который не влияет на GPay:<br>
-	- Перенос оверлеев (TWRP Only);<br>
-	- UnHide Method (Only М);<br> 
-• Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/Systemless_TZData">GITHUB</a> - Установка Systemless TZData - для обновления на не обновляемых tzdata в древних прошивках;<br>
-• Пункт (Only TWRP) <a href="https://github.com/Zackptg5/Disable_Dm-Verity_ForceEncrypt">GITHUB</a> <a href="https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389/post77091359">XDA</a> - Установка Disable Dm Verity Force Encrypt из под своего бинирника;<br>
-• Пункт (All) (\) - Установка Fingerprint Actions Mod для многих прошивок с выборами (выбор появляется только если в телефоне есть сканер отпечатка пальца):<br>
-	- Кнопка Включения;<br>
-	- Включение экрана;<br>
-	- Перейти на главный экран;<br>
-	- Запуск проигрыватели по умолчанию;<br>
-	- Запуск камеры;<br>
-	- Запуск Браузера;<br>
-	- Клавиша назад;<br>
-	- Клавиша меню;<br>
-	- Переключение между приложениями (красиво смотрится, переключиться между двумя приложениями через недавние);<br>
-	- Клавиша Play/Pause;<br>
-	- Запуск Ассистента;<br>
-	- Запуск Календаря;<br>
-	- Запуск Телефона;<br>
-	- Запуск Контактов;<br>
-	- Запуск Калькулятора;<br>
-	- Закончить звонок;<br>
-	- Запустить/включить/выключить музыку/закончить звонок;<br>
-	- Запуск Gmail/Mail;<br>
+• Пункт (All) <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
+• Пункт (All) Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;
+• Пункт (9-11) - Фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в TWRP, или принудительное отключение HIDE на GMS который не влияет на GPay:
+	- Перенос оверлеев (TWRP Only);
+	- UnHide Method (Only М); 
+• Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/Systemless_TZData">GITHUB</a> - Установка Systemless TZData - для обновления на не обновляемых tzdata в древних прошивках;
+• Пункт (Only TWRP) <a href="https://github.com/Zackptg5/Disable_Dm-Verity_ForceEncrypt">GITHUB</a> <a href="https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389/post77091359">XDA</a> - Установка Disable Dm Verity Force Encrypt из под своего бинирника;
+• Пункт (All) (\) - Установка Fingerprint Actions Mod для многих прошивок с выборами (выбор появляется только если в телефоне есть сканер отпечатка пальца):
+	- Кнопка Включения;
+	- Включение экрана;
+	- Перейти на главный экран;
+	- Запуск проигрыватели по умолчанию;
+	- Запуск камеры;
+	- Запуск Браузера;
+	- Клавиша назад;
+	- Клавиша меню;
+	- Переключение между приложениями (красиво смотрится, переключиться между двумя приложениями через недавние);
+	- Клавиша Play/Pause;
+	- Запуск Ассистента;
+	- Запуск Календаря;
+	- Запуск Телефона;
+	- Запуск Контактов;
+	- Запуск Калькулятора;
+	- Закончить звонок;
+	- Запустить/включить/выключить музыку/закончить звонок;
+	- Запуск Gmail/Mail;
 	
 <h3 align=center>Safety Net & MHPC</h3>
-• Пункт (Only М) (\) <a href="https://4pda.ru/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - Установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;<br>
-	- 1-й SafetyNet патч;<br>
-	- 2-й SafetyNet патч <a href="https://forum.xda-developers.com/t/module-safetypatcher.3809879/">XDA</a>;<br>
-	- 3-й SafetyNet патч (7-11) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;<br>
-• Пункт (All) (10-11) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro будет называться BASIC);<br>
-• Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config - из под своего бинирника (об этом способе я в чейнджлоге упоминал);<br>
+• Пункт (Only М) (\) <a href="https://4pda.ru/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - Установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;
+	- 1-й SafetyNet патч;
+	- 2-й SafetyNet патч <a href="https://forum.xda-developers.com/t/module-safetypatcher.3809879/">XDA</a>;
+	- 3-й SafetyNet патч (7-11) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
+• Пункт (All) (10-11) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro будет называться BASIC);
+• Пункт (Only М) <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config - из под своего бинирника (об этом способе я в чейнджлоге упоминал);
 
 <h3 align=center>Riru & EdXposed</h3>
-• Пункт (Only М) (8.1, 9.0, 10.0, 11.0) <a href="https://github.com/RikkaApps/Riru">GITHUB</a> - Установка Riru Core - Установка не из под своего архива;<br>
-• Пункт (Only М) (8.1, 9.0, 10.0, 11.0) <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> - Установка EdXposed - Установка не из под своего архива:<br>
-	- Если установка через MM, будет дан выбор на установку менеджера:<br>
-		- Установка в /data/app;<br>
-		- Установка в /system/priv-app;<br>
+• Пункт (Only М) (8.1, 9.0, 10.0, 11.0) <a href="https://github.com/RikkaApps/Riru">GITHUB</a> - Установка Riru Core - Установка не из под своего архива;
+• Пункт (Only М) (8.1, 9.0, 10.0, 11.0) <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> - Установка EdXposed - Установка не из под своего архива:
+	- Если установка через MM, будет дан выбор на установку менеджера:
+		- Установка в /data/app;
+		- Установка в /system/priv-app;
 		
 <h3 align=center>Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS</h3>
-• Пункт (Only М And/Or BootMode) - Принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);<br>
-	- Если Magisk, предлагает установку скрипта синхронизации после перезагрузки;<br>
-• Пункт (Only М) (10-11) - Force Gestures - принудительно переключает кнопки навигации на жесты после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов;<br>
-• Пункт (Only М) (11) - Установка Enabling Hidden Api Policy - снимает ограничения Google на некоторые классы приложений;<br>
-• Пункт (Only М) (<9) - Установка Force Install Apps From Unknown Sources - принудительно включение пункта в разделе безопасности на установку из неизвестных источников;<br>
-• Пункт (All) - Установка BuildProp Tweaks - Общие твики не влияющие особо на производительность или энергосбережения (видео в 4К, и всякие твики по мелочи);<br>
-• Пункт (All) - Установка Kill Logger - отключает и убивает многие процессы/бинарники сбора логов:<br>
-	- Оставить возможность снимать logcat или нет;<br>
-• Пункт (Only М) - Установка Force 4X MSAA - включает 4X MSAA в настройках разработчика после перезагрузки;<br>
-• Пункт (Only М) - Установка Disable HW Overlays - включает отключение наложений после перезагрузки в настройках разработчика;<br>
-• Пункт (Only М) - Установка Force DEV & ADB - включает пункт разработчика и ADB со всеми пунктами;<br>
-• Пункт (All) (Mi8 & PocoF1) - Установка патча Включения/Отключения разблокировки по IR камере;<br>
-• Пункт (All) (8.1-11) - Установка Force Dark Mode - принудительно переключает тему в настройках разработчика после перезагрузки;<br>
-• Пункт (Only М) - Установка Force Disabling Play Protect - принудительное отключение Play защиты до запуска в систему или предотвращения её автовключения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);<br>
-• Пункт (Only М) - Установка Фикса (полного отключения) индикатора заряда/уведомлений (в основном для белых индикаторов, для других тестируется);<br>
-• Пункт (Only М) (\) - Установка Start LEDLight Animation - при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет) (на Mi8 прикольно вариант Only LED выглядит - он и рекомендуется):<br>
-	- Тестировать анимации (после этого выбора на каждой анимации будет выбор, выбрать её или нет. После будет тест её и после теста дан выбор: шить или показать следующие анимации и так до конца);<br>
-	- Прошивка без тестирования анимаций (если вы знаете что вам уже нравится);<br>
-		- Только светодиод;<br>
-		- Только вспышка;<br>
-		- Только хардклавишы;<br>
-		- Светодиод и вспышка;<br>
-		- Вспышка и хардклавишы;<br>
-		- Светодиод и хардклавишы;<br>
+• Пункт (Only М And/Or BootMode) - Принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
+	- Если Magisk, предлагает установку скрипта синхронизации после перезагрузки;
+• Пункт (Only М) (10-11) - Force Gestures - принудительно переключает кнопки навигации на жесты после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов;
+• Пункт (Only М) (11) - Установка Enabling Hidden Api Policy - снимает ограничения Google на некоторые классы приложений;
+• Пункт (Only М) (<9) - Установка Force Install Apps From Unknown Sources - принудительно включение пункта в разделе безопасности на установку из неизвестных источников;
+• Пункт (All) - Установка BuildProp Tweaks - Общие твики не влияющие особо на производительность или энергосбережения (видео в 4К, и всякие твики по мелочи);
+• Пункт (All) - Установка Kill Logger - отключает и убивает многие процессы/бинарники сбора логов:
+	- Оставить возможность снимать logcat или нет;
+• Пункт (Only М) - Установка Force 4X MSAA - включает 4X MSAA в настройках разработчика после перезагрузки;
+• Пункт (Only М) - Установка Disable HW Overlays - включает отключение наложений после перезагрузки в настройках разработчика;
+• Пункт (Only М) - Установка Force DEV & ADB - включает пункт разработчика и ADB со всеми пунктами;
+• Пункт (All) (Mi8 & PocoF1) - Установка патча Включения/Отключения разблокировки по IR камере;
+• Пункт (All) (8.1-11) - Установка Force Dark Mode - принудительно переключает тему в настройках разработчика после перезагрузки;
+• Пункт (Only М) - Установка Force Disabling Play Protect - принудительное отключение Play защиты до запуска в систему или предотвращения её автовключения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
+• Пункт (Only М) - Установка Фикса (полного отключения) индикатора заряда/уведомлений (в основном для белых индикаторов, для других тестируется);
+• Пункт (Only М) (\) - Установка Start LEDLight Animation - при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет) (на Mi8 прикольно вариант Only LED выглядит - он и рекомендуется):
+	- Тестировать анимации (после этого выбора на каждой анимации будет выбор, выбрать её или нет. После будет тест её и после теста дан выбор: шить или показать следующие анимации и так до конца);
+	- Прошивка без тестирования анимаций (если вы знаете что вам уже нравится);
+		- Только светодиод;
+		- Только вспышка;
+		- Только хардклавишы;
+		- Светодиод и вспышка;
+		- Вспышка и хардклавишы;
+		- Светодиод и хардклавишы;
 		- Светодиод, вспышка и хардклавишы.
-• Пункт (Only М) (6-11) <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;<br>
-• Пункт (Only BootMode & Universal GMS Doze) - Проверка работы/оптимизации Universal GMS Doze;<br>
-• Пункт (All) - Проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;<br>
-• Пункт (All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен, тот знает - работает как есть;<br>
-• Пункт (Only M) - Установка Animation Scale - принудительно выставляет анимацию:<br>
-	- Значение 0.0;<br>
-	- Значение 0.1;<br>
-	- Значение 0.2;<br>
-	- Значение 0.3;<br>
-	- Значение 0.4;<br>
-	- Значение 0.5;<br>
-	- Значение 0.6;<br>
-	- Значение 0.7;<br>
-	- Значение 0.8;<br>
-	- Значение 0.9;<br>
-	- Значение 1.0 (В основном сток);<br>
-• Пункт (All) (10-11) - Установка GPU Rendering - если нет переключателя в настройках для разработчика. Переключает принудительно настройки графического рендеринга: OpenGL (По умолчанию), OpenGL Skia (более быстрее чем OpenGL), OpenGL Skia Vulkan (самый быстрый вариант но с возможными артефактами);<br>
-• Пункт (All) (\) - Установка патча на изменение шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов, громкость будильника:<br>
-	- Редактировать доступные значения вместе;<br>
-	- Редактировать каждое значение отдельно;<br>
-		- Значение 15;<br>
-		- Значение 20;<br>
-		- Значение 25;<br>
-		- Значение 30;<br>
-		- Значение 35;<br>
-		- Значение 40;<br>
+• Пункт (Only М) (6-11) <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;
+• Пункт (Only BootMode & Universal GMS Doze) - Проверка работы/оптимизации Universal GMS Doze;
+• Пункт (All) - Проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
+• Пункт (All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен, тот знает - работает как есть;
+• Пункт (Only M) - Установка Animation Scale - принудительно выставляет анимацию:
+	- Значение 0.0;
+	- Значение 0.1;
+	- Значение 0.2;
+	- Значение 0.3;
+	- Значение 0.4;
+	- Значение 0.5;
+	- Значение 0.6;
+	- Значение 0.7;
+	- Значение 0.8;
+	- Значение 0.9;
+	- Значение 1.0 (В основном сток);
+• Пункт (All) (10-11) - Установка GPU Rendering - если нет переключателя в настройках для разработчика. Переключает принудительно настройки графического рендеринга: OpenGL (По умолчанию), OpenGL Skia (более быстрее чем OpenGL), OpenGL Skia Vulkan (самый быстрый вариант но с возможными артефактами);
+• Пункт (All) (\) - Установка патча на изменение шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов, громкость будильника:
+	- Редактировать доступные значения вместе;
+	- Редактировать каждое значение отдельно;
+		- Значение 15;
+		- Значение 20;
+		- Значение 25;
+		- Значение 30;
+		- Значение 35;
+		- Значение 40;
 		
 [color=Teal]All In One Cam Patch For More Devices (AIOCPFMD) (EOL)[/color][/b]]• Этот патч объединяет в себе следующие камеры: GCam от BSG, San1ty, Parrot043, Tigr, ANX и 48MPFixQ. Так же есть выбор удаления Сток камер и GСam (Go).
 • Камеры могут работать на разных прошивках/вендорах по разному - если вы уверены что представленное в это патче будет работать, можете попробовать его поставить.
 • Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOCPFMD-28.03.21-%2832%29.zip/download">AIOCPFMD 28.03.21 (32)</a> [offtop][sub]SF[/sub][/offtop] || <a href="https://drive.google.com/file/d/1CEDmbE3T5OA8Tr6JzWpRkVEEL5HNYSpD/view?usp=sharing">AIOCPFMD 28.03.21 (32)</a> [offtop][sub]GD[/sub][/offtop] <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOCPFMD%20Changelog.sh">Changelog</a>
 
 <h3 align=center>Принцип/Порядок работы AIOCPFMD</h3>
-• Пункт (First Launch) - Если находит нужные файлы, предлагает использовать отклик/вибрацию при нажатии на клавиши громкости;<br>
-• Пункт (First Launch) - Выбор дизайна патча: Новый - показывает перед установкой лист камер от каждого разработчика или Старый - всё подряд с указание версий на выборе;<br>
-• Пункт (DEBUGMODE & M Only & TWRP Only) - Если находит что у вас установлен Magisk, предлагает выбор: Установить ВСЁ что устанавливается, как модуль Magisk(M) или переделанным скриптом из под моего патча установка в систему напрямую (у кого нет рут прав/боязнь их);<br>
-• Пункт (Only TWRP) - Вы выбираете удалять стоковые камеры или нет, удаление происходит по "маске" названия папки камеры с выбором, удалять их или нет;<br>
+• Пункт (First Launch) - Если находит нужные файлы, предлагает использовать отклик/вибрацию при нажатии на клавиши громкости;
+• Пункт (First Launch) - Выбор дизайна патча: Новый - показывает перед установкой лист камер от каждого разработчика или Старый - всё подряд с указание версий на выборе;
+• Пункт (DEBUGMODE & M Only & TWRP Only) - Если находит что у вас установлен Magisk, предлагает выбор: Установить ВСЁ что устанавливается, как модуль Magisk(M) или переделанным скриптом из под моего патча установка в систему напрямую (у кого нет рут прав/боязнь их);
+• Пункт (Only TWRP) - Вы выбираете удалять стоковые камеры или нет, удаление происходит по "маске" названия папки камеры с выбором, удалять их или нет;
 • Пункт (All) - Появляется только если находит GCamOne.apk и/или GCamTwo.apk в /sdcard (она же внутренняя), после их нахождения спрашивает устанавливать или нет. Так же они могут быть установлены как модули!.
-• Пункт (All) - Устанавливает GCam by BSG | Если находит GoogleCameraBSG.apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;<br>
-• Пункт (All) - Устанавливает GCam by Parrot043 | Если находит GoogleCameraParrot043 .apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;<br>
-• Пункт (All) - Устанавливает GCam by San1ty | Если находит GoogleCameraSan1ty.apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;<br>
-• Пункт (All) - Устанавливает GCam by Tigr | Если находит GoogleCameraTigr.apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;<br>
+• Пункт (All) - Устанавливает GCam by BSG | Если находит GoogleCameraBSG.apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;
+• Пункт (All) - Устанавливает GCam by Parrot043 | Если находит GoogleCameraParrot043 .apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;
+• Пункт (All) - Устанавливает GCam by San1ty | Если находит GoogleCameraSan1ty.apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;
+• Пункт (All) - Устанавливает GCam by Tigr | Если находит GoogleCameraTigr.apk в /sdcard - предлагает выбор: Установить с /sdcard или из под патча. Так же может быть установлена как модуль!;
 • Пункт (Only M) (<11) <a href="https://camera.aeonax.com/#downloads">Official Site</a> - Устанавливает ANX Камеру:
-	Android 11:<br>
-	- ANXCamera 185R;<br>
-	До Android 11:<br>
-	- Версии 190;<br>
-		- Удаление/Установка ANXScanner;<br>
-	- Версии 185;<br>
-• Пункт (Only M) (<11) - Устанавливает ANX Addons 48Fix;<br>
+	Android 11:
+	- ANXCamera 185R;
+	До Android 11:
+	- Версии 190;
+		- Удаление/Установка ANXScanner;
+	- Версии 185;
+• Пункт (Only M) (<11) - Устанавливает ANX Addons 48Fix;
 
 [color=Teal]All In One Install And Remove Patch For More Divices (AIOIARPFMD) (EOL)[/color][/b]]Этот патч был создан полтора года назад как эксперимент, который некоторым понравился а один человек его и вовсе переделал под себя.
 • Этот патч удаляет по максимуму в системе приложения и заменяет клавиатуру на GBoard и встраивает MiXplorer (Lawnchair до Android 9, выше Android 10 ставятся из под AIOPFMD) - остальное за вами, что хотите то и ставьте.
@@ -821,13 +821,13 @@ TrebuchetQuickStep
 • Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOIARPFMD-28.03.21-%2823%29.zip/download">AIOIARPFMD 28.03.21 (23)</a> || <a href="https://drive.google.com/file/d/1KQli7Z_YKsNcaffwFbRqXy3P5IRr1Lt5/view?usp=sharing">AIOIARPFMD 28.03.21 (23)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOIARPFMD%20Changelog.sh">Changelog</a>
 
 <h3 align=center>Принцип/Порядок работы AIOIARPFMD</h3>
-• Пункт (DEBUGMODE & M Only & TWRP Only) - Если находит что у вас установлен Magisk, предлагает выбор: Установить ВСЁ что устанавливается, как модуль Magisk(M) или переделанным скриптом из под моего патча установка в систему напрямую (у кого нет рут прав/боязнь их);<br>
-• Пункт (All) - Начать удаление и установку;<br>
-	- Режим удаления/replace - полная копия с AIOPFMD;<br>
-	- Если Android ниже 10-ки предлагает установку Lawnchair;<br>
-• Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;<br>
-	- С подтверждением для каждого;<br>
-	- Без подтверждением;<br>
+• Пункт (DEBUGMODE & M Only & TWRP Only) - Если находит что у вас установлен Magisk, предлагает выбор: Установить ВСЁ что устанавливается, как модуль Magisk(M) или переделанным скриптом из под моего патча установка в систему напрямую (у кого нет рут прав/боязнь их);
+• Пункт (All) - Начать удаление и установку;
+	- Режим удаления/replace - полная копия с AIOPFMD;
+	- Если Android ниже 10-ки предлагает установку Lawnchair;
+• Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
+	- С подтверждением для каждого;
+	- Без подтверждением;
 
 
 <h3 align=center><a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a></h3>
@@ -848,20 +848,20 @@ TrebuchetQuickStep
 • Я понимаю что это читать никто не будет, и я не любитель объяснять или что-то показывать, но я попытался как-то объяснить что и куда/как.
 • Эти все патчи могут полностью измениться или вообще исчезнуть навсегда, а что от этого произойдёт будет зависеть от их использования/надобности.
 • Некоторые патчи всё ещё ставятся из под своего родного архива - в дальнейшем будет полный перенос кода.
-• Что означает патч прошивается из под своего архива или нет:<br> 
+• Что означает патч прошивается из под своего архива или нет: 
 	- Поскольку тут 80% патчей перенесено вместе с кодом в этот патч, есть патчи на которые я забил и мне лень переносить код с его полной работой вот они и ставятся из под своего архива со своим нетронутым кодом.
 	- Хотя в дальнейшем планы на перенос кода есть.
 	- Так же почему это хреново - вы прошили прошивку и Magisk начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему.
 	- А этот патч это позволяет (кроме патчей в которых установка идёт из под своего архива (и по этому их выбор даже не появляется)).
 	- Да и уже некоторые патчи НЕВОЗМОЖНО поставить в TWRP из за того что разрабам просто лень делать многие моменты.
-	- Я же стараюсь делать что бы всё было возможно и работало как с Magisk так и без него параллельно улучшая что реализовано криво теми кто делал модули если я переношу код;<br>
-• [color=red]В патчах присутствует элементы полного рандома (и это не исправимо)[/color];<br>
+	- Я же стараюсь делать что бы всё было возможно и работало как с Magisk так и без него параллельно улучшая что реализовано криво теми кто делал модули если я переношу код;
+• [color=red]В патчах присутствует элементы полного рандома (и это не исправимо)[/color];
 • Что в планах? Много всего, и на это нужно время и желание которого нету. Но это в любом случае когда-то случиться.
 
 <h3 align=center>Особые надписи и переменный в этих патчах и файле PATCHMODE</h3>
 • (М) и/или (MM) - Magisk/Manager/Modules.
 • (R) - Recommended.
-• PATCHMODE это - файл (можно на него делать какие хотите расширения), который создается во внутренней памяти (/sdcard) и через ls по for можно быстро на одну папку выше от /sdcard хранить файл PATCHMODE или как было по умолчанию просто в /sdcard (я всё еще экспериментирую) для следующего:<br>
+• PATCHMODE это - файл (можно на него делать какие хотите расширения), который создается во внутренней памяти (/sdcard) и через ls по for можно быстро на одну папку выше от /sdcard хранить файл PATCHMODE или как было по умолчанию просто в /sdcard (я всё еще экспериментирую) для следующего:
 	- PMODE: Открывает некоторые тестовые пункты/патчи (в PATCHMODE напротив "PMODE=" написать: U(ser) или D(ebug)) - Прописать только букву - По умолчанию U(ser).
 	- PDESIGN: Изменяет "дизайн" патча (в PATCHMODE напротив "PDESIGN=" написать: N(ew) или O(ld)) - прописать только букву - по умолчанию N(ew).
 	- KMETHOD: Принудительное переключение между старым и новым методом "KeyCheck" (в PATCHMODE напротив "KMETHOD=" написать: N(ew) или O(ld)) - прописать только букву - По умолчанию false, но после при первом запуске патча без настроенного файла PATCHMODE будет первый бинд, и на каком будет всё нормально - тот и будет по умолчанию прописан в PATCHMODE.
