@@ -1,4 +1,6 @@
-[size=3][color=crimson][b]AIO Project[/b][/color][/size] [offtop]<a href="https://sourceforge.net/projects/aioproject/"]SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK"]GD</a> || (<a href="https://4pda.ru/forum/index.php?showuser=6892995/"]TG в профиле (беты и обсуждение)</a>)[/offtop]
+<h3 align=center>AIO Project</h3>
+
+<a href="https://sourceforge.net/projects/aioproject/"]SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK"]GD</a> || (<a href="@AIOProject"]TG</a>) || (<a href=""]4PDA</a>)
 [b][color=teal]Версия AIOPFMD:[/color][/b] 25.04.21 (36).
 [b][color=teal]Версия AIOCPFMD:[/color][/b] 28.03.21 (32) (EOL).
 [b][color=teal]Версия AIOIARPFMD:[/color][/b] 28.03.21 (23) (EOL).
@@ -8,8 +10,9 @@
 [b][color=teal]Технические требования:[/color][/b] Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) или TWRP. Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники). Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом)). SeLinux в Permissive (для аудиомодов как минимум), Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)) и SqLite для модулей которым он нужен.
 [b][color=teal]Описание работы, функционал:[/color][/b] Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
 [spoiler=[b][color=Teal]Скриншоты[/color][/b]][attachment="22498046:AIOPFMD…21-(31).jpg"][attachment="22498045:AIOCPFM…21-(31).jpg"][attachment="22498044:AIOIARP…21-(22).jpg"][/spoiler][spoiler=[b][color=Teal]All In One Patch For More Devices (AIOPFMD)[/color][/b]]• В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.
-• Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> [offtop][sub]SF[/sub][/offtop] || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> [offtop][sub]GD[/sub][/offtop] <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a> [spoiler="Принцип/Порядок работы AIOPFMD"]• Пункт (DEBUGMODE & M Only & TWRP Only) - Если находит что у вас установлен Magisk, предлагает выбор: Установить ВСЁ что устанавливается, как модуль Magisk(M) или переделанным скриптом из под моего патча установка в систему напрямую (у кого нет рут прав/боязнь их);
-[spoiler="UI: Pills/NavBar/Gboard Themes"]
+• Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a>
+<h3 align=center>Принцип/Порядок работы AIOPFMD</h3>
+<h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
 • Пункт (All) (10-11) (\) - Установка разных видов/размеров жестовой "таблетки":
 	- Прозрачная зона таблетки;
 	- Не прозрачная зона таблетки;
