@@ -1,6 +1,6 @@
 ## AIO Project
 
-<a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="@AIOProject">TG</a> || <a href="@AIOProject_Chat>TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
+<a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="@AIOProject">TG</a> || <a href="@AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
 * Версия AIOPFMD: 25.04.21 (36).
 * Версия AIOCPFMD: 28.03.21 (32) (EOL).
 * Версия AIOIARPFMD: 28.03.21 (23) (EOL).
@@ -14,7 +14,7 @@
 
 ## All In One Patch For More Devices (AIOPFMD)
 * В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.<br>
-* Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a><br>
+* Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">GD)</a> || <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a><br>
 <h3 align=center>Принцип/Порядок работы AIOPFMD</h3>
 <h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
 
@@ -804,7 +804,7 @@ TrebuchetQuickStep
 ## All In One Cam Patch For More Devices (AIOCPFMD) (EOL)
 * Этот патч объединяет в себе следующие камеры: GCam от BSG, San1ty, Parrot043, Tigr, ANX и 48MPFixQ. Так же есть выбор удаления Сток камер и GСam (Go).
 * Камеры могут работать на разных прошивках/вендорах по разному - если вы уверены что представленное в это патче будет работать, можете попробовать его поставить.
-* Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOCPFMD-28.03.21-%2832%29.zip/download">AIOCPFMD 28.03.21 (32)</a> [offtop][sub]SF[/sub][/offtop] || <a href="https://drive.google.com/file/d/1CEDmbE3T5OA8Tr6JzWpRkVEEL5HNYSpD/view?usp=sharing">AIOCPFMD 28.03.21 (32)</a> [offtop][sub]GD[/sub][/offtop] <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOCPFMD%20Changelog.sh">Changelog</a>
+* Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOCPFMD-28.03.21-%2832%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1CEDmbE3T5OA8Tr6JzWpRkVEEL5HNYSpD/view?usp=sharing">GD</a> || <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOCPFMD%20Changelog.sh">Changelog</a>
 
 <h3 align=center>Принцип/Порядок работы AIOCPFMD</h3>
 
@@ -830,7 +830,7 @@ TrebuchetQuickStep
 * Этот патч был создан полтора года назад как эксперимент, который некоторым понравился а один человек его и вовсе переделал под себя.
 * Этот патч удаляет по максимуму в системе приложения и заменяет клавиатуру на GBoard и встраивает MiXplorer (Lawnchair до Android 9, выше Android 10 ставятся из под AIOPFMD) - остальное за вами, что хотите то и ставьте.
 * Возможность встраивать любое свое приложение как модулем, так и нет и вообще все это полностью переделываться и улучшатся.
-* Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOIARPFMD-28.03.21-%2823%29.zip/download">AIOIARPFMD 28.03.21 (23)</a> || <a href="https://drive.google.com/file/d/1KQli7Z_YKsNcaffwFbRqXy3P5IRr1Lt5/view?usp=sharing">AIOIARPFMD 28.03.21 (23)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOIARPFMD%20Changelog.sh">Changelog</a>
+* Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOIARPFMD-28.03.21-%2823%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1KQli7Z_YKsNcaffwFbRqXy3P5IRr1Lt5/view?usp=sharing">GD</a> || <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOIARPFMD%20Changelog.sh">Changelog</a>
 
 <h3 align=center>Принцип/Порядок работы AIOIARPFMD</h3>
 
