@@ -23,6 +23,7 @@
 
 <details> 
   <summary>Принцип/Порядок работы AIOPFMD</summary>
+  
 <h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
 
 • Пункт (All) (10-11) (\) - Установка разных видов/размеров жестовой "таблетки":
