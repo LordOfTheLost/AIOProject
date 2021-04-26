@@ -1,6 +1,6 @@
 <h3 align=center>AIO Project</h3>
 
-<a href="https://sourceforge.net/projects/aioproject/"]SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK"]GD</a> || (<a href="@AIOProject"]TG</a>) || (<a href=""]4PDA</a>)
+<a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || (<a href="@AIOProject">TG</a>) || (<a href=""]4PDA</a>)
 [b][color=teal]Версия AIOPFMD:[/color][/b] 25.04.21 (36).
 [b][color=teal]Версия AIOCPFMD:[/color][/b] 28.03.21 (32) (EOL).
 [b][color=teal]Версия AIOIARPFMD:[/color][/b] 28.03.21 (23) (EOL).
