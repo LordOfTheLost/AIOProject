@@ -15,7 +15,7 @@
 	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+));
 	- SqLite для модулей которым он нужен.
 * Описание работы, функционал: Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
-* <h3 align=center><a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a></h3>
+* <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a>
 
 <details> 
   <summary>Скиншоты:</summary>
