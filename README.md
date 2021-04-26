@@ -656,6 +656,28 @@ WebView
 WebViewGoogle
 WebViewStub
 
+<details> 
+  <summary>Удаление лаунчеров:<</summary>
+
+AsusLauncher
+AsusLauncherDev
+EasyLauncher2_Zero
+EnigmaLauncher
+Launcher3QuickStep
+Lawnchair
+NexusLauncher
+NexusLauncherPrebuilt
+NexusLauncherRelease
+OPLauncherReleases
+ParanoidQuickStep
+PixelLauncher
+ShadyLauncher
+TWLauncherESS
+Trebuchet
+TrebuchetQuickStep
+
+</details>
+
 <h3 align=center>Удаление лаунчеров:</h3>
 AsusLauncher
 AsusLauncherDev
@@ -843,7 +865,7 @@ TrebuchetQuickStep
 * Возможность встраивать любое свое приложение как модулем, так и нет и вообще все это полностью переделываться и улучшатся.
 
 <details> 
-  <summary>## Принцип/Порядок работы AIOIARPFMD</summary>
+  <summary>Принцип/Порядок работы AIOIARPFMD</summary>
 
 * Пункт (All) - Начать удаление и установку;
 	- Режим удаления/replace - полная копия с AIOPFMD;
