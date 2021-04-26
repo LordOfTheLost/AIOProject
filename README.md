@@ -243,458 +243,450 @@
 				- Удаление лаунчеров;
 
 <h3 align=center>Списки приложений которые удаляются:</h3>
-<h3 align=center>Удаление приложений которые не влияют на работу прошивки:</h3>
-Удаляется если не Miui, но в режиме с выбором если Miui - появляется:
-Calculator
-Calendar
-Contacts
-DeskClock
-MiuiCamera
-Mms
 
-Другие приложения:
-AEXPapers
-Abstruct
-AccuweatherPhone2015_MASS_HD_SWS
-AdAway
-Aegis
-AnalyticsCore
-AndroidAutoPrebuilt
-AndroidAutoStub
-AndroidAutoStubPrebuilt
-AndroidForWork
-AudioFX
-BatteryTile
-BookmarkProvider
-Books
-BooksPhone
-BooksStub
-Browser
-Browser2
-CMFileManager
-CalculatorGoogle
-CalculatorGooglePrebuilt
-CalendarGoogle
-CalendarGooglePrebuilt
-Camera2
-CameraGo
-CarHomeGoogle
-CarrierServices
-CatchLog
-ChocoEUKor
-Chrome
-Chrome-Stub
-ChromeCustomizations
-ClockPackage_MASS_Le
-CloudPrint
-CloudPrint2
-ColtPapers
-DeskClockGoogle
-DevicePersonalizationPrebuiltPixel2020
-DevicePersonalizationPrebuiltPixel4
-DevicePolicyPrebuilt
-DiagMonAgent
-Dialer
-DigitalClockEasy_L
-DigitalClock_L
-DotWallpapers
-Drive
-DualClockDigital_L
-DuckDuckGo
-Duo
-EasterEgg
-EasymodeContactsWidget
-Eleven
-Email
-EngineerMode
-Etar
-ExactCalculator
-Excel_SamsungStub
-Exchange2
-FBAppManager_NS
-FBInstaller_NS
-FDroid
-FDroidPrivilegedExtension
-FM
-FM2
-FMRadio
-FM_TEST
-Facebook_stub
-FileExplorer
-FileExplorerGlobal
-FilesPrebuilt
-FitnessPrebuilt
-Focus
-FotaAgent
-GCS
-GCam
-GCamGOPrebuilt
-GCamGo
-GalaxyApps
-Gallery
-Gallery2
-GalleryGo
-GalleryGoPrebuilt
-GalleryGoogle
-GalleryPrebuilt
-GameCenter
-GameCenterGlobal
-Gboard
-Gcam
-GenieWidget
-GlobalTrendNews
-GlobalUserGuide
-Gmail
-Gmail2
-GoogleCalendar
-GoogleCamera
-GoogleCameraGo
-GoogleCameraLegacy
-GoogleCloudPrint
-GoogleContacts
-GoogleDialer
-GoogleEars
-GoogleEarth
-GoogleFeedback
-GoogleHangouts
-GoogleHindiIME
-GoogleHome
-GoogleJapaneseInput
-GoogleKeep
-GoogleKeyboard
-GoogleLatinIme
-GoogleMusic
-GoogleNow
-GoogleNowVoiceSearch
-GooglePinyinIME
-GooglePlus
-GooglePrintRecommendationService
-GoogleTTS
-GoogleVrCore
-HTMLViewer
-Hangouts
-HangoutsDialer
-Health
-HelpRtcPrebuilt
-HotwordEnrollment
-HotwordEnrollmentOKGoogle*
-HotwordEnrollmentXGoogle*
-HybridAccessory
-HybridPlatform
-HybridRadio2015
-HyconWallpapers
-IdMipay
-InMipay
-Jelly
-Joyose
-KLMSAgent
-Keep
-KimciRecorder
-KoreanIME
-KoreanIMEStub
-LPaper-v1.0.0-release
-LPaper-v2.0-release
-LatinIME
-LatinIMEGooglePrebuild
-LatinIMEGooglePrebuilt
-LatinImeDictionaryPack
-LatinImeGoogle
-LatinImeTutorial
-Lawnfeed
-Lens
-MSA-Global
-MSSkype_stub
-MaestroPrebuilt
-Maps
-MatLog
-MatchmakerPrebuilt
-MatchmakerPrebuiltPixel4
-Messages
-Messaging
-MiBrowser
-MiDrop
-MiGalleryLockscreen
-MiHealth
-MiMover
-MiMusic
-MiPicks
-MiService
-MiShare
-MiVideo
-Mimoji
-MiuiBugReport
-MiuiCompass
-MiuiScanner
-MiuiSuperMarket
-MiuiVideo
-MiuiVideoGlobal
-MiuiVideoPlayer
-MozillaNlpBackend
-Music
-Music2
-MusicFX
-MyVerizonServices
-Netflix_activation
-NewsWeather
-Newsstand
-NewsstandStub
-NextPay
-NexusLauncherIcons
-NexusWallpapersStubPrebuilt2017
-NexusWallpapersStubPrebuilt2019
-Notes
-NovaBugreportWrapper
-OPFileManager
-OPIconpackRound
-OPScreenRecord
-OPScreenRecorder
-OPWeather
-OPWidget
-OmniSwitch
-OneNote
-Ornament
-Papers
-PartnerBookmarksProvider
-PaymentService
-PersonalAssistant
-PersonalAssistantGlobal
-Phonograph
-PhotoTable
-Photos
-PicoTts
-PixelLiveWallpaperPrebuilt
-PixelWallpapers2020
-PlayGames
-PowerPoint_SamsungStub
-PrebuiltBugle
-PrebuiltBugleStub
-PrebuiltDeskClockGoogle
-PrebuiltEmailGoogle
-PrebuiltExchange3Google
-PrebuiltGmail
-PureBrowser
-QPGallery
-QuickAccessWallet
-QuickSearchBox
-RRWallpapers
-Recorder
-RecorderPrebuilt
-RetroMusicPlayer
-RetroMusicPlayerPrebuilt
-RevengeMessages
-RevengeOSCalculator
-RoseEUKor
-SBrowser_3.0.38_MASS_LATEST
-SOAgent
-SPPPushClient_Prod
-SPenSdk3
-SPlannerWidget_Essential
-SPlanner_Essential
-SafetyHubPrebuilt
-SamsungIMEv2
-SamsungSans
-SamsungTTS
-ScribePrebuilt
-SecCalculator2_L
-SecEmailComposer-mass
-SecEmailProvider-mass
-SecEmailSync-mass
-SecEmailUI-mass
-SecEmailWidget-mass
-SecHTMLViewer
-SecMyFiles2015_ESS
-SecSetupWizard2015
-SecurityLogAgent
-ShiftPapers
-SimpleCalendar
-SimpleGallery
-SimpleGalleryPro
-SmartManagerSDK
-SmartManager_OLEDHD
-Snap
-SoundAmplifierPrebuilt
-Street
-Superiorwalls
-Talk
-Terminal
-TipsPrebuilt
-TouchAssistant
-Translate
-TranslatePrebuilt
-Turbo
-TurboAdapter
-TurboPrebuilt
-Tycho
-UPTsmService
-Velvet
-Velvet_update
-Via
-ViaBrowser
-Videos
-VinylMusicPlayer
-VoiceSearch
-VoiceSearchStub
-Wallet
-Wallpaper
-WallpaperPickerGooglePrebuilt
-WallpaperPickerGoogleRelease
-WallpapersBReel2017
-WallpapersBReel2019
-WallpapersBReel2020
-WallpapersBReel2020a
-WarpShare
-WaveWidget
-WeatherDaemon
-WeatherTile
-WebManual
-Wellbeing
-WellbeingPrebuilt
-Word_SamsungStub
-XiaomiKeyboard
-YGPS
-YellowPage
-YouDaoEngine
-YouTube
-YouTubeMusicPrebuilt
-YouTubeVanced
-ZVideoMass
-arcore
-com.google.ar.core
-crDroidMusic
-facebook-appmanager
-facebook-installer
-facebook-services
-greenguard
-iWnnIME
-iWnnIME_Kbd_White
-mab
-madCamera
-madLauncher
-madWallpapers
-messaging
-stats
-talkback
-
-<h3 align=center>Удаление приложений которые могут повлиять на работу прошивки:</h3>
-AmbientSensePrebuilt
-AndroidMigratePrebuilt
-AndroidPlatformServices
-BackupRestoreConfirmation
-BasicDreams
-BrowserProviderProxy
-BuiltInPrintService
-CalendarProvider
-CellBroadcastReceiver
-ChromeBookmarksSyncAdapter
-ConfigUpdater
-ConnMO
-Currents
-DMAgent
-EditorsDocs
-EditorsDocsStub
-EditorsSheets
-EditorsSheetsStub
-EditorsSlides
-EditorsSlidesStub
-EuiccGoogle
-ExchangeServices
-FOTAKill
-FaceLock
-Finsky
-GmsCore
-GmsCoreSetupPrebuilt
-GmsCore_update
-GoogleBackupTransport
-GoogleCalendarSyncAdapter
-GoogleContactsSyncAdapter
-GoogleLoginService
-GoogleOneTimeInitializer
-GooglePartnerSetup
-GooglePlay
-GoogleQuickSearchBox
-GoogleSearch
-GoogleServicesFramework
-GoogleZhuyinIME
-LineageSetupWizard
-LocationHistoryPrebuilt
-Magazines
-MarketUpdater
-Markup
-MarkupGoogle
-MediaUploader
-NetworkLocation
-OccamQuickOffice
-OneTimeInitializer
-Phonesky
-PlayAutoInstallConfig
-PlayStore
-PlusOne
-PrebuiltGmsCore
-PrebuiltGmsCorePix
-PrebuiltGmsCoreQt
-PrebuiltGmsCoreRvc
-PrebuiltKeep
-PrebuiltKeepStub
-PrebuiltNewsWeather
-PrintSpooler
-QuickOffice
-SPrintSpoolerLMR1
-SamsungBilling
-SettingsGoogle
-SettingsIntelligenceGooglePrebuilt
-SoundPicker
-SoundPickerPrebuilt
-Stk
-Stk2
-StorageManagerGoogle
-Tag
-TagGoogle
-TrichromeLibrary
-Vending
-WallpaperPicker_Zero2
-WebView
-WebViewGoogle
-WebViewStub
 
 <details> 
-  <summary>Удаление лаунчеров:<</summary>
+  <summary>Удаление приложений которые не влияют на работу прошивки:</summary>
+  
+* Удаляется если не Miui, но в режиме с выбором если Miui - появляется:
+- Calculator
+- Calendar
+- Contacts
+- DeskClock
+- MiuiCamera
+- Mms
 
-AsusLauncher
-AsusLauncherDev
-EasyLauncher2_Zero
-EnigmaLauncher
-Launcher3QuickStep
-Lawnchair
-NexusLauncher
-NexusLauncherPrebuilt
-NexusLauncherRelease
-OPLauncherReleases
-ParanoidQuickStep
-PixelLauncher
-ShadyLauncher
-TWLauncherESS
-Trebuchet
-TrebuchetQuickStep
+* Другие приложения:
+- AEXPapers
+- Abstruct
+- AccuweatherPhone2015_MASS_HD_SWS
+- AdAway
+- Aegis
+- AnalyticsCore
+- AndroidAutoPrebuilt
+- AndroidAutoStub
+- AndroidAutoStubPrebuilt
+- AndroidForWork
+- AudioFX
+- BatteryTile
+- BookmarkProvider
+- Books
+- BooksPhone
+- BooksStub
+- Browser
+- Browser2
+- CMFileManager
+- CalculatorGoogle
+- CalculatorGooglePrebuilt
+- CalendarGoogle
+- CalendarGooglePrebuilt
+- Camera2
+- CameraGo
+- CarHomeGoogle
+- CarrierServices
+- CatchLog
+- ChocoEUKor
+- Chrome
+- Chrome-Stub
+- ChromeCustomizations
+- ClockPackage_MASS_Le
+- CloudPrint
+- CloudPrint2
+- ColtPapers
+- DeskClockGoogle
+- DevicePersonalizationPrebuiltPixel2020
+- DevicePersonalizationPrebuiltPixel4
+- DevicePolicyPrebuilt
+- DiagMonAgent
+- Dialer
+- DigitalClockEasy_L
+- DigitalClock_L
+- DotWallpapers
+- Drive
+- DualClockDigital_L
+- DuckDuckGo
+- Duo
+- EasterEgg
+- EasymodeContactsWidget
+- Eleven
+- Email
+- EngineerMode
+- Etar
+- ExactCalculator
+- Excel_SamsungStub
+- Exchange2
+- FBAppManager_NS
+- FBInstaller_NS
+- FDroid
+- FDroidPrivilegedExtension
+- FM
+- FM2
+- FMRadio
+- FM_TEST
+- Facebook_stub
+- FileExplorer
+- FileExplorerGlobal
+- FilesPrebuilt
+- FitnessPrebuilt
+- Focus
+- FotaAgent
+- GCS
+- GCam
+- GCamGOPrebuilt
+- GCamGo
+- GalaxyApps
+- Gallery
+- Gallery2
+- GalleryGo
+- GalleryGoPrebuilt
+- GalleryGoogle
+- GalleryPrebuilt
+- GameCenter
+- GameCenterGlobal
+- Gboard
+- Gcam
+- GenieWidget
+- GlobalTrendNews
+- GlobalUserGuide
+- Gmail
+- Gmail2
+- GoogleCalendar
+- GoogleCamera
+- GoogleCameraGo
+- GoogleCameraLegacy
+- GoogleCloudPrint
+- GoogleContacts
+- GoogleDialer
+- GoogleEars
+- GoogleEarth
+- GoogleFeedback
+- GoogleHangouts
+- GoogleHindiIME
+- GoogleHome
+- GoogleJapaneseInput
+- GoogleKeep
+- GoogleKeyboard
+- GoogleLatinIme
+- GoogleMusic
+- GoogleNow
+- GoogleNowVoiceSearch
+- GooglePinyinIME
+- GooglePlus
+- GooglePrintRecommendationService
+- GoogleTTS
+- GoogleVrCore
+- HTMLViewer
+- Hangouts
+- HangoutsDialer
+- Health
+- HelpRtcPrebuilt
+- HotwordEnrollment
+- HotwordEnrollmentOKGoogle*
+- HotwordEnrollmentXGoogle*
+- HybridAccessory
+- HybridPlatform
+- HybridRadio2015
+- HyconWallpapers
+- IdMipay
+- InMipay
+- Jelly
+- Joyose
+- KLMSAgent
+- Keep
+- KimciRecorder
+- KoreanIME
+- KoreanIMEStub
+- LPaper-v1.0.0-release
+- LPaper-v2.0-release
+- LatinIME
+- LatinIMEGooglePrebuild
+- LatinIMEGooglePrebuilt
+- LatinImeDictionaryPack
+- LatinImeGoogle
+- LatinImeTutorial
+- Lawnfeed
+- Lens
+- MSA-Global
+- MSSkype_stub
+- MaestroPrebuilt
+- Maps
+- MatLog
+- MatchmakerPrebuilt
+- MatchmakerPrebuiltPixel4
+- Messages
+- Messaging
+- MiBrowser
+- MiDrop
+- MiGalleryLockscreen
+- MiHealth
+- MiMover
+- MiMusic
+- MiPicks
+- MiService
+- MiShare
+- MiVideo
+- Mimoji
+- MiuiBugReport
+- MiuiCompass
+- MiuiScanner
+- MiuiSuperMarket
+- MiuiVideo
+- MiuiVideoGlobal
+- MiuiVideoPlayer
+- MozillaNlpBackend
+- Music
+- Music2
+- MusicFX
+- MyVerizonServices
+- Netflix_activation
+- NewsWeather
+- Newsstand
+- NewsstandStub
+- NextPay
+- NexusLauncherIcons
+- NexusWallpapersStubPrebuilt2017
+- NexusWallpapersStubPrebuilt2019
+- Notes
+- NovaBugreportWrapper
+- OPFileManager
+- OPIconpackRound
+- OPScreenRecord
+- OPScreenRecorder
+- OPWeather
+- OPWidget
+- OmniSwitch
+- OneNote
+- Ornament
+- Papers
+- PartnerBookmarksProvider
+- PaymentService
+- PersonalAssistant
+- PersonalAssistantGlobal
+- Phonograph
+- PhotoTable
+- Photos
+- PicoTts
+- PixelLiveWallpaperPrebuilt
+- PixelWallpapers2020
+- PlayGames
+- PowerPoint_SamsungStub
+- PrebuiltBugle
+- PrebuiltBugleStub
+- PrebuiltDeskClockGoogle
+- PrebuiltEmailGoogle
+- PrebuiltExchange3Google
+- PrebuiltGmail
+- PureBrowser
+- QPGallery
+- QuickAccessWallet
+- QuickSearchBox
+- RRWallpapers
+- Recorder
+- RecorderPrebuilt
+- RetroMusicPlayer
+- RetroMusicPlayerPrebuilt
+- RevengeMessages
+- RevengeOSCalculator
+- RoseEUKor
+- SBrowser_3.0.38_MASS_LATEST
+- SOAgent
+- SPPPushClient_Prod
+- SPenSdk3
+- SPlannerWidget_Essential
+- SPlanner_Essential
+- SafetyHubPrebuilt
+- SamsungIMEv2
+- SamsungSans
+- SamsungTTS
+- ScribePrebuilt
+- SecCalculator2_L
+- SecEmailComposer-mass
+- SecEmailProvider-mass
+- SecEmailSync-mass
+- SecEmailUI-mass
+- SecEmailWidget-mass
+- SecHTMLViewer
+- SecMyFiles2015_ESS
+- SecSetupWizard2015
+- SecurityLogAgent
+- ShiftPapers
+- SimpleCalendar
+- SimpleGallery
+- SimpleGalleryPro
+- SmartManagerSDK
+- SmartManager_OLEDHD
+- Snap
+- SoundAmplifierPrebuilt
+- Street
+- Superiorwalls
+- Talk
+- Terminal
+- TipsPrebuilt
+- TouchAssistant
+- Translate
+- TranslatePrebuilt
+- Turbo
+- TurboAdapter
+- TurboPrebuilt
+- Tycho
+- UPTsmService
+- Velvet
+- Velvet_update
+- Via
+- ViaBrowser
+- Videos
+- VinylMusicPlayer
+- VoiceSearch
+- VoiceSearchStub
+- Wallet
+- Wallpaper
+- WallpaperPickerGooglePrebuilt
+- WallpaperPickerGoogleRelease
+- WallpapersBReel2017
+- WallpapersBReel2019
+- WallpapersBReel2020
+- WallpapersBReel2020a
+- WarpShare
+- WaveWidget
+- WeatherDaemon
+- WeatherTile
+- WebManual
+- Wellbeing
+- WellbeingPrebuilt
+- Word_SamsungStub
+- XiaomiKeyboard
+- YGPS
+- YellowPage
+- YouDaoEngine
+- YouTube
+- YouTubeMusicPrebuilt
+- YouTubeVanced
+- ZVideoMass
+- arcore
+- com.google.ar.core
+- crDroidMusic
+- facebook-appmanager
+- facebook-installer
+- facebook-services
+- greenguard
+- iWnnIME
+- iWnnIME_Kbd_White
+- mab
+- madCamera
+- madLauncher
+- madWallpapers
+- messaging
+- stats
+- talkback
 
 </details>
 
-<h3 align=center>Удаление лаунчеров:</h3>
-AsusLauncher
-AsusLauncherDev
-EasyLauncher2_Zero
-EnigmaLauncher
-Launcher3QuickStep
-Lawnchair
-NexusLauncher
-NexusLauncherPrebuilt
-NexusLauncherRelease
-OPLauncherReleases
-ParanoidQuickStep
-PixelLauncher
-ShadyLauncher
-TWLauncherESS
-Trebuchet
-TrebuchetQuickStep
+<details> 
+  <summary>Удаление приложений которые могут повлиять на работу прошивки:</summary>
+
+* AmbientSensePrebuilt
+* AndroidMigratePrebuilt
+* AndroidPlatformServices
+* BackupRestoreConfirmation
+* BasicDreams
+* BrowserProviderProxy
+* BuiltInPrintService
+* CalendarProvider
+* CellBroadcastReceiver
+* ChromeBookmarksSyncAdapter
+* ConfigUpdater
+* ConnMO
+* Currents
+* DMAgent
+* EditorsDocs
+* EditorsDocsStub
+* EditorsSheets
+* EditorsSheetsStub
+* EditorsSlides
+* EditorsSlidesStub
+* EuiccGoogle
+* ExchangeServices
+* FOTAKill
+* FaceLock
+* Finsky
+* GmsCore
+* GmsCoreSetupPrebuilt
+* GmsCore_update
+* GoogleBackupTransport
+* GoogleCalendarSyncAdapter
+* GoogleContactsSyncAdapter
+* GoogleLoginService
+* GoogleOneTimeInitializer
+* GooglePartnerSetup
+* GooglePlay
+* GoogleQuickSearchBox
+* GoogleSearch
+* GoogleServicesFramework
+* GoogleZhuyinIME
+* LineageSetupWizard
+* LocationHistoryPrebuilt
+* Magazines
+* MarketUpdater
+* Markup
+* MarkupGoogle
+* MediaUploader
+* NetworkLocation
+* OccamQuickOffice
+* OneTimeInitializer
+* Phonesky
+* PlayAutoInstallConfig
+* PlayStore
+* PlusOne
+* PrebuiltGmsCore
+* PrebuiltGmsCorePix
+* PrebuiltGmsCoreQt
+* PrebuiltGmsCoreRvc
+* PrebuiltKeep
+* PrebuiltKeepStub
+* PrebuiltNewsWeather
+* PrintSpooler
+* QuickOffice
+* SPrintSpoolerLMR1
+* SamsungBilling
+* SettingsGoogle
+* SettingsIntelligenceGooglePrebuilt
+* SoundPicker
+* SoundPickerPrebuilt
+* Stk
+* Stk2
+* StorageManagerGoogle
+* Tag
+* TagGoogle
+* TrichromeLibrary
+* Vending
+* WallpaperPicker_Zero2
+* WebView
+* WebViewGoogle
+* WebViewStub
+
+</details>
+
+<details> 
+  <summary>Удаление лаунчеров:</summary>
+
+* AsusLauncher
+* AsusLauncherDev
+* EasyLauncher2_Zero
+* EnigmaLauncher
+* Launcher3QuickStep
+* Lawnchair
+* NexusLauncher
+* NexusLauncherPrebuilt
+* NexusLauncherRelease
+* OPLauncherReleases
+* ParanoidQuickStep
+* PixelLauncher
+* ShadyLauncher
+* TWLauncherESS
+* Trebuchet
+* TrebuchetQuickStep
+
+</details>
 
 * Пункт (Only TWRP) - Удаление обоев (Fix Softloop (кто сталкивался, тот знает зачем он)) - появляется только если у вас стоят обои картинкой;
 * Пункт (Only TWRP) - Удаление runtime-permissions.xml в /data/misc_de/0/apexdata/com.android.permission - не обращайте на него внимание, это для моих постоянных softlooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
