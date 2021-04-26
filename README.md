@@ -11,10 +11,8 @@
 [b][color=teal]Русский интерфейс:[/color][/b] Нет, и не имеет смысла.
 [b][color=teal]Технические требования:[/color][/b] Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) или TWRP. Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники). Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом)). SeLinux в Permissive (для аудиомодов как минимум), Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)) и SqLite для модулей которым он нужен.
 [b][color=teal]Описание работы, функционал:[/color][/b] Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
-[color=Teal]Скриншоты[/color][/b]][attachment="22498046:AIOPFMD…21-(31).jpg"][attachment="22498045:AIOCPFM…21-(31).jpg"][attachment="22498044:AIOIARP…21-(22).jpg"][color=Teal]All In One Patch For More Devices (AIOPFMD)[/color][/b]]• В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.
-• Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a>
-<br />
-<br />
+* [color=Teal]Скриншоты[/color][/b]][attachment="22498046:AIOPFMD…21-(31).jpg"][attachment="22498045:AIOCPFM…21-(31).jpg"][attachment="22498044:AIOIARP…21-(22).jpg"][color=Teal]All In One Patch For More Devices (AIOPFMD)[/color][/b]]• В данный момент AIOPFMD имеет 60+ пунктов в которых 140+ основных выборов и 390+ в режиме удаления.
+* • Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">AIOPFMD 25.04.21 (36)</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">AIOPFMD 25.04.21 (36)</a> <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a>
 
 <h3 align=center>Принцип/Порядок работы AIOPFMD</h3>
 <h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
