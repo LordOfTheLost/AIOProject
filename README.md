@@ -4,7 +4,7 @@
 * Версия AIOPFMD: 25.04.21 (36) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2021/AIOPFMD-25.04.21-%2836%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1am3vhavTDX3-haFlkcKlyMMHQ3CKPsux/view?usp=sharing">GD</a> - <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOPFMD%20Changelog.sh">Changelog</a>.
 * Версия AIOCPFMD: 28.03.21 (32) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOCPFMD-28.03.21-%2832%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1CEDmbE3T5OA8Tr6JzWpRkVEEL5HNYSpD/view?usp=sharing">GD</a> - <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOCPFMD%20Changelog.sh">Changelog</a>.
 * Версия AIOIARPFMD: 28.03.21 (23) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.03.2021/AIOIARPFMD-28.03.21-%2823%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1KQli7Z_YKsNcaffwFbRqXy3P5IRr1Lt5/view?usp=sharing">GD</a> - <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/AIOIARPFMD%20Changelog.sh">Changelog</a>.
-* Последние обновление: 28.03.2021.
+* Последние обновление: 25.04.2021.
 * Разработчик: <a href="https://4pda.ru/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
 * Русский интерфейс: Нет, и не имеет смысла.
 * Технические требования:
