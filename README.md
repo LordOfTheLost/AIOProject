@@ -2,7 +2,7 @@
 
 <img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="600" width="300"><img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="600" width="300"><br />
 
-<b><a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="@AIOProject">TG</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a>
+<a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="@AIOProject">TG</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a>
 [b][color=teal]Версия AIOPFMD:[/color][/b] 25.04.21 (36).
 [b][color=teal]Версия AIOCPFMD:[/color][/b] 28.03.21 (32) (EOL).
 [b][color=teal]Версия AIOIARPFMD:[/color][/b] 28.03.21 (23) (EOL).
