@@ -1,5 +1,9 @@
 <h3 align=center>AIO Project</h3>
 
+<img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1" height="1200" width="600"><br />
+<img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1" height="1200" width="600"><br />
+<img src="https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOIARPFMD-21.03.21-%2822%29.jpg/max/max/1" height="1200" width="600"><br />
+
 <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || (<a href="@AIOProject">TG</a>) || (<a href=""]4PDA</a>)
 [b][color=teal]Версия AIOPFMD:[/color][/b] 25.04.21 (36).
 [b][color=teal]Версия AIOCPFMD:[/color][/b] 28.03.21 (32) (EOL).
@@ -826,7 +830,7 @@ TrebuchetQuickStep
 
 <h3 align=center><a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a></h3>
 
-[color=Teal]Полезная информация/Доп. Информация[/color][/b]
+<h3 align=center>Полезная информация/Доп. Информация</h3>
 <h3 align=center>Что на чем и где было протестировано</h3>
 • Патчи были протестированный на версиях Android: 5.1.1, 6.0.1, 7.1.2, 8.1, 9.0, 10.0, 11.0 и Miui 10, 11, 12 (соответственно от версии что поддерживает патчами).
 • На девайсах протестировано мною лично: <a href="https://4pda.ru/devdb/xiaomi_mi8">Mi8</a>, <a href="https://4pda.ru/devdb/xiaomi_redmi_note_5_pro">RN5</a>, <a href="https://4pda.ru/devdb/redmi_note_7">RN7</a>, <a href="https://4pda.ru/devdb/jiayu_s3">Jiayu S3</a>, <a href="https://4pda.ru/devdb/samsung_gt_i9500_galaxy_s_4">Samsung Galaxy S4</a>, <a href="https://4pda.ru/devdb/sony_xperia_z5_dual">Sony Xperia Z5 Dual</a>, <a href="https://4pda.ru/devdb/samsung_galaxy_j3_2016_sm_j320f">Samsung Galaxy J3 SM-J320H</a>.
