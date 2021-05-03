@@ -1,10 +1,9 @@
 #!/sbin/sh
 
-VAIOCPFMD="28.03.21 (32)"
+VAIOCPFMD="03.05.21 (33)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
-DEVTMP="/dev/tmp"
 TMPDIR="$IPDLTMP/AIOCPFMD"
 ALTTMPDIR="/dev/AIOCPFMD"
 MAGISKTMP="/sbin/.magisk"
@@ -13,9 +12,7 @@ SERVICED="$NVBASE/service.d"
 POSTFSDATAD="$NVBASE/post-fs-data.d"
 } #
 
-{ #Var Off By Fefault
-STANDARTREMOVER=false
-STANDARTBUCKUPER=false
+{ #Var true/false By Fefault
 HFMODE=false
 FINDPATCHMODE=false
 } #
@@ -24,15 +21,12 @@ FINDPATCHMODE=false
 OUTFD="$2"
 ZIPFILE="$3"
 ADDONS="$ALTTMPDIR/Addons"
-ZADDONS="$TMPDIR/ZipAddons"
+AADDONS="$TMPDIR/AltAddons"
 BB="$ALTTMPDIR/BB"
 EVENTS="$BB/events"
 UNTARXZ="$BB/tar"
 UNZIP="$BB/unzip"
 TIMEOUT="$BB/timeout"
-ECHO="$BB/echo"
-ZIPPACKER="$ZADDONS/zip"
-FKEYCHECK="$ADDONS/keycheck"
 } #
 
 { #Version
@@ -67,7 +61,7 @@ VParrot043OTHERTEN="V7.4.201 (v1.1)"
 } #
 
 { #ELEVEN
-VBSGELEVEN="V8.1.101 (A9 PV0o)"
+VBSGELEVEN="V8.1.101 (A9 GVu)"
 VParrot043ELEVEN="V7.6.008 (v7)"
 } #
 
@@ -127,23 +121,22 @@ MSGIIP="(I)"
 MSGEFTC="(\)"
 MSGNIS="(|)"
 MSGNUS="(/)"
+MSGEND="(//)"
 RI="(R)"
 WDI="Community"
 FMR="For More Rom"
 FAOOR="For AOSP/LOS & Others Rom"
 MSGPMODE="$MSGSD Opens Some Test Items/Patches - Set: U(ser) Or D(ebug)"
-MSGKMETHOD="$MSGSD Force Switching Between Old And New \"KeyCheck\" Method - Set: N(ew) Or O(ld)"
-MSGTKEY="$MSGSD A Second Check Is Turned On For KMETHOD O(ld) - Set: false Or true"
+MSGKMETHOD="$MSGSD Force Switching Between Old And New \"KeyCheck\" Method - Set: N(ew), O(ld) Or A(lt)"
+MSGTKEY="$MSGSD A Second Check Is Turned On For KMETHOD O(ld) - Set: A(uto), false Or true"
 MSGPDESIGN="$MSGSD Changes The \"Design\" Of The Patch - Set: N(ew) Or O(ld)"
 MSGLEDCOLOR="$MSGSD This Is The Color Of Your Diode - Set: R(ed), G(reen), B(lue) Or W(hite)"
 MSGHFMODE="$MSGSD Adds Tactile Feedback To Patch Selections - Set: Values From 1 To 255 For Weak/Strong Vibration"
 MSGHFSMODE="$MSGSD Sets Values From HFMODE Not To duration, But To enable And/Or activate - Set: false Or true"
 MSGMCMODE="$MSGSD Enables Or Disables The Choice In TWRP How To Install Via Magisk Or Not With DEBUGMODE - Set: false Or true"
-if $MAGISK; then
-IAMM="(M)"
-else
-IAMM=
-fi
+MSGENDMODE="$MSGSD Allows You To Return To The Beginning Of The Patch Without Reselecting If You Missed Something - Set: false Or true"
+MSGBIDMODE="$MSGSD Writes The ID Of The Buttons For Alt KMETHOD O(ld) Without A Bind"
+if $MAGISK; then IAMM="(M)"; else IAMM=; fi
 }
 
 IS_MOUNTED() {
@@ -183,48 +176,59 @@ IPSXB="$SYSTEM/xbin"; MIPSXB="/system/xbin"
 IPSA="$SYSTEM/app"; MIPSA="/system/app"
 IPSPA="$SYSTEM/priv-app"; MIPSPA="/system/priv-app"
 IPSE="$SYSTEM/etc"; MIPSE="/system/etc"
-IPSEID="$SYSTEM/etc/init.d"; MIPSEID="/system/etc/init.d"
-IPSES="$SYSTEM/etc/sysconfig"; MIPSES="/system/etc/sysconfig"
-IPSEP="$SYSTEM/etc/permissions"; MIPSEP="/system/etc/permissions"
-IPSEDP="$SYSTEM/etc/default-permissions"; MIPSEDP="/system/etc/default-permissions"
+IPSEID="$IPSE/init.d"; MIPSEID="$MIPSE/init.d"
+IPSES="$IPSE/sysconfig"; MIPSES="$MIPSE/sysconfig"
+IPSEP="$IPSE/permissions"; MIPSEP="$MIPSE/permissions"
+IPSEDP="$IPSE/default-permissions"; MIPSEDP="$MIPSE/default-permissions"
 IPSL="$SYSTEM/lib"; MIPSL="/system/lib"
 IPSL64="$SYSTEM/lib64"; MIPSL64="/system/lib64"
 IPSAD="$SYSTEM/addon.d"; MIPSAD="/system/addon.d"
 IPSBP="$SYSTEM/build.prop"; MIPSBP="/system/build.prop"
 IPSSP="$SYSTEM/product"; MIPSSP="/system/product"
-IPSSPBP="$SYSTEM/product/build.prop"; MIPSSPBP="/system/product/build.prop"
+IPSSPBP="$IPSSP/build.prop"; MIPSSPBP="$MIPSSP/build.prop"
 IPSDP="$SYSTEM/default.prop"; MIPSDP="/system/default.prop"
-IPSSPA="$SYSTEM/product/app"; MIPSSPA="/system/product/app"
-IPSSPPA="$SYSTEM/product/priv-app"; MIPSSPPA="/system/product/priv-app"
-IPSSPE="$SYSTEM/product/etc"; MIPSSPE="/system/product/etc"
-IPSSPER="$SYSTEM/product/etc/res"; MIPSSPER="/system/product/etc/res"
-IPSSPERVC="$SYSTEM/product/etc/res/values/charger"; MIPSSPERVC="/system/product/etc/res/values/charger"
-IPSSPERIC="$SYSTEM/product/etc/res/images/charger"; MIPSSPERIC="/system/product/etc/res/images/charger"
-IPSSPEP="$SYSTEM/product/etc/permissions"; MIPSSPEP="/system/product/etc/permissions"
+IPSSPA="$IPSSP/app"; MIPSSPA="$MIPSSP/app"
+IPSSPPA="$IPSSP/priv-app"; MIPSSPPA="$MIPSSP/priv-app"
+IPSSPE="$IPSSP/etc"; MIPSSPE="$MIPSSP/etc"
+IPSSPER="$IPSSPE/res"; MIPSSPER="$MIPSSPE/res"
+IPSSPERVC="$IPSSPER/values/charger"; MIPSSPERVC="$MIPSSPER/values/charger"
+IPSSPERIC="$IPSSPER/images/charger"; MIPSSPERIC="$MIPSSPER/images/charger"
+IPSSPEP="$IPSSPE/permissions"; MIPSSPEP="$MIPSSPE/permissions"
 IPSSS="$SYSTEM/system_ext"; MIPSSS="/system/system_ext"
-IPSSSA="$SYSTEM/system_ext/app"; MIPSSSA="/system/system_ext/app"
-IPSSSPA="$SYSTEM/system_ext/priv-app"; MIPSSSPA="/system/system_ext/priv-app"
+IPSSSA="$IPSSS/app"; MIPSSSA="$MIPSSS/app"
+IPSSSPA="$IPSSS/priv-app"; MIPSSSPA="$MIPSSS/priv-app"
 IPSFW="$SYSTEM/framework"; MIPSFW="/system/framework"
-IPSPO="$SYSTEM/product/overlay"; MIPSPO="/system/product/overlay"
+IPSPO="$IPSSP/overlay"; MIPSPO="$MIPSSP/overlay"
 IPSO="$SYSTEM/overlay"; MIPSO="/system/overlay"
 IPSUKL="$SYSTEM/usr/keylayout"; MIPSUKL="/system/usr/keylayout"
-IPSPMAU="$SYSTEM/product/media/audio/ui"; MIPSPMAU="/system/product/media/audio/ui"
-IPSPM="$SYSTEM/product/media"; MIPSPM="/system/product/media"
-IPSMAU="$SYSTEM/media/audio/ui"; MIPSMAU="/system/media/audio/ui"
+IPSPM="$IPSSP/media"; MIPSPM="$MIPSSP/media"
+IPSPMAU="$IPSPM/audio/ui"; MIPSPMAU="$MIPSPM/audio/ui"
 IPSM="$SYSTEM/media"; MIPSM="/system/media"
+IPSMAU="$IPSM/audio/ui"; MIPSMAU="$MIPSM/audio/ui"
 IPSF="$SYSTEM/fonts"; MIPSF="/system/fonts"
+IPSEDF="$IPSE/device_features"; MIPSEDF="/system/device_features"
 IPVBP="$VENDOR/build.prop"; MIPSVBP="/system/vendor/build.prop"
 IPVE="$VENDOR/etc"; MIPSVE="/system/vendor/etc"
-IPVLS="$VENDOR/lib/soundfx"; MIPSVLS="/system/vendor/lib/soundfx"
-IPVLS64="$VENDOR/lib64/soundfx"; MIPSVLS64="/system/vendor/lib64/soundfx"
-IPVO="$VENDOR/overlay"; MIPSVO="/system/vendor/overlay"
 IPVL="$VENDOR/lib"; MIPSVL="/system/vendor/lib"
 IPVL64="$VENDOR/lib64"; MIPSVL64="/system/vendor/lib64"
+IPVLS="$IPVL/soundfx"; MIPSVLS="$MIPSVL/soundfx"
+IPVLS64="$IPVL64/soundfx"; MIPSVLS64="$MIPSVL64/soundfx"
+IPVO="$VENDOR/overlay"; MIPSVO="/system/vendor/overlay"
 IPVUKL="$VENDOR/usr/keylayout"; MIPSVUKL="/vendor/usr/keylayout"
-IPDA="/data/app"; IPDD="/data/data"; IPDS="/data/system"; IPDSU="/data/system/users"; IPDSNS="/data/system/netstats"; IPDBBN="/dev/block/by-name"; IPDM="/data/misc"; IPDMDE="/data/misc_de"; IPDRESC="/data/resource-cache"; STORAGE="/sdcard"; ASTORAGE="/data/media"
+IPVF="$VENDOR/firmware"; MIPVF="/system/vendor/firmware"
+IPVEDF="$IPVE/device_features"; MIPSVEDF="/system/vendor/device_features"
+IPDA="/data/app"; IPDD="/data/data"; IPDS="/data/system"; IPDSU="$IPDS/users"; IPDSNS="$IPDS/netstats"; IPDBBN="/dev/block/by-name"; IPDM="/data/misc"; IPDMDE="/data/misc_de"; IPDRESC="/data/resource-cache"; STORAGE="/sdcard"; ASTORAGE="/data/media"
+ACONFS="$(find $SYSTEM $VENDOR -type f -name "audio_configs*.xml")"
+APINF="$(find $SYSTEM $VENDOR -type f -name "audio_platform_info*.xml")"
+CFGS="$(find $SYSTEM $VENDOR -type f -name "*audio_effects*.conf" -o -name "*audio_effects*.xml")"
+MPATHS="$(find $SYSTEM $VENDOR -type f -name "mixer_paths*.xml")"
+STPI="$(find $SYSTEM $VENDOR -type f -name "sound_trigger_platform_info*.xml")"
+APCFGS="$(find $SYSTEM $VENDOR -type f -name "*audio_io_policy*.conf" -o -name "*audio_output_policy*.conf")"
+MCGAX="$(find $SYSTEM $VENDOR -type f -name "*media_codecs_google_c2_audio*.xml" -o -name "*media_codecs_google_audio*.xml")"
+DEVFEA=$IPSEDF/*.xml; DEVFEAA=$IPVEDF/*.xml
 SPG="settings put global"; SPS="settings put secure"
 if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
-PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"; HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"; HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"; PDESIGN="$(GET_PMODE_PROP "$PATCHMODEFILE" "PDESIGN")"; LEDCOLOR="$(GET_PMODE_PROP "$PATCHMODEFILE" "LEDCOLOR")"; KMETHOD="$(GET_PMODE_PROP "$PATCHMODEFILE" "KMETHOD")"; TKEY="$(GET_PMODE_PROP "$PATCHMODEFILE" "TKEY")"; MCMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "MCMODE")"
+PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"; HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"; HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"; PDESIGN="$(GET_PMODE_PROP "$PATCHMODEFILE" "PDESIGN")"; LEDCOLOR="$(GET_PMODE_PROP "$PATCHMODEFILE" "LEDCOLOR")"; KMETHOD="$(GET_PMODE_PROP "$PATCHMODEFILE" "KMETHOD")"; TKEY="$(GET_PMODE_PROP "$PATCHMODEFILE" "TKEY")"; MCMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "MCMODE")"; ENDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "ENDMODE")"; BIDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "BIDMODE")"
 PROPFILES="$IPSDP $IPSBP $IPVBP /data/local.prop /default.prop /build.prop"; PROPFILESALT="$IPSSPBP $IPSBP $IPVBP"
 DMYHMS="$( date +"%d-%m-%Y-%H:%M:%S" )"
 if [ -d $IPSPO ]; then IPPO="$IPSPO"; MIPPO="$MIPSPO"; elif [ -d $IPSO ]; then IPPO="$IPSO"; MIPPO="$MIPSO"; elif [ -d $IPVO ]; then IPPO="$IPVO"; MIPPO="$MIPSVO"; fi
@@ -257,27 +261,81 @@ case "$DARCH" in
 *x86*) arch="x86"; MSGDELIMITER; UIP "Warning, Arch $arch Not Supported!"; libarch="lib";;
 *arm64*) arch="arm64"; libarch="lib64";;
 *armeabi*) arch="arm"; libarch="lib";;
-*) arch="unknown"; MSGDELIMITER; UIP "Warning, $arch Not Supported/Found!!";;
+*) arch="unknown"; MSGDELIMITER; UIP "Warning, $arch Not Supported/Found!";;
 esac
-AAPT="$ZADDONS/aapt-$arch"
+AAPT="$AADDONS/aapt-$arch"
+XMLSTARLET="$AADDONS/xmlstarlet-$arch"
+SQLITE3="$TMPDIR/SQLite3/sqlite3-$arch"
+FKEYCHECK="$ADDONS/keycheck-$arch"
+ZIPPACKER="$AADDONS/zip-$arch"
+# SED="$AADDONS/sed-$arch"
 }
 
-SELINUX_CHECKER() {
-if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUXENFORVING=true; SELINUXPERMISSIVE=false; SELINUXS='Enforcing'; SELINUXSN='1'; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUXENFORVING=false; SELINUXPERMISSIVE=true; SELINUXS='Permissive'; SELINUXSN='0';fi
-}
-
-SOC_CHECKER() {
-SNAPSOC=false; MTKSOC=false; if [ "$(grep "ro.board.platform=msm*" $PROPFILESALT)" ] || [ "$(grep "ro.board.platform=sdm*" $PROPFILESALT)" ]; then SNAPSOC=true; elif [ "$(grep "ro.board.platform=mt*" $PROPFILESALT)" ] || [ "$(grep "ro.board.platform=MT*" $PROPFILESALT)" ] || [ "$(grep "Build.BRAND=MTK*" $PROPFILESALT)" ]; then MTKSOC=true; fi
-}
-
-AIOCPFMD() {
+PATCHMODE() {
 case "$PMODE" in
 D) DEBUGMODE=true; TESTMODE=false; MSGPMODE=", Debug Mode";;
 T) TESTMODE=true; DEBUGMODE=true; MSGPMODE=", Test Mode";;
-U) MSGPMODE=", User Mode";;
-*) echo "$MSGPMODE
-PMODE=U" >> $PATCHMODEFILE; MSGPMODE=", User Mode"; DEBUGMODE=false; TESTMODE=false;;
+U) MSGPMODE=", User Mode"; DEBUGMODE=false; TESTMODE=false;;
+*) echo -e "$MSGPMODE\nPMODE=U" >> $PATCHMODEFILE; MSGPMODE=", User Mode"; DEBUGMODE=false; TESTMODE=false;;
 esac
+case "$MCMODE" in
+"true") MCMODE=true;;
+"false") MCMODE=false;;
+*) echo -e "$MSGMCMODE\nMCMODE=true" >> $PATCHMODEFILE; MCMODE=true;;
+esac
+if find /sys/class -name leds >/dev/null; then
+LEDPATH="$(find /sys/class -name leds)"
+case "$LEDCOLOR" in
+R) LEDCOLOR=red;;
+G) LEDCOLOR=green;;
+B) LEDCOLOR=blue;;
+W) LEDCOLOR=white;;
+"false") BLINKMODE=false;;
+*) BLINKMODE=false; echo -e "$MSGLEDCOLOR\nLEDCOLOR=false" >> $PATCHMODEFILE;;
+esac
+if [ -f $LEDPATH/$LEDCOLOR/blink ]; then echo -n 1 > $LEDPATH/$LEDCOLOR/blink; BLINKMODE=true; fi
+fi
+case "$HFDURATION" in
+"false") HFMODE=false;;
+[0-255]*) HFMODE=true; HFPATH="$(find /sys/class -name vibrator)"; if [ -f $HFPATH/duration ]; then echo -n $HFDURATION > $HFPATH/duration; fi; if [ -f $HFPATH/activate ]; then HFFPATH=$HFPATH/activate; elif [ -f $HFPATH/enable ]; then HFFPATH=$HFPATH/enable; fi;;
+*) HFMODE=false; echo -e "$MSGHFMODE\nHFMODE=false" >> $PATCHMODEFILE;;
+esac
+case "$HFSWAPMODE" in
+"true") HFSWAPMODE=true;;
+"false") HFSWAPMODE=false;;
+*) echo -e "$MSGHFSMODE\nHFSMODE=false" >> $PATCHMODEFILE; HFSWAPMODE=false;;
+esac
+case "$PDESIGN" in
+N) NEWDESIGN=true; OLDDESIGN=false;;
+O) OLDDESIGN=true; NEWDESIGN=false;;
+*) NEWDESIGN=true; echo -e "$MSGPDESIGN\nPDESIGN=N" >> $PATCHMODEFILE;;
+esac
+case "$KMETHOD" in
+N) AKOLD=false; KNEW=true; KOLD=false;;
+O) AKOLD=false; KNEW=false; KOLD=true;;
+A) AKOLD=true; KNEW=false; KOLD=false;;
+"false") AKOLD=false; KOLD=false; KNEW=false;;
+*) echo -e "$MSGKMETHOD\nKMETHOD=false" >> $PATCHMODEFILE; AKOLD=false; KOLD=false; KNEW=false;;
+esac
+case "$TKEY" in
+"A") ATKEYCHECK=true; TKEYCHECK=false;;
+"true") ATKEYCHECK=false; TKEYCHECK=true;;
+"false") ATKEYCHECK=false; TKEYCHECK=false;;
+*) ATKEYCHECK=true; TKEYCHECK=false; echo -e "$MSGTKEY\nTKEY=A" >> $PATCHMODEFILE;;
+esac
+case "$ENDMODE" in
+"true") ENDMODE=true;;
+"false") ENDMODE=false;;
+*) ENDMODE=true; echo -e "$MSGENDMODE\nENDMODE=true" >> $PATCHMODEFILE;;
+esac
+case "$BIDMODE" in
+"true") BIDMODE=true; BUTTONIDUP="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDUP")"; BUTTONIDDOWN="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDDOWN")";;
+"false") BIDMODE=false;;
+*) BIDMODE=true; echo -e "$MSGBIDMODE\nBIDMODE=true\nButtonIDUP=#UP\nButtonIDDOWN=#DOWN" >> $PATCHMODEFILE;;
+esac
+}
+
+AIOCPFMD() {
 if $DEBUGMODE || $TESTMODE; then mkdir -p $PLOGS/TWRP; mkdir -p $PLOGS/MM; fi; [ -d $TMPDIR ] && rm -rf $TMPDIR; mkdir -p $TMPDIR; [ -d $ALTTMPDIR ] && rm -rf $ALTTMPDIR; mkdir -p $ALTTMPDIR
 UIP "Copy AIOCPFMD To TMPDIR$MSGPMODE"
 unzip -oq $ZIPFILE BB.zip Addons.tar.xz -d $ALTTMPDIR 2>/dev/null
@@ -285,11 +343,7 @@ unzip -oq $BB.zip -d $ALTTMPDIR 2>/dev/null; rm -f $BB.zip
 chmod -R 777 $TMPDIR; chmod -R 777 $ALTTMPDIR
 $BB/busybox-$arch --install -s $BB
 $UNTARXZ -xf $ADDONS.tar.xz -C $ALTTMPDIR; rm -f $ADDONS.tar.xz
-UPN="ZipAddons"; UZTPN &
-}
-
-GAPPS_CHECKER() {
-if find $SYSTEM -name *GmsCore* >/dev/null || find $SYSTEM -name *GoogleServicesFramework* >/dev/null; then FINDGAPPS=true; else FINDGAPPS=false; fi
+UPN="AltAddons"; UZTPN &
 }
 
 CHECK_AVERSION() {
@@ -332,61 +386,6 @@ done
 fi
 done
 return 1
-}
-
-PATCHMODE() {
-case "$MCMODE" in
-"true") MCMODE=true;;
-"false") MCMODE=false;;
-*) echo "$MSGMCMODE
-MCMODE=true" >> $PATCHMODEFILE; MCMODE=true;;
-esac
-if find /sys/class -name leds >/dev/null; then
-LEDPATH="$(find /sys/class -name leds)"
-case "$LEDCOLOR" in
-R) LEDCOLOR=red;;
-G) LEDCOLOR=green;;
-B) LEDCOLOR=blue;;
-W) LEDCOLOR=white;;
-"false") BLINKMODE=false;;
-*) BLINKMODE=false; echo "$MSGLEDCOLOR
-LEDCOLOR=false" >> $PATCHMODEFILE;;
-esac
-if [ -f $LEDPATH/$LEDCOLOR/blink ]; then echo -n 1 > $LEDPATH/$LEDCOLOR/blink; BLINKMODE=true; fi
-fi
-if grep -q "HFMODE=false" $PATCHMODEFILE; then
-HFMODE=false
-else
-HFPATH="$(find /sys/class -name vibrator)"
-if grep -q "HFMODE" $PATCHMODEFILE; then
-if [ -f $HFPATH/duration ]; then echo -n $HFDURATION > $HFPATH/duration; fi
-HFMODE=true
-elif [ -f $HFPATH/activate ] || [ -f $HFPATH/enable ]; then
-MSGDELIMITER; UIP "Use Haptic Feedback?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if $KEYFUNCTION; then
-if [ -f $HFPATH/duration ]; then echo -n $HFDURATION > $HFPATH/duration; fi
-echo "$MSGHFMODE
-HFMODE=20" >> $PATCHMODEFILE; HFMODE=true
-else
-HFMODE=false; echo "$MSGHFMODE
-HFMODE=false" >> $PATCHMODEFILE
-fi
-fi
-if [ -f $HFPATH/activate ]; then HFFPATH=$HFPATH/activate; elif [ -f $HFPATH/enable ]; then HFFPATH=$HFPATH/enable; fi
-fi
-case "$HFSWAPMODE" in
-"true") HFSWAPMODE=true;;
-"false") HFSWAPMODE=false;;
-*) echo "$MSGHFSMODE
-HFSMODE=false" >> $PATCHMODEFILE; HFSWAPMODE=false;;
-esac
-case "$PDESIGN" in
-N) NEWDESIGN=true; OLDDESIGN=false;;
-O) OLDDESIGN=true; NEWDESIGN=false;;
-*) MSGDELIMITER; UIP "Choose Patch Design:" "$MSGVU New (By Сategory) $RI" "$MSGVD Old (The Whole List)"; if $KEYFUNCTION; then NEWDESIGN=true; OLDDESIGN=false; echo "$MSGPDESIGN
-PDESIGN=N" >> $PATCHMODEFILE; else OLDDESIGN=true; NEWDESIGN=false; echo "$MSGPDESIGN
-PDESIGN=O" >> $PATCHMODEFILE; fi;;
-esac
 }
 
 MAGISK_CHECKER() {
@@ -453,13 +452,19 @@ fi
 
 END() {
 MSGDELIMITER
+if $ENDMODE; then
+UIP "It's Time To Choose:" "$MSGVU To The Beginning $MSGEFTC" "$MSGVD Exit $MSGEND"
+if $KEYFUNCTION; then cd $TMPDIR; ls | grep -v AltAddons | xargs rm -rf; UNIVERSALREMOVECAM; GCAM_PRESETS; ANXCAM_PRESETS; END; else ENDMODE=false; END; fi
+else
 UNMOUNT
 if $DEBUGMODE; then
 UIP "Clear TMPDIR, Copy Logs & Exit"
 if [ $BOOTMODE != true ]; then
-cp -f /tmp/recovery.log $PLOGS/TWRP/recovery-"$DMYHMS".log
+mkdir -p $PLOGS/TWRP/$( date +"%Y-%m" )
+cp -f /tmp/recovery.log $PLOGS/TWRP/$( date +"%Y-%m" )/AIORecovery-$( date +"%d-%H:%M:%S" ).log
 fi
-find $STORAGE/Download/ -type f -name 'magisk_install_log*.log' -exec mv {} $PLOGS/MM/ \;
+mkdir -p $PLOGS/MM/$( date +"%Y-%m" )
+find $STORAGE/Download/ -type f -name 'magisk_install_log*.log' -exec mv {} $PLOGS/MM/$( date +"%Y-%m" )/AIOMagisk-$( date +"%d-%H:%M:%S" ).log \;
 else
 UIP "Clear TMPDIR & Exit"
 fi
@@ -467,6 +472,7 @@ if $BLINKMODE; then
 echo -n 0 > $LEDPATH/$LEDCOLOR/blink
 fi
 rm -rf $TMPDIR && rm -rf $ALTTMPDIR && MSGDELIMITER && exit 0
+fi
 }
 
 ui_print() {
@@ -493,12 +499,6 @@ shift
 local FILES=$@
 [ -z "$FILES" ] && FILES="$PROPFILESALT"
 sed -n "$REGEX" $FILES 2>/dev/null | head -n 1
-}
-
-BUILD_PROP_BACKUP() {
-if [ -f $IPSBP ]; then
-cp -f $IPSBP "$IPSBP-$DMYHMS.bak"
-fi
 }
 
 UCS() {
@@ -561,31 +561,11 @@ done
 }
 
 REMOVER() {
-for TARGET in $REMOVE; do
-if $STANDARTREMOVER; then
-if [ -d $TARGET ]; then
-rm -rf $TARGET
-fi
-else
-if [ -d $MODPATH/$TARGET ]; then
-rm -rf $MODPATH/$TARGET
-fi
-fi
-done
-STANDARTREMOVER=false
-}
-
-BUCKUPER() {
-for TARGET in $BUCKUP; do
-if [ -f $TARGET.bak ]; then
-mv -f $TARGET.bak $TARGET
-elif $STANDARTBUCKUPER && [ -f $TARGET ]; then
-for STANDARTBUCKUPERTARGET in $TARGET; do
-cp -f $STANDARTBUCKUPERTARGET $STANDARTBUCKUPERTARGET.bak
-done
-fi
-done
-STANDARTBUCKUPER=false
+local REMOVE=$2
+case $1 in
+-rm) for TARGET in $REMOVE; do if [ -d $TARGET ]; then rm -rf $TARGET; fi; done;;
+-mm) for TARGET in $(echo $REMOVE | cut -f 1 -d '_'); do if [ -d $MODPATH/$TARGET ]; then rm -rf $MODPATH/$TARGET; fi; if [ -d $MODPATHUPD/$TARGET ]; then rm -rf $MODPATHUPD/$TARGET; fi; done;;
+esac
 }
 
 FINDER() {
@@ -719,7 +699,7 @@ esac
 { #KeyCheck
 
 KEYTEST() {
-UIP "Press Vol: Up Or Down" "Or Tap The Screen To Assign Buttons"
+MSGDELIMITER; UIP "Press Vol: Up Or Down" "Or Tap The Screen To Assign Buttons"
 if ($TIMEOUT 5 $KGETEVENT -lc 1 2>&1 | $KGREP VOLUME | $KGREP " DOWN" > $EVENTS); then HFBMODE && sed -i "s/KMETHOD=false/KMETHOD=N/g" $PATCHMODEFILE && return 0; else return 1; fi
 }
 
@@ -740,22 +720,30 @@ fi
 }
 
 CHOOSEOLD() {
-# Keycheck binary by someone755 @Github, idea for code below by Zappo @xda-developers
 while true; do
-if $TKEYCHECK; then
-$FKEYCHECK
-fi
-$FKEYCHECK
+if $TKEYCHECK; then $FKEYCHECK; $FKEYCHECK; elif $ATKEYCHECK; then $TIMEOUT 0 $FKEYCHECK >/dev/null; $TIMEOUT 30 $FKEYCHECK >/dev/null; else $FKEYCHECK; fi
 local SEL=$?
 if [ "$1" == "UP" ]; then
-HFBMODE && UP=$SEL
+HFBMODE && UP=$SEL && sed -i "s/ButtonIDUP=#UP/ButtonIDUP=$SEL/g" $PATCHMODEFILE
 break
 elif [ "$1" == "DOWN" ]; then
-HFBMODE && DOWN=$SEL
+HFBMODE && DOWN=$SEL && sed -i "s/ButtonIDDOWN=#DOWN/ButtonIDDOWN=$SEL/g" $PATCHMODEFILE
 break
 elif [ $SEL -eq $UP ]; then
 HFBMODE && return 0
 elif [ $SEL -eq $DOWN ]; then
+HFBMODE && return 1
+fi
+done
+}
+
+ALTCHOOSEOLD() {
+while true; do
+if $TKEYCHECK; then $FKEYCHECK; $FKEYCHECK; elif $ATKEYCHECK; then $TIMEOUT 0 $FKEYCHECK >/dev/null; $TIMEOUT 30 $FKEYCHECK >/dev/null; else $FKEYCHECK; fi
+local SEL=$?
+if [ $SEL -eq $BUTTONIDUP ]; then
+HFBMODE && return 0
+elif [ $SEL -eq $BUTTONIDDOWN ]; then
 HFBMODE && return 1
 fi
 done
@@ -767,48 +755,35 @@ $KEYFUNCTION "UP"
 UIP "Press Vol Down"
 $KEYFUNCTION "DOWN"
 if [ $UP = $DOWN ]; then
-UIP "Two Identical Keys Are Tied! Try Again!" "Activated TKEY For CHOOSEOLD"
-TKEYCHECK=true
-MSGDELIMITER; UIP "Vol Key Programming Method" "Press Vol Up"
-HFBMODE && $KEYFUNCTION "UP"
+MSGDELIMITER; UIP "Two Identical Keys Are Tied! Try Again!" "Press Vol Up"
+$KEYFUNCTION "UP"
 UIP "Press Vol Down"
-HFBMODE && $KEYFUNCTION "DOWN"
+$KEYFUNCTION "DOWN"
 if [ $UP = $DOWN ]; then
 UIP "Two Identical Keys Are Tied! Try Again!" "Or Vol Key Not Detected!"
-END
-else
-sed -i "s/TKEY=false/TKEY=true/g" $PATCHMODEFILE
+ENDMODE=false; END
 fi
 else
-sed -i "s/KMETHOD=false/KMETHOD=O/g" $PATCHMODEFILE
+if $BIDMODE; then
+sed -i "s/KMETHOD=false/KMETHOD=A/g" $PATCHMODEFILE
+else
+sed -i "s/KMETHOD=A/KMETHOD=O/g" $PATCHMODEFILE
+fi
 fi
 }
 
 KEYCHECK() {
 if [ -f /sbin/getevent ] && [ -f /sbin/grep ]; then KGETEVENT="/sbin/getevent"; KGREP="/sbin/grep"; elif [ -f $IPSB/getevent ] && [ -f $IPSB/grep ]; then KGETEVENT="$IPSB/getevent"; KGREP="$IPSB/grep"; else KGETEVENT="getevent"; KGREP="grep"; fi
-case "$KMETHOD" in
-N) KNEW=true; KOLD=false;;
-O) KOLD=true; KNEW=false;;
-"false") KOLD=false; KNEW=false;;
-*) echo "$MSGKMETHOD
-KMETHOD=false" >> $PATCHMODEFILE; KOLD=false; KNEW=false;;
-esac
-case "$TKEY" in
-"true") TKEYCHECK=true;;
-"false") TKEYCHECK=false;;
-*) TKEYCHECK=false; echo "$MSGTKEY
-TKEY=false" >> $PATCHMODEFILE;;
-esac
-if $KOLD && [ $KNEW != true ]; then
-KEYFUNCTION=CHOOSEOLD
-KEYCHOOSEOLDBIND
-elif $KNEW && [ $KOLD != true ]; then
+if $KOLD && [ $AKOLD != true ] && [ $KNEW != true ]; then
+KEYFUNCTION=CHOOSEOLD; KEYCHOOSEOLDBIND
+elif $KNEW && [ $AKOLD != true ] && [ $KOLD != true ]; then
 KEYFUNCTION=CHOOSENEW
+elif $AKOLD && [ $KNEW != true ] && [ $KOLD != true ]; then
+KEYFUNCTION=ALTCHOOSEOLD
 elif KEYTEST; then
 KEYFUNCTION=CHOOSENEW
 else
-KEYFUNCTION=CHOOSEOLD
-KEYCHOOSEOLDBIND
+KEYFUNCTION=CHOOSEOLD; KEYCHOOSEOLDBIND
 fi
 }
 
@@ -837,12 +812,16 @@ UNIVERSALREMOVECAM() {
 if [ $BOOTMODE != true ]; then
 REMOVETRASHNAME="
 Camera2
-Snap
+CameraGo
 GCam
+GCamGOPrebuilt
+GCamGo
 Gcam
 GoogleCamera
 GoogleCameraGo
-CameraGo
+GoogleCameraLegacy
+Snap
+madCamera
 "
 RTrash_System_AppSA
 fi
@@ -935,7 +914,7 @@ fi
 }
 
 IANXCamS() {
-MODID="ANXMiuiCamera"; REMOVE="$MODID"; REMOVER
+MODID="ANXMiuiCamera"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
 if $AELEVEN; then
 NAMEANX="ANXCameraR"
@@ -986,7 +965,7 @@ MODID="48MPFixR"
 UIP "Please Wait..."
 $UNZIP -oq $ZIPFILE "48MPFixR".tar.xz -d $TMPDIR 2>/dev/null
 $UNTARXZ -xf $TMPDIR/"48MPFixR".tar.xz -C $TMPDIR; rm -f $TMPDIR/"48MPFixR".tar.xz
-REMOVE="$MODID"; REMOVER
+REMOVER -mm "$MODID"
 if CHECK_DEVICE ginkgo || CHECK_DEVICE lavender || CHECK_DEVICE willow; then
 cp -rf $TMPDIR/"48MPFixR"/system/qti_samsung/* $TMPDIR/"48MPFixR"/system
 elif CHECK_DEVICE gram || CHECK_DEVICE curtana || CHECK_DEVICE joyeuse; then
@@ -1006,7 +985,7 @@ MODID="48MPFixQ"
 UIP "Please Wait..."
 $UNZIP -oq $ZIPFILE "48MPFixQ".tar.xz -d $TMPDIR 2>/dev/null
 $UNTARXZ -xf $TMPDIR/"48MPFixQ".tar.xz -C $TMPDIR; rm -f $TMPDIR/"48MPFixQ".tar.xz
-REMOVE="$MODID"; REMOVER
+REMOVER -mm "$MODID"
 if CHECK_DEVICE ginkgo || CHECK_DEVICE lavender || CHECK_DEVICE willow ; then
 mv -f $TMPDIR/"48MPFixQ"/system/samsung/* $TMPDIR/"48MPFixQ"/system
 elif CHECK_DEVICE laurel_sprout; then
@@ -1174,10 +1153,14 @@ VGCN="$VTigrSDM845"
 GCNP="$FOLDERCAM/$GCFN"
 UCONE="Google_Camera_Universal_Method"
 UCS
+if $ENDMODE; then
+MSGNUS="(/)"
+else
 if [ $MAGISK != true ]; then
-MSGNUS="(//)"
+MSGNUS="$MSGEND"
 else
 MSGNUS="(/)"
+fi
 fi
 MSGDELIMITER
 UCUP="$VTigrTEN"
@@ -1207,10 +1190,14 @@ MSGDELIMITER; UIP "San1ty GCam:" "$VSan1tyPIE" "$VSan1tyTEN" "$MSGVU Yes $MSGEFT
 if $KEYFUNCTION; then
 SAN1TY_PRESETS
 fi
+if $ENDMODE; then
+MSGNUS="(/)"
+else
 if [ $MAGISK != true ]; then
-MSGNUS="(//)"
+MSGNUS="$MSGEND"
 else
 MSGNUS="(/)"
+fi
 fi
 MSGDELIMITER; UIP "Tigr GCam:" "$VTigrNOSDM845" "$VTigrSDM845" "$VTigrTEN" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
@@ -1226,7 +1213,11 @@ fi
 
 ANXCAM_PRESETS() {
 IANXCam
-MSGNUS="(//)"
+if $ENDMODE; then
+MSGNUS="(/)"
+else
+MSGNUS="$MSGEND"
+fi
 IANXAddons
 }
 
@@ -1240,11 +1231,10 @@ IMPORTANT_VARIABLES
 MIUI_CHECKER #&
 BB_CHECKER
 ARCH_CHECKER
-SELINUX_CHECKER #&
+PATCHMODE
 AIOCPFMD
 CHECK_AVERSION
 KEYCHECK
-PATCHMODE
 MAGISK_CHECKER
 UNIVERSALREMOVECAM
 GCAM_PRESETS
