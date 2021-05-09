@@ -1,10 +1,10 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
-* Версия AIOPFMD: 03.05.21 (37) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/03.05.2021/AIOPFMD-03.05.21-%2837%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1-psa4sLfHhESFvayt3Vmd4-LCMjskKh9/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/25">TG</a>
-* Версия AIOCPFMD: 03.05.21 (33) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/03.05.2021/AIOCPFMD-03.05.21-%2833%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1fxkDFcC1m7TxsbSYmTmhlQYUgrRHZIlX/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/26">TG</a>
-* Версия AIOIARPFMD: 03.05.21 (24) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/03.05.2021/AIOIARPFMD-03.05.21-%2824%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1FO0_nutU-5QAgyapaZpYqHLggctvaHt0/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/27">TG</a>
-* Последние обновление: 03.05.2021.
+* Версия AIOPFMD: 09.05.21 (38) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOPFMD-09.05.21-%2838%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1Fo4Lak1aUtjUFA453bCrzfPU07u51K2y/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/28">TG</a>
+* Версия AIOCPFMD: 09.05.21 (34) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOCPFMD-09.05.21-%2834%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1kEVXP6FW2xLm0pTzjhc7W9dFFCziO-p0/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/29">TG</a>
+* Версия AIOIARPFMD: 09.05.21 (25) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOIARPFMD-09.05.21-%2825%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1dECJ3grmnyOPTSBPPGSDehQ5UOBdisym/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/30">TG</a>
+* Последние обновление: 09.05.2021.
 * Разработчик: <a href="https://4pda.ru/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
 * Русский интерфейс: Нет, и не имеет смысла.
 * Технические требования:
@@ -32,6 +32,29 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 09.05.21 (38) ####
+* Cache Cleaner обновлен до 1.9:
+	- добавил удаление journal*.tmp и package_cache;
+	- глубокий поиск и удаления только пустых папок (как было раньше);
+	- фикс путей по /data/user_de;
+	- добавлено удаление логов из /data/system/syncmanager-log и файла логов /data/system/log-files.xml;
+	- Удаление файлов статистики /data/system/procstats, /data/system/graphicsstats и /data/system_ce/0/usagestats;
+	- Добавлен верхний регистр для выбора;
+* В Killogger добавлено:
+	- выбор на dumpsys;
+	- фикс путей по /data/user_de;
+	- добавлено удаление логов из /data/system/syncmanager-log и файла нахождения логов /data/system/log-files.xml;
+	- Удаление файлов статистики /data/system/procstats, /data/system/graphicsstats и /data/system_ce/0/usagestats;
+* В режим удаления/replace добавлены приложения в обычный лист: MusicPlayerGO и WallpaperPickerGoogle;
+* Switch On/Off Face UnLock IR Camera обновлен до 1.4 - добавил проверку на кангнутый фейс от Pixel Experience для AOSPExtended и оверлей;
+* MagiskHide Props Config Обновлен до v5.4.0-v127;
+* Riru Core Обновлен до v25.4.4.r426.05efc94?, фикс путей в самом архиве и фикс на проп для Huawei;
+* Systemless Hosts обновлен до v210506-v16.6;
+* hosts файл с AdAway Обновлен от 05.05.2021;
+* Фикс битых файлов 
+* UIROUNDED обновлен до 2.0 - добавлено много строк для Lawnchair R;
+* В TKEY удалил настройку A(uto) - теперь по умолчанию false с проверкой как и было;
+* Может что-то ещё что забыл.
 #### 03.05.21 (37) ####
 * Safety Net Patch от kdrag0n не обновлен до v2.0.0 (отвал с patchelf);
 * Обновлен пункт трех Safety Net патчей - теперь они не связаны между собой и не удаляют друг-друга (вообще это конфликт но ставьте как хотите);
@@ -42,7 +65,7 @@
 	- Установка только как Magisk модуль (я бы сделал как и не Magisk, но проще удавится... Посмотрим);
 	- Фикс всего что было отвалено в оригинале (а это почти половина включая не существующие но использующиеся функции, переменные, поиск файлов, даблинг (а то и дофигаблинг) строк пропа, файлов, отвал патчинга mixer_paths файлов и прочие);
 	- Убрал строку ro.config.media_vol_steps (для этого есть другой патч);
-	- Patch device_features показывается только когда находит эту папку в /vendor/etc (ну логично же) (не тестировал так как не имею такой);
+	- Patch device_features показывается только когда находит эту папку в /vendor/etc и /system/etc (ну логично же) (не тестировал так как не имею такой);
 	- Ну и поскольку я починил Dirac то всплыл отвал музыки при принудительном переключении на аудиоканал на некоторых прошивках/телефонах - так что я сделал выбор: использовать PROCESSING_PATCH (принудительное переключение каналов на Dirac) или нет так что выбор отвала за вами;
 	- И это всё ускоряет установку на 20% как минимум. Хотя есть ещё что тут переделывать и улучшать но это потом;
 * Добавлен arm64 Keycheck бинарник;
@@ -50,8 +73,8 @@
 * Добавлена установка System Audio Quality v2.0  - Этот модуль улучшает общие качество звука (сделал с нахождением и патчингом) - только Magisk:
 * Обновлен IOS Emoji до v13 (unicode 13.1) от EmojiReplacer;
 * Фикс создания privapp-permissions у JamesDSPManager; 
-* Добавил удаление логов из /data/user_de/0/com.android.shell/files/bugreports для Killlogger;
-* Cache Cleaner обновлен до 1.8 - добавил удаление папки .xlDownload (кто создал её - сдохнет)
+* Добавил удаление логов из /data/user_de/0/com.android.shell/files/bugreports для Killlogger и Cache Cleaner;
+* Cache Cleaner обновлен до 1.8 - добавил удаление папки .xlDownload (кто создал её - сдохнет);
 * В режим удаления/replace добавлены приложения в обычный лист: AirDots, AirDotsPlugin, MiDrive, RomStats, OneOSLogcat и ONESettings;
 * Lawnchair обновлен до v11.0 Alpha 3;
 * Добавлен альтернативный CHOOSEOLD - он будет по умолчанию после удачной проверки/прохождения в обычном CHOOSEOLD, его не надо биндить - работает так же как и CHOOSENEW (записывает ID кнопок в файл PATCHMODE потому-что для каждого телефона он может быть разным). НО я не тестировал его на телефонах в которых не требуется две проверки на KEYCHECK и для этого я оставил старый CHOOSEOLD;
@@ -153,7 +176,7 @@
 * Фикс рандомного создания пустого PATCHMODE даже если он уже был создан до этого в другом месте (а вот тут не уверен);
 * Фиксы по PATCHMODE;
 * Добавлен AsusLauncher для 10-ки и 11-ки - мод на мод в черной теме и прочим;
-* UIROUNDED обновлен до 1.9 - добавлено много по AsusLauncher;
+* UIROUNDED обновлен до 1.9 - добавлено много строк для AsusLauncher;
 * Добавлен PixelLauncher v11 825 - для 11-ки;
 * Вернул PixelLauncher для 10-ки который был до этого;
 * Burn In Protection обновлен до 1.1 - добавил привязку к категории и добавил выборы (сток в основном 60-1-3 но его тут нет потому-что смещения 0 почти): время смещения (в секундах): 20 40 60 80 100 120; количество dip смещения по горизонтали: 4dip 6dip 8dip 10dip; количество dip смещения по вертикали: 4dip 6dip 8dip 10dip;
@@ -913,6 +936,7 @@
 	- Music
 	- Music2
 	- MusicFX
+	- MusicPlayerGO
 	- MyVerizonServices
 	- Netflix_activation
 	- NewsWeather
@@ -1019,6 +1043,7 @@
 	- VoiceSearchStub
 	- Wallet
 	- Wallpaper
+	- WallpaperPickerGoogle
 	- WallpaperPickerGooglePrebuilt
 	- WallpaperPickerGoogleRelease
 	- WallpapersBReel2017
@@ -1259,6 +1284,7 @@
 * Пункт (All) - Установка BuildProp Tweaks - Общие твики не влияющие особо на производительность или энергосбережения (видео в 4К, и всякие твики по мелочи);
 * Пункт (All) - Установка Kill Logger - отключает и убивает многие процессы/бинарники сбора логов:
 	- Оставить возможность снимать logcat или нет;
+	- Оставить возможность использовать dumpsys или нет;
 * Пункт (Only М) - Установка Force 4X MSAA - включает 4X MSAA в настройках разработчика после перезагрузки;
 * Пункт (Only М) - Установка Disable HW Overlays - включает отключение наложений после перезагрузки в настройках разработчика;
 * Пункт (Only М) - Установка Force DEV & ADB - включает пункт разработчика и ADB со всеми пунктами;
@@ -1313,7 +1339,10 @@
 
 <details> 
   <summary>Changelog</summary>
-
+  
+#### 09.05.21 (34) ####
+* Обновлена GCam от BSG до V8.1.101 (A9 GVv);
+* Мелкие изменения от AIOPFMD.
 #### 03.05.21 (33) ####
 * Обновлена GCam от BSG до V8.1.101 (A9 GVu);
 * Множественные изменения от AIOPFMD (добавлены все улучшения и фиксы за всё время).
@@ -1438,6 +1467,10 @@
 <details> 
   <summary>Changelog</summary>
   
+#### 09.05.21 (25) ####
+* GBoard обновлен от 03.05;
+* MiXplorerSilver обновлен до v6.55.1;
+* Мелкие изменения от AIOPFMD.
 #### 03.05.21 (24) ####
 * Lawnchair обновлен до 9.1 Alpha 3;
 * GBoard обновлен от 22.04;
@@ -1536,7 +1569,7 @@
 	- PMODE: Открывает некоторые тестовые пункты/патчи (в PATCHMODE напротив "PMODE=" написать: U(ser) или D(ebug)) - Прописать только букву - По умолчанию U(ser).
 	- PDESIGN: Изменяет "дизайн" патча (в PATCHMODE напротив "PDESIGN=" написать: N(ew) или O(ld)) - прописать только букву - По умолчанию N(ew).
 	- KMETHOD: Принудительное переключение между старым и новым методом "KeyCheck" (в PATCHMODE напротив "KMETHOD=" написать: N(ew), O(ld) или A(lt) - прописать только букву - По умолчанию false, но после при первом запуске патча без настроенного файла PATCHMODE будет первый бинд, и на каком будет всё нормально - тот и будет по умолчанию прописан в PATCHMODE.
-	- TKEY: Включится вторая проверка (без нее на некоторых устройствах/прошивках бывает дабл кнопок или наоборот отсутствие и невозможность бинда (касается только KMETHOD O(ld)) в PATCHMODE напротив "TKEY=" написать: A(uto), false или true - По умолчанию A(uto).
+	- TKEY: Включится вторая проверка (без нее на некоторых устройствах/прошивках бывает дабл кнопок или наоборот отсутствие и невозможность бинда (касается только KMETHOD O(ld)) в PATCHMODE напротив "TKEY=" написать: false или true - По умолчанию false.
 	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
 	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
 	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
