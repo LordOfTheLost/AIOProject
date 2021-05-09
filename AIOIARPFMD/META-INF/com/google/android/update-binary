@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOIARPFMD="03.05.21 (24)"
+VAIOIARPFMD="09.05.21 (25)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -65,13 +65,13 @@ MSGEFTC="(\)"
 MSGNIS="(|)"
 MSGNUS="(/)"
 MSGEND="(//)"
-RI="(R)"
+MSGRI="(R)"
 WDI="Community"
 FMR="For More Rom"
 FAOOR="For AOSP/LOS & Others Rom"
 MSGPMODE="$MSGSD Opens Some Test Items/Patches - Set: U(ser) Or D(ebug)"
 MSGKMETHOD="$MSGSD Force Switching Between Old And New \"KeyCheck\" Method - Set: N(ew), O(ld) Or A(lt)"
-MSGTKEY="$MSGSD A Second Check Is Turned On For KMETHOD O(ld) - Set: A(uto), false Or true"
+MSGTKEY="$MSGSD A Second Check Is Turned On For KMETHOD O(ld) - Set: false Or true"
 MSGPDESIGN="$MSGSD Changes The \"Design\" Of The Patch - Set: N(ew) Or O(ld)"
 MSGLEDCOLOR="$MSGSD This Is The Color Of Your Diode - Set: R(ed), G(reen), B(lue) Or W(hite)"
 MSGHFMODE="$MSGSD Adds Tactile Feedback To Patch Selections - Set: Values From 1 To 255 For Weak/Strong Vibration"
@@ -295,10 +295,9 @@ A) AKOLD=true; KNEW=false; KOLD=false;;
 *) echo -e "$MSGKMETHOD\nKMETHOD=false" >> $PATCHMODEFILE; AKOLD=false; KOLD=false; KNEW=false;;
 esac
 case "$TKEY" in
-"A") ATKEYCHECK=true; TKEYCHECK=false;;
-"true") ATKEYCHECK=false; TKEYCHECK=true;;
-"false") ATKEYCHECK=false; TKEYCHECK=false;;
-*) ATKEYCHECK=true; TKEYCHECK=false; echo -e "$MSGTKEY\nTKEY=A" >> $PATCHMODEFILE;;
+"true") TKEYCHECK=true;;
+"false") TKEYCHECK=false;;
+*) TKEYCHECK=false; echo -e "$MSGTKEY\nTKEY=false" >> $PATCHMODEFILE;;
 esac
 case "$ENDMODE" in
 "true") ENDMODE=true;;
@@ -376,7 +375,7 @@ UIP "Found Magisk, Install Everything $IAMM?"
 elif [ $MAGISKVC -lt 20400 ]; then
 UIP "Found Old Magisk, Please Install Magisk v18.0+!" "Found Magisk, Install Everything $IAMM?"
 fi
-UIP "$MSGVU Yes $RI" "$MSGVD No $MSGNUS"
+UIP "$MSGVU Yes $MSGRI" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
 MAGISK=true
 else
@@ -445,18 +444,14 @@ else
 UNMOUNT
 if $DEBUGMODE; then
 UIP "Clear TMPDIR, Copy Logs & Exit"
-if [ $BOOTMODE != true ]; then
-mkdir -p $PLOGS/TWRP/$( date +"%Y-%m" )
-cp -f /tmp/recovery.log $PLOGS/TWRP/$( date +"%Y-%m" )/AIORecovery-$( date +"%d-%H:%M:%S" ).log
-fi
+if [ $BOOTMODE != true ]; then mkdir -p $PLOGS/TWRP/$( date +"%Y-%m" ); cp -f /tmp/recovery.log $PLOGS/TWRP/$( date +"%Y-%m" )/AIORecovery-$( date +"%d-%H:%M:%S" ).log; fi
+if $BOOTMODE && $TESTMODE; then input tap 1040 140; fi
 mkdir -p $PLOGS/MM/$( date +"%Y-%m" )
 find $STORAGE/Download/ -type f -name 'magisk_install_log*.log' -exec mv {} $PLOGS/MM/$( date +"%Y-%m" )/AIOMagisk-$( date +"%d-%H:%M:%S" ).log \;
 else
 UIP "Clear TMPDIR & Exit"
 fi
-if $BLINKMODE; then
-echo -n 0 > $LEDPATH/$LEDCOLOR/blink
-fi
+if $BLINKMODE; then echo -n 0 > $LEDPATH/$LEDCOLOR/blink; fi
 rm -rf $TMPDIR && rm -rf $ALTTMPDIR && MSGDELIMITER && exit 0
 fi
 }
@@ -714,7 +709,7 @@ fi
 
 CHOOSEOLD() {
 while true; do
-if $TKEYCHECK; then $FKEYCHECK; $FKEYCHECK; elif $ATKEYCHECK; then $TIMEOUT 0 $FKEYCHECK >/dev/null; $TIMEOUT 30 $FKEYCHECK >/dev/null; else $FKEYCHECK; fi
+if $TKEYCHECK; then $FKEYCHECK; fi; $FKEYCHECK
 local SEL=$?
 if [ "$1" == "UP" ]; then
 HFBMODE && UP=$SEL && sed -i "s/ButtonIDUP=#UP/ButtonIDUP=$SEL/g" $PATCHMODEFILE
@@ -732,7 +727,7 @@ done
 
 ALTCHOOSEOLD() {
 while true; do
-if $TKEYCHECK; then $FKEYCHECK; $FKEYCHECK; elif $ATKEYCHECK; then $TIMEOUT 0 $FKEYCHECK >/dev/null; $TIMEOUT 30 $FKEYCHECK >/dev/null; else $FKEYCHECK; fi
+if $TKEYCHECK; then $FKEYCHECK; fi; $FKEYCHECK
 local SEL=$?
 if [ $SEL -eq $BUTTONIDUP ]; then
 HFBMODE && return 0
@@ -748,13 +743,17 @@ $KEYFUNCTION "UP"
 UIP "Press Vol Down"
 $KEYFUNCTION "DOWN"
 if [ $UP = $DOWN ]; then
-MSGDELIMITER; UIP "Two Identical Keys Are Tied! Try Again!" "Press Vol Up"
+UIP "Two Identical Keys Are Tied! Try Again!" "Activated TKEY For CHOOSEOLD"
+TKEYCHECK=true
+MSGDELIMITER; UIP "Vol Key Programming Method" "Press Vol Up"
 $KEYFUNCTION "UP"
 UIP "Press Vol Down"
 $KEYFUNCTION "DOWN"
 if [ $UP = $DOWN ]; then
 UIP "Two Identical Keys Are Tied! Try Again!" "Or Vol Key Not Detected!"
 ENDMODE=false; END
+else
+sed -i "s/TKEY=false/TKEY=true/g" $PATCHMODEFILE
 fi
 else
 if $BIDMODE; then

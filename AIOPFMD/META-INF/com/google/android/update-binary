@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="03.05.21 (37)"
+VAIOPFMD="09.05.21 (38)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -14,14 +14,6 @@ POSTFSDATAD="$NVBASE/post-fs-data.d"
 
 { #Var true/false By Fefault
 STANDARTBUCKUPER=false
-DELETEWITHOUTSELECTION=false
-HFMODE=false
-LIBWA=false
-APKSIGN=false
-FORCESIGN=false
-FINDPATCHMODE=false
-DYNLIB=true
-USEPROCESSING_PATCH=false
 } #
 
 { #Version Or Date Of Patches In This Patch
@@ -36,7 +28,7 @@ VGBRC="v1.1"
 VGBT="v1.1"
 VCINNI="v1.5"
 VGPPM="v1.1"
-VUIROUNDED="v1.9"
+VUIROUNDED="v2.0"
 VBIPO="v1.2"
 VSUM="v1.1"
 VSUICP="v1.1"
@@ -73,9 +65,9 @@ VFSFM="v1.2"
 SLOQSBDF="v1.1"
 #AdBlock/Hosts
 VDAB="1.0"; VCDAB="1"
-VAAH="23.04.2021"
-VLPH="v9.5.5"; VCLPH="1715"
-VSH="v210325-v16.5"; VCSH="165"
+VAAH="05.05.2021"
+VLPH="v9.5.6"; VCLPH="1716"
+VSH="v210506-v16.6"; VCSH="166"
 VOH="v1.1"
 #Net: GPS/TTL/DNS/WB
 VGOGPSFR="v6"; VCGOGPSFR="6"
@@ -87,7 +79,7 @@ VBB="v1.34.0.1"; VCBB="13401"
 VZS="3.0" VCZS="3014"
 VSELC="v1.3"
 VASTE="v17.3.1"; VCASTE="70"
-VCC="v1.8"
+VCC="v1.9"
 VDetach="v4.3 BETA 8"
 VSQLite3="v1.0"; VCSQLite3="1"
 VMMFRM="2020.4.17"; VCMMFRM="202004170"
@@ -103,9 +95,9 @@ VSN="v1-beta2"; VCSN="16"
 VSNA="v3"; VCSNA="5"
 VSNAA="v1.1.1"; VCSNAA="10101"
 VISNET="v1.0"
-VMHPC="v5.4.0-v126"
+VMHPC="v5.4.0-v127"
 #Riru & EdXposed
-VRiru="v25.4.2.r415.f42e9c3"; VCRiru="415"
+VRiru="v25.4.4.r426.05efc94"; VCRiru="426"
 VREX="v0.5.2.2_4683-master"; VCREX="4683"
 #Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS
 VFGS="v1.1"
@@ -118,7 +110,7 @@ VFMSAAS="v1.0"
 VFDHWO="v1.1"
 VFDEVADB="v1.3"
 VFEMTP="v1.0"
-VSOOOFUIRC="v1.3"
+VSOOOFUIRC="v1.4"
 VFDM="v1.0"
 VIFDPP="v1.0"
 VLEDLO="v1.1"
@@ -182,13 +174,13 @@ MSGEFTC="(\)"
 MSGNIS="(|)"
 MSGNUS="(/)"
 MSGEND="(//)"
-RI="(R)"
+MSGRI="(R)"
 WDI="Community"
 FMR="For More Rom"
 FAOOR="For AOSP/LOS & Others Rom"
 MSGPMODE="$MSGSD Opens Some Test Items/Patches - Set: U(ser) Or D(ebug)"
 MSGKMETHOD="$MSGSD Force Switching Between Old And New \"KeyCheck\" Method - Set: N(ew), O(ld) Or A(lt)"
-MSGTKEY="$MSGSD A Second Check Is Turned On For KMETHOD O(ld) - Set: A(uto), false Or true"
+MSGTKEY="$MSGSD A Second Check Is Turned On For KMETHOD O(ld) - Set: false Or true"
 MSGPDESIGN="$MSGSD Changes The \"Design\" Of The Patch - Set: N(ew) Or O(ld)"
 MSGLEDCOLOR="$MSGSD This Is The Color Of Your Diode - Set: R(ed), G(reen), B(lue) Or W(hite)"
 MSGHFMODE="$MSGSD Adds Tactile Feedback To Patch Selections - Set: Values From 1 To 255 For Weak/Strong Vibration"
@@ -277,7 +269,7 @@ IPVO="$VENDOR/overlay"; MIPSVO="/system/vendor/overlay"
 IPVUKL="$VENDOR/usr/keylayout"; MIPSVUKL="/vendor/usr/keylayout"
 IPVF="$VENDOR/firmware"; MIPVF="/system/vendor/firmware"
 IPVEDF="$IPVE/device_features"; MIPSVEDF="/system/vendor/device_features"
-IPDA="/data/app"; IPDD="/data/data"; IPDS="/data/system"; IPDSU="$IPDS/users"; IPDSNS="$IPDS/netstats"; IPDBBN="/dev/block/by-name"; IPDM="/data/misc"; IPDMDE="/data/misc_de"; IPDRESC="/data/resource-cache"; STORAGE="/sdcard"; ASTORAGE="/data/media"
+IPDA="/data/app"; IPDD="/data/data"; IPDS="/data/system"; IPDSU="$IPDS/users"; IPDSUDE="/data/user_de"; IPDSNS="$IPDS/netstats"; IPDBBN="/dev/block/by-name"; IPDM="/data/misc"; IPDMDE="/data/misc_de"; IPDRESC="/data/resource-cache"; STORAGE="/sdcard"; ASTORAGE="/data/media"
 ACONFS="$(find $SYSTEM $VENDOR -type f -name "audio_configs*.xml")"
 APINF="$(find $SYSTEM $VENDOR -type f -name "audio_platform_info*.xml")"
 CFGS="$(find $SYSTEM $VENDOR -type f -name "*audio_effects*.conf" -o -name "*audio_effects*.xml")"
@@ -287,7 +279,7 @@ APCFGS="$(find $SYSTEM $VENDOR -type f -name "*audio_io_policy*.conf" -o -name "
 MCGAX="$(find $SYSTEM $VENDOR -type f -name "*media_codecs_google_c2_audio*.xml" -o -name "*media_codecs_google_audio*.xml")"
 DEVFEA=$IPSEDF/*.xml; DEVFEAA=$IPVEDF/*.xml
 SPG="settings put global"; SPS="settings put secure"
-if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
+if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
 PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"; HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"; HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"; PDESIGN="$(GET_PMODE_PROP "$PATCHMODEFILE" "PDESIGN")"; LEDCOLOR="$(GET_PMODE_PROP "$PATCHMODEFILE" "LEDCOLOR")"; KMETHOD="$(GET_PMODE_PROP "$PATCHMODEFILE" "KMETHOD")"; TKEY="$(GET_PMODE_PROP "$PATCHMODEFILE" "TKEY")"; MCMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "MCMODE")"; ENDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "ENDMODE")"; BIDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "BIDMODE")"
 PROPFILES="$IPSDP $IPSBP $IPVBP /data/local.prop /default.prop /build.prop"; PROPFILESALT="$IPSSPBP $IPSBP $IPVBP"
 DMYHMS="$( date +"%d-%m-%Y-%H:%M:%S" )"
@@ -394,10 +386,9 @@ A) AKOLD=true; KNEW=false; KOLD=false;;
 *) echo -e "$MSGKMETHOD\nKMETHOD=false" >> $PATCHMODEFILE; AKOLD=false; KOLD=false; KNEW=false;;
 esac
 case "$TKEY" in
-"A") ATKEYCHECK=true; TKEYCHECK=false;;
-"true") ATKEYCHECK=false; TKEYCHECK=true;;
-"false") ATKEYCHECK=false; TKEYCHECK=false;;
-*) ATKEYCHECK=true; TKEYCHECK=false; echo -e "$MSGTKEY\nTKEY=A" >> $PATCHMODEFILE;;
+"true") TKEYCHECK=true;;
+"false") TKEYCHECK=false;;
+*) TKEYCHECK=false; echo -e "$MSGTKEY\nTKEY=false" >> $PATCHMODEFILE;;
 esac
 case "$ENDMODE" in
 "true") ENDMODE=true;;
@@ -453,6 +444,7 @@ fi
 case $ASDK in
 "10");; "15");; "16");; "17");; "18");; "19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; *) MSGDELIMITER; UIP "Warning, SDK Not Supported/Found!";;
 esac
+DYNLIB=true
 [ $ASDK -lt 26 ] && DYNLIB=false
 [ -z $DYNLIB ] && DYNLIB=false
 if $DYNLIB; then DYNLIBPATCH="\/vendor"; else DYNLIBPATCH="\/system"; fi
@@ -493,7 +485,7 @@ UIP "Found Magisk, Install Everything $IAMM?"
 elif [ $MAGISKVC -lt 20400 ]; then
 UIP "Found Old Magisk, Please Install Magisk v18.0+!" "Found Magisk, Install Everything $IAMM?"
 fi
-UIP "$MSGVU Yes $RI" "$MSGVD No $MSGNUS"
+UIP "$MSGVU Yes $MSGRI" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
 MAGISK=true
 else
@@ -541,18 +533,14 @@ else
 UNMOUNT
 if $DEBUGMODE; then
 UIP "Clear TMPDIR, Copy Logs & Exit"
-if [ $BOOTMODE != true ]; then
-mkdir -p $PLOGS/TWRP/$( date +"%Y-%m" )
-cp -f /tmp/recovery.log $PLOGS/TWRP/$( date +"%Y-%m" )/AIORecovery-$( date +"%d-%H:%M:%S" ).log
-fi
+if [ $BOOTMODE != true ]; then mkdir -p $PLOGS/TWRP/$( date +"%Y-%m" ); cp -f /tmp/recovery.log $PLOGS/TWRP/$( date +"%Y-%m" )/AIORecovery-$( date +"%d-%H:%M:%S" ).log; fi
+if $BOOTMODE && $TESTMODE; then input tap 1040 140; fi
 mkdir -p $PLOGS/MM/$( date +"%Y-%m" )
 find $STORAGE/Download/ -type f -name 'magisk_install_log*.log' -exec mv {} $PLOGS/MM/$( date +"%Y-%m" )/AIOMagisk-$( date +"%d-%H:%M:%S" ).log \;
 else
 UIP "Clear TMPDIR & Exit"
 fi
-if $BLINKMODE; then
-echo -n 0 > $LEDPATH/$LEDCOLOR/blink
-fi
+if $BLINKMODE; then echo -n 0 > $LEDPATH/$LEDCOLOR/blink; fi
 rm -rf $TMPDIR && rm -rf $ALTTMPDIR && MSGDELIMITER && exit 0
 fi
 }
@@ -737,6 +725,7 @@ SET_PERM_R $MODPATH/$MODID 0 0 0755 0644
 UZTPN() {
 $UNZIP -oq $ZIPFILE $UPN.tar.xz -d $TMPDIR 2>/dev/null
 $UNTARXZ -xf $TMPDIR/$UPN.tar.xz -C $TMPDIR; rm -f $TMPDIR/$UPN.tar.xz
+chmod -R 777 $TMPDIR/$UPN
 }
 
 MOVERPATH() {
@@ -811,20 +800,20 @@ fi
 
 APKBUILDER() {
 if [ -f $STORAGE/framework-res.apk ]; then APKFRAME="$STORAGE/framework-res.apk"; else APKFRAME="$IPSFW/framework-res.apk"; fi
-$AAPT p -f -v -M $APKINPUT/AndroidManifest.xml \
--I $APKFRAME -S $APKINPUT/res/ \
--F $APKINPUT/unsigned.apk >/dev/null
+$AAPT p -f -v -M $1/AndroidManifest.xml \
+-I $APKFRAME -S $1/res/ \
+-F $1/unsigned.apk >/dev/null
 if $APKSIGN; then
-if [ -s $APKINPUT/unsigned.apk ]; then
-UIP "Sign $APKOUTPUT"
-DALVIKVM $APKINPUT/unsigned.apk $APKINPUT/signed.apk
-$ZIPALIGN -c 4 $APKINPUT/signed.apk
-cp -f $APKINPUT/signed.apk $APKOUTPUT
+if [ -s $1/unsigned.apk ]; then
+UIP "Sign $2"
+DALVIKVM $1/unsigned.apk $1/signed.apk
+$ZIPALIGN -c 4 $1/signed.apk
+cp -f $1/signed.apk $2
 fi
 else
-UIP "No Sign $APKOUTPUT"
-$ZIPALIGN -c 4 $APKINPUT/unsigned.apk
-cp -f $APKINPUT/unsigned.apk $APKOUTPUT
+UIP "No Sign $2"
+$ZIPALIGN -c 4 $1/unsigned.apk
+cp -f $1/unsigned.apk $2
 fi
 }
 
@@ -1025,10 +1014,10 @@ esac
 
 WCANFTP() {
 case $1 in
--sl) SELINUX_CHECKER; if $SELINUXENFORVING || [ $BOOTMODE != true ]; then UIP "Note $RI: Change SELinux In Permissive!"; fi;;
--bb) BB_CHECKER; if [ $FBUSYBOX != true ]; then UIP "Note $RI: The Functionality Requires A BusyBox!"; fi;;
--sq) SQLITE_CHECKER; if [ $FSQLITE != true ]; then UIP "Note $RI: The Functionality Requires A SqLite!"; fi;;
--ehap) UIP "Note $RI: The Functionality Requires A Enabling Hidden Api Policy!";;
+-sl) SELINUX_CHECKER; if $SELINUXENFORVING || [ $BOOTMODE != true ]; then UIP "Note $MSGRI: Change SELinux In Permissive!"; fi;;
+-bb) BB_CHECKER; if [ $FBUSYBOX != true ]; then UIP "Note $MSGRI: The Functionality Requires A BusyBox!"; fi;;
+-sq) SQLITE_CHECKER; if [ $FSQLITE != true ]; then UIP "Note $MSGRI: The Functionality Requires A SqLite!"; fi;;
+-ehap) UIP "Note $MSGRI: The Functionality Requires A Enabling Hidden Api Policy!";;
 esac
 }
 
@@ -2309,7 +2298,7 @@ fi
 
 CHOOSEOLD() {
 while true; do
-if $TKEYCHECK; then $FKEYCHECK; $FKEYCHECK; elif $ATKEYCHECK; then $TIMEOUT 0 $FKEYCHECK >/dev/null; $TIMEOUT 30 $FKEYCHECK >/dev/null; else $FKEYCHECK; fi
+if $TKEYCHECK; then $FKEYCHECK; fi; $FKEYCHECK
 local SEL=$?
 if [ "$1" == "UP" ]; then
 HFBMODE && UP=$SEL && sed -i "s/ButtonIDUP=#UP/ButtonIDUP=$SEL/g" $PATCHMODEFILE
@@ -2327,7 +2316,7 @@ done
 
 ALTCHOOSEOLD() {
 while true; do
-if $TKEYCHECK; then $FKEYCHECK; $FKEYCHECK; elif $ATKEYCHECK; then $TIMEOUT 0 $FKEYCHECK >/dev/null; $TIMEOUT 30 $FKEYCHECK >/dev/null; else $FKEYCHECK; fi
+if $TKEYCHECK; then $FKEYCHECK; fi; $FKEYCHECK
 local SEL=$?
 if [ $SEL -eq $BUTTONIDUP ]; then
 HFBMODE && return 0
@@ -2343,13 +2332,17 @@ $KEYFUNCTION "UP"
 UIP "Press Vol Down"
 $KEYFUNCTION "DOWN"
 if [ $UP = $DOWN ]; then
-MSGDELIMITER; UIP "Two Identical Keys Are Tied! Try Again!" "Press Vol Up"
+UIP "Two Identical Keys Are Tied! Try Again!" "Activated TKEY For CHOOSEOLD"
+TKEYCHECK=true
+MSGDELIMITER; UIP "Vol Key Programming Method" "Press Vol Up"
 $KEYFUNCTION "UP"
 UIP "Press Vol Down"
 $KEYFUNCTION "DOWN"
 if [ $UP = $DOWN ]; then
 UIP "Two Identical Keys Are Tied! Try Again!" "Or Vol Key Not Detected!"
 ENDMODE=false; END
+else
+sed -i "s/TKEY=false/TKEY=true/g" $PATCHMODEFILE
 fi
 else
 if $BIDMODE; then
@@ -4488,9 +4481,7 @@ MSGDELIMITER; UIP "Added New Dirac?" "This Option Added New Dirac In Your ROM" "
 if $KEYFUNCTION; then
 STEP9=true
 MSGDELIMITER; UIP "USE PROCESSING_PATCH For New Dirac?" "Forced Replacement Of The Audio Output" "THIS MAY BREAK THE AUDIO OUTPUT ITSELF!" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-if $KEYFUNCTION; then
-USEPROCESSING_PATCH=true
-fi
+if $KEYFUNCTION; then USEPROCESSING_PATCH=true; else USEPROCESSING_PATCH=false; fi
 fi
 MSGDELIMITER; UIP "Install Patches In mixer_paths Files?" "A Large Set Of Universal Settings For Many Devices" "If You Encounter Problems After Installation" "Try Skipping This Option First" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then STEP10=true; fi
@@ -4768,7 +4759,7 @@ ILib_Workaround() {
 MSGDELIMITER; UIP "Use Lib Workaround?"
 MSGUC="Only Choose Yes If You're Having Issues!"
 UCUP="Yes"
-UCDOWN="No $RI $MSGNUS"
+UCDOWN="No $MSGRI $MSGNUS"
 UCONE="ILib_WorkaroundS"
 UCS
 }
@@ -4918,8 +4909,7 @@ UCSA "$MSGUC" "$MSGEFTC" "$MSGNUS" "RTrash_System_AppS"
 }
 
 RTrash_System_AppS() {
-RMTSAV=false
-CAILIST=false
+DELETEWITHOUTSELECTION=false; RMTSAV=false; CAILIST=false
 if [ $BOOTMODE != true ] && $MAGISK; then
 MSGDELIMITER; UIP "Choose Variant:" "$MSGVU Replace All Find Apps" "$MSGVD Remove All Find Apps"
 if $KEYFUNCTION; then
@@ -5164,6 +5154,7 @@ MozillaNlpBackend
 Music
 Music2
 MusicFX
+MusicPlayerGO
 MyVerizonServices
 Netflix_activation
 NewsWeather
@@ -5270,6 +5261,7 @@ VoiceSearch
 VoiceSearchStub
 Wallet
 Wallpaper
+WallpaperPickerGoogle
 WallpaperPickerGooglePrebuilt
 WallpaperPickerGoogleRelease
 WallpapersBReel2017
@@ -6452,18 +6444,21 @@ RMLOG() {
 clear
 
 KLRML=\"
-$IPDMDE/0/com.android.shell/files/bugreports
+$IPDM/Stats-data
 $IPDS/dropbox
+$IPDS/graphicsstats
+$IPDS/log-files.xml
+$IPDS/procstats
+$IPDS/syncmanager-log
+$IPDSUDE/0/com.android.shell/files/bugreports
 /data/anr
 /data/log
 /data/log_other_mode
 /data/tombstones
 /dev/log
-/dev/log/events
-/dev/log/system
 \"
 
-for kll in \$KLRML; do if [ -d \$kll ]; then Spinner && echo \"$MSGSD Search In \$kll...\"; rm -rf \$kll/*; fi; done
+for kll in \$KLRML; do if [ -d \$kll ]; then echo \"$MSGSD Found Logs In \$kll\"; rm -rf \$kll/*; elif [ -f \$kll ]; then echo \"$MSGSD Found \$kll\"; rm -f \$kll; fi; done
 echo \"$MSGSD Other Logs No Found\"
 }
 
@@ -6481,17 +6476,18 @@ rm -rf $STORAGE/MIUI
 fi
 
 RMFILELIST=\"
-zlsdk.bin
 baidu
 camera_events/session.pb
 dctp
 did
 dmesg.log
 flamegapps_debug_logs.tar.gz
+journal*.tmp
 miad
 open_gapps_debug.logs.tar.gz
 open_gapps_log.txt
 ramdump
+zlsdk.bin
 \"
 
 RMFOLDERLIST=\"
@@ -6510,6 +6506,7 @@ cache
 dalvik-cache
 resource-cache
 thumbs
+package_cache
 \"
 
 echo \"$MSGSD Search In /data...\"
@@ -6536,7 +6533,7 @@ done
 Spinner && echo \"$MSGSD Remove Empty Files...\"
 find $STORAGE/ -depth -type f -not -name .nomedia -empty -exec rm -f {} \;
 Spinner && echo \"$MSGSD Remove Empty Folders...\"
-find $STORAGE/ -depth -type d -empty -exec rmdir {} \;
+find /data/ -depth -type d -empty -exec rmdir {} \;
 echo \"$MSGSD Remove Done.\"
 echo \"$MSGSD Please, Reboot Device!\"
 }
@@ -6558,15 +6555,15 @@ $MSGDELIMITER
 read opt
 echo
 case \$opt in
-c) CC;;
-l) RMLOG;;
-r) reboot;;
-q) exit 0;;
+c | C) CC;;
+l | L) RMLOG;;
+r | R) reboot;;
+q | Q) exit 0;;
 *) OPTIONS;;
 esac
 break
 done
-echo -en \"\n Press <enter> To Continue, \\\"q <enter>\\\" To Quit \"
+echo -en \"\n $MSGSD Press <enter> To Continue, \\\"q <enter>\\\" To Quit \"
 read opt
 [ -z \"\$opt\" ] || exit 0
 echo
@@ -6574,8 +6571,7 @@ OPTIONS
 } 
 OPTIONS" >> $IPCC
 chmod 777 $IPCC
-ui_print "Usage:"
-ui_print "Run \"su; CC\" On Terminal In BootMode"
+UIP "Usage:" "Run \"su; CC\" On Terminal In BootMode"
 WCANFTP -bb
 UIP "$MSGDI"
 }
@@ -6786,13 +6782,12 @@ echo "#!$MIPSB/sh
 (until [ -f $STORAGE/mm ]; do sleep 20; done
 rm $STORAGE/mm &) &
 exit 0" >> $MODPATH/$MODID/uninstall.sh
-ui_print "Usage:"
+UIP "Usage:"
 if $BOOTMODE; then
-ui_print "Run \"sh $SDCARD/mm\" Or \"*/mm\" On Recovery Terminal And Follow The Wizard."
+UIP "Run \"sh $SDCARD/mm\" Or \"*/mm\" On Recovery Terminal And Follow The Wizard."
 else
 ln -sf $SDCARD/mm /sbin*/
-ui_print "Run \"mm\" On Recovery Terminal And Follow The Wizard."
-ui_print "Next Time, No Need To Reinstall - Simply Run \"sh $SDCARD/mm\" Or \"*/mm\"."
+UIP "Run \"mm\" On Recovery Terminal And Follow The Wizard." "Next Time, No Need To Reinstall - Simply Run \"sh $SDCARD/mm\" Or \"*/mm\"."
 fi
 SET_PERM_RM
 UIP "$MSGDI"
@@ -7054,7 +7049,7 @@ done
 }
 
 IPMC() {
-if [ $MAGISK != true ]; then if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then UCSA "Install Force Play Market Certified $VPMC?" "" "$MSGNUS" "IPMCS"; fi; else UCSA "Install Force Play Market Certified $VPMC?" "" "$MSGNUS" "IPMCS"; fi
+if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then UCSA "Install Force Play Market Certified $VPMC?" "" "$MSGNUS" "IPMCS"; fi
 }
 
 IPMCS() {
@@ -7646,7 +7641,7 @@ echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
 # Reset ro.dalvik.vm.native.bridge or reboot if needed
 export CLASSPATH=\$MODDIR/rirud.dex
-su -c app_process -Djava.class.path=\"\$MODDIR\"/rirud.dex /system/bin --nice-name=rirud_java riru.Daemon" >> $MODPATH/$MODID/service.sh
+nohup app_process -Djava.class.path=\"\$MODDIR\"/rirud.dex /system/bin --nice-name=rirud_java riru.Daemon >/dev/null 2>&1 &" >> $MODPATH/$MODID/service.sh
 echo "ro.dalvik.vm.native.bridge=libriruloader.so" >> $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
@@ -7654,9 +7649,8 @@ MODDIR=\${0%/*}
 chmod 700 \"\$MODDIR\"/rirud
 # Start daemon which runs socket \"rirud\"
 exec \"\$MODDIR\"/rirud" >> $MODPATH/$MODID/post-fs-data.sh
-HUAWEI_MAPLE_ENABLED=$(GREP_PROP ro.maple.enable)
-if [ $HUAWEI_MAPLE_ENABLED == "1" ]; then
-ui_print "Add ro.maple.enable=0"
+if grep "ro.maple.enable=1" $PROPFILESALT; then
+UIP "Add ro.maple.enable=0"
 echo "ro.maple.enable=0" >> $MODPATH/$MODID/system.prop
 fi
 UIP "Setting Permissions"
@@ -7667,7 +7661,7 @@ SET_PERM $MODPATH/$MODID/rirud 0 0 0700
 UIP "Copy rirud.dex"
 mv $TMPDIR/Riru/classes.dex $MODPATH/$MODID/rirud.dex
 SET_PERM $MODPATH/$MODID/rirud.dex 0 0 0600
-ui_print "Removing Old Files"
+UIP "Removing Old Files"
 rm -rf $NVBASE/riru/bin
 rm -f $NVBASE/riru/native_bridge
 rm -f $NVBASE/riru/api_version.new
@@ -7767,7 +7761,7 @@ MAGISK_VERSION=\$(magisk -v)
 MAGISK_VERCODE=\$(magisk -V)
 
 #EDXP_MANAGER=\"org.meowcat.edxposed.manager\"
-#PATH_PREFIX=\"/data/user_de/0/\"
+#PATH_PREFIX=\"$IPDSUDE/0/\"
 #PATH_PREFIX_LEGACY=\"/data/user/0/\"
 
 livePatch() {
@@ -7944,9 +7938,9 @@ MISC_PATH="edxp_${MISC_RAND}"
 UIP "Use new path ${MISC_RAND}"
 mkdir -p $NVBASE/edxp
 echo "$MISC_PATH" > $NVBASE/edxp/misc_path
-if [ -d /data/user_de/0/org.meowcat.edxposed.manager/conf ]; then
+if [ -d $IPDSUDE/0/org.meowcat.edxposed.manager/conf ]; then
 mkdir -p $IPDM/$MISC_PATH/0/conf
-cp -rf /data/user_de/0/org.meowcat.edxposed.manager/conf/* $IPDM/$MISC_PATH/0/conf
+cp -rf $IPDSUDE/0/org.meowcat.edxposed.manager/conf/* $IPDM/$MISC_PATH/0/conf
 fi
 fi
 UIP "Copying framework libraries"
@@ -8189,6 +8183,7 @@ else
 BUILD_PROP_BACKUP; KLIPP=$IPSBP; touch $AIOPFMDPH/killlogger
 fi
 if [ -f $IPSB/logcat ]; then MSGDELIMITER; UIP "You Don't Need logcat?" "$MSGVU Yes" "$MSGVD No"; if $KEYFUNCTION; then if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/logcat; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/logcat $AIOPFMDPH/KL; echo '' > $IPSB/logcat; fi; fi; fi
+if [ -f $IPSB/dumpsys ]; then MSGDELIMITER; UIP "You Don't Need dumpsys?" "$MSGVU Yes" "$MSGVD No"; if $KEYFUNCTION; then if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/dumpsys; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/dumpsys $AIOPFMDPH/KL; echo '' > $IPSB/dumpsys; fi; fi; fi
 UIP "Create Daemons Dummy Files In $MIPSB"
 KLDL="DumpSystemInfo
 bugreport
@@ -8203,7 +8198,6 @@ diag_socket_log
 dmesg
 dmlog
 dumpstate
-dumpsys
 emdlogger1
 emdlogger3
 log
@@ -8222,18 +8216,20 @@ xlog"
 for kll in $KLDL; do if $MAGISK; then touch $MODPATH/$MODID$MIPSB/$kll; else if [ -f $IPSB/$kll ]; then mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/$kll $AIOPFMDPH/KL; echo '' > $IPSB/$kll; fi; fi; done
 UIP "Clearing All Logs"
 KLRML="
-$IPDMDE/0/com.android.shell/files/bugreports
+$IPDM/Stats-data
 $IPDS/dropbox
+$IPDS/graphicsstats
+$IPDS/log-files.xml
+$IPDS/procstats
+$IPDS/syncmanager-log
+$IPDSUDE/0/com.android.shell/files/bugreports
 /data/anr
 /data/log
 /data/log_other_mode
 /data/tombstones
 /dev/log
-/dev/log/events
-/dev/log/system
-
 "
-for kll in $KLRML; do if [ -d $kll ]; then rm -rf $kll/*; fi; done
+for kll in $KLRML; do if [ -d $kll ]; then UIP "$MSGSD Found Logs In $kll"; rm -rf $kll/*; elif [ -f $kll ]; then UIP "$MSGSD Found $kll"; rm -f $kll; fi; done
 echo -e "\n# KillLogger
 dalvik.vm.checkjni=false
 dalvik.vm.verify-bytecode=false
@@ -8320,7 +8316,7 @@ rm -f $AIOPFMDPH/sooofuirc
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ -f $IPSEP/com.motorola.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ]; then
+if [ $MIUI != true ] && [ -f $IPSEP/com.motorola.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.aospextended.faceunlock.xml ]; then
 UCSA "Switch On/Off Face UnLock IR Camera $VSOOOFUIRC?" "" "$MSGNUS" "SOOOFUIRCS"
 fi
 fi
@@ -8342,8 +8338,10 @@ UPN="SOOOFUIRC"; UZTPN
 mkdir -p $MODPATH/$MODID/$MIPSVO
 if [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ]; then
 cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-org.pixelexperience.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID/$MIPSVO/FaceUnlockService__auto_generated_rro_vendor.apk
-else
+elif [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ]; then
 cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.crdroid.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID/$MIPSVO/FaceUnlockService__auto_generated_rro_vendor.apk
+else
+cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.aospextended.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID/$MIPSVO/FaceUnlockService__auto_generated_rro_vendor.apk
 fi
 fi
 MMPR -v "Switch $MSGSWITCHIR Face UnLock IR Camera" "$VSOOOFUIRC" "Switch $MSGSWITCHIR Face UnLock IR Camera $FMR"; SET_PERM_RM;
@@ -8358,8 +8356,10 @@ touch $AIOPFMDPH/sooofuirc
 STANDARTBUCKUPER=true; BUCKUP="$IPVO/FaceUnlockService__auto_generated_rro_vendor.apk"; BUCKUPER
 if [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ]; then
 cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-org.pixelexperience.faceunlock-$MSGSWITCHIR.apk $IPVO/FaceUnlockService__auto_generated_rro_vendor.apk
-else
+elif [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ]; then
 cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.crdroid.faceunlock-$MSGSWITCHIR.apk $IPVO/FaceUnlockService__auto_generated_rro_vendor.apk
+else
+cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.aospextended.faceunlock-$MSGSWITCHIR.apk $IPVO/FaceUnlockService__auto_generated_rro_vendor.apk
 fi
 fi
 fi
@@ -9236,10 +9236,9 @@ APKSignOC() {
 if $BOOTMODE; then
 MSGDELIMITER; UIP "Cum Here?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
-UIP "Why Do You Cum Here?"
-APKSIGN=true
+APKSIGN=true; UIP "Why Do You Cum Here?"
 else
-UIP "Man..."
+APKSIGN=false; UIP "Man..."
 fi
 fi
 }
@@ -9337,8 +9336,8 @@ ROUNDEDLSTRING="	<dimen name=\"bg_round_rect_radius\">$ROUNDEDSIZE</dimen>
     <dimen name=\"window_corner_radius_fhd\">$ROUNDEDSIZE</dimen>
     <dimen name=\"workspace_bg_round_rect_radius\">$ROUNDEDSIZE</dimen>"
 
-ORSLL3="$TMPDIR/UIROUNDED/RoundedSLLaucher3"; ORSLL="$TMPDIR/UIROUNDED/RoundedSLLawnchair"; ORSLOP="$TMPDIR/UIROUNDED/RoundedSLOneplus"; ORSLOUI="$TMPDIR/UIROUNDED/RoundedSLOneui"; ORSLP="$TMPDIR/UIROUNDED/RoundedSLPixel"; ORSLA="$TMPDIR/UIROUNDED/RoundedSLAsus"
-mkdir -p $ORSLL3/res/values; mkdir -p $ORSLL/res/values; mkdir -p $ORSLOP/res/values; mkdir -p $ORSLOUI/res/values; mkdir -p $ORSLP/res/values; mkdir -p $ORSLA/res/values
+ORSLL3="$TMPDIR/UIROUNDED/RoundedSLLaucher3"; ORSLLQ="$TMPDIR/UIROUNDED/RoundedSLLawnchairQ"; ORSLLR="$TMPDIR/UIROUNDED/RoundedSLLawnchairR"; ORSLOP="$TMPDIR/UIROUNDED/RoundedSLOneplus"; ORSLOUI="$TMPDIR/UIROUNDED/RoundedSLOneui"; ORSLP="$TMPDIR/UIROUNDED/RoundedSLPixel"; ORSLA="$TMPDIR/UIROUNDED/RoundedSLAsus"
+mkdir -p $ORSLL3/res/values; mkdir -p $ORSLLQ/res/values; mkdir -p $ORSLLR/res/values; mkdir -p $ORSLOP/res/values; mkdir -p $ORSLOUI/res/values; mkdir -p $ORSLP/res/values; mkdir -p $ORSLA/res/values
 
 ORUIONE="$TMPDIR/UIROUNDED/RoundedUIOne"; ORUIONEA="$TMPDIR/UIROUNDED/RoundedUIOneAlt"; ORUITWO="$TMPDIR/UIROUNDED/RoundedUITwo"
 mkdir -p $ORUIONE/res/values; mkdir -p $ORUIONEA/res/values; mkdir -p $ORUITWO/res/values; mkdir -p $ORUITWO/res/drawable; mkdir -p $ORUITWO/res/drawable-anydpi-v21
@@ -9417,14 +9416,15 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
 cp -f $ORUITWO/res/drawable/* $ORUITWO/res/drawable-anydpi-v21
 
-APKINPUT="$ORUIONE"; APKOUTPUT="$ORUIONE-$ROUNDEDSIZE.apk"; APKBUILDER
-APKINPUT="$ORUIONEA"; APKOUTPUT="$ORUIONEA-$ROUNDEDSIZE.apk"; APKBUILDER
-APKINPUT="$ORUITWO"; APKOUTPUT="$ORUITWO-$ROUNDEDSIZE.apk"; APKBUILDER
+APKBUILDER "$ORUIONE" "$ORUIONE-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORUIONEA" "$ORUIONEA-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORUITWO" "$ORUITWO-$ROUNDEDSIZE.apk"
 
-for LAUNCHERNAME in "com.android.launcher3" "ch.deletescape.lawnchair.ci" "net.oneplus.launcher" "com.sec.android.app.launcher" "com.google.android.apps.nexuslauncher" "com.asus.launcher"; do
+for LAUNCHERNAME in "com.android.launcher3" "ch.deletescape.lawnchair.ci" "net.oneplus.launcher" "com.sec.android.app.launcher" "com.google.android.apps.nexuslauncher" "com.asus.launcher" "app.lawnchair"; do
 case $LAUNCHERNAME in
 "com.android.launcher3") LAUNCHERPATH="$ORSLL3";;
-"ch.deletescape.lawnchair.ci") LAUNCHERPATH="$ORSLL";;
+"ch.deletescape.lawnchair.ci") LAUNCHERPATH="$ORSLLQ";;
+"app.lawnchair") LAUNCHERPATH="$ORSLLR";;
 "net.oneplus.launcher") LAUNCHERPATH="$ORSLOP";;
 "com.sec.android.app.launcher") LAUNCHERPATH="$ORSLOUI";;
 "com.google.android.apps.nexuslauncher") LAUNCHERPATH="$ORSLP";;
@@ -9441,14 +9441,15 @@ $ROUNDEDUISTRING
 $ROUNDEDLSTRING
 </resources>" > $ORSLL3/res/values/dimens.xml
 
-cp -f $ORSLL3/res/values/* $ORSLL/res/values; cp -f $ORSLL3/res/values/* $ORSLOP/res/values; cp -f $ORSLL3/res/values/* $ORSLOUI/res/values; cp -f $ORSLL3/res/values/* $ORSLP/res/values; cp -f $ORSLL3/res/values/* $ORSLA/res/values
+cp -f $ORSLL3/res/values/* $ORSLLQ/res/values; cp -f $ORSLL3/res/values/* $ORSLLR/res/values; cp -f $ORSLL3/res/values/* $ORSLOP/res/values; cp -f $ORSLL3/res/values/* $ORSLOUI/res/values; cp -f $ORSLL3/res/values/* $ORSLP/res/values; cp -f $ORSLL3/res/values/* $ORSLA/res/values
 
-APKINPUT="$ORSLL3"; APKOUTPUT="$ORSLL3-$ROUNDEDSIZE.apk"; APKBUILDER
-APKINPUT="$ORSLL"; APKOUTPUT="$ORSLL-$ROUNDEDSIZE.apk"; APKBUILDER
-APKINPUT="$ORSLOP"; APKOUTPUT="$ORSLOP-$ROUNDEDSIZE.apk"; APKBUILDER
-APKINPUT="$ORSLOUI"; APKOUTPUT="$ORSLOUI-$ROUNDEDSIZE.apk"; APKBUILDER
-APKINPUT="$ORSLP"; APKOUTPUT="$ORSLP-$ROUNDEDSIZE.apk"; APKBUILDER
-APKINPUT="$ORSLA"; APKOUTPUT="$ORSLA-$ROUNDEDSIZE.apk"; APKBUILDER
+APKBUILDER "$ORSLL3" "$ORSLL3-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLLQ" "$ORSLLQ-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLLR" "$ORSLLR-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLOP" "$ORSLOP-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLOUI" "$ORSLOUI-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLP" "$ORSLP-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLA" "$ORSLA-$ROUNDEDSIZE.apk"
 done
 }
 
@@ -9513,8 +9514,8 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <string name=\"pill_name_size_variant\">Pill Not Transparent - $PILLFATSIZE/$PILLWIDTHSIZE</string>
 </resources>" > $OPNTO/res/values/string.xml
 
-APKINPUT="$OPTO"; APKOUTPUT="$TMPDIR/PillsOverlay/PillTransparent/PillTransparent-$PILLFATSIZE-$PILLWIDTHSIZE.apk"; APKBUILDER
-APKINPUT="$OPNTO"; APKOUTPUT="$TMPDIR/PillsOverlay/PillNotTransparent/PillNotTransparent-$PILLFATSIZE-$PILLWIDTHSIZE.apk"; APKBUILDER
+APKBUILDER "$OPTO" "$TMPDIR/PillsOverlay/PillTransparent/PillTransparent-$PILLFATSIZE-$PILLWIDTHSIZE.apk"
+APKBUILDER "$OPNTO" "$TMPDIR/PillsOverlay/PillNotTransparent/PillNotTransparent-$PILLFATSIZE-$PILLWIDTHSIZE.apk"
 done
 done
 
@@ -9538,7 +9539,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <color name=\"navigation_bar_home_handle_dark_color\">#$DARKPILLCOLORS</color>
 </resources>" > $OPCO/res/values/colors.xml
 
-APKINPUT="$OPCO"; APKOUTPUT="$TMPDIR/PillsOverlay/PillColors/PillColors-$LIGHTPILLCOLORS-$DARKPILLCOLORS.apk"; APKBUILDER
+APKBUILDER "$OPCO" "$TMPDIR/PillsOverlay/PillColors/PillColors-$LIGHTPILLCOLORS-$DARKPILLCOLORS.apk"
 done
 done
 
@@ -9560,7 +9561,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <dimen name=\"navigation_handle_bottom\">$PILLHEIGHTSIZE</dimen>
 </resources>" > $OPHO/res/values/dimens.xml
 
-APKINPUT="$OPHO"; APKOUTPUT="$TMPDIR/PillsOverlay/PillHeight/PillHeight-$PILLHEIGHTSIZE.apk"; APKBUILDER
+APKBUILDER "$OPHO" "$TMPDIR/PillsOverlay/PillHeight/PillHeight-$PILLHEIGHTSIZE.apk"
 done
 }
 
@@ -9626,24 +9627,20 @@ UCSA "Show Hide Navigation Bar Compile" "" "$MSGNUS" "SHNBS"
 
 SHNBS() {
 mkdir -p $TMPDIR/ShowHideNavigationBar
-ONBH="$TMPDIR/ShowHideNavigationBar/NavigationBarHide"; ONSH="$TMPDIR/ShowHideNavigationBar/NavigationBarShow"
-mkdir -p $ONBH/res/values; mkdir -p $ONSH/res/values
+ONBHS="$TMPDIR/ShowHideNavigationBar/NavigationBar"
+mkdir -p $ONBHS/res/values
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"android.navigationbar.overlay\">
     <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\"/>
-</manifest>" > $ONBH/AndroidManifest.xml; cp -f $ONBH/AndroidManifest.xml $ONSH
+</manifest>" > $ONBHS/AndroidManifest.xml
 
+for SHNBSS in "false" "true"; do
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-    <bool name=\"config_showNavigationBar\">false</bool>
-</resources>" > $ONBH/res/values/bools.xml
-
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<resources>
-    <bool name=\"config_showNavigationBar\">true</bool>
-</resources>" > $ONSH/res/values/bools.xml
-
-APKINPUT="$ONBH"; APKOUTPUT="$ONBH.apk"; APKBUILDER; APKINPUT="$ONSH"; APKOUTPUT="$ONSH.apk"; APKBUILDER
+    <bool name=\"config_showNavigationBar\">$SHNBSS</bool>
+</resources>" > $ONBHS/res/values/bools.xml
+APKBUILDER "$ONBHS" "$ONBHS-$SHNBSS.apk"
+done
 }
 
 QuickStepC() {
@@ -9671,7 +9668,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 	<string name=\"config_recentsComponentName\">$QSRP/com.android.quickstep.RecentsActivity</string>
 </resources>" > $OSL/res/values/strings.xml
 
-APKINPUT="$OSL"; APKOUTPUT="$OSL-$QSRP.apk"; APKBUILDER
+APKBUILDER "$OSL" "$OSL-$QSRP.apk"
 done
 }
 
@@ -9746,11 +9743,11 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <dimen name=\"default_burn_in_prevention_offset\">15.0dip</dimen>
     <dimen name=\"horizontal_max_swift\">$HORIZONTALSWIFT</dimen>
 </resources>" > $BIPAAO/res/values/dimens.xml
-APKINPUT="$BIPAAO"; APKOUTPUT="$BIPAAO-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT-$VACINN.apk"; APKBUILDER
+APKBUILDER "$BIPAAO" "$BIPAAO-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT-$VACINN.apk"
 done
 
-APKINPUT="$BIPAO"; APKOUTPUT="$BIPAO-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT.apk"; APKBUILDER
-APKINPUT="$BIPSUIO"; APKOUTPUT="$BIPSUIO-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT.apk"; APKBUILDER
+APKBUILDER "$BIPAO" "$BIPAO-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT.apk"
+APKBUILDER "$BIPSUIO" "$BIPSUIO-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT.apk"
 done
 done
 done
@@ -9761,7 +9758,7 @@ UCSA "Compile FaceUnlockService?" "" "$MSGNUS" "FaceUnlockServiceCS"
 }
 
 FaceUnlockServiceCS() {
-for FULS in "org.pixelexperience.faceunlock" "com.crdroid.faceunlock"; do
+for FULS in "org.pixelexperience.faceunlock" "com.crdroid.faceunlock" "com.aospextended.faceunlock"; do
 for SFULS in "5" "-1"; do
 OFULS="$TMPDIR/FaceUnlockService"
 mkdir -p $OFULS/res/values
@@ -9780,7 +9777,7 @@ case $SFULS in
 "-1") SFULS="Off";;
 esac
 
-APKINPUT="$OFULS"; APKOUTPUT="$OFULS-$FULS-$SFULS.apk"; APKBUILDER
+APKBUILDER "$OFULS" "$OFULS-$FULS-$SFULS.apk"
 done
 done
 }
