@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="09.05.21 (38)"
+VAIOPFMD="16.05.21 (39)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -40,7 +40,7 @@ VLUS="v1.0"
 #Apps: GFU/GSF/SL/IA
 VGSFP="v1.0"
 VQSRPC="v1.0"
-VSL="v1.1"; VASLQ="10.0 Alpha 8"; VASLR="11 Alpha 3"
+VSL="v1.2"; VASLQ="10.0 Alpha 8"; VASLR="11 Alpha 4"
 VSOPL="v6.2"; VCSOPL="30100"; VASOPL="v5.1.0"
 VSOUH="v2.1"; VCSOUH="21"; VASOUH="v11.0"
 VSPL="v1.0"; VASPLQ="v10 (703)"; VASPLR="v11 (825)"
@@ -53,7 +53,7 @@ VAIOIARPFMD="$VAIOPFMD"
 VVIPERFXLEGACY="v2.5.0.5"; VCVIPERFXLEGACY="86"
 VVIPERFX="v2.7.1.6"; VCVIPERFX="2716"
 VV4AFXP="v1.3"
-VJDSPM="v3.3 (8-25-2020)"; VCJDSPM="77"
+VJDSPM="v3.4 (8-25-2020)"; VCJDSPM="78"
 VDTSHPX="zenz"; VCDTSHPX="58"
 VAML="v4.0"; VCAML="55"
 VAN="MK I (15.09)"
@@ -66,7 +66,7 @@ SLOQSBDF="v1.1"
 #AdBlock/Hosts
 VDAB="1.0"; VCDAB="1"
 VAAH="05.05.2021"
-VLPH="v9.5.6"; VCLPH="1716"
+VLPH="v9.5.7"; VCLPH="1717"
 VSH="v210506-v16.6"; VCSH="166"
 VOH="v1.1"
 #Net: GPS/TTL/DNS/WB
@@ -80,7 +80,7 @@ VZS="3.0" VCZS="3014"
 VSELC="v1.3"
 VASTE="v17.3.1"; VCASTE="70"
 VCC="v1.9"
-VDetach="v4.3 BETA 8"
+VDetach="v5"
 VSQLite3="v1.0"; VCSQLite3="1"
 VMMFRM="2020.4.17"; VCMMFRM="202004170"
 #Other: GPay/DFO/STZD/DDVFE/FA
@@ -104,7 +104,7 @@ VFGS="v1.1"
 VG="v1.0"
 VEHAP="v1.2"
 VAIOAFUS="v1.1"
-VBPT="v1.6"
+VBPT="v1.7"
 IVCL="v1.2"; IVCCL="3"
 VFMSAAS="v1.0"
 VFDHWO="v1.1"
@@ -215,6 +215,7 @@ grep -q "$SYSTEM_MOUNT.*\sro[\s,]" /proc/mounts && mount -o remount,rw $SYSTEM_M
 MSGDELIMITER; UIP "Mounting$Mounts"
 else
 MSGDELIMITER
+mount --remount / -w
 fi
 if [ -f /system/system/build.prop ]; then FTSYSTEM=true; FTSYSTEMROOT=false; SYSTEM="/system/system"; elif [ -f /system_root/system/build.prop ]; then FTSYSTEM=true; FTSYSTEMROOT=true; SYSTEM="/system_root/system"; elif [ -f /system/build.prop ]; then FTSYSTEM=false; FTSYSTEMROOT=false; SYSTEM="/system"; fi
 if [ $BOOTMODE != true ] && [ -n "$(cat /etc/fstab | grep /vendor)" ]; then FVENDOR=true; elif [ $BOOTMODE != true ] && [ -d $SYSTEM/vendor ]; then FVENDOR=false; VENDOR="$SYSTEM/vendor"; elif $BOOTMODE; then VENDOR="/vendor"; fi
@@ -280,7 +281,7 @@ MCGAX="$(find $SYSTEM $VENDOR -type f -name "*media_codecs_google_c2_audio*.xml"
 DEVFEA=$IPSEDF/*.xml; DEVFEAA=$IPVEDF/*.xml
 SPG="settings put global"; SPS="settings put secure"
 if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
-PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"; HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"; HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"; PDESIGN="$(GET_PMODE_PROP "$PATCHMODEFILE" "PDESIGN")"; LEDCOLOR="$(GET_PMODE_PROP "$PATCHMODEFILE" "LEDCOLOR")"; KMETHOD="$(GET_PMODE_PROP "$PATCHMODEFILE" "KMETHOD")"; TKEY="$(GET_PMODE_PROP "$PATCHMODEFILE" "TKEY")"; MCMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "MCMODE")"; ENDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "ENDMODE")"; BIDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "BIDMODE")"
+PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"; HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"; HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"; PDESIGN="$(GET_PMODE_PROP "$PATCHMODEFILE" "PDESIGN")"; LEDCOLOR="$(GET_PMODE_PROP "$PATCHMODEFILE" "LEDCOLOR")"; KMETHOD="$(GET_PMODE_PROP "$PATCHMODEFILE" "KMETHOD")"; TKEY="$(GET_PMODE_PROP "$PATCHMODEFILE" "TKEY")"; MCMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "MCMODE")"; ENDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "ENDMODE")"; BIDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "BIDMODE")"; BUTTONIDUP="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDUP")"; BUTTONIDDOWN="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDDOWN")"
 PROPFILES="$IPSDP $IPSBP $IPVBP /data/local.prop /default.prop /build.prop"; PROPFILESALT="$IPSSPBP $IPSBP $IPVBP"
 DMYHMS="$( date +"%d-%m-%Y-%H:%M:%S" )"
 if [ -d $IPSPO ]; then IPPO="$IPSPO"; MIPPO="$MIPSPO"; elif [ -d $IPSO ]; then IPPO="$IPSO"; MIPPO="$MIPSO"; elif [ -d $IPVO ]; then IPPO="$IPVO"; MIPPO="$MIPSVO"; fi
@@ -396,7 +397,7 @@ case "$ENDMODE" in
 *) ENDMODE=true; echo -e "$MSGENDMODE\nENDMODE=true" >> $PATCHMODEFILE;;
 esac
 case "$BIDMODE" in
-"true") BIDMODE=true; BUTTONIDUP="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDUP")"; BUTTONIDDOWN="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDDOWN")";;
+"true") BIDMODE=true;;
 "false") BIDMODE=false;;
 *) BIDMODE=true; echo -e "$MSGBIDMODE\nBIDMODE=true\nButtonIDUP=#UP\nButtonIDDOWN=#DOWN" >> $PATCHMODEFILE;;
 esac
@@ -2282,7 +2283,6 @@ if ($TIMEOUT 5 $KGETEVENT -lc 1 2>&1 | $KGREP VOLUME | $KGREP " DOWN" > $EVENTS)
 
 CHOOSENEW() {
 # Original idea by chainfire @xda-developers, improved on by ianmacd @xda-developers
-# Note from chainfire @xda-developers: getevent behaves weird when piped, and busybox grep likes that even less than toolbox/toybox grep
 while true; do
 $KGETEVENT -lc 1 2>&1 | $KGREP VOLUME | $KGREP " DOWN" > $EVENTS
 if (`cat $EVENTS 2>/dev/null | $KGREP VOLUME >/dev/null`); then
@@ -2304,7 +2304,7 @@ if [ "$1" == "UP" ]; then
 HFBMODE && UP=$SEL && sed -i "s/ButtonIDUP=#UP/ButtonIDUP=$SEL/g" $PATCHMODEFILE
 break
 elif [ "$1" == "DOWN" ]; then
-HFBMODE && DOWN=$SEL && sed -i "s/ButtonIDDOWN=#DOWN/ButtonIDDOWN=$SEL/g" $PATCHMODEFILE
+HFBMODE && DOWN=$SEL && if [ "$UP" -ne "$SEL" ]; then sed -i "s/ButtonIDDOWN=#DOWN/ButtonIDDOWN=$SEL/g" $PATCHMODEFILE; fi
 break
 elif [ $SEL -eq $UP ]; then
 HFBMODE && return 0
@@ -2344,13 +2344,8 @@ ENDMODE=false; END
 else
 sed -i "s/TKEY=false/TKEY=true/g" $PATCHMODEFILE
 fi
-else
-if $BIDMODE; then
-sed -i "s/KMETHOD=false/KMETHOD=A/g" $PATCHMODEFILE
-else
-sed -i "s/KMETHOD=A/KMETHOD=O/g" $PATCHMODEFILE
 fi
-fi
+if $BIDMODE; then sed -i "s/KMETHOD=false/KMETHOD=A/g" $PATCHMODEFILE; else sed -i "s/KMETHOD=A/KMETHOD=O/g" $PATCHMODEFILE; fi
 }
 
 KEYCHECK() {
@@ -2800,11 +2795,11 @@ MMPR -v "GPay Power Menu" "$VGPPM" "Enable Google Pay Quick Wallet Access In The
 }
 
 IRoundedUI_Overlay() {
-if [ $BOOTMODE != true ] && find $IPPO/RoundedUI*.apk && find $IPPO/RoundedSL*.apk; then
+if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/roundedui ]; then
 MSGDELIMITER; UIP "$MSGFI RoundedUI Overlay, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
 UIP "Removing..."
-rm -f $IPPO/RoundedUI*.apk; rm -f $IPPO/RoundedSL*.apk
+rm -f $IPPO/RoundedUI*.apk; rm -f $IPPO/RoundedSL*.apk; rm -f $AIOPFMDPH/roundedui
 UIP "$MSGDRM"
 fi
 else
@@ -2825,7 +2820,7 @@ mkdir -p $MODPATH/$MODID$MIPPO
 cp -f $TMPDIR/$MODID/Rounded*-$UCSFNMC.apk $MODPATH/$MODID$MIPPO
 MMPR -v "UI Rounded" "$VUIROUNDED" "UI Rounded Set On - $UCSFNMC, $FAOOR"; SET_PERM_RM
 else
-cp -f $TMPDIR/UIROUNDED/Rounded*-$UCSFNMC.apk $IPPO
+cp -f $TMPDIR/UIROUNDED/Rounded*-$UCSFNMC.apk $IPPO; touch $AIOPFMDPH/roundedui
 fi
 UIP "$MSGDI"
 fi
@@ -4850,7 +4845,7 @@ MSGDELIMITER
 { #Removal: RSL/RSO/RSTA/RWFSB
 
 RPassword_Files() {
-if [ $BOOTMODE != true ]; then
+if [ $BOOTMODE != true ] && [ -d $IPDS ]; then
 UCSA "Reset Screen Lock?" "" "$MSGNUS" "RPassword_FilesS"
 fi
 }
@@ -4865,10 +4860,8 @@ UIP "$MSGDRM"
 }
 
 RSwift_Overlays() {
-if [ $BOOTMODE != true ]; then
-if [ -d $MODPATH/swift_installer ] || find $IPSA/*swiftinstaller.overlay* >/dev/null || find $IPDRESC/*swiftinstaller.overlay* >/dev/null; then
+if [ $BOOTMODE != true ] && [ -d $MODPATH/swift_installer ]; then
 UCSA "Remove All Swift Installer Overlays?" "" "$MSGNUS" "RSwift_OverlaysS"
-fi
 fi
 }
 
@@ -5014,6 +5007,7 @@ DevicePersonalizationPrebuiltPixel2020
 DevicePersonalizationPrebuiltPixel4
 DevicePolicyPrebuilt
 DiagMonAgent
+DiagnosticsToolPrebuilt
 Dialer
 DigitalClockEasy_L
 DigitalClock_L
@@ -5164,6 +5158,7 @@ NextPay
 NexusLauncherIcons
 NexusWallpapersStubPrebuilt2017
 NexusWallpapersStubPrebuilt2019
+NezukoMusic
 Notes
 NovaBugreportWrapper
 ONESettings
@@ -5196,6 +5191,7 @@ PrebuiltDeskClockGoogle
 PrebuiltEmailGoogle
 PrebuiltExchange3Google
 PrebuiltGmail
+PrebuiltGoogleTelemetryTvp
 PureBrowser
 QPGallery
 QuickAccessWallet
@@ -6584,7 +6580,7 @@ fi
 
 IDetachS() {
 UPN="Detach"; UZTPN
-cp -f $TMPDIR/SQLite3/sqlite3-$arch $TMPDIR/Detach/sqlite
+cp -f $TMPDIR/SQLite3/sqlite3-$arch $TMPDIR/Detach/sqlite_$arch
 UNIVERSALUNZIP
 WCANFTP -bb; WCANFTP -sq
 }
@@ -8155,7 +8151,10 @@ ro.vold.umsdirtyratio=20
 debug.performance.tuning=1
 
 # Video acceleration
-video.accelerate.hw=1" >> $IPBPT
+video.accelerate.hw=1
+
+# Animation AOD & LS Fix
+debug.force_no_blanking=true" >> $IPBPT
 UIP "$MSGDI"
 }
 
@@ -8907,7 +8906,7 @@ fi
 SUGMSDOS() {
 MSGDELIMITER
 gms="dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1"
-if [ "$gms" = com.google.android.gms ]; then UIP "Google Play services is Not Optimized"; else UIP "Google Play services is Optimized"; fi
+if [ "$gms" = com.google.android.gms ]; then UIP "Google Play Services Is Not Optimized"; else UIP "Google Play Services Is Optimized"; fi
 }
 
 SBattery_Usage() {
@@ -8947,7 +8946,6 @@ fi
 
 IUSGPS() {
 UIP "Installing USGP $IAMM"
-UPN="USGP"; UZTPN
 mkdir -p $TMPDIR/USGP
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <!-- Copyright (C) 2014 The Android Open Source Project
@@ -9626,7 +9624,6 @@ UCSA "Show Hide Navigation Bar Compile" "" "$MSGNUS" "SHNBS"
 }
 
 SHNBS() {
-mkdir -p $TMPDIR/ShowHideNavigationBar
 ONBHS="$TMPDIR/ShowHideNavigationBar/NavigationBar"
 mkdir -p $ONBHS/res/values
 
@@ -9782,6 +9779,64 @@ done
 done
 }
 
+NSPC() {
+UCSA "Notification Side Paddings Compile" "" "$MSGNUS" "NSPCS"
+}
+
+NSPCS() {
+NSPCO="$TMPDIR/NotificationSidePaddings/NotificationSidePaddings"
+mkdir -p $NSPCO/res/values
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.notification.side.paddings.overlay\">
+    <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+</manifest>" > $NSPCO/AndroidManifest.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+    <dimen name=\"notification_side_paddings\">0dip</dimen>
+</resources>" > $NSPCO/res/values/dimens.xml
+APKBUILDER "$NSPCO" "$NSPCO.apk"
+}
+
+QSCPC() {
+UCSA "QS Corner Content Padding" "" "$MSGNUS" "QSCPCS"
+}
+
+QSCPCS() {
+QSCPCSO="$TMPDIR/QSCornerContentPadding/QSCornerContentPadding"
+mkdir -p $QSCPCSO/res/values
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.qs.corner.content.padding.overlay\">
+    <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+</manifest>" > $QSCPCSO/AndroidManifest.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+    <dimen name=\"qs_corner_content_padding\">0dip</dimen>
+</resources>" > $QSCPCSO/res/values/dimens.xml
+APKBUILDER "$QSCPCSO" "$QSCPCSO.apk"
+}
+
+SBPC() {
+UCSA "Status Bar Padding" "" "$MSGNUS" "SBPCS"
+}
+
+SBPCS() {
+SBPCSO="$TMPDIR/StatusBarPadding/StatusBarPadding"
+mkdir -p $SBPCSO/res/values
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.status.bar.padding.overlay\">
+    <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+</manifest>" > $SBPCSO/AndroidManifest.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+    <dimen name=\"status_bar_padding_start\">30dip</dimen>
+    <dimen name=\"status_bar_padding_end\">30dip</dimen>
+</resources>" > $SBPCSO/res/values/dimens.xml
+APKBUILDER "$SBPCSO" "$SBPCSO.apk"
+}
+
 } #
 
 { #Presets
@@ -9851,6 +9906,9 @@ SHNB
 QuickStepC
 BIPC
 FaceUnlockServiceC
+NSPC
+QSCPC
+SBPC
 fi
 }
 

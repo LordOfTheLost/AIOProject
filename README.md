@@ -1,9 +1,9 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
-* Версия AIOPFMD: 09.05.21 (38) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOPFMD-09.05.21-%2838%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1Fo4Lak1aUtjUFA453bCrzfPU07u51K2y/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/28">TG</a>
-* Версия AIOCPFMD: 09.05.21 (34) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOCPFMD-09.05.21-%2834%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1kEVXP6FW2xLm0pTzjhc7W9dFFCziO-p0/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/29">TG</a>
-* Версия AIOIARPFMD: 09.05.21 (25) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOIARPFMD-09.05.21-%2825%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1dECJ3grmnyOPTSBPPGSDehQ5UOBdisym/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/30">TG</a>
+* Версия AIOPFMD: 16.05.21 (39) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOPFMD-16.05.21-%2839%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1oqxPKFpicVw_9B44-OO3fWZvd9OwWD-P/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/31">TG</a>
+* Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
+* Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Последние обновление: 09.05.2021.
 * Разработчик: <a href="https://4pda.ru/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
 * Русский интерфейс: Нет, и не имеет смысла.
@@ -32,8 +32,18 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 16.05.21 (39) ####
+* В режим удаления/replace добавлены приложения в обычный лист: DiagnosticsToolPrebuilt, NezukoMusic и PrebuiltGoogleTelemetryTvp;
+* MagiskHide Props Config Обновлен до v5.4.0-v127;
+* Lawnchair обновлен до v11.0 Alpha 4;
+* Фикс KMETHOD A(alt) и невозможности нажать в низ (нужно будет удалить PATCHMODE кто не сидит на N(ew) методе);
+* Фикс BIDMODE в некоторых случаях;
+* Build Prop Tweaks обновлен до 1.7 - добавил debug.force_no_blanking;
+* JamesDSP обновлен до v3.4 (8-25-2020) - только цифры;
+* Detach обновлен до v5;
+* Может что-то ещё что забыл.
 #### 09.05.21 (38) ####
-* Cache Cleaner обновлен до 1.9:
+* Cache Cleaner обновлен до v1.9:
 	- добавил удаление journal*.tmp и package_cache;
 	- глубокий поиск и удаления только пустых папок (как было раньше);
 	- фикс путей по /data/user_de;
@@ -46,13 +56,12 @@
 	- добавлено удаление логов из /data/system/syncmanager-log и файла нахождения логов /data/system/log-files.xml;
 	- Удаление файлов статистики /data/system/procstats, /data/system/graphicsstats и /data/system_ce/0/usagestats;
 * В режим удаления/replace добавлены приложения в обычный лист: MusicPlayerGO и WallpaperPickerGoogle;
-* Switch On/Off Face UnLock IR Camera обновлен до 1.4 - добавил проверку на кангнутый фейс от Pixel Experience для AOSPExtended и оверлей;
+* Switch On/Off Face UnLock IR Camera обновлен до v1.4 - добавил проверку на кангнутый фейс от Pixel Experience для AOSPExtended и оверлей;
 * MagiskHide Props Config Обновлен до v5.4.0-v127;
 * Riru Core Обновлен до v25.4.4.r426.05efc94?, фикс путей в самом архиве и фикс на проп для Huawei;
 * Systemless Hosts обновлен до v210506-v16.6;
 * hosts файл с AdAway Обновлен от 05.05.2021;
-* Фикс битых файлов 
-* UIROUNDED обновлен до 2.0 - добавлено много строк для Lawnchair R;
+* UIROUNDED обновлен до v2.0 - добавлено много строк для Lawnchair R;
 * В TKEY удалил настройку A(uto) - теперь по умолчанию false с проверкой как и было;
 * Может что-то ещё что забыл.
 #### 03.05.21 (37) ####
@@ -74,7 +83,7 @@
 * Обновлен IOS Emoji до v13 (unicode 13.1) от EmojiReplacer;
 * Фикс создания privapp-permissions у JamesDSPManager; 
 * Добавил удаление логов из /data/user_de/0/com.android.shell/files/bugreports для Killlogger и Cache Cleaner;
-* Cache Cleaner обновлен до 1.8 - добавил удаление папки .xlDownload (кто создал её - сдохнет);
+* Cache Cleaner обновлен до v1.8 - добавил удаление папки .xlDownload (кто создал её - сдохнет);
 * В режим удаления/replace добавлены приложения в обычный лист: AirDots, AirDotsPlugin, MiDrive, RomStats, OneOSLogcat и ONESettings;
 * Lawnchair обновлен до v11.0 Alpha 3;
 * Добавлен альтернативный CHOOSEOLD - он будет по умолчанию после удачной проверки/прохождения в обычном CHOOSEOLD, его не надо биндить - работает так же как и CHOOSENEW (записывает ID кнопок в файл PATCHMODE потому-что для каждого телефона он может быть разным). НО я не тестировал его на телефонах в которых не требуется две проверки на KEYCHECK и для этого я оставил старый CHOOSEOLD;
@@ -86,7 +95,7 @@
 * Фикс User Mode;
 * Множественные другие исправления и улучшения.
 #### 25.04.21 (36) ####
-* Добавлена Boot анимация с PixelPlusUI - обновлен до 1.2;
+* Добавлена Boot анимация с PixelPlusUI - обновлен до v1.2;
 * Под аудиомодули добавлено сообщение про возможную надобность Enabling Hidden Api Policy (без него возможен вылет того же Viper-FX (касается Android 11+)) - так же добавлено в Технические требования;
 * Переделаны/Улучшены/Оптимизированы патчеры конфигов Viper-FX и James DSP;
 * OnePlus Launcher обновлен до v6.2;
@@ -105,7 +114,7 @@
 * Убран выбор Patch Design (меня уже д.....и вопросами) - теперь по умолчанию N(ew);
 * Убран выбор на тактильный отклик при выборах в патче (аналогично как и выше) - теперь по умолчанию false;
 * Добавлен Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;
-* Switch On/Off Face UnLock IR Camera обновлен до 1.3 - добавил проверку на кангнутый фейс от Pixel Experience для CrDroid и оверлеи для обоих с другим методом установки;
+* Switch On/Off Face UnLock IR Camera обновлен до v1.3 - добавил проверку на кангнутый фейс от Pixel Experience для CrDroid и оверлеи для обоих с другим методом установки;
 * Мелкая чистка и улучшения в KEYCHECK методах;
 * Другие мелкие улучшения по интерфейсу и увеличению скорости в некоторых местах.
 #### 11.04.21 (34) ####
@@ -114,12 +123,12 @@
 * В режим удаления/replace добавлено приложение в обычный лист: LPaper-v2.0-release;
 * Добавлена Boot анимация с TenX-OS (без сплеша самой прошивки и выглядит как бюджетная анима Cyberpunk) - черная и белая - обновлен до 1.1, добавлен выход из пункта;
 * Добавил Force Gestures - принудительно переключает кнопки навигации на жесты после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов (так же после этого пункт появляется в настройках);
-* Switch On/Off Face UnLock IR Camera обновлен до 1.2 - добавил проверку на новый фейс от Pixel Experience;
-* Cache Cleaner обновлен до 1.7 - добавил выбор в терминале на удаление логов (папки те же что и у Kill Logger);
-* Pills Colors Overlay обновлен до 1.2 - добавил цвета: Light Blue (ff5e97f6), Light Red (ffff4151), Light Green (ff47ae84) - Accent который подтягивается из под прошивки добавлять пока-что точно не буду (отвал UI на многих прошивках). Добавил выборы в разделение цветов по цвету приложений и один цвет везде (Light и Dark);
-* Build Prop Tweaks обновлен до 1.6 - убрал даблинг строк от Kill Logger;
+* Switch On/Off Face UnLock IR Camera обновлен до v1.2 - добавил проверку на новый фейс от Pixel Experience;
+* Cache Cleaner обновлен до v1.7 - добавил выбор в терминале на удаление логов (папки те же что и у Kill Logger);
+* Pills Colors Overlay обновлен до v1.2 - добавил цвета: Light Blue (ff5e97f6), Light Red (ffff4151), Light Green (ff47ae84) - Accent который подтягивается из под прошивки добавлять пока-что точно не буду (отвал UI на многих прошивках). Добавил выборы в разделение цветов по цвету приложений и один цвет везде (Light и Dark);
+* Build Prop Tweaks обновлен до v1.6 - убрал даблинг строк от Kill Logger;
 * MagiskHide Props Config Обновлен до v5.4.0-v125;
-* Force Activate DEV & ADB обновлен до 1.3 - добавил tcpip для ADB через WiFI после перезапуска (блин НЕБЕЗОПАСНО) или программ  на подобии @Android_Tool;
+* Force Activate DEV & ADB обновлен до v1.3 - добавил tcpip для ADB через WiFI после перезапуска (блин НЕБЕЗОПАСНО) или программ  на подобии @Android_Tool;
 * Другие мелкие улучшения и улучшения определений на показ патчей.
 #### 04.04.21 (33) ####
 * Riru Core Обновлен до v25.3.4.r399.84f7084;
@@ -796,6 +805,7 @@
 	- DevicePersonalizationPrebuiltPixel4
 	- DevicePolicyPrebuilt
 	- DiagMonAgent
+	- DiagnosticsToolPrebuilt
 	- Dialer
 	- DigitalClockEasy_L
 	- DigitalClock_L
@@ -946,6 +956,7 @@
 	- NexusLauncherIcons
 	- NexusWallpapersStubPrebuilt2017
 	- NexusWallpapersStubPrebuilt2019
+	- NezukoMusic
 	- Notes
 	- NovaBugreportWrapper
 	- ONESettings
@@ -978,6 +989,7 @@
 	- PrebuiltEmailGoogle
 	- PrebuiltExchange3Google
 	- PrebuiltGmail
+	- PrebuiltGoogleTelemetryTvp
 	- PureBrowser
 	- QPGallery
 	- QuickAccessWallet
@@ -1339,7 +1351,10 @@
 
 <details> 
   <summary>Changelog</summary>
-  
+
+#### 16.05.21 (35) ####
+* Обновлена GCam от BSG до V8.1.101 (A9 GVw);
+* Мелкие изменения от AIOPFMD.
 #### 09.05.21 (34) ####
 * Обновлена GCam от BSG до V8.1.101 (A9 GVv);
 * Мелкие изменения от AIOPFMD.
@@ -1466,7 +1481,10 @@
 
 <details> 
   <summary>Changelog</summary>
-  
+
+#### 16.05.21 (26) ####
+* MiXplorerSilver обновлен до v6.56.0;
+* Мелкие изменения от AIOPFMD.
 #### 09.05.21 (25) ####
 * GBoard обновлен от 03.05;
 * MiXplorerSilver обновлен до v6.55.1;

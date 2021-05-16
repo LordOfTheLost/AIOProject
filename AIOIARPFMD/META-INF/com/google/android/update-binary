@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOIARPFMD="09.05.21 (25)"
+VAIOIARPFMD="16.05.21 (26)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -194,7 +194,7 @@ IPVO="$VENDOR/overlay"; MIPSVO="/system/vendor/overlay"
 IPVUKL="$VENDOR/usr/keylayout"; MIPSVUKL="/vendor/usr/keylayout"
 IPVF="$VENDOR/firmware"; MIPVF="/system/vendor/firmware"
 IPVEDF="$IPVE/device_features"; MIPSVEDF="/system/vendor/device_features"
-IPDA="/data/app"; IPDD="/data/data"; IPDS="/data/system"; IPDSU="$IPDS/users"; IPDSNS="$IPDS/netstats"; IPDBBN="/dev/block/by-name"; IPDM="/data/misc"; IPDMDE="/data/misc_de"; IPDRESC="/data/resource-cache"; STORAGE="/sdcard"; ASTORAGE="/data/media"
+IPDA="/data/app"; IPDD="/data/data"; IPDS="/data/system"; IPDSU="$IPDS/users"; IPDSUDE="/data/user_de"; IPDSNS="$IPDS/netstats"; IPDBBN="/dev/block/by-name"; IPDM="/data/misc"; IPDMDE="/data/misc_de"; IPDRESC="/data/resource-cache"; STORAGE="/sdcard"; ASTORAGE="/data/media"
 ACONFS="$(find $SYSTEM $VENDOR -type f -name "audio_configs*.xml")"
 APINF="$(find $SYSTEM $VENDOR -type f -name "audio_platform_info*.xml")"
 CFGS="$(find $SYSTEM $VENDOR -type f -name "*audio_effects*.conf" -o -name "*audio_effects*.xml")"
@@ -204,8 +204,8 @@ APCFGS="$(find $SYSTEM $VENDOR -type f -name "*audio_io_policy*.conf" -o -name "
 MCGAX="$(find $SYSTEM $VENDOR -type f -name "*media_codecs_google_c2_audio*.xml" -o -name "*media_codecs_google_audio*.xml")"
 DEVFEA=$IPSEDF/*.xml; DEVFEAA=$IPVEDF/*.xml
 SPG="settings put global"; SPS="settings put secure"
-if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
-PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"; HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"; HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"; PDESIGN="$(GET_PMODE_PROP "$PATCHMODEFILE" "PDESIGN")"; LEDCOLOR="$(GET_PMODE_PROP "$PATCHMODEFILE" "LEDCOLOR")"; KMETHOD="$(GET_PMODE_PROP "$PATCHMODEFILE" "KMETHOD")"; TKEY="$(GET_PMODE_PROP "$PATCHMODEFILE" "TKEY")"; MCMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "MCMODE")"; ENDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "ENDMODE")"; BIDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "BIDMODE")"
+if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
+PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"; HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"; HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"; PDESIGN="$(GET_PMODE_PROP "$PATCHMODEFILE" "PDESIGN")"; LEDCOLOR="$(GET_PMODE_PROP "$PATCHMODEFILE" "LEDCOLOR")"; KMETHOD="$(GET_PMODE_PROP "$PATCHMODEFILE" "KMETHOD")"; TKEY="$(GET_PMODE_PROP "$PATCHMODEFILE" "TKEY")"; MCMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "MCMODE")"; ENDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "ENDMODE")"; BIDMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "BIDMODE")"; BUTTONIDUP="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDUP")"; BUTTONIDDOWN="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDDOWN")"
 PROPFILES="$IPSDP $IPSBP $IPVBP /data/local.prop /default.prop /build.prop"; PROPFILESALT="$IPSSPBP $IPSBP $IPVBP"
 DMYHMS="$( date +"%d-%m-%Y-%H:%M:%S" )"
 if [ -d $IPSPO ]; then IPPO="$IPSPO"; MIPPO="$MIPSPO"; elif [ -d $IPSO ]; then IPPO="$IPSO"; MIPPO="$MIPSO"; elif [ -d $IPVO ]; then IPPO="$IPVO"; MIPPO="$MIPSVO"; fi
@@ -305,7 +305,7 @@ case "$ENDMODE" in
 *) ENDMODE=true; echo -e "$MSGENDMODE\nENDMODE=true" >> $PATCHMODEFILE;;
 esac
 case "$BIDMODE" in
-"true") BIDMODE=true; BUTTONIDUP="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDUP")"; BUTTONIDDOWN="$(GET_PMODE_PROP "$PATCHMODEFILE" "ButtonIDDOWN")";;
+"true") BIDMODE=true;;
 "false") BIDMODE=false;;
 *) BIDMODE=true; echo -e "$MSGBIDMODE\nBIDMODE=true\nButtonIDUP=#UP\nButtonIDDOWN=#DOWN" >> $PATCHMODEFILE;;
 esac
@@ -693,7 +693,6 @@ if ($TIMEOUT 5 $KGETEVENT -lc 1 2>&1 | $KGREP VOLUME | $KGREP " DOWN" > $EVENTS)
 
 CHOOSENEW() {
 # Original idea by chainfire @xda-developers, improved on by ianmacd @xda-developers
-# Note from chainfire @xda-developers: getevent behaves weird when piped, and busybox grep likes that even less than toolbox/toybox grep
 while true; do
 $KGETEVENT -lc 1 2>&1 | $KGREP VOLUME | $KGREP " DOWN" > $EVENTS
 if (`cat $EVENTS 2>/dev/null | $KGREP VOLUME >/dev/null`); then
@@ -715,7 +714,7 @@ if [ "$1" == "UP" ]; then
 HFBMODE && UP=$SEL && sed -i "s/ButtonIDUP=#UP/ButtonIDUP=$SEL/g" $PATCHMODEFILE
 break
 elif [ "$1" == "DOWN" ]; then
-HFBMODE && DOWN=$SEL && sed -i "s/ButtonIDDOWN=#DOWN/ButtonIDDOWN=$SEL/g" $PATCHMODEFILE
+HFBMODE && DOWN=$SEL && if [ "$UP" -ne "$SEL" ]; then sed -i "s/ButtonIDDOWN=#DOWN/ButtonIDDOWN=$SEL/g" $PATCHMODEFILE; fi
 break
 elif [ $SEL -eq $UP ]; then
 HFBMODE && return 0
@@ -755,13 +754,8 @@ ENDMODE=false; END
 else
 sed -i "s/TKEY=false/TKEY=true/g" $PATCHMODEFILE
 fi
-else
-if $BIDMODE; then
-sed -i "s/KMETHOD=false/KMETHOD=A/g" $PATCHMODEFILE
-else
-sed -i "s/KMETHOD=A/KMETHOD=O/g" $PATCHMODEFILE
 fi
-fi
+if $BIDMODE; then sed -i "s/KMETHOD=false/KMETHOD=A/g" $PATCHMODEFILE; else sed -i "s/KMETHOD=A/KMETHOD=O/g" $PATCHMODEFILE; fi
 }
 
 KEYCHECK() {
@@ -890,8 +884,7 @@ UCSA "$MSGUC" "$MSGEFTC" "$MSGNUS" "RTrash_System_AppS"
 }
 
 RTrash_System_AppS() {
-RMTSAV=false
-CAILIST=false
+DELETEWITHOUTSELECTION=false; RMTSAV=false; CAILIST=false
 if [ $BOOTMODE != true ] && $MAGISK; then
 MSGDELIMITER; UIP "Choose Variant:" "$MSGVU Replace All Find Apps" "$MSGVD Remove All Find Apps"
 if $KEYFUNCTION; then
@@ -996,6 +989,7 @@ DevicePersonalizationPrebuiltPixel2020
 DevicePersonalizationPrebuiltPixel4
 DevicePolicyPrebuilt
 DiagMonAgent
+DiagnosticsToolPrebuilt
 Dialer
 DigitalClockEasy_L
 DigitalClock_L
@@ -1136,6 +1130,7 @@ MozillaNlpBackend
 Music
 Music2
 MusicFX
+MusicPlayerGO
 MyVerizonServices
 Netflix_activation
 NewsWeather
@@ -1145,6 +1140,7 @@ NextPay
 NexusLauncherIcons
 NexusWallpapersStubPrebuilt2017
 NexusWallpapersStubPrebuilt2019
+NezukoMusic
 Notes
 NovaBugreportWrapper
 ONESettings
@@ -1177,6 +1173,7 @@ PrebuiltDeskClockGoogle
 PrebuiltEmailGoogle
 PrebuiltExchange3Google
 PrebuiltGmail
+PrebuiltGoogleTelemetryTvp
 PureBrowser
 QPGallery
 QuickAccessWallet
@@ -1242,6 +1239,7 @@ VoiceSearch
 VoiceSearchStub
 Wallet
 Wallpaper
+WallpaperPickerGoogle
 WallpaperPickerGooglePrebuilt
 WallpaperPickerGoogleRelease
 WallpapersBReel2017
@@ -1428,7 +1426,7 @@ RTrash_System_AppSAA() {
 if $RMTSAV; then
 REPLACE="$NAMEPATHDELLTRASH/$FINDTRASH"
 MODID="RTSA"; REPLACER; MOVERPATH
-MMPR -v "Replace Trash System App" "$VAIOPFMD" "Replace Trash System App $FMR"
+MMPR -v "Replace Trash System App" "$VAIOIARPFMD" "Replace Trash System App $FMR"
 UIP "$MSGDRP"
 else
 rm -rf $NAMEPATHDELLTRASH/$FINDTRASH; UIP "$MSGDRM"
