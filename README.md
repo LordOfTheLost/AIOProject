@@ -60,7 +60,7 @@
 * В Boot Animation добавил выбор FPS: 60 и 30;
 * Добавлена установка Riru Clipboard Whitelist v10;
 * MagiskHide Props Config Обновлен до v5.4.0-v128;
-* Добавлена установка LSPosed v1.4.1 (5698);
+* Добавлена установка LSPosed v1.4.1 (5711);
 * Force Activate DEV & ADB Обновлен до v1.4 - убрал строку которая могла ломать проверку SafetyNet;
 * Может что-то ещё что забыл.
 #### 16.05.21 (39) ####
