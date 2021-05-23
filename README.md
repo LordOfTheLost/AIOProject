@@ -1,7 +1,8 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
-* Версия AIOPFMD: 16.05.21 (39) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOPFMD-16.05.21-%2839%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1oqxPKFpicVw_9B44-OO3fWZvd9OwWD-P/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/31">TG</a>
+* Версия AIOPFMD: 23.05.21 (40) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMD-23.05.21-%2840%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1ZPIFaOX26HLhm7foyG4ts0c8HmLPBs38/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/34">TG</a>
+* Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Последние обновление: 16.05.2021.
@@ -18,7 +19,7 @@
 * <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a>
 
 <details> 
-  <summary>Скиншоты:</summary>
+  <summary>Скриншоты:</summary>
 
 ![](https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOPFMD-21.03.21-%2831%29.jpg/max/max/1e)
 ![](https://a.fsdn.com/con/app/proj/aioproject/screenshots/AIOCPFMD-21.03.21-%2831%29.jpg/max/max/1)
@@ -32,6 +33,37 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 23.05.21 (40), 23.05.21 (4) ####
+* IOS EMOJI обновлены до 1.0;
+* hosts файл с AdAway Обновлен от 17.05.2021;
+* Фикс REMOVER для модулей;
+* Вернул файл AIOPFMDA - сюда будет перенесен EOL/редкорабочие патчи и прочее;
+	- Этот архив может находится во внутренней памяти или на одну папку глубже от неё (как файл PATCHMODE - можете его закинуть и забыть);
+	- Пункты появляются от нахождения самого файла;
+	- Что перенес (позже подумаю или по просьбам верну обратно):
+		- ASUSScreenshot (работает так себе и не всегда правильно/нормально);
+		- FaceLock (EOL да и на новых патчах безопасности уже не работает (ну и Android 7-9 уже не обновляется));
+		- GCNGAP (EOL да и нормальные GCam работают без него);
+		- ViperFX Presets (много весит и не всем надо);
+		- DTS HPX (тут просто пиздец - есть Viper);
+		- James DSP Manager (отвальное чудовище - есть Viper);
+		- AinurNasral (это просто EOLное чудовище - есть Viper);
+* Добавил уведомление как запустить через терминал Detach и App systemizer (а как какать?)";
+* UIROUNDED обновлен до v2.1:
+		- Добавлено больше строк и скругление PIP YouTube;
+		- Некоторые строки были перенесены;
+		- Убраны выборы 35 и 40;
+		- Выбор с 30 изменен на 33 из за отвала на некоторых прошивках связанных с строками темы (в основном);
+* Volume Steps обновлен до v1.2 - после выбора по отдельности теперь можно выбрать что-то одно пропуская другое;
+* Build Prop Tweaks обновлен до v1.8 - перенес audio.safemedia.bypass из Volume Steps;
+* Добавлена установка Notification Side Padding - регулирует расстояние между строкой и краями экрана в значениях: 0 (как у OneUi), 5, 10, 15, 20, 25, 30;
+* Переделка выборов в лаунчерах - так же OneUi Launcher теперь не показывается на 11ках+;
+* В Boot Animation добавил выбор FPS: 60 и 30;
+* Добавлена установка Riru Clipboard Whitelist v10;
+* MagiskHide Props Config Обновлен до v5.4.0-v128;
+* Добавлена установка LSPosed v1.4.1 (5698);
+* Force Activate DEV & ADB Обновлен до v1.4 - убрал строку которая могла ломать проверку SafetyNet;
+* Может что-то ещё что забыл.
 #### 16.05.21 (39) ####
 * В режим удаления/replace добавлены приложения в обычный лист: DiagnosticsToolPrebuilt, NezukoMusic и PrebuiltGoogleTelemetryTvp;
 * MagiskHide Props Config Обновлен до v5.4.0-v127;
@@ -523,7 +555,7 @@
 	- Прозрачная зона таблетки;
 	- Не прозрачная зона таблетки;
 		- Ширина таблетки (Точка);
-		- Ширина таблетки (0) - скрытие жестовой таблеткой отступа с/без отступа в зависимости от прозрачности;
+		- Ширина таблетки (0) - скрытие жестовой таблетки с/без отступа в зависимости от прозрачности;
 		- Ширина таблетки (60);
 		- Ширина таблетки (120);
 		- Ширина таблетки (180);
@@ -586,7 +618,7 @@
 	- Значение 45;
 	- Значение 50;
 * Пункт (All) - Установка GBoard тем для многих прошивок (в MD2 и разными цветами и видами);
-* Пункт (All) (9-11) (\\) - Cutout Increase Number Notification Icons для многих прошивок с выборами: 
+* Пункт (All) (9-11) (\\) - Cutout Increase Number Notification Icons для увеличения количества уведомлений а при применении оверлея работает как DotKiller: 
 	- 20dip (Немного уменьшенная строка состояния в ландшафтном режиме);
 	- 24dip (Обычная строка состояния в ландшафтном режиме);
 	- 34dip (Строка состояния в ландшафтном режиме для DSB);
@@ -595,17 +627,15 @@
 		- 6 иконок;
 		- 7 иконок;
 * Пункт (Only M) (10) - Установка GPay Power Menu (он же альтернатива меню выключения расположена с низу);
-* Пункт (All) (10-11) (\\) - Установка патча на разную степень скругления системы, лаунчеров и приложений:
+* Пункт (All) (10-11) (\\) - Установка RoundedUI для скругления системы, лаунчеров и приложений которые подтягивают строки из системы:
 	- Значение 0;
 	- Значение 5;
 	- Значение 10;
 	- Значение 15;
 	- Значение 20;
 	- Значение 25;
-	- Значение 30;
-	- Значение 35;
-	- Значение 40;
-* Пункт (All) (10-11) (\\) - Burn In Protection (конфликтует с Cutout Increase Number Notification Icons и подобным что принудительно включается поверх (так же полон рандома))- Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроенно но отключено):
+	- Значение 33;
+* Пункт (All) (10-11) (\\) - Burn In Protection (конфликтует с Cutout Increase Number Notification Icons и подобным что принудительно включается поверх)- Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроенно но отключено):
 	- Время смещения (в секундах):
 		- Значение 20;
 		- Значение 40;
@@ -626,8 +656,16 @@
 							- Cutout Increase Number Notification Icons с Burn In Protection:
 								- 24dip (Обычная строка состояния в ландшафтном режиме);
 								- 34dip (Строка состояния в ландшафтном режиме для DSB);
+* Пункт (All) (10-11) (\\) - Notification Side Padding - регулирует растояние между строкой и краями экрана:
+	- Значение 0dip (как у OneUi);
+	- Значение 5dip;
+	- Значение 10dip;
+	- Значение 15dip;
+	- Значение 20dip;
+	- Значение 25dip;
+	- Значение 30dip;
 * Пункт (Only M) - Single User Mod - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
-* Пункт (Only M) (8.1-11) (\\) - Установка патча SUI Content Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара если доступно прошивкой;
+* Пункт (Only M) (8.1-11) (\\) - Установка SUI Content Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара если доступно прошивкой;
 	- Значение 0;
 	- Значение 5;
 	- Значение 10;
@@ -637,7 +675,7 @@
 	- Значение 30;
 	- Значение 35;
 	- Значение 40;
-* Пункт (Only M) (8.1-11) (\\) - Установка патча QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
+* Пункт (Only M) (8.1-11) (\\) - Установка QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
 	- Значение 0;
 	- Значение 5;
 	- Значение 10;
@@ -647,7 +685,7 @@
 	- Значение 30;
 	- Значение 35;
 	- Значение 40;
-* Пункт (Only M) (8.1-11) (\\) - Установка патча SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
+* Пункт (Only M) (8.1-11) (\\) - Установка SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
 	- Значение 10;
 	- Значение 20;
 	- Значение 30;
@@ -658,7 +696,7 @@
 	- Значение 80;
 	- Значение 90;
 	- Значение 100;
-* Пункт (All) (\\) - Установка Boot Animation:
+* Пункт (All) (\\) - Установка Boot Animation при запуске телефона:
 	- Pixel:
 		- Black;
 		- White;
@@ -666,6 +704,9 @@
 	- TenX-OS:
 		- Black;
 		- White;
+			- FPS:
+				- 60;
+				- 30;
 * Пункт (All) <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=106370289">4PDA</a> || a href="https://t.me/EmojiReplacer">TG</a> - Установка IOS EMOJI;
 * Пункт (All) - Установка Media Ui:
 	- Masik:
@@ -676,16 +717,16 @@
 
 <h3 align=center>Apps: GFU/GSF/SL/IA</h3>
 
-* Пункт (All) (7.1.2, 8.1 и 9) (Arm, Arm64)- Установка Разблокировки по лицу при Gapps Pico (на практике уже не работает с новыми патчами безопасности на этих версия Android);
-* Пункт (All) (8.1, 9 и 10) - Устанавливает "заглушку" для работы GCam без Gapps;
+* Пункт (All) (7.1.2, 8.1 и 9) (Arm, Arm64) (ADDON) - Установка Разблокировки по лицу при Gapps Pico (на практике уже не работает с новыми патчами безопасности на этих версия Android);
+* Пункт (All) (8.1, 9 и 10) (ADDON) - Устанавливает "заглушку" для работы GCam без Gapps;
 * Пункт (All) (10-11) (\\) - Установка Systemless Launcher (Alt Variant Quick Switch):
 	- Установка Lawnchair <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка OPLauncher <a href="https://www.pling.com/p/1451515/">PLING</a || <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a> || <a href="https://t.me/mrsluffy_releases">TG</a>;
-	- Установка OneUIHome <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка OneUIHome (10) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка PixelLauncher <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
-	- Установка ShadyLauncher <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка ShadyLauncher (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка AsusLauncher <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-* Пункт (All) (10-11) <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
+* Пункт (All) (10-11) (ADDON)<a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
 * Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
 	- С подтверждением для каждого;
 	- Без подтверждением;
@@ -698,13 +739,13 @@
 		- Если установка через MM, будет дан выбор:
 			- Установка в data/app;
 			- Установка в system/priv-app;
-* Пункт (All) - Установка ViperFX Presets;
-* Пункт (Only M) (5.1.1+) <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=101694132">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ainur_jamesdsp">GITHUB</a> || <a href="https://github.com/therealahrion/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> - Установка James DSP Manager:
+* Пункт (All) (ADDON) - Установка ViperFX Presets;
+* Пункт (Only M) (5.1.1+) (ADDON) <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=101694132">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ainur_jamesdsp">GITHUB</a> || <a href="https://github.com/therealahrion/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> - Установка James DSP Manager:
 	- Новый менеджер;
 	- Старый менеджер:
 		- Драйвера Full Feature;
 		- Драйвера Bit Perfect;
-* Пункт (Only M) (9-11) <a href="https://forum.xda-developers.com/t/port-pie-dts-x-ultra-dts-headphone-x-27-03-update.3896233/">XDA</a> - Установка DTS HPX:
+* Пункт (Only M) (9-11) (ADDON) <a href="https://forum.xda-developers.com/t/port-pie-dts-x-ultra-dts-headphone-x-27-03-update.3896233/">XDA</a> - Установка DTS HPX:
 	- Новый менеджер;
 	- Старый менеджер;
 * Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - Установка Audio Modification Library;
@@ -1278,14 +1319,22 @@
 * Пункт (All) (10-11) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro (уехал кстати) будет называться BASIC);
 * Пункт (Only М) <a href="<a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config - из под своего бинирника (об этом способе я в чейнджлоге упоминал);
 
-<h3 align=center>Riru & EdXposed</h3>
+<h3 align=center>Riru & Edx/LS Posed</h3>
 
-* Пункт (Only М) (8.1-11.0) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - Установка Riru Core - Установка не из под своего архива;
-* Пункт (Only М) (8.1-11.0) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - Установка EdXposed - Установка не из под своего архива:
+* Пункт (Only М) (8.1-11.0) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - Установка Riru Core;
+* Пункт (Only М) (8.1-11.0) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - Установка EdXposed:
 	- Если установка через MM, будет дан выбор на установку менеджера:
 		- Установка в /data/app;
 		- Установка в /system/priv-app;
-		
+* Пункт (Only М) (8.1-11.0) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> - Установка LSPosed:
+	- Если установка через MM, будет дан выбор на установку менеджера:
+		- Установка в /data/app;
+		- Установка в /system/priv-app;
+* Пункт (Only М) (8.1-11.0) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101920396">4PDA</a> || <a href="https://github.com/Kr328/Riru-ClipboardWhitelist">GITHUB</a> - Установка Riru Clipboard Whitelist:
+	- Если установка через MM, будет дан выбор на установку менеджера:
+		- Установка в /data/app;
+		- Установка в /system/priv-app;
+
 <h3 align=center>Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS</h3>
 
 * Пункт (Only М And/Or BootMode) <a href="https://4pda.ru/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - Принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
@@ -1559,16 +1608,16 @@
 
 <h3 align=center>Почему, как и зачем</h3>
 
-* Это патчи, которые основаны на подобии методе выбора "KeyCheck" (выбор патчей/пунктов клавишами громкости) - на данный момент это самые большие патчи с данной реализацией (и нет, это работает по похожему принципу который реализован в некоторых патчей для Magisk но по другому и он будет улучшаться).
+* Это патчи, которые основаны на методе выбора "KeyCheck" (выбор патчей/пунктов клавишами громкости) - на данный момент это самые большие патчи с данной реализацией (и нет, это работает по похожему принципу который реализован в некоторых патчей для Magisk но по другому и он будет улучшаться).
 * Патчи были не просто перенесены, но и на 80% улучшены и переделаны в модули и наоборот со многими вариантами и альтернативами которые тоже будут улучшатся.
-* Патчи были созданы благодаря: topjohnwu, Open GApps Project, BiTGApps Project, всех кто создал модули которые здесь объединены и многих пользователей 4PDA!
+* Патчи были созданы благодаря: topjohnwu, Open GApps Project, BiTGApps Project, всех кто создал модули которые здесь объединены и многих пользователей 4PDA.
 * В дальнейшем будут добавляться множество новых выборов/методов/фиксов/и полезных патчей а также исправление найденных ошибок.
 * Это тестовый проект, возможно он продолжит свое существование и развитие, а возможно и нет.
 * Я делал патчи для себя, и выложил сюда для пользователей которым это может будет полезно и такие есть (даже некоторые переделали под себя пару патчей). 
-* Я тестировал их на своих телефонах но это не означает что мне можно доверять (вдруг я вам /system форматну), так что Всё, что вы делаете со своим девайсом/телефоном - вы делаете на свой страх и риск.
+* Я тестировал их на своих телефонах но это не означает что мне можно доверять (вдруг я вам /system_root/system/system_ext/product/priv-app/SystemUI форматну), так что Всё, что вы делаете со своим девайсом/телефоном - вы делаете на свой страх и риск.
 * Я понимаю что это читать никто не будет, и я не любитель объяснять или что-то показывать, но я попытался как-то объяснить что и куда/как.
 * Эти все патчи могут полностью измениться или вообще исчезнуть навсегда, а что от этого произойдёт будет зависеть от их использования/надобности.
-* Некоторые патчи всё ещё ставятся из под своего родного архива - в дальнейшем будет полный перенос кода.
+* Некоторые патчи всё ещё ставятся из под своего родного архива - в дальнейшем будет полный перенос кода (придется).
 * Что означает патч прошивается из под своего архива или нет:
 	- Поскольку тут 80% патчей перенесено вместе с кодом в этот патч, есть патчи на которые я забил и мне лень переносить код с его полной работой вот они и ставятся из под своего архива со своим нетронутым кодом.
 	- Хотя в дальнейшем планы на перенос кода есть.
@@ -1583,7 +1632,7 @@
 
 * (М) и/или (MM) - Magisk/Manager/Modules.
 * (R) - Recommended.
-* PATCHMODE это - файл (можно на него делать какие хотите расширения), который создается во внутренней памяти (/sdcard) и через ls по for можно быстро на одну папку выше от /sdcard хранить файл PATCHMODE или как было по умолчанию просто в /sdcard (я всё еще экспериментирую) для следующего:
+* PATCHMODE это - файл (можно на него делать какие хотите расширения хоть .exe), который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
 	- PMODE: Открывает некоторые тестовые пункты/патчи (в PATCHMODE напротив "PMODE=" написать: U(ser) или D(ebug)) - Прописать только букву - По умолчанию U(ser).
 	- PDESIGN: Изменяет "дизайн" патча (в PATCHMODE напротив "PDESIGN=" написать: N(ew) или O(ld)) - прописать только букву - По умолчанию N(ew).
 	- KMETHOD: Принудительное переключение между старым и новым методом "KeyCheck" (в PATCHMODE напротив "KMETHOD=" написать: N(ew), O(ld) или A(lt) - прописать только букву - По умолчанию false, но после при первом запуске патча без настроенного файла PATCHMODE будет первый бинд, и на каком будет всё нормально - тот и будет по умолчанию прописан в PATCHMODE.
