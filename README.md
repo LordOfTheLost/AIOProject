@@ -61,7 +61,6 @@
 * Добавлена установка Riru Clipboard Whitelist v10;
 * MagiskHide Props Config Обновлен до v5.4.0-v128;
 * Добавлена установка LSPosed v1.4.1 (5711);
-* Force Activate DEV & ADB Обновлен до v1.4 - убрал строку которая могла ломать проверку SafetyNet;
 * Может что-то ещё что забыл.
 #### 16.05.21 (39) ####
 * В режим удаления/replace добавлены приложения в обычный лист: DiagnosticsToolPrebuilt, NezukoMusic и PrebuiltGoogleTelemetryTvp;
