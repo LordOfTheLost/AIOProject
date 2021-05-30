@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
-* Версия AIOPFMD: 23.05.21 (40) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMD-23.05.21-%2840%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1ZPIFaOX26HLhm7foyG4ts0c8HmLPBs38/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/34">TG</a>
+* Версия AIOPFMD: 30.05.21 (41) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.05.2021/AIOPFMD-30.05.21-%2841%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1yhP0AoqkAhZPQNcBx6kommXCLA96a873/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/34">TG</a>
 * Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -32,9 +32,16 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 30.05.21 (41) ####
+* Force Activate DEV & ADB Обновлен до v1.4 - убрал строку которая могла ломать проверку SafetyNet (на некоторых прошивках ну или рандом);
+* Detach обновлен до v5.1;
+* В режим удаления/replace добавлены приложения в обычный лист: CellBroadcastApp и EmergencyInfo;
+* hosts файл с AdAway обновлен от 27.05.2021;
+* Добавлена установка USB Policy Patcher v1.5 - может понадобится для ViperFX и подобных для вывода звука через USB;
+* LSPosed обновлен до v1.4.3 (5728).
 #### 23.05.21 (40), 23.05.21 (4) ####
 * IOS EMOJI обновлены до 1.0;
-* hosts файл с AdAway Обновлен от 17.05.2021;
+* hosts файл с AdAway обновлен от 17.05.2021;
 * Фикс REMOVER для модулей;
 * Вернул файл AIOPFMDA - сюда будет перенесен EOL/редкорабочие патчи и прочее;
 	- Этот архив может находится во внутренней памяти или на одну папку глубже от неё (как файл PATCHMODE - можете его закинуть и забыть);
@@ -762,6 +769,7 @@
 	- PATCH_MIXER;
 * Пункт (Only M) <a href="https://4pda.ru/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - Установка System Audio Quality - Этот модуль улучшает общие качество звука;
 * Пункт (All) - Установка Increase Bitrate - патчит все media_profiles*.xml в /vendor - Улучшает качество записи аудио во многих местах;
+* Пункт (Only M) - Установка USB Policy Patcher - может понадобится для ViperFX и подобных для вывода звука через USB;
 
 <h3 align=center>Other Fixes: FBFM/FBFM/UAA</h3>
 
@@ -801,11 +809,11 @@
 	- Mms
 
 * Другие приложения:
-	- AEXPapers
 	- Abstruct
 	- AccuweatherPhone2015_MASS_HD_SWS
 	- AdAway
 	- Aegis
+	- AEXPapers
 	- AirDots
 	- AirDotsPlugin
 	- AnalyticsCore
@@ -813,6 +821,7 @@
 	- AndroidAutoStub
 	- AndroidAutoStubPrebuilt
 	- AndroidForWork
+	- arcore
 	- AudioFX
 	- BatteryTile
 	- BookmarkProvider
@@ -821,7 +830,6 @@
 	- BooksStub
 	- Browser
 	- Browser2
-	- CMFileManager
 	- CalculatorGoogle
 	- CalculatorGooglePrebuilt
 	- CalendarGoogle
@@ -831,6 +839,7 @@
 	- CarHomeGoogle
 	- CarrierServices
 	- CatchLog
+	- CellBroadcastApp
 	- ChocoEUKor
 	- Chrome
 	- Chrome-Stub
@@ -838,7 +847,10 @@
 	- ClockPackage_MASS_Le
 	- CloudPrint
 	- CloudPrint2
+	- CMFileManager
 	- ColtPapers
+	- com.google.ar.core
+	- crDroidMusic
 	- DeskClockGoogle
 	- DevicePersonalizationPrebuiltPixel2020
 	- DevicePersonalizationPrebuiltPixel4
@@ -857,41 +869,45 @@
 	- EasymodeContactsWidget
 	- Eleven
 	- Email
+	- EmergencyInfo
 	- EngineerMode
 	- Etar
 	- ExactCalculator
 	- Excel_SamsungStub
 	- Exchange2
+	- facebook-appmanager
+	- facebook-installer
+	- facebook-services
+	- Facebook_stub
 	- FBAppManager_NS
 	- FBInstaller_NS
 	- FDroid
 	- FDroidPrivilegedExtension
-	- FM
-	- FM2
-	- FMRadio
-	- FM_TEST
-	- Facebook_stub
 	- FileExplorer
 	- FileExplorerGlobal
 	- FilesPrebuilt
 	- FitnessPrebuilt
+	- FM
+	- FM2
+	- FMRadio
+	- FM_TEST
 	- Focus
 	- FotaAgent
-	- GCS
-	- GCam
-	- GCamGOPrebuilt
-	- GCamGo
 	- GalaxyApps
 	- Gallery
 	- Gallery2
 	- GalleryGo
-	- GalleryGoPrebuilt
 	- GalleryGoogle
+	- GalleryGoPrebuilt
 	- GalleryPrebuilt
 	- GameCenter
 	- GameCenterGlobal
 	- Gboard
 	- Gcam
+	- GCam
+	- GCamGo
+	- GCamGOPrebuilt
+	- GCS
 	- GenieWidget
 	- GlobalTrendNews
 	- GlobalUserGuide
@@ -922,7 +938,7 @@
 	- GooglePrintRecommendationService
 	- GoogleTTS
 	- GoogleVrCore
-	- HTMLViewer
+	- greenguard
 	- Hangouts
 	- HangoutsDialer
 	- Health
@@ -930,50 +946,55 @@
 	- HotwordEnrollment
 	- HotwordEnrollmentOKGoogle*
 	- HotwordEnrollmentXGoogle*
+	- HTMLViewer
 	- HybridAccessory
 	- HybridPlatform
 	- HybridRadio2015
 	- HyconWallpapers
 	- IdMipay
 	- InMipay
+	- iWnnIME
+	- iWnnIME_Kbd_White
 	- Jelly
 	- Joyose
-	- KLMSAgent
 	- Keep
 	- KimciRecorder
+	- KLMSAgent
 	- KoreanIME
 	- KoreanIMEStub
-	- LPaper-v1.0.0-release
-	- LPaper-v2.0-release
 	- LatinIME
-	- LatinIMEGooglePrebuild
-	- LatinIMEGooglePrebuilt
 	- LatinImeDictionaryPack
 	- LatinImeGoogle
+	- LatinIMEGooglePrebuild
+	- LatinIMEGooglePrebuilt
 	- LatinImeTutorial
 	- Lawnfeed
 	- Lens
-	- MSA-Global
-	- MSSkype_stub
+	- LPaper-v1.0.0-release
+	- LPaper-v2.0-release
+	- mab
+	- madCamera
+	- madLauncher
+	- madWallpapers
 	- MaestroPrebuilt
 	- Maps
-	- MatLog
 	- MatchmakerPrebuilt
 	- MatchmakerPrebuiltPixel4
+	- MatLog
 	- Messages
 	- Messaging
+	- messaging
 	- MiBrowser
 	- MiDrive
 	- MiDrop
 	- MiGalleryLockscreen
 	- MiHealth
+	- Mimoji
 	- MiMover
 	- MiMusic
 	- MiPicks
 	- MiService
 	- MiShare
-	- MiVideo
-	- Mimoji
 	- MiuiBugReport
 	- MiuiCompass
 	- MiuiScanner
@@ -981,16 +1002,19 @@
 	- MiuiVideo
 	- MiuiVideoGlobal
 	- MiuiVideoPlayer
+	- MiVideo
 	- MozillaNlpBackend
+	- MSA-Global
+	- MSSkype_stub
 	- Music
 	- Music2
 	- MusicFX
 	- MusicPlayerGO
 	- MyVerizonServices
 	- Netflix_activation
-	- NewsWeather
 	- Newsstand
 	- NewsstandStub
+	- NewsWeather
 	- NextPay
 	- NexusLauncherIcons
 	- NexusWallpapersStubPrebuilt2017
@@ -998,6 +1022,9 @@
 	- NezukoMusic
 	- Notes
 	- NovaBugreportWrapper
+	- OmniSwitch
+	- OneNote
+	- OneOSLogcat
 	- ONESettings
 	- OPFileManager
 	- OPIconpackRound
@@ -1005,9 +1032,6 @@
 	- OPScreenRecorder
 	- OPWeather
 	- OPWidget
-	- OmniSwitch
-	- OneNote
-	- OneOSLogcat
 	- Ornament
 	- Papers
 	- PartnerBookmarksProvider
@@ -1015,8 +1039,8 @@
 	- PersonalAssistant
 	- PersonalAssistantGlobal
 	- Phonograph
-	- PhotoTable
 	- Photos
+	- PhotoTable
 	- PicoTts
 	- PixelLiveWallpaperPrebuilt
 	- PixelWallpapers2020
@@ -1033,7 +1057,6 @@
 	- QPGallery
 	- QuickAccessWallet
 	- QuickSearchBox
-	- RRWallpapers
 	- Recorder
 	- RecorderPrebuilt
 	- RetroMusicPlayer
@@ -1042,16 +1065,12 @@
 	- RevengeOSCalculator
 	- RomStats
 	- RoseEUKor
-	- SBrowser_3.0.38_MASS_LATEST
-	- SOAgent
-	- SPPPushClient_Prod
-	- SPenSdk3
-	- SPlannerWidget_Essential
-	- SPlanner_Essential
+	- RRWallpapers
 	- SafetyHubPrebuilt
 	- SamsungIMEv2
 	- SamsungSans
 	- SamsungTTS
+	- SBrowser_3.0.38_MASS_LATEST
 	- ScribePrebuilt
 	- SecCalculator2_L
 	- SecEmailComposer-mass
@@ -1070,10 +1089,17 @@
 	- SmartManagerSDK
 	- SmartManager_OLEDHD
 	- Snap
+	- SOAgent
 	- SoundAmplifierPrebuilt
+	- SPenSdk3
+	- SPlannerWidget_Essential
+	- SPlanner_Essential
+	- SPPPushClient_Prod
+	- stats
 	- Street
 	- Superiorwalls
 	- Talk
+	- talkback
 	- Terminal
 	- TipsPrebuilt
 	- TouchAssistant
@@ -1110,29 +1136,13 @@
 	- WellbeingPrebuilt
 	- Word_SamsungStub
 	- XiaomiKeyboard
-	- YGPS
 	- YellowPage
+	- YGPS
 	- YouDaoEngine
 	- YouTube
 	- YouTubeMusicPrebuilt
 	- YouTubeVanced
 	- ZVideoMass
-	- arcore
-	- com.google.ar.core
-	- crDroidMusic
-	- facebook-appmanager
-	- facebook-installer
-	- facebook-services
-	- greenguard
-	- iWnnIME
-	- iWnnIME_Kbd_White
-	- mab
-	- madCamera
-	- madLauncher
-	- madWallpapers
-	- messaging
-	- stats
-	- talkback
 
 </details>
 
@@ -1250,7 +1260,7 @@
 
 * Пункт (All) (\\) - Установка одного из пяти Hosts файлов:
 	- Пустой Hosts (Отключение блокировки);
-	- Hosts из AdAway (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
+	- Hosts из AdAway (13000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts из LP от chelpa (67000+ строк) <a href="https://4pda.ru/forum/index.php?s=&showtopic=298302&view=findpost&p=10727871">4PDA</a>;
 	- От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
 	- Альтернативный (в нем строки из MiRoom и других) (190000+ строк);
