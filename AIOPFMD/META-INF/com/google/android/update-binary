@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="06.06.21 (42)"
+VAIOPFMD="13.06.21 (43)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -39,7 +39,7 @@ VLUS="v1.0"
 #Apps: GFU/GSF/SL/IA
 VGSFP="v1.0"
 VQSRPC="v1.0"
-VSL="v1.2"; VASLQ="10.0 Alpha 8"; VASLR="11 Alpha 4"
+VSL="v1.3"; VASLQ="10.0 Alpha 8"; VASLR="11 Alpha 5"
 VSOPL="v6.2"; VCSOPL="30100"; VASOPL="v5.1.0"
 VSOUH="v2.1"; VCSOUH="21"; VASOUH="v11.0"
 VSPL="v1.0"; VASPLQ="v10 (703)"; VASPLR="v11 (825)"
@@ -65,7 +65,7 @@ VFSFM="v1.2"
 SLOQSBDF="v1.1"
 #AdBlock/Hosts
 VDAB="1.0"; VCDAB="1"
-VAAH="01.06.2021"
+VAAH="11.06.2021"
 VLPH="v9.6.0"; VCLPH="1720"
 VSH="v210506-v16.6"; VCSH="166"
 VOH="v1.1"
@@ -100,7 +100,7 @@ VMHPC="v5.4.0-v128"
 VRiru="v25.4.4.r426.05efc94"; VCRiru="426"
 VREX="v0.5.2.2_4683-master"; VCREX="4683"
 VRCW="v10"; VCRCW="10"
-VRLSP="v1.4.4 (5737)"; VCRLSP="5737"
+VRLSP="v1.4.5 (5767)"; VCRLSP="5767"
 #Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS
 VFGS="v1.1"
 VEFG="v1.1"
@@ -117,7 +117,7 @@ VFDM="v1.0"
 VIFDPP="v1.0"
 VLEDLO="v1.1"
 VLEDLA="v1.1"
-VUGMSD="v1.8.2"; VCUGMSD="182"
+VUGMSD="v1.8.3"; VCUGMSD="183"
 VUSGP="v1.0"
 VAS="v1.1"
 VGPUR="v1.0"
@@ -730,7 +730,7 @@ done
 }
 
 SET_PERM_RM() {
-SET_PERM_R $MODPATH/$MODID 0 0 0755 0644
+SET_PERM_R $MODPATH/$MODID 0 0 0755 0644; [ -d $MODPATH/$MODID$MIPSB ] && chmod 777 $MODPATH/$MODID$MIPSB/*; [ -d $MODPATH/$MODID$MIPSXB ] && chmod 777 $MODPATH/$MODID$MIPSXB/*
 }
 
 UZTPN() {
@@ -2356,6 +2356,21 @@ $XMLSTARLET ed -L -r "$SNP-$MODID" -v "$SN" $1
 fi
 }
 
+SP_CHECKER() {
+if [ $BOOTMODE != true ] && [ ! -d $IPDSU ]; then
+return 0
+else
+for f in $1; do
+for af in $2; do
+if grep $af $f >/dev/null; then
+return 0
+fi
+done
+done
+fi
+return 1
+}
+
 } #
 
 { #KeyCheck
@@ -2864,9 +2879,7 @@ fi
 }
 
 IGPay_Power_Menu() {
-if $MAGISK && $ATEN && [ $MIUI != true ]; then
-UCSA "Activate GPay Power Menu $VGPPM?" "" "$MSGNUS" "IGPay_Power_MenuS"
-fi
+if $MAGISK && $ATEN && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "global_actions_panel_debug_enabled global_actions_panel_available"; then UCSA "Activate GPay Power Menu $VGPPM?" "" "$MSGNUS" "IGPay_Power_MenuS"; fi
 }
 
 IGPay_Power_MenuS() {
@@ -3027,9 +3040,7 @@ fi
 }
 
 ISingle_User_Mod() {
-if $MAGISK && [ $MIUI != true ]; then
-UCSA "Install Single User Mod $VSUM?" "" "$MSGNUS" "ISingle_User_ModS"
-fi
+if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_global.xml" "guest_user_enabled"; then UCSA "Install Single User Mod $VSUM?" "" "$MSGNUS" "ISingle_User_ModS"; fi
 }
 
 ISingle_User_ModS() {
@@ -3043,7 +3054,7 @@ MMPR -v "Single User Mod" "$VSUM" "Disable MultiUsers $FMR"; SET_PERM_RM; UIP "$
 }
 
 ISUIP() {
-if $MAGISK && [ $MIUI != true ]; then
+if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "sysui_status_bar_padding"; then
 if $ATEN || $AELEVEN || $ATWELVE; then
 UCSA "Install SUI Content Padding $VSUICP?" "$MSGEFTC" "$MSGNUS" "ISUIPS"
 fi
@@ -3066,7 +3077,7 @@ fi
 }
 
 IQSCP() {
-if $MAGISK && [ $MIUI != true ]; then
+if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "sysui_rounded_content_padding"; then
 if $ATEN || $AELEVEN || $ATWELVE; then
 UCSA "Install QS Content Padding $VQSCP?" "$MSGEFTC" "$MSGNUS" "IQSCPS"
 fi
@@ -3089,7 +3100,7 @@ fi
 }
 
 ISUIRS_Rounded_Size() {
-if $MAGISK && [ $MIUI != true ]; then
+if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "sysui_rounded_size"; then
 if $ATEN || $AELEVEN || $ATWELVE; then
 UCSA "Install SUI Rounded Size $VSUIRSCP?" "$MSGEFTC" "$MSGNUS" "ISUIRS_Rounded_SizeS"
 fi
@@ -3112,7 +3123,7 @@ fi
 }
 
 IQSCIAR() {
-if $MAGISK; then UCSA "Install QS Count Icon & Rows $VQSCIAR?" "$MSGEFTC" "$MSGNUS" "IQSCIARS"; fi
+if $MAGISK && SP_CHECKER "$IPDSU/0/settings_secure.xml $IPDSU/0/settings_system.xml" "sysui_qqs_count qs_columns_portrait qs_columns_landscape qs_rows_portrait qs_rows_landscape"; then UCSA "Install QS Count Icon & Rows $VQSCIAR?" "$MSGEFTC" "$MSGNUS" "IQSCIARS"; fi
 }
 
 IQSCIARS() {
@@ -5247,7 +5258,10 @@ Mms
 GTRRRMSA
 fi
 REMOVETRASHNAME="
+404Clock
 AEXPapers
+ANGLE
+AbleMusic
 Abstruct
 AccuweatherPhone2015_MASS_HD_SWS
 AdAway
@@ -5520,6 +5534,7 @@ SimpleGalleryPro
 SmartManagerSDK
 SmartManager_OLEDHD
 Snap
+SnapdragonMusic
 SoundAmplifierPrebuilt
 Street
 Superiorwalls
@@ -7412,7 +7427,6 @@ mkdir -p $MODPATH/$MODID$MIPSB
 cp -f $ZIPSIGNER $MODPATH/$MODID$MIPSB; cp -f $ZIPSIGNERJAR $MODPATH/$MODID$MIPSB; cp -f $ZIPPACKER $MODPATH/$MODID$MIPSB; cp -f $ZIPALIGN $MODPATH/$MODID$MIPSB; cp -f $AADDONS/aapt-$arch $MODPATH/$MODID$MIPSB/aapt
 MMPR -vcsdt "ZipSigner & Zip for Android NDK" "$VZS" "$VCZS" "osm0sis & topjohnwu @ xda-developers" "Wrapped dexed zipsigner.jar, and static ARM zip and zipalign binaries for Android built with the NDK" "https://forum.xda-developers.com/showthread.php?t=2239421" "https://www.paypal.me/osm0sis" "1500"
 SET_PERM_RM
-chmod 777 $MODPATH/$MODID$MIPSB/*
 else
 cp -f $ZIPSIGNER $IPSB; cp -f $ZIPSIGNERJAR $IPSB; cp -f $ZIPPACKER $IPSB; cp -f $ZIPALIGN $IPSB; cp -f $AADDONS/aapt-$arch $IPSB/aapt; touch $AIOPFMDPH/addons
 fi
@@ -9358,17 +9372,21 @@ FEGesturesS() {
 UIP "Installing Force Gestures $IAMM" 
 MODID="ForceGestures"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
+if SP_CHECKER "$IPDSU/0/settings_secure.xml" "navigation_mode"; then
 MSGDELIMITER; UIP "Choose Method:" "$MSGVU CMD Overlay" "$MSGVD Settings Put"
 if $KEYFUNCTION; then
 MBCCSERVICE "cmd overlay enable com.android.internal.systemui.navbar.gestural"
 else
 MBCCSERVICE "$SPSECURE navigation_mode 2"
 fi
+else
+MBCCSERVICE "cmd overlay enable com.android.internal.systemui.navbar.gestural"
+fi
 MMPR -v "Force Gestures" "$VEFG" "Force Gestures - If The Gesture Selection Item Disappeared After Installing Other Launchers Or Forced Hiding Gestures $FMR"; SET_PERM_RM; UIP "$MSGDI"
 }
 
 IHidden_Api_Policy() {
-if $MAGISK; then
+if $MAGISK && SP_CHECKER "$IPDSU/0/settings_global.xml" "hidden_api_policy hidden_api_policy_pre_p_apps hidden_api_policy_p_apps"; then
 if $AELEVEN || $ATWELVE; then
 UCSA "Install Enabling Hidden Api Policy?" "" "$MSGNUS" "IHidden_Api_PolicyS"
 fi
@@ -9388,9 +9406,7 @@ MMPR -v "Enabling Hidden Api Policy" "$VEHAP" "Enabling Hidden Api Policy $FMR";
 }
 
 IAFUS() {
-if $MAGISK && [ $ATEN != true ] && [ $AELEVEN != true ] && [ $ATWELVE != true ]; then
-UCSA "Force Install Apps From Unknown Sources $VAIOAFUS?" "" "$MSGNUS" "IAFUSS"
-fi
+if $MAGISK && [ $ATEN != true ] && [ $AELEVEN != true ] && [ $ATWELVE != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "install_non_market_apps"; then UCSA "Force Install Apps From Unknown Sources $VAIOAFUS?" "" "$MSGNUS" "IAFUSS"; fi
 }
 
 IAFUSS() {
@@ -9623,9 +9639,7 @@ MMPR -v "Force Disable HW Overlays" "$VFDHWO" "Force Disable HW Overlays $FMR"; 
 }
 
 IForce_DEV_ADB() {
-if $MAGISK; then
-UCSA "Install Force Activate DEV & ADB $VFDEVADB?" "" "$MSGNUS" "IForce_DEV_ADBS"
-fi
+if $MAGISK && SP_CHECKER "$IPDSU/0/settings_global.xml" "development_settings_enabled adb_enabled"; then UCSA "Install Force Activate DEV & ADB $VFDEVADB?" "" "$MSGNUS" "IForce_DEV_ADBS"; fi
 }
 
 IForce_DEV_ADBS() {
@@ -9731,9 +9745,7 @@ UIP "$MSGDI"
 }
 
 IForce_DPP() {
-if $MAGISK; then
-UCSA "Install Force Disabling Play Protect $VIFDPP?" "" "$MSGNUS" "IForce_DPPS"
-fi
+if $MAGISK && SP_CHECKER "$IPDSU/0/settings_global.xml" "upload_apk_enable package_verifier_enable package_verifier_user_consent verifier_verify_adb_installs"; then UCSA "Install Force Disabling Play Protect $VIFDPP?" "" "$MSGNUS" "IForce_DPPS"; fi
 }
 
 IForce_DPPS() {
@@ -10207,7 +10219,7 @@ MODID="UniversalGMSDoze"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID/$IPPSXBM
 UIP "Patching Needed Files..."
 MAGISKMIRROR_CHECKER
-list=$(xml=$(find $SYSTEM $VENDOR -iname "*.xml"); for i in $xml; do SEARCHPATH="$MAGISKMIRROR$i"; if grep -q 'allow-in-power-save package="com.google.android.gms"' $SEARCHPATH 2>/dev/null; then echo "$i"; fi; done)
+list=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do SEARCHPATH="$MAGISKMIRROR$i"; if grep -q 'allow-in-power-save package="com.google.android.gms"' $SEARCHPATH 2>/dev/null; then echo "$i"; fi; done)
 for i in $list; do
 UIP "Searching In: $i"
 mkdir -p `dirname $MODPATH/$MODID/$i`
@@ -10216,7 +10228,7 @@ sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-u
 UIP "Files Found And Patched"
 done
 MOVERPATH
-conflict=$(xml=$(find $NVBASE -iname "*.xml");for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $i 2>/dev/null; then echo "$i"; fi; done)
+conflict=$(xml=$(find $NVBASE -name "*.xml");for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $i 2>/dev/null; then echo "$i"; fi; done)
 for i in $conflict; do
 search=$(echo "$i" | sed -e 's/\// /g' | awk '{print $4}')
 UIP "Conflicting Modules Detected" "Module: $search" "Searching In: $i"
@@ -10228,7 +10240,7 @@ conflict=\$(xml=\$(find $NVBASE -iname \"*.xml\");for i in \$xml; do if grep -q 
 for i in \$conflict; do
 sed -i '/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-data-usage-save package=\"com.google.android.gms\"/d' \$i
 done" >> $MODPATH/$MODID/post-fs-data.sh
-MBCCSERVICE "pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver; pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; cmd appops set com.google.android.gms BOOT_COMPLETED ignore; cmd appops set com.google.android.ims BOOT_COMPLETED ignore; cmd appops set com.google.android.gms AUTO_START ignore; cmd appops set com.google.android.ims AUTO_START ignore"
+MBCCSERVICE "for i in \$(ls /data/user/); do pm disable --user \$i com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver; pm disable --user \$i com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; cmd appops set --user \$i com.google.android.gms WRITE_SETTINGS ignore; cmd appops set --user \$i com.google.android.ims WRITE_SETTINGS ignore; cmd appops set --user \$i com.google.android.gms BOOT_COMPLETED ignore; cmd appops set --user \$i com.google.android.ims BOOT_COMPLETED ignore; cmd appops set --user \$i com.google.android.gms AUTO_START ignore; cmd appops set --user \$i com.google.android.ims AUTO_START ignore; done"
 echo "gms='dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1'
 if [ \"\$gms\" = \"com.google.android.gms\" ]; then
 echo \"\033[0;31m Google Play services is Not Optimized \033[0m\"
@@ -10237,12 +10249,11 @@ echo \"\033[0;32m Google Play services is Optimized \033[0m\"
 fi" >> $MODPATH/$MODID/$IPPSXBM/gmsc
 MMPR -vc "Universal GMS Doze" "$VUGMSD" "$VCUGMSD" "gloeyisk" "Optimized and adjusted Google Play services"
 SET_PERM_RM
-chmod 777 $MODPATH/$MODID/$IPPSXBM/gmsc
 UIP "$MSGDI"
 }
 
 SUGMSDO() {
-if $BOOTMODE && $MAGISK && [ -d $MODPATH/UniversalGMSDoze ]; then
+if $BOOTMODE && [ -d $MODPATH/UniversalGMSDoze ]; then
 UCSA "Show Universal GMS Doze Optimized?" "" "$MSGNUS" "SUGMSDOS"
 fi
 }
@@ -10431,9 +10442,7 @@ BUCKUPER
 }
 
 IAnimation_Scale() {
-if $MAGISK; then
-UCSA "Install Animation Scale $VAS?" "" "$MSGNUS" "IAnimation_ScaleS"
-fi
+if $MAGISK && SP_CHECKER "$IPDSU/0/settings_global.xml" "window_animation_scale transition_animation_scale animator_duration_scale"; then UCSA "Install Animation Scale $VAS?" "" "$MSGNUS" "IAnimation_ScaleS"; fi
 }
 
 IAnimation_ScaleS() {
@@ -10444,6 +10453,7 @@ MODID="AnimationScale"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
 MBCCSERVICE "$SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC"
 if $BOOTMODE; then
+UIP "Enabling Animation Scale Right Now"
 $SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC
 fi
 MMPR -v "Animation Scale" "$VAS" "Animation Scale - Set On $UCSFNMC $FMR"; SET_PERM_RM; UIP "$MSGDI"

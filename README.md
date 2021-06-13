@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=99991708">4PDA</a><br>
-* Версия AIOPFMD: 06.06.21 (42) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/06.06.2021/AIOPFMD-06.06.21-%2842%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1lV_HTdtWHKV8A5PV15VCCLNEhgD9btQB/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/37">TG</a>
+* Версия AIOPFMD: 13.06.21 (43) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/13.06.2021/AIOPFMD-13.06.21-%2843%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1IKwaoM9t3zTUx5LLRFvZBbjgRA1Jhs1L/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/38">TG</a>
 * Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -31,6 +31,13 @@
 
 <details> 
   <summary>Changelog</summary>
+#### 13.06.21 (43) #### 
+* Lawnchair обновлен до v11.0 Alpha 5;
+* hosts файл с AdAway обновлен от 11.06.2021;
+* Universal GMS Doze до v1.8.3 - так же исправил стоковую ошибку на патчинге некоторых файлов в Recovery (Segmentation fault);
+* Добавлен чекер на модули с settings put (логично и самого доебало) - теперь наконец не будет показывать что недоступно в самой прошивке (показывается всегда если делался формат /data и так же если находит один из доступных методов даже если остальных нет);
+* LSPosed обновлен до v1.4.5 (5767);
+* В Режим удаления/replace/restore добавлены приложения в обычный лист: ANGLE, SnapdragonMusic, 404Clock, AbleMusic.
 #### 06.06.21 (42) ####
 * hosts файл с AdAway обновлен от 01.06.2021;
 * LSPosed обновлен до v1.4.4 (5737).
@@ -874,7 +881,10 @@
 	- Mms
 
 * Другие приложения:
+	- 404Clock
 	- AEXPapers
+	- ANGLE
+	- AbleMusic
 	- Abstruct
 	- AccuweatherPhone2015_MASS_HD_SWS
 	- AdAway
@@ -1147,6 +1157,7 @@
 	- SmartManagerSDK
 	- SmartManager_OLEDHD
 	- Snap
+	- SnapdragonMusic
 	- SoundAmplifierPrebuilt
 	- Street
 	- Superiorwalls
