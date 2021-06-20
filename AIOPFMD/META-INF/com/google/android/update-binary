@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="13.06.21 (43)"
+VAIOPFMD="20.06.21 (44)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -44,7 +44,7 @@ VSOPL="v6.2"; VCSOPL="30100"; VASOPL="v5.1.0"
 VSOUH="v2.1"; VCSOUH="21"; VASOUH="v11.0"
 VSPL="v1.0"; VASPLQ="v10 (703)"; VASPLR="v11 (825)"
 VSSLQ="v1.5"; VCSSLQ="15"
-VSSLR="v2021.03.22"; VCSSLR="20210322"
+VSSLR="v2021.06.13"; VCSSLR="20210613"
 VSLA="v1.0"; VCSLA="1000"; VSLAQ="7.0.1.60"; VSLAR="7.5.0.24"
 VASUSS="v3.0"; VCASUSS="30"
 VAIOIARPFMD="$VAIOPFMD"
@@ -56,7 +56,7 @@ VJDSPM="v3.4 (8-25-2020)"; VCJDSPM="78"
 VDTSHPX="zenz"; VCDTSHPX="58"
 VAML="v4.0"; VCAML="55"
 VAN="MK I (15.09)"
-VNLSound="v2.4 STABLE"; VCNLSound="7"
+VNLSound="v2.5 BETA"; VCNLSound="7"
 VSAQ="2.0"; VCSAQ="2"
 VINCREASEBITRATE="v1.0"
 VUSBPP="v1.5"; VCUSBPP="7"
@@ -65,7 +65,7 @@ VFSFM="v1.2"
 SLOQSBDF="v1.1"
 #AdBlock/Hosts
 VDAB="1.0"; VCDAB="1"
-VAAH="11.06.2021"
+VAAH="18.06.2021"
 VLPH="v9.6.0"; VCLPH="1720"
 VSH="v210506-v16.6"; VCSH="166"
 VOH="v1.1"
@@ -115,6 +115,7 @@ VFEMTP="v1.0"
 VSOOOFUIRC="v1.5"
 VFDM="v1.0"
 VIFDPP="v1.0"
+VIFI="v1.0"
 VLEDLO="v1.1"
 VLEDLA="v1.1"
 VUGMSD="v1.8.3"; VCUGMSD="183"
@@ -281,6 +282,9 @@ APCFGS="$(find $SYSTEM $VENDOR -type f -name "*audio_io_policy*.conf" -o -name "
 MCGAX="$(find $SYSTEM $VENDOR -type f -name "*media_codecs_google_c2_audio*.xml" -o -name "*media_codecs_google_audio*.xml")"
 USBAPCXML="$(find $SYSTEM $VENDOR -type f -name "usb_audio_policy_configuration.xml")"
 APCONF="$(find $SYSTEM $VENDOR -type f -name "*audio_*policy*.conf")"
+APIXML=$IPVE/audio_platform_info.xml
+APIIXML=$IPVE/audio_platform_info_intcodec.xml
+APIEXML=$IPVE/audio_platform_info_extcodec.xml
 DEVFEA=$IPSEDF/*.xml; DEVFEAA=$IPVEDF/*.xml
 SPGLOBAL="settings put global"; SPSECURE="settings put secure"; SPSYSTEM="settings put system"
 if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
@@ -431,24 +435,15 @@ AVERSION="$(GREP_PROP "ro.build.version.release")"
 # Major supported versions default=false
 AKITKAT=false; ALOLLIPOP=false; AMARSHMALLOW=false; ANOUGAT=false; AOREO=false; APIE=false; ATEN=false; AELEVEN=false; ATWELVE=false
 # Check major supported versions
-if [ "$ASDK" = "19" ] && [ "$AVERSION" = "4.4.4" ]; then
-AKITKAT=true
-elif [ "$ASDK" = "22" ] && [ "$AVERSION" = "5.1.1" ]; then
-ALOLLIPOP=true
-elif [ "$ASDK" = "23" ] && [ "$AVERSION" = "6.0.1" ]; then
-AMARSHMALLOW=true
-elif [ "$ASDK" = "25" ] && [ "$AVERSION" = "7.1.2" ]; then
-ANOUGAT=true
-elif [ "$ASDK" = "27" ] && [ "$AVERSION" = "8.1" ] || [ "$AVERSION" = "8.1.0" ]; then
-AOREO=true
-elif [ "$ASDK" = "28" ] && [ "$AVERSION" = "9" ] || [ "$AVERSION" = "9.0" ]; then
-APIE=true
-elif [ "$ASDK" = "29" ] && [ "$AVERSION" = "10" ] || [ "$AVERSION" = "10.0" ]; then
-ATEN=true
-elif [ "$ASDK" = "30" ] && [ "$AVERSION" = "11" ] || [ "$AVERSION" = "11.0" ]; then
-AELEVEN=true
-elif [ "$ASDK" = "31" ] && [ "$AVERSION" = "12" ] || [ "$AVERSION" = "12.0" ]; then
-ATWELVE=true
+if [ "$ASDK" = "19" ] && [ "$AVERSION" = "4.4.4" ]; then AKITKAT=true; ACNV="KK"
+elif [ "$ASDK" = "22" ] && [ "$AVERSION" = "5.1.1" ]; then ALOLLIPOP=true; ACNV="L"
+elif [ "$ASDK" = "23" ] && [ "$AVERSION" = "6.0.1" ]; then AMARSHMALLOW=true; ACNV="M"
+elif [ "$ASDK" = "25" ] && [ "$AVERSION" = "7.1.2" ]; then ANOUGAT=true; ACNV="N"
+elif [ "$ASDK" = "27" ] && [ "$AVERSION" = "8.1" ] || [ "$AVERSION" = "8.1.0" ]; then AOREO=true; ACNV="O"
+elif [ "$ASDK" = "28" ] && [ "$AVERSION" = "9" ] || [ "$AVERSION" = "9.0" ]; then APIE=true; ACNV="P"
+elif [ "$ASDK" = "29" ] && [ "$AVERSION" = "10" ] || [ "$AVERSION" = "10.0" ]; then ATEN=true; ACNV="Q"
+elif [ "$ASDK" = "30" ] && [ "$AVERSION" = "11" ] || [ "$AVERSION" = "11.0" ]; then AELEVEN=true; ACNV="R"
+elif [ "$ASDK" = "31" ] && [ "$AVERSION" = "12" ] || [ "$AVERSION" = "12.0" ]; then ATWELVE=true; ACNV="SC"
 fi
 case $ASDK in
 "10");; "15");; "16");; "17");; "18");; "19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; *) MSGDELIMITER; UIP "Warning, SDK Not Supported/Found!";;
@@ -1003,13 +998,18 @@ mkdir -p `dirname $MODPATH/$MODID/$FPATH`
 cp -f $FPATH $MODPATH/$MODID/$FPATH
 fi
 done
+if $MAGISK; then
 for FCODE in $FPATCCODE; do
 sed -i $FCODE $MODPATH/$MODID/$FPATH
 UIP "Files Found And Patched"
 done
-if $MAGISK; then
 MOVERPATH
 SET_PERM_RM
+else
+for FCODE in $FPATCCODE; do
+sed -i $FCODE $FPATH
+UIP "Files Found And Patched"
+done
 fi
 }
 
@@ -1173,45 +1173,20 @@ PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX0 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX1 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX2 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX3 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX4 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX5 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX6 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX7 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX8 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX0 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX1 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX2 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="RX2 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="RX_RX2 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headset"]/ctl[@name="RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headset"]/ctl[@name="RX2 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headset"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headset"]/ctl[@name="RX_RX2 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX1 Mix Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX2 Mix Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_RX1 Mix Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_RX2 Mix Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX1 Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX2 Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_RX1 Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_RX2 Digital Volume"]' "94"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX6 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX7 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX_RX6 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX_RX7 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX2 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX3 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX_RX2 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX_RX3 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX2 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX2 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX2 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX2 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="RX1 Digital Volume"]' "97"
-PXMLNLS -s $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="RX2 Digital Volume"]' "97"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX3 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX4 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX5 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX6 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX7 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX8 Digital Volume"]' "92"
 UIP "Files Found And Patched"
 done
 }
@@ -1257,7 +1232,23 @@ PXMLNLS -u $MIX '/mixer/headset-mic/adc2/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
 PXMLNLS -u $MIX '/mixer/dmic-endfire/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
 PXMLNLS -u $MIX '/mixer/dmic-endfire-liquid/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
 PXMLNLS -u $MIX '/mixer/dmic-broadside/speaker-dmic-broadside/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-done	
+UIP "Files Found And Patched"
+done
+UIP "Patching Needed Files..."
+for OSTPI in $STPI; do
+UIP "Searching In: $OSTPI"
+STPI="$MODPATH/$MODID$(echo $OSTPI | sed "s|^/vendor|/system/vendor|g")"
+mkdir -p `dirname $STPI`
+cp -f $MAGISKMIRROR$OSTPI $STPI
+sed -i 's/\t/  /g' $STPI
+PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="execution_type"]' "ADSP"
+PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="fluence_type"]' "NONE"
+PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="execution_mode"]' "ADSP"
+PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="adm_cfg_profile"]' "FFECNS"
+PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="capture_keyword"]' "PCM_raw, FTRT, 500"
+PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="client_capture_read_delay"]' "2000"
+UIP "Files Found And Patched"
+done
 }
 
 PATCH_IIR() {
@@ -1350,7 +1341,7 @@ UIP "Files Found And Patched"
 done
 }
 
-PATCH_AUDIO_PLATFORM() {
+PATCH_AUDIO_PLATFORM_INFO_INT() {
 UIP "Patching Needed Files..."
 for OAPLI in $APINF; do
 UIP "Searching In: $OAPLI"
@@ -1358,43 +1349,14 @@ APLI="$MODPATH/$MODID$(echo $OAPLI | sed "s|^/vendor|/system/vendor|g")"
 mkdir -p `dirname $APLI`
 cp -f $MAGISKMIRROR$OAPLI $APLI
 sed -i 's/\t/  /g' $APLI
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/config_params/param[@key="native_audio_mode"]' 'src'
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/config_params/param[@key="hifi_filter"]' 'true'
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_REVERSE"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_PROTECTED"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES_44_1"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_SPEAKER"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_HEADPHONES"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_BT_A2DP"]' "24" 
+PXMLNLS -s $APLI '/audio_platform_info_intcodec/config_params/param[@key="native_audio_mode"]' "false"
 PXMLNLS -u $APLI '/audio_platform_info_intcodec/app_types/app[@mode="default"]' 'bit_width=24'
 PXMLNLS -u $APLI '/audio_platform_info_intcodec/app_types/app[@mode="default"]' 'max_rate=192000'
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/config_params/param[@key="native_audio_mode"]' 'src'
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/config_params/param[@key="hifi_filter"]' 'true'
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_REVERSE"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_PROTECTED"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES_44_1"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_SPEAKER"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_HEADPHONES"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_BT_A2DP"]' "24"
-PXMLNLS -u $APLI '/audio_platform_info_extcodec/app_types/app[@mode="default"]' 'bit_width=24'
-PXMLNLS -u $APLI '/audio_platform_info_extcodec/app_types/app[@mode="default"]' 'max_rate=192000'
-PXMLNLS -s $APLI '/audio_platform_info/config_params/param[@key="native_audio_mode"]' 'src'
-PXMLNLS -s $APLI '/audio_platform_info/config_params/param[@key="hifi_filter"]' 'true'
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_REVERSE"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_PROTECTED"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES_44_1"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_SPEAKER"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_HEADPHONES"]' "24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_BT_A2DP"]' "24" 
-PXMLNLS -u $APLI '/audio_platform_info/app_types/app[@mode="default"]' 'bit_width=24'
-PXMLNLS -u $APLI '/audio_platform_info/app_types/app[@mode="default"]' 'max_rate=192000'
+done
 if [ ! "$(grep '<app_types>' $APLI)" ]; then
 sed -i "s/<\/audio_platform_info>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info>/" $APLI
-sed -i "s/<\/audio_platform_info_intcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_intcodec>/" $APLI  
-sed -i "s/<\/audio_platform_info_extcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_extcodec>/" $APLI  
+sed -i "s/<\/audio_platform_info_intcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_intcodec>/" $APLI
+sed -i "s/<\/audio_platform_info_extcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_extcodec>/" $APLI
 else
 for i in 69936 69940; do
 [ "$($XMLSTARLET sel -t -m "/audio_platform_info/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info>/,/<\/audio_platform_info>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
@@ -1403,7 +1365,58 @@ for i in 69936 69940; do
 done
 fi
 UIP "Files Found And Patched"
+}
+
+PATCH_AUDIO_PLATFORM_INFO_EXT() {
+UIP "Patching Needed Files..."
+for OAPLI in $APINF; do
+UIP "Searching In: $OAPLI"
+APLI="$MODPATH/$MODID$(echo $OAPLI | sed "s|^/vendor|/system/vendor|g")"
+mkdir -p `dirname $APLI`
+cp -f $MAGISKMIRROR$OAPLI $APLI
+sed -i 's/\t/  /g' $APLI
+PXMLNLS -s $APLI '/audio_platform_info_extcodec/config_params/param[@key="native_audio_mode"]' "false"
+PXMLNLS -u $APLI '/audio_platform_info_extcodec/app_types/app[@mode="default"]' 'bit_width=24'
+PXMLNLS -u $APLI '/audio_platform_info_extcodec/app_types/app[@mode="default"]' 'max_rate=192000'
 done
+if [ ! "$(grep '<app_types>' $APLI)" ]; then
+sed -i "s/<\/audio_platform_info>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info>/" $APLI
+sed -i "s/<\/audio_platform_info_intcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_intcodec>/" $APLI
+sed -i "s/<\/audio_platform_info_extcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_extcodec>/" $APLI
+else
+for i in 69936 69940; do
+[ "$($XMLSTARLET sel -t -m "/audio_platform_info/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info>/,/<\/audio_platform_info>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
+[ "$($XMLSTARLET sel -t -m "/audio_platform_info_intcodec/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info_intcodec>/,/<\/audio_platform_info_intcodec>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
+[ "$($XMLSTARLET sel -t -m "/audio_platform_info_extcodec/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info_extcodec>/,/<\/audio_platform_info_extcodec>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
+done
+fi
+UIP "Files Found And Patched"
+}
+
+PATCH_AUDIO_PLATFORM_INFO() {
+UIP "Patching Needed Files..."
+for OAPLI in $APINF; do
+UIP "Searching In: $OAPLI"
+APLI="$MODPATH/$MODID$(echo $OAPLI | sed "s|^/vendor|/system/vendor|g")"
+mkdir -p `dirname $APLI`
+cp -f $MAGISKMIRROR$OAPLI $APLI
+sed -i 's/\t/  /g' $APLI
+PXMLNLS -s $APLI '/audio_platform_info/config_params/param[@key="native_audio_mode"]' "false"
+PXMLNLS -u $APLI '/audio_platform_info/app_types/app[@mode="default"]' 'bit_width=24'
+PXMLNLS -u $APLI '/audio_platform_info/app_types/app[@mode="default"]' 'max_rate=192000'
+done
+if [ ! "$(grep '<app_types>' $APLI)" ]; then
+sed -i "s/<\/audio_platform_info>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info>/" $APLI
+sed -i "s/<\/audio_platform_info_intcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_intcodec>/" $APLI
+sed -i "s/<\/audio_platform_info_extcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info_extcodec>/" $APLI
+else
+for i in 69936 69940; do
+[ "$($XMLSTARLET sel -t -m "/audio_platform_info/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info>/,/<\/audio_platform_info>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
+[ "$($XMLSTARLET sel -t -m "/audio_platform_info_intcodec/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info_intcodec>/,/<\/audio_platform_info_intcodec>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
+[ "$($XMLSTARLET sel -t -m "/audio_platform_info_extcodec/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info_extcodec>/,/<\/audio_platform_info_extcodec>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
+done
+UIP "Files Found And Patched"
+fi
 }
 
 PATCH_COMPANDERS() {
@@ -2037,6 +2050,36 @@ PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX_COMP2 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="COMP0 RX1 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="COMP0 RX2 Switch"]' "0"
 
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP1 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP2 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP3 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP4 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP5 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP6 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP7 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="COMP8 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="SpkrRight COMP Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="WSA_COMP1 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="WSA_COMP2 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="RX_COMP1 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco"]/ctl[@name="RX_COMP2 Switch"]' "0"
+
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP1 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP2 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP3 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP4 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP5 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP6 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP7 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="COMP8 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="SpkrRight COMP Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="WSA_COMP1 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="WSA_COMP2 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="RX_COMP1 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback bt-sco-wb"]/ctl[@name="RX_COMP2 Switch"]' "0"
+
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP1 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP2 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP3 Switch"]' "0"
@@ -2077,7 +2120,7 @@ PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="WSA_COMP2 
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="RX_COMP1 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="RX_COMP2 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP0 RX1 Switch"]' "0"
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP0 RX2 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP0 RX2 Switch"]' "0"	
 
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP1 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP2 Switch"]' "0"
@@ -2098,7 +2141,7 @@ PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name=
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="RX_COMP1 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="RX_COMP2 Switch"]' "0"
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP0 RX1 Switch"]' "0"
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP0 RX2 Switch"]' "0"
+PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP0 RX2 Switch"]' "0"	
 
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 16 Volume"]' "0"
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 15 Volume"]' "0"
@@ -2111,13 +2154,11 @@ done
 }
 
 PATCH_AUDIO_CODEC() {
+if find $SYSTEM $VENDOR -type f -name "audio_configs*.xml" >/dev/null; then
 UIP "Patching Needed Files..."
 for OACONF in $ACONFS; do
 UIP "Searching In: $OACONF"
 ACONF="$MODPATH/$MODID$(echo $OACONF | sed "s|^/vendor|/system/vendor|g")"
-mkdir -p `dirname $ACONF`
-cp -f $MAGISKMIRROR$OACONF $ACONF
-sed -i 's/\t/  /g' $ACONF
 PXMLNLS -u $ACONF '/configs/property[@name="audio.offload.min.duration.secs"]' "30"
 PXMLNLS -u $ACONF '/configs/property[@name="persist.vendor.audio.sva.conc.enabled"]' "false"
 PXMLNLS -u $ACONF '/configs/property[@name="persist.vendor.audio.va_concurrency_enabled"]' "false"
@@ -2144,6 +2185,7 @@ PXMLNLS -u $ACONF '/configs/flag[@name="hifi_audio_enabled"]' "true"
 PXMLNLS -u $ACONF '/configs/flag[@name="audio_extn_formats_enabled"]' "true"
 UIP "Files Found And Patched"
 done
+fi
 if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
 mkdir -p $MODPATH/$MODID$MIPVF; cp -f $FIRMWARE/* $MODPATH/$MODID$MIPVF
 fi
@@ -2155,9 +2197,9 @@ mkdir -p $MODPATH/$MODID$MIPVF; cp -f $FIRMRN7PRO/* $MODPATH/$MODID$MIPVF
 fi
 }
 
-PATCH_DEVICE_FEATURES() {
+PATCH_DEVICE_FEATURES_SYSTEM() {
 UIP "Patching Needed Files..."
-for ODEVFEA in $DEVFEA $DEVFEAA; do
+for ODEVFEA in $DEVFEA; do
 UIP "Searching In: $ODEVFEA"
 DEVFEA="$MODPATH/$MODID$(echo $ODEVFEA | sed "s|^/vendor|/system/vendor|g")"
 mkdir -p `dirname $DEVFEA`
@@ -2178,6 +2220,26 @@ UIP "Files Found And Patched"
 done
 }
 
+PATCH_DEVICE_FEATURES_VENDOR() {
+for ODEVFEAA in ${DEVFEAA}; do 
+DEVFEAA="$MODPATH/$MODID$(echo $ODEVFEAA | sed "s|^/vendor|/system/vendor|g")"
+mkdir -p `dirname $DEVFEAA`
+cp -f $MAGISKMIRROR$ODEVFEAA $DEVFEAA
+sed -i 's/\t/  /g' $DEVFEAA
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_a2dp_latency"]' "true"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_samplerate_48000"]' "true"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_samplerate_96000"]' "true"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_samplerate_192000"]' "true"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_low_latency"]' "true"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_mid_latency"]' "false"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_high_latency"]' "false"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_interview_record_param"]' "false"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_voip_record"]' "true"
+PXMLNLS -s $DEVFEAA '/features/integer[@name="support_inner_record"]' "1"
+PXMLNLS -s $DEVFEAA '/features/bool[@name="support_hifi"]' "true"
+done
+}
+
 PATCH_DIRAC() {
 UIP "Patching Needed Files..."
 for OFILE in $CFGS; do
@@ -2187,32 +2249,35 @@ mkdir -p `dirname $FILE`
 cp -f $MAGISKMIRROR$OFILE $FILE
 OSP_DETECT $FILE
 ALBP "dirac_gef" "$MODID" "$DYNLIBPATCH\/lib\/soundfx" "libdiraceffect.so" "3799D6D1-22C5-43C3-B3EC-D664CF8D2F0D"
-if $USEPROCESSING_PATCH; then PROCESSING_PATCH -post "$FILE" "music" "dirac_gef"; fi
+PROCESSING_PATCH -post "$FILE" "music" "dirac_gef"
 UIP "Files Found And Patched"
 done
-USEPROCESSING_PATCH=false
 mkdir -p $MODPATH/$MODID$MIPSVE/dirac; mkdir -p $MODPATH/$MODID$MIPSVL/rfsa/adsp; mkdir -p $MODPATH/$MODID$MIPSVLS
 cp -f $NEWDIRAC/diracvdd.bin $MODPATH/$MODID$MIPSVE
 cp -f $NEWDIRAC/interfacedb $MODPATH/$MODID$MIPSVE/dirac
 cp -f $NEWDIRAC/dirac_resource.dar $MODPATH/$MODID$MIPSVL/rfsa/adsp
+cp -f $NEWDIRAC/libdirac-capiv2.so $MODPATH/$MODID$MIPSVL/rfsa/adsp/dirac.so
 cp -f $NEWDIRAC/libdirac-capiv2.so $MODPATH/$MODID$MIPSVL/rfsa/adsp
 cp -f $NEWDIRAC/libdiraceffect.so $MODPATH/$MODID$MIPSVLS
 echo -e "\n# Patch Dirac
-ro.vendor.dirac.acs.controller=gef
-ro.vendor.dirac.acs.storeSettings=1
-ro.vendor.dirac.acs.ignore_error=1
-ro.vendor.dirac.gef.int.did=0xF,0x313,0x2C4
-ro.vendor.dirac.gef.ext.did=0xA,0x2D,0x14,0x2c9,0x2ca
-ro.vendor.dirac.gef.int.tid=0x10012D00
-ro.vendor.dirac.gef.int.mid=0x10012DE0
-ro.vendor.dirac.gef.ext.mid=0x10012DE1
-ro.vendor.dirac.config=16
-ro.vendor.dirac.acs.rotation=true
-ro.vendor.dirac.gef.system_sound=1
-ro.vendor.dirac.gef.ins.tid=0x10012D02
-ro.vendor.dirac.gef.ins.mid=0x10012DE2
-ro.vendor.dirac.gef.ins.did=0xF,0x313,0x2C4
-ro.vendor.dirac.gef.ins.appt=0x00011131" >> $MODPATH/$MODID/system.prop
+persist.dirac.acs.controller=gef
+persist.dirac.gef.oppo.syss=true
+persist.dirac.config=64
+persist.dirac.gef.exs.did=29,49
+persist.dirac.gef.ext.did=10,20,29,49
+persist.dirac.gef.ins.did=19,134,150
+persist.dirac.gef.int.did=15,19,134,150
+persist.dirac.gef.ext.appt=0x00011130,0x00011134,0x00011136
+persist.dirac.gef.exs.appt=0x00011130,0x00011131
+persist.dirac.gef.int.appt=0x00011130,0x00011134,0x00011136
+persist.dirac.gef.ins.appt=0x00011130,0x00011131
+persist.dirac.gef.exs.mid=268512739
+persist.dirac.gef.ext.mid=268512737
+persist.dirac.gef.ins.mid=268512738
+persist.dirac.gef.int.mid=268512736
+persist.dirac.path=/vendor/etc/dirac
+ro.dirac.acs.storeSettings=1
+persist.dirac.acs.ignore_error=1" >> $MODPATH/$MODID/system.prop
 }
 
 PATCH_MIXER() {
@@ -2294,21 +2359,6 @@ esac
 UIP "Files Found And Patched"
 done
 if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then echo -e "\n# PATCH MIXER\nro.sound.alsa=TAS2557" >> $MODPATH/$MODID/system.prop; fi
-UIP "Patching Needed Files..."
-for OSTPI in $STPI; do
-UIP "Searching In: $OSTPI"
-STPI="$MODPATH/$MODID$(echo $OSTPI | sed "s|^/vendor|/system/vendor|g")"
-mkdir -p `dirname $STPI`
-cp -f $MAGISKMIRROR$OSTPI $STPI
-sed -i 's/\t/  /g' $STPI
-PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="execution_type"]' "ADSP"
-PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="fluence_type"]' "NONE"
-PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="execution_mode"]' "ADSP"
-PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="adm_cfg_profile"]' "FFECNS"
-PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="capture_keyword"]' "PCM_raw, FTRT, 500"
-PXMLNLS -u $STPI '/sound_trigger_platform_info/sound_model_config/param[@name="client_capture_read_delay"]' "2000"
-UIP "Files Found And Patched"
-done
 }
 
 PUSBAPCXML() {
@@ -4669,10 +4719,11 @@ fi
 }
 
 INLSoundS() {
-STEP1=false; STEP2=false; STEP3=false; STEP4=false; STEP5=false; STEP6=false; STEP7=false; STEP8=false; STEP9=false; STEP10=false
-
+STEP1=false; STEP2=false; STEP3=false; STEP4=false; STEP5=false; STEP6=false; STEP7=false; STEP8=false; STEP9=false; STEP10=false; STEP11=false
+if find $SYSTEM $VENDOR -type f -name "audio_configs*.xml" >/dev/null; then
 MSGDELIMITER; UIP "Disable Deep Buffer?" "This Option Disable Deep Buffer In Your Device" "If You Want More Low Frequencies Skip This Option" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP1=true; fi
+fi
 MSGDELIMITER; UIP "Improve Volume Levels?" "CONFIRMING THIS OPTION MAY HARM YOUR DEVICE!" "NLSound Team Is Not Responsible For Your Devices!" "Choose At Your Own Risk!" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP2=true; fi
 MSGDELIMITER; UIP "Improve Microphone Levels?" "This Option Improving Microphone Volume Levels In Your Device" "$MSGVU Yes" "$MSGVD No $MSGNIS"
@@ -4686,17 +4737,15 @@ if $KEYFUNCTION; then STEP6=true; fi
 MSGDELIMITER; UIP "Configurating Interal Audio Codec?" "This Option Configuring Your Device's Internal Audio Codec" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP7=true; fi
 if [ -d $IPSEDF ] || [ -d $IPVEDF ]; then
-MSGDELIMITER; UIP "Patch device_features Files?" "Added More Stuff" "$MSGVU Yes" "$MSGVD No$MSGNIS"
+MSGDELIMITER; UIP "Patch device_features Files?" "Added More Stuff" "Enable HD Record In Camcorder" "Increase VoIP Recor Quality" "$MSGVU Yes" "$MSGVD No$MSGNIS"
 if $KEYFUNCTION; then STEP8=true; fi
 fi
 MSGDELIMITER; UIP "Added New Dirac?" "This Option Added New Dirac In Your ROM" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-if $KEYFUNCTION; then
-STEP9=true
-MSGDELIMITER; UIP "USE PROCESSING_PATCH For New Dirac?" "Forced Replacement Of The Audio Output" "THIS MAY BREAK THE AUDIO OUTPUT ITSELF!" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-if $KEYFUNCTION; then USEPROCESSING_PATCH=true; else USEPROCESSING_PATCH=false; fi
-fi
-MSGDELIMITER; UIP "Install Patches In mixer_paths Files?" "A Large Set Of Universal Settings For Many Devices" "If You Encounter Problems After Installation" "Try Skipping This Option First" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then STEP9=true; fi
+MSGDELIMITER; UIP "Disable Useless Fluence?" "This Option Disables Useless Noise Reduction" "This Will Also Affect The" "Quality Of The Audio Recording" "$MSGVU Yes $IR" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP10=true; fi
+MSGDELIMITER; UIP "Install Patches In mixer_paths Files?" "A Large Set Of Universal Settings For Many Devices" "If You Encounter Problems After Installation" "Try Skipping This Option First" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then STEP11=true; fi
 
 UIP "Installing NLSound $IAMM"
 SD625=$(grep "ro.board.platform=msm8953" $PROPFILESALT)
@@ -4796,8 +4845,13 @@ ro.vendor.audiofx.enabled=false
 use.companding.audio=false
 vendor.audio.hal.output.suspend.supported=false
 persist.vendor.audio.ras.enabled=false
+persist.vendor.audio.drc.enabled=false
+vendor.audio.feature.external_dsp.enable=true
+vendor.audio.feature.external_speaker.enable=true
+vendor.audio.feature.external_speaker_tfa.enable=true
+vendor.audio.feature.ext_hw_plugin=true
 
-# DECODERS & ENCODERS SOUND BY NLSOUND TEAM
+# DECODERS&ENCODERS SOUND BY NLSOUND TEAM
 mpq.audio.decode=true
 lpa.decode=false
 audio.decoder_override_check=true
@@ -4855,26 +4909,34 @@ persist.vendor.radio.vdp_on_ims_cap=1
 persist.vendor.radio.wait_for_pbm=1 
 persist.vendor.sensors.direct_channel=false 
 persist.vendor.service.bdroid.ssrlvl=3 
+ro.ril.enable.amr.wideband=1
 
 # BT PARAMETERS SOUND BY NLSOUND TEAM
 persist.service.btui.use_aptx=1
 persist.bt.enableAptXHD=true
 persist.bt.a2dp.aptx_disable=false
-persist.bt.a2dp.aptx_hd_disable=falsee 
+persist.bt.a2dp.aptx_hd_disable=false
+persist.vendor.btstack.enable.splita2dp=true 
+persist.vendor.btstack.enable.twsplus=true 
+persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true 
+persist.vendor.qcom.bluetooth.enable.splita2dp=true 
+persist.vendor.qcom.bluetooth.twsp_state.enabled=false 
 ro.bluetooth.emb_wp_mode=false 
 ro.bluetooth.wipower=false 
 ro.vendor.bluetooth.wipower=false 
+persist.vendor.bt.soc.scram_freqs=192
 persist.bt.a2dp.aac_disable=false
 persist.vendor.bt.aac_frm_ctl.enabled=true
 audio.effect.a2dp.enable=1
 vendor.audio.effect.a2dp.enable=1
 vendor.btstack.absolute_volume=true
 persist.vendor.btstack.absolute_volume=true
+persist.vendor.btstack.avrcp.pos_time=1000
 persist.bluetooth.enabledelayreports=true
 vendor.bt.pts.pbap=true
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.bt.a2dp.addr_check_enabled_for_aac=true
-persist.vendor.btstack.aac_frm_ctl.enabled=true
+ro.bluetooth.hfp.ver=1.7
 
 # OTHER PARAMETERS SOUND BY NLSOUND TEAM
 persist.audio.lowlatency.rec=true
@@ -4913,13 +4975,9 @@ allow hal_audio_default hal_audio_default_tmpfs file { execute }
 allow hal_audio_default audio_data_file dir { search }
 allow app app_data_file file { execute_no_trans }
 allow mtk_hal_audio mtk_hal_audio_tmpfs file { execute }" >> $MODPATH/$MODID/sepolicy.rule
-MBCCSERVICE "FORCING=\$(find /sys/module -name high_perf_mode); echo \"1\" > \$FORCING"
-EQUALIZERLIST="
-AudioFX
-MusicFX
-"
-for F in $EQUALIZERLIST; do if find $SYSTEM -name $F >/dev/null; then EQUALIZERLIST=$(find $SYSTEM -name $F); REPLACE="$EQUALIZERLIST"; REPLACER; fi; done
-if $STEP2 || $STEP3 || $STEP4 || $STEP6 || $STEP10; then
+MBCCSERVICE "FORCING=\$(find /sys/module -name high_perf_mode); echo \"1\" > \$FORCING; setprop mic.volume 7"
+for F in AudioFX MusicFX; do if find $SYSTEM -name $F >/dev/null; then EQUALIZERLIST=$(find $SYSTEM -name $F); REPLACE="$EQUALIZERLIST"; REPLACER; fi; done
+if $STEP2 || $STEP3 || $STEP4 || $STEP6 || $STEP11; then
 UIP "Patching Needed Files..."
 for OMIX in $MPATHS; do
 UIP "Searching In: $OMIX"
@@ -4930,16 +4988,45 @@ sed -i 's/\t/  /g' $MIX
 UIP "Files Found And Patched"
 done
 fi
+if $STEP1 || $STEP7; then
+UIP "Patching Needed Files..."
+for OACONF in $ACONFS; do
+UIP "Searching In: $OACONF"
+ACONF="$MODPATH/$MODID$(echo $OACONF | sed "s|^/vendor|/system/vendor|g")"
+mkdir -p `dirname $ACONF`
+cp -f $MAGISKMIRROR$OACONF $ACONF
+sed -i 's/\t/  /g' $ACONF
+UIP "Files Found And Patched"
+done
+fi
 if $STEP1; then UIP "Start PATCH_DEEP_BUFFER"; PATCH_DEEP_BUFFER; fi
 if $STEP2; then UIP "Start PATCH_HEADPHONES"; PATCH_HEADPHONES; fi
 if $STEP3; then UIP "Start PATCH_MICROPHONE"; PATCH_MICROPHONE; fi
 if $STEP4; then UIP "Start PATCH_IIR"; PATCH_IIR; fi
-if $STEP5; then UIP "Start PATCH_AUDIO_PLATFORM"; PATCH_AUDIO_PLATFORM; fi
+if $STEP5; then
+UIP "Start PATCH_AUDIO_PLATFORM"
+if [ -f $APIIXML ]; then
+PATCH_AUDIO_PLATFORM_INFO_INT
+elif [ -f $APIEXML ]; then
+PATCH_AUDIO_PLATFORM__INFO_EXT
+elif [ -f $APIXML ]; then
+PATCH_AUDIO_PLATFORM_INFO
+fi
+fi
 if $STEP6; then UIP "Start PATCH_COMPANDERS"; PATCH_COMPANDERS; fi
 if $STEP7; then UIP "Start PATCH_AUDIO_CODEC"; PATCH_AUDIO_CODEC; fi
-if $STEP8; then UIP "Start PATCH_DEVICE_FEATURES"; PATCH_DEVICE_FEATURES; fi
+if $STEP8; then UIP "Start PATCH_DEVICE_FEATURES"; if [ -d $IPSEDF ]; then PATCH_DEVICE_FEATURES_SYSTEM; fi; if [ -d $IPVEDF ]; then PATCH_DEVICE_FEATURES_VENDOR; fi; fi
 if $STEP9; then UIP "Start PATCH_DIRAC"; PATCH_DIRAC; fi
-if $STEP10; then UIP "Start PATCH_MIXER"; PATCH_MIXER; fi
+if $STEP10; then
+UIP "Start PATCH_FLUENCE"
+echo -e "\n# Fluence
+ro.vendor.audio.sdk.fluencetype=none
+persist.audio.fluence.voicecomm=false
+persist.vendor.audio.fluence.voicecall=false
+persist.vendor.audio.fluence.voicerec=false
+persist.vendor.audio.fluence.speaker=false" >> $MODPATH/$MODID/system.prop
+fi
+if $STEP11; then UIP "Start PATCH_MIXER"; PATCH_MIXER; fi
 
 SET_PERM_RM
 MOVERPATH
@@ -8545,7 +8632,7 @@ RELOADPOLICY=\$(getprop selinux.reload_policy)
 
 background &" >> $MODPATH/$MODID/post-fs-data.sh
 MMPR -vc "PetNoires SafetySpoofer" "$VSN" "$VCSN" "PetNoire,Deiki & Nkh0472 & GrayJackFixxxer" "Try to fix SafetyNet on devices with MIUI Developer/Beta ROM, CyanogenMod, Lineage OS, Resurrection Remix, etc."
-MHIDE -l; SET_PERM_RM; chmod -R 777 $MODPATH/$MODID$MIPSB/*; UIP "$MSGDI"
+MHIDE -l; SET_PERM_RM; UIP "$MSGDI"
 fi
 
 MSGDELIMITER; UIP "Install Safety Net Patch $VSNA?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
@@ -8601,9 +8688,8 @@ mount -o bind $IPDLTMP/build.prop $MIPSBP
 resetprop ro.build.fingerprint 'HUAWEI/CLT-L29/HWCLT:8.1.0/HUAWEICLT-L29/128(C432):user/release-keys'
 resetprop ro.bootimage.build.fingerprint 'HUAWEI/CLT-L29/HWCLT:8.1.0/HUAWEICLT-L29/128(C432):user/release-keys'" >> $MODPATH/$MODID/post-fs-data.sh
 MMPR -vc "SafetyPatch" "$VSNA" "$VCSNA" "hackintosh5 @ xdaDevelopers" "Flash the module, reboot and give me thanks on XDA :)"
-MHIDE -l; SET_PERM_RM; chmod -R 777 $MODPATH/$MODID$MIPSB/*; UIP "$MSGDI"
+MHIDE -l; SET_PERM_RM; UIP "$MSGDI"
 fi
-
 if [ "$ASDK" -ge 24 ]; then
 MSGDELIMITER; UIP "Install Safety Net Patch $VSNAA?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
@@ -8632,22 +8718,9 @@ if [[ \"\$system_patch\" != \"\$vendor_patch\" ]]; then
 resetprop ro.build.version.security_patch \"\$vendor_patch\"
 resetprop ro.build.version.real_security_patch \"\$system_patch\"
 fi" >> $MODPATH/$MODID/post-fs-data.sh
-if $ANOUGAT; then
-cp -f $TMPDIR/SafetyNet/keystore-N $MODPATH/$MODID$MIPSB/keystore
-elif $AOREO; then
-cp -f $TMPDIR/SafetyNet/keystore-O $MODPATH/$MODID$MIPSB/keystore
-elif $APIE; then
-cp -f $TMPDIR/SafetyNet/keystore-P $MODPATH/$MODID$MIPSB/keystore
-elif $ATEN; then
-cp -f $TMPDIR/SafetyNet/keystore-Q $MODPATH/$MODID$MIPSB/keystore
-elif $AELEVEN; then
-cp -f $TMPDIR/SafetyNet/keystore-R $MODPATH/$MODID$MIPSB/keystore
-if [ "$arch" = "arm64" ]; then
-mkdir -p $MODPATH/$MODID$MIPSL64
-cp -f $TMPDIR/SafetyNet/libkeystore-attestation-application-id.so $MODPATH/$MODID$MIPSL64
-fi
-fi
-MHIDE -l; SET_PERM_RM; chmod -R 777 $MODPATH/$MODID$MIPSB/*; UIP "$MSGDI"
+cp -f $TMPDIR/SafetyNet/keystore-$ACNV $MODPATH/$MODID$MIPSB/keystore
+if [ "$arch" = "arm64" ]; then mkdir -p $MODPATH/$MODID$MIPSL64; cp -f $TMPDIR/SafetyNet/libkeystore-attestation-application-id.so $MODPATH/$MODID$MIPSL64; fi
+MHIDE -l; SET_PERM_RM; UIP "$MSGDI"
 fi
 fi
 }
@@ -9386,7 +9459,7 @@ MMPR -v "Force Gestures" "$VEFG" "Force Gestures - If The Gesture Selection Item
 }
 
 IHidden_Api_Policy() {
-if $MAGISK && SP_CHECKER "$IPDSU/0/settings_global.xml" "hidden_api_policy hidden_api_policy_pre_p_apps hidden_api_policy_p_apps"; then
+if $MAGISK; then
 if $AELEVEN || $ATWELVE; then
 UCSA "Install Enabling Hidden Api Policy?" "" "$MSGNUS" "IHidden_Api_PolicyS"
 fi
@@ -9532,8 +9605,9 @@ UIP "Installing Kill Logger $IAMM"
 if $MAGISK; then
 MODID="killlogger"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID$MIPSB
-MMPR -vc "KillLogger" "$IVCL" "$IVCCL" "mrfrost475" "This module deletes the files responsible for the dump, logcat, and bug reports also prescribes logcat ban in build.prop"; SET_PERM_RM
+MMPR -vc "KillLogger" "$IVCL" "$IVCCL" "mrfrost475" "This module deletes the files responsible for the dump, logcat, and bug reports also prescribes logcat ban in build.prop"
 KLIPP=$MODPATH/$MODID/system.prop
+if SP_CHECKER "$IPDSU/0/settings_global.xml" "activity_starts_logging_enabled"; then MBCCSERVICE "$SPGLOBAL activity_starts_logging_enabled 0"; fi
 else
 BUILD_PROP_BACKUP; KLIPP=$IPSBP; touch $AIOPFMDPH/killlogger
 fi
@@ -9584,7 +9658,7 @@ $IPDSUDE/0/com.android.shell/files/bugreports
 /data/tombstones
 /dev/log
 "
-for kll in $KLRML; do if [ -d $kll ]; then UIP "$MSGSD Found Logs In $kll"; rm -rf $kll/*; elif [ -f $kll ]; then UIP "$MSGSD Found $kll"; rm -f $kll; fi; done
+for kll in $KLRML; do if [ -d $kll ]; then UIP "Found Logs In $kll"; rm -rf $kll/*; elif [ -f $kll ]; then UIP "Found $kll"; rm -f $kll; fi; done
 echo -e "\n# KillLogger
 dalvik.vm.checkjni=false
 dalvik.vm.verify-bytecode=false
@@ -9602,6 +9676,7 @@ ro.config.ksm.support=false
 ro.config.nocheckin=1
 ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0" >> $KLIPP
+if $MAGISK; then SET_PERM_RM; fi
 UIP "$MSGDI"
 }
 
@@ -9723,14 +9798,14 @@ fi
 UIP "$MSGDI"
 }
 
-AForce_Dark_Mode() {
+IForce_Dark_Mode() {
 if $AOREO || $APIE || $ATEN || $AELEVEN || $ATWELVE; then
-UCSA "Activate Force Dark Theme $VFDM?" "" "$MSGNUS" "AForce_Dark_ModeS"
+UCSA "Install Force Dark Theme $VFDM?" "" "$MSGNUS" "IForce_Dark_ModeS"
 fi
 }
 
-AForce_Dark_ModeS() {
-UIP "Activating Force Dark Mode $IAMM"
+IForce_Dark_ModeS() {
+UIP "Installing Force Dark Mode $IAMM"
 if $MAGISK; then
 MODID="ForceDarkMode"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
@@ -9754,6 +9829,19 @@ MODID="ForceDisablingPlayProtect"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
 MBCCSERVICE "$SPGLOBAL upload_apk_enable 0; $SPGLOBAL package_verifier_enable 0; $SPGLOBAL package_verifier_user_consent -1; $SPGLOBAL verifier_verify_adb_installs 0"
 MMPR -v "Force Disabling Play Protect" "$VIFDPP" "Force Disabling Play Protect $FMR"; SET_PERM_RM; UIP "$MSGDI"
+}
+
+IForce_Idle() {
+if $MAGISK; then UCSA "Install Force Idle $VIFI?" "" "$MSGNUS" "IForce_IdleS"; fi
+}
+
+IForce_IdleS() {
+UIP "Installing Force Idle $IAMM" 
+MODID="ForceIdle"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+if [ -f $MODPATH/killlogger/$MIPSB/dumpsys ]; then UIP "Found dumpsys In KillLogger - Removing dumpsys"; fi
+if SP_CHECKER "$IPDSU/0/settings_global.xml" "aggressive_idle_enabled aggressive_standby_enabled"; then MBCCSERVICE "$SPGLOBAL aggressive_idle_enabled 1; $SPGLOBAL aggressive_standby_enabled 1; dumpsys deviceidle force-idle; dumpsys deviceidle enable"; else MBCCSERVICE "dumpsys deviceidle force-idle; dumpsys deviceidle enable"; fi
+MMPR -v "Force Idle" "$VIFI" "Force Idle $FMR"; SET_PERM_RM; UIP "$MSGDI"
 }
 
 ICLEDLO() {
@@ -10709,8 +10797,9 @@ IForce_MSAA_Switcher
 IFDHWO
 IForce_DEV_ADB
 SOOOFUIRC
-AForce_Dark_Mode
+IForce_Dark_Mode
 IForce_DPP
+IForce_Idle
 ICLEDLO
 ILEDLA
 IUGMSD
