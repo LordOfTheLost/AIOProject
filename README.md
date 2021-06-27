@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 20.06.21 (44) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.06.2021/AIOPFMD-20.06.21-%2844%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/10Y7Gkss2DcSE0uyGXJf1MPsBRgeODG5d/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/39">TG</a>
+* Версия AIOPFMD: 27.06.21 (45) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/27.06.2021/AIOPFMD-27.06.21-%2845%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1m6eu7JYp_k-EkTxXa2avmIKeHXZ85JXn/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/40">TG</a>
 * Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -32,6 +32,17 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 27.06.21 (45) ####
+* MagiskHide Props Config Обновлен до v5.4.0-v129;
+* MagiskHide Props Config теперь с форсовой установкой не из под своего архива (наконец-то);
+* hosts файл с AdAway обновлен от 25.06.2021;
+* В режим удаления/replace:
+	- добавлено приложение в обычный лист: APlayer и MiBrowserGlobal;
+	- FileExplorer и FileExplorerGlobal перемещены в только выборный вариант обычного листа;
+	- Теперь будет поиск в vendor (это угроза муйни);
+* Фикс установки uninstall.sh для AML;
+* Добавлен EXCEPT на некоторые файлы MagiskHide Props Config и AML для правильной работы после установки поверх через этот же патч (так как я изначально не ставлю модули в MODPATHUPD);
+* Прочие фиксы и улучшения.
 #### 20.06.21 (44) ####
 * Убрал чекер для Hidden Api Policy - его можно не чекнуть но он работает (интересно что по другим);
 * hosts файл с AdAway обновлен от 20.06.2021;
@@ -891,6 +902,8 @@
 	- Calendar
 	- Contacts
 	- DeskClock
+	- FileExplorer
+	- FileExplorerGlobal
 	- MiuiCamera
 	- Mms
 
@@ -898,6 +911,7 @@
 	- 404Clock
 	- AEXPapers
 	- ANGLE
+	- APlayer
 	- AbleMusic
 	- Abstruct
 	- AccuweatherPhone2015_MASS_HD_SWS
@@ -1062,6 +1076,7 @@
 	- Messages
 	- Messaging
 	- MiBrowser
+	- MiBrowserGlobal
 	- MiDrive
 	- MiDrop
 	- MiGalleryLockscreen
@@ -1417,7 +1432,7 @@
 	- 2-й SafetyNet патч <a href="https://forum.xda-developers.com/t/module-safetypatcher.3809879/">XDA</a>;
 	- 3-й SafetyNet патч (7-11) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> || <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
 * Пункт (All) (10-12) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro (уехал кстати) будет называться BASIC);
-* Пункт (Only М) <a href="<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config - из под своего бинирника (об этом способе я в чейнджлоге упоминал);
+* Пункт (Only М) <a href="<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config;
 
 <h3 align=center>Riru & Edx/LS Posed</h3>
 
