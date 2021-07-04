@@ -1,21 +1,46 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 27.06.21 (45) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/27.06.2021/AIOPFMD-27.06.21-%2845%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1m6eu7JYp_k-EkTxXa2avmIKeHXZ85JXn/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/40">TG</a>
+* Версия AIOPFMD: 04.07.21 (46) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/04.07.2021/AIOPFMD-04.07.21-%2846%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1HHzgUlfvOIK4Q1xTTxfiKk6E-RGu3mv8/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/41">TG</a>
 * Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Разработчик: <a href="https://4pda.to/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
 * Русский интерфейс: Нет, и не имеет смысла.
 * Технические требования:
-	- Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) или TWRP;
+	- Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) и/или TWRP;
 	- Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом));
 	- SeLinux в Permissive (для аудиомодов как минимум);
 	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+));
 	- SqLite для модулей которым он нужен.
 * Описание работы, функционал: Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
-* <a href="https://github.com/LordOfTheLost/AIOProject/blob/main/Bags.sh">Общие Известные проблемы</a>
+<details> 
+  <summary>Общие Известные проблемы (лень добавлять сюда новые):</summary>
+
+* После прошивки Reset Screen может пропасть пункт Smart Lock - для его включения нужно зайти в Настройки/Безопасность/Агенты доверия и включить Smart Lock.
+* "[ -f NAME ]" может ничего не находить на некоторых древних телефонах/TWRP - это будет вызывать ошибки в работе патча (потому-что);
+* Пропуск клавиш при выборе - фиксится прописью TKEY в PATCHMODE (вроде исправлено в версии 23);
+* Pills Overlay может криво работать (или работать но только не прозрачная версия, а прозрачная тоже будет не прозрачной) на Android 11 (пока-что);
+* Тактильный отклик самого патча может не работать на более старых телефонах/прошивках даже если его нашел патч и он настроен (с версии 23 добавлена строка для PATCHMODE на альт вариант взаимодействия);
+* UIROUNDED может криво работать на Android 11 или очень "чистых" прошивках по типу P3/4/5R;
+* В UIROUNDED есть баги с оверлеями что они работают наполовину или не работают без патчей LP хотя раньше работали (горит уже) (вроде пофиксил с версии 27);
+* Lawnchair не работает с UIROUNDED - пусть сами фиксят свои отвалы с закруглениями;
+* Очень редко приложения не могут получить доступ к памяти или происходит задвоение доступа к памяти телефона - баг самого MM;
+* На некоторых новых пришивках замечается ужасная задержка переключения пунктов - это зависит от прошивки/ядра, и я думаю как это "пофиксить";
+* Патч LEDLight Animation отваливает стоковую анимацию на телефонах по типу Asus Rog Phone 3 - думаю как это исправить;
+* Многие патчи выдают ошибки при работе с командами по типу find - нужно ставить BusyBox;
+* Поиск в OneUi лаунчере не работает в недавних (меня это волнует? Нет);
+* Возможен отвал жестов на Asus лаунчере с модом на прозрачную жестовую таблетку;
+* Burn In Protection не будет работать с модами по типу Cutout Increase Icons или всяких Dot Killer;
+* На некоторых прошивках с выбором на вид иконок системы и без выбора на стоковые раундеры возможен отвал раундеров из патча;
+* Может пропасть пункт выбора жестов после установки другого лаунчера который в свою очередь делает replace на сток лаунчер - вот и отвал (рандомный, я его редко ловил);
+* При хайде навбара отвал ВСЕХ жестов на Miui 12 так же с пропажей пункта в настройках в выборе навигации;
+* Создание пустого файла PATCHMODE (вроде пофиксил с версии 28);
+* Задвоение или пропуск двух выборов на одно нажатие (вроде пофиксил с версии 31);
+* Могут иметься другие баги о которых я не знаю (так же я могу сломать что-то старое что работало, добавив что-то новое (это норма)).
+
+</details>
 
 <details> 
   <summary>Скриншоты:</summary>
@@ -32,6 +57,21 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 04.07.21 (46) ####
+* В Show/Hide Navigation Bar оставлен только выбор на Build.prop вариант;
+* Добавил конфликты между Posed;
+* Фикс выдачи ошибок при chmod;
+* LSPosed обновлен до v1.4.7 (5803);
+* Detach обновлен до v5.2;
+* hosts файл с AdAway обновлен от 04.07.2021;
+* В пункт установки приложений добавлен отсев папок внутри чтобы не было полного отвала;
+* PillsOverlay обновлен до 1.7 - по просьбам вернул Full Hide/Immersive;
+* NLSound обновлен до v2.5.1 BETA;
+* Добавил USB Tethering Fix - фикс отвалов всего из за раздачи интернета по USB для Mi8;
+* В Режим удаления/replace/restore добавлены приложения в обычный лист: OneOSSpace и OneOSSTATS;
+* Status Bar Padding обновлен до v1.2 - переход на оверлеи и так же с установкой как не Magisk;
+* Добавлена установка Detach3 v3.07 - пока-что из под своего архива;
+* Может что-то ещё что забыл.
 #### 27.06.21 (45) ####
 * MagiskHide Props Config Обновлен до v5.4.0-v129;
 * MagiskHide Props Config теперь с форсовой установкой не из под своего архива (наконец-то);
@@ -613,19 +653,21 @@
 <h3 align=center>UI: Pills/NavBar/Gboard Themes</h3>
 
 * Пункт (All) (10-12) (\\) - Установка разных видов/размеров жестовой "таблетки":
-	- Прозрачная зона таблетки;
-	- Не прозрачная зона таблетки;
-		- Ширина таблетки (Точка);
-		- Ширина таблетки (0) - скрытие жестовой таблетки с/без отступа в зависимости от прозрачности;
-		- Ширина таблетки (60);
-		- Ширина таблетки (120);
-		- Ширина таблетки (180);
-		- Ширина таблетки (240);
-		- Ширина таблетки (300);
-			- Размер таблетки (1 (Сток));
-			- Размер таблетки (2);
-			- Размер таблетки (3);
-			- Размер таблетки (4);
+	- Полное скрытие;
+	- Остальные варианты;
+		- Прозрачная зона таблетки;
+		- Не прозрачная зона таблетки;
+			- Ширина таблетки (Точка);
+			- Ширина таблетки (0) - скрытие жестовой таблетки с/без отступа в зависимости от прозрачности;
+			- Ширина таблетки (60);
+			- Ширина таблетки (120);
+			- Ширина таблетки (180);
+			- Ширина таблетки (240);
+			- Ширина таблетки (300);
+				- Размер таблетки (1 (Сток));
+				- Размер таблетки (2);
+				- Размер таблетки (3);
+				- Размер таблетки (4);
 * Пункт (All) (10-12) (\\) - Установка разного цвета жестовой "таблетки":
 	- Выбрать один цвет для Light и Dark который определяется самим приложением;
 	- Выбрать разный цвет для Light и Dark который определяется самим приложением;
@@ -649,11 +691,8 @@
 	- Значение 8;
 	- Значение 9;
 	- Значение 10;
-* Пункт (All) <a href="https://github.com/null4n/navbar-overlay">GITHUB</a> - Hide Or Show Nav Bar:
+* Пункт (All) - Show/Hide Navigation Bar:
 	- Build.prop вариант:
-		- Показать;
-		- Скрыть;
-	- Вариант с Файлом оверлея:
 		- Показать;
 		- Скрыть;
 * Пункт (All) (10-12) (\\) - Установка патча на увеличение отступов при использовании клавиатуры:
@@ -733,17 +772,19 @@
 	- Значение 18dip;
 	- Значение 19dip;
 	- Значение 20dip;
-* Пункт (Only M) - Single User Mod - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
-* Пункт (Only M) (8.1-12) (\\) - Установка SUI Content Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара если доступно прошивкой;
-	- Значение 0;
-	- Значение 5;
-	- Значение 10;
-	- Значение 15;
-	- Значение 20;
-	- Значение 25;
-	- Значение 30;
-	- Значение 35;
-	- Значение 40;
+* Пункт (Only M) - Single User Enabler - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
+* Пункт (All) (8.1-12) (\\) - Установка Status Bar Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара;
+	- Значение 0dip;
+	- Значение 5dip;
+	- Значение 10dip;
+	- Значение 15dip;
+	- Значение 20dip;
+	- Значение 25dip;
+	- Значение 30dip;
+	- Значение 35dip;
+	- Значение 40dip;
+	- Значение 45dip;
+	- Значение 50dip;
 * Пункт (Only M) (8.1-12) (\\) - Установка QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
 	- Значение 0;
 	- Значение 5;
@@ -847,7 +888,7 @@
 	- Старый менеджер;
 * Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - Установка Audio Modification Library;
 * Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
-* Пункт (Only M) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> - Установка NLSound:
+* Пункт (Only M) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom/commit/d5892837ae175b7a4894e6733123d6b7d45856e6">GITHUB</a> - Установка NLSound:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_HEADPHONES;
 	- PATCH_MICROPHONE;
@@ -859,6 +900,9 @@
 	- PATCH_DIRAC:
 	- PATCH_FLUENCE:
 	- PATCH_MIXER;
+	- PATCH_DECOENCO
+	- PATCH_HIFI
+	- PATCH_BT_PARAMETERS
 * Пункт (Only M) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - Установка System Audio Quality - Этот модуль улучшает общие качество звука;
 * Пункт (All) - Установка Increase Bitrate - патчит все media_profiles*.xml в /vendor - Улучшает качество записи аудио во многих местах;
 * Пункт (Only M) - Установка USB Policy Patcher - может понадобится для ViperFX и подобных для вывода звука через USB;
@@ -984,8 +1028,6 @@
 	- FMRadio
 	- FM_TEST
 	- Facebook_stub
-	- FileExplorer
-	- FileExplorerGlobal
 	- FilesPrebuilt
 	- FitnessPrebuilt
 	- Focus
@@ -1124,6 +1166,8 @@
 	- OmniSwitch
 	- OneNote
 	- OneOSLogcat
+	- OneOSSTATS
+	- OneOSSpace
 	- Ornament
 	- Papers
 	- PartnerBookmarksProvider
@@ -1362,6 +1406,7 @@
 
 * Пункт (Only TWRP) - Удаление обоев (Fix Softloop (кто сталкивался - тот знает зачем он)) - появляется только если у вас стоят обои картинкой;
 * Пункт (Only TWRP) - Удаление runtime-permissions.xml в /data/misc_de/0/apexdata/com.android.permission - не обращайте на него внимание, это для моих постоянных softlooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
+* Пункт (Only TWRP) - Удаление файлов из /data/apex/active - не обращайте на него внимание, это для моих постоянных logolooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
 
 <h3 align=center>AdBlock/Hosts</h3>
 
@@ -1382,6 +1427,7 @@
 		- Google DNS;
 		- CloudFlare DNS;
 * Пункт (All) <a href="https://github.com/Magisk-Modules-Repo/wifi-bonding">GITHUB</a> - Установка Wifi Bonding для увеличения пропускной способности Wifi (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
+* Пункт (All) USB Tethering Fix - фикс отвалов всего из за раздачи интернета по USB для Mi8;
 
 <h3 align=center>Utilities: BB/ZSigner/SELC/ASTE/CC</h3>
 
@@ -1392,7 +1438,9 @@
 	- Переключить в Enforcing;
 * Пункт (Only М) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a || <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);
 * Пункт (All) - Установка Cache Cleaner - микро аналог SdMaid через терминал - удаляет все пустые папки в /sdcard и подкаталогах, а так же некоторые не нужные временные папки с кешем и тд. (нужно в терминале написать su; CC);
-* Пункт (Only М In BootMode) <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> - Установка Detach - установка из под своего архива;
+* Пункт (Only М In BootMode) - Установка Detach:
+	- Detach <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=78599318">4PDA</a>;
+	- Detach3 <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103999905">4PDA</a>;
 * Пункт (All) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - Установка ISQLite3 - необходим для некоторых модулей;
 * Пункт (Only М) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a || <a href="https://github.com/Rikj000/mm">GITHUB</a> || <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;
 
