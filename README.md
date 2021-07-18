@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 04.07.21 (46) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/04.07.2021/AIOPFMD-04.07.21-%2846%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1HHzgUlfvOIK4Q1xTTxfiKk6E-RGu3mv8/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/41">TG</a>
+* Версия AIOPFMD: 18.07.21 (47) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/18.07.2021/AIOPFMD-18.07.21-%2847%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1d0Iz514495Ui3H15JgpZgRn4NI8fRRFy/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/42">TG</a>
 * Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -57,6 +57,47 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 18.07.21 (47) ####
+* hosts файл с AdAway обновлен от 15.07.2021;
+* Universal SafetyNet Fix обновлен до v1.2.0;
+* QS Count Icon & Rows обновлен до v1.1 - добавил начало с 5ти;
+* Detach обновлен до v5.3;
+* Unlimited Storage For Google Photos обновлен до v1.1 - оставил один файл, убрал проп;
+* rmlist.sh в Remove/Replace/Restore Mode теперь ДОЛЖЕН называться APPRMLIST.sh;
+* Добавлен новый пункт на удаление любых файлов/папок через обнаружение FILERMLIST.sh в /sdcard в формате: product/priv-app/name и/или product/priv-app/name/name.apk и/или fonts/name.ttf;
+* Исправлен чекер на Setting Put при условии что папку создали GApps после чистой установки (пиздец);
+* Systemless Hosts обновлен до v210709-v16.7;
+* Фикс активации LSPosed после их ебланской переделки и убрана установка как системное приложение;
+* Убран выбор установки менеджера EdXposed;
+* Pills Overlay обновлен до v1.8 - просто добавил/обновил Label и теперь целый dip без сотых;
+* Pills Colors Overlay обновлен до v1.3 - просто добавил/обновил Label;
+* Pills Height Overlay обновлен до v1.3 - просто добавил/обновил Label и теперь целый dip без сотых;
+* Cutout Increase Icons обновлен до v1.6:
+	- убраны выборы на переключение размера в ландшафте - теперь будут ставится ещё доп оверлеи 20dip, 30dip, 40dip, 50dip, 60dip, 70dip с выбором в разработчиках/пунктах выреза
+	- добавлено больше количества значков: 8, 9, 10;
+	- зунулил точку;
+	- убран конфиг на заезжание значков за челку/каплю и тд.;
+* Burn In Protection обновлен до v1.3:
+	- теперь целый dip без сотых
+	- убраны выборы на переключение размера в ландшафте - теперь будут ставится ещё доп оверлеи 20dip, 30dip, 40dip, 50dip, 60dip, 70dip с выбором в разработчиках/пунктах выреза;
+	- убран конфиг на заезжание значков за челку/каплю и тд.;
+* UIROUNDED обновлен до v2.2 - просто добавил/обновил Label и теперь целый dip без сотых;
+* Switch On/Off Face UnLock IR Camera обновлен до v1.6 - просто добавил/обновил Label;
+* Notification Side Paddings обновлен до v1.1 - просто добавил/обновил Label и теперь целый dip без сотых;
+* Status Bar Padding обновлен до v1.2 - просто добавил/обновил Label и сменил MODID;
+* Status Bar Icon Space обновлен до v1.2 - просто добавил/обновил Label;
+* В режим удаления/replace добавлено приложение в обычный лист: PulseMusic;
+* Удалена категория Other Fixes - все пунты были перемещены в категорию Other;
+* Добавлен MMUPDC для настройки в PATCHMODE - Добавляет проверку версий Magisk модулей между патчем и установленными. Проверка происходи не по версии новее, а по отличии между версией на её MODID;
+* KillLogger обновлен до 1.3;
+* Cache Cleaner обновлен до 2.0;
+* Очередной фикс пермов на бинарники - на этот раз последний;
+* Добавлена установка Audio Compatibility Patch (ACP) v2.3 - портирован в патч и улучшен (надеюсь);
+* Добавлен Legacy Mode: Включает показ старых/устаревших патчей/функций - в него буду перемещены патчи которые не актуальны/для них есть альтернатива новее/рабочее;
+* USB Policy Patcher и фикс bootloop Viper-FX перемещены в Legacy Mode;
+* Некоторые пункты были перемещены местами;
+* Прочие другие фиксы, улучшения, оптимизация/ускорение и может что-то ещё что забыл;
+* Обновления теперь буду выходить не раз в неделю, а раз в две недели или не будут выходить вообще.
 #### 04.07.21 (46) ####
 * В Show/Hide Navigation Bar оставлен только выбор на Build.prop вариант;
 * Добавил конфликты между Posed;
@@ -719,13 +760,13 @@
 	- Значение 50;
 * Пункт (All) - Установка GBoard тем для многих прошивок (в MD2 и разными цветами и видами);
 * Пункт (All) (9-12) (\\) - Cutout Increase Number Notification Icons для увеличения количества уведомлений а при применении оверлея работает как DotKiller: 
-	- 20dip (Немного уменьшенная строка состояния в ландшафтном режиме);
-	- 24dip (Обычная строка состояния в ландшафтном режиме);
-	- 34dip (Строка состояния в ландшафтном режиме для DSB);
-		- 4 иконки;
-		- 5 иконок;
-		- 6 иконок;
-		- 7 иконок;
+	- 4 иконки;
+	- 5 иконок;
+	- 6 иконок;
+	- 7 иконок;
+	- 8 иконок;
+	- 9 иконок;
+	- 10 иконок;
 * Пункт (Only M) (10) - Установка GPay Power Menu (он же альтернатива меню выключения расположена с низу);
 * Пункт (All) (10-12) (\\) - Установка RoundedUI для скругления системы, лаунчеров и приложений которые подтягивают строки из системы:
 	- Значение 0;
@@ -735,7 +776,7 @@
 	- Значение 20;
 	- Значение 25;
 	- Значение 33;
-* Пункт (All) (10-12) (\\) - Burn In Protection (конфликтует с Cutout Increase Number Notification Icons и подобным что принудительно включается поверх)- Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроено но отключено):
+* Пункт (All) (10-12) (\\) - Burn In Protection - Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроено но отключено):
 	- Время смещения (в секундах):
 		- Значение 20;
 		- Значение 40;
@@ -753,9 +794,6 @@
 						- Значение 6dip;
 						- Значение 8dip;
 						- Значение 10dip;
-							- Cutout Increase Number Notification Icons с Burn In Protection:
-								- 24dip (Обычная строка состояния в ландшафтном режиме);
-								- 34dip (Строка состояния в ландшафтном режиме для DSB);
 * Пункт (All) (10-12) (\\) - Notification Side Padding - регулирует расстояние между строкой и краями экрана:
 	- Значение 0dip (как у OneUi);
 	- Значение 5dip;
@@ -774,17 +812,19 @@
 	- Значение 20dip;
 * Пункт (Only M) - Single User Enabler - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
 * Пункт (All) (8.1-12) (\\) - Установка Status Bar Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара;
-	- Значение 0dip;
-	- Значение 5dip;
-	- Значение 10dip;
-	- Значение 15dip;
-	- Значение 20dip;
-	- Значение 25dip;
-	- Значение 30dip;
-	- Значение 35dip;
-	- Значение 40dip;
-	- Значение 45dip;
-	- Значение 50dip;
+	- Выбрать одно значение для обоих сторон;
+	- Выбрать два значения для каждой стороны;
+		- Значение 0dip;
+		- Значение 5dip;
+		- Значение 10dip;
+		- Значение 15dip;
+		- Значение 20dip;
+		- Значение 25dip;
+		- Значение 30dip;
+		- Значение 35dip;
+		- Значение 40dip;
+		- Значение 45dip;
+		- Значение 50dip;
 * Пункт (Only M) (8.1-12) (\\) - Установка QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
 	- Значение 0;
 	- Значение 5;
@@ -808,18 +848,21 @@
 	- Значение 100;
 * Пункт (Only M) - Установка QS Count Icon & Rows- даже если ваша прошивка с кастомизацией и выставлено например 6 иконок но в не раскрытой видно всего 5 - то этот модуль для вас:
 	- Выбор для не раскрытой:
+		- 5;
 		- 6;
 		- 7;
 		- 8;
 		- 9;
 		- 10;
 			- Выбор для раскрытой в портрете:
+				- 5;
 				- 6;
 				- 7;
 				- 8;
 				- 9;
 				- 10;
 					- Выбор для раскрытой в ландшафте:
+						- 5;
 						- 6;
 						- 7;
 						- 8;
@@ -845,7 +888,7 @@
 			- FPS:
 				- 60;
 				- 30;
-* Пункт (All) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106370289">4PDA</a> || a href="https://t.me/EmojiReplacer">TG</a> - Установка IOS EMOJI;
+* Пункт (All) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106370289">4PDA</a> || <a href="https://t.me/EmojiReplacer">TG</a> - Установка IOS EMOJI;
 * Пункт (All) - Установка Media Ui:
 	- Masik:
 		- Альтернативный звук разблокировки из Masik;
@@ -869,7 +912,7 @@
 	- С подтверждением для каждого;
 	- Без подтверждением;
 	
-<h3 align=center>Audio: VFX(P)/DSP/DTS/AML/AN</h3>
+<h3 align=center>Audio: VFX(P)/DSP/DTS/AN/AML/ACP</h3>
 
 * Пункт (All) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> ||<a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - Установка ViperFX:
 	- Установка ViperFX v2.5.0.5:
@@ -886,9 +929,8 @@
 * Пункт (Only M) (9-12) (ADDON) <a href="https://forum.xda-developers.com/t/port-pie-dts-x-ultra-dts-headphone-x-27-03-update.3896233/">XDA</a> - Установка DTS HPX:
 	- Новый менеджер;
 	- Старый менеджер;
-* Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - Установка Audio Modification Library;
 * Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
-* Пункт (Only M) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom/commit/d5892837ae175b7a4894e6733123d6b7d45856e6">GITHUB</a> - Установка NLSound:
+* Пункт (Only M) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - Установка NLSound:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_HEADPHONES;
 	- PATCH_MICROPHONE;
@@ -905,13 +947,9 @@
 	- PATCH_BT_PARAMETERS
 * Пункт (Only M) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - Установка System Audio Quality - Этот модуль улучшает общие качество звука;
 * Пункт (All) - Установка Increase Bitrate - патчит все media_profiles*.xml в /vendor - Улучшает качество записи аудио во многих местах;
-* Пункт (Only M) - Установка USB Policy Patcher - может понадобится для ViperFX и подобных для вывода звука через USB;
-
-<h3 align=center>Other Fixes: FBFM/FBFM/UAA</h3>
-
-* Пункт (Only TWRP) (9-12) - Появляется если находит service.sh и удаляет в модуле ViperFX (на обычной и Legacy) и/или Ainur Sauron;
-* Пункт (Only М In TWRP) - Установка фикса бутлупа на Miui при DPI 800+ (кто сталкивался - тот знает зачем он);
-* Пункт (Only TWRP) - Разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);
+* Пункт (Legacy Mode & Only M) - Установка USB Policy Patcher - может понадобится для ViperFX и подобных для вывода звука через USB;
+* Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/acp">GITHUB</a> || <a href="https://forum.xda-developers.com/t/audio-compatibility-patch-formerly-universal-deep_buffer-remover-mmtex.3577067/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=100787161">4PDA</a> - Установка Audio Compatibility Patch;
+* Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - Установка Audio Modification Library;
 
 <h3 align=center>Removal: RSL/RSO/RSTA/RWFSB</h3>
 
@@ -927,10 +965,10 @@
 		- Отправлять их в replace (TWRP & MM);
 			- Удаление найденных Apk с подтверждением каждого найденного;
 			- Удаление найденных Apk без подтверждения каждого найденного;
-				- Если находит /sdcard/rmlist.sh:
-					- Искать что содержится в rmlist.sh и в патче;
-					- Искать только то, что содержится в rmlist.sh;
-				- Если не находит /sdcard/rmlist.sh:
+				- Если находит /sdcard/APPRMLIST.sh:
+					- Искать что содержится в APPRMLIST.sh и в патче;
+					- Искать только то, что содержится в APPRMLIST.sh;
+				- Если не находит /sdcard/APPRMLIST.sh:
 					- Удаление из под AIL.txt который создается в /system/bin/aiopfmdph если устанавливали приложения из под Пункта установки своих приложений без Magisk - Потому что в патче нету Package Name всех приложений в мире - выбор появляется только если находит AIL.txt;
 					- Удаление приложений которые не влияют на работу прошивки (перенос с AIOIARPFMD и улучшенный список - для обычных пользователей рекомендую с выбором на каждый разумеется но я пользуюсь этим списком и удаляю все что в нем);
 					- Удаление приложений которые могут повлиять на работу прошивки - они лишают GApps и много другого (список смотрите и возможен отвал всего);
@@ -1189,6 +1227,7 @@
 	- PrebuiltExchange3Google
 	- PrebuiltGmail
 	- PrebuiltGoogleTelemetryTvp
+	- PulseMusic
 	- PureBrowser
 	- QPGallery
 	- QuickAccessWallet
@@ -1404,9 +1443,11 @@
 
 </details>
 
+* Пункт (Only TWRP) - Удаление любых файлов/папок через обнаружение FILERMLIST.sh в /sdcard в формате: product/priv-app/name и/или product/priv-app/name/name.apk и/или fonts/name.ttf;
 * Пункт (Only TWRP) - Удаление обоев (Fix Softloop (кто сталкивался - тот знает зачем он)) - появляется только если у вас стоят обои картинкой;
 * Пункт (Only TWRP) - Удаление runtime-permissions.xml в /data/misc_de/0/apexdata/com.android.permission - не обращайте на него внимание, это для моих постоянных softlooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
 * Пункт (Only TWRP) - Удаление файлов из /data/apex/active - не обращайте на него внимание, это для моих постоянных logolooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
+* Пункт (Legacy Mode & Only TWRP) (9-12) - Появляется если находит service.sh и удаляет в модуле ViperFX (на обычной и Legacy) и/или Ainur Sauron;
 
 <h3 align=center>AdBlock/Hosts</h3>
 
@@ -1472,7 +1513,9 @@
 	- Закончить звонок;
 	- Запустить/включить/выключить музыку/закончить звонок;
 	- Запуск Gmail/Mail по умолчанию;
-	
+* Пункт (Only М In TWRP) - Установка фикса бутлупа на Miui при DPI 800+ (кто сталкивался - тот знает зачем он);
+* Пункт (Only TWRP) - Разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);
+
 <h3 align=center>Safety Net & MHPC</h3>
 
 * Пункт (Only М) (\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - Установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;
@@ -1485,14 +1528,8 @@
 <h3 align=center>Riru & Edx/LS Posed</h3>
 
 * Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - Установка Riru Core;
-* Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - Установка EdXposed:
-	- Если установка через MM, будет дан выбор на установку менеджера:
-		- Установка в /data/app;
-		- Установка в /system/priv-app;
-* Пункт (Only М) (8.1-12) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> - Установка LSPosed:
-	- Если установка через MM, будет дан выбор на установку менеджера:
-		- Установка в /data/app;
-		- Установка в /system/priv-app;
+* Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - Установка EdXposed;
+* Пункт (Only М) (8.1-12) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> - Установка LSPosed;
 * Пункт (Only М) (8.1-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101920396">4PDA</a> || <a href="https://github.com/Kr328/Riru-ClipboardWhitelist">GITHUB</a> - Установка Riru Clipboard Whitelist:
 	- Если установка через MM, будет дан выбор на установку менеджера:
 		- Установка в /data/app;
@@ -1808,6 +1845,8 @@
 	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
 	- MCMODE: Включает или отключает выбор в TWRP как установить через Magisk или нет при DEBUGMODE - По умолчанию true.
 	- ENDMODE: Позволяет вернутся в начало патча без перевыбора если что-то пропустили (выбор в самом конце) - По умолчанию true.
+	- MMUPDC: Добавляет проверку версий Magisk модулей между патчем и установленными - По умолчанию true.
+	- Legacy Mode: Включает показ старых/устаревших патчей/функций.
 * All - Установка патчей из под MM или TWRP и/или как модуль Magisk так и нет.
 * (\\) - Означающий что в этом пункте есть возможность выхода из подпунктов к следующему выбору.
 * (|) - Означает что следующий выбор будет в этом подпункте пункта.
