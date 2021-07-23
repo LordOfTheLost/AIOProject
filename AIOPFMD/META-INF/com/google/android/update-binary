@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="18.07.21 (47)"
+VAIOPFMD="23.07.21 (48)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -20,6 +20,7 @@ IDPSHNB="ShowHideNavigationBar"; VIPPSHNB="v1.0"
 IDGBNBS="GboardNavBarSpacing"; VIPGBNBS="v1.2"
 IDGBRC="GBoardRoundedCorners"; VIPGBRC="v1.1"
 IDGBT="GBoardThemes"; VIPGBT="v1.1"
+IDGBSTE="gboard-silk-theme"; VIPGBSTE="v0.4"; VCIPGBSTE="04"
 IDCINNI="CINNI"; VIPCINNI="v1.6"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
 IDRUI="UIROUNDED"; VIPRUI="v2.2"
@@ -45,7 +46,7 @@ IDSSLQ="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021
 IDSLA="Systemless_AsusLauncher"; VIPSLA="v1.0"; VCIPSLA="1000"; VIPSLAQ="7.0.1.60"; VIPSLAR="7.5.0.24"
 IDASUSS="AsusLongshot3"; VIPASUSS="v3.0"; VCIPASUSS="30"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
-#Audio: VFX(P)/DSP/DTS/AN/AML/ACP
+#Audio: VFX(P)/DSP/DTS/AN/ACP/AML
 IDVFXL="ViPER4AndroidFX-Legacy"; VIPVFXL="v2.5.0.5"; VCIPVFXL="86"
 IDVFX="ViPER4AndroidFX"; VIPVFX="v2.7.1.6"; VCIPVFX="2716"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.3"
@@ -80,26 +81,26 @@ IDDETACH="Detach"; VIPDETACH="v5.3"; VCIPDETACH="530"
 IDDETACH3="detach3"; VIPDETACH3="v3.07"; VCIPDETACH3="307"
 IDSQL3="73sydney.sqlite3"; VIPSQL3="v1.0"; VCIPSQL3="1"
 IDMMFRM="mm"; VIPMMFRM="2020.4.17"; VCIPMMFRM="202004170"
-#Other: GPay/DFO/STZD/DDVFE/FA
-IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
-IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
+#Other: DFO/STZD/DDVFE/FA/SBU
 IDBDFFSOQSS="BDFFSLOQS"; VIPBDFFSOQSS="v1.1"
 IDSTZD="Systemless_TZData"; VIPSTZD="2020A&F"; VCIPSTZD="16"
 VIPDDVFE="02.11.2020"
 IDFPA="FingerprintActions"; VIPFPA="v1.1"
 IDFSLFM="FSFM"; VIPFSLFM="v1.2"
-#Safety Net & MHPC
+#SafetyNet/MHPC/GPay
 IDSNP="petnoires-safetyspoofer"; VIPSNP="v1-beta2"; VCIPSNP="16"
 IDSNPA="safetypatcher"; VIPSNPA="v3"; VCIPSNPA="5"
 IDSNPAA="safetynet-fix"; VIPSNPAA="v1.2.0"; VCIPSNPAA="10200"
 IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
 IDMHPC="MagiskHidePropsConf"; VIPMHPC="v5.4.0-v129"; VCIPMHPC="68"
+IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
+IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru & Edx/LS Posed
 IDRIRU="riru-core"; VIPRIRU="v25.4.4.r426.05efc94"; VCIPRIRU="426"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
 IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.4.7 (5803)"; VCIPLSPOSED="5803"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
-#Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS
+#Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 IDFGS="ForceGoogleSync"; VIPFGS="v1.1"
 IDFEG="ForceGestures"; VIPFEG="v1.1"
 IDHAP="EnablingHiddenApiPolicy"; VIPHAP="v1.2"
@@ -749,8 +750,9 @@ SET_PERM_R $MODPATH/$MODID 0 0 0755 0644; [ -d $MODPATH/$MODID$MIPSB ] && chmod 
 }
 
 UZTPN() {
-$UNZIP -oq $ZIPFILE $1.tar.xz -d $TMPDIR 2>/dev/null
-$UNTARXZ -xf $TMPDIR/$1.tar.xz -C $TMPDIR; rm -f $TMPDIR/$1.tar.xz
+UPN="$1"
+$UNZIP -oq $ZIPFILE $UPN.tar.xz -d $TMPDIR 2>/dev/null
+$UNTARXZ -xf $TMPDIR/$UPN.tar.xz -C $TMPDIR; rm -f $TMPDIR/$UPN.tar.xz
 chmod -R 777 $TMPDIR
 }
 
@@ -2470,6 +2472,7 @@ MMUPD_CHECKER "$IDPSHNB" "$VIPPSHNB" "IPPSHNBS"
 MMUPD_CHECKER "$IDGBNBS" "$VIPGBNBS" "IPGBNBSS"
 MMUPD_CHECKER "$IDGBRC" "$VIPGBRC" "IPGBRCS"
 MMUPD_CHECKER "$IDGBT" "$VIPGBT" "IPGBTS"
+MMUPD_CHECKER -c "$IDGBSTE" "$VIPGBSTE" "$VCIPGBSTE"
 MMUPD_CHECKER "$IDCINNI" "$VIPCINNI" "IPCINNIS"
 MMUPD_CHECKER "$IDGPPM" "$VIPGPPM" "IPGPPMS"
 MMUPD_CHECKER "$IDRUI" "$VIPRUI" "IPRUIS"
@@ -2495,13 +2498,13 @@ MMUPD_CHECKER -c "$IDSSLQ" "$VIPSSLQ" "$VCIPSSLQ" "IPSLS"
 MMUPD_CHECKER -c "$IDSSLQ" "$VIPSSLR" "$VCIPSSLR" "IPSLS"
 MMUPD_CHECKER -c "$IDSLA" "$VIPSLA" "$VCIPSLA" "IPSLS"
 if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDASUSS" "$VIPASUSS" "$VCIPASUSS" "IPASUSSS"; fi
-#Audio: VFX(P)/DSP/DTS/AN/AML/ACP
+#Audio: VFX(P)/DSP/DTS/AN/ACP/AML
 MMUPD_CHECKER -c "$IDVFXL" "$VIPVFXL" "$VCIPVFXL" "IPVFXS"
 MMUPD_CHECKER -c "$IDVFX" "$VIPVFX" "$VCIPVFX" "IPVFXS"
 if $FINDAIOPFMDA; then MMUPD_CHECKER "$IDVFXP" "$VIPVFXP" "IPVFXPS"; fi
 if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDJDSPM" "$VIPJDSPM" "$VCIPJDSPM" "IPJDSMS"; fi
 if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDDTSHPX" "$VIPDTSHPX" "$VCIPDTSHPX" "IPDTSHPXS"; fi
-if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDAN" "$VIPAN" "$VCIPAN" "IPANS"; fi
+if $FINDAIOPFMDA && [ $MAGISKFIRSTTIME != true ]; then MMUPD_CHECKER -c "$IDAN" "$VIPAN" "$VCIPAN" "IPANS"; fi
 MMUPD_CHECKER -c "$IDNLS" "$VIPNLS" "$VCIPNLS" "IPNLSS"
 MMUPD_CHECKER -c "$IDSAQ" "$VIPSAQ" "$VCIPSAQ" "IPSAQS"
 MMUPD_CHECKER "$IDIBS" "$VIPIBS" "IPIBS"
@@ -2530,25 +2533,25 @@ MMUPD_CHECKER -c "$IDDETACH" "$VIPDETACH" "$VCIPDETACH" "IPDETACHS"
 MMUPD_CHECKER -c "$IDDETACH3" "$VIPDETACH3" "$VCIPDETACH3" "IPDETACHS"
 MMUPD_CHECKER -c "$IDSQL3" "$VIPSQL3" "$VCIPSQL3" "IPSQL3S"
 MMUPD_CHECKER -c "$IDMMFRM" "$VIPMMFRM" "$VCIPMMFRM" "IPMMFRMS"
-#Other: GPay/DFO/STZD/DDVFE/FA
-MMUPD_CHECKER -c "$IDGPF" "$VIPGPF" "$VCIPGPF" "IPGPFS"
-MMUPD_CHECKER "$IDFPMC" "$VIPFPMC" "IPFPMCS"
+#Other: DFO/STZD/DDVFE/FA/SBU
 MMUPD_CHECKER "$IDBDFFSOQSS" "$VIPBDFFSOQSS" "IPBDFFSOQSSS"
 MMUPD_CHECKER -c "$IDSTZD" "$VIPSTZD" "$VCIPSTZD" "IPSTZDS"
 MMUPD_CHECKER "$IDFPA" "$VIPFPA" "IPFPAS"
 MMUPD_CHECKER "$IDFSLFM" "$VIPFSLFM" "IPFSLFMS"
-#Safety Net & MHPC
+#SafetyNet/MHPC/GPay
 MMUPD_CHECKER -c "$IDSNP" "$VIPSNP" "$VCIPSNP" "IPSNPS"
-MMUPD_CHECKER -c "$IDSNPA" "$VIPSNPA" "$VCIPSNPA" "IPSNETS"
-MMUPD_CHECKER -c "$IDSNPAA" "$VIPSNPAA" "$VCIPSNPAA" "IPSNETS"
-MMUPD_CHECKER "$IDSNET" "$VIPSNET" "IPSNETS"
+MMUPD_CHECKER -c "$IDSNPA" "$VIPSNPA" "$VCIPSNPA" "IPSNPS"
+MMUPD_CHECKER -c "$IDSNPAA" "$VIPSNPAA" "$VCIPSNPAA" "IPSNPS"
+MMUPD_CHECKER "$IDSNET" "$VIPSNET" "IPSNET"
+MMUPD_CHECKER "$IDFPMC" "$VIPFPMC" "IPFPMCS"
 MMUPD_CHECKER -c "$IDMHPC" "$VIPMHPC" "$VCIPMHPC" "IPMHPCS"
+MMUPD_CHECKER -c "$IDGPF" "$VIPGPF" "$VCIPGPF" "IPGPFS"
 #Riru & Edx/LS Posed
 MMUPD_CHECKER -c "$IDRIRU" "$VIPRIRU" "$VCIPRIRU" "IPRIRUS"
 MMUPD_CHECKER -c "$IDEDXPOSED" "$VIPEDXPOSED" "$VCIPEDXPOSED" "IPEDXPOSEDS"
 MMUPD_CHECKER -c "$IDLSPOSED" "$VIPLSPOSED" "$VCIPLSPOSED" "IPLSPOSEDS"
 MMUPD_CHECKER -c "$IDRIRUCW" "$VIPRIRUCW" "$VCIPRIRUCW" "IRIRUCWS"
-#Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS
+#Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 MMUPD_CHECKER "$IDFGS" "$VIPFGS" "IPFGSS"
 MMUPD_CHECKER "$IDFEG" "$VIPFEG" "IPFEGS"
 MMUPD_CHECKER "$IDHAP" "$VIPHAP" "IPHAPS"
@@ -2574,13 +2577,13 @@ UIP "Other Updates Not Found"
 
 MMUPD_CHECKER() {
 TMODVERSION=false; TMODCVERSION=false
-case $1 in
--c) local MMUPDID="$2"; local MMUPDV="$3"; local MMUPDVC="$4"; if [ -d $MODPATH/$MMUPDID ]; then local MODVERSION="$(GET_PMODE_PROP "$MODPATH/$MMUPDID/module.prop" "version")"; local MODCVERSION="$(GET_PMODE_PROP "$MODPATH/$MMUPDID/module.prop" "versionCode")"; if [ "$MODVERSION" != "$MMUPDV" ]; then TMODVERSION=true; fi; if [ "$MODCVERSION" != "$MMUPDVC" ]; then TMODCVERSION=true; fi; fi;;
-*) local MMUPDID="$1"; local MMUPDV="$2"; if [ -d $MODPATH/$MMUPDID ]; then local MODVERSION="$(GET_PMODE_PROP "$MODPATH/$MMUPDID/module.prop" "version")"; if [ "$MODVERSION" != "$MMUPDV" ]; then TMODVERSION=true; fi; fi;;
+case "$1" in
+-c) local MMUPDID="$2"; local MMUPDV="$3"; local MMUPDVC="$4"; if [ -d $MODPATH/$MMUPDID ]; then local MODVERSION="$(GET_FILE_PROP "$MODPATH/$MMUPDID/module.prop" "version")"; local MODCVERSION="$(GET_FILE_PROP "$MODPATH/$MMUPDID/module.prop" "versionCode")"; if [ "$MODVERSION" != "$MMUPDV" ]; then TMODVERSION=true; fi; if [ "$MODCVERSION" != "$MMUPDVC" ]; then TMODCVERSION=true; fi; fi;;
+*) local MMUPDID="$1"; local MMUPDV="$2"; if [ -d $MODPATH/$MMUPDID ]; then local MODVERSION="$(GET_FILE_PROP "$MODPATH/$MMUPDID/module.prop" "version")"; if [ "$MODVERSION" != "$MMUPDV" ]; then TMODVERSION=true; fi; fi;;
 esac
 if $TMODVERSION || $TMODCVERSION; then
 MSGDELIMITER
-case $1 in
+case "$1" in
 -c) UIP "Found Update For $MMUPDID" "Version Installed: $MODVERSION $MODCVERSION" "New Version: $MMUPDV $MMUPDVC, Update?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then $5; fi;;
 *) UIP "Found Update For $MMUPDID" "Version Installed: $MODVERSION" "New Version: $MMUPDV, Update?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then $3; fi;;
 esac
@@ -2997,6 +3000,56 @@ ro.com.google.ime.theme_file=MD2BlackBlue.zip
 ro.com.google.ime.themes_dir=$MIPSE/gboard_theme" >> $IPSBP
 cp -rf $TMPDIR/GBoardThemes$MIPSE/gboard_theme $IPSE
 SET_PERM_R $IPSE/gboard_theme 0 0 0755 0644
+fi
+UIP "$MSGDI"
+}
+
+IPGBSTE() {
+GBSTEXML="$IPDD/com.google.android.inputmethod.latin/shared_prefs/flag_value.xml"
+if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/gboardsilkthemeenabler ]; then
+MSGDELIMITER; UIP "$MSGFI GBoard Silk Theme Enabler, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+UIP "Removing..."
+sed -i -e 's/"silk_on_all_pixel" value="true"/"silk_on_all_pixel" value="false"/g' $GBSTEXML
+sed -i -e 's/"pill_shaped_key" value="true"/"pill_shaped_key" value="false"/g' $GBSTEXML
+sed -i -e 's/"silk_theme" value="true"/"silk_theme" value="false"/g' $GBSTEXML
+sed -i -e 's/"use_silk_theme_by_default" value="true"/"use_silk_theme_by_default" value="false"/g' $GBSTEXML
+sed -i -e 's/"enable_keyboard_redesign" value="true"/"enable_keyboard_redesign" value="false"/g' $GBSTEXML
+sed -i -e 's/"enable_keyboard_redesign_theme" value="true"/"enable_keyboard_redesign_theme" value="false"/g' $GBSTEXML
+sed -i -e 's/"use_keyboard_redesign_by_default" value="true"/"use_keyboard_redesign_by_default" value="false"/g' $GBSTEXML
+sed -i -e 's/"use_keyboard_redesign_on_existing_theme_on_all_users" value="true"/"use_keyboard_redesign_on_existing_theme_on_all_users" value="false"/g' $GBSTEXML
+sed -i -e 's/"use_keyboard_redesign_on_existing_theme" value="true"/"use_keyboard_redesign_on_existing_theme" value="false"/g' $GBSTEXML
+rm -f $AIOPFMDPH/gboardsilkthemeenabler
+UIP "$MSGDRM"
+fi
+else
+UCSA "Install GBoard Silk Theme Enabler $VIPGBSTE?" "" "$MSGNUS" "IPGBSTES"
+fi
+}
+
+IPGBSTES() {
+UIP "Installing GBoard Silk Theme Enabler $IAMM"
+if $MAGISK; then
+MODID="$IDGBSTE"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MMPR -vc "Gboard Silk Theme Enabler" "$VIPGBSTE" "$VCIPGBSTE" "zakaryan2004, nitanmarcel" "Enabled Gboard Silk Theme"
+MGSERVICED "sed -i -e 's/\"silk_on_all_pixel\" value=\"true\"/\"silk_on_all_pixel\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"pill_shaped_key\" value=\"true\"/\"pill_shaped_key\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"silk_theme\" value=\"true\"/\"silk_theme\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"use_silk_theme_by_default\" value=\"true\"/\"use_silk_theme_by_default\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"enable_keyboard_redesign\" value=\"true\"/\"enable_keyboard_redesign\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"enable_keyboard_redesign_theme\" value=\"true\"/\"enable_keyboard_redesign_theme\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"use_keyboard_redesign_by_default\" value=\"true\"/\"use_keyboard_redesign_by_default\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"use_keyboard_redesign_on_existing_theme_on_all_users\" value=\"true\"/\"use_keyboard_redesign_on_existing_theme_on_all_users\" value=\"false\"/g' $GBSTEXML; sed -i -e 's/\"use_keyboard_redesign_on_existing_theme\" value=\"true\"/\"use_keyboard_redesign_on_existing_theme\" value=\"false\"/g' $GBSTEXML; am force-stop com.google.android.inputmethod.latin; am start -a android.intent.action.MAIN -n com.google.android.inputmethod.latin/com.google.android.apps.inputmethod.latin.firstrun.LatinFirstRunActivity" "sed -i -e 's/\"silk_on_all_pixel\" value=\"false\"/\"silk_on_all_pixel\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"pill_shaped_key\" value=\"false\"/\"pill_shaped_key\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"silk_theme\" value=\"false\"/\"silk_theme\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"use_silk_theme_by_default\" value=\"false\"/\"use_silk_theme_by_default\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"enable_keyboard_redesign\" value=\"false\"/\"enable_keyboard_redesign\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"enable_keyboard_redesign_theme\" value=\"false\"/\"enable_keyboard_redesign_theme\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"use_keyboard_redesign_by_default\" value=\"false\"/\"use_keyboard_redesign_by_default\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"use_keyboard_redesign_on_existing_theme_on_all_users\" value=\"false\"/\"use_keyboard_redesign_on_existing_theme_on_all_users\" value=\"true\"/g' $GBSTEXML; sed -i -e 's/\"use_keyboard_redesign_on_existing_theme\" value=\"false\"/\"use_keyboard_redesign_on_existing_theme\" value=\"true\"/g' $GBSTEXML; am force-stop com.google.android.inputmethod.latin; am start -a android.intent.action.MAIN -n com.google.android.inputmethod.latin/com.google.android.apps.inputmethod.latin.firstrun.LatinFirstRunActivity" "GSTE"
+SET_PERM_RM
+else
+touch $AIOPFMDPH/gboardsilkthemeenabler
+fi
+sed -i -e 's/"silk_on_all_pixel" value="false"/"silk_on_all_pixel" value="true"/g' $GBSTEXML
+sed -i -e 's/"pill_shaped_key" value="false"/"pill_shaped_key" value="true"/g' $GBSTEXML
+sed -i -e 's/"silk_theme" value="false"/"silk_theme" value="true"/g' $GBSTEXML
+sed -i -e 's/"use_silk_theme_by_default" value="false"/"use_silk_theme_by_default" value="true"/g' $GBSTEXML
+sed -i -e 's/"enable_keyboard_redesign" value="false"/"enable_keyboard_redesign" value="true"/g' $GBSTEXML
+sed -i -e 's/"enable_keyboard_redesign_theme" value="false"/"enable_keyboard_redesign_theme" value="true"/g' $GBSTEXML
+sed -i -e 's/"use_keyboard_redesign_by_default" value="false"/"use_keyboard_redesign_by_default" value="true"/g' $GBSTEXML
+sed -i -e 's/"use_keyboard_redesign_on_existing_theme_on_all_users" value="false"/"use_keyboard_redesign_on_existing_theme_on_all_users" value="true"/g' $GBSTEXML
+sed -i -e 's/"use_keyboard_redesign_on_existing_theme" value="false"/"use_keyboard_redesign_on_existing_theme" value="true"/g' $GBSTEXML
+if $BOOTMODE; then
+am force-stop com.google.android.inputmethod.latin >/dev/null
+am start -a android.intent.action.MAIN -n com.google.android.inputmethod.latin/com.google.android.apps.inputmethod.latin.firstrun.LatinFirstRunActivity >/dev/null
 fi
 UIP "$MSGDI"
 }
@@ -3900,7 +3953,7 @@ fi
 
 } #
 
-{ #Audio: VFX(P)/DSP/DTS/AN/AML/ACP
+{ #Audio: VFX(P)/DSP/DTS/AN/ACP/AML
 
 IPVFX() {
 if [ $BOOTMODE != true ] && [ -f $IPVLS/libv4a_fx_ics.so ]; then
@@ -8233,266 +8286,7 @@ UIP "$MSGDI"
 
 } #
 
-{ #Other: GPay/DFO/STZD/DDVFE/FA
-
-IPGPF() {
-if [ -f $IPSFW/com.android.nfc_extras.jar ] || find $SYSTEM -name *NfcNci* >/dev/null; then
-if $FINDGAPPS; then
-UCSA "Install GooglePay Fix $VIPGPF?" "" "$MSGNUS" "IPGPFS"
-fi
-fi
-}
-
-IPGPFS() {
-UIP "Installing GooglePay Fix $IAMM"
-if $MAGISK; then
-MODID="$IDGPF"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID$IPPSXBM
-MMPR -vc "GPay SQLite Fix" "$VIPGPF" "$VCIPGPF" "73sydney" "Applies the full SQLite fix for Google Pay"
-
-echo "(
-#!$MIPSB/sh
-# Do NOT assume where your module will be located.
-# ALWAYS use \$MODDIR if you need to know where this script
-# and module is placed.
-# This will make sure your module will still work
-# if Magisk change its mount point in the future
-MODDIR=\${0%/*}
-
-# set script to run SQL commands
-runsql=1
-
-# set logfile variable
-logfile=\"/cache/payfixfirstrun.log\"
-
-# wait till boot completed - thanks to jcmm11
-until [ \"\$(getprop sys.boot_completed)\" = 1 ]
-do
-sleep 1
-done
-
-echo \"System boot completed\" > \$logfile
-echo \"\" >> \$logfile
-
-while (true); do
-if [ -f \"$MIPSB/chmod\" ]; then
-echo \"$MIPSB/chmod....accessible\" >> \$logfile
-echo \"\" >> \$logfile
-break;
-fi
-sleep 1
-done
-
-# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
-while (true); do
-if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
-echo \"/data/data/com.google.android.gms/databases/dg.db....accessible\" >> \$logfile
-echo \"\" >> \$logfile
-break;
-fi
-sleep 1
-done
-
-# check where sqlite is
-if [ -f /data/data/com.termux/files/usr/bin/sqlite3 ] ; then
-sqlpath=/data/data/com.termux/files/usr/bin
-echo \"[termux] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile
-elif [ -f /data/data/com.keramidas.TitaniumBackup/files/sqlite3 ] ; then
-sqlpath=/data/data/com.keramidas.TitaniumBackup/files
-echo \"[titanium] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile	
-elif [ -f $MIPSB/sqlite3 ] ; then
-sqlpath=$MIPSB
-echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile
-elif [ -f $MIPSXB/sqlite3 ] ; then
-sqlpath=$MIPSXB
-echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile
-else 
-echo \"SQLite3 binary not found, please install a SQLite3 binary, without this the fix *may* not work\" >> \$logfile
-echo \"I provide an SQLite3 Universal Binary Magisk Module, and links to SQLite3 binaries for other architectures\" >> \$logfile
-echo \"at https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-
-# stop Google Pay
-$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
-if [ \$? -eq 0 ] ; then
-echo \"Google Pay stopped successfully\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"Google Pay NOT stopped successfully\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-
-if [ \$runsql -eq 1 ] ; then
-# set 777 permissions on dg.db
-$MIPSB/chmod 777 /data/data/com.google.android.gms/databases/dg.db
-perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
-if [ \$perms -eq 777 ]; then
-echo \"Chmod 777 command completed successfully\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"Chmod command FAILED\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-	
-# run sqlite 3 commands on dg.db
-\$sqlpath/sqlite3 /data/data/com.google.android.gms/databases/dg.db \"update main set c='0' where a like '%attest%';\"
-if [ \$? -eq 0 ] ; 	then
-echo \"SQLite3 command completed successfully\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"SQLite3 command FAILED\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-fi
-		
-# set 440 permissions on dg.db
-$MIPSB/chmod 440 /data/data/com.google.android.gms/databases/dg.db
-perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
-if [ \$perms -eq 440 ] ; then
-echo \"Chmod 440 command completed successfully\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"Chmod command FAILED\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-) &" > $MODPATH/$MODID/service.sh
-echo "# set payfixuninstall.log
-logfile=\"/cache/payfixuninstall.log\"
-
-# wait till boot completed - thanks to jcmm11
-until [ \"\$(getprop sys.boot_completed)\" = 1 ]
-do
-sleep 1
-done
-
-echo \"System boot completed\" > \$logfile
-echo \"\" > \$logfile
-
-while (true); do
-if [ -f \"$MIPSB/chmod\" ]; then
-echo \"$MIPSB/chmod....accessible\" > \$logfile
-echo \"\" > \$logfile
-break;
-fi
-sleep 1
-done
-
-# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
-while (true); do
-if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
-echo \"Database file dg.db....accessible\" > \$logfile
-echo \"\" > \$logfile
-break;
-fi
-sleep 1
-done
-
-# on to the main show............
-
-# stop Google Pay
-$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
-if [ \$? -eq 0 ] ; then
-echo \"Google Pay stopped successfully\" > \$logfile
-echo \"\" > \$logfile
-else
-echo \"Google Pay NOT stopped successfully\" > \$logfile
-echo \"\" > \$logfile
-fi
-sleep 2
-
-# set default 660 permissions on dg.db
-$MIPSB/chmod 660 /data/data/com.google.android.gms/databases/dg.db
-perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
-if [ \$perms -eq 660 ] ; then
-echo \"Chmod 660 command completed successfully\" > \$logfile
-echo \"Permissions reported as: \$perms\" > \$logfile
-echo \"\" > \$logfile
-else
-echo \"Chmod 660 command FAILED\" > \$logfile
-echo \"Permissions reported as: \$perms\" > \$logfile
-echo \"\" > \$logfile
-fi
-sleep 2
-
-# Don't modify anything after this
-if [ -f \$INFO ]; then
-while read LINE; do
-if [ \"\$(echo -n \$LINE | tail -c 1)\" == \"~\" ]; then
-continue
-elif [ -f \"\$LINE~\" ]; then
-mv -f \$LINE~ \$LINE
-else
-rm -f \$LINE
-while true; do
-LINE=\$(dirname \$LINE)
-[ \"\$(ls -A \$LINE 2>/dev/null)\" ] && break 1 || rm -rf \$LINE
-done
-fi
-done < \$INFO
-rm -f \$INFO
-fi" > $MODPATH/$MODID/uninstall.sh
-MHIDE -f "com.google.android.gsf_com.google.process.gapps com.google.android.gsf_com.google.process.gservices com.google.android.gms com.google.android.apps.walletnfcrel"
-if find $IPDD/*com.google.android.apps.walletnfcrel* >/dev/null; then
-UCSA "Clear Cache And Storage For Google Pay?" "Clear, I Understand The RISKS" "No, (It *May* Prevent The Module From Working)" "IPGPFA"
-fi
-cp -f $TMPDIR/SQLite3/sqlite3-$arch $MODPATH/$MODID$IPPSXBM/sqlite3
-SET_PERM_RM
-else
-$SQLITE3 $IPDD/com.google.android.gms/databases/dg.db "update main set c='0' where a like '%attest%';"
-if [ \$? -eq 0 ] ; 	then
-UIP "SQLite3 Command Completed Successfully"
-rm -rf $IPDD/com.google.android.gms/app_dg_cache
-cp -f $TMPDIR/GPay/dg.db $IPDD/com.google.android.gms/databases
-chmod 440 $IPDD/com.google.android.gms/databases/dg.db
-else
-UIP "SQLite3 Command Failed"
-fi
-fi
-WCANFTP -sq
-UIP "$MSGDI"
-}
-
-IPGPFA() { 
-UIP "Clearing Google Pay Caches..."
-for x in com.google.android.apps.walletnfcrel
-do pm clear $x >&2
-if [ $? -eq 0 ]; then
-UIP "$x: Cleared Successfully"
-else
-UIP "$x: Not Cleared Successfully"
-fi
-done
-}
-
-IPFPMC() {
-if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then UCSA "Install Force Play Market Certified $VIPFPMC?" "" "$MSGNUS" "IPFPMCS"; fi
-}
-
-IPFPMCS() {
-UIP "Installing Force Play Market Certified $IAMM" 
-if $MAGISK; then
-MODID="$IDFPMC"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID
-MBCCSERVICE "sed -i \"s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i \"s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml"
-MMPR -v "Force Play Market Certified" "$VIPFPMC" "Force Play Market Certified $FMR"; SET_PERM_RM
-fi
-if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then sed -i "s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i "s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; fi
-UIP "$MSGDI"
-}
+{ #Other: DFO/STZD/DDVFE/FA/SBU
 
 IPBDFFSOQSS() {
 if [ $MIUI != true ]; then
@@ -8783,9 +8577,30 @@ sed -i 's/enabled="3"/enabled="1"/g' $IPDSU/0/package-restrictions.xml
 UIP "Defrosting Done"
 }
 
+SBATTERYUSAGE() {
+if [ -f /sys/class/power_supply/battery/charge_full_design ] || [ -f /sys/class/power_supply/battery/constant_charge_current_max ]; then
+UCSA "Show Battery Usage?" "" "$MSGNUS" "SBATTERYUSAGES"
+fi
+}
+
+SBATTERYUSAGES() {
+cat /sys/class/power_supply/battery/uevent >> $TMPDIR/battery.stat
+BATTERYREMAINING="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_FULL")"
+if [ -f /sys/class/power_supply/battery/charge_full_design ]; then
+CURRENTMAXMAH="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_FULL_DESIGN")"
+elif [ -f /sys/class/power_supply/battery/constant_charge_current_max ]; then
+CURRENTMAXMAH="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CONSTANT_CHARGE_CURRENT_MAX")"
+fi
+let LOSTMAH=$CURRENTMAXMAH-$BATTERYREMAINING; let LOSTMAHALT=$CURRENTMAXMAH"000"-$BATTERYREMAINING
+MAHATTHEMOMENT="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_COUNTER")"
+MAHATTHEMOMENTCAPACITY="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CAPACITY")"
+BATTERYCHARGECYCLE="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CYCLE_COUNT")"
+UIP "Battery Remaining: $BATTERYREMAINING" "Lost mAh: $LOSTMAH Or $LOSTMAHALT" "mAh & % At The Moment: $MAHATTHEMOMENT ($MAHATTHEMOMENTCAPACITY%)" "Battery Charge Cycle: $BATTERYCHARGECYCLE"
+}
+
 } #
 
-{ #Safety Net & MHPC
+{ #SafetyNet/MHPC/GPay
 
 IPSNP() {
 if $MAGISK; then
@@ -9050,316 +8865,575 @@ fi
 }
 
 IPMHPCS() {
-UIP "Installing MagiskHide Props Config $IAMM"
-UZTPN "MHPC"
-MODID="$IDMHPC"; REMOVER -e-mm "$MODID" "system.prop"
-mkdir -p $MODPATH/$MODID$IPPSXBM
-mkdir -p $NVBASE/mhpc
-cp -f $TMPDIR/MHPC/props $MODPATH/$MODID$IPPSXBM
-cp -rf $TMPDIR/MHPC/common $MODPATH/$MODID
-cp -rf $TMPDIR/MHPC/printfiles $MODPATH/$MODID
-cp -f $TMPDIR/MHPC/common/propsconf_late $NVBASE/mhpc
-sed -i "s/BINPH=BIN_PLACEHOLDER/BIN=$BINPATH/g" $MODPATH/$MODID/common/util_functions.sh
-sed -i "s/MODVERSIONPH=VER_PLACEHOLDER/MODVERSION=v5.4.0/g" $MODPATH/$MODID/common/util_functions.sh
-sed -i "s/ADBPATHPH=ADB_PLACEHOLDER/ADBPATH=\/data\/adb/g" $MODPATH/$MODID$IPPSXBM/props
-sed -i "s/LATEFILEPH=LATE_PLACEHOLDER/LATEFILE=\/data\/adb\/mhpc\/propsconf_late/g" $MODPATH/$MODID$IPPSXBM/props
-MMPR -vc "MagiskHide Props Config" "$VIPMHPC" "$VCIPMHPC" "Didgeridoohan" "Change your device's fingerprint, to pass SafetyNet's CTS Profile check. Set/reset prop values set by MagiskHide. Change any prop values easily, and set your own custom props."
-echo "#!$MIPSB
-MODPATH=\${0%/*}
-BOOTSTAGE=\"post\"
-. \$MODPATH/common/util_functions.sh
-rm -rf \"\$MHPCPATH\"
-for ITEM in \$CACHEFILES; do rm -f \$CACHELOC/\$ITEM; done" > $MODPATH/$MODID/uninstall.sh
-echo "#!$MIPSB
+# UIP "Installing MagiskHide Props Config $IAMM"
+# UZTPN "MHPC"
+# MODID="$IDMHPC"; REMOVER -e-mm "$MODID" "system.prop"
+# mkdir -p $MODPATH/$MODID$IPPSXBM
+# mkdir -p $NVBASE/mhpc
+# cp -f $TMPDIR/MHPC/props $MODPATH/$MODID$IPPSXBM
+# cp -rf $TMPDIR/MHPC/common $MODPATH/$MODID
+# cp -rf $TMPDIR/MHPC/printfiles $MODPATH/$MODID
+# cp -f $TMPDIR/MHPC/common/propsconf_late $NVBASE/mhpc
+# sed -i "s/BINPH=BIN_PLACEHOLDER/BIN=$BINPATH/g" $MODPATH/$MODID/common/util_functions.sh
+# sed -i "s/MODVERSIONPH=VER_PLACEHOLDER/MODVERSION=v5.4.0/g" $MODPATH/$MODID/common/util_functions.sh
+# sed -i "s/ADBPATHPH=ADB_PLACEHOLDER/ADBPATH=\/data\/adb/g" $MODPATH/$MODID$IPPSXBM/props
+# sed -i "s/LATEFILEPH=LATE_PLACEHOLDER/LATEFILE=\/data\/adb\/mhpc\/propsconf_late/g" $MODPATH/$MODID$IPPSXBM/props
+# MMPR -vc "MagiskHide Props Config" "$VIPMHPC" "$VCIPMHPC" "Didgeridoohan" "Change your device's fingerprint, to pass SafetyNet's CTS Profile check. Set/reset prop values set by MagiskHide. Change any prop values easily, and set your own custom props."
+# echo "#!$MIPSB
+# MODPATH=\${0%/*}
+# BOOTSTAGE=\"post\"
+# . \$MODPATH/common/util_functions.sh
+# rm -rf \"\$MHPCPATH\"
+# for ITEM in \$CACHEFILES; do rm -f \$CACHELOC/\$ITEM; done" > $MODPATH/$MODID/uninstall.sh
+# echo "#!$MIPSB
 
-#anch1
-MODPATH=\${0%/*}
-BOOTSTAGE=\"post\"
+# #anch1
+# MODPATH=\${0%/*}
+# BOOTSTAGE=\"post\"
 
-# Variables
-MODULESPATH=\${MODPATH%/*}
-ADBPATH=\${MODULESPATH%/*}
-MHPCPATH=\$ADBPATH/mhpc
-LOGFILE=\$MHPCPATH/propsconf.log
-LASTLOGFILE=\$MHPCPATH/propsconf_last.log
-VLOGFILE=\$MHPCPATH/propsconf_boot_verbose.log
-VLASTLOGFILE=\$MHPCPATH/propsconf_boot_verbose_last.log
-RUNFILE=\$MHPCPATH/script_check
+# # Variables
+# MODULESPATH=\${MODPATH%/*}
+# ADBPATH=\${MODULESPATH%/*}
+# MHPCPATH=\$ADBPATH/mhpc
+# LOGFILE=\$MHPCPATH/propsconf.log
+# LASTLOGFILE=\$MHPCPATH/propsconf_last.log
+# VLOGFILE=\$MHPCPATH/propsconf_boot_verbose.log
+# VLASTLOGFILE=\$MHPCPATH/propsconf_boot_verbose_last.log
+# RUNFILE=\$MHPCPATH/script_check
 
-# Placeholder variables
-MODVERSION=v5.4.0
-LATEFILE=$MODPATH/$MODID/propsconf_late
+# # Placeholder variables
+# MODVERSION=v5.4.0
+# LATEFILE=$MODPATH/$MODID/propsconf_late
 
-# Saves the previous log (if available) and creates a new one
-if [ -f \"\$LOGFILE\" ]; then
-mv -f \$LOGFILE \$LASTLOGFILE
-fi
+# # Saves the previous log (if available) and creates a new one
+# if [ -f \"\$LOGFILE\" ]; then
+# mv -f \$LOGFILE \$LASTLOGFILE
+# fi
 
-# Run the boot logcat script
-. \$MODPATH/common/bootlog.sh
+# # Run the boot logcat script
+# . \$MODPATH/common/bootlog.sh
 
-#Start logging
-echo \"***************************************************\" > \$LOGFILE 2>&1
-echo \"********* MagiskHide Props Config \$MODVERSION ********\" >> \$LOGFILE 2>&1
-echo \"***************** By Didgeridoohan ***************\" >> \$LOGFILE 2>&1
-echo \"***************************************************\" >> \$LOGFILE 2>&1
-echo \"\"
-STRST=\"\$(date +\"%m-%d-%Y %H:%M:%S.%3N\") - Log start (regular execution).\"
-echo -e \$STRST >> \$LOGFILE 2>&1
-echo -e \$STRST > \$RUNFILE 2>&1
+# #Start logging
+# echo \"***************************************************\" > \$LOGFILE 2>&1
+# echo \"********* MagiskHide Props Config \$MODVERSION ********\" >> \$LOGFILE 2>&1
+# echo \"***************** By Didgeridoohan ***************\" >> \$LOGFILE 2>&1
+# echo \"***************************************************\" >> \$LOGFILE 2>&1
+# echo \"\"
+# STRST=\"\$(date +\"%m-%d-%Y %H:%M:%S.%3N\") - Log start (regular execution).\"
+# echo -e \$STRST >> \$LOGFILE 2>&1
+# echo -e \$STRST > \$RUNFILE 2>&1
 
-# Save default prop values
-getprop > \$MHPCPATH/defaultprops
-echo \"\" >> \$LOGFILE 2>&1
-echo -e \"\$(date +\"%Y-%m-%d %H:%M:%S.%3N\") - Saved default values\" >> \$LOGFILE 2>&1
+# # Save default prop values
+# getprop > \$MHPCPATH/defaultprops
+# echo \"\" >> \$LOGFILE 2>&1
+# echo -e \"\$(date +\"%Y-%m-%d %H:%M:%S.%3N\") - Saved default values\" >> \$LOGFILE 2>&1
 
-{
-# Creates/updates the script control file
-touch \$MHPCPATH/propsconf_postchk >> \$LOGFILE 2>&1
+# {
+# # Creates/updates the script control file
+# touch \$MHPCPATH/propsconf_postchk >> \$LOGFILE 2>&1
 
-# Logging
-log_handler() {
-echo \"\" >> \$LOGFILE 2>&1
-echo -e \"\$(date +\"%Y-%m-%d %H:%M:%S.%3N\") - \$1\" >> \$LOGFILE 2>&1
-}
+# # Logging
+# log_handler() {
+# echo \"\" >> \$LOGFILE 2>&1
+# echo -e \"\$(date +\"%Y-%m-%d %H:%M:%S.%3N\") - \$1\" >> \$LOGFILE 2>&1
+# }
 
-# Reset/disable file locations
-FILELOCLST=\"
-/data/media/0
-/data
-\$CACHELOC
-\"
+# # Reset/disable file locations
+# FILELOCLST=\"
+# /data/media/0
+# /data
+# \$CACHELOC
+# \"
 
-# Check if disable file is present
-DISABLEFILE=\"\"
-for ITEM in \$FILELOCLST; do
-if [ -f \"\$ITEM/disable_mhpc\" ]; then
-DISABLEFILE=\"\$ITEM/disable_mhpc\"
-break
-fi
-done
-if [ -f \"\$DISABLEFILE\" ]; then
-log_handler \"Disable file found. Disabling module...\"
-touch \$MODPATH/disable
-for ITEM in \$FILELOCLST; do
-rm -f \$ITEM/disable_mhpc
-done
-# Deletes the post-fs-data control file
-rm -f \$MHPCPATH/propsconf_postchk >> \$LOGFILE 2>&1
-# Reboot
-log_handler \"Rebooting.\"
-$MIPSB/reboot \"\" >> \$LOGFILE 2>&1 || setprop sys.powerctl reboot >> \$LOGFILE 2>&1
-fi
+# # Check if disable file is present
+# DISABLEFILE=\"\"
+# for ITEM in \$FILELOCLST; do
+# if [ -f \"\$ITEM/disable_mhpc\" ]; then
+# DISABLEFILE=\"\$ITEM/disable_mhpc\"
+# break
+# fi
+# done
+# if [ -f \"\$DISABLEFILE\" ]; then
+# log_handler \"Disable file found. Disabling module...\"
+# touch \$MODPATH/disable
+# for ITEM in \$FILELOCLST; do
+# rm -f \$ITEM/disable_mhpc
+# done
+# # Deletes the post-fs-data control file
+# rm -f \$MHPCPATH/propsconf_postchk >> \$LOGFILE 2>&1
+# # Reboot
+# log_handler \"Rebooting.\"
+# $MIPSB/reboot \"\" >> \$LOGFILE 2>&1 || setprop sys.powerctl reboot >> \$LOGFILE 2>&1
+# fi
 
-# Check for the boot script and restore backup if deleted, or if the reset file is present
-RESETFILE=\"\"
-for ITEM in \$FILELOCLST; do
-if [ -f \"\$ITEM/reset_mhpc\" ]; then
-RESETFILE=\"\$ITEM/reset_mhpc\"
-break
-fi
-done
-if [ ! -s \"\$LATEFILE\" ] || [ -f \"\$RESETFILE\" ]; then
-if [ -f \"\$RESETFILE\" ]; then
-log_handler \"Reset file found.\"
-RSTTXT=\"Resetting\"
-for ITEM in \$FILELOCLST; do
-rm -f \$ITEM/reset_mhpc
-done
-else
-RSTTXT=\"Restoring\"
-if [ -f \"\$LATEFILE\" ]; then
-log_handler \"The module settings file was empty.\"
-else
-log_handler \"The module settings file could not be found.\"
-fi
-fi
-log_handler \"\$RSTTXT module settings file (\${LATEFILE}).\"
-cp -af \$MODPATH/common/propsconf_late \$LATEFILE >> \$LOGFILE 2>&1
-rm -f \$MODPATH/system.prop >> \$LOGFILE 2>&1
-fi
+# # Check for the boot script and restore backup if deleted, or if the reset file is present
+# RESETFILE=\"\"
+# for ITEM in \$FILELOCLST; do
+# if [ -f \"\$ITEM/reset_mhpc\" ]; then
+# RESETFILE=\"\$ITEM/reset_mhpc\"
+# break
+# fi
+# done
+# if [ ! -s \"\$LATEFILE\" ] || [ -f \"\$RESETFILE\" ]; then
+# if [ -f \"\$RESETFILE\" ]; then
+# log_handler \"Reset file found.\"
+# RSTTXT=\"Resetting\"
+# for ITEM in \$FILELOCLST; do
+# rm -f \$ITEM/reset_mhpc
+# done
+# else
+# RSTTXT=\"Restoring\"
+# if [ -f \"\$LATEFILE\" ]; then
+# log_handler \"The module settings file was empty.\"
+# else
+# log_handler \"The module settings file could not be found.\"
+# fi
+# fi
+# log_handler \"\$RSTTXT module settings file (\${LATEFILE}).\"
+# cp -af \$MODPATH/common/propsconf_late \$LATEFILE >> \$LOGFILE 2>&1
+# rm -f \$MODPATH/system.prop >> \$LOGFILE 2>&1
+# fi
 
-# Loading module settings
-. \$LATEFILE
+# # Loading module settings
+# . \$LATEFILE
 
-# Edits prop values if set for post-fs-data
-if [ \"\$OPTIONBOOT\" == 1 ] || [ \"\$OPTIONBOOT\" != 1 -a \"\$PRINTSTAGE\" == 1 ] || [ \"\$OPTIONBOOT\" != 1 -a \"\$PATCHSTAGE\" == 1 ] || [ \"\$OPTIONBOOT\" != 1 -a \"\$SIMSTAGE\" == 1 ] || [ \"\$CUSTOMPROPSPOST\" ] || [ \"\$DELETEPROPS\" ]; then
-# Load functions
-. \$MODPATH/common/util_functions.sh
-echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
-log_handler \"Editing prop values in post-fs-data mode.\"
-if [ \"\$OPTIONBOOT\" == 1 ]; then
-# Setting/Changing fingerprint
-if [ \"\$PRINTSTAGE\" == 0 ]; then
-print_edit \"none\"
-fi
-# Setting/Changing security patch date
-if [ \"\$PATCHSTAGE\" == 0 ]; then
-patch_edit \"none\"
-fi
-# Forced basic attestation
-if [ \"\$BASICATTEST\" == 1 ]; then
-forced_basic \"none\"
-fi
-# Setting device simulation props
-if [ \"\$SIMSTAGE\" == 0 ]; then
-dev_sim_edit \"none\"
-fi
-# Setting custom props
-custom_edit \"CUSTOMPROPS\"
-fi
-# Edit fingerprint if set for post-fs-data
-if [ \"\$OPTIONBOOT\" != 1 ] && [ \"\$PRINTSTAGE\" == 1 ]; then
-print_edit \"none\"
-fi
-# Edit security patch date if set for post-fs-data
-if [ \"\$OPTIONBOOT\" != 1 ] && [ \"\$PATCHSTAGE\" == 1 ]; then
-patch_edit \"none\"
-fi
-# Edit simulation props if set for post-fs-data
-if [ \"\$OPTIONBOOT\" != 1 ] && [ \"\$SIMSTAGE\" == 1 ]; then
-dev_sim_edit \"none\"
-fi
-# Edit custom props set for post-fs-data
-custom_edit \"CUSTOMPROPSPOST\"
-# Deleting props
-prop_del
-echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
-fi
+# # Edits prop values if set for post-fs-data
+# if [ \"\$OPTIONBOOT\" == 1 ] || [ \"\$OPTIONBOOT\" != 1 -a \"\$PRINTSTAGE\" == 1 ] || [ \"\$OPTIONBOOT\" != 1 -a \"\$PATCHSTAGE\" == 1 ] || [ \"\$OPTIONBOOT\" != 1 -a \"\$SIMSTAGE\" == 1 ] || [ \"\$CUSTOMPROPSPOST\" ] || [ \"\$DELETEPROPS\" ]; then
+# # Load functions
+# . \$MODPATH/common/util_functions.sh
+# echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
+# log_handler \"Editing prop values in post-fs-data mode.\"
+# if [ \"\$OPTIONBOOT\" == 1 ]; then
+# # Setting/Changing fingerprint
+# if [ \"\$PRINTSTAGE\" == 0 ]; then
+# print_edit \"none\"
+# fi
+# # Setting/Changing security patch date
+# if [ \"\$PATCHSTAGE\" == 0 ]; then
+# patch_edit \"none\"
+# fi
+# # Forced basic attestation
+# if [ \"\$BASICATTEST\" == 1 ]; then
+# forced_basic \"none\"
+# fi
+# # Setting device simulation props
+# if [ \"\$SIMSTAGE\" == 0 ]; then
+# dev_sim_edit \"none\"
+# fi
+# # Setting custom props
+# custom_edit \"CUSTOMPROPS\"
+# fi
+# # Edit fingerprint if set for post-fs-data
+# if [ \"\$OPTIONBOOT\" != 1 ] && [ \"\$PRINTSTAGE\" == 1 ]; then
+# print_edit \"none\"
+# fi
+# # Edit security patch date if set for post-fs-data
+# if [ \"\$OPTIONBOOT\" != 1 ] && [ \"\$PATCHSTAGE\" == 1 ]; then
+# patch_edit \"none\"
+# fi
+# # Edit simulation props if set for post-fs-data
+# if [ \"\$OPTIONBOOT\" != 1 ] && [ \"\$SIMSTAGE\" == 1 ]; then
+# dev_sim_edit \"none\"
+# fi
+# # Edit custom props set for post-fs-data
+# custom_edit \"CUSTOMPROPSPOST\"
+# # Deleting props
+# prop_del
+# echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
+# fi
 
-FNSH=\"\n\$(date +\"%Y-%m-%d %H:%M:%S:%N\") - post-fs-data.sh module script finished.\"
-echo -e \$FNSH >> \$LOGFILE 2>&1
-echo -e \$FNSH >> \$RUNFILE 2>&1
+# FNSH=\"\n\$(date +\"%Y-%m-%d %H:%M:%S:%N\") - post-fs-data.sh module script finished.\"
+# echo -e \$FNSH >> \$LOGFILE 2>&1
+# echo -e \$FNSH >> \$RUNFILE 2>&1
 
-# Deletes the post-fs-data control file
-rm -f \$MHPCPATH/propsconf_postchk >> \$LOGFILE 2>&1
-} &" > $MODPATH/$MODID/post-fs-data.sh
-echo "#!$MIPSB
+# # Deletes the post-fs-data control file
+# rm -f \$MHPCPATH/propsconf_postchk >> \$LOGFILE 2>&1
+# } &" > $MODPATH/$MODID/post-fs-data.sh
+# echo "#!$MIPSB
 
-MODPATH=\${0%/*}
-BOOTSTAGE=\"late\"
+# MODPATH=\${0%/*}
+# BOOTSTAGE=\"late\"
 
-# Variables
-MODULESPATH=\${MODPATH%/*}
-ADBPATH=\${MODULESPATH%/*}
-MHPCPATH=\$ADBPATH/mhpc
+# # Variables
+# MODULESPATH=\${MODPATH%/*}
+# ADBPATH=\${MODULESPATH%/*}
+# MHPCPATH=\$ADBPATH/mhpc
 
-TMP_WAIT=0
-while [ ! -f \"\$MHPCPATH/propsconf_postchk\" ] && [ \"\$TMP_WAIT\" -lt 10 ]; do
-sleep 1
-TMP_WAIT=\$((\$TMP_WAIT + 1))
-done
+# TMP_WAIT=0
+# while [ ! -f \"\$MHPCPATH/propsconf_postchk\" ] && [ \"\$TMP_WAIT\" -lt 10 ]; do
+# sleep 1
+# TMP_WAIT=\$((\$TMP_WAIT + 1))
+# done
 
-# Load functions
-. \$MODPATH/common/util_functions.sh
+# # Load functions
+# . \$MODPATH/common/util_functions.sh
 
-log_script_chk \"Running service.sh module script.\"
+# log_script_chk \"Running service.sh module script.\"
 
-# Resets the reboot and print update variables in propsconf_late
-replace_fn REBOOTCHK 1 0 \$LATEFILE
-replace_fn PRINTCHK 1 0 \$LATEFILE
+# # Resets the reboot and print update variables in propsconf_late
+# replace_fn REBOOTCHK 1 0 \$LATEFILE
+# replace_fn PRINTCHK 1 0 \$LATEFILE
 
-# Retrieving default values from props file
-log_handler \"Saving device default values.\"
-default_save
-log_handler \"Default values saved to \$LATEFILE.\"
+# # Retrieving default values from props file
+# log_handler \"Saving device default values.\"
+# default_save
+# log_handler \"Default values saved to \$LATEFILE.\"
 
-# Checks for the Universal SafetyNet Fix module and similar modules editing the device fingerprint
-TMPUSNF=false
-for USNF in \$USNFLIST; do
-if [ -d \"\$MODULESPATH/\$USNF\" ]; then
-if [ ! -f \"\$MODULESPATH/\$USNF/disable\" ]; then
-NAME=\$(get_file_value \$MODULESPATH/\$USNF/module.prop \"name=\")
-log_handler \"Magisk module '\$NAME' installed (modifies the device fingerprint).\"
-TMPUSNF=true
-fi
-fi
-done
-if [ \"\$TMPUSNF\" == \"true\" ]; then
-replace_fn FINGERPRINTENB 1 0 \$LATEFILE
-replace_fn PRINTMODULE 0 1 \$LATEFILE
-log_handler \"Fingerprint modification disabled.\"
-# Reset current fingerprint if set
-if [ \"\$MODULEFINGERPRINT\" ]; then
-log_handler \"Resetting current fingerprint.\"
-reset_print
-force_reboot
-fi
-else
-replace_fn FINGERPRINTENB 0 1 \$LATEFILE
-replace_fn PRINTMODULE 1 0 \$LATEFILE
-fi
+# # Checks for the Universal SafetyNet Fix module and similar modules editing the device fingerprint
+# TMPUSNF=false
+# for USNF in \$USNFLIST; do
+# if [ -d \"\$MODULESPATH/\$USNF\" ]; then
+# if [ ! -f \"\$MODULESPATH/\$USNF/disable\" ]; then
+# NAME=\$(get_file_value \$MODULESPATH/\$USNF/module.prop \"name=\")
+# log_handler \"Magisk module '\$NAME' installed (modifies the device fingerprint).\"
+# TMPUSNF=true
+# fi
+# fi
+# done
+# if [ \"\$TMPUSNF\" == \"true\" ]; then
+# replace_fn FINGERPRINTENB 1 0 \$LATEFILE
+# replace_fn PRINTMODULE 0 1 \$LATEFILE
+# log_handler \"Fingerprint modification disabled.\"
+# # Reset current fingerprint if set
+# if [ \"\$MODULEFINGERPRINT\" ]; then
+# log_handler \"Resetting current fingerprint.\"
+# reset_print
+# force_reboot
+# fi
+# else
+# replace_fn FINGERPRINTENB 0 1 \$LATEFILE
+# replace_fn PRINTMODULE 1 0 \$LATEFILE
+# fi
 
-# Checks for configuration file
-config_file
+# # Checks for configuration file
+# config_file
 
-# Edits prop values if set for late_start service
-echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
-log_handler \"Editing prop values in late_start service mode.\"
-if [ \"\$OPTIONBOOT\" == 2 ]; then
-# ---Setting/Changing fingerprint---
-if [ \"\$PRINTSTAGE\" == 0 ]; then
-print_edit \"none\"
-fi
-# ---Setting/Changing security patch date---
-if [ \"\$PATCHSTAGE\" == 0 ]; then
-patch_edit \"none\"
-fi
-# Forced basic attestation
-if [ \"\$BASICATTEST\" == 1 ]; then
-forced_basic \"none\"
-fi
-# ---Setting device simulation props---
-if [ \"\$SIMSTAGE\" == 0 ]; then
-dev_sim_edit \"none\"
-fi
-# ---Setting custom props---
-custom_edit \"CUSTOMPROPS\"
-fi
-# Edit fingerprint if set for late_start service
-if [ \"\$OPTIONBOOT\" != 2 ] && [ \"\$PRINTSTAGE\" == 2 ]; then
-print_edit \"none\"
-fi
-# Edit security patch date if set for late_start service
-if [ \"\$OPTIONBOOT\" != 2 ] && [ \"\$PATCHSTAGE\" == 2 ]; then
-patch_edit \"none\"
-fi
-# Edit simulation props if set for late_start service
-if [ \"\$OPTIONBOOT\" != 2 ] && [ \"\$SIMSTAGE\" == 2 ]; then
-dev_sim_edit \"none\"
-fi
-# Edit custom props set for late_start service
-custom_edit \"CUSTOMPROPSLATE\"
-custom_edit \"CUSTOMPROPSDELAY\"
+# # Edits prop values if set for late_start service
+# echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
+# log_handler \"Editing prop values in late_start service mode.\"
+# if [ \"\$OPTIONBOOT\" == 2 ]; then
+# # ---Setting/Changing fingerprint---
+# if [ \"\$PRINTSTAGE\" == 0 ]; then
+# print_edit \"none\"
+# fi
+# # ---Setting/Changing security patch date---
+# if [ \"\$PATCHSTAGE\" == 0 ]; then
+# patch_edit \"none\"
+# fi
+# # Forced basic attestation
+# if [ \"\$BASICATTEST\" == 1 ]; then
+# forced_basic \"none\"
+# fi
+# # ---Setting device simulation props---
+# if [ \"\$SIMSTAGE\" == 0 ]; then
+# dev_sim_edit \"none\"
+# fi
+# # ---Setting custom props---
+# custom_edit \"CUSTOMPROPS\"
+# fi
+# # Edit fingerprint if set for late_start service
+# if [ \"\$OPTIONBOOT\" != 2 ] && [ \"\$PRINTSTAGE\" == 2 ]; then
+# print_edit \"none\"
+# fi
+# # Edit security patch date if set for late_start service
+# if [ \"\$OPTIONBOOT\" != 2 ] && [ \"\$PATCHSTAGE\" == 2 ]; then
+# patch_edit \"none\"
+# fi
+# # Edit simulation props if set for late_start service
+# if [ \"\$OPTIONBOOT\" != 2 ] && [ \"\$SIMSTAGE\" == 2 ]; then
+# dev_sim_edit \"none\"
+# fi
+# # Edit custom props set for late_start service
+# custom_edit \"CUSTOMPROPSLATE\"
+# custom_edit \"CUSTOMPROPSDELAY\"
 
-# Edit MagiskHide sensitive values
-if [ \"\$PROPEDIT\" == 1 ]; then
-log_handler \"Changing sensitive props.\"
-for ITEM in \$PROPSLIST; do
-PROP=\$(get_prop_type \$ITEM)
-REPROP=\$(echo \"RE\${PROP}\" | tr '[:lower:]' '[:upper:]')
-MODULEPROP=\$(echo \"MODULE\${PROP}\" | tr '[:lower:]' '[:upper:]')
-if [ \"\$(eval \"echo \\$\$REPROP\")\" == \"true\" ]; then
-log_handler \"Changing/writing \$ITEM.\"
-resetprop -nv \$ITEM \"\$(eval \"echo \\$\$MODULEPROP\")\" >> \$LOGFILE 2>&1
-fi
-done
-stop
-start
-fi
-echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
+# # Edit MagiskHide sensitive values
+# if [ \"\$PROPEDIT\" == 1 ]; then
+# log_handler \"Changing sensitive props.\"
+# for ITEM in \$PROPSLIST; do
+# PROP=\$(get_prop_type \$ITEM)
+# REPROP=\$(echo \"RE\${PROP}\" | tr '[:lower:]' '[:upper:]')
+# MODULEPROP=\$(echo \"MODULE\${PROP}\" | tr '[:lower:]' '[:upper:]')
+# if [ \"\$(eval \"echo \\$\$REPROP\")\" == \"true\" ]; then
+# log_handler \"Changing/writing \$ITEM.\"
+# resetprop -nv \$ITEM \"\$(eval \"echo \\$\$MODULEPROP\")\" >> \$LOGFILE 2>&1
+# fi
+# done
+# stop
+# start
+# fi
+# echo -e \"\n----------------------------------------\" >> \$LOGFILE 2>&1
 
-# Get currently saved values
-log_handler \"Checking current values.\"
-curr_values
-# Check system.prop content
-system_prop_cont
+# # Get currently saved values
+# log_handler \"Checking current values.\"
+# curr_values
+# # Check system.prop content
+# system_prop_cont
 
-log_script_chk \"service.sh module script finished.\"" > $MODPATH/$MODID/service.sh
-SET_PERM_RM
-UIP "$MSGDI"
+# log_script_chk \"service.sh module script finished.\"" > $MODPATH/$MODID/service.sh
+# SET_PERM_RM
+# UIP "$MSGDI"
+UZTPN "MHPC"; UNIVERSALUNZIP
 WCANFTP -bb
 UIP "Usage:" "Run \"su; props\" On Terminal In BootMode"
+}
+
+IPFPMC() {
+if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then UCSA "Install Force Play Market Certified $VIPFPMC?" "" "$MSGNUS" "IPFPMCS"; fi
+}
+
+IPFPMCS() {
+UIP "Installing Force Play Market Certified $IAMM" 
+if $MAGISK; then
+MODID="$IDFPMC"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MBCCSERVICE "sed -i \"s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i \"s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml"
+MMPR -v "Force Play Market Certified" "$VIPFPMC" "Force Play Market Certified $FMR"; SET_PERM_RM
+fi
+if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then sed -i "s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i "s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; fi
+UIP "$MSGDI"
+}
+
+IPGPF() {
+if [ -f $IPSFW/com.android.nfc_extras.jar ] || find $SYSTEM -name *NfcNci* >/dev/null; then
+if $FINDGAPPS; then
+UCSA "Install GooglePay Fix $VIPGPF?" "" "$MSGNUS" "IPGPFS"
+fi
+fi
+}
+
+IPGPFS() {
+UIP "Installing GooglePay Fix $IAMM"
+if $MAGISK; then
+MODID="$IDGPF"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID$IPPSXBM
+MMPR -vc "GPay SQLite Fix" "$VIPGPF" "$VCIPGPF" "73sydney" "Applies the full SQLite fix for Google Pay"
+echo "(
+#!$MIPSB/sh
+# Do NOT assume where your module will be located.
+# ALWAYS use \$MODDIR if you need to know where this script
+# and module is placed.
+# This will make sure your module will still work
+# if Magisk change its mount point in the future
+MODDIR=\${0%/*}
+
+# set script to run SQL commands
+runsql=1
+
+# set logfile variable
+logfile=\"/cache/payfixfirstrun.log\"
+
+# wait till boot completed - thanks to jcmm11
+until [ \"\$(getprop sys.boot_completed)\" = 1 ]
+do
+sleep 1
+done
+
+echo \"System boot completed\" > \$logfile
+echo \"\" >> \$logfile
+
+while (true); do
+if [ -f \"$MIPSB/chmod\" ]; then
+echo \"$MIPSB/chmod....accessible\" >> \$logfile
+echo \"\" >> \$logfile
+break;
+fi
+sleep 1
+done
+
+# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
+while (true); do
+if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
+echo \"/data/data/com.google.android.gms/databases/dg.db....accessible\" >> \$logfile
+echo \"\" >> \$logfile
+break;
+fi
+sleep 1
+done
+
+# check where sqlite is
+if [ -f /data/data/com.termux/files/usr/bin/sqlite3 ] ; then
+sqlpath=/data/data/com.termux/files/usr/bin
+echo \"[termux] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile
+elif [ -f /data/data/com.keramidas.TitaniumBackup/files/sqlite3 ] ; then
+sqlpath=/data/data/com.keramidas.TitaniumBackup/files
+echo \"[titanium] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile	
+elif [ -f $MIPSB/sqlite3 ] ; then
+sqlpath=$MIPSB
+echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile
+elif [ -f $MIPSXB/sqlite3 ] ; then
+sqlpath=$MIPSXB
+echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile
+else 
+echo \"SQLite3 binary not found, please install a SQLite3 binary, without this the fix *may* not work\" >> \$logfile
+echo \"I provide an SQLite3 Universal Binary Magisk Module, and links to SQLite3 binaries for other architectures\" >> \$logfile
+echo \"at https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+
+# stop Google Pay
+$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
+if [ \$? -eq 0 ] ; then
+echo \"Google Pay stopped successfully\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"Google Pay NOT stopped successfully\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+
+if [ \$runsql -eq 1 ]; then
+# set 777 permissions on dg.db
+$MIPSB/chmod 777 /data/data/com.google.android.gms/databases/dg.db
+perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
+if [ \$perms -eq 777 ]; then
+echo \"Chmod 777 command completed successfully\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"Chmod command FAILED\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+	
+# run sqlite 3 commands on dg.db
+\$sqlpath/sqlite3 /data/data/com.google.android.gms/databases/dg.db \"update main set c='0' where a like '%attest%';\"
+if [ \$? -eq 0 ] ; 	then
+echo \"SQLite3 command completed successfully\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"SQLite3 command FAILED\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+fi
+		
+# set 440 permissions on dg.db
+$MIPSB/chmod 440 /data/data/com.google.android.gms/databases/dg.db
+perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
+if [ \$perms -eq 440 ] ; then
+echo \"Chmod 440 command completed successfully\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"Chmod command FAILED\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+) &" > $MODPATH/$MODID/service.sh
+echo "# set payfixuninstall.log
+logfile=\"/cache/payfixuninstall.log\"
+
+# wait till boot completed - thanks to jcmm11
+until [ \"\$(getprop sys.boot_completed)\" = 1 ]
+do
+sleep 1
+done
+
+echo \"System boot completed\" > \$logfile
+echo \"\" > \$logfile
+
+while (true); do
+if [ -f \"$MIPSB/chmod\" ]; then
+echo \"$MIPSB/chmod....accessible\" > \$logfile
+echo \"\" > \$logfile
+break;
+fi
+sleep 1
+done
+
+# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
+while (true); do
+if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
+echo \"Database file dg.db....accessible\" > \$logfile
+echo \"\" > \$logfile
+break;
+fi
+sleep 1
+done
+
+# on to the main show............
+
+# stop Google Pay
+$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
+if [ \$? -eq 0 ] ; then
+echo \"Google Pay stopped successfully\" > \$logfile
+echo \"\" > \$logfile
+else
+echo \"Google Pay NOT stopped successfully\" > \$logfile
+echo \"\" > \$logfile
+fi
+sleep 2
+
+# set default 660 permissions on dg.db
+$MIPSB/chmod 660 /data/data/com.google.android.gms/databases/dg.db
+perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
+if [ \$perms -eq 660 ] ; then
+echo \"Chmod 660 command completed successfully\" > \$logfile
+echo \"Permissions reported as: \$perms\" > \$logfile
+echo \"\" > \$logfile
+else
+echo \"Chmod 660 command FAILED\" > \$logfile
+echo \"Permissions reported as: \$perms\" > \$logfile
+echo \"\" > \$logfile
+fi
+sleep 2
+
+# Don't modify anything after this
+if [ -f \$INFO ]; then
+while read LINE; do
+if [ \"\$(echo -n \$LINE | tail -c 1)\" == \"~\" ]; then
+continue
+elif [ -f \"\$LINE~\" ]; then
+mv -f \$LINE~ \$LINE
+else
+rm -f \$LINE
+while true; do
+LINE=\$(dirname \$LINE)
+[ \"\$(ls -A \$LINE 2>/dev/null)\" ] && break 1 || rm -rf \$LINE
+done
+fi
+done < \$INFO
+rm -f \$INFO
+fi" > $MODPATH/$MODID/uninstall.sh
+MHIDE -f "com.google.android.gsf_com.google.process.gapps com.google.android.gsf_com.google.process.gservices com.google.android.gms com.google.android.apps.walletnfcrel"
+if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
+UCSA "Clear Cache And Storage For Google Pay?" "Clear, I Understand The RISKS" "No, (It *May* Prevent The Module From Working)" "IPGPFA"
+fi
+cp -f $TMPDIR/SQLite3/sqlite3-$arch $MODPATH/$MODID$IPPSXBM/sqlite3
+SET_PERM_RM; WCANFTP -sq
+fi
+if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
+$SQLITE3 $IPDD/com.google.android.gms/databases/dg.db "update main set c='0' where a like '%attest%';"
+if [ $? -eq 0 ]; then
+UIP "SQLite3 Command Completed Successfully"
+rm -rf $IPDD/com.google.android.gms/app_dg_cache
+cp -f $TMPDIR/GPay/dg.db $IPDD/com.google.android.gms/databases
+chmod 440 $IPDD/com.google.android.gms/databases/dg.db
+else
+UIP "SQLite3 Command Failed"
+fi
+fi
+UIP "$MSGDI"
+}
+
+IPGPFA() { 
+UIP "Clearing Google Pay Caches..."
+for x in com.google.android.apps.walletnfcrel
+do pm clear $x >&2
+if [ $? -eq 0 ]; then
+UIP "$x: Cleared Successfully"
+else
+UIP "$x: Not Cleared Successfully"
+fi
+done
 }
 
 } #
@@ -10001,7 +10075,7 @@ UIP "$MSGDI"
 
 } #
 
-{ #Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS
+{ #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 
 IPFGS() {
 if $MAGISK; then
@@ -10985,27 +11059,6 @@ gms="dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1"
 if [ "$gms" = com.google.android.gms ]; then UIP "Google Play Services Is Not Optimized"; else UIP "Google Play Services Is Optimized"; fi
 }
 
-SBATTERYUSAGE() {
-if [ -f /sys/class/power_supply/battery/charge_full_design ] || [ -f /sys/class/power_supply/battery/constant_charge_current_max ]; then
-UCSA "Show Battery Usage?" "" "$MSGNUS" "SBATTERYUSAGES"
-fi
-}
-
-SBATTERYUSAGES() {
-cat /sys/class/power_supply/battery/uevent >> $TMPDIR/battery.stat
-BATTERYREMAINING="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_FULL")"
-if [ -f /sys/class/power_supply/battery/charge_full_design ]; then
-CURRENTMAXMAH="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_FULL_DESIGN")"
-elif [ -f /sys/class/power_supply/battery/constant_charge_current_max ]; then
-CURRENTMAXMAH="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CONSTANT_CHARGE_CURRENT_MAX")"
-fi
-let LOSTMAH=$CURRENTMAXMAH-$BATTERYREMAINING; let LOSTMAHALT=$CURRENTMAXMAH"000"-$BATTERYREMAINING
-MAHATTHEMOMENT="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_COUNTER")"
-MAHATTHEMOMENTCAPACITY="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CAPACITY")"
-BATTERYCHARGECYCLE="$(GET_FILE_PROP "$TMPDIR/battery.stat" "POWER_SUPPLY_CYCLE_COUNT")"
-UIP "Battery Remaining: $BATTERYREMAINING" "Lost mAh: $LOSTMAH Or $LOSTMAHALT" "mAh & % At The Moment: $MAHATTHEMOMENT ($MAHATTHEMOMENTCAPACITY%)" "Battery Charge Cycle: $BATTERYCHARGECYCLE"
-}
-
 IPUSGP() {
 if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/USGP ]; then
 MSGDELIMITER; UIP "$MSGFI Unlimited Storage, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
@@ -11212,6 +11265,7 @@ IPPSHNB
 IPGBNBS
 IPGBRC
 IPGBT
+IPGBSTE
 IPCINNI
 IPGPPM
 IPRUI
@@ -11301,20 +11355,21 @@ IPMMFRM
 }
 
 OTHER_PRESETS() {
-IPGPF
-IPFPMC
 IPBDFFSOQSS
 IPSTZD
 IPDDVFE
 IPFPA
 IPFSLFM
 UFAAPP
+SBATTERYUSAGE
 }
 
 SAFETY_NET_AND_MHPC_PRESETS() {
 IPSNP
 IPSNET
+IPFPMC
 IPMHPC
+IPGPF
 }
 
 RIRU_AND_EDX_LS_POSED_PRESETS() {
@@ -11342,7 +11397,6 @@ IPCLEDLO
 IPLEDLA
 IPUGMSD
 SUGMSDO
-SBATTERYUSAGE
 IPUSGP
 IPAS
 IPGPUR
@@ -11350,20 +11404,20 @@ IPVS
 }
 
 PRESETS() {
-if [ -d $MODPATH ] && $MAGISK && $MMUPDC; then UCSA "Checking Update?" "$MSGEFTC" "$MSGNUS" "MMUPD_LIST"; fi
+if [ -d $MODPATH ] && [ $MAGISKFIRSTTIME != true ] && $MAGISK && $MMUPDC; then UCSA "Checking Update?" "$MSGEFTC" "$MSGNUS" "MMUPD_LIST"; fi
 if $NEWDESIGN; then
 MSGDELIMITER; UIP "UI: Pills/NavBar/Gboard Themes" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UI_PRESETS; fi
 MSGDELIMITER; UIP "Apps: GFU/GSF/SL/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi
-MSGDELIMITER; UIP "Audio: VFX(P)/DSP/DTS/AN/AML/ACP" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then AUDIO_PRESETS; fi
+MSGDELIMITER; UIP "Audio: VFX(P)/DSP/DTS/AN/ACP/AML" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then AUDIO_PRESETS; fi
 if $BOOTMODE; then REMOVAL_PRESETS; elif [ $BOOTMODE != true ]; then MSGDELIMITER; UIP "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then REMOVAL_PRESETS; fi; fi
 if $TESTMODE; then MSGDELIMITER; UIP "Test/Coming Soon" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then TEST_COMING_SOON_PRESETS; fi; fi
 MSGDELIMITER; UIP "Net: GPS/TTL/DNS/WB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then NET_PRESETS; fi
 MSGDELIMITER; UIP "Utilities: BB/ZSigner/SELC/ASTE/CC" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UTILITIES_PRESETS; fi
-MSGDELIMITER; UIP "Other: GPay/DFO/STZD/DDVFE/FA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then OTHER_PRESETS; fi
+MSGDELIMITER; UIP "Other: DFO/STZD/DDVFE/FA/SBU" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then OTHER_PRESETS; fi
 IPHF
-if $MAGISK; then MSGDELIMITER; UIP "Safety Net & MHPC" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; if $AOREO || $APIE || $ATEN || $AELEVEN; then MSGDELIMITER; UIP "Riru & Edx/LS Posed" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_EDX_LS_POSED_PRESETS; fi; fi; fi
+if $MAGISK; then MSGDELIMITER; UIP "SafetyNet/MHPC/GPay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; if $AOREO || $APIE || $ATEN || $AELEVEN; then MSGDELIMITER; UIP "Riru & Edx/LS Posed" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_EDX_LS_POSED_PRESETS; fi; fi; fi
 if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi
-MSGDELIMITER; UIP "Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then MSGNUS="(/)"; TWEAKS_PRESETS; fi
+MSGDELIMITER; UIP "Tweaks: FGS/BP/LED/UGMSD/USGP/VS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then MSGNUS="(/)"; TWEAKS_PRESETS; fi
 elif $OLDDESIGN; then
 UI_PRESETS
 APPS_PRESETS

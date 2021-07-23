@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 18.07.21 (47) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/18.07.2021/AIOPFMD-18.07.21-%2847%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1d0Iz514495Ui3H15JgpZgRn4NI8fRRFy/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/42">TG</a>
+* Версия AIOPFMD: 23.07.21 (48) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.07.2021/AIOPFMD-23.07.21-%2848%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1zF0lv-8eP8QXE-Fp-o5oxNRCubu8mkMJ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/43">TG</a>
 * Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -57,6 +57,13 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 23.07.21 (48) ####
+* Много логических фиксов и улучшения по GPay SQLite Fix;
+* Добавлена установка GBoard Silk Theme Enabler v0.4 - как ММ и нет с возможность отката при удалении/отключении как и во всех патчах которые делал я (в ориге такого нет но меня же НИКТО НЕ СЛЫШИТ);
+* MagiskHide Props Config опять ставится из под своего архива - иначе во многих случаях отвал Magisk;
+* Много фиксов и улучшений по чеккеру обновлений;
+* Критический фикс по установки из под оригинального архива;
+* Некоторые пункты были перемещены а категории переименованы.
 #### 18.07.21 (47) ####
 * hosts файл с AdAway обновлен от 15.07.2021;
 * Universal SafetyNet Fix обновлен до v1.2.0;
@@ -759,6 +766,7 @@
 	- Значение 45;
 	- Значение 50;
 * Пункт (All) - Установка GBoard тем для многих прошивок (в MD2 и разными цветами и видами);
+* Пункт (All) <a href="https://github.com/nitanmarcel/Silky-Gboard">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-silky-gboard.4284323/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108108447">4PDA</a> - Установка GBoard Silk Theme Enabler - активирует новый дизайн из 12ки;
 * Пункт (All) (9-12) (\\) - Cutout Increase Number Notification Icons для увеличения количества уведомлений а при применении оверлея работает как DotKiller: 
 	- 4 иконки;
 	- 5 иконок;
@@ -912,7 +920,7 @@
 	- С подтверждением для каждого;
 	- Без подтверждением;
 	
-<h3 align=center>Audio: VFX(P)/DSP/DTS/AN/AML/ACP</h3>
+<h3 align=center>Audio: VFX(P)/DSP/DTS/AN/ACP/AML</h3>
 
 * Пункт (All) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> ||<a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - Установка ViperFX:
 	- Установка ViperFX v2.5.0.5:
@@ -1485,10 +1493,8 @@
 * Пункт (All) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - Установка ISQLite3 - необходим для некоторых модулей;
 * Пункт (Only М) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a || <a href="https://github.com/Rikj000/mm">GITHUB</a> || <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;
 
-<h3 align=center>Other: GPay/DFO/STZD/DDVFE/FA</h3>
+<h3 align=center>Other: DFO/STZD/DDVFE/FA/SBU</h3>
 
-* Пункт (All) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
-* Пункт (All) Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;
 * Пункт (9-12) - Фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в TWRP, или принудительное отключение HIDE на GMS который не влияет на GPay:
 	- Перенос оверлеев (TWRP Only);
 	- UnHide Method (Only М); 
@@ -1515,15 +1521,18 @@
 	- Запуск Gmail/Mail по умолчанию;
 * Пункт (Only М In TWRP) - Установка фикса бутлупа на Miui при DPI 800+ (кто сталкивался - тот знает зачем он);
 * Пункт (Only TWRP) - Разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);
+* Пункт (All) - Проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
 
-<h3 align=center>Safety Net & MHPC</h3>
+<h3 align=center>SafetyNet/MHPC/GPay</h3>
 
 * Пункт (Only М) (\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - Установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;
 	- 1-й SafetyNet патч;
 	- 2-й SafetyNet патч <a href="https://forum.xda-developers.com/t/module-safetypatcher.3809879/">XDA</a>;
 	- 3-й SafetyNet патч (7-11) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> || <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
 * Пункт (All) (10-12) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro (уехал кстати) будет называться BASIC);
+* Пункт (All) Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;
 * Пункт (Only М) <a href="<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config;
+* Пункт (All) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
 
 <h3 align=center>Riru & Edx/LS Posed</h3>
 
@@ -1535,7 +1544,7 @@
 		- Установка в /data/app;
 		- Установка в /system/priv-app;
 
-<h3 align=center>Tweaks: FGS/BP/LED/UGMSD/SBU/USGP/VS</h3>
+<h3 align=center>Tweaks: FGS/BP/LED/UGMSD/USGP/VS</h3>
 
 * Пункт (Only М And/Or BootMode) <a href="https://4pda.to/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - Принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
 	- Если Magisk, предлагает установку скрипта синхронизации после перезагрузки;
@@ -1568,7 +1577,6 @@
 		- Светодиод, вспышка и хардклавишы.
 * Пункт (Only М) (6-12) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;
 * Пункт (Only BootMode & Universal GMS Doze) - Проверка работы/оптимизации Universal GMS Doze;
-* Пункт (All) - Проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
 * Пункт (All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен - тот знает - работает как есть;
 * Пункт (Only M) - Установка Animation Scale - принудительно выставляет анимацию:
 	- Значение 0.0;
