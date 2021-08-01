@@ -1,8 +1,8 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 23.07.21 (48) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.07.2021/AIOPFMD-23.07.21-%2848%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1zF0lv-8eP8QXE-Fp-o5oxNRCubu8mkMJ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/43">TG</a>
-* Версия AIOPFMDA: 23.05.21 (4) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2021/AIOPFMDA-23.05.21-%284%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jbFbffhVN9wEc_CJg133aHzSmzpZB1wv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/35">TG</a>
+* Версия AIOPFMD: 01.08.21 (48) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMD-01.08.21-%2849%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/18jwYgnZsKU74EPUYWN0jiJbmUOJ0g6X6/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/44">TG</a>
+* Версия AIOPFMDA: 01.08.21 (5) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMDA-01.08.21-%285%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1yU8JXdYhtvahB_yEfpWhorNgGV2R__xz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/45">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Разработчик: <a href="https://4pda.to/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
@@ -17,25 +17,28 @@
 * Описание работы, функционал: Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
 <details> 
   <summary>Общие Известные проблемы (лень добавлять сюда новые):</summary>
-
+  
+* При использовании MHPC может быть отвал всех оверлеев - "особенность" работы этого патча;
 * После прошивки Reset Screen может пропасть пункт Smart Lock - для его включения нужно зайти в Настройки/Безопасность/Агенты доверия и включить Smart Lock.
 * "[ -f NAME ]" может ничего не находить на некоторых древних телефонах/TWRP - это будет вызывать ошибки в работе патча (потому-что);
 * Пропуск клавиш при выборе - фиксится прописью TKEY в PATCHMODE (вроде исправлено в версии 23);
 * Pills Overlay может криво работать (или работать но только не прозрачная версия, а прозрачная тоже будет не прозрачной) на Android 11 (пока-что);
 * Тактильный отклик самого патча может не работать на более старых телефонах/прошивках даже если его нашел патч и он настроен (с версии 23 добавлена строка для PATCHMODE на альт вариант взаимодействия);
-* UIROUNDED может криво работать на Android 11 или очень "чистых" прошивках по типу P3/4/5R;
-* В UIROUNDED есть баги с оверлеями что они работают наполовину или не работают без патчей LP хотя раньше работали (горит уже) (вроде пофиксил с версии 27);
-* Lawnchair не работает с UIROUNDED - пусть сами фиксят свои отвалы с закруглениями;
+* UIROUNDED может криво работать на очень "чистых" прошивках по типу P3/4/5R;
+* В UIROUNDED есть баги с оверлеями что они работают наполовину или не работают без патчей LP хотя раньше работали (горит уже);
+* Lawnchair Q не работает с UIROUNDED - пусть сами фиксят свои отвалы с закруглениями;
 * Очень редко приложения не могут получить доступ к памяти или происходит задвоение доступа к памяти телефона - баг самого MM;
 * На некоторых новых пришивках замечается ужасная задержка переключения пунктов - это зависит от прошивки/ядра, и я думаю как это "пофиксить";
 * Патч LEDLight Animation отваливает стоковую анимацию на телефонах по типу Asus Rog Phone 3 - думаю как это исправить;
 * Многие патчи выдают ошибки при работе с командами по типу find - нужно ставить BusyBox;
 * Поиск в OneUi лаунчере не работает в недавних (меня это волнует? Нет);
-* Возможен отвал жестов на Asus лаунчере с модом на прозрачную жестовую таблетку;
-* Burn In Protection не будет работать с модами по типу Cutout Increase Icons или всяких Dot Killer;
+* Возможен отвал жестов на Asus лаунчере с модом на прозрачную жестовую таблетку - касается Android 10;
+* Burn In Protection не будет работать с модами по типу Cutout Increase Icons или всяких Dot Killer - работает только в связке с моими патчами;
 * На некоторых прошивках с выбором на вид иконок системы и без выбора на стоковые раундеры возможен отвал раундеров из патча;
 * Может пропасть пункт выбора жестов после установки другого лаунчера который в свою очередь делает replace на сток лаунчер - вот и отвал (рандомный, я его редко ловил);
 * При хайде навбара отвал ВСЕХ жестов на Miui 12 так же с пропажей пункта в настройках в выборе навигации;
+* Лаунчеры OneUI могут нрмально не работать;
+* Да и вообще все лаунчеры по разному рандомят у всех, у меня работают нормально все кроме OneUI для 11ки;
 * Создание пустого файла PATCHMODE (вроде пофиксил с версии 28);
 * Задвоение или пропуск двух выборов на одно нажатие (вроде пофиксил с версии 31);
 * Могут иметься другие баги о которых я не знаю (так же я могу сломать что-то старое что работало, добавив что-то новое (это норма)).
@@ -57,6 +60,17 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 01.08.21 (49) ####
+* IOS Emoji, Boot Animation, OneUILauncherы и PixelLauncherы были перемещены в EOL Addon по итогам голосования первых два, а остальное я просто выкинул из за бесполезности на данный момент (это не значит что обновляться больше не будут но пока так);
+* Добавлен OneUILauncher от другого портировщика для 11ки - но в ней отвал жестов и недавние только на кнопках навигации;
+* Shady Launcher R обновлен до v2021.07.23;
+* hosts файл с AdAway обновлен от 28.07.2021;
+* Notification Side Paddings обновлен до v1.2 - добавил строку для Ancient и подобных;
+* UIROUNDED обновлен до v2.3 - добавил строки и удалил лишний даблинг файлов;
+* Очередной фикс чекера на Setting Put - не ту переменную проверял;
+* Пункт проверки обновлений не будет показываться если в MODPATH ничего нет (хотя я бы сделал проверку только на модули которые ставятся из под патча но лень и смысла мало); 
+* Добавлена установка Riru Momo Hider 0.0.7 с выборами на полную активацию или отдельную;
+* Многие фиксы и улучшения по MODID, чекерам, UI и прочему.
 #### 23.07.21 (48) ####
 * Много логических фиксов и улучшения по GPay SQLite Fix;
 * Добавлена установка GBoard Silk Theme Enabler v0.4 - как ММ и нет с возможность отката при удалении/отключении как и во всех патчах которые делал я (в ориге такого нет но меня же НИКТО НЕ СЛЫШИТ);
@@ -884,8 +898,8 @@
 										- 1;
 										- 2;
 										- 3;								
-* Пункт (Only M) (11-12) - Установка Background Blur - включает эффект размытия в шторке на Android 11 и может 12;
-* Пункт (All) (\\) - Установка Boot Animation при запуске телефона:
+* Пункт (Only M) (11-12) - Установка Background Blur - включает эффект размытия в шторке и не только на Android 11;
+* Пункт (All) (ADDON) (\\) - Установка Boot Animation при запуске телефона:
 	- Pixel:
 		- Black;
 		- White;
@@ -896,7 +910,7 @@
 			- FPS:
 				- 60;
 				- 30;
-* Пункт (All) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106370289">4PDA</a> || <a href="https://t.me/EmojiReplacer">TG</a> - Установка IOS EMOJI;
+* Пункт (All) (ADDON) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106370289">4PDA</a> || <a href="https://t.me/EmojiReplacer">TG</a> - Установка IOS EMOJI;
 * Пункт (All) - Установка Media Ui:
 	- Masik:
 		- Альтернативный звук разблокировки из Masik;
@@ -911,9 +925,9 @@
 * Пункт (All) (10-12) (\\) - Установка Systemless Launcher (Alt Variant Quick Switch):
 	- Установка Lawnchair <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка OPLauncher <a href="https://www.pling.com/p/1451515/">PLING</a || <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a> || <a href="https://t.me/mrsluffy_releases">TG</a>;
-	- Установка OneUIHome (10) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка PixelLauncher <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
-	- Установка ShadyLauncher (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка OneUIHome (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a> || <a href="https://t.me/AyraProject">TG</a>;;
+	- Установка PixelLauncher (ADDON) <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
+	- Установка ShadyLauncher <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка AsusLauncher <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 * Пункт (All) (10-12) (ADDON)<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
 * Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
@@ -1534,7 +1548,7 @@
 * Пункт (Only М) <a href="<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config;
 * Пункт (All) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
 
-<h3 align=center>Riru & Edx/LS Posed</h3>
+<h3 align=center>Riru/Edx/LS/Posed/Mudules</h3>
 
 * Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - Установка Riru Core;
 * Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - Установка EdXposed;
@@ -1543,7 +1557,10 @@
 	- Если установка через MM, будет дан выбор на установку менеджера:
 		- Установка в /data/app;
 		- Установка в /system/priv-app;
-
+* Пункт (Only М) (8.1-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108226592">4PDA</a> || <a href="https://github.com/canyie/Riru-MomoHider">GITHUB</a> - Установка Riru Momo Hider:
+	- Полная активация;
+	- Активация по отдельности с небольшим описанием;
+	
 <h3 align=center>Tweaks: FGS/BP/LED/UGMSD/USGP/VS</h3>
 
 * Пункт (Only М And/Or BootMode) <a href="https://4pda.to/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - Принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
