@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 01.08.21 (49) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMD-01.08.21-%2849%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/18jwYgnZsKU74EPUYWN0jiJbmUOJ0g6X6/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/44">TG</a>
+* Версия AIOPFMD: 07.08.21 (50) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/07.08.2021/AIOPFMD-07.08.21-%2850%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1Eh0ndCyY3W9LEkSEVBgo_fINvLhQw4gL/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/46">TG</a>
 * Версия AIOPFMDA: 01.08.21 (5) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMDA-01.08.21-%285%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1yU8JXdYhtvahB_yEfpWhorNgGV2R__xz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/45">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -60,6 +60,16 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 07.08.21 (50) ####
+* Откат Unlimited Storage For GPhotos до v1.0 и патч отправлен в Legaсy из за редкой работы и вообще говно сраное;
+* Shady Launcher R обновлен до v2021.08.04;
+* hosts файл с AdAway обновлен от 02.08.2021;
+* Detach3 обновлен до v3.08;
+* Notification Side Paddings обновлен до v1.4 - добавил регулирование высоты строки первого уведомления в QS от 0 до 30 dip по 5;
+* Systemless Hosts обновлен до v210805-v16.8;
+* Riru Core обновлен до v26.0.5.r484.a8c93a12f8;
+* Status Bar Icon Space обновлен до v1.2 - просто добавил правильный Label и PN;
+* Прочие фиксы и улучшения после некоторых переделок и добавлений начиная с 47й версии.
 #### 01.08.21 (49) ####
 * IOS Emoji, Boot Animation, OneUILauncherы и PixelLauncherы были перемещены в EOL Addon по итогам голосования первых два, а остальное я просто выкинул из за бесполезности на данный момент (это не значит что обновляться больше не будут но пока так);
 * Добавлен OneUILauncher от другого портировщика для 11ки - но в ней отвал жестов и недавние только на кнопках навигации;
@@ -824,6 +834,14 @@
 	- Значение 20dip;
 	- Значение 25dip;
 	- Значение 30dip;
+		-Регулирует расстояние между первым уведомлением в QS:
+			- Значение 0dip;
+			- Значение 5dip;
+			- Значение 10dip;
+			- Значение 15dip;
+			- Значение 20dip;
+			- Значение 25dip;
+			- Значение 30dip;
 * Пункт (All) (10-12) (\\) - Установка Status Bar Icon Space - регулирует расстояние межжу иконками уведомлений в статусбаре/свернутом статусбаре (не касается правой стороны):
 	- Значение 14dip;
 	- Значение 15dip;
@@ -1509,7 +1527,7 @@
 
 <h3 align=center>Other: DFO/STZD/DDVFE/FA/SBU</h3>
 
-* Пункт (9-12) - Фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в TWRP, или принудительное отключение HIDE на GMS который не влияет на GPay:
+* Пункт (9-10) - Фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в TWRP, или принудительное отключение HIDE на GMS который не влияет на GPay:
 	- Перенос оверлеев (TWRP Only);
 	- UnHide Method (Only М); 
 * Пункт (All) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76267303">4PDA</a || <a href="https://github.com/Magisk-Modules-Repo/Systemless_TZData">GITHUB</a> - Установка Systemless TZData - для обновления на не обновляемых tzdata в древних прошивках;
@@ -1594,7 +1612,7 @@
 		- Светодиод, вспышка и хардклавишы.
 * Пункт (Only М) (6-12) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;
 * Пункт (Only BootMode & Universal GMS Doze) - Проверка работы/оптимизации Universal GMS Doze;
-* Пункт (All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен - тот знает - работает как есть;
+* Пункт (Legacy Mode & All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен - тот знает - работает как есть;
 * Пункт (Only M) - Установка Animation Scale - принудительно выставляет анимацию:
 	- Значение 0.0;
 	- Значение 0.1;

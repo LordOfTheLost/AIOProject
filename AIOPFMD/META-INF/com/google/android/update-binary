@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="01.08.21 (49)"
+VAIOPFMD="07.08.21 (50)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -25,8 +25,8 @@ IDCINNI="CINNI"; VIPCINNI="v1.6"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
 IDRUI="UIROUNDED"; VIPRUI="v2.3"
 IDBIP="BurnInProtection"; VIPBIP="v1.3"
-IDNSP="NotificationSidePaddings"; VIPNSP="v1.2"
-IDSBIS="StatusBarIconSpace"; VIPSBIS="v1.1"
+IDNSP="NotificationSidePaddings"; VIPNSP="v1.3"
+IDSBIS="StatusBarIconSpace"; VIPSBIS="v1.2"
 IDSUE="SingleUserEnabler"; VIPSUE="v1.1"
 IDSBP="StatusBarPadding"; VIPSBP="v1.3"
 IDQSCP="QSContentPadding"; VIPQSCP="v1.1"
@@ -42,7 +42,7 @@ IDSL="Systemless_Lawnchair"; VIPSL="v1.3"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 A
 IDSOPL="Systemless_OPLauncher"; VIPSOPL="v6.2"; VCIPSOPL="30100"; VAIPSOPL="v5.1.0"
 IDSOUH="Systemless_OneUIHome"; VIPSOUHQ="v2.1"; VCIPSOUHQ="21"; VAIPSOUHQ="v11.0.50.67"; VIPSOUHR="v1.0"; VCIPSOUHR="1"; VAIPSOUHR="v12.1.07.19"
 IDSPL="Systemless_PixelLauncher"; VIPSPL="v1.0"; VIPASPLQ="v10 (703)"; VIPASPLR="v11 (825)"
-IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.07.23"; VCIPSSLR="20210723"
+IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.08.04"; VCIPSSLR="20210804"
 IDSLA="Systemless_AsusLauncher"; VIPSLA="v1.0"; VCIPSLA="1000"; VIPSLAQ="7.0.1.60"; VIPSLAR="7.5.0.24"
 IDASUSS="AsusLongshot3"; VIPASUSS="v3.0"; VCIPASUSS="30"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
@@ -61,9 +61,9 @@ IDACP="acp"; VIPACP="v2.3"; VCIPACP="37"
 IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="28.07.2021"
+IDVAAH="AdAwayHosts"; VIPVAAH="02.08.2021"
 IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.3"; VCIPLPH="1723"
-IDVSH="SystemlessHostsUnified"; VIPVSH="v210709-v16.7"; VCIPVSH="167"
+IDVSH="SystemlessHostsUnified"; VIPVSH="v210805-v16.8"; VCIPVSH="168"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/TTL/DNS/WB
 IDGOGPS="optmizedgpsconf"; VIPGOGPS="v6"; VCIPGOGPS="6"
@@ -78,7 +78,7 @@ IDSELC="SeLinuxChanger"; VIPSELC="v1.3"
 IDASTE="terminal_systemizer"; VIPASTE="v17.3.1"; VCIPASTE="70"
 IDCC="CacheCleaner"; VIPCC="v2.0"
 IDDETACH="Detach"; VIPDETACH="v5.3"; VCIPDETACH="530"
-IDDETACH3="detach3"; VIPDETACH3="v3.07"; VCIPDETACH3="307"
+IDDETACH3="detach3"; VIPDETACH3="v3.08"; VCIPDETACH3="308"
 IDSQL3="73sydney.sqlite3"; VIPSQL3="v1.0"; VCIPSQL3="1"
 IDMMFRM="mm"; VIPMMFRM="2020.4.17"; VCIPMMFRM="202004170"
 #Other: DFO/STZD/DDVFE/FA/SBU
@@ -96,7 +96,7 @@ IDMHPC="MagiskHidePropsConf"; VIPMHPC="v5.4.0-v129"; VCIPMHPC="68"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
-IDRIRU="riru-core"; VIPRIRU="v25.4.4.r426.05efc94"; VCIPRIRU="426"
+IDRIRU="riru-core"; VIPRIRU="v26.0.5.r484.a8c93a12f8"; VCIPRIRU="484"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
 IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.4.7 (5803)"; VCIPLSPOSED="5803"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
@@ -118,7 +118,7 @@ IDFI="ForceIdle"; VIPFI="v1.0"
 IDCLEDLO="ChargingLedLightOff"; VIPCLEDLO="v1.1"
 IDLEDLA="LEDLightAnimation"; VIPLEDLA="v1.1"
 IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.3"; VCIPUGMSD="183"
-IDUSGP="USGP"; VIPUSGP="v1.1"
+IDUSGP="USGP"; VIPUSGP="v1.0"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.0"
 IDVS="VolumeSteps"; VIPVS="v1.2"
@@ -481,7 +481,7 @@ elif [ "$ASDK" = "28" ] && [ "$AVERSION" = "9" ] || [ "$AVERSION" = "9.0" ]; the
 elif [ "$ASDK" = "29" ] && [ "$AVERSION" = "10" ] || [ "$AVERSION" = "10.0" ]; then ATEN=true; ACNV="Q"
 elif [ "$ASDK" = "30" ] && [ "$AVERSION" = "11" ] || [ "$AVERSION" = "11.0" ]; then AELEVEN=true; ACNV="R"
 elif [ "$ASDK" = "31" ] && [ "$AVERSION" = "12" ] || [ "$AVERSION" = "12.0" ]; then ATWELVE=true; ACNV="SC"
-if GREP_PROP ro.build.id | grep -q SPB2; then ASDK=31-b2; ATWELVE=true; ACNV="SC"; fi
+if GREP_PROP ro.build.id | grep -q SPB2 || GREP_PROP ro.build.id | grep -q SPB3; then ASDK=31; ATWELVE=true; ACNV="SC"; fi
 fi
 case $ASDK in
 "10");; "15");; "16");; "17");; "18");; "19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; *) MSGDELIMITER; UIP "Warning, SDK Not Supported/Found!";;
@@ -2524,11 +2524,11 @@ MMUPD_CHECKER -c "$IDUSBPP" "$VIPUSBPP" "$VCIPUSBPP" "IPUSBPPS"
 MMUPD_CHECKER -c "$IDACP" "$VIPACP" "$VCIPACP" "IPACPS"
 MMUPD_CHECKER -c "$IDAML" "$VIPAML" "$VCIPAML" "IPAMLS"
 #AdBlock/Hosts
-MMUPD_CHECKER -c "$IDDAB" "$VIPDAB" "$VCIPDAB" "IPHFSS"
-MMUPD_CHECKER "$IDVAAH" "$VIPVAAH" "IPHFSS"
-MMUPD_CHECKER -c "$IDVLPH" "$VIPVLPH" "$VCIPLPH" "IPHFSS"
-MMUPD_CHECKER -c "$IDVSH" "$VIPVSH" "$VCIPVSH" "IPHFSS"
-MMUPD_CHECKER "$IDVOH" "$VIPVOH" "IPHFSS"
+MMUPD_CHECKER -c "$IDDAB" "$VIPDAB" "$VCIPDAB" "IPHFS"
+MMUPD_CHECKER "$IDVAAH" "$VIPVAAH" "IPHFS"
+MMUPD_CHECKER -c "$IDVLPH" "$VIPVLPH" "$VCIPLPH" "IPHFS"
+MMUPD_CHECKER -c "$IDVSH" "$VIPVSH" "$VCIPVSH" "IPHFS"
+MMUPD_CHECKER "$IDVOH" "$VIPVOH" "IPHFS"
 #Net: GPS/TTL/DNS/WB
 MMUPD_CHECKER -c "$IDGOGPS" "$VIPGOGPS" "$VCIPGOGPS" "IPGOGPSS"
 MMUPD_CHECKER -c "$IDTTLF" "$VIPTTLF" "$VCIPTTLF" "IPTTLFS"
@@ -3209,17 +3209,22 @@ fi
 }
 
 IPNSPS() {
-UCSF "0dip 5dip 10dip 15dip 20dip 25dip 30dip" "Choose Padding Size:" "Padding Size" "30dip"
+UCSF "0dip 5dip 10dip 15dip 20dip 25dip 30dip" "Side For Notification:" "Padding Size" "30dip"
+NSPCOS=$UCSFNMC
+if $UCSFNM; then
+UCSF "0dip 5dip 10dip 15dip 20dip 25dip 30dip" "Side For First QS Notification:" "Padding Size" "30dip"
+NSPCOSA=$UCSFNMC
+fi
 if $UCSFNM; then
 UIP "Installing Notification Side Padding $IAMM"
 UZTPN "NSP"
 if $MAGISK; then
 MODID="$IDNSP"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID$MIPPSO
-cp -f $TMPDIR/NSP/NotificationSidePaddings-$UCSFNMC.apk $MODPATH/$MODID$MIPPSO
-MMPR -v "Notification Side Paddings" "$VIPNSP" "Notification Side Paddings Set On - $UCSFNMC, $FAOOR"; SET_PERM_RM
+cp -f $TMPDIR/NSP/NotificationSidePaddings-$NSPCOS-$NSPCOSA.apk $MODPATH/$MODID$MIPPSO
+MMPR -v "Notification Side Paddings" "$VIPNSP" "Notification Side Paddings Set On - $NSPCOS-$NSPCOSA, $FAOOR"; SET_PERM_RM
 else
-cp -f $TMPDIR/NSP/NotificationSidePaddings-$UCSFNMC.apk $IPPSO; touch $AIOPFMDPH/notificationsidepaddings
+cp -f $TMPDIR/NSP/NotificationSidePaddings-$NSPCOS-$NSPCOSA.apk $IPPSO; touch $AIOPFMDPH/notificationsidepaddings
 fi
 UIP "$MSGDI"
 fi
@@ -3890,7 +3895,7 @@ fi
 }
 
 IPSLSA() {
-if $MAGISK; then REMOVER -mm "$IDSLA $IDSL Systemless_Lawnchair_Plus $IDSOPL $IDSOUH $IDSPL Systemless_PixelLauncherX $IDSLA quickstepswitcher quickswitch_terminal"; fi
+if $MAGISK; then REMOVER -mm "$IDSLA $IDSL Systemless_Lawnchair_Plus $IDSOPL $IDSOUH $IDSPL Systemless_PixelLauncherX $IDSSL quickstepswitcher quickswitch_terminal"; fi
 }
 
 IPASUSS() {
@@ -6154,12 +6159,6 @@ fi
 fi
 }
 
-IPFSLFM() {
-if $MAGISK && [ $BOOTMODE != true ] && $MIUI; then
-UCSA "Install Fix Softloop For Miui (If DPI 800+) $VIPFSLFM?" "" "$MSGNUS" "IPFSLFMS"
-fi
-}
-
 } #
 
 { #Test/Coming Soon
@@ -6733,7 +6732,7 @@ UCSA "Notification Side Paddings Compile" "" "$MSGNUS" "NSPCS"
 NSPCS() {
 NSPCO="$TMPDIR/NotificationSidePaddings/NotificationSidePaddings"
 mkdir -p $NSPCO/res/values
-
+for NSPCOSA in 0dip 5dip 10dip 15dip 20dip 25dip 30dip; do
 for NSPCOS in 0dip 5dip 10dip 15dip 20dip 25dip 30dip; do
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.notification.side.paddings.overlay\">
     <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\" android:label=\"Notification Side Paddings\"/>
@@ -6743,8 +6742,10 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
     <dimen name=\"notification_side_paddings\">$NSPCOS</dimen>
     <dimen name=\"qs_header_image_side_margin\">$NSPCOS</dimen>
+    <dimen name=\"qs_notification_padding\">$NSPCOSA</dimen>
 </resources>" > $NSPCO/res/values/dimens.xml
-APKBUILDER "$NSPCO" "$NSPCO-$NSPCOS.apk"
+APKBUILDER "$NSPCO" "$NSPCO-$NSPCOS-$NSPCOSA.apk"
+done
 done
 }
 
@@ -6884,28 +6885,16 @@ UIP "$MSGDI"
 }
 
 CSBIS() {
-UCSA "Status Bar Icon Size" "" "$MSGNUS" "CSBISS"
+UCSA "Status Bar Icon Space" "" "$MSGNUS" "CSBISS"
 }
 
 CSBISS() {
-SBISS="$TMPDIR/StatusBarIconSize/StatusBarIconSize"; SBISDS="$TMPDIR/StatusBarIconDrawingSize/StatusBarIconSpace"
-mkdir -p $SBISS/res/values $SBISDS/res/values
+SBISDS="$TMPDIR/StatusBarIconSpace/StatusBarIconSpace"
+mkdir -p $SBISDS/res/values
 
-echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.status.bar.icon.size\">
-    <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\" android:label=\"SystemUI Status Bar Icon Size\"/>
-</manifest>" > $SBISS/AndroidManifest.xml
-
-echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.status.bar.icon.drawing.size\">
-    <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\" android:label=\"Android Status Bar Icon Size\"/>
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.status.bar.icon.space\">
+    <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\" android:label=\"Android Status Bar Icon Space\"/>
 </manifest>" > $SBISDS/AndroidManifest.xml
-
-for SBISSC in 10dip 11dip 12dip 13dip 14dip 15dip 16dip; do
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<resources>
-    <dimen name=\"status_bar_icon_drawing_size\">$SBISSC</dimen>
-</resources>" > $SBISS/res/values/dimens.xml
-APKBUILDER "$SBISS" "$SBISS-$SBISSC.apk"
-done
 
 for SBISDSC in 14dip 15dip 16dip 17dip 18dip 19dip 20dip; do
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
@@ -8284,7 +8273,7 @@ SET_PERM_RM -msgdi
 
 IPBDFFSOQSS() {
 if [ $MIUI != true ]; then
-if $APIE || $ATEN || $AELEVEN || $ATWELVE; then
+if $APIE || $ATEN; then
 if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/batterydrainfix ]; then
 MSGDELIMITER; UIP "Found Moving Overlay, Move Back?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
@@ -9118,6 +9107,7 @@ UIP "Installing Riru Core $IAMM"
 UZTPN "Riru"
 MODID="$IDRIRU"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID/lib
+cp -f $TMPDIR/Riru/rirud.apk $MODPATH/$MODID
 cp -rf $TMPDIR/Riru/system $MODPATH/$MODID
 UIP "Copy arm Libraries"
 mv $TMPDIR/Riru/system/lib/libriru.so $MODPATH/$MODID/lib
@@ -9129,27 +9119,27 @@ mkdir -p $MODPATH/$MODID/lib64
 mv $TMPDIR/Riru/system/lib64/libriru.so $MODPATH/$MODID/lib64
 mv $TMPDIR/Riru/system/lib64/libriruhide.so $MODPATH/$MODID/lib64
 mv $TMPDIR/Riru/system/lib64/libriruloader.so $MODPATH/$MODID/lib64
-mv $TMPDIR/Riru/system/lib64/librirud.so $MODPATH/$MODID
-else
-mv $TMPDIR/Riru/system/lib/librirud.so $MODPATH/$MODID
 fi
-MMPR -vcrapi "Riru" "$VIPRIRU" "$VCIPRIRU" "Rikka" "Inject into zygote and run codes from \"Riru\" modules in apps or the system server." "25" "9"
+MMPR -vcrapi "Riru" "$VIPRIRU" "$VCIPRIRU" "Rikka" "Inject into zygote and run codes from \"Riru\" modules in apps or the system server. Support modules which use Riru API v24+" "26" "24"
+echo "#!/sbin/sh
+if [ ! -d /data/adb/riru/modules ]; then rm -rf /data/adb/riru; fi" > $MODPATH/$MODID/uninstall.sh
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
-# Reset ro.dalvik.vm.native.bridge or reboot if needed
-export CLASSPATH=\$MODDIR/rirud.dex
-nohup app_process -Djava.class.path=\"\$MODDIR\"/rirud.dex $MIPSB --nice-name=rirud_java riru.Daemon >/dev/null 2>&1 &" > $MODPATH/$MODID/service.sh
+flock -n \"\$MODDIR/module.prop\" -c \"sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ post-fs-data.sh fails to run. Magisk is broken on this device. ] /g' \\"\$MODDIR/module.prop\\"\"" > $MODPATH/$MODID/service.sh
 echo "ro.dalvik.vm.native.bridge=libriruloader.so" > $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
-# Chmod again just in case
-chmod 700 \"\$MODDIR\"/rirud
-# Start daemon which runs socket \"rirud\"
-exec \"\$MODDIR\"/rirud" > $MODPATH/$MODID/post-fs-data.sh
+if [ -z \"\$SHELL\" ]; then
+export SHELL=sh
+fi
+sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ app_process fails to run. ] /g' \"\$MODDIR/module.prop\"
+export CLASSPATH=\$MODDIR/rirud.apk
+cd \$MODDIR
+flock \"module.prop\" -c \"$MIPSB/app_process -Djava.class.path=rirud.apk $MIPSB --nice-name=rirud riru.Daemon \$\$ \$(magisk -V) \$(magisk --path)\" 2>&1 | xargs log -t \"Riru\"" > $MODPATH/$MODID/post-fs-data.sh
 echo "RIRU_MIN_COMPATIBLE_API=9
-RIRU_API=\"25\"
-RIRU_VERSION_CODE=\"426\"
-RIRU_VERSION_NAME=\"v25.4.4.r426.05efc94\"
+RIRU_API=\"26\"
+RIRU_VERSION_CODE=\"484\"
+RIRU_VERSION_NAME=\"v26.0.5.r484.a8c93a12f8\"
 
 abort_for_requires_new_version() {
 ui_print \"*********************************************************\"
@@ -9183,22 +9173,10 @@ ui_print \"! Please install from Magisk app\"
 abort \"*********************************************************\"
 fi
 }" > $MODPATH/$MODID/util_functions.sh
-for p in $PROPFILESALT; do
-if [ -f $p ]; then
 if grep "ro.maple.enable=1" "$PROPFILESALT"; then
 UIP "Add ro.maple.enable=0"
 echo "ro.maple.enable=0" >> $MODPATH/$MODID/system.prop
-break
 fi
-fi
-done
-SET_PERM_RM
-UIP "Moving rirud"
-mv $MODPATH/$MODID/system/$libarch/librirud.so $MODPATH/$MODID/rirud
-SET_PERM $MODPATH/$MODID/rirud 0 0 0700
-UIP "Copy rirud.dex"
-mv $TMPDIR/Riru/classes.dex $MODPATH/$MODID/rirud.dex
-SET_PERM $MODPATH/$MODID/rirud.dex 0 0 0600
 UIP "Removing Old Files"
 rm -rf $NVBASE/riru/bin
 rm -f $NVBASE/riru/native_bridge
@@ -9206,13 +9184,12 @@ rm -f $NVBASE/riru/api_version.new
 rm -f $NVBASE/riru/version_code.new
 rm -f $NVBASE/riru/version_name.new
 rm -f $NVBASE/riru/enable_hide
+rm -f $NVBASE/riru/api_version
+rm -f $NVBASE/riru/util_functions.sh
 rm -f $IPDM/riru/api_version
 rm -f $IPDM/riru/version_code
 rm -f $IPDM/riru/version_name
-UIP "Writing Files For pre-v24 Modules"
-mkdir -p $NVBASE/riru
-echo -n "25" > "$NVBASE/riru/api_version"
-SET_PERM $NVBASE/riru/api_version 0 0 0600
+SET_PERM_RM
 UIP "$MSGDI"
 }
 
@@ -10853,12 +10830,14 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/USGP ]; then
 MSGDELIMITER; UIP "$MSGFI Unlimited Storage, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
 UIP "Removing..."
-rm -f $IPSES/nexus.xml
+IPUSGPSA
 rm -f $AIOPFMDPH/USGP
 UIP "$MSGDRM"
 fi
 else
+if $LEGACYMODE; then
 UCSA "Install Unlimited Storage For GPhotos $VIPUSGP?" "" "$MSGNUS" "IPUSGPS"
+fi
 fi
 }
 
@@ -10866,45 +10845,125 @@ IPUSGPS() {
 UIP "Installing USGP $IAMM"
 mkdir -p $TMPDIR/USGP
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the \"License\");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an \"AS IS\" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- These are configurations that should exist on Google's own Nexus and GPe devices. -->
+<config>
+    <feature name=\"com.google.android.feature.GOOGLE_BUILD\" />
+    <!-- This should be added to all Nexus and GPe devices -->
+    <feature name=\"com.google.android.feature.GOOGLE_EXPERIENCE\" />
+    <!-- This should declare the version of Exchange that ships -->
+    <feature name=\"com.google.android.feature.EXCHANGE_6_2\" />
+</config>" > $TMPDIR/USGP/google_build.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
 <!-- These are configurations that should exist on Google's 2016 and newer Nexus devices. -->
 <config>
+
     <!-- This is meant to be the canonical feature identifying 2016 and newer Nexus devices. -->
     <feature name=\"com.google.android.feature.PIXEL_EXPERIENCE\" />
 
+    <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2017_EXPERIENCE\" />
+
+    <!-- This is meant to be the canonical feature identifying 2018 and newer Pixel devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2018_EXPERIENCE\" />
+
+    <!-- The feature identifying devices which are able to use the Turbo app -->
+    <feature name=\"com.google.android.feature.TURBO_PRELOAD\" />
+
+    <!-- The feature identifying devices which are able to use the Android Wellbeing app. -->
+    <feature name=\"com.google.android.feature.WELLBEING\" />
+	
+</config>" > $TMPDIR/USGP/google_exclusives_enable.xml
+echo "<?xml version=\"1.0\"  encoding=\"utf-8\" ?>
+
+<!-- These are configurations that should exist on Google\" s 2016 and newer Nexus devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2016 and newer Nexus devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_EXPERIENCE\"  />
+
     <!-- Both versions of this string are needed due to a miscommunication. b/29978934 -->
-    <feature name=\"com.google.android.apps.photos.NEXUS_PRELOAD\" />
-    <feature name=\"com.google.android.apps.photos.nexus_preload\" />
+    <feature name=\"com.google.android.apps.photos.NEXUS_PRELOAD\"  />
+    <feature name=\"com.google.android.apps.photos.nexus_preload\"  />
 
     <!-- Enable Zero Touch Provisioning support for 2016 and newer Nexus devices. -->
-    <feature name=\"com.google.android.feature.ZERO_TOUCH\" />
+    <feature name=\"com.google.android.feature.ZERO_TOUCH\"  />
 
     <!-- Allow Google unbundled tethering entitlement app in background -->
-    <allow-in-power-save package=\"com.google.android.tetheringentitlement\" />
+    <allow-in-power-save package=\"com.google.android.tetheringentitlement\"  />
 
     <!-- Allow ssr detector service in background -->
-    <allow-in-power-save package=\"com.google.SSRestartDetector\" />
+    <allow-in-power-save package=\"com.google.SSRestartDetector\"  />
 
     <!-- Allow ramdump uploader service in background -->
-    <allow-in-power-save package=\"com.android.ramdump\" />
+    <allow-in-power-save package=\"com.android.ramdump\"  />
 
     <!-- These are telephony components that need to run in the background -->
-    <allow-in-power-save package=\"com.qualcomm.atfwd\" />
-    <allow-in-power-save package=\"com.qualcomm.embms\" />
-    <allow-in-power-save package=\"com.qualcomm.qti.telephonyservice\" />
-    <allow-in-power-save package=\"com.qulacomm.qcrilmsgtunnel\" />
-    <allow-in-power-save package=\"com.qualcomm.qti.ims\" />
-    <allow-in-power-save package=\"com.qualcomm.qti.radioconfiginterface\" />
+    <allow-in-power-save package=\"com.qualcomm.atfwd\"  />
+    <allow-in-power-save package=\"com.qualcomm.embms\"  />
+    <allow-in-power-save package=\"com.qualcomm.qti.telephonyservice\"  />
+    <allow-in-power-save package=\"com.qulacomm.qcrilmsgtunnel\"  />
+    <allow-in-power-save package=\"com.qualcomm.qti.ims\"  />
+    <allow-in-power-save package=\"com.qualcomm.qti.radioconfiginterface\"  />
 </config>" > $TMPDIR/USGP/nexus.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!-- These are configurations that should exist on Google's 2018 devices (and not newer/older) -->
+<config>
+    <!-- This defines the Photos preload feature for specifically the 2018 Pixel devices. -->
+    <feature name=\"com.google.android.apps.photos.PIXEL_2018_PRELOAD\" />
+
+    <!-- This feature is meant to be the feature identifying a device supports wireless charger -->
+    <feature name=\"com.google.android.feature.DREAMLINER\" />
+</config>" > $TMPDIR/USGP/pixel_2018_exclusive.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!-- These are configurations that should exist on Google's 2017 and newer Nexus devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2017_EXPERIENCE\" />
+</config>" > $TMPDIR/USGP/pixel_experience_2017.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!-- These are configurations that should exist on Google's 2018 and newer Pixel devices. -->
+<config>
+    <!-- Allow Pixel modem service in background -->
+    <allow-in-power-save package=\"com.google.modemservice\" />
+
+    <!-- Allow SCONE JobIntentService & Services to run in background -->
+    <allow-in-power-save package=\"com.google.android.apps.scone\" />
+
+    <!-- This is meant to be the canonical feature identifying 2018 and newer Pixel devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2018_EXPERIENCE\" />
+</config>" > $TMPDIR/USGP/pixel_experience_2018.xml
 if $MAGISK; then
 MODID="$IDUSGP"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID$MIPSES
 cp -f $TMPDIR/$MODID/* $MODPATH/$MODID$MIPSES
-MMPR -v "$MODID" "$VIPUSGP" "Activating Unlimited Storage For Google Photos (Maybe)"; SET_PERM_RM
+MMPR -v "$MODID" "$VIPUSGP" "Activating Unlimited Storage For Google Photos (Maybe)"; SET_PERM_RM; IPUSGP=$MODPATH/$MODID/system.prop
 else
+BUILD_PROP_BACKUP; IPUSGP=$IPSBP
 touch $AIOPFMDPH/USGP
+STANDARTBUCKUPER=true
+IPUSGPSA
 cp -f $TMPDIR/USGP/* $IPSES
 fi
+echo -e "\n# Activating Unlimited Storage For Google Photos (Maybe)\nro.product.model=Pixel\nro.product.brand=Google\nro.product.manufacturer=Google\nro.opa.eligible_device=true" >> $IPUSGP
 UIP "$MSGDI"
 }
 
