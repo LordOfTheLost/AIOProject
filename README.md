@@ -1,49 +1,21 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 07.08.21 (50) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/07.08.2021/AIOPFMD-07.08.21-%2850%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1Eh0ndCyY3W9LEkSEVBgo_fINvLhQw4gL/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/46">TG</a>
+* Версия AIOPFMD: 13.08.21 (51) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/13.08.2021/AIOPFMD-13.08.21-%2851%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1lKK-R_yHZ514eaRgGZfPi7C7iVwFrMLd/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/47">TG</a>
 * Версия AIOPFMDA: 01.08.21 (5) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMDA-01.08.21-%285%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1yU8JXdYhtvahB_yEfpWhorNgGV2R__xz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/45">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Разработчик: <a href="https://4pda.to/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
-* Русский интерфейс: Нет, и не имеет смысла.
+* Русский интерфейс: Нет, и не имеет смысла (а описание на русском во цЫрк).
 * Технические требования:
-	- Требуется Magisk 20.0+ (сама проверка стоит на 18+, но если ниже - принудительного выхода не будет а только предупреждение) и/или TWRP;
-	- Архитектура Arm или Arm64. Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
+	- Требуется Magisk 23+ (но если установлена версия ниже - принудительного выхода не будет а только предупреждение) и/или TWRP;
+	- Архитектура Arm или Arm64.
+	- Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом));
 	- SeLinux в Permissive (для аудиомодов как минимум);
 	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+));
 	- SqLite для модулей которым он нужен.
 * Описание работы, функционал: Много патчей/скриптов в одном архиве с форсовой установкой и прочими улучшениями.
-<details> 
-  <summary>Общие Известные проблемы (лень добавлять сюда новые):</summary>
-  
-* При использовании MHPC может быть отвал всех оверлеев - "особенность" работы этого патча;
-* После прошивки Reset Screen может пропасть пункт Smart Lock - для его включения нужно зайти в Настройки/Безопасность/Агенты доверия и включить Smart Lock.
-* "[ -f NAME ]" может ничего не находить на некоторых древних телефонах/TWRP - это будет вызывать ошибки в работе патча (потому-что);
-* Пропуск клавиш при выборе - фиксится прописью TKEY в PATCHMODE (вроде исправлено в версии 23);
-* Pills Overlay может криво работать (или работать но только не прозрачная версия, а прозрачная тоже будет не прозрачной) на Android 11 (пока-что);
-* Тактильный отклик самого патча может не работать на более старых телефонах/прошивках даже если его нашел патч и он настроен (с версии 23 добавлена строка для PATCHMODE на альт вариант взаимодействия);
-* UIROUNDED может криво работать на очень "чистых" прошивках по типу P3/4/5R;
-* В UIROUNDED есть баги с оверлеями что они работают наполовину или не работают без патчей LP хотя раньше работали (горит уже);
-* Lawnchair Q не работает с UIROUNDED - пусть сами фиксят свои отвалы с закруглениями;
-* Очень редко приложения не могут получить доступ к памяти или происходит задвоение доступа к памяти телефона - баг самого MM;
-* На некоторых новых пришивках замечается ужасная задержка переключения пунктов - это зависит от прошивки/ядра, и я думаю как это "пофиксить";
-* Патч LEDLight Animation отваливает стоковую анимацию на телефонах по типу Asus Rog Phone 3 - думаю как это исправить;
-* Многие патчи выдают ошибки при работе с командами по типу find - нужно ставить BusyBox;
-* Поиск в OneUi лаунчере не работает в недавних (меня это волнует? Нет);
-* Возможен отвал жестов на Asus лаунчере с модом на прозрачную жестовую таблетку - касается Android 10;
-* Burn In Protection не будет работать с модами по типу Cutout Increase Icons или всяких Dot Killer - работает только в связке с моими патчами;
-* На некоторых прошивках с выбором на вид иконок системы и без выбора на стоковые раундеры возможен отвал раундеров из патча;
-* Может пропасть пункт выбора жестов после установки другого лаунчера который в свою очередь делает replace на сток лаунчер - вот и отвал (рандомный, я его редко ловил);
-* При хайде навбара отвал ВСЕХ жестов на Miui 12 так же с пропажей пункта в настройках в выборе навигации;
-* Лаунчеры OneUI могут нрмально не работать;
-* Да и вообще все лаунчеры по разному рандомят у всех, у меня работают нормально все кроме OneUI для 11ки;
-* Создание пустого файла PATCHMODE (вроде пофиксил с версии 28);
-* Задвоение или пропуск двух выборов на одно нажатие (вроде пофиксил с версии 31);
-* Могут иметься другие баги о которых я не знаю (так же я могу сломать что-то старое что работало, добавив что-то новое (это норма)).
-
-</details>
 
 <details> 
   <summary>Скриншоты:</summary>
@@ -60,6 +32,19 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 13.08.21 (51) ####
+* NLSound обновлен до v2.5 STABLE со многими фиксами, улучшениями и доработками. Выбор на Full и Light версию PATCH_MIXER и не добавлял Auto режим;
+* В Режим удаления/replace/restore добавлены приложения в обычный лист: Leaflet, DotFEWallpapers, Simple-Calendar и TeamOctavi (резня);
+* UIROUNDED обновлен до v2.4 - фикс package name для оверлея категории;
+* Некоторые другие фиксы и улучшения;
+* Riru Core откачен до v25.4.4.r426.05efc94 - новая версия отвальный кусок кривого рандомного говна;
+* Increase Bitrate отправлен в Legacy из за рандома;
+* hosts файл с AdAway обновлен от 11.08.2021;
+* MagiskHide Props Config Обновлен до v5.4.0-v130;
+* OnePlus Launcher обновлен до v7.0;
+* Теперь минимальная версия Magisk должна быть не ниже 23й (опять же принудительно выхода из патча не будет но будет УГРОЗА);
+* Из за распаковки аддона в фоне, некоторые пользователи умудрялись выбирать те же Анимации загрузки раньше распаковки в фоне - так что сделал проверку с задержкой если телефон не успел разпаковать (даже актуальнее на бюджетках или при отвале памяти);
+* Ну и ещё что-то по мелочи.
 #### 07.08.21 (50) ####
 * Откат Unlimited Storage For GPhotos до v1.0 и патч отправлен в Legaсy из за редкой работы и вообще говно сраное;
 * Shady Launcher R обновлен до v2021.08.04;
@@ -263,7 +248,7 @@
 * В режим удаления/replace добавлены приложения в обычный лист: MusicPlayerGO и WallpaperPickerGoogle;
 * Switch On/Off Face UnLock IR Camera обновлен до v1.4 - добавил проверку на кангнутый фейс от Pixel Experience для AOSPExtended и оверлей;
 * MagiskHide Props Config Обновлен до v5.4.0-v127;
-* Riru Core Обновлен до v25.4.4.r426.05efc94?, фикс путей в самом архиве и фикс на проп для Huawei;
+* Riru Core Обновлен до v25.4.4.r426.05efc94, фикс путей в самом архиве и фикс на проп для Huawei;
 * Systemless Hosts обновлен до v210506-v16.6;
 * hosts файл с AdAway Обновлен от 05.05.2021;
 * UIROUNDED обновлен до v2.0 - добавлено много строк для Lawnchair R;
@@ -972,7 +957,7 @@
 * Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
 * Пункт (Only M) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - Установка NLSound:
 	- PATCH_DEEP_BUFFER;
-	- PATCH_HEADPHONES;
+	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
 	- PATCH_IIR;
 	- PATCH_AUDIO_PLATFORM;
@@ -982,6 +967,8 @@
 	- PATCH_DIRAC:
 	- PATCH_FLUENCE:
 	- PATCH_MIXER;
+		- Light PATCH_MIXER;
+		- Full PATCH_MIXER;
 	- PATCH_DECOENCO
 	- PATCH_HIFI
 	- PATCH_BT_PARAMETERS
@@ -1082,6 +1069,7 @@
 	- Dialer
 	- DigitalClockEasy_L
 	- DigitalClock_L
+	- DotFEWallpapers
 	- DotWallpapers
 	- Drive
 	- DualClockDigital_L
@@ -1185,6 +1173,7 @@
 	- LatinImeGoogle
 	- LatinImeTutorial
 	- Lawnfeed
+	- Leaflet
 	- Lens
 	- MSA-Global
 	- MSSkype_stub
@@ -1303,6 +1292,7 @@
 	- SecSetupWizard2015
 	- SecurityLogAgent
 	- ShiftPapers
+	- Simple-Calendar
 	- SimpleCalendar
 	- SimpleGallery
 	- SimpleGalleryPro
@@ -1314,6 +1304,7 @@
 	- Street
 	- Superiorwalls
 	- Talk
+	- TeamOctavi
 	- Terminal
 	- TipsPrebuilt
 	- TouchAssistant
@@ -1373,7 +1364,6 @@
 	- messaging
 	- stats
 	- talkback
-
 </details>
 
 <details> 
@@ -1493,7 +1483,7 @@
 
 * Пункт (All) (\\) - Установка одного из пяти Hosts файлов:
 	- Пустой Hosts (Отключение блокировки);
-	- Hosts из AdAway (13000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
+	- Hosts из AdAway (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts из LP от chelpa (67000+ строк) <a href="https://4pda.to/forum/index.php?s=&showtopic=298302&view=findpost&p=10727871">4PDA</a>;
 	- От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
 	- Альтернативный (в нем строки из MiRoom и других) (190000+ строк);
