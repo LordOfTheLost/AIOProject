@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="13.08.21 (51)"
+VAIOPFMD="15.08.21 (52)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -39,7 +39,7 @@ IDMUIS="MediaUiSounds"; VIPMUIS="v1.0"
 #Apps: GFU/GSF/SL/IA
 IDGSF="GSF"; VIPGSF="v1.0"
 IDSL="Systemless_Lawnchair"; VIPSL="v1.3"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 5"
-IDSOPL="Systemless_OPLauncher"; VIPSOPL="v7.0"; VCIPSOPL="7"; VAIPSOPL="v5.1.10"
+IDSOPL="Systemless_OPLauncher"; VIPSOPL="v6.2"; VCIPSOPL="30100"; VAIPSOPL="v5.1.0"
 IDSOUH="Systemless_OneUIHome"; VIPSOUHQ="v2.1"; VCIPSOUHQ="21"; VAIPSOUHQ="v11.0.50.67"; VIPSOUHR="v1.0"; VCIPSOUHR="1"; VAIPSOUHR="v12.1.07.19"
 IDSPL="Systemless_PixelLauncher"; VIPSPL="v1.0"; VIPASPLQ="v10 (703)"; VIPASPLR="v11 (825)"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.08.04"; VCIPSSLR="20210804"
@@ -92,13 +92,13 @@ IDSNP="petnoires-safetyspoofer"; VIPSNP="v1-beta2"; VCIPSNP="16"
 IDSNPA="safetypatcher"; VIPSNPA="v3"; VCIPSNPA="5"
 IDSNPAA="safetynet-fix"; VIPSNPAA="v1.2.0"; VCIPSNPAA="10200"
 IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
-IDMHPC="MagiskHidePropsConf"; VIPMHPC="v5.4.0-v130"; VCIPMHPC="68"
+IDMHPC="MagiskHidePropsConf"; VIPMHPC="v5.4.1-v131"; VCIPMHPC="69"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
-IDRIRU="riru-core"; VIPRIRU="v25.4.4.r426.05efc94"; VCIPRIRU="426"
+IDRIRU="riru-core"; VIPRIRU="v26.0.5.r484.a8c93a12f8"; VCIPRIRU="484"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
-IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.4.7 (5803)"; VCIPLSPOSED="5803"
+IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.5.0 (5880)"; VCIPLSPOSED="5880"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
 IDRMH="riru_momohider"; VIPRMH="0.0.7"; VCIPRMH="7"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
@@ -2656,7 +2656,7 @@ MMUPD_CHECKER "$IDFPMC" "$VIPFPMC" "IPFPMCS"
 MMUPD_CHECKER -c "$IDMHPC" "$VIPMHPC" "$VCIPMHPC" "IPMHPCS"
 MMUPD_CHECKER -c "$IDGPF" "$VIPGPF" "$VCIPGPF" "IPGPFS"
 #Riru/Edx/LS/Posed/Mudules
-MMUPD_CHECKER -c "$IDRIRU" "$VIPRIRU" "$VCIPRIRU" "IPRIRUS"
+if [ ! -f $MODPATH/$IDRIRU/legacy ]; then MMUPD_CHECKER -c "$IDRIRU" "$VIPRIRU" "$VCIPRIRU" "IPRIRUS"; fi
 MMUPD_CHECKER -c "$IDEDXPOSED" "$VIPEDXPOSED" "$VCIPEDXPOSED" "IPEDXPOSEDS"
 MMUPD_CHECKER -c "$IDLSPOSED" "$VIPLSPOSED" "$VCIPLSPOSED" "IPLSPOSEDS"
 MMUPD_CHECKER -c "$IDRIRUCW" "$VIPRIRUCW" "$VCIPRIRUCW" "IRIRUCWS"
@@ -9142,16 +9142,19 @@ done
 IPRIRU() {
 if $MAGISK; then
 if $AOREO || $APIE || $ATEN || $AELEVEN; then
-UCSA "Install Riru Core $VIPRIRU?" "" "$MSGNUS" "IPRIRUS"
+UCSA "Install Riru Core v25 Or v26?" "" "$MSGNUS" "IPRIRUS"
 fi
 fi
 }
 
 IPRIRUS() {
+MSGDELIMITER; UIP "Install Riru Core Variant" "$MSGVU Standart $VIPRIRU" "$MSGVD Legacy $VIPRIRUL"
+if $KEYFUNCTION; then
 UIP "Installing Riru Core $IAMM"
 UZTPN "Riru"
 MODID="$IDRIRU"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID/lib
+cp -f $TMPDIR/Riru/rirud.apk $MODPATH/$MODID
 cp -rf $TMPDIR/Riru/system $MODPATH/$MODID
 UIP "Copy arm Libraries"
 mv $TMPDIR/Riru/system/lib/libriru.so $MODPATH/$MODID/lib
@@ -9163,11 +9166,88 @@ mkdir -p $MODPATH/$MODID/lib64
 mv $TMPDIR/Riru/system/lib64/libriru.so $MODPATH/$MODID/lib64
 mv $TMPDIR/Riru/system/lib64/libriruhide.so $MODPATH/$MODID/lib64
 mv $TMPDIR/Riru/system/lib64/libriruloader.so $MODPATH/$MODID/lib64
-mv $TMPDIR/Riru/system/lib64/librirud.so $MODPATH/$MODID
-else
-mv $TMPDIR/Riru/system/lib/librirud.so $MODPATH/$MODID
 fi
-MMPR -vcrapi "Riru" "$VIPRIRU" "$VCIPRIRU" "Rikka" "Inject into zygote and run codes from \"Riru\" modules in apps or the system server." "25" "9"
+MMPR -vcrapi "Riru" "$VIPRIRU" "$VCIPRIRU" "Rikka" "Inject into zygote and run codes from \"Riru\" modules in apps or the system server. Support modules which use Riru API v24+" "26" "24"
+echo "#!/sbin/sh
+if [ ! -d /data/adb/riru/modules ]; then rm -rf /data/adb/riru; fi" > $MODPATH/$MODID/uninstall.sh
+echo "#!$MIPSB/sh
+MODDIR=\${0%/*}
+flock -n \"\$MODDIR/module.prop\" -c \"sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ post-fs-data.sh fails to run. Magisk is broken on this device. ] /g' \\"\$MODDIR/module.prop\\"\"" > $MODPATH/$MODID/service.sh
+echo "ro.dalvik.vm.native.bridge=libriruloader.so" > $MODPATH/$MODID/system.prop
+echo "#!$MIPSB/sh
+MODDIR=\${0%/*}
+if [ -z \"\$SHELL\" ]; then
+export SHELL=sh
+fi
+sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ app_process fails to run. ] /g' \"\$MODDIR/module.prop\"
+export CLASSPATH=\$MODDIR/rirud.apk
+cd \$MODDIR
+flock \"module.prop\" -c \"$MIPSB/app_process -Djava.class.path=rirud.apk $MIPSB --nice-name=rirud riru.Daemon \$\$ \$(magisk -V) \$(magisk --path)\" 2>&1 | xargs log -t \"Riru\"" > $MODPATH/$MODID/post-fs-data.sh
+echo "RIRU_MIN_COMPATIBLE_API=9
+RIRU_API=\"26\"
+RIRU_VERSION_CODE=\"484\"
+RIRU_VERSION_NAME=\"v26.0.5.r484.a8c93a12f8\"
+
+abort_for_requires_new_version() {
+ui_print \"*********************************************************\"
+ui_print \"! This module requires Riru \$1 or above\"
+ui_print \"! Please install (upgrade) Riru from Magisk Manager\"
+ui_print \"! Or you can download zip from https://github.com/RikkaApps/Riru/releases\"
+abort \"*********************************************************\"
+}
+
+abort_for_old_module() {
+ui_print \"*********************************************************\"
+ui_print \"! This module haven't support Riru v22.0+\"
+ui_print \"! Please ask the developer of this module to make changes\"
+abort \"*********************************************************\"
+}
+
+check_riru_version() {
+ui_print \"- Riru: \$RIRU_VERSION_NAME (API \$RIRU_API)\"
+[ \"\$RIRU_MODULE_API_VERSION\" -lt \"\$RIRU_MIN_COMPATIBLE_API\" ] && abort_for_old_module
+[ \"\$RIRU_MODULE_MIN_API_VERSION\" -gt \"\$RIRU_API\" ] && abort_for_requires_new_version \"\$RIRU_MODULE_MIN_RIRU_VERSION_NAME\"
+}
+
+enforce_install_from_magisk_app() {
+if \$BOOTMODE; then
+ui_print \"- Installing from Magisk app\"
+else
+ui_print \"*********************************************************\"
+ui_print \"! Install from recovery is NOT supported\"
+ui_print \"! Some recovery has broken implementations, install with such recovery will finally cause Riru or Riru modules not working\"
+ui_print \"! Please install from Magisk app\"
+abort \"*********************************************************\"
+fi
+}" > $MODPATH/$MODID/util_functions.sh
+if grep "ro.maple.enable=1" "$IPSBP"; then
+UIP "Add ro.maple.enable=0"
+echo "ro.maple.enable=0" >> $MODPATH/$MODID/system.prop
+fi
+UIP "Removing Old Files"
+rm -rf $NVBASE/riru/bin $NVBASE/riru/native_bridge $NVBASE/riru/api_version.new $NVBASE/riru/version_code.new $NVBASE/riru/version_name.new $NVBASE/riru/enable_hide $NVBASE/riru/api_version $NVBASE/riru/util_functions.sh $IPDM/riru/api_version $IPDM/riru/version_code $IPDM/riru/version_name
+else
+UIP "Installing Riru Core Legacy $IAMM"
+UZTPN "RiruLegacy"
+MODID="$IDRIRU"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID/lib
+touch $MODPATH/$MODID/legacy
+cp -rf $TMPDIR/RiruLegacy/system $MODPATH/$MODID
+UIP "Copy arm Libraries"
+mv $TMPDIR/RiruLegacy/system/lib/libriru.so $MODPATH/$MODID/lib
+mv $TMPDIR/RiruLegacy/system/lib/libriruhide.so $MODPATH/$MODID/lib
+mv $TMPDIR/RiruLegacy/system/lib/libriruloader.so $MODPATH/$MODID/lib
+if [ "$arch" = "arm64" ]; then
+UIP "Copy arm64 Libraries"
+mkdir -p $MODPATH/$MODID/lib64
+mv $TMPDIR/RiruLegacy/system/lib64/libriru.so $MODPATH/$MODID/lib64
+mv $TMPDIR/RiruLegacy/system/lib64/libriruhide.so $MODPATH/$MODID/lib64
+mv $TMPDIR/RiruLegacy/system/lib64/libriruloader.so $MODPATH/$MODID/lib64
+mv $TMPDIR/RiruLegacy/system/lib64/librirud.so $MODPATH/$MODID
+else
+mv $TMPDIR/RiruLegacy/system/lib/librirud.so $MODPATH/$MODID
+fi
+MMPR -vcrapi "Riru" "$VIPRIRUL" "$VCIPRIRUL" "Rikka" "Inject into zygote and run codes from \"Riru\" modules in apps or the system server." "25" "9"
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
 # Reset ro.dalvik.vm.native.bridge or reboot if needed
@@ -9217,21 +9297,15 @@ ui_print \"! Please install from Magisk app\"
 abort \"*********************************************************\"
 fi
 }" > $MODPATH/$MODID/util_functions.sh
-for p in $PROPFILESALT; do
-if [ -f $p ]; then
-if grep "ro.maple.enable=1" "$PROPFILESALT"; then
+if grep "ro.maple.enable=1" "$IPSBP"; then
 UIP "Add ro.maple.enable=0"
 echo "ro.maple.enable=0" >> $MODPATH/$MODID/system.prop
-break
 fi
-fi
-done
-SET_PERM_RM
 UIP "Moving rirud"
 mv $MODPATH/$MODID/system/$libarch/librirud.so $MODPATH/$MODID/rirud
 SET_PERM $MODPATH/$MODID/rirud 0 0 0700
 UIP "Copy rirud.dex"
-mv $TMPDIR/Riru/classes.dex $MODPATH/$MODID/rirud.dex
+mv $TMPDIR/RiruLegacy/classes.dex $MODPATH/$MODID/rirud.dex
 SET_PERM $MODPATH/$MODID/rirud.dex 0 0 0600
 UIP "Removing Old Files"
 rm -rf $NVBASE/riru/bin $NVBASE/riru/native_bridge $NVBASE/riru/api_version.new $NVBASE/riru/version_code.new $NVBASE/riru/version_name.new $NVBASE/riru/enable_hide $IPDM/riru/api_version $IPDM/riru/version_code $IPDM/riru/version_name
@@ -9239,11 +9313,13 @@ UIP "Writing Files For pre-v24 Modules"
 mkdir -p $NVBASE/riru
 echo -n "25" > "$NVBASE/riru/api_version"
 SET_PERM $NVBASE/riru/api_version 0 0 0600
+fi
+SET_PERM_RM
 UIP "$MSGDI"
 }
 
 IPEDXPOSED() {
-if $MAGISK && [ -d $MODPATH/riru-core ]; then
+if $MAGISK && [ -f $MODPATH/$IDRIRU/legacy ]; then
 if $AOREO || $APIE || $ATEN || $AELEVEN; then
 UCSA "Install EdXposed $VIPEDXPOSED?" "" "$MSGNUS" "IPEDXPOSEDS"
 fi
@@ -9536,7 +9612,7 @@ SET_PERM_RM -msgdi
 }
 
 IPLSPOSED() {
-if $MAGISK && [ -d $MODPATH/riru-core ]; then
+if $MAGISK && [ -d $MODPATH/$IDRIRU ] && [ ! -f $MODPATH/$IDRIRU/legacy ]; then
 if $AOREO || $APIE || $ATEN || $AELEVEN; then
 UCSA "Install LSPosed $VIPLSPOSED?" "" "$MSGNUS" "IPLSPOSEDS"
 fi
@@ -9547,19 +9623,29 @@ IPLSPOSEDS() {
 UIP "Installing LSPosed $IAMM"
 UZTPN "LSPosed"
 MODID="$IDLSPOSED"; REMOVER -mm "$MODID $IDEDXPOSED"
-mkdir -p $MODPATH/$MODID/riru
+mkdir -p $MODPATH/$MODID/riru $NVBASE/lspd/config
 cp -rf $TMPDIR/LSPosed/system/lib $MODPATH/$MODID/riru
 cp -rf $TMPDIR/LSPosed/system/framework $MODPATH/$MODID
 if [ "$arch" = "arm64" ]; then UIP "Copy arm64 Libraries"; cp -rf $TMPDIR/LSPosed/system/lib64 $MODPATH/$MODID/riru; fi
-MMPR -vc "Riru - LSPosed" "$VIPLSPOSED" "$VCIPLSPOSED" "LSPosed Developers" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 12 Beta 2. Requires Riru 25.0.1 or above installed."
+MMPR -vc "Riru - LSPosed" "$VIPLSPOSED" "$VCIPLSPOSED" "LSPosed Developers" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 12 Beta 4. Requires Riru 25.0.1 or above installed."
 echo "allow system_server system_server process execmem" > $MODPATH/$MODID/sepolicy.rule
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
-\"\$MODDIR/lspd\" --from-service" > $MODPATH/$MODID/service.sh
+unshare -m \$MODDIR/lspd --from-service &" > $MODPATH/$MODID/service.sh
 echo "#!$MIPSB/sh
 dir=\${0%/*}
-if [ -d \"\$dir/system\" ]; then
+tmpLspdDex=\"/data/local/tmp/lspd.dex\"
+debug=\"false\"
+if [ -r \$tmpLspdDex ]; then
+java_options=\"-Djava.class.path=\$tmpLspdDex\"
+debug=\"true\"
+elif [ -d \"\$dir/system\" ]; then
 java_options=\"-Djava.class.path=\$dir/system/framework/lspd.dex\"
+debug=\"true\"
+else
+java_options=\"-Djava.class.path=\$dir/framework/lspd.dex\"
+fi
+if [ \$debug = \"true\" ]; then
 os_version=\$(getprop ro.build.version.sdk)
 if [ \"\$os_version\" -eq \"27\" ]; then
 java_options=\"\$java_options -Xrunjdwp:transport=dt_android_adb,suspend=n,server=y -Xcompiler-option --debuggable\"
@@ -9568,10 +9654,8 @@ java_options=\"\$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend
 else
 java_options=\"\$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend=n,server=y\"
 fi
-else
-java_options=\"-Djava.class.path=\$dir/framework/lspd.dex\"
 fi
-exec $MIPSB/app_process \$java_options $MIPSB --nice-name=lspd org.lsposed.lspd.core.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/lspd
+exec /system/bin/app_process \$java_options /system/bin --nice-name=lspd org.lsposed.lspd.core.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/lspd
 echo "dalvik.vm.dex2oat-flags=--inline-max-code-units=0" > $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
 
@@ -9584,7 +9668,6 @@ sed -n \"\$REGEX\" \${FILES} 2>/dev/null | head -n 1
 }
 
 MODDIR=\${0%/*}
-
 MAGISK_VERSION=\$(magisk -v)
 MAGISK_VER_CODE=\$(magisk -V)
 
@@ -9592,7 +9675,6 @@ MAGISK_VER_CODE=\$(magisk -V)
 . \$(magisk --path)/.magisk/modules/riru-core/util_functions.sh
 
 LSPD_VERSION=\$(grep_prop version \"\${MODDIR}/module.prop\")
-
 ANDROID_SDK=\$(getprop ro.build.version.sdk)
 BUILD_DESC=\$(getprop ro.build.description)
 PRODUCT=\$(getprop ro.build.product)
@@ -9604,10 +9686,8 @@ ARCH=\$(getprop ro.product.cpu.abi)
 DEVICE=\$(getprop ro.product.device)
 ANDROID=\$(getprop ro.build.version.release)
 BUILD=\$(getprop ro.build.id)
-
 MISC_PATH=\$(cat /data/adb/lspd/misc_path)
 BASE_PATH=\"/data/misc/\$MISC_PATH\"
-
 LOG_PATH=\"/data/adb/lspd/log\"
 ENABLE_VERBOSE_LOG_FILE=\"/data/adb/lspd/config/verbose_log\"
 LOG_VERBOSE=false
@@ -9616,8 +9696,6 @@ if [ \"\$(cat \"\${ENABLE_VERBOSE_LOG_FILE}\")\" = \"1\" ]; then
 LOG_VERBOSE=true
 fi
 
-# If logcat client is kicked out by klogd server, we'll restart it.
-# However, if it is killed manually or by LSPosed Manager, we'll exit.
 loop_logcat() {
 while true; do
 logcat \$*
@@ -9686,12 +9764,13 @@ if [ ! -z \"\${MISC_PATH}\" ]; then
 chcon -R u:object_r:magisk_file:s0 \"\${BASE_PATH}\"
 chmod 771 \"\${BASE_PATH}\"
 print_log_head \"\${LOG_PATH}/modules.log\"
-# start_verbose_log_catcher
 start_log_catcher all \"LSPosed:V XSharedPreferences:V LSPosed-Bridge:V LSPosedManager:V LSPosedService:V *:F\" true \${LOG_VERBOSE}
 fi
 
-\"\$MODDIR/lspd\"" > $MODPATH/$MODID/post-fs-data.sh
-mkdir -p $NVBASE/lspd
+rm -f \"/data/local/tmp/lspd.dex\"
+unshare -m sh -c \"\$MODDIR/lspd &\"" > $MODPATH/$MODID/post-fs-data.sh
+mkdir -p $MODPATH/$MODID/riru/lib $MODPATH/$MODID/riru/lib64
+touch $MODPATH/$MODID/riru/lib/libriru_lspd $MODPATH/$MODID/riru/lib64/libriru_lspd
 UIP "Installing LSPosed Manager"
 if $BOOTMODE; then
 pm install -r $TMPDIR/LSPosed/LSPosedManager.apk
@@ -9709,8 +9788,7 @@ UIP "Use New Path $MISC_RAND"
 echo "$MISC_PATH" > $NVBASE/lspd/misc_path
 fi
 mkdir -p $IPDM/$MISC_PATH
-echo -e "#!/sbin/sh\nrm -rf /data/adb/lspd; rm -rf $IPDM/$MISC_PATH" >> $MODPATH/$MODID/uninstall.sh
-[ -d $NVBASE/lspd/config ] || mkdir -p $NVBASE/lspd/config
+echo -e "#!/sbin/sh\nrm -rf $MODPATH/lspd $MODPATH/riru/modules/lspd" > $MODPATH/$MODID/uninstall.sh
 [ -f $NVBASE/lspd/config/verbose_log ] || echo "0" >$NVBASE/lspd/config/verbose_log
 SET_PERM_RM
 chmod 0744 $MODPATH/$MODID/lspd
@@ -9718,7 +9796,7 @@ UIP "$MSGDI"
 }
 
 IRIRUCW() {
-if $MAGISK && [ -d $MODPATH/riru-core ]; then
+if $MAGISK && [ -d $MODPATH/$IDRIRU ]; then
 if $APIE || $ATEN || $AELEVEN; then
 UCSA "Install Riru Clipboard Whitelist $VIPRIRUCW?" "" "$MSGNUS" "IRIRUCWS"
 fi
@@ -9759,7 +9837,7 @@ SET_PERM_RM -msgdi
 }
 
 IPRMH() {
-if $MAGISK && [ -d $MODPATH/riru-core ]; then
+if $MAGISK && [ -d $MODPATH/$IDRIRU ]; then
 if $APIE || $ATEN || $AELEVEN; then
 UCSA "Install Riru Momo Hider $VIPRMH?" "$MSGEFTC" "$MSGNUS" "IPRMHS"
 fi

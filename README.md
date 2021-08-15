@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 13.08.21 (51) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/13.08.2021/AIOPFMD-13.08.21-%2851%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1lKK-R_yHZ514eaRgGZfPi7C7iVwFrMLd/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/47">TG</a>
+* Версия AIOPFMD: 15.08.21 (52) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/15.08.2021/AIOPFMD-15.08.21-%2852%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/16yuVai9vsZCclntHJrrZVmVnHuLn00Qy/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/48">TG</a>
 * Версия AIOPFMDA: 01.08.21 (5) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMDA-01.08.21-%285%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1yU8JXdYhtvahB_yEfpWhorNgGV2R__xz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/45">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -32,6 +32,17 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 15.08.21 (52) ####
+* OnePlus Launcher откачен до v6.2 из за многих проблем и отвалов (так же опять ебучий DTTS через жопу);
+* LSPosed обновлен до v1.5.0 (5880);
+* Добавлен Riru Core Legacy v25.4.4.r426.05efc94 (НЕ ОБНОВЛЯЙТЕ ЕГО ЕСЛИ СТОИТ EdXposed пока сами разрабы EdXposed не апнут поддержку до 26й версии Riru!) для EdXposed;
+* Теперь будет два Riru в разных выборах (если EdXposed обновится до Riru 26 - тогда уберу);
+* Выбор EdXposed будет отображаться если установлен Riru Core Legacy;
+* Выбор LSPosed будет отображаться если установлен Riru Core;
+* Добавлен Riru Core v26.0.5.r484.a8c93a12f8;
+* Фикс создания папки /data/adb/lspd для LSPosed;
+* Фикс бесконечных ошибок при попытке grep для Riru Core;
+* MagiskHide Props Config Обновлен до v5.4.1-v131.
 #### 13.08.21 (51) ####
 * NLSound обновлен до v2.5 STABLE со многими фиксами, улучшениями и доработками. Выбор на Full и Light версию PATCH_MIXER и не добавлял Auto режим;
 * В Режим удаления/replace/restore добавлены приложения в обычный лист: Leaflet, DotFEWallpapers, Simple-Calendar и TeamOctavi (резня);
@@ -1559,6 +1570,8 @@
 <h3 align=center>Riru/Edx/LS/Posed/Mudules</h3>
 
 * Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - Установка Riru Core;
+	- Standart v26;
+	- Legacy v25 Fro EdXposed;
 * Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - Установка EdXposed;
 * Пункт (Only М) (8.1-12) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> - Установка LSPosed;
 * Пункт (Only М) (8.1-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101920396">4PDA</a> || <a href="https://github.com/Kr328/Riru-ClipboardWhitelist">GITHUB</a> - Установка Riru Clipboard Whitelist:
