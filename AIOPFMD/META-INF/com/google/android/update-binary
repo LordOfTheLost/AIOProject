@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="15.08.21 (52)"
+VAIOPFMD="17.08.21 (53)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -17,6 +17,7 @@ IDPO="PillsOverlay"; VIPPO="v1.8"
 IDPCO="PillsColorsOverlay"; VIPPCO="v1.3"
 IDPHOS="PillsHeightOverlay"; VIPPHO="v1.3"
 IDPSHNB="ShowHideNavigationBar"; VIPPSHNB="v1.0"
+IDBGDS="BackGestureDisabler"; VIPBGD="v1.0"
 IDGBNBS="GboardNavBarSpacing"; VIPGBNBS="v1.2"
 IDGBRC="GBoardRoundedCorners"; VIPGBRC="v1.1"
 IDGBT="GBoardThemes"; VIPGBT="v1.1"
@@ -62,7 +63,7 @@ IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
 IDVAAH="AdAwayHosts"; VIPVAAH="11.08.2021"
-IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.3"; VCIPLPH="1723"
+IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.4"; VCIPLPH="1724"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v210805-v16.8"; VCIPVSH="168"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/TTL/DNS/WB
@@ -96,7 +97,7 @@ IDMHPC="MagiskHidePropsConf"; VIPMHPC="v5.4.1-v131"; VCIPMHPC="69"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
-IDRIRU="riru-core"; VIPRIRU="v26.0.5.r484.a8c93a12f8"; VCIPRIRU="484"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
+IDRIRU="riru-core"; VIPRIRU="v26.1.0.r497.8b378fc3af"; VCIPRIRU="497"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
 IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.5.0 (5880)"; VCIPLSPOSED="5880"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
@@ -139,6 +140,7 @@ ECHO="$BB/echo"
 ZIPSIGNER="$AADDONS/zipsigner"
 ZIPSIGNERJAR="$ZIPSIGNER-3.0-dexed.jar"
 ZIPALIGN="$AADDONS/zipalign"
+ZIPPACKER="$AADDONS/zip-arm"
 } #
 
 { #Helper Functions
@@ -293,7 +295,8 @@ APIIXML="$IPVE/audio_platform_info_intcodec.xml"
 APIEXML="$IPVE/audio_platform_info_extcodec.xml"
 DEVFEA="$IPSEDF/*.xml"; DEVFEAA="$IPVEDF/*.xml"
 SPGLOBAL="settings put global"; SPSECURE="settings put secure"; SPSYSTEM="settings put system"
-if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.sh; PATCHMODEFILE="$STORAGE/PATCHMODE.sh"; fi
+if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.conf; PATCHMODEFILE="$STORAGE/PATCHMODE.conf"; fi
+case $PATCHMODEFILE in *sh*) mv $PATCHMODEFILE $STORAGE/PATCHMODE.conf; PATCHMODEFILE="$STORAGE/PATCHMODE.conf";; esac
 PMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "PMODE")"
 HFDURATION="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFMODE")"
 HFSWAPMODE="$(GET_PMODE_PROP "$PATCHMODEFILE" "HFSMODE")"
@@ -347,7 +350,6 @@ AAPT="$AADDONS/aapt-$arch"
 XMLSTARLET="$AADDONS/xmlstarlet-$arch"
 SQLITE3="$TMPDIR/SQLite3/sqlite3-$arch"
 FKEYCHECK="$ADDONS/keycheck-$arch"
-ZIPPACKER="$AADDONS/zip-$arch"
 # SED="$AADDONS/sed-$arch"
 }
 
@@ -462,8 +464,7 @@ $UNTARXZ -xf $ADDONS.tar.xz -C $ALTTMPDIR; rm -f $ADDONS.tar.xz
 AIOPFMDPH="$IPSB/aiopfmdph"
 [ $BOOTMODE != true ] && mkdir -p $AIOPFMDPH
 UZTPN "AltAddons SQLite3" &
-STANDARTBUCKUPER=false
-FMAGISKMIRROR=false
+STANDARTBUCKUPER=false; FMAGISKMIRROR=false
 if $FINDAIOPFMDA; then unzip -oq $AIOPFMDAFILE -d $TMPDIR 2>/dev/null; fi &
 }
 
@@ -2577,6 +2578,7 @@ MMUPD_CHECKER "$IDPO" "$VIPPO" "IPPOS"
 MMUPD_CHECKER "$IDPCO" "$VIPPCO" "IPPCOS"
 MMUPD_CHECKER "$IDPHOS" "$VIPPHO" "IPPHOS"
 MMUPD_CHECKER "$IDPSHNB" "$VIPPSHNB" "IPPSHNBS"
+MMUPD_CHECKER "$IDBGDS" "$VIPBGD" "IPBGDS"
 MMUPD_CHECKER "$IDGBNBS" "$VIPGBNBS" "IPGBNBSS"
 MMUPD_CHECKER "$IDGBRC" "$VIPGBRC" "IPGBRCS"
 MMUPD_CHECKER "$IDGBT" "$VIPGBT" "IPGBTS"
@@ -3033,6 +3035,27 @@ sed -i "/qemu.hw.mainkeys=0/d" $IPSBP; sed -i "/qemu.hw.mainkeys=1/d" $IPSBP
 echo -e "# Show/Hide Navigation Bar\nqemu.hw.mainkeys=$ISHNBPVN" >> $IPSBP
 fi
 UIP "$MSGDI"
+}
+
+IPBGD() {
+if $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "back_gesture_inset_scale_left back_gesture_inset_scale_right"; then
+UCSA "Install Back Gesture Disabler $VIPBGD?" "" "$MSGNUS" "IPBGDS"
+fi
+fi
+}
+
+IPBGDS() {
+MSGDELIMITER; UIP "Disable Left Gesture?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then BGISL=0; else BGISL=1; fi
+MSGDELIMITER; UIP "Disable Right Gesture?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then BGISR=0; else BGISR=1; fi
+UIP "Installing Back Gesture Disabler $IAMM"
+MODID="$IDBGDS"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MGSERVICED "$SPSECURE back_gesture_inset_scale_left 1; $SPSECURE back_gesture_inset_scale_right 1" "$SPSECURE back_gesture_inset_scale_left $BGISL; $SPSECURE back_gesture_inset_scale_right $BGISR" "BGDS"
+if $BOOTMODE; then UIP "Back Gesture Disabler Activated Right Now"; $SPSECURE back_gesture_inset_scale_left $BGISL; $SPSECURE back_gesture_inset_scale_right $BGISR; fi
+MMPR -v "Back Gesture Disabler" "$VIPBGD" "Back Gesture Disabler $FAOOR"; SET_PERM_RM -msgdi
 }
 
 IPGBNBS() {
@@ -3542,7 +3565,8 @@ MSGDELIMITER; UIP "Choose FPS:" "$MSGVU 60" "$MSGVD 30"; if $KEYFUNCTION; then B
 UIP "Installing Boot Animation $IAMM"
 UZTPN "BA"
 sed -i "s/#FPS/$BAFPS/g" $TMPDIR/BA/$BADIR/desc.txt
-cd $TMPDIR/BA/$BADIR && $ZIPPACKER -r -0 $TMPDIR/BA/$BADIR * >/dev/null
+cd $TMPDIR/BA/$BADIR
+$ZIPPACKER -r -0 $TMPDIR/BA/$BADIR * >/dev/null
 mv -f $TMPDIR/BA/$BADIR.zip $TMPDIR/BA/bootanimation.zip
 if $MAGISK; then
 MODID="$IDBA"; REMOVER -mm "$MODID"
@@ -4008,7 +4032,7 @@ UIP "$MSGDI"
 }
 
 IPAPP() {
-if find $STORAGE/Applications/*.apk >/dev/null; then
+if [ -d $STORAGE/Applications ]; then
 UCSA "Install App In $STORAGE/Applications?" "" "$MSGNUS" "IPAPPS"
 fi
 }
@@ -4037,9 +4061,7 @@ IPAPPSA() {
 PACKAGENAME="$($AAPT list -a "$STORAGE/Applications/$APKINPUT" | awk -v FS='"' '/package=/{print $2}')"
 mkdir -p $TMPDIR/$PACKAGENAME; cp -f "$STORAGE/Applications/$APKINPUT" "$TMPDIR/$PACKAGENAME/$PACKAGENAME.apk"
 NAMEINSTALLAPP="$PACKAGENAME"; NAMEPATHOUT="$PACKAGENAME"; ALTAPKINSTALLER; rm -rf $TMPDIR/$PACKAGENAME
-if [ $MAGISK != true ]; then
-echo "$PACKAGENAME" >> $AIOPFMDPH/AIL.txt
-fi
+if [ $MAGISK != true ]; then echo "$PACKAGENAME" >> $AIOPFMDPH/AIL.txt; fi
 }
 
 } #
@@ -9142,7 +9164,7 @@ done
 IPRIRU() {
 if $MAGISK; then
 if $AOREO || $APIE || $ATEN || $AELEVEN; then
-UCSA "Install Riru Core v25 Or v26?" "" "$MSGNUS" "IPRIRUS"
+UCSA "Install Riru Core v26 Or v25?" "" "$MSGNUS" "IPRIRUS"
 fi
 fi
 }
@@ -9172,7 +9194,8 @@ echo "#!/sbin/sh
 if [ ! -d /data/adb/riru/modules ]; then rm -rf /data/adb/riru; fi" > $MODPATH/$MODID/uninstall.sh
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
-flock -n \"\$MODDIR/module.prop\" -c \"sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ post-fs-data.sh fails to run. Magisk is broken on this device. ] /g' \\"\$MODDIR/module.prop\\"\"" > $MODPATH/$MODID/service.sh
+if [ -z \"\$SHELL\" ]; then export SHELL=sh; fi
+flock -n \"\$MODDIR/module.prop\" -c \"sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ post-fs-data.sh fails to run. Magisk is broken on this device. ] /g' \\\"\$MODDIR/module.prop\\\"\"" > $MODPATH/$MODID/service.sh
 echo "ro.dalvik.vm.native.bridge=libriruloader.so" > $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
@@ -9182,7 +9205,8 @@ fi
 sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ app_process fails to run. ] /g' \"\$MODDIR/module.prop\"
 export CLASSPATH=\$MODDIR/rirud.apk
 cd \$MODDIR
-flock \"module.prop\" -c \"$MIPSB/app_process -Djava.class.path=rirud.apk $MIPSB --nice-name=rirud riru.Daemon \$\$ \$(magisk -V) \$(magisk --path)\" 2>&1 | xargs log -t \"Riru\"" > $MODPATH/$MODID/post-fs-data.sh
+flock \"module.prop\"
+unshare -m sh -c \"$MIPSB/app_process -Djava.class.path=rirud.apk $MIPSB --nice-name=rirud riru.Daemon \$(magisk -V) \$(magisk --path) &\"" > $MODPATH/$MODID/post-fs-data.sh
 echo "RIRU_MIN_COMPATIBLE_API=9
 RIRU_API=\"26\"
 RIRU_VERSION_CODE=\"484\"
@@ -11236,6 +11260,7 @@ IPPO
 IPPCO
 IPPHO
 IPPSHNB
+IPBGD
 IPGBNBS
 IPGBRC
 IPGBT

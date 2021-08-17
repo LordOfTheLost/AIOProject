@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 15.08.21 (52) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/15.08.2021/AIOPFMD-15.08.21-%2852%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/16yuVai9vsZCclntHJrrZVmVnHuLn00Qy/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/48">TG</a>
+* Версия AIOPFMD: 17.08.21 (53) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/17.08.2021/AIOPFMD-17.08.21-%2852%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1sdiIHE1XNO3dp8mW2LLD3VBYYzjNbgUc/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/49">TG</a>
 * Версия AIOPFMDA: 01.08.21 (5) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMDA-01.08.21-%285%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1yU8JXdYhtvahB_yEfpWhorNgGV2R__xz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/45">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -32,6 +32,12 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 17.08.21 (53) ####
+* Riru Core обновлен до v26.1.0.r497.8b378fc3af;
+* PATCHMODE теперь будет с расширением .conf и у кого он ещё .sh автоматически будет переименован в .conf;
+* Фикс Killed при попытке сгенерировать архив Boot анимации на некоторых прошивках - zip бинарник для arm64 иногда делал этот отвал (а иногда не делал ЧТО ЗА ПИЗДЕЦ);
+* Добавлена установка Back Gesture Disabler v1.0 - теперь можно отключить по отдельности боковые жесты даже с жестовой таблеткой;
+* Фикс пары бесящих моментов.
 #### 15.08.21 (52) ####
 * OnePlus Launcher откачен до v6.2 из за многих проблем и отвалов (так же опять ебучий DTTS через жопу);
 * LSPosed обновлен до v1.5.0 (5880);
@@ -760,9 +766,11 @@
 	- Значение 9;
 	- Значение 10;
 * Пункт (All) - Show/Hide Navigation Bar:
-	- Build.prop вариант:
-		- Показать;
-		- Скрыть;
+	- Показать;
+	- Скрыть;
+* Пункт (Only M) (10-12) - Back Gesture Disabler:
+	- Выключить левый;
+	- Выключить правый;
 * Пункт (All) (10-12) (\\) - Установка патча на увеличение отступов при использовании клавиатуры:
 	- Значение 0 (Сток);
 	- Значение 5;
@@ -1881,7 +1889,7 @@
 
 * (М) и/или (MM) - Magisk/Manager/Modules.
 * (R) - Recommended.
-* PATCHMODE это - файл (можно на него делать какие хотите расширения хоть .exe), который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
+* PATCHMODE это файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
 	- PMODE: Открывает некоторые тестовые пункты/патчи (в PATCHMODE напротив "PMODE=" написать: U(ser) или D(ebug)) - Прописать только букву - По умолчанию U(ser).
 	- PDESIGN: Изменяет "дизайн" патча (в PATCHMODE напротив "PDESIGN=" написать: N(ew) или O(ld)) - прописать только букву - По умолчанию N(ew).
 	- KMETHOD: Принудительное переключение между старым и новым методом "KeyCheck" (в PATCHMODE напротив "KMETHOD=" написать: N(ew), O(ld) или A(lt) - прописать только букву - По умолчанию false, но после при первом запуске патча без настроенного файла PATCHMODE будет первый бинд, и на каком будет всё нормально - тот и будет по умолчанию прописан в PATCHMODE.
