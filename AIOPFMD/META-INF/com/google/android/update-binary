@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="17.08.21 (53)"
+VAIOPFMD="20.08.21 (54)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -34,12 +34,12 @@ IDQSCP="QSContentPadding"; VIPQSCP="v1.1"
 IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.1"
 IDQSCIAR="QSCIAR"; VIPQSCIAR="v1.1"
 IDEBB="BackgroundBlur"; VIPEBB="v1.0"
-IDBA="BootAnimation"; VIPBA="v1.2"
+IDBA="BootAnimation"; VIPBA="v1.3"
 IDOSEMOJI="emoji-replacer-809887617"; VIPOSEMOJI="1.0"; VCIPOSEMOJI="1"
 IDMUIS="MediaUiSounds"; VIPMUIS="v1.0"
 #Apps: GFU/GSF/SL/IA
 IDGSF="GSF"; VIPGSF="v1.0"
-IDSL="Systemless_Lawnchair"; VIPSL="v1.3"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 5"
+IDSL="Systemless_Lawnchair"; VIPSL="v1.4"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6"
 IDSOPL="Systemless_OPLauncher"; VIPSOPL="v6.2"; VCIPSOPL="30100"; VAIPSOPL="v5.1.0"
 IDSOUH="Systemless_OneUIHome"; VIPSOUHQ="v2.1"; VCIPSOUHQ="21"; VAIPSOUHQ="v11.0.50.67"; VIPSOUHR="v1.0"; VCIPSOUHR="1"; VAIPSOUHR="v12.1.07.19"
 IDSPL="Systemless_PixelLauncher"; VIPSPL="v1.0"; VIPASPLQ="v10 (703)"; VIPASPLR="v11 (825)"
@@ -62,7 +62,7 @@ IDACP="acp"; VIPACP="v2.3"; VCIPACP="37"
 IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="11.08.2021"
+IDVAAH="AdAwayHosts"; VIPVAAH="19.08.2021"
 IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.4"; VCIPLPH="1724"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v210805-v16.8"; VCIPVSH="168"
 IDVOH="Hosts"; VIPVOH="v1.1"
@@ -97,7 +97,7 @@ IDMHPC="MagiskHidePropsConf"; VIPMHPC="v5.4.1-v131"; VCIPMHPC="69"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
-IDRIRU="riru-core"; VIPRIRU="v26.1.0.r497.8b378fc3af"; VCIPRIRU="497"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
+IDRIRU="riru-core"; VIPRIRU="v26.1.1.r500.45d2706e83"; VCIPRIRU="500"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
 IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.5.0 (5880)"; VCIPLSPOSED="5880"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
@@ -2600,14 +2600,14 @@ if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDOSEMOJI" "$VIPOSEMOJI" "$VCIPOSEMOJI
 MMUPD_CHECKER "$IDMUIS" "$VIPMUIS" "IPMUISS"
 #Apps: GFU/GSF/SL/IA
 if $FINDAIOPFMDA; then MMUPD_CHECKER "$IDGSF" "$VIPGSF" "IPGSFS"; fi
-MMUPD_CHECKER "$IDSL" "$VIPSL" "IPSLS"
+if $FINDAIOPFMDA && $ATEN || $AELEVEN; then MMUPD_CHECKER "$IDSL" "$VIPSL" "IPSLS"; fi
 MMUPD_CHECKER -c "$IDSOPL" "$VIPSOPL" "$VCIPSOPL" "IPSLS"
-if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDSOUH" "$VIPSOUHQ" "$VCIPSOUHQ" "IPSLS"; fi
+if $FINDAIOPFMDA && $ATEN; then MMUPD_CHECKER -c "$IDSOUH" "$VIPSOUHQ" "$VCIPSOUHQ" "IPSLS"; fi
 if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDSOUH" "$VIPSOUHR" "$VCIPSOUHR" "IPSLS"; fi
 if $FINDAIOPFMDA; then MMUPD_CHECKER "$IDSPL" "$VIPSPL" "IPSLS"; fi
-MMUPD_CHECKER -c "$IDSSL" "$VIPSSLQ" "$VCIPSSLQ" "IPSLS"
+if $FINDAIOPFMDA && $ATEN; then MMUPD_CHECKER -c "$IDSSL" "$VIPSSLQ" "$VCIPSSLQ" "IPSLS"; fi
 MMUPD_CHECKER -c "$IDSSL" "$VIPSSLR" "$VCIPSSLR" "IPSLS"
-MMUPD_CHECKER -c "$IDSLA" "$VIPSLA" "$VCIPSLA" "IPSLS"
+if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDSLA" "$VIPSLA" "$VCIPSLA" "IPSLS"; fi
 if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDASUSS" "$VIPASUSS" "$VCIPASUSS" "IPASUSSS"; fi
 #Audio: VFX(P)/DSP/DTS/AN/ACP/AML
 MMUPD_CHECKER -c "$IDVFXL" "$VIPVFXL" "$VCIPVFXL" "IPVFXS"
@@ -3543,7 +3543,7 @@ if $KEYFUNCTION; then
 MSGDELIMITER; UIP "Choose Color Variant:" "$MSGVU Black" "$MSGVD White"
 if $KEYFUNCTION; then BADIR=GPBAB; else BADIR=GPBAW; fi; BATC=true
 else
-MSGDELIMITER; UIP "Choose Boot Animation:" "$MSGVU TenX-OS" "$MSGVD $MSGNIS"
+MSGDELIMITER; UIP "Choose Boot Animation:" "$MSGVU TenX" "$MSGVD $MSGNIS"
 if $KEYFUNCTION; then
 MSGDELIMITER; UIP "Choose Color Variant:" "$MSGVU Black" "$MSGVD White"
 if $KEYFUNCTION; then BADIR=TENXB; else BADIR=TENXW; fi; BATC=true
@@ -3553,9 +3553,14 @@ if $KEYFUNCTION; then
 MSGDELIMITER; UIP "Choose Color Variant:" "$MSGVU Black" "$MSGVD White"
 if $KEYFUNCTION; then BADIR=PPUIB; else BADIR=PPUIW; fi; BATC=true
 else
+MSGDELIMITER; UIP "Choose Boot Animation:" "$MSGVU Radiant" "$MSGVD $MSGNIS"
+if $KEYFUNCTION; then
+BATC=true; BADIR=RADIANT
+else
 MSGDELIMITER; UIP "Choose Boot Animation:" "$MSGVU OnePlus" "$MSGVD $MSGNUS"
 if $KEYFUNCTION; then
 BATC=true; BADIR=OPBM
+fi
 fi
 fi
 fi
@@ -3769,7 +3774,7 @@ rm -f $AIOPFMDPH/systemlesslauncher
 UIP "$MSGDRM"
 fi
 else
-if $ATEN || $AELEVEN || $ATWELVE; then
+if $ATEN || $AELEVEN; then
 if [ $MIUI != true ]; then
 UCSA "Install Systemless Launcher?" "$MSGEFTC" "$MSGNUS" "IPSLS"
 fi
@@ -3785,6 +3790,7 @@ if $BOOTMODE; then pm uninstall xyz.paphonb.quickstepswitcher >/dev/null; fi
 [ -d $MODPATH/quickstepswitcher ] && rm -rf $MODPATH/quickstepswitcher; [ -d $MODPATH/quickswitch_terminal ] && rm -rf $MODPATH/quickswitch_terminal
 fi
 SYSTEMLESSLAUNCHERS=false
+if $FINDAIOPFMDA && $ATEN || $AELEVEN; then
 if $ATEN; then
 MSGDELIMITER; UIP "Сhoose Launcher" "Lawnchair $VIPASLQ - $VIPSL" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 elif $AELEVEN || $ATWELVE; then
@@ -3810,9 +3816,15 @@ cp -rf $TMPDIR/$NAMESYSTEMLESSLAUNCHER $MODPATH
 MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly install Lawnchair on your device with Android 10-11 recents UI support."
 fi
 fi
+fi
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
 SYSTEMLESSLAUNCHERS=false
-MSGDELIMITER; UIP "OPLauncher $VAIPSOPL - $VIPSOPL" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+MSGDELIMITER
+if [ $FINDAIOPFMDA != true ] && $ATEN; then
+UIP "OPLauncher $VAIPSOPL - $VIPSOPL" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+else
+UIP "OPLauncher $VAIPSOPL - $VIPSOPL" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+fi
 if $KEYFUNCTION; then
 UIP "Installing OPLauncher $IAMM"
 SYSTEMLESSLAUNCHERS=true
@@ -3892,6 +3904,7 @@ fi
 fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
+if $FINDAIOPFMDA && $ATEN || $AELEVEN; then
 SYSTEMLESSLAUNCHERS=false
 MSGDELIMITER
 if $ATEN; then
@@ -3924,7 +3937,8 @@ fi
 fi
 fi
 fi
-if [ $SYSTEMLESSLAUNCHERS != true ]; then
+fi
+if [ $SYSTEMLESSLAUNCHERS != true ] && $FINDAIOPFMDA; then
 SYSTEMLESSLAUNCHERS=false
 if $ATEN; then
 MSGDELIMITER; UIP "AsusLauncher $VIPSLAQ - $VIPSLA" "$MSGVU Yes" "$MSGVD No $MSGNUS"
@@ -5996,6 +6010,7 @@ sleep 3
 fi
 MSGDELIMITER; UIP "Choose Variant:" "$MSGVU Use Experimental List" "$MSGVD No, Next List $MSGNUS"
 if $KEYFUNCTION; then
+RMLISTCHOICECONFIRMATION=true
 REMOVETRASHNAME="
 AmbientSensePrebuilt
 AndroidMigratePrebuilt
@@ -6071,10 +6086,13 @@ StorageManagerGoogle
 Tag
 TagGoogle
 TrichromeLibrary
+TrichromeLibrary-Stub
+VZWAPNLib
 Vending
 WallpaperPicker_Zero2
 WebView
 WebViewGoogle
+WebViewGoogle-Stub
 WebViewStub
 "
 UIP "Search App, Please Wait..."
@@ -6085,6 +6103,7 @@ fi
 if [ $MIUI != true ]; then
 MSGDELIMITER; UIP "Choose Variant:" "$MSGVU Use Launchers List" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
+RMLISTCHOICECONFIRMATION=true
 REMOVETRASHNAME="
 AsusLauncher
 AsusLauncherDev
@@ -9199,14 +9218,12 @@ flock -n \"\$MODDIR/module.prop\" -c \"sed -Ei 's/^description=(\[.*][[:space:]]
 echo "ro.dalvik.vm.native.bridge=libriruloader.so" > $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
-if [ -z \"\$SHELL\" ]; then
-export SHELL=sh
-fi
+if [ -z \"\$SHELL\" ]; then export SHELL=sh; fi
 sed -Ei 's/^description=(\[.*][[:space:]]*)?/description=[ app_process fails to run. ] /g' \"\$MODDIR/module.prop\"
 export CLASSPATH=\$MODDIR/rirud.apk
 cd \$MODDIR
 flock \"module.prop\"
-unshare -m sh -c \"$MIPSB/app_process -Djava.class.path=rirud.apk $MIPSB --nice-name=rirud riru.Daemon \$(magisk -V) \$(magisk --path) &\"" > $MODPATH/$MODID/post-fs-data.sh
+unshare -m sh -c \"$MIPSB/app_process -Djava.class.path=rirud.apk $MIPSB --nice-name=rirud riru.Daemon \$(magisk -V) \$(magisk --path) \$(getprop ro.dalvik.vm.native.bridge)&\"" > $MODPATH/$MODID/post-fs-data.sh
 echo "RIRU_MIN_COMPATIBLE_API=9
 RIRU_API=\"26\"
 RIRU_VERSION_CODE=\"484\"
@@ -11440,13 +11457,13 @@ BOOT_DETECTED
 APMSGASD
 PARTITION_AND_MOUNTS
 IMPORTANT_VARIABLES
-MIUI_CHECKER #&
+MIUI_CHECKER
 BB_CHECKER
 ARCH_CHECKER
-SELINUX_CHECKER #&
-SQLITE_CHECKER #&
-SOC_CHECKER #&
-GAPPS_CHECKER #&
+SELINUX_CHECKER
+SQLITE_CHECKER
+SOC_CHECKER
+GAPPS_CHECKER
 PATCHMODE
 AIOPFMD
 CHECK_AVERSION

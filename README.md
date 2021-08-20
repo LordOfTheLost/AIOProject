@@ -1,8 +1,8 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 17.08.21 (53) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/17.08.2021/AIOPFMD-17.08.21-%2852%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1sdiIHE1XNO3dp8mW2LLD3VBYYzjNbgUc/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/49">TG</a>
-* Версия AIOPFMDA: 01.08.21 (5) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.08.2021/AIOPFMDA-01.08.21-%285%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1yU8JXdYhtvahB_yEfpWhorNgGV2R__xz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/45">TG</a>
+* Версия AIOPFMD: 20.08.21 (54) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.08.2021/AIOPFMD-20.08.21-%2854%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1I5-hw1DBexJT4gKz2Q8-t0QE_0RHbtS-/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/50">TG</a>
+* Версия AIOPFMDA: 20.08.21 (6) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.08.2021/AIOPFMDA-20.08.21-%286%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/19SuNcGcOb0EznAT4is3uapjelftGAgpo/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/51">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Разработчик: <a href="https://4pda.to/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
@@ -32,6 +32,15 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 20.08.21 (54) ####
+* В Режим удаления/replace/restore добавлены приложения в экспериментальный лист: TrichromeLibrary-Stub, WebViewGoogle-Stub и VZWAPNLib;
+* Так же Экспериментальный лист и Лист с лаунчерами теперь буду с выборами на каждый по умолчанию в независимости от выбора в начале;
+* hosts файл с AdAway обновлен от 19.08.2021;
+* Asus Launcherы, Shady Launcher Q и Lawnchair Q перемещены в EOL Addon;
+* Riru Core обновлен до v26.1.1.r500.45d2706e83;
+* Shady Launcher R теперь с черной темой;
+* Boot Animation обновлен до v1.3 - добавил анимацию из Radiant;
+* Lawnchair обновлен до 11 Alpha 6 с полностью черной темой но квадраты не фиксятся даже раундерами и сам лаунчер иногда вылетает в фоне (стандарт и мне насрать уже).
 #### 17.08.21 (53) ####
 * Riru Core обновлен до v26.1.0.r497.8b378fc3af;
 * PATCHMODE теперь будет с расширением .conf и у кого он ещё .sh автоматически будет переименован в .conf;
@@ -925,10 +934,14 @@
 	- Pixel:
 		- Black;
 		- White;
-	- OnePlus;
-	- TenX-OS:
+	- TenX:
 		- Black;
 		- White;
+	- PixelPlusUI:
+		- Black;
+		- White;
+	- Radiant;
+	- OnePlus;
 			- FPS:
 				- 60;
 				- 30;
@@ -944,13 +957,13 @@
 
 * Пункт (All) (7.1.2, 8.1 и 9) (Arm, Arm64) (ADDON) - Установка Разблокировки по лицу при Gapps Pico (на практике уже не работает с новыми патчами безопасности на этих версия Android);
 * Пункт (All) (8.1, 9 и 10) (ADDON) - Устанавливает "заглушку" для работы GCam без Gapps;
-* Пункт (All) (10-12) (\\) - Установка Systemless Launcher (Alt Variant Quick Switch):
-	- Установка Lawnchair <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+* Пункт (All) (10-11) (\\) - Установка Systemless Launcher (Alt Variant Quick Switch):
+	- Установка Lawnchair Q (ADDON), Lawnchair R <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка OPLauncher <a href="https://www.pling.com/p/1451515/">PLING</a || <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a> || <a href="https://t.me/mrsluffy_releases">TG</a>;
-	- Установка OneUIHome (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a> || <a href="https://t.me/AyraProject">TG</a>;;
-	- Установка PixelLauncher (ADDON) <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
-	- Установка ShadyLauncher <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка AsusLauncher <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка OneUIHome Q/R (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a> || <a href="https://t.me/AyraProject">TG</a>;;
+	- Установка PixelLauncher Q/R (ADDON) <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
+	- Установка ShadyLauncher Q (ADDON), ShadyLauncher R <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка AsusLauncher Q/R (ADDON) <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 * Пункт (All) (10-12) (ADDON)<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
 * Пункт (All) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
 	- С подтверждением для каждого;
@@ -1462,10 +1475,13 @@
 * Tag
 * TagGoogle
 * TrichromeLibrary
+* TrichromeLibrary-Stub
+* VZWAPNLib
 * Vending
 * WallpaperPicker_Zero2
 * WebView
 * WebViewGoogle
+* WebViewGoogle-Stub
 * WebViewStub
 
 </details>
