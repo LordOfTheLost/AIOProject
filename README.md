@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 20.08.21 (54) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.08.2021/AIOPFMD-20.08.21-%2854%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1I5-hw1DBexJT4gKz2Q8-t0QE_0RHbtS-/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/50">TG</a>
+* Версия AIOPFMD: 23.08.21 (55) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.08.2021/AIOPFMD-23.08.21-%2855%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1nPxzPoVcpngl2-wBG-m8CDgRZTIQ9ilM/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/52">TG</a>
 * Версия AIOPFMDA: 20.08.21 (6) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.08.2021/AIOPFMDA-20.08.21-%286%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/19SuNcGcOb0EznAT4is3uapjelftGAgpo/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/51">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -32,6 +32,10 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 23.08.21 (55) ####
+* NLSound обновлен до v2.6 BETA со многими фиксами, улучшениями и доработками. Убран выбор Disable Useless Fluence для Mi8 из за отвала микрофона (у кого так же на других телефонах - можете сообщить);
+* LSPosed не обновляю до v1.5.1 (5898) по причине умершего разраба после пары отвалов UI и полного умирания телефона;
+* Некоторые улучшения для будущих патчей/функций а может и нет...
 #### 20.08.21 (54) ####
 * В Режим удаления/replace/restore добавлены приложения в экспериментальный лист: TrichromeLibrary-Stub, WebViewGoogle-Stub и VZWAPNLib;
 * Так же Экспериментальный лист и Лист с лаунчерами теперь буду с выборами на каждый по умолчанию в независимости от выбора в начале;

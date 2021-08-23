@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="20.08.21 (54)"
+VAIOPFMD="23.08.21 (55)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -54,7 +54,7 @@ IDVFXP="V4AFXPresets"; VIPVFXP="v1.3"
 IDJDSPM="ainur_jamesdsp"; VIPJDSPM="v3.4 (8-25-2020)"; VCIPJDSPM="78"
 IDDTSHPX="DTS_HPX"; VIPDTSHPX="zenz"; VCIPDTSHPX="58"
 IDAN="ainur_narsil"; VIPAN="MK I (15.09)"; VCIPAN="50"
-IDNLS="NLSound"; VIPNLS="v2.5 STABLE"; VCIPNLS="7"
+IDNLS="NLSound"; VIPNLS="v2.6 BETA"; VCIPNLS="7"
 IDSAQ="systemaudioquality2"; VIPSAQ="2.0"; VCIPSAQ="2"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.0"
 IDUSBPP="upp"; VIPUSBPP="v1.5"; VCIPUSBPP="7"
@@ -362,7 +362,27 @@ if [ -d "$MODPATH/73sydney.sqlite3" ] || [ -d "$MODPATHUPD/73sydney.sqlite3" ] |
 }
 
 SOC_CHECKER() {
-SNAPSOC=false; MTKSOC=false; if [ "$(grep "ro.board.platform=msm*" $PROPFILESALT)" ] || [ "$(grep "ro.board.platform=sdm*" $PROPFILESALT)" ]; then SNAPSOC=true; elif [ "$(grep "ro.board.platform=mt*" $PROPFILESALT)" ] || [ "$(grep "ro.board.platform=MT*" $PROPFILESALT)" ] || [ "$(grep "Build.BRAND=MTK*" $PROPFILESALT)" ]; then MTKSOC=true; fi
+SD625=$(grep "ro.board.platform=msm8953" $PROPFILESALT)
+SD660=$(grep "ro.board.platform=sdm660" $PROPFILESALT)
+SD662=$(grep "ro.board.platform=bengal" $PROPFILESALT)
+SD665=$(grep "ro.board.platform=trinket" $PROPFILESALT)
+SD690=$(grep "ro.board.platform=lito" $PROPFILESALT)
+SD710=$(grep "ro.board.platform=sdm710" $PROPFILESALT)
+SD720G=$(grep "ro.board.platform=atoll" $PROPFILESALT)
+SD730=$(grep "ro.board.platform=sm6150" $PROPFILESALT)
+SD765G=$(grep "ro.board.platform=lito" $PROPFILESALT)
+SD820=$(grep "ro.board.platform=msm8996" $PROPFILESALT)
+SD835=$(grep "ro.board.platform=msm8998" $PROPFILESALT)
+SD845=$(grep "ro.board.platform=sdm845" $PROPFILESALT)
+SD855=$(grep "ro.board.platform=msmnile" $PROPFILESALT)
+SD865=$(grep "ro.board.platform=kona" $PROPFILESALT)
+SD888=$(grep "ro.board.platform=lahaina" $PROPFILESALT)
+SNAPSOC=false; MTKSOC=false
+if [ "$(grep "ro.board.platform=msm*" $PROPFILESALT)" ] || [ "$(grep "ro.board.platform=sdm*" $PROPFILESALT)" ] || [ "$SD625" ] || [ "$SD660" ] || [ "$SD662" ] || [ "$SD665" ] || [ "$SD690" ] || [ "$SD710" ] || [ "$SD720G" ] || [ "$SD730" ] || [ "$SD765G" ] || [ "$SD820" ] || [ "$SD835" ] || [ "$SD845" ] || [ "$SD855" ] || [ "$SD865" ] || [ "$SD888" ]; then
+SNAPSOC=true
+elif [ "$(grep "ro.board.platform=mt*" $PROPFILESALT)" ] || [ "$(grep "ro.board.platform=MT*" $PROPFILESALT)" ] || [ "$(grep "Build.BRAND=MTK*" $PROPFILESALT)" ]
+then MTKSOC=true
+fi
 }
 
 GAPPS_CHECKER() {
@@ -492,7 +512,54 @@ if $DYNLIB; then DYNLIBPATCH="\/vendor"; else DYNLIBPATCH="\/system"; fi
 }
 
 CHECK_DEVICE() {
-local PROPDEVICE=$(echo "$1" | tr '[:upper:]' '[:lower:]')
+case $1 in
+-x) RN5PRO=$(grep -E "ro.product.vendor.device=whyred.*" $PROPFILESALT)
+RN6PRO=$(grep -E "ro.product.vendor.device=tulip.*" $PROPFILESALT)
+R7Y3=$(grep -E "ro.product.vendor.device=onclite.*" $PROPFILESALT)
+RN7=$(grep -E "ro.product.vendor.device=lavender.*" $PROPFILESALT)
+RN7PRO=$(grep -E "ro.product.vendor.device=violet.*" $PROPFILESALT)
+RN8=$(grep -E "ro.product.vendor.device=ginkgo.*" $PROPFILESALT)
+RN8T=$(grep -E "ro.product.vendor.device=willow.*" $PROPFILESALT)
+RN9S=$(grep -E "ro.product.vendor.device=curtana.*" $PROPFILESALT)
+RN9PRO=$(grep -E "ro.product.vendor.device=joyeuse.*" $PROPFILESALT)
+RN95G=$(grep -E "ro.product.vendor.device=cannon.*" $PROPFILESALT)
+RN9T=$(grep -E "ro.product.vendor.device=cannong.*" $PROPFILESALT)
+R9T=$(grep -E "ro.product.vendor.device=lime.*" $PROPFILESALT)
+RN10PROMAX=$(grep -E "ro.product.vendor.device=sweetin.*" $PROPFILESALT)
+RN10PRO=$(grep -E "ro.product.vendor.device=sweet.*" $PROPFILESALT)
+RK305G=$(grep -E "ro.product.vendor.device=picasso.*" $PROPFILESALT)
+RK304G=$(grep -E "ro.product.vendor.device=phoenix.*" $PROPFILESALT)
+RK30U=$(grep -E "ro.product.vendor.device=cezanne.*" $PROPFILESALT)
+RK40=$(grep -E "ro.product.vendor.device=alioth.*" $PROPFILESALT)
+MI9SE=$(grep -E "ro.product.vendor.device=grus.*" $PROPFILESALT)
+MICC9E=$(grep -E "ro.product.vendor.device=laurus.*" $PROPFILESALT)
+MICC9=$(grep -E "ro.product.vendor.device=pyxis.*" $PROPFILESALT)
+MICC9PRO=$(grep -E "ro.product.vendor.device=tucana.*" $PROPFILESALT)
+MI9=$(grep -E "ro.product.vendor.device=cepheus.*" $PROPFILESALT)
+MI9T=$(grep -E "ro.product.vendor.device=davinci.*" $PROPFILESALT)
+MI10=$(grep -E "ro.product.vendor.device=umi.*" $PROPFILESALT)
+MI10LITE=$(grep -E "ro.product.vendor.device=vangogh.*" $PROPFILESALT)
+MI10T=$(grep -E "ro.product.vendor.device=apollo.*" $PROPFILESALT)
+MI10PRO=$(grep -E "ro.product.vendor.device=cmi.*" $PROPFILESALT)
+MI11=$(grep -E "ro.product.vendor.device=venus.*" $PROPFILESALT)
+MI11Lite5G=$(grep -E "ro.product.vendor.device=renoir.*" $PROPFILESALT)
+MI11Lite4G=$(grep -E "ro.product.vendor.device=courbet.*" $PROPFILESALT)
+K20P=$(grep -E "ro.product.vendor.device=raphael.*|ro.product.vendor.device=raphaelin.*|ro.product.vendor.device=raphaels.*" $PROPFILESALT)
+MI8=$(grep -E "ro.product.vendor.device=dipper.*" $PROPFILESALT)
+MI8P=$(grep -E "ro.product.vendor.device=equuleus.*" $PROPFILESALT)
+MI9P=$(grep -E "ro.product.vendor.device=crux.*" $PROPFILESALT)
+MIA2LITE=$(grep -E "ro.product.vendor.device=daisy.*" $PROPFILESALT)
+MIA2=$(grep -E "ro.product.vendor.device=jasmine.*" $PROPFILESALT)
+MIA3=$(grep -E "ro.product.vendor.device=laurel.*" $PROPFILESALT)
+POCOF1=$(grep -E "ro.product.vendor.device=beryllium.*" $PROPFILESALT)
+POCOF2P=$(grep -E "ro.product.vendor.device=lmi.*" $PROPFILESALT)
+POCOF3=$(grep -E "ro.product.vendor.device=alioth.*" $PROPFILESALT)
+POCOF3P=$(grep -E "ro.product.vendor.device=vayu.*" $PROPFILESALT)
+POCOM2P=$(grep -E "ro.product.vendor.device=gram.*" $PROPFILESALT)
+POCOM3=$(grep -E "ro.product.vendor.device=citrus.*" $PROPFILESALT)
+POCOX3=$(grep -E "ro.product.vendor.device=surya.*" $PROPFILESALT)
+POCOX3Pro=$(grep -E "ro.product.vendor.device=vayu.*" $PROPFILESALT);;
+*) local PROPDEVICE=$(echo "$1" | tr '[:upper:]' '[:lower:]')
 for i in $SYSTEM $VENDOR $IPSSP; do
 if [ -f $i/build.prop ]; then
 for j in "ro.product.device" "ro.build.product" "ro.product.vendor.device" "ro.vendor.product.device"; do
@@ -500,7 +567,8 @@ for j in "ro.product.device" "ro.build.product" "ro.product.vendor.device" "ro.v
 done
 fi
 done
-return 1
+return 1;;
+esac
 }
 
 MAGISK_CHECKER() {
@@ -1120,51 +1188,6 @@ UIP "Patching Needed Files..."
 for OMIX in $MPATHS; do
 UIP "Searching In: $OMIX"
 MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
-if $HIFI; then
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX3 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX4 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX5 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX6 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX7 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX8 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX3 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX4 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX5 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX6 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX7 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX8 Mix Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX0 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX1 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX2 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX3 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX4 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX5 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX6 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX7 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX8 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX0 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX1 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX2 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX3 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX4 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX5 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX6 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX7 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX8 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="LINEOUT1 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="LINEOUT2 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX6 Digital Volume"]' "88"
-else
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 Digital Volume"]' "92"
@@ -1205,7 +1228,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX0 Digital Vo
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
-fi
 UIP "Files Found And Patched"
 done
 }
@@ -1215,44 +1237,6 @@ UIP "Patching Needed Files..."
 for OMIX in $MPATHS; do
 UIP "Searching In: $OMIX"
 MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
-if $HIFI; then
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC1 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC2 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC3 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC4 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC0 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC1 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC2 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC3 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC4 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC5 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC6 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC7 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC8 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC0 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC1 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC2 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC3 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC4 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC5 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC6 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC7 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC8 Volume"]' "90"
-PXMLNLS -s $MIX '/mixer/ctl[@name="EC Reference Bit Format"]' "S16_LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="EC Reference SampleRate"]' "48000"
-PXMLNLS -u $MIX '/mixer/ctl[@name="adc1"]/ctl[@name="ADC1 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="adc2"]/ctl[@name="ADC2 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="adc3"]/ctl[@name="ADC3 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="asr-mic"]/ctl[@name="ADC1 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="asr-mic"]/ctl[@name="ADC3 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/speaker-mic/adc1/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/handset-mic/adc1/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/secondary-mic/adc3/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/headset-mic/adc2/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/dmic-endfire/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/dmic-endfire-liquid/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/dmic-broadside/speaker-dmic-broadside/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-else
 PXMLNLS -u $MIX '/mixer/ctl[@name="ADC1 Volume"]' "12"
 PXMLNLS -u $MIX '/mixer/ctl[@name="ADC2 Volume"]' "12"
 PXMLNLS -u $MIX '/mixer/ctl[@name="ADC3 Volume"]' "12"
@@ -1289,7 +1273,6 @@ PXMLNLS -u $MIX '/mixer/headset-mic/adc2/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
 PXMLNLS -u $MIX '/mixer/dmic-endfire/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
 PXMLNLS -u $MIX '/mixer/dmic-endfire-liquid/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
 PXMLNLS -u $MIX '/mixer/dmic-broadside/speaker-dmic-broadside/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
-fi
 UIP "Files Found And Patched"
 done
 }
@@ -2149,30 +2132,42 @@ UIP "Patching Needed Files..."
 for OACONF in $ACONFS; do
 UIP "Searching In: $OACONF"
 ACONF="$MODPATH/$MODID$(echo $OACONF | sed "s|^/vendor|$MIPSV|g")"
+PXMLNLS -u $ACONF '/configs/property[@name="audio.offload.disable"]' "false"
 PXMLNLS -u $ACONF '/configs/property[@name="audio.offload.min.duration.secs"]' "30"
 PXMLNLS -u $ACONF '/configs/property[@name="persist.vendor.audio.sva.conc.enabled"]' "false"
 PXMLNLS -u $ACONF '/configs/property[@name="persist.vendor.audio.va_concurrency_enabled"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.av.streaming.offload.enable"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.offload.track.enable"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.offload.multiple.enabled"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.rec.playback.conc.disabled"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.voice.conc.fallbackpath"]' ""
 PXMLNLS -u $ACONF '/configs/property[@name="vendor.voice.dsd.playback.conc.disabled"]' "true"
-PXMLNLS -u $ACONF '/configs/property[@name="vendor.voice.playback.conc.disabled"]' "true"
-PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.rec.playback.conc.disabled"]' "true"
 PXMLNLS -u $ACONF '/configs/property[@name="vendor.voice.path.for.pcm.voip"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.voice.playback.conc.disabled"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.voice.record.conc.disabled"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.voice.voip.conc.disabled"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="audio_extn_formats_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="audio_extn_hdmi_spk_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="use_xml_audio_policy_conf"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="voice_concurrency"]' "false "
+PXMLNLS -u $ACONF '/configs/property[@name="afe_proxy_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="compress_voip_enabled"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="fm_power_opt"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="record_play_concurrency"]' "false"
 PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.use.sw.alac.decoder"]' "true"
 PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.use.sw.ape.decoder"]' "true"
-PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.use.sw.mpegh.decoder"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.use.sw.mpegh.decoder"]' "false"
 PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.flac.sw.decoder.24bit"]' "true"
-PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.hw.aac.encoder"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="aac_adts_offload_enabled"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="alac_offload_enabled"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="ape_offload_enabled"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="flac_offload_enabled"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="pcm_offload_enabled_16"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="pcm_offload_enabled_24"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="qti_flac_decoder"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="vorbis_offload_enabled"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="wma_offload_enabled"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="audiosphere_enabled"]' "false"
-PXMLNLS -u $ACONF '/configs/flag[@name="hifi_audio_enabled"]' "true"
-PXMLNLS -u $ACONF '/configs/flag[@name="audio_extn_formats_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="vendor.audio.hw.aac.encoder"]' "false"
+PXMLNLS -u $ACONF '/configs/property[@name="aac_adts_offload_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="alac_offload_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="ape_offload_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="flac_offload_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="pcm_offload_enabled_16"]' "false "
+PXMLNLS -u $ACONF '/configs/property[@name="pcm_offload_enabled_24"]' "false "
+PXMLNLS -u $ACONF '/configs/property[@name="qti_flac_decoder"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="vorbis_offload_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="wma_offload_enabled"]' "true"
 UIP "Files Found And Patched"
 done
 fi
@@ -2278,6 +2273,14 @@ UIP "Patching Needed Files..."
 for OMIX in $MPATHS; do
 UIP "Searching In: $OMIX"
 MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
+if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
+if [ $PATCH_MIXER_LITE != true ]; then
+PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
+fi
+PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 ClassD Edge"]' "7"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 Volume"]' "30"
+fi
+if $PATCH_MIXER_LITE; then
 if $HIFI; then
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX_HPH_PWR_MODE"]' "HIFI"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX HPH Mode"]' "CLS_H_HIFI"
@@ -2307,26 +2310,9 @@ PXMLNLS -s $MIX '/mixer/ctl[@name="RX_HPH_PWR_MODE"]' "HIRES"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX HPH Mode"]' "HD2"
 PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_HPH_PWR_MODE"]' "HIRES"
 fi
-if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 ClassD Edge"]' "7"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 Volume"]' "30"
-fi
-if $PATCH_MIXER_LITE; then
-PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="PowerCtrl"]' "1"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TFA Profile"]' "music"
-PXMLNLS -s $MIX '/mixer/ctl[@name="PCM_RX_DL_HL Switch"]' "1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT1 MIX3 DSD HPHL Switch"]' "1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT2 MIX3 DSD HPHR Switch"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="HiFi Function"]' "On"
 PXMLNLS -s $MIX '/mixer/ctl[@name="HiFi Filter"]' "6"
 PXMLNLS -u $MIX '/mixer/ctl[@name="HPHL"]' "Switch"
-PXMLNLS -u $MIX '/mixer/ctl[@name="HPHR"]' "Switch"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX Format"]' "S24_LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX Format"]' "S24_LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX SampleRate"]' "KHZ_192"
 PXMLNLS -s $MIX '/mixer/ctl[@name="RX1 HPF cut off"]' "MIN_3DB_4Hz"
 PXMLNLS -s $MIX '/mixer/ctl[@name="RX2 HPF cut off"]' "MIN_3DB_4Hz"
 PXMLNLS -s $MIX '/mixer/ctl[@name="RX3 HPF cut off"]' "MIN_3DB_4Hz"
@@ -2334,6 +2320,10 @@ PXMLNLS -s $MIX '/mixer/ctl[@name="TX1 HPF cut off"]' "MIN_3DB_4Hz"
 PXMLNLS -s $MIX '/mixer/ctl[@name="TX2 HPF cut off"]' "MIN_3DB_4Hz"
 PXMLNLS -s $MIX '/mixer/ctl[@name="TX3 HPF cut off"]' "MIN_3DB_4Hz"
 else
+if [ $HIFI != true ]; then
+patch_xml -s $MIX '/mixer/ctl[@name="RX HPH Mode"]' "HD2"
+patch_xml -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="RX HPH Mode"]' "HD2"
+fi
 PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
 PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="PowerCtrl"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="TFA Profile"]' "music"
@@ -4609,15 +4599,25 @@ fi
 }
 
 IPNLSS() {
+FIRMRN7PRO=$TMPDIR/NLSound/firmrn7pro; FIRMWARE=$TMPDIR/NLSound/firmware; NEWDIRAC=$TMPDIR/NLSound/newdirac; FIRMPOCOF1=$TMPDIR/NLSound/firmpocof1
+if [ "$SD662" ] || [ "$SD665" ] || [ "$SD690" ] || [ "$SD710" ] || [ "$SD720G" ] || [ "$SD730" ] || [ "$SD765G" ] || [ "$SD820" ] || [ "$SD835" ] || [ "$SD845" ] || [ "$SD855" ] || [ "$SD865" ] || [ "$SD888" ]; then
+HIFI=true; UIP "Device With Support Hi-Fi"
+else
+HIFI=false; UIP "Device Without Support Hi-Fi"
+fi
 STEP1=false; STEP2=false; STEP3=false; STEP4=false; STEP5=false; STEP6=false; STEP7=false; STEP8=false; STEP9=false; STEP10=false; STEP11=false; STEP12=false; STEP13=false; STEP14=false; PATCH_MIXER_LITE=false
 if find $SYSTEM $VENDOR -type f -name "audio_configs*.xml" >/dev/null; then
 MSGDELIMITER; UIP "Disable Deep Buffer?" "This Option Disable Deep Buffer In Your Device" "If You Want More Low Frequencies Skip This Option" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP1=true; fi
 fi
+if [ $HIFI != true ]; then
 MSGDELIMITER; UIP "Improve Volume Levels?" "CONFIRMING THIS OPTION MAY HARM YOUR DEVICE!" "NLSound Team Is Not Responsible For Your Devices!" "Choose At Your Own Risk!" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP2=true; fi
+fi
+if [ $HIFI != true ]; then
 MSGDELIMITER; UIP "Improve Microphone Levels?" "This Option Improving Microphone Volume Levels In Your Device" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP3=true; fi
+fi
 MSGDELIMITER; UIP "Patching IIR?" "IIR Directly Affects The Final Sound Quality" "And It Is Recommended To Try The Version" "With And Without It, Choosing The One That You Like The Most" "$MSGVU Yes $IR" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP4=true; fi
 if [ -f $APIIXML ] || [ -f $APIEXML ] || [ -f $APIXML ]; then
@@ -4634,8 +4634,10 @@ if $KEYFUNCTION; then STEP8=true; fi
 fi
 MSGDELIMITER; UIP "Added New Dirac?" "This Option Added New Dirac In Your ROM" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP9=true; fi
-MSGDELIMITER; UIP "Disable Useless Fluence?" "This Option Disables Useless Noise Reduction" "This Will Also Affect The" "Quality Of The Audio Recording" "$MSGVU Yes $IR" "$MSGVD No $MSGNIS"
+if ! CHECK_DEVICE dipper; then
+MSGDELIMITER; UIP "Disable Useless Fluence?" "This Option Disables Useless Noise Reduction" "This Will Also Affect The" "Quality Of The Audio Recording" "$MSGVU Yes" "$MSGVD No $IR $MSGNIS"
 if $KEYFUNCTION; then STEP10=true; fi
+fi
 MSGDELIMITER; UIP "Install Patches In mixer_paths Files?" "A Large Set Of Universal Settings For Many Devices" "If You Encounter Problems After Installation" "Try Skipping This Option First" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
 STEP11=true
@@ -4648,88 +4650,13 @@ MSGDELIMITER; UIP "Install Patches For Hi-Fi Audio?" "This Option Will Improve T
 if $KEYFUNCTION; then STEP13=true; fi
 MSGDELIMITER; UIP "Improve Bluetooth?" "This Option Will Improve The Audio Quality" "In Bluetooth, As Well As Fix The Problem" "Of Disappearing The Aac Codec Switch" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then STEP14=true; fi
-
 UIP "Installing NLSound $IAMM"
-SD625=$(grep "ro.board.platform=msm8953" $PROPFILESALT)
-SD660=$(grep "ro.board.platform=sdm660" $PROPFILESALT)
-SD662=$(grep "ro.board.platform=bengal" $PROPFILESALT)
-SD665=$(grep "ro.board.platform=trinket" $PROPFILESALT)
-SD690=$(grep "ro.board.platform=lito" $PROPFILESALT)
-SD710=$(grep "ro.board.platform=sdm710" $PROPFILESALT)
-SD720G=$(grep "ro.board.platform=atoll" $PROPFILESALT)
-SD730=$(grep "ro.board.platform=sm6150" $PROPFILESALT)
-SD765G=$(grep "ro.board.platform=lito" $PROPFILESALT)
-SD820=$(grep "ro.board.platform=msm8996" $PROPFILESALT)
-SD835=$(grep "ro.board.platform=msm8998" $PROPFILESALT)
-SD845=$(grep "ro.board.platform=sdm845" $PROPFILESALT)
-SD855=$(grep "ro.board.platform=msmnile" $PROPFILESALT)
-SD865=$(grep "ro.board.platform=kona" $PROPFILESALT)
-SD888=$(grep "ro.board.platform=lahaina" $PROPFILESALT)
-
-RN5PRO=$(grep -E "ro.product.vendor.device=whyred.*" $PROPFILESALT)
-RN6PRO=$(grep -E "ro.product.vendor.device=tulip.*" $PROPFILESALT)
-R7Y3=$(grep -E "ro.product.vendor.device=onclite.*" $PROPFILESALT)
-RN7=$(grep -E "ro.product.vendor.device=lavender.*" $PROPFILESALT)
-RN7PRO=$(grep -E "ro.product.vendor.device=violet.*" $PROPFILESALT)
-RN8=$(grep -E "ro.product.vendor.device=ginkgo.*" $PROPFILESALT)
-RN8T=$(grep -E "ro.product.vendor.device=willow.*" $PROPFILESALT)
-RN9S=$(grep -E "ro.product.vendor.device=curtana.*" $PROPFILESALT)
-RN9PRO=$(grep -E "ro.product.vendor.device=joyeuse.*" $PROPFILESALT)
-RN95G=$(grep -E "ro.product.vendor.device=cannon.*" $PROPFILESALT)
-RN9T=$(grep -E "ro.product.vendor.device=cannong.*" $PROPFILESALT)
-R9T=$(grep -E "ro.product.vendor.device=lime.*" $PROPFILESALT)
-
-RN10PROMAX=$(grep -E "ro.product.vendor.device=sweetin.*" $PROPFILESALT)
-RN10PRO=$(grep -E "ro.product.vendor.device=sweet.*" $PROPFILESALT)
-RK305G=$(grep -E "ro.product.vendor.device=picasso.*" $PROPFILESALT)
-RK304G=$(grep -E "ro.product.vendor.device=phoenix.*" $PROPFILESALT)
-RK30U=$(grep -E "ro.product.vendor.device=cezanne.*" $PROPFILESALT)
-RK40=$(grep -E "ro.product.vendor.device=alioth.*" $PROPFILESALT)
-
-MI9SE=$(grep -E "ro.product.vendor.device=grus.*" $PROPFILESALT)
-MICC9E=$(grep -E "ro.product.vendor.device=laurus.*" $PROPFILESALT)
-MICC9=$(grep -E "ro.product.vendor.device=pyxis.*" $PROPFILESALT)
-MICC9PRO=$(grep -E "ro.product.vendor.device=tucana.*" $PROPFILESALT)
-MI9=$(grep -E "ro.product.vendor.device=cepheus.*" $PROPFILESALT)
-MI9T=$(grep -E "ro.product.vendor.device=davinci.*" $PROPFILESALT)
-MI10=$(grep -E "ro.product.vendor.device=umi.*" $PROPFILESALT)
-MI10LITE=$(grep -E "ro.product.vendor.device=vangogh.*" $PROPFILESALT)
-MI10T=$(grep -E "ro.product.vendor.device=apollo.*" $PROPFILESALT)
-MI10PRO=$(grep -E "ro.product.vendor.device=cmi.*" $PROPFILESALT)
-MI11=$(grep -E "ro.product.vendor.device=venus.*" $PROPFILESALT)
-MI11Lite5G=$(grep -E "ro.product.vendor.device=renoir.*" $PROPFILESALT)
-MI11Lite4G=$(grep -E "ro.product.vendor.device=courbet.*" $PROPFILESALT)
-K20P=$(grep -E "ro.product.vendor.device=raphael.*|ro.product.vendor.device=raphaelin.*|ro.product.vendor.device=raphaels.*" $PROPFILESALT)
-MI8=$(grep -E "ro.product.vendor.device=dipper.*" $PROPFILESALT)
-MI8P=$(grep -E "ro.product.vendor.device=equuleus.*" $PROPFILESALT)
-MI9P=$(grep -E "ro.product.vendor.device=crux.*" $PROPFILESALT)
-
-MIA2LITE=$(grep -E "ro.product.vendor.device=daisy.*" $PROPFILESALT)
-MIA2=$(grep -E "ro.product.vendor.device=jasmine.*" $PROPFILESALT)
-MIA3=$(grep -E "ro.product.vendor.device=laurel.*" $PROPFILESALT)
-
-POCOF1=$(grep -E "ro.product.vendor.device=beryllium.*" $PROPFILESALT)
-POCOF2P=$(grep -E "ro.product.vendor.device=lmi.*" $PROPFILESALT)
-POCOF3=$(grep -E "ro.product.vendor.device=alioth.*" $PROPFILESALT)
-POCOF3P=$(grep -E "ro.product.vendor.device=vayu.*" $PROPFILESALT)
-POCOM2P=$(grep -E "ro.product.vendor.device=gram.*" $PROPFILESALT)
-POCOM3=$(grep -E "ro.product.vendor.device=citrus.*" $PROPFILESALT)
-POCOX3=$(grep -E "ro.product.vendor.device=surya.*" $PROPFILESALT)
-POCOX3Pro=$(grep -E "ro.product.vendor.device=vayu.*" $PROPFILESALT)
-
-FIRMRN7PRO=$TMPDIR/NLSound/firmrn7pro; FIRMWARE=$TMPDIR/NLSound/firmware; NEWDIRAC=$TMPDIR/NLSound/newdirac; FIRMPOCOF1=$TMPDIR/NLSound/firmpocof1
-
 MAGISKMIRROR_CHECKER
 UZTPN "NLSound"
 MODID="$IDNLS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID$MIPSVF
 MMPR -vcs "NLSound" "$VIPNLS" "$VCIPNLS" "NLSound Team" "This module globally improves audio quality when recording video/audio and listening to audio on your device." "support=https://t.me/nlsound_support"
 cp -f $TMPDIR/NLSound/tfa9894.cnt $MODPATH/$MODID$MIPSVF
-if [ "$SD662" ] || [ "$SD665" ] || [ "$SD690" ] || [ "$SD710" ] || [ "$SD720G" ] || [ "$SD730" ] || [ "$SD765G" ] || [ "$SD820" ] || [ "$SD835" ] || [ "$SD845" ] || [ "$SD855" ] || [ "$SD865" ] || [ "$SD888" ]; then
-HIFI=true; UIP "Device With Support Hi-Fi"
-else
-HIFI=false; UIP "Device Without Support Hi-Fi"
-fi
 echo "media.stagefright.audio.sink=128
 af.fast.track.multiplier=2
 vendor.audio_hal.period_multiplier=3 
@@ -11467,6 +11394,7 @@ GAPPS_CHECKER
 PATCHMODE
 AIOPFMD
 CHECK_AVERSION
+CHECK_DEVICE -x
 KEYCHECK
 MAGISK_CHECKER
 PRESETS
