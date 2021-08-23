@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="23.08.21 (55)"
+VAIOPFMD="23.08.21 (56)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -63,7 +63,7 @@ IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
 IDVAAH="AdAwayHosts"; VIPVAAH="19.08.2021"
-IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.4"; VCIPLPH="1724"
+IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.5"; VCIPLPH="1725"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v210805-v16.8"; VCIPVSH="168"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/TTL/DNS/WB
@@ -2321,8 +2321,8 @@ PXMLNLS -s $MIX '/mixer/ctl[@name="TX2 HPF cut off"]' "MIN_3DB_4Hz"
 PXMLNLS -s $MIX '/mixer/ctl[@name="TX3 HPF cut off"]' "MIN_3DB_4Hz"
 else
 if [ $HIFI != true ]; then
-patch_xml -s $MIX '/mixer/ctl[@name="RX HPH Mode"]' "HD2"
-patch_xml -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="RX HPH Mode"]' "HD2"
+PXMLNLS -s $MIX '/mixer/ctl[@name="RX HPH Mode"]' "HD2"
+PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="RX HPH Mode"]' "HD2"
 fi
 PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
 PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="PowerCtrl"]' "1"
@@ -4640,9 +4640,9 @@ if $KEYFUNCTION; then STEP10=true; fi
 fi
 MSGDELIMITER; UIP "Install Patches In mixer_paths Files?" "A Large Set Of Universal Settings For Many Devices" "If You Encounter Problems After Installation" "Try Skipping This Option First" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
-STEP11=true
-MSGDELIMITER; UIP "What Option To Patch?" "$MSGVU Patch Light mixer_paths" "$MSGVD Patch Full mixer_paths"
-if $KEYFUNCTION; then PATCH_MIXER_LITE=true; fi
+STEP11=true; PATCH_MIXER_LITE=true
+# MSGDELIMITER; UIP "What Option To Patch?" "$MSGVU Patch Light mixer_paths $IR" "$MSGVD Patch Full mixer_paths"
+# if $KEYFUNCTION; then PATCH_MIXER_LITE=true; fi
 fi
 MSGDELIMITER; UIP "Improve Decoders & Encoders Audio?" "This Option Will Improve The Audio Processing" "Algorithms Of The Built-In Audio Decoders" "And Encoders" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP12=true; fi
