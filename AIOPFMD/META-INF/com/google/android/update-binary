@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="23.08.21 (56)"
+VAIOPFMD="05.09.21 (57)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -37,9 +37,10 @@ IDEBB="BackgroundBlur"; VIPEBB="v1.0"
 IDBA="BootAnimation"; VIPBA="v1.3"
 IDOSEMOJI="emoji-replacer-809887617"; VIPOSEMOJI="1.0"; VCIPOSEMOJI="1"
 IDMUIS="MediaUiSounds"; VIPMUIS="v1.0"
+IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 #Apps: GFU/GSF/SL/IA
 IDGSF="GSF"; VIPGSF="v1.0"
-IDSL="Systemless_Lawnchair"; VIPSL="v1.4"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6"
+IDSL="Systemless_Lawnchair"; VIPSL="v1.5"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6.1"
 IDSOPL="Systemless_OPLauncher"; VIPSOPL="v6.2"; VCIPSOPL="30100"; VAIPSOPL="v5.1.0"
 IDSOUH="Systemless_OneUIHome"; VIPSOUHQ="v2.1"; VCIPSOUHQ="21"; VAIPSOUHQ="v11.0.50.67"; VIPSOUHR="v1.0"; VCIPSOUHR="1"; VAIPSOUHR="v12.1.07.19"
 IDSPL="Systemless_PixelLauncher"; VIPSPL="v1.0"; VIPASPLQ="v10 (703)"; VIPASPLR="v11 (825)"
@@ -62,9 +63,9 @@ IDACP="acp"; VIPACP="v2.3"; VCIPACP="37"
 IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="19.08.2021"
-IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.5"; VCIPLPH="1725"
-IDVSH="SystemlessHostsUnified"; VIPVSH="v210805-v16.8"; VCIPVSH="168"
+IDVAAH="AdAwayHosts"; VIPVAAH="03.09.2021"
+IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.6.6"; VCIPLPH="1726"
+IDVSH="SystemlessHostsUnified"; VIPVSH="v16.9-210829"; VCIPVSH="169"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/TTL/DNS/WB
 IDGOGPS="optmizedgpsconf"; VIPGOGPS="v6"; VCIPGOGPS="6"
@@ -93,13 +94,13 @@ IDSNP="petnoires-safetyspoofer"; VIPSNP="v1-beta2"; VCIPSNP="16"
 IDSNPA="safetypatcher"; VIPSNPA="v3"; VCIPSNPA="5"
 IDSNPAA="safetynet-fix"; VIPSNPAA="v1.2.0"; VCIPSNPAA="10200"
 IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
-IDMHPC="MagiskHidePropsConf"; VIPMHPC="v5.4.1-v131"; VCIPMHPC="69"
+IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.0.1-v132"; VCIPMHPC="71"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
-IDRIRU="riru-core"; VIPRIRU="v26.1.1.r500.45d2706e83"; VCIPRIRU="500"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
+IDRIRU="riru-core"; VIPRIRU="v26.1.2.r505.c20529bced"; VCIPRIRU="505"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
-IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.5.0 (5880)"; VCIPLSPOSED="5880"
+IDLSPOSED="riru_lsposed"; VIPLSPOSED="v1.5.3 (5984)"; VCIPLSPOSED="5984"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
 IDRMH="riru_momohider"; VIPRMH="0.0.7"; VCIPRMH="7"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
@@ -119,7 +120,7 @@ IDFI="ForceIdle"; VIPFI="v1.0"
 IDCLEDLO="ChargingLedLightOff"; VIPCLEDLO="v1.1"
 IDLEDLA="LEDLightAnimation"; VIPLEDLA="v1.1"
 IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.3"; VCIPUGMSD="183"
-IDUSGP="USGP"; VIPUSGP="v1.0"
+IDUSGP="USGP"; VIPUSGP="v1.1"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.0"
 IDVS="VolumeSteps"; VIPVS="v1.2"
@@ -239,6 +240,7 @@ IPSDP="$SYSTEM/default.prop"; MIPSDP="/system/default.prop"
 IPSSPA="$IPSSP/app"; MIPSSPA="$MIPSSP/app"
 IPSSPPA="$IPSSP/priv-app"; MIPSSPPA="$MIPSSP/priv-app"
 IPSSPE="$IPSSP/etc"; MIPSSPE="$MIPSSP/etc"
+IPSSPES="$IPSSPE/sysconfig"; MIPSSPES="$MIPSSPE/sysconfig"
 IPSSPER="$IPSSPE/res"; MIPSSPER="$MIPSSPE/res"
 IPSSPERVC="$IPSSPER/values/charger"; MIPSSPERVC="$MIPSSPER/values/charger"
 IPSSPERIC="$IPSSPER/images/charger"; MIPSSPERIC="$MIPSSPER/images/charger"
@@ -500,7 +502,7 @@ elif [ "$ASDK" = "27" ] || [ "$AVERSION" = "8.1" ] || [ "$AVERSION" = "8.1.0" ];
 elif [ "$ASDK" = "28" ] || [ "$AVERSION" = "9" ] || [ "$AVERSION" = "9.0" ]; then APIE=true; ACNV="P"
 elif [ "$ASDK" = "29" ] || [ "$AVERSION" = "10" ] || [ "$AVERSION" = "10.0" ]; then ATEN=true; ACNV="Q"
 elif [ "$ASDK" = "30" ] || [ "$AVERSION" = "11" ] || [ "$AVERSION" = "11.0" ]; then AELEVEN=true; ACNV="R"
-elif [ "$ASDK" = "31" ] || [ "$AVERSION" = "12" ] || [ "$AVERSION" = "12.0" ]; then ATWELVE=true; ACNV="SC"
+elif [ "$ASDK" = "31" ] || [ "$AVERSION" = "12" ] || [ "$AVERSION" = "12.0" ]; then UIP "Warning, SDK $ASDK Is Not Fully Support!"; ATWELVE=true; ACNV="SC"
 fi
 case $ASDK in
 "19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; *) MSGDELIMITER; UIP "Warning, SDK Not Supported/Found!";;
@@ -581,7 +583,7 @@ MAGISKVC="$(GET_FILE_PROP "$NVBASE/magisk/util_functions.sh" "MAGISK_VER_CODE")"
 else
 MAGISKFIRSTTIME=false; FINDMAGISK=false; MAGISK=false
 fi
-if $FINDMAGISK && [ $MAGISKVC -lt 23001 ]; then UIP "Found Old Magisk, Please Install Magisk v23+!"; fi
+if $FINDMAGISK && [ $MAGISKVC -lt 23000 ]; then UIP "Found Old Magisk, Please Install Magisk v23+ (23000+)!"; fi
 if $FINDMAGISK && [ $BOOTMODE != true ] && $DEBUGMODE && $MCMODE; then
 MSGDELIMITER
 UIP "Found Magisk, Install Everything (M)?" "$MSGVU Yes $MSGRI" "$MSGVD No $MSGNUS"
@@ -1055,7 +1057,7 @@ fi
 MHIDE() {
 UIP "Using Magisk Hide"
 case $1 in
--f) if $BOOTMODE; then magiskhide enable >/dev/null; for mhide in $2; do mhide add $(echo $mhide | cut -f 1 -d '_') $(echo $mhide | cut -f 2 -d '_'); if [ $? -eq 0 ]; then UIP "$mhide: Hide Done"; else UIP "$mhide: Hide Failed"; fi; done; else echo -e "magiskhide enable; for mhide in $1; do mhide add \$(echo \$mhide | cut -f 1 -d '_') \$(echo \$mhide | cut -f 2 -d '_'); done" >> $MODPATH/$MODID/post-fs-data.sh; fi;;
+-f) if $BOOTMODE; then magiskhide enable >/dev/null; for mhide in $2; do $mhide add $(echo $mhide | cut -f 1 -d '_') $(echo $mhide | cut -f 2 -d '_'); if [ $? -eq 0 ]; then UIP "$mhide: Hide Done"; else UIP "$mhide: Hide Failed"; fi; done; else echo -e "magiskhide enable; for mhide in $1; do mhide add \$(echo \$mhide | cut -f 1 -d '_') \$(echo \$mhide | cut -f 2 -d '_'); done" >> $MODPATH/$MODID/post-fs-data.sh; fi;;
 -l) if $BOOTMODE; then magiskhide enable >/dev/null; else echo "magiskhide enable" >> $MODPATH/$MODID/post-fs-data.sh; fi;;
 esac
 }
@@ -2588,6 +2590,7 @@ MMUPD_CHECKER "$IDEBB" "$VIPEBB" "IPEBBS"
 if $FINDAIOPFMDA; then MMUPD_CHECKER "$IDBA" "$VIPBA" "IPBAS"; fi
 if $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDOSEMOJI" "$VIPOSEMOJI" "$VCIPOSEMOJI" "IPIOSEMOJIS"; fi
 MMUPD_CHECKER "$IDMUIS" "$VIPMUIS" "IPMUISS"
+MMUPD_CHECKER "$IDFDNI" "$VIPFDNI" "IPFDNIS"
 #Apps: GFU/GSF/SL/IA
 if $FINDAIOPFMDA; then MMUPD_CHECKER "$IDGSF" "$VIPGSF" "IPGSFS"; fi
 if $FINDAIOPFMDA && $ATEN || $AELEVEN; then MMUPD_CHECKER "$IDSL" "$VIPSL" "IPSLS"; fi
@@ -3680,6 +3683,22 @@ $IPPMU/WirelessChargingStarted.ogg
 BUCKUPER
 }
 
+IPFDNI() {
+if $MAGISK && [ $MIUI != true ]; then
+if $ATEN || $AELEVEN || $ATWELVE; then
+UCSA "Install Force Disable Notification Icons $VIPFDNI?" "" "$MSGNUS" "IPFDNIS"
+fi
+fi
+}
+
+IPFDNIS() {
+UIP "Installing Force Disable Notification Icons $IAMM" 
+MODID="$IDFDNI"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MBCCSERVICE "cmd statusbar send-disable-flag notification-icons"
+MMPR -v "Force Disable Notification Icons" "$VIPFDNI" "Force Disable Notification Icons $FAOOR"; SET_PERM_RM -msgdi
+}
+
 } #
 
 { #Apps: GFU/GSF/SL/IA
@@ -4593,7 +4612,7 @@ UZTPN "AinurNarsil"; UNIVERSALUNZIP
 }
 
 IPNLS() {
-if $MAGISK && $SNAPSOC; then
+if $MAGISK && $SNAPSOC && $FINDAIOPFMDA; then
 UCSA "Install NLSound $VIPNLS?" "$MSGEFTC" "$MSGNUS" "IPNLSS"
 fi
 }
@@ -4640,9 +4659,9 @@ if $KEYFUNCTION; then STEP10=true; fi
 fi
 MSGDELIMITER; UIP "Install Patches In mixer_paths Files?" "A Large Set Of Universal Settings For Many Devices" "If You Encounter Problems After Installation" "Try Skipping This Option First" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
-STEP11=true; PATCH_MIXER_LITE=true
-# MSGDELIMITER; UIP "What Option To Patch?" "$MSGVU Patch Light mixer_paths $IR" "$MSGVD Patch Full mixer_paths"
-# if $KEYFUNCTION; then PATCH_MIXER_LITE=true; fi
+STEP11=true
+MSGDELIMITER; UIP "What Option To Patch?" "$MSGVU Patch Light mixer_paths $IR" "$MSGVD Patch Full mixer_paths"
+if $KEYFUNCTION; then PATCH_MIXER_LITE=true; fi
 fi
 MSGDELIMITER; UIP "Improve Decoders & Encoders Audio?" "This Option Will Improve The Audio Processing" "Algorithms Of The Built-In Audio Decoders" "And Encoders" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP12=true; fi
@@ -7052,7 +7071,7 @@ IPHFSA
 MODID="$IDVSH"
 mkdir -p $MODPATH/$MODID$MIPSE
 cp -f $TMPDIR/Hosts/$HOSTSFILE $MODPATH/$MODID$MIPSE/hosts
-MMPR -vc "Systemless Hosts - Unified" "$VIPVSH" "$VCIPVSH" "gloeyisk" "Essential repack for latest Unified hosts, with 3 additional extensions"
+MMPR -vc "Systemless Hosts - Unified" "$VIPVSH" "$VCIPVSH" "gloeyisk" "Consolidating and extending hosts files from several well-curated sources"
 SET_PERM_RM
 else
 IPHFSAA
@@ -7080,7 +7099,7 @@ fi
 }
 
 IPHFSA() {
-REMOVER -mm "AdAwayHosts Hosts LuckyPatcherHosts SystemlessHostsUnified disableadblock"
+REMOVER -mm "AdAwayHosts hosts Hosts LuckyPatcherHosts SystemlessHostsUnified disableadblock systemless-hosts"
 }
 
 IPHFSAA() {
@@ -9153,8 +9172,8 @@ flock \"module.prop\"
 unshare -m sh -c \"$MIPSB/app_process -Djava.class.path=rirud.apk $MIPSB --nice-name=rirud riru.Daemon \$(magisk -V) \$(magisk --path) \$(getprop ro.dalvik.vm.native.bridge)&\"" > $MODPATH/$MODID/post-fs-data.sh
 echo "RIRU_MIN_COMPATIBLE_API=9
 RIRU_API=\"26\"
-RIRU_VERSION_CODE=\"484\"
-RIRU_VERSION_NAME=\"v26.0.5.r484.a8c93a12f8\"
+RIRU_VERSION_CODE=\"$VCIPRIRU\"
+RIRU_VERSION_NAME=\"$VIPRIRU\"
 
 abort_for_requires_new_version() {
 ui_print \"*********************************************************\"
@@ -9230,8 +9249,8 @@ chmod 700 \"\$MODDIR\"/rirud
 exec \"\$MODDIR\"/rirud" > $MODPATH/$MODID/post-fs-data.sh
 echo "RIRU_MIN_COMPATIBLE_API=9
 RIRU_API=\"25\"
-RIRU_VERSION_CODE=\"426\"
-RIRU_VERSION_NAME=\"v25.4.4.r426.05efc94\"
+RIRU_VERSION_CODE=\"$VCIPRIRUL\"
+RIRU_VERSION_NAME=\"$VIPRIRUL\"
 
 abort_for_requires_new_version() {
 ui_print \"*********************************************************\"
@@ -9299,6 +9318,7 @@ UIP "Installing EdXposed $IAMM"
 UZTPN "EdXposed"
 MODID="$IDEDXPOSED"; REMOVER -mm "$MODID $IDLSPOSED"
 mkdir -p $MODPATH/$MODID/system
+UIP "Copy arm Libraries"
 cp -rf $TMPDIR/EdXposed/system/lib $MODPATH/$MODID/system
 cp -rf $TMPDIR/EdXposed/system/framework $MODPATH/$MODID/system
 if [ "$arch" = "arm64" ]; then UIP "Copy arm64 Libraries"; cp -rf $TMPDIR/EdXposed/system/lib64 $MODPATH/$MODID/system; fi
@@ -9592,26 +9612,34 @@ UIP "Installing LSPosed $IAMM"
 UZTPN "LSPosed"
 MODID="$IDLSPOSED"; REMOVER -mm "$MODID $IDEDXPOSED"
 mkdir -p $MODPATH/$MODID/riru $NVBASE/lspd/config
+UIP "Copy arm Libraries"
 cp -rf $TMPDIR/LSPosed/system/lib $MODPATH/$MODID/riru
+touch $MODPATH/$MODID/riru/lib/libriru_lspd
 cp -rf $TMPDIR/LSPosed/system/framework $MODPATH/$MODID
-if [ "$arch" = "arm64" ]; then UIP "Copy arm64 Libraries"; cp -rf $TMPDIR/LSPosed/system/lib64 $MODPATH/$MODID/riru; fi
+if [ "$arch" = "arm64" ]; then
+UIP "Copy arm64 Libraries"
+cp -rf $TMPDIR/LSPosed/system/lib64 $MODPATH/$MODID/riru
+mv $MODPATH/$MODID/riru/lib64/libdaemon.so $MODPATH/$MODID
+touch $MODPATH/$MODID/riru/lib64/libriru_lspd
+rm -f $MODPATH/$MODID/riru/lib/libdaemon.so
+fi
 MMPR -vc "Riru - LSPosed" "$VIPLSPOSED" "$VCIPLSPOSED" "LSPosed Developers" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 12 Beta 4. Requires Riru 25.0.1 or above installed."
 echo "allow system_server system_server process execmem" > $MODPATH/$MODID/sepolicy.rule
-echo "#!$MIPSB/sh
-MODDIR=\${0%/*}
-unshare -m \$MODDIR/lspd --from-service &" > $MODPATH/$MODID/service.sh
 echo "#!$MIPSB/sh
 dir=\${0%/*}
 tmpLspdDex=\"/data/local/tmp/lspd.dex\"
 debug=\"false\"
 if [ -r \$tmpLspdDex ]; then
 java_options=\"-Djava.class.path=\$tmpLspdDex\"
+java_options=\"\$java_options -Dlsp.library.path=/data/local/tmp\"
 debug=\"true\"
 elif [ -d \"\$dir/system\" ]; then
 java_options=\"-Djava.class.path=\$dir/system/framework/lspd.dex\"
+java_options=\"\$java_options -Dlsp.library.path=\$dir\"
 debug=\"true\"
 else
 java_options=\"-Djava.class.path=\$dir/framework/lspd.dex\"
+java_options=\"\$java_options -Dlsp.library.path=\$dir\"
 fi
 if [ \$debug = \"true\" ]; then
 os_version=\$(getprop ro.build.version.sdk)
@@ -9623,141 +9651,22 @@ else
 java_options=\"\$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend=n,server=y\"
 fi
 fi
-exec /system/bin/app_process \$java_options /system/bin --nice-name=lspd org.lsposed.lspd.core.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/lspd
+# shellcheck disable=SC2086
+exec $MIPSB/app_process \$java_options $MIPSB --nice-name=lspd org.lsposed.lspd.core.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/lspd
 echo "dalvik.vm.dex2oat-flags=--inline-max-code-units=0" > $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
-
-grep_prop() {
-local REGEX=\"s/^\$1=//p\"
-shift
-local FILES=\"\$@\"
-[ -z \"\$FILES\" ] && FILES='/system/build.prop'
-sed -n \"\$REGEX\" \${FILES} 2>/dev/null | head -n 1
-}
-
-MODDIR=\${0%/*}
-MAGISK_VERSION=\$(magisk -v)
-MAGISK_VER_CODE=\$(magisk -V)
-
-[ ! -f \$(magisk --path)/.magisk/modules/riru-core/util_functions.sh ] && exit 1
-. \$(magisk --path)/.magisk/modules/riru-core/util_functions.sh
-
-LSPD_VERSION=\$(grep_prop version \"\${MODDIR}/module.prop\")
-ANDROID_SDK=\$(getprop ro.build.version.sdk)
-BUILD_DESC=\$(getprop ro.build.description)
-PRODUCT=\$(getprop ro.build.product)
-MODEL=\$(getprop ro.product.model)
-MANUFACTURER=\$(getprop ro.product.manufacturer)
-BRAND=\$(getprop ro.product.brand)
-FINGERPRINT=\$(getprop ro.build.fingerprint)
-ARCH=\$(getprop ro.product.cpu.abi)
-DEVICE=\$(getprop ro.product.device)
-ANDROID=\$(getprop ro.build.version.release)
-BUILD=\$(getprop ro.build.id)
-MISC_PATH=\$(cat /data/adb/lspd/misc_path)
-BASE_PATH=\"/data/misc/\$MISC_PATH\"
-LOG_PATH=\"/data/adb/lspd/log\"
-ENABLE_VERBOSE_LOG_FILE=\"/data/adb/lspd/config/verbose_log\"
-LOG_VERBOSE=false
-
-if [ \"\$(cat \"\${ENABLE_VERBOSE_LOG_FILE}\")\" = \"1\" ]; then
-LOG_VERBOSE=true
-fi
-
-loop_logcat() {
-while true; do
-logcat \$*
-if [ \$? -ne 1 ]; then
-break
-fi
-done
-}
-
-print_log_head() {
-LOG_FILE=\$1
-touch \"\${LOG_FILE}\"
-chmod 666 \"\${LOG_FILE}\"
-{
-echo \"LSPosed Log\"
-echo \"--------- beginning of information\"
-echo \"Manufacturer: \${MANUFACTURER}\"
-echo \"Brand: \${BRAND}\"
-echo \"Device: \${DEVICE}\"
-echo \"Product: \${PRODUCT}\"
-echo \"Model: \${MODEL}\"
-echo \"Fingerprint: \${FINGERPRINT}\"
-echo \"ROM description: \${BUILD_DESC}\"
-echo \"Architecture: \${ARCH}\"
-echo \"Android build: \${BUILD}\"
-echo \"Android version: \${ANDROID}\"
-echo \"Android sdk: \${ANDROID_SDK}\"
-echo \"LSPosed version: \${LSPD_VERSION}\"
-echo \"Riru version: \${RIRU_VERSION_NAME} (\${RIRU_VERSION_CODE})\"
-echo \"Riru api: \${RIRU_API}\"
-echo \"Magisk: \${MAGISK_VERSION%:*} (\${MAGISK_VER_CODE})\"
-} >>\"\${LOG_FILE}\"
-}
-
-start_log_catcher() {
-LOG_FILE_NAME=\$1
-LOG_TAG_FILTERS=\$2
-CLEAN_OLD=\$3
-START_NEW=\$4
-LOG_FILE=\"\${LOG_PATH}/\${LOG_FILE_NAME}.log\"
-PID_FILE=\"\${LOG_PATH}/\${LOG_FILE_NAME}.pid\"
-mkdir -p \${LOG_PATH}
-if [ \${CLEAN_OLD} == true ]; then
-rm \"\${LOG_FILE}.old\"
-mv \"\${LOG_FILE}\" \"\${LOG_FILE}.old\"
-fi
-rm \"\${LOG_PATH}/\${LOG_FILE_NAME}.pid\"
-if [ \${START_NEW} == false ]; then
-return
-fi
-touch \"\${PID_FILE}\"
-print_log_head \"\${LOG_FILE}\"
-loop_logcat -f \"\${LOG_FILE}\" *:S \"\${LOG_TAG_FILTERS}\" &
-LOG_PID=\$!
-echo \"\${LOG_PID}\" >\"\${LOG_PATH}/\${LOG_FILE_NAME}.pid\"
-}
-
-chcon -R u:object_r:system_file:s0 \"\${MODDIR}\"
-chcon -R u:object_r:system_file:s0 \"/data/adb/lspd\"
-rm -rf \${LOG_PATH}.old
-mv \${LOG_PATH} \${LOG_PATH}.old
-mkdir -p \${LOG_PATH}
-chcon -R u:object_r:magisk_file:s0 \${LOG_PATH}
-
-if [ ! -z \"\${MISC_PATH}\" ]; then
-chcon -R u:object_r:magisk_file:s0 \"\${BASE_PATH}\"
-chmod 771 \"\${BASE_PATH}\"
-print_log_head \"\${LOG_PATH}/modules.log\"
-start_log_catcher all \"LSPosed:V XSharedPreferences:V LSPosed-Bridge:V LSPosedManager:V LSPosedService:V *:F\" true \${LOG_VERBOSE}
-fi
-
 rm -f \"/data/local/tmp/lspd.dex\"
 unshare -m sh -c \"\$MODDIR/lspd &\"" > $MODPATH/$MODID/post-fs-data.sh
-mkdir -p $MODPATH/$MODID/riru/lib $MODPATH/$MODID/riru/lib64
-touch $MODPATH/$MODID/riru/lib/libriru_lspd $MODPATH/$MODID/riru/lib64/libriru_lspd
+echo "#!$MIPSB/sh
+MODDIR=\${0%/*}
+unshare -m \"\$MODDIR/lspd\" --from-service &" > $MODPATH/$MODID/service.sh
+echo "rm -rf /data/adb/lspd; rm -rf /data/adb/riru/modules/lspd" > $MODPATH/$MODID/uninstall.sh
 UIP "Installing LSPosed Manager"
 if $BOOTMODE; then
 pm install -r $TMPDIR/LSPosed/LSPosedManager.apk
 else
 cp -f $TMPDIR/LSPosed/LSPosedManager.apk $NVBASE/lspd/manager.apk
 fi
-UIP "Creating Configuration Directories"
-if [ -f $NVBASE/lspd/misc_path ]; then
-MISC_PATH=$(cat $NVBASE/lspd/misc_path)
-UIP "Use Previous Path $MISC_PATH"
-else
-MISC_RAND=$(tr -cd 'A-Za-z0-9' < /dev/urandom | head -c16)
-MISC_PATH="lspd_$MISC_RAND"
-UIP "Use New Path $MISC_RAND"
-echo "$MISC_PATH" > $NVBASE/lspd/misc_path
-fi
-mkdir -p $IPDM/$MISC_PATH
-echo -e "#!/sbin/sh\nrm -rf $MODPATH/lspd $MODPATH/riru/modules/lspd" > $MODPATH/$MODID/uninstall.sh
-[ -f $NVBASE/lspd/config/verbose_log ] || echo "0" >$NVBASE/lspd/config/verbose_log
 SET_PERM_RM
 chmod 0744 $MODPATH/$MODID/lspd
 UIP "$MSGDI"
@@ -10921,24 +10830,149 @@ if [ "$gms" = com.google.android.gms ]; then UIP "Google Play Services Is Not Op
 }
 
 IPUSGP() {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/USGP ]; then
-MSGDELIMITER; UIP "$MSGFI Unlimited Storage, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if $KEYFUNCTION; then
-UIP "Removing..."
-IPUSGPSA
-rm -f $AIOPFMDPH/USGP
-UIP "$MSGDRM"
-fi
-else
-if $LEGACYMODE; then
 UCSA "Install Unlimited Storage For GPhotos $VIPUSGP?" "" "$MSGNUS" "IPUSGPS"
-fi
-fi
 }
 
 IPUSGPS() {
 UIP "Installing USGP $IAMM"
 mkdir -p $TMPDIR/USGP
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!-- Copyright (C) 2015 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the \"License\");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an \"AS IS\" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- The OMA DM service must be whitelisted so they are always able to run. -->
+<config>
+    <allow-in-power-save package=\"com.android.omadm.service\" />
+</config>" > $TMPDIR/USGP/allowlist_com.android.omadm.service.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!-- Copyright (C) 2014 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the \"License\");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an \"AS IS\" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- These are configurations that must exist on all GMS devices. -->
+<config>
+    <!-- These are the standard packages that are white-listed to always have internet
+         access while in power save mode, even if they aren't in the foreground. -->
+
+    <!-- GmsCore must always have network access for GCM and other things. -->
+    <allow-in-power-save package=\"com.google.android.gms\" />
+    <allow-in-data-usage-save package=\"com.google.android.gms\" />
+    <allow-unthrottled-location package=\"com.google.android.gms\" />
+    <allow-ignore-location-settings package=\"com.google.android.gms\" />
+
+    <!-- OobConfig must always have network access to fetch enterprise and carrier lock config. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.apps.work.oobconfig\" />
+    <allow-in-data-usage-save package=\"com.google.android.apps.work.oobconfig\" />
+
+    <!-- Turbo must not have App Standby restrictions in order to push new
+         App Standby buckets to the platform periodically -->
+    <allow-in-power-save-except-idle package=\"com.google.android.apps.turbo\" />
+
+    <!-- Certain broadcasts must still go to legacy implicit receivers -->
+    <allow-implicit-broadcast action=\"com.google.android.checkin.CHECKIN_COMPLETE\" />
+    <allow-implicit-broadcast action=\"com.google.gservices.intent.action.GSERVICES_CHANGED\" />
+    <allow-implicit-broadcast action=\"com.google.gservices.intent.action.GSERVICES_OVERRIDE\" />
+    <allow-implicit-broadcast action=\"com.google.android.c2dm.intent.RECEIVE\" />
+    <!-- TODO: This is a temporary workaround for allowing GmsCore to receive this broadcast.
+         This can be removed once OneTimeInitializer functionality is moved to GmsCore. -->
+    <allow-implicit-broadcast action=\"com.google.android.onetimeinitializer.ONE_TIME_INITIALIZED\" />
+
+    <!-- Play Store likewise must have network access to support other applications. -->
+    <allow-in-power-save-except-idle package=\"com.android.vending\" />
+
+    <!-- If the volta app is pre-installed (for monitoring power use), let it do checkins. -->
+    <allow-in-power-save package=\"com.google.android.volta\" />
+
+    <!-- If GoogleCellBroadcastServiceModule is installed, let it run in the background -->
+    <allow-in-power-save package=\"com.google.android.cellbroadcastreceiver\" />
+
+    <!-- If CarrierServices is installed, it must always have network access to
+         reliably receive IMS messages. -->
+    <allow-in-power-save package=\"com.google.android.ims\" />
+    <allow-in-data-usage-save package=\"com.google.android.ims\" />
+
+    <!-- These Google applications all handle URLs to their websites by default -->
+
+    <!-- Apps below are required on all GMS devices -->
+    <app-link package=\"com.android.vending\" />
+    <app-link package=\"com.google.android.apps.maps\" />
+    <app-link package=\"com.google.android.youtube\" />
+    <app-link package=\"com.google.android.apps.docs\" />
+    <app-link package=\"com.google.android.talk\" />
+    <app-link package=\"com.google.android.apps.photos\" />
+    <app-link package=\"com.google.android.apps.youtube.music\" />
+
+    <!-- Apps below are optional on GMS devices -->
+    <app-link package=\"com.google.android.apps.tycho\" />
+    <app-link package=\"com.google.android.apps.plus\" />
+    <app-link package=\"com.google.android.apps.docs.editors.sheets\" />
+    <app-link package=\"com.google.android.apps.docs.editors.slides\" />
+    <app-link package=\"com.google.android.apps.docs.editors.docs\" />
+    <app-link package=\"com.google.android.talk\" />
+    <app-link package=\"com.google.android.videos\" />
+    <app-link package=\"com.google.android.calendar\" />
+    <app-link package=\"com.google.android.apps.wallpaper\" />
+
+    <!-- These are the packages that are white-listed to be able to run as system user -->
+    <system-user-whitelisted-app package=\"com.android.vending\" />
+    <system-user-whitelisted-app package=\"com.google.android.gms\" />
+    <system-user-whitelisted-app package=\"com.google.android.gms.policy_auth\" />
+    <system-user-whitelisted-app package=\"com.google.android.play.games\" />
+    <system-user-whitelisted-app package=\"com.google.android.tts\" />
+
+    <!-- These are the packages that are uninstalled for system user -->
+    <!-- Apps below are required on all GMS devices -->
+    <system-user-blacklisted-app package=\"com.google.android.googlequicksearchbox\" />
+    <!-- Apps below are optional on GMS devices -->
+    <system-user-blacklisted-app package=\"com.google.android.launcher\" />
+
+    <!-- Whitelist of what components are permitted as backup data transports.  The
+         'service' attribute here is a flattened ComponentName string. -->
+    <backup-transport-whitelisted-service
+        service=\"com.google.android.gms/.backup.BackupTransportService\" />
+    <backup-transport-whitelisted-service
+        service=\"com.google.android.gms/.backup.component.D2dTransportService\" />
+
+    <!-- Specify the explicit set of other applications that AI services are allowed to
+         interact with, including the providers that back the implementation of the APIs
+         provided by the package. -->
+    <allow-association target=\"com.google.android.as\" allowed=\"com.android.bluetooth\" />
+    <allow-association target=\"com.google.android.as\" allowed=\"com.android.providers.contacts\" />
+    <allow-association target=\"com.google.android.as\" allowed=\"com.android.providers.media\" />
+    <allow-association target=\"com.google.android.as\" allowed=\"com.android.providers.telephony\" />
+    <allow-association target=\"com.google.android.as\" allowed=\"com.android.systemui\" />
+    <allow-association target=\"com.google.android.as\" allowed=\"com.google.android.providers.media.module\" />
+
+    <!-- Specify the explicit set of other applications whose app data directories are
+        accessible by other applications. -->
+    <app-data-isolation-whitelisted-app package=\"com.google.android.gms\" />
+
+    <!-- Whitelist of packages that eligible for rollback -->
+    <rollback-whitelisted-app package=\"com.android.vending\" />
+</config>" > $TMPDIR/USGP/google.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <!-- Copyright (C) 2014 The Android Open Source Project
 
@@ -10964,74 +10998,325 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <feature name=\"com.google.android.feature.EXCHANGE_6_2\" />
 </config>" > $TMPDIR/USGP/google_build.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!--
+  ~ Copyright (C) 2018 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the \"License\");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an \"AS IS\" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<!--
+This XML file declares which platform apps that need to access internal APIs.
+-->
+<config>
+  <hidden-api-whitelisted-app package=\"android.car.cluster.maserati\" />
+  <hidden-api-whitelisted-app package=\"com.android.apps.tag\" />
+  <hidden-api-whitelisted-app package=\"com.android.auto.embedded.cts.verifier\" />
+  <hidden-api-whitelisted-app package=\"com.android.car.bugreport\" />
+  <hidden-api-whitelisted-app package=\"com.android.car.carlauncher\" />
+  <hidden-api-whitelisted-app package=\"com.android.car.home\" />
+  <hidden-api-whitelisted-app package=\"com.android.car.retaildemo\" />
+  <hidden-api-whitelisted-app package=\"com.android.car.settingslib.robotests\" />
+  <hidden-api-whitelisted-app package=\"com.android.car.setupwizardlib.robotests\" />
+  <hidden-api-whitelisted-app package=\"com.android.cardock\" />
+  <hidden-api-whitelisted-app package=\"com.android.connectivity.metrics\" />
+  <hidden-api-whitelisted-app package=\"com.android.facelock\" />
+  <hidden-api-whitelisted-app package=\"com.android.google.gce.gceservice\" />
+  <hidden-api-whitelisted-app package=\"com.android.hotwordenrollment.okgoogle\" />
+  <hidden-api-whitelisted-app package=\"com.android.hotwordenrollment.tgoogle\" />
+  <hidden-api-whitelisted-app package=\"com.android.hotwordenrollment.xgoogle\" />
+  <hidden-api-whitelisted-app package=\"com.android.inputmethod.latin\" />
+  <hidden-api-whitelisted-app package=\"com.android.media.update\" />
+  <hidden-api-whitelisted-app package=\"com.android.netspeed\" />
+  <hidden-api-whitelisted-app package=\"com.android.onemedia\" />
+  <hidden-api-whitelisted-app package=\"com.android.pixellogger\" />
+  <hidden-api-whitelisted-app package=\"com.android.ramdump\" />
+  <hidden-api-whitelisted-app package=\"com.android.settingslib.robotests\" />
+  <hidden-api-whitelisted-app package=\"com.android.simappdialog\" />
+  <hidden-api-whitelisted-app package=\"com.android.statsd.dogfood\" />
+  <hidden-api-whitelisted-app package=\"com.android.statsd.loadtest\" />
+  <hidden-api-whitelisted-app package=\"com.android.systemui.shared\" />
+  <hidden-api-whitelisted-app package=\"com.android.test.power\" />
+  <hidden-api-whitelisted-app package=\"com.android.test.voiceenrollment\" />
+  <hidden-api-whitelisted-app package=\"com.android.tv.provision\" />
+  <hidden-api-whitelisted-app package=\"com.google.SSRestartDetector\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.apps.nexuslauncher\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.apps.wallpaper\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.asdiv\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.athome.globalkeyinterceptor\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.defaultstoragemonitoringcompanionapp\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.diagnosticrecorder\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.diagnosticverifier\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.diskwriteapp\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.flashapp\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.kitchensink\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.obd2app\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.setupwizard\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.usb.aoap.host\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.car.vms.subscriber\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.carrier\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.carriersetup\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.connectivitymonitor\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.edu.harnesssettings\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.ext.services\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.factoryota\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.feedback\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.gsf\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.hardwareinfo\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.hiddenmenu\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.onetimeinitializer\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.permissioncontroller\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.partner.provisioning\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.partnersetup\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.pixel.setupwizard\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.preloaded_drawable_viewer\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.printservice.recommendation\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.sampledeviceowner\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.apps.scone\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.sdksetup\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.setupwizard\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.storagemanager\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.tag\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.tungsten.setupwraith\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.tv.bugreportsender\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.tv.frameworkpackagestubs\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.tv.pairedsetup\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.vendorloggingservice\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.volta\" />
+  <hidden-api-whitelisted-app package=\"com.google.android.wfcactivation\" />
+  <hidden-api-whitelisted-app package=\"com.google.mds\" />
+  <hidden-api-whitelisted-app package=\"com.google.modemservice\" />
+  <hidden-api-whitelisted-app package=\"com.htc.omadm.trigger\" />
+  <hidden-api-whitelisted-app package=\"com.qualcomm.qcrilmsgtunnel\" />
+  <hidden-api-whitelisted-app package=\"com.ustwo.lwp\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.accessibilityhelper\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.apkcacheprovider\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.applauncher\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.backup_settings\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.cast_receiver\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.crash_collector\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.file_system\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.gms\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.home\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.intent_helper\" />
+  <hidden-api-whitelisted-app package=\"org.chromium.arc.tts\" />
+</config>" > $TMPDIR/USGP/google-hiddenapi-package-whitelist.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!--
+  ~ Copyright (C) 2018 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the \"License\");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an \"AS IS\" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<!--
+This XML file declares packages eligible for rollback.
+-->
+<config>
+  <!-- Mainline modules (apk or apex) go here. -->
+  <rollback-whitelisted-app package=\"com.google.android.adbd\" />
+  <rollback-whitelisted-app package=\"com.google.android.angle\" />
+  <rollback-whitelisted-app package=\"com.google.android.captiveportallogin\" />
+  <rollback-whitelisted-app package=\"com.google.android.cellbroadcast\" />
+  <rollback-whitelisted-app package=\"com.google.android.conscrypt\" />
+  <rollback-whitelisted-app package=\"com.google.android.documentsui\" />
+  <rollback-whitelisted-app package=\"com.google.android.ext.services\" />
+  <rollback-whitelisted-app package=\"com.google.android.extservices\" />
+  <rollback-whitelisted-app package=\"com.google.android.ipsec\" />
+  <rollback-whitelisted-app package=\"com.google.android.media\" />
+  <rollback-whitelisted-app package=\"com.google.android.media.swcodec\" />
+  <rollback-whitelisted-app package=\"com.google.android.mediaprovider\" />
+  <rollback-whitelisted-app package=\"com.google.android.modulemetadata\" />
+  <rollback-whitelisted-app package=\"com.google.android.networkstack\" />
+  <rollback-whitelisted-app package=\"com.google.android.networkstack.permissionconfig\" />
+  <rollback-whitelisted-app package=\"com.google.android.neuralnetworks\" />
+  <rollback-whitelisted-app package=\"com.google.android.os.statsd\" />
+  <rollback-whitelisted-app package=\"com.google.android.permission\" />
+  <rollback-whitelisted-app package=\"com.google.android.permissioncontroller\" />
+  <rollback-whitelisted-app package=\"com.google.android.resolv\" />
+  <rollback-whitelisted-app package=\"com.google.android.sdkext\" />
+  <rollback-whitelisted-app package=\"com.google.android.tethering\" />
+  <rollback-whitelisted-app package=\"com.google.android.tzdata\" />
+  <rollback-whitelisted-app package=\"com.google.android.tzdata2\" />
+  <rollback-whitelisted-app package=\"com.google.android.wifi\" />
+  <rollback-whitelisted-app package=\"com.google.mainline.telemetry\" />
+  <!-- Mainline modules as apk-in-apex go here. -->
+  <rollback-whitelisted-app package=\"com.android.cellbroadcastreceiver\" />
+  <rollback-whitelisted-app package=\"com.android.cellbroadcastservice\" />
+  <rollback-whitelisted-app package=\"com.android.networkstack.tethering\" />
+  <rollback-whitelisted-app package=\"com.google.android.cellbroadcastreceiver\" />
+  <rollback-whitelisted-app package=\"com.google.android.cellbroadcastservice\" />
+  <rollback-whitelisted-app package=\"com.google.android.hotspot2.osulogin\" />
+  <rollback-whitelisted-app package=\"com.google.android.networkstack.tethering\" />
+  <rollback-whitelisted-app package=\"com.google.android.providers.media.module\" />
+  <rollback-whitelisted-app package=\"com.google.android.wifi.resources\" />
+</config>" > $TMPDIR/USGP/google-rollback-package-whitelist.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!--
+ This XML file declares installer eligible for committing stage install.
+-->
+<config>
+  <whitelisted-staged-installer package=\"com.android.vending\" />
+</config>" > $TMPDIR/USGP/google-staged-installer-whitelist.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
 <!-- These are configurations that should exist on Google's 2016 and newer Nexus devices. -->
 <config>
-
     <!-- This is meant to be the canonical feature identifying 2016 and newer Nexus devices. -->
     <feature name=\"com.google.android.feature.PIXEL_EXPERIENCE\" />
-
-    <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
-    <feature name=\"com.google.android.feature.PIXEL_2017_EXPERIENCE\" />
-
-    <!-- This is meant to be the canonical feature identifying 2018 and newer Pixel devices. -->
-    <feature name=\"com.google.android.feature.PIXEL_2018_EXPERIENCE\" />
 
     <!-- The feature identifying devices which are able to use the Turbo app -->
     <feature name=\"com.google.android.feature.TURBO_PRELOAD\" />
 
     <!-- The feature identifying devices which are able to use the Android Wellbeing app. -->
     <feature name=\"com.google.android.feature.WELLBEING\" />
-	
-</config>" > $TMPDIR/USGP/google_exclusives_enable.xml
-echo "<?xml version=\"1.0\"  encoding=\"utf-8\" ?>
 
-<!-- These are configurations that should exist on Google\" s 2016 and newer Nexus devices. -->
-<config>
-    <!-- This is meant to be the canonical feature identifying 2016 and newer Nexus devices. -->
-    <feature name=\"com.google.android.feature.PIXEL_EXPERIENCE\"  />
-
-    <!-- Both versions of this string are needed due to a miscommunication. b/29978934 -->
-    <feature name=\"com.google.android.apps.photos.NEXUS_PRELOAD\"  />
-    <feature name=\"com.google.android.apps.photos.nexus_preload\"  />
+    <!-- The feature identifying devices which are able to use the device-to-device migration
+        over cable provided by the Pixelmigrate app. -->
+    <feature name=\"com.google.android.feature.D2D_CABLE_MIGRATION_FEATURE\" />
 
     <!-- Enable Zero Touch Provisioning support for 2016 and newer Nexus devices. -->
-    <feature name=\"com.google.android.feature.ZERO_TOUCH\"  />
+    <feature name=\"com.google.android.feature.ZERO_TOUCH\" />
 
-    <!-- Allow Google unbundled tethering entitlement app in background -->
-    <allow-in-power-save package=\"com.google.android.tetheringentitlement\"  />
+    <!-- Allow WfcActivation app scheduled jobs to run when app in background. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.wfcactivation\" />
 
     <!-- Allow ssr detector service in background -->
-    <allow-in-power-save package=\"com.google.SSRestartDetector\"  />
+    <allow-in-power-save package=\"com.google.SSRestartDetector\" />
+
+    <!-- Allow connectivitymonitor service in background -->
+    <allow-in-power-save package=\"com.google.android.connectivitymonitor\" />
+
+    <!-- Allow connectivitythermalpowermanager service in background -->
+    <allow-in-power-save package=\"com.google.android.connectivitythermalpowermanager\" />
 
     <!-- Allow ramdump uploader service in background -->
-    <allow-in-power-save package=\"com.android.ramdump\"  />
+    <allow-in-power-save package=\"com.android.ramdump\" />
+
+    <!-- Whitelist log pkg so JobIntentService can work. b/71630894 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.apps.carrier.log\" />
+
+    <!-- Whitelist so headless app JobIntentService can work. b/73250911 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.carrier\" />
+
+    <!-- Whitelist so headless app JobService can work. b/135126855 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.apps.carrier.carrierwifi\" />
 
     <!-- These are telephony components that need to run in the background -->
-    <allow-in-power-save package=\"com.qualcomm.atfwd\"  />
-    <allow-in-power-save package=\"com.qualcomm.embms\"  />
-    <allow-in-power-save package=\"com.qualcomm.qti.telephonyservice\"  />
-    <allow-in-power-save package=\"com.qulacomm.qcrilmsgtunnel\"  />
-    <allow-in-power-save package=\"com.qualcomm.qti.ims\"  />
-    <allow-in-power-save package=\"com.qualcomm.qti.radioconfiginterface\"  />
+    <allow-in-power-save package=\"com.qualcomm.atfwd\" />
+    <allow-in-power-save package=\"com.qualcomm.embms\" />
+    <allow-in-power-save package=\"com.qualcomm.qti.telephonyservice\" />
+    <allow-in-power-save package=\"com.qulacomm.qcrilmsgtunnel\" />
+    <allow-in-power-save package=\"com.qualcomm.qti.ims\" />
+    <allow-in-power-save package=\"com.qualcomm.qti.radioconfiginterface\" />
+
+    <!-- Pre-installed carrier apps which should be disabled until a matching SIM is inserted. -->
+    <disabled-until-used-preinstalled-carrier-app package=\"com.google.android.apps.tycho\" />
+
+    <!-- Whitelist so the app can run JobIntentService in background. b/77932342 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.tetheringentitlement\" />
+    <!-- Tethering entitlement check app should have Internet access while in data saving mode,
+         even if they're in background. -->
+    <allow-in-data-usage-save package=\"com.google.android.tetheringentitlement\" />
+
+    <!-- Allow eMBMS middleware services to run in the background -->
+    <allow-in-power-save package=\"com.qualcomm.ltebc_vzw\" />
+    <allow-in-power-save package=\"com.qualcomm.ltebc\" />
 </config>" > $TMPDIR/USGP/nexus.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
-<!-- These are configurations that should exist on Google's 2018 devices (and not newer/older) -->
+<!-- These are configurations that should exist on devices that support Next Generation Assistant -->
 <config>
-    <!-- This defines the Photos preload feature for specifically the 2018 Pixel devices. -->
-    <feature name=\"com.google.android.apps.photos.PIXEL_2018_PRELOAD\" />
+    <!-- This feature is meant to be the feature identifying devices that support NGA -->
+    <feature name=\"com.google.android.feature.NEXT_GENERATION_ASSISTANT\" />
+</config>" > $TMPDIR/USGP/nga.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
-    <!-- This feature is meant to be the feature identifying a device supports wireless charger -->
-    <feature name=\"com.google.android.feature.DREAMLINER\" />
-</config>" > $TMPDIR/USGP/pixel_2018_exclusive.xml
-
+<!-- These are configurations that should exist on Google's 2016 Pixel devices. -->
+<config>
+    <!-- Both versions of this string are needed due to a miscommunication. b/29978934 -->
+    <feature name=\"com.google.android.apps.photos.NEXUS_PRELOAD\" />
+    <feature name=\"com.google.android.apps.photos.nexus_preload\" />
+</config>" > $TMPDIR/USGP/pixel_2016_exclusive.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
 <!-- These are configurations that should exist on Google's 2017 and newer Nexus devices. -->
 <config>
     <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
     <feature name=\"com.google.android.feature.PIXEL_2017_EXPERIENCE\" />
+
+    <!-- Allow SCONE JobIntentService & Services to run in background -->
+    <allow-in-power-save package=\"com.google.android.apps.scone\" />
+
+    <!-- Allow Flipendo in power save. Will be present on pre-2020 devices for dogfooding. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
+
+    <!-- Allow Better Bug to take bug report. -->
+    <bugreport-whitelisted package=\"com.google.android.apps.betterbug\" />
+    <bugreport-whitelisted package=\"com.google.android.apps.internal.betterbug\" />
+    <bugreport-whitelisted package=\"com.google.android.apps.betterbug.partners\" />
+
+    <!-- Allow Pixel modem service to run in background -->
+    <allow-in-power-save package=\"com.google.modemservice\" />
+
+    <!-- Allow MDS ExperimentService to run in background -->
+    <allow-in-power-save package=\"com.google.mds\" />
+
+    <!-- Hide DocumentsUi Launcher/Downloads intent handling. DocumentsUi
+         PrebootReceiver does not properly hide the launcher in work profile,
+         so we need to include this as well. -->
+    <component-override package=\"com.google.android.documentsui\" >
+        <component class=\"com.android.documentsui.LauncherActivity\" enabled=\"false\" />
+        <component class=\"com.android.documentsui.ViewDownloadsActivity\" enabled=\"false\" />
+    </component-override>
+
+    <!-- ACTION_MANAGE_STORAGE handled by Files by Google -->
+    <component-override package=\"com.google.android.storagemanager\" >
+        <component class=\"com.android.storagemanager.deletionhelper.DeletionHelperActivity\" enabled=\"false\" />
+    </component-override>
+
+    <!-- Make sure photos/video previews are handled by Photos. -->
+    <component-override package=\"com.google.android.apps.nbu.files\" >
+        <component class=\"com.google.android.apps.nbu.files.gateway.preview.PreviewActivity\" enabled=\"false\" />
+    </component-override>
+
+    <component-override package=\"com.android.settings\" >
+        <!-- Display regulatory info in settings. -->
+        <component class=\".RegulatoryInfoDisplayActivity\" enabled=\"true\" />
+    </component-override>
+
+    <!-- Stub for Fi to request bug reports, disabled until a Fi SIM is added.
+         Included for all in-market devices receiving the R OTA as well as
+         devices launching with R. -->
+    <disabled-until-used-preinstalled-carrier-associated-app
+        package=\"com.google.android.apps.nova.bugreportwrapper\"
+        carrierAppPackage=\"com.google.android.apps.tycho\"
+        addedInSdk=\"30\" />
+    <!-- Allow access to BugreportManager. -->
+    <bugreport-whitelisted package=\"com.google.android.apps.nova.bugreportwrapper\" />
+
+    <!-- Feature flag on RVC builds for AER requirements, b/159247801 -->
+    <feature name=\"com.google.android.feature.AER_OPTIMIZED\" />
+
 </config>" > $TMPDIR/USGP/pixel_experience_2017.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
@@ -11040,25 +11325,163 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <!-- Allow Pixel modem service in background -->
     <allow-in-power-save package=\"com.google.modemservice\" />
 
-    <!-- Allow SCONE JobIntentService & Services to run in background -->
-    <allow-in-power-save package=\"com.google.android.apps.scone\" />
+    <!-- Allow PixelLogger LoggingService to run in background -->
+    <allow-in-power-save package=\"com.android.pixellogger\" />
+
+    <!-- Allow Flipendo in power save. Will be present on pre-2020 devices for dogfooding. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
 
     <!-- This is meant to be the canonical feature identifying 2018 and newer Pixel devices. -->
     <feature name=\"com.google.android.feature.PIXEL_2018_EXPERIENCE\" />
 </config>" > $TMPDIR/USGP/pixel_experience_2018.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!-- These are configurations that should exist on Google's 2019 and newer devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2019 and newer devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2019_EXPERIENCE\" />
+
+    <!-- Allow Flipendo in power save. Will be present on pre-2020 devices for dogfooding. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
+</config>" > $TMPDIR/USGP/pixel_experience_2019.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!-- These are configurations that should exist on Google's 2019 mid year and newer devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2019 mid year and newer devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2019_MIDYEAR_EXPERIENCE\" />
+
+    <!-- Allow Flipendo in power save. Will be present on pre-2020 devices for dogfooding. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
+</config>" > $TMPDIR/USGP/pixel_experience_2019_midyear.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!-- These are configurations that should exist on Google's 2020 and newer devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2020 and newer devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2020_EXPERIENCE\" />
+
+    <!-- Allow Flipendo in power save. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
+</config>" > $TMPDIR/USGP/pixel_experience_2020.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+
+<!-- These are configurations that should exist on Google's 2020 mid year and newer devices. -->
+<config>
+    <!-- This is meant to be the canonical feature identifying 2020 mid year and newer devices. -->
+    <feature name=\"com.google.android.feature.PIXEL_2020_MIDYEAR_EXPERIENCE\" />
+
+    <!-- Allow Flipendo in power save. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
+</config>" > $TMPDIR/USGP/pixel_experience_2020_midyear.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!-- Copyright (C) 2019 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the \"License\");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an \"AS IS\" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- System packages to preinstall on all devices with handheld_product, per user type.
+     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
+-->
+<config>
+    <install-in-user-type package=\"com.android.wallpapercropper\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+</config>" > $TMPDIR/USGP/preinstalled-packages-platform-handheld-product.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!-- Copyright (C) 2019 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the \"License\");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an \"AS IS\" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!-- System packages to preinstall on all devices with frameworks-base-overlays, per user type.
+     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
+-->
+<config>
+    <install-in-user-type package=\"com.android.internal.display.cutout.emulation.corner\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.display.cutout.emulation.double\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.display.cutout.emulation.tall\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural_extra_wide_back\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural_narrow_back\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural_wide_back\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.systemui.navbar.threebutton\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.android.internal.systemui.navbar.twobutton\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+</config>" > $TMPDIR/USGP/preinstalled-packages-platform-overlays.xml
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!-- System packages to preinstall on Pixel 2017-and-newer devices, per user type.
+     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
+-->
+<config>
+    <install-in-user-type package=\"com.android.wallpaper.livepicker\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.google.android.apps.nexuslauncher\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.google.android.apps.wallpaper\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.google.android.apps.wallpaper.nexus\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.google.android.calculator\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+    <install-in-user-type package=\"com.google.android.deskclock\">
+        <install-in user-type=\"FULL\" />
+    </install-in-user-type>
+</config>" > $TMPDIR/USGP/preinstalled-packages-product-pixel-2017-and-newer.xml
 if $MAGISK; then
 MODID="$IDUSGP"; REMOVER -mm "$MODID"
+[ -d $IPSES ] && mkdir -p $MODPATH/$MODID$MIPSES && cp -f $TMPDIR/$MODID/* $MODPATH/$MODID$MIPSES
+[ -d $IPSSPES ] && mkdir -p $MODPATH/$MODID$MIPSSPES && cp -f $TMPDIR/$MODID/* $MODPATH/$MODID$MIPSSPES
 mkdir -p $MODPATH/$MODID$MIPSES
 cp -f $TMPDIR/$MODID/* $MODPATH/$MODID$MIPSES
 MMPR -v "$MODID" "$VIPUSGP" "Activating Unlimited Storage For Google Photos (Maybe)"; SET_PERM_RM; IPUSGP=$MODPATH/$MODID/system.prop
 else
 BUILD_PROP_BACKUP; IPUSGP=$IPSBP
 touch $AIOPFMDPH/USGP
-STANDARTBUCKUPER=true
-IPUSGPSA
-cp -f $TMPDIR/USGP/* $IPSES
+[ -d $IPSES ] && cp -f $TMPDIR/USGP/* $IPSES
+[ -d $IPSSPES ] && cp -f $TMPDIR/USGP/* $IPSSPES
 fi
-echo -e "\n# Activating Unlimited Storage For Google Photos (Maybe)\nro.product.model=Pixel\nro.product.brand=Google\nro.product.manufacturer=Google\nro.opa.eligible_device=true" >> $IPUSGP
+echo -e "\n# Activating Unlimited Storage For Google Photos (Maybe)\nro.com.google.clientidbase=android-google\nro.opa.eligible_device=true" >> $IPUSGP
 UIP "$MSGDI"
 }
 
@@ -11224,6 +11647,7 @@ IPEBB
 IPBA
 IPIOSEMOJI
 IPMUIS
+IPFDNI
 }
 
 APPS_PRESETS() {

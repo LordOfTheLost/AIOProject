@@ -1,14 +1,14 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 23.08.21 (56) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.08.2021/AIOPFMD-23.08.21-%2856%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1b24enDzCzQ-L1fnF-reRxaArRfLsQfsi/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/53">TG</a>
-* Версия AIOPFMDA: 20.08.21 (6) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.08.2021/AIOPFMDA-20.08.21-%286%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/19SuNcGcOb0EznAT4is3uapjelftGAgpo/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/51">TG</a>
+* Версия AIOPFMD: 05.09.21 (57) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/05.09.2021/AIOPFMD-05.09.21-%2857%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1Xn1YrNh9OpW8BsW-YMsuIsqwOn_l2ejS/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/54">TG</a>
+* Версия AIOPFMDA: 05.09.21 (7) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/05.09.2021/AIOPFMDA-05.09.21-%287%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1vWCIbH8PVXK5EZc4ErMxJKvaWuc3KguQ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/55">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Разработчик: <a href="https://4pda.to/forum/index.php?showuser=6892995/">Lord Of The Lost</a>.
 * Русский интерфейс: Нет, и не имеет смысла (а описание на русском во цЫрк).
 * Технические требования:
-	- Требуется Magisk 23+ (но если установлена версия ниже - принудительного выхода не будет а только предупреждение) и/или TWRP;
+	- Требуется Magisk 23+ (23000+) (но если установлена версия ниже - принудительного выхода не будет а только предупреждение) и/или TWRP;
 	- Архитектура Arm или Arm64.
 	- Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Три патча LP или их альтернатива для оверлеев системы (рекомендуется, но может и нет (рандом));
@@ -31,7 +31,20 @@
 
 <details> 
   <summary>Changelog</summary>
-
+  
+#### 05.09.21 (57) ####
+* Riru Core обновлен до v26.1.2.r505.c20529bced;
+* LSPosed обновлен до v1.5.3 (5984);
+* Добавлено предупреждение для Android 12/SC что работа патча может быть кривой. Пока не появится Android 12 на мой телефон - фиксов не будет;
+* Минимальный билд Magisk должен быть не ниже 23000 а ещё желательнее Magisk Alpha;
+* MagiskHide Props Config Обновлен до v6.0.1-v132.
+* Systemless Hosts обновлен до v16.9-210829 (ID не менял, но добавил новый в проверку на конфликты);
+* hosts файл с AdAway обновлен от 03.09.2021;
+* Unlimited Storage Google Photos обновлен до v1.1 с файлами с PE+ (соболезную) и вынут из Legacy Mode;
+* Lawnchair R обновлен до 11 Alpha 6.1 с полностью черной темой;
+* Вернул в NLSound выборы на Full и Lite, поставил что рекомендуется Lite, перемещен в EOL Addon из за кривости;
+* Оба Detach перемещены в EOL Addon;
+* Исправлена функция MHIDE которая использовалась в патчах на SafetyNet и GayFix.
 #### 23.08.21 (56) ####
 * NLSound в NL убрал выбор на Full и Lite версию PATCH_MIXER - пока будет только Lite иначе может быть отвал. И пару фиксов что нашел;
 * А нормальных изменений пока нет и в ближайшие недели а может месяцы не будет.
@@ -47,7 +60,7 @@
 * Riru Core обновлен до v26.1.1.r500.45d2706e83;
 * Shady Launcher R теперь с черной темой;
 * Boot Animation обновлен до v1.3 - добавил анимацию из Radiant;
-* Lawnchair обновлен до 11 Alpha 6 с полностью черной темой но квадраты не фиксятся даже раундерами и сам лаунчер иногда вылетает в фоне (стандарт и мне насрать уже).
+* Lawnchair R обновлен до 11 Alpha 6 с полностью черной темой но квадраты не фиксятся даже раундерами и сам лаунчер иногда вылетает в фоне (стандарт и мне насрать уже).
 #### 17.08.21 (53) ####
 * Riru Core обновлен до v26.1.0.r497.8b378fc3af;
 * PATCHMODE теперь будет с расширением .conf и у кого он ещё .sh автоматически будет переименован в .conf;
@@ -994,7 +1007,7 @@
 	- Новый менеджер;
 	- Старый менеджер;
 * Пункт (Only M) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
-* Пункт (Only M) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - Установка NLSound:
+* Пункт (Only M) (ADDON) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - Установка NLSound:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
@@ -1005,7 +1018,9 @@
 	- PATCH_DEVICE_FEATURES;
 	- PATCH_DIRAC:
 	- PATCH_FLUENCE:
-	- PATCH_MIXER;
+	- PATCH_MIXER:
+		- Lite
+		- Full (может быть отвал)
 	- PATCH_DECOENCO
 	- PATCH_HIFI
 	- PATCH_BT_PARAMETERS
@@ -1549,7 +1564,7 @@
 	- Переключить в Enforcing;
 * Пункт (Only М) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a || <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);
 * Пункт (All) - Установка Cache Cleaner - микро аналог SdMaid через терминал - удаляет все пустые папки в /sdcard и подкаталогах, а так же некоторые не нужные временные папки с кешем и тд. (нужно в терминале написать su; CC);
-* Пункт (Only М In BootMode) - Установка Detach:
+* Пункт (Only М In BootMode) (ADDON) - Установка Detach:
 	- Detach <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=78599318">4PDA</a>;
 	- Detach3 <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103999905">4PDA</a>;
 * Пункт (All) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - Установка ISQLite3 - необходим для некоторых модулей;
@@ -1600,7 +1615,7 @@
 
 * Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - Установка Riru Core;
 	- Standart v26;
-	- Legacy v25 Fro EdXposed;
+	- Legacy v25 For EdXposed;
 * Пункт (Only М) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - Установка EdXposed;
 * Пункт (Only М) (8.1-12) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> - Установка LSPosed;
 * Пункт (Only М) (8.1-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101920396">4PDA</a> || <a href="https://github.com/Kr328/Riru-ClipboardWhitelist">GITHUB</a> - Установка Riru Clipboard Whitelist:
@@ -1644,7 +1659,7 @@
 		- Светодиод, вспышка и хардклавишы.
 * Пункт (Only М) (6-12) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;
 * Пункт (Only BootMode & Universal GMS Doze) - Проверка работы/оптимизации Universal GMS Doze;
-* Пункт (Legacy Mode & All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен - тот знает - работает как есть;
+* Пункт (All) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен - тот знает - работает как есть;
 * Пункт (Only M) - Установка Animation Scale - принудительно выставляет анимацию:
 	- Значение 0.0;
 	- Значение 0.1;
