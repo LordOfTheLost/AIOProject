@@ -848,7 +848,7 @@
   
 <h3 align=center>UI: Pills/NavBar/Gboard/Themes/BA/Sounds</h3>
 
-* Пункт (ALL) (10-12) (\) - Установка разных видов/размеров жестовой "таблетки":
+* Пункт (ALL) (10-12) (\\) - Установка разных видов/размеров жестовой "таблетки":
 	- Полное скрытие;
 	- Остальные варианты;
 		- Прозрачная зона таблетки;
@@ -864,7 +864,7 @@
 				- Размер таблетки (2);
 				- Размер таблетки (3);
 				- Размер таблетки (4);
-* Пункт (ALL) (10-12) (\) - Установка разного цвета жестовой "таблетки":
+* Пункт (ALL) (10-12) (\\) - Установка разного цвета жестовой "таблетки":
 	- Выбрать один цвет для Light и Dark который определяется самим приложением;
 	- Выбрать разный цвет для Light и Dark который определяется самим приложением;
 		- Blue (ff1a73e8);
@@ -876,7 +876,7 @@
 		- Yellow (ffffa842);
 		- Orange (ffff8055);
 		- Violet (ffa86bd5);
-* Пункт (ALL) (10-12) (\) - Установка высоты жестовой "таблетки" в значениях:
+* Пункт (ALL) (10-12) (\\) - Установка высоты жестовой "таблетки" в значениях:
 	- Значение 1;
 	- Значение 2;
 	- Значение 3;
@@ -890,10 +890,10 @@
 * Пункт (ALL) - Show/Hide Navigation Bar:
 	- Показать;
 	- Скрыть;
-* Пункт (MAGISK) (10-12) (\) - Back Gesture Disabler - убивает боковые жесты:
+* Пункт (MAGISK) (10-12) (\\) - Back Gesture Disabler - убивает боковые жесты:
 	- Выключить левый;
 	- Выключить правый;
-* Пункт (ALL) (10-12) (\) - Установка патча на увеличение отступов при использовании клавиатуры:
+* Пункт (ALL) (10-12) (\\) - Установка патча на увеличение отступов при использовании клавиатуры:
 	- Значение 0 (Сток);
 	- Значение 5;
 	- Значение 10;
@@ -903,7 +903,7 @@
 	- Значение 30;
 	- Значение 35;
 	- Значение 40;
-* Пункт (ALL) (10-12) (\) - Установка патча на увеличение скругления нижних клавиш для GBoard (работает только на темах с контурами):
+* Пункт (ALL) (10-12) (\\) - Установка патча на увеличение скругления нижних клавиш для GBoard (работает только на темах с контурами):
 	- Значение 0 (Сток);
 	- Значение 5;
 	- Значение 10;
@@ -917,7 +917,7 @@
 	- Значение 50;
 * Пункт (ALL) - Установка Gboard Themes в MD2 и разными цветами и видами;
 * Пункт (ALL) <a href="https://github.com/nitanmarcel/Silky-Gboard">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-silky-gboard.4284323/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108108447">4PDA</a> - Установка GBoard Silk Theme Enabler - активирует новый дизайн из 12ки;
-* Пункт (ALL) (9-12) (\) - Установка Status Bar Increase Number Notification Icons для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
+* Пункт (ALL) (9-12) (\\) - Установка Status Bar Increase Number Notification Icons для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
 	- 4 иконки;
 	- 5 иконок;
 	- 6 иконок;
@@ -926,7 +926,7 @@
 	- 9 иконок;
 	- 10 иконок;
 * Пункт (MAGISK) (10) - Установка GPay Power Menu (он же альтернатива меню выключения расположена с низу);
-* Пункт (ALL) (10-12) (\) - Установка RoundedUI для скругления системы, лаунчеров и приложений которые подтягивают строки из системы:
+* Пункт (ALL) (10-12) (\\) - Установка RoundedUI для скругления системы, лаунчеров и приложений которые подтягивают строки из системы:
 	- Значение 0;
 	- Значение 5;
 	- Значение 10;
@@ -934,7 +934,7 @@
 	- Значение 20;
 	- Значение 25;
 	- Значение 33;
-* Пункт (ALL) (10-12) (\) - Установка Burn In Protection - Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроено но отключено):
+* Пункт (ALL) (10-12) (\\) - Установка Burn In Protection - Включает смещение пикселей в статус баре и не только - на кастомах по типу RR (работает только на тех прошивках, в которых это встроено но отключено):
 	- Время смещения (в секундах):
 		- Значение 20;
 		- Значение 40;
@@ -952,7 +952,7 @@
 						- Значение 6dip;
 						- Значение 8dip;
 						- Значение 10dip;
-* Пункт (ALL) (10-12) (\) - Установка Notification Side Padding - регулирует расстояние между строкой и краями экрана:
+* Пункт (ALL) (10-12) (\\) - Установка Notification Side Padding - регулирует расстояние между строкой и краями экрана:
 	- Значение 0dip (как у OneUI);
 	- Значение 5dip;
 	- Значение 10dip;
@@ -968,7 +968,7 @@
 			- Значение 20dip;
 			- Значение 25dip;
 			- Значение 30dip;
-* Пункт (ALL) (10-12) (\) - Установка Status Bar Icon Space - регулирует расстояние межжу иконками уведомлений в статусбаре/свернутом статусбаре:
+* Пункт (ALL) (10-12) (\\) - Установка Status Bar Icon Space - регулирует расстояние межжу иконками уведомлений в статусбаре/свернутом статусбаре:
 	- Регулировка для левой стороны:
 		- Значение 14dip (как в Zeus-OS);
 		- Значение 15dip;
@@ -993,7 +993,7 @@
 						- Значение 2dip;
 						- Значение 3dip;
 						- Значение 4dip;
-* Пункт (ALL) (10-12) (\) - Установка Status Bar Clock Size - регулирует размер часов в статусбаре/свернутом статусбаре:
+* Пункт (ALL) (10-12) (\\) - Установка Status Bar Clock Size - регулирует размер часов в статусбаре/свернутом статусбаре:
 	- Значение 10sp;
 	- Значение 12sp;
 	- Значение 14sp;
@@ -1001,7 +1001,7 @@
 	- Значение 18sp;
 	- Значение 20sp;
 * Пункт (MAGISK) - Установка Single User Enabler - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
-* Пункт (ALL) (8.1-12) (\) - Установка Status Bar Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара но оверлеями;
+* Пункт (ALL) (8.1-12) (\\) - Установка Status Bar Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара но оверлеями;
 	- Выбрать одно одинаковое значение для обоих сторон;
 	- Выбрать два рызных значения для каждой стороны;
 		- Значение 0dip;
@@ -1015,7 +1015,7 @@
 		- Значение 40dip;
 		- Значение 45dip;
 		- Значение 50dip;
-* Пункт (MAGISK) (8.1-12) (\) - Установка QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
+* Пункт (MAGISK) (8.1-12) (\\) - Установка QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
 	- Значение 0;
 	- Значение 5;
 	- Значение 10;
@@ -1025,7 +1025,7 @@
 	- Значение 30;
 	- Значение 35;
 	- Значение 40;
-* Пункт (MAGISK) (8.1-12) (\) - Установка SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
+* Пункт (MAGISK) (8.1-12) (\\) - Установка SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
 	- Значение 10;
 	- Значение 20;
 	- Значение 33;
@@ -1036,7 +1036,7 @@
 	- Значение 80;
 	- Значение 90;
 	- Значение 100;
-* Пункт (MAGISK) (8.1-12) (\) - Установка QS Count Icon & Rows- даже если ваша прошивка с кастомизацией и выставлено например 6 иконок но в не раскрытой видно всего 5 - то этот модуль для вас:
+* Пункт (MAGISK) (8.1-12) (\\) - Установка QS Count Icon & Rows- даже если ваша прошивка с кастомизацией и выставлено например 6 иконок но в не раскрытой видно всего 5 - то этот модуль для вас:
 	- Выбор для не раскрытой:
 		- 4;
 		- 5;
@@ -1070,7 +1070,7 @@
 										- 2;
 										- 3;								
 * Пункт (MAGISK) (11-12) - Установка Background Blur - включает эффект размытия в шторке и не только;
-* Пункт (ALL) (\) - Установка Boot Animation при запуске телефона:
+* Пункт (ALL) (\\) - Установка Boot Animation при запуске телефона:
 	- Pixel:
 		- Black;
 		- White;
@@ -1086,7 +1086,7 @@
 				- 60;
 				- 30;
 * Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106370289">4PDA</a> || <a href="https://t.me/EmojiReplacer">TG</a> - Установка IOS EMOJI;
-* Пункт (ALL) (\) - Media UI Sounds - Установка звуков из разных оболочек:
+* Пункт (ALL) (\\) - Media UI Sounds - Установка звуков из разных оболочек:
 	- Masik (Miui 12, Android 10):
 		- Альтернативный звук разблокировки из Masik;
 	- OnePlus (OxygenOS);
@@ -1099,15 +1099,15 @@
 
 * Пункт (ALL & ADDON) (7.1.2, 8.1 и 9) (Arm, Arm64) (EOL) - Установка Разблокировки по лицу при Gapps Pico (на практике уже не работает с новыми патчами безопасности на этих версия Android);
 * Пункт (ALL & ADDON) (8.1, 9 и 10) (EOL) - Устанавливает "заглушку" для работы GCam без Gapps;
-* Пункт (ALL) (10-12) (\) - Установка Systemless Launcher (Alt Variant Quick Switch):
+* Пункт (ALL) (10-12) (\\) - Установка Systemless Launcher (Alt Variant Quick Switch):
 	- Установка Lawnchair Q/R/S <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка OPLauncher Q/R <a href="https://www.pling.com/p/1451515/">PLING</a || <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a> || <a href="https://t.me/mrsluffy_releases">TG</a>;
 	- Установка OneUIHome Q/R (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a> || <a href="https://t.me/AyraProject">TG</a>;;
 	- Установка PixelLauncher Q/R <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
 	- Установка ShadyLauncher Q/R <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка AsusLauncher Q/R <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-* Пункт (ALL) (10-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
-* Пункт (ALL) (\) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
+* Пункт (ALL) (10-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a> || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
+* Пункт (ALL) (\\) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
 	- Установка в Data;
 	- Установка в System;
 		- С подтверждением для каждого;
@@ -1127,7 +1127,7 @@
 	- Новый менеджер;
 	- Старый менеджер;
 * Пункт (MAGISK & ADDON) (EOL) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - Установка Ainur Narsil;
-* Пункт (MAGISK) (|\) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - Установка NLSound:
+* Пункт (MAGISK) (|\\) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - Установка NLSound:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
@@ -1146,7 +1146,7 @@
 	- PATCH_IMPROVE_BLUETOOTH;
 	- PATCH_IO_POLICY;
 	- PATCH_AUDIO_POLICY;
-* Пункт (MAGISK) (|\) <a href="https://t.me/AIST_SUPPORT">TG</a> - Установка AIST:
+* Пункт (MAGISK) (|\\) <a href="https://t.me/AIST_SUPPORT">TG</a> - Установка AIST:
 	- PATCH_VOLUMES;
 	- DOLBY VISION TWEAKS;
 		- Patch media_codecs (может быть отвал);
@@ -1161,7 +1161,7 @@
 
 * Пункт (RECOVERY) - Удаляет Пароль/Граф.Ключ/Пин-Код/и тд. (прошивать если пишет неверный пароль и тд.);
 * Пункт (RECOVERY) - Удаление слоев Swift Installer, его кеша и модуля Magisk (APK не удаляет, полезно если у вас с ним проблемы/bootloop/softloop и тд.);
-* Пункт (ALL) (\) - Режим удаления/replace/restore (список приложений будет пополнятся). Удаляйте/Затирайте что знаете, я разжёвывать не буду - <a href="https://4pda.to/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску (4PDA)</a>:
+* Пункт (ALL) (\\) - Режим удаления/replace/restore (список приложений будет пополнятся). Удаляйте/Затирайте что знаете, я разжёвывать не буду - <a href="https://4pda.to/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску (4PDA)</a>:
 	- Если находит /system/bin/aiopfmdph/Replace.txt:
 	- Восстановить apk;
 		- Восстановить Apk с подтверждением каждого;
@@ -1669,7 +1669,7 @@
 
 <h3 align=center>AdBlock/Hosts</h3>
 
-* Пункт (ALL) (\) - Установка одного из пяти Hosts файлов:
+* Пункт (ALL) (\\) - Установка одного из пяти Hosts файлов:
 	- Пустой Hosts (Отключение блокировки);
 	- Hosts из AdAway (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts из LP от chelpa (67000+ строк) <a href="https://4pda.to/forum/index.php?s=&showtopic=298302&view=findpost&p=10727871">4PDA</a>;
@@ -1680,7 +1680,7 @@
 
 * Пункт (ALL & SNAP/SM/SDM) <a href="https://github.com/Magisk-Modules-Repo/optmizedgpsconf">GITHUB (ссылка мертва)</a> - Установка Global Optimized GPS (добавляет оптимизированные строки в gps.conf (поддержку CN оставил));
 * Пункт (MAGISK) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - Установка TTL Fix;
-* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=104647697">4PDA</a - Установка Network Tweak - альтернативный DNS-сервер от Google или CloudFlare:
+* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=104647697">4PDA</a> - Установка Network Tweak - альтернативный DNS-сервер от Google или CloudFlare:
 	- Google и CloudFlare DNS;
 	- По отдельности:
 		- Google DNS;
@@ -1691,26 +1691,26 @@
 <h3 align=center>Utilities: BB/ZSigner/SELC/ASTE/CC</h3>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - Установка Busybox с активацией симлинков (для bin или xbin);
-* Пункт (ALL) (TERMINAL) <a href="https://4pda.to/forum/index.php?act=findpost&pid=105625918&anchor=Spoil-105625918-1">4PDA</a || <a href="https://github.com/Magisk-Modules-Repo/zipsigner">GITHUB</a> || <a href="https://forum.xda-developers.com/showthread.php?t=2239421&__cf_chl_jschl_tk__=4984b5a76074a8f92f17c55fee2071aa1574e768-1594480192-0-ATXVAJgNEEJLDRbUbS3P4jRknd7-87y5tw9mUcw2j7kUIuWKvH37sHd2Oyii9vwlK2Q9DPkZkpv-x5cOt_BLvYCk_tL_4nAeUjS0UMBrPyLD8Kc7hA0joixn6aAvHGrSnlYn4KjFKCmnrf6zX1uAo53Kbs-REH3waSfoI1Zdsj8sEIXmA5bsgRPuqirEXvB2T9TXYtt61Y4smtb2beJ3NxoXAjdZTM9G3VB89h8FhEmzdGycuafim2fS9tLKWCHlZoaiKtlGe2cEy7wU8j-RVJen3l91-_jFZdClbNRogoIy2U92RkejzrXO81FV-pANEp-8-Qe6YkXevo564gBm_ChO0TxyJEbMI9YoZLRlM5Av">XDA</a> - Установка ZipSigner и aapt;
+* Пункт (ALL) (TERMINAL) <a href="https://4pda.to/forum/index.php?act=findpost&pid=105625918&anchor=Spoil-105625918-1">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/zipsigner">GITHUB</a> || <a href="https://forum.xda-developers.com/showthread.php?t=2239421&__cf_chl_jschl_tk__=4984b5a76074a8f92f17c55fee2071aa1574e768-1594480192-0-ATXVAJgNEEJLDRbUbS3P4jRknd7-87y5tw9mUcw2j7kUIuWKvH37sHd2Oyii9vwlK2Q9DPkZkpv-x5cOt_BLvYCk_tL_4nAeUjS0UMBrPyLD8Kc7hA0joixn6aAvHGrSnlYn4KjFKCmnrf6zX1uAo53Kbs-REH3waSfoI1Zdsj8sEIXmA5bsgRPuqirEXvB2T9TXYtt61Y4smtb2beJ3NxoXAjdZTM9G3VB89h8FhEmzdGycuafim2fS9tLKWCHlZoaiKtlGe2cEy7wU8j-RVJen3l91-_jFZdClbNRogoIy2U92RkejzrXO81FV-pANEp-8-Qe6YkXevo564gBm_ChO0TxyJEbMI9YoZLRlM5Av">XDA</a> - Установка ZipSigner и aapt;
 * Пункт (MAGISK) - Установка патча SeLinux Changer - что бы ViperFX и подобные аудиомодули нормально работали:
 	- Переключить в Permissive;
 	- Переключить в Enforcing;
-* Пункт (MAGISK) (<11) (TERMINAL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a || <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);
+* Пункт (MAGISK) (<11) (TERMINAL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - Установка App Systemizer (Terminal Emulator);
 * Пункт (ALL) (TERMINAL) - Установка Cache Cleaner - микро аналог SdMaid через терминал - удаляет все пустые папки в /sdcard и подкаталогах, а так же некоторые не нужные временные папки с кешем и тд. (нужно в терминале написать su; CC);
 * Пункт (MAGISK MANAGER) (TERMINAL) - Установка Detach:
 	- Detach <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=78599318">4PDA</a>;
 	- Detach3 <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103999905">4PDA</a>;
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - Установка ISQLite3 - необходим для некоторых модулей;
-* Пункт (MAGISK) (RECOVERY TERMINAL)<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a || <a href="https://github.com/Rikj000/mm">GITHUB</a> || <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;
+* Пункт (MAGISK) (RECOVERY TERMINAL)<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a> || <a href="https://github.com/Rikj000/mm">GITHUB</a> || <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - Установка Magisk Manager For Recovery Mode - для более удобного управления модулями;
 
 <h3 align=center>Other: DFO/STZD/DDVFE/FA/SBU</h3>
 
 * Пункт (9-10) - Фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в RECOVERY, или принудительное отключение HIDE на GMS который не влияет на GPay:
 	- Перенос оверлеев (RECOVERY);
 	- UnHide Method (MAGISK); 
-* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76267303">4PDA</a || <a href="https://github.com/Magisk-Modules-Repo/Systemless_TZData">GITHUB</a> - Установка Systemless TZData - для обновления на не обновляемых tzdata в древних прошивках;
+* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76267303">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/Systemless_TZData">GITHUB</a> - Установка Systemless TZData - для обновления на не обновляемых tzdata в древних прошивках;
 * Пункт (RECOVERY) <a href="https://github.com/Zackptg5/Disable_Dm-Verity_ForceEncrypt">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389/post77091359">XDA</a> - Установка Disable Dm Verity Force Encrypt из под своего бинирника;
-* Пункт (ALL) (\) - Установка Fingerprint Actions Mod для многих прошивок с выборами (выбор появляется только если в телефоне есть сканер отпечатка пальца):
+* Пункт (ALL) (\\) - Установка Fingerprint Actions Mod для многих прошивок с выборами (выбор появляется только если в телефоне есть сканер отпечатка пальца):
 	- Кнопка Включения;
 	- Включение экрана;
 	- Перейти на главный экран;
@@ -1736,14 +1736,14 @@
 
 <h3 align=center>SafetyNet/MHPC/GPay</h3>
 
-* Пункт (MAGISK) (\) <a href="https://4pda.to/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - Установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;
+* Пункт (MAGISK) (\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - Установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;
 	- 1-й SafetyNet патч;
 	- 2-й SafetyNet патч <a href="https://forum.xda-developers.com/t/module-safetypatcher.3809879/">XDA</a>;
 	- 3-й SafetyNet патч (7-12) (Riru Core) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> || <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
 * Пункт (ALL) (10-12) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro (уехал кстати) будет называться BASIC);
 * Пункт (ALL) Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;
 * Пункт (MAGISK) <a href="<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config;
-* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
+* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a> || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
 
 <h3 align=center>Riru/Edx/LS/Posed/Mudules</h3>
 
@@ -1772,7 +1772,7 @@
 * Пункт (MAGISK) (11-12) - Установка Enabling Hidden Api Policy - снимает ограничения Google на некоторые классы приложений - нужен для некоторых аудиомодулей;
 * Пункт (MAGISK) (<9) - Установка Force Install Apps From Unknown Sources - принудительно включение пункта в разделе безопасности на установку из неизвестных источников;
 * Пункт (ALL) - Установка BuildProp Tweaks - Общие твики не влияющие особо на производительность или энергосбережения (видео в 4К, и всякие твики по мелочи);
-* Пункт (ALL) (|\) - Установка Kill Logger - отключает и убивает многие процессы/бинарники сбора логов:
+* Пункт (ALL) (|\\) - Установка Kill Logger - отключает и убивает многие процессы/бинарники сбора логов:
 	- Оставить возможность снимать logcat или нет;
 	- Оставить возможность использовать dumpsys или нет;
 * Пункт (MAGISK) - Установка Force 4X MSAA - включает 4X MSAA в настройках разработчика после перезагрузки;
@@ -1783,7 +1783,7 @@
 * Пункт (MAGISK) - Установка Force Disabling Play Protect - принудительное отключение Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
 * Пункт (MAGISK) - Установка Force Idle - принудительное включение ожидания/простоя;
 * Пункт (MAGISK) - Установка фикса (полного отключения) индикатора заряда/уведомлений;
-* Пункт (MAGISK) (\) - Установка Start LEDLight Animation - при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет) (на Mi8 прикольно вариант Only LED выглядит - он и рекомендуется):
+* Пункт (MAGISK) (\\) - Установка Start LEDLight Animation - при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет) (на Mi8 прикольно вариант Only LED выглядит - он и рекомендуется):
 	- Тестировать анимации (после этого выбора на каждой анимации будет выбор, выбрать её или нет. После будет тест её и после теста дан выбор: шить или показать следующие анимации и так до конца);
 	- Прошивка без тестирования анимаций (если вы знаете что вам уже нравится);
 		- Только светодиод;
@@ -1796,7 +1796,7 @@
 * Пункт (MAGISK) (6-12) (TERMINAL) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - Установка Universal GMS Doze;
 * Пункт (MAGISK MANAGER & Universal GMS Doze) - Проверка работы/оптимизации Universal GMS Doze;
 * Пункт (ALL) - Установка Unlimited Storage Google Photos - кто знает зачем он нужен - тот знает - работает как есть;
-* Пункт (MAGISK) (\) - Установка Animation Scale - принудительно выставляет анимацию:
+* Пункт (MAGISK) (\\) - Установка Animation Scale - принудительно выставляет анимацию:
 	- Значение 0.0;
 	- Значение 0.1;
 	- Значение 0.2;
@@ -1809,7 +1809,7 @@
 	- Значение 0.9;
 	- Значение 1.0 (В основном сток);
 * Пункт (ALL) (10-12) - Установка GPU Rendering - если нет переключателя в настройках для разработчика. Переключает принудительно настройки графического рендеринга: OpenGL (По умолчанию), OpenGL Skia (более быстрее чем OpenGL), OpenGL Skia Vulkan (самый быстрый вариант но с возможными артефактами);
-* Пункт (ALL) (\) (//) - Установка патча на изменение шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов, громкость будильника:
+* Пункт (ALL) (\\) (//) - Установка патча на изменение шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов, громкость будильника:
 	- Редактировать доступные значения вместе;
 	- Редактировать каждое значение отдельно;
 		- Значение 10;
@@ -2072,8 +2072,8 @@
 	- LEGACYMODE: Включает показ старых/устаревших патчей/функций.
 	- EVENTSMODE: Включает поздравительные ивенты (почти как в Terraria).
 * All - Установка патчей из под MM или RECOVERY и/или как модуль Magisk так и нет.
-* (\) - Означает что в этом пункте есть возможность выхода из подпунктов к следующему выбору.
-* (|\) - Означает что в этом пункте есть возможность пропустить подпункты, но установка основного патча будет произведена.
+* (\\) - Означает что в этом пункте есть возможность выхода из подпунктов к следующему выбору.
+* (|\\) - Означает что в этом пункте есть возможность пропустить подпункты, но установка основного патча будет произведена.
 * (|) - Означает что следующий выбор будет в этом подпункте пункта.
 * (/) - Означает что следующий выбор будет последним в этом подпункте пункта с возможность выхода из него и ничего не прошивая.
 * (//) - Если не выбирать этот пункт, будет выход/завершение работы патча.
