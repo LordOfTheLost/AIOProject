@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 25.10.21 (59) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.10.2021/AIOPFMD-25.10.21-%2859%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/172OO2ffO4M7nfa7tZKVooQB3vrNmEtSg/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/58">TG</a>
+* Версия AIOPFMD: 26.10.21 (60) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/26.10.2021/AIOPFMD-26.10.21-%2860%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1JCfuoItoP9bl74dD5VYAv4tht_YtTBJX/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/59">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -31,6 +31,15 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 26.10.21 (60) ####
+* Lawnchair S обновлен до 12 Alpha 2 - обновлен до v1.6;
+* Убран показ установки Lawnchair R на 12ке;
+* hosts файл с AdAway обновлен от 25.10.2021;
+* MagiskHide Props Config обновлен до v6.1.1-v135;
+* Cache Cleaner обновлен до v2.2 - фикс пунктов в терминале;
+* NLSound обновлен до v3.0 STABLE;
+* GBoard Themes обновлен до v1.2 - оставил только MD2 темы с генерацией из под патча;
+* Прочие мелкие фиксы.
 #### 25.10.21 (59) ####
 * Минимальная версия Magisk выставлена и теперь рекомендуется 24+ (23010+) (И ЭТО УГРОЗА);
 * KillLogger обновлен до v1.4 - только цифры;
@@ -80,7 +89,7 @@
 * Pixel Launcher для 12ки не добавлял потому-что он на 12ке вылетает (блядь что за бред);
 * Проверена работа на 12ке, почти все работает как и на пред версиях Android. Но есть что фиксить;
 * Riru Core обновлен до v26.1.3.r513.8e95115fd4;
-* MagiskHide Props Config Обновлен до v6.1.0-v134.
+* MagiskHide Props Config Обновлен до v6.1.0-v134;
 * Листы приложений теперь общие для всего где они используются;
 * В Режим удаления/replace/restore добавлены приложения в обычный лист: StatusBarLyricExt и AncientClockWidget. Лист лаунчеров RevengeLauncherQuickStep;
 * hosts файл с AdAway обновлен от 10.09.2021;
@@ -915,7 +924,7 @@
 	- Значение 40;
 	- Значение 45;
 	- Значение 50;
-* Пункт (ALL) - Установка Gboard Themes в MD2 и разными цветами и видами;
+* Пункт (ALL) - Установка Gboard Themes в MD2 и разными цветами;
 * Пункт (ALL) <a href="https://github.com/nitanmarcel/Silky-Gboard">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-silky-gboard.4284323/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108108447">4PDA</a> - Установка GBoard Silk Theme Enabler - активирует новый дизайн из 12ки;
 * Пункт (ALL) (9-12) (\\) - Установка Status Bar Increase Number Notification Icons для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
 	- 4 иконки;

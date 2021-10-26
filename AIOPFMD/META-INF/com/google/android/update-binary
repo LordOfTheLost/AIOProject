@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="25.10.21 (59)"
+VAIOPFMD="26.10.21 (60)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -20,7 +20,7 @@ IDPSHNB="ShowHideNavigationBar"; VIPPSHNB="v1.0"
 IDBGDS="BackGestureDisabler"; VIPBGD="v1.0"
 IDGBNBS="GboardNavBarSpacing"; VIPGBNBS="v1.2"
 IDGBRC="GBoardRoundedCorners"; VIPGBRC="v1.1"
-IDGBT="GBoardThemes"; VIPGBT="v1.1"
+IDGBT="GBoardThemes"; VIPGBT="v1.2"
 IDGBSTE="gboard-silk-theme"; VIPGBSTE="v0.4"; VCIPGBSTE="04"
 IDSBINNI="SBINNI"; VIPSBINNI="v1.7"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
@@ -42,7 +42,7 @@ IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 #Apps: GFU/GSF/SL/ASUSS/IA
 IDGFUL="FaceLock"; VIPGFUL="v1.0"
 IDGSF="GSF"; VIPGSF="v1.0"
-IDSL="Systemless_Lawnchair"; VIPSL="v1.5"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6.1"; VIPASLS="12 Alpha 1"
+IDSL="Systemless_Lawnchair"; VIPSL="v1.6"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6.1"; VIPASLS="12 Alpha 2"
 IDSOPL="Systemless_OPLauncher"; VIPSOPL="v6.2"; VCIPSOPL="30100"; VAIPSOPL="v5.1.0"
 IDSOUH="Systemless_OneUIHome"; VIPSOUHQ="v2.1"; VCIPSOUHQ="21"; VAIPSOUHQ="v11.0.50.67"; VIPSOUHR="v1.0"; VCIPSOUHR="1"; VAIPSOUHR="v12.1.07.19"
 IDSPL="Systemless_PixelLauncher"; VIPSPL="v1.0"; VIPASPLQ="v10 (703)"; VIPASPLR="v11 (825)"
@@ -57,7 +57,7 @@ IDVFXP="V4AFXPresets"; VIPVFXP="v1.3"
 IDJDSPM="ainur_jamesdsp"; VIPJDSPM="v4.2 (9-8-2021)"; VCIPJDSPM="82"
 IDDTSHPX="DTS_HPX"; VIPDTSHPX="zenz"; VCIPDTSHPX="58"
 IDAN="ainur_narsil"; VIPAN="MK I (09.09.2021)"; VCIPAN="52"
-IDNLS="NLSound"; VIPNLS="v3.0 BETA"; VCIPNLS="7"
+IDNLS="NLSound"; VIPNLS="v3.0 STABLE"; VCIPNLS="7"
 IDAIST="AIST"; VIPAIST="v1.1"; VCIPAIST="12"
 IDSAQ="systemaudioquality2"; VIPSAQ="2.0"; VCIPSAQ="2"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.0"
@@ -66,8 +66,8 @@ IDACP="acp"; VIPACP="v2.3"; VCIPACP="37"
 IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="17.10.2021"
-IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.7.6"; VCIPLPH="1736"
+IDVAAH="AdAwayHosts"; VIPVAAH="25.10.2021"
+IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.7.7"; VCIPLPH="1737"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v16.9-210829"; VCIPVSH="169"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/TTL/DNS/WB/USBTF
@@ -81,7 +81,7 @@ IDBB="busybox-brutal"; VIPBB="v1.34.0.1"; VCIPBB="13401"
 IDZSAAPT="zipsigner"; VIPZSAAPT="3.0" VCIPZSAAPT="3016"
 IDSELC="SeLinuxChanger"; VIPSELC="v1.3"
 IDASTE="terminal_systemizer"; VIPASTE="v17.3.1"; VCIPASTE="70"
-IDCC="CacheCleaner"; VIPCC="v2.1"
+IDCC="CacheCleaner"; VIPCC="v2.2"
 IDDETACH="Detach"; VIPDETACH="v5.3"; VCIPDETACH="530"
 IDDETACH3="detach3"; VIPDETACH3="v3.08"; VCIPDETACH3="308"
 IDSQL3="73sydney.sqlite3"; VIPSQL3="v1.0"; VCIPSQL3="1"
@@ -97,7 +97,7 @@ IDSNP="petnoires-safetyspoofer"; VIPSNP="v1-beta2"; VCIPSNP="16"
 IDSNPA="safetypatcher"; VIPSNPA="v3"; VCIPSNPA="5"
 IDSNPAA="safetynet-fix"; VIPSNPAA="v2.1.1"; VCIPSNPAA="20101"
 IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
-IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.1.0-v134"; VCIPMHPC="73"
+IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.1.1-v135"; VCIPMHPC="74"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
@@ -1893,11 +1893,7 @@ PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX8 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "92"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RCV AMP PCM Gain"]' "20"
-PXMLNLS -s $MIX '/mixer/ctl[@name="AMP PCM Gain"]' "20"
-PXMLNLS -s $MIX '/mixer/ctl[@name="Class-H Head Room"]' "17"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RCV Class-H Head Room"]' "17";;
+PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92";;
 -aist) if $HIFI; then
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Digital Volume"]' "88"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Digital Volume"]' "88"
@@ -2833,7 +2829,7 @@ PXMLNLS -u $ACONF '/configs/property[@name="audio_extn_formats_enabled"]' "true"
 PXMLNLS -u $ACONF '/configs/property[@name="audio_extn_hdmi_spk_enabled"]' "true"
 PXMLNLS -u $ACONF '/configs/property[@name="use_xml_audio_policy_conf"]' "true"
 PXMLNLS -u $ACONF '/configs/property[@name="voice_concurrency"]' "false "
-PXMLNLS -u $ACONF '/configs/property[@name="afe_proxy_enabled"]' "true"
+PXMLNLS -u $ACONF '/configs/property[@name="afe_proxy_enabled"]' "false"
 PXMLNLS -u $ACONF '/configs/property[@name="compress_voip_enabled"]' "false"
 PXMLNLS -u $ACONF '/configs/property[@name="fm_power_opt"]' "true"
 PXMLNLS -u $ACONF '/configs/property[@name="record_play_concurrency"]' "false"
@@ -2853,15 +2849,6 @@ PXMLNLS -u $ACONF '/configs/property[@name="vorbis_offload_enabled"]' "true"
 PXMLNLS -u $ACONF '/configs/property[@name="wma_offload_enabled"]' "true"
 UIP "Files Found And Patched"
 done
-fi
-if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
-cp -f $FIRMWARE/* $MODPATH/$MODID$MIPSVF
-fi
-if [ "$POCOF1" ]; then
-cp -f $FIRMPOCOF1/* $MODPATH/$MODID$MIPSVF
-fi
-if [ "$MIA2" ]; then
-cp -f $FIRMRN7PRO/* $MODPATH/$MODID$MIPSVF
 fi
 }
 
@@ -2979,7 +2966,9 @@ PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX Format"]' "S24_3LE"
 PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
 PXMLNLS -u $MIX '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_3LE"
 else
+if [ $PATCH_MIXER_LITE != true ]; then
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX HPH Mode"]' "HD2"
+fi
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX HPH HD2 Mode"]' "On"
 PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX Format"]' "S24_LE"
 PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX Format"]' "S24_LE"
@@ -3016,7 +3005,7 @@ PXMLNLS -s $MIX '/mixer/ctl[@name="TFA987X_ALGO_STATUS"]' "ENABLE"
 PXMLNLS -s $MIX '/mixer/ctl[@name="TFA987X_TX_ENABLE"]' "ENABLE"
 PXMLNLS -s $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="SLIM_2_RX Format"]' "DSD_DOP"
 PXMLNLS -s $MIX '/mixer/ctl[@name="Ext Spk Boost"]' "ENABLE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="Boost Option"]' "BOOST_ON_FOREVER"
+PXMLNLS -s $MIX '/mixer/ctl[@name="Boost Option"]' "BOOST_ALWAYS"
 PXMLNLS -s $MIX '/mixer/ctl[@name="PowerCtrl"]' "0"
 fi
 UIP "Files Found And Patched"
@@ -3463,16 +3452,17 @@ persist.vendor.btstack.enable.swb=true
 persist.vendor.btstack.enable.swbpm=true
 persist.vendor.btstack.enable.lpa=false
 persist.vendor.btstack.avrcp.pos_time=1000
-persist.vendor.qcom.bluetooth.scram.enabled=false
-persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true 
-persist.vendor.qcom.bluetooth.enable.splita2dp=true 
-persist.vendor.qcom.bluetooth.twsp_state.enabled=false
-persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
-persist.vendor.qcom.bluetooth.enable.swb=true
 persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.bt.a2dp.addr_check_enabled_for_aac=true
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.scram.enabled=false
+persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.enable.splita2dp=true 
+persist.vendor.qcom.bluetooth.twsp_state.enabled=false
+persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
+persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
+persist.vendor.qcom.bluetooth.enable.swb=true
 persist.bluetooth.enabledelayreports=true
 persist.bluetooth.sbc_hd_higher_bitrate=1
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true" >> $MODPATH/$MODID/system.prop
@@ -3564,7 +3554,7 @@ if $FINDAIOPFMDA; then
 MMUPD_CHECKER "$IDGFUL" "$VIPGFUL" "IPGFULS"
 MMUPD_CHECKER "$IDGSF" "$VIPGSF" "IPGSFS"
 fi
-if $ATEN || $AELEVEN  || $ATWELVE; then MMUPD_CHECKER "$IDSL" "$VIPSL" "IPSLS"; fi
+MMUPD_CHECKER "$IDSL" "$VIPSL" "IPSLS"
 MMUPD_CHECKER -c "$IDSOPL" "$VIPSOPL" "$VCIPSOPL" "IPSLS"
 if $ATEN && $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDSOUH" "$VIPSOUHQ" "$VCIPSOUHQ" "IPSLS"; fi
 if $AELEVEN && $FINDAIOPFMDA; then MMUPD_CHECKER -c "$IDSOUH" "$VIPSOUHR" "$VCIPSOUHR" "IPSLS"; fi
@@ -4078,15 +4068,47 @@ UCSA "Install GBoard Themes $VIPGBT?" "" "$MSGNUS" "IPGBTS"
 IPGBTS() {
 UIP "Installing GBoard Themes $IAMM"
 UZTPN "GBoardThemes"
+mkdir -p $TMPDIR/GBoardThemes/Compile $TMPDIR/GBoardThemes/gboard_theme
+for f in "1A73E8" "B31818" "1ED760" "FFA842" "FF8055" "A86BD5" "FF4151" "5E97F6" "47AE84"; do
+for s  in MD2B MD2D MD2W; do
+case $s in
+"MD2B") g="md2b";;
+"MD2D") g="md2d";;
+"MD2W") g="md2w";;
+esac
+case $f in
+"1A73E8") n="reznya";;
+"B31818") n="zelat";;
+"1ED760") n="hertin";;
+"FFA842") n="zlup";;
+"FF8055") n="caton";;
+"A86BD5") n="gish";;
+"FF4151") n="odib";;
+"5E97F6") n="genha";;
+"47AE84") n="fulih";;
+esac
+cp -rf  $TMPDIR/GBoardThemes/$s/* $TMPDIR/GBoardThemes/Compile
+sed -i "s/#ACCENTA/#$f/g" $TMPDIR/GBoardThemes/Compile/style_sheet_md2.css
+sed -i "s/#ACCENP/#$f\E0/g" $TMPDIR/GBoardThemes/Compile/style_sheet_md2.css
+sed -i "s/#ACCENT/#$f\FF/g" $TMPDIR/GBoardThemes/Compile/style_sheet_md2.css
+sed -i "s/#ACCENT/#$f\FF/g" $TMPDIR/GBoardThemes/Compile/style_sheet_md2_border.css
+sed -i "s/#ID/$g$n/g" $TMPDIR/GBoardThemes/Compile/metadata.json
+sed -i "s/#NAME/$g$n/g" $TMPDIR/GBoardThemes/Compile/metadata.json
+cd $TMPDIR/GBoardThemes/Compile
+$ZIPPACKER -r -0 $TMPDIR/GBoardThemes/Compile * >/dev/null
+mv $TMPDIR/GBoardThemes/Compile.zip $TMPDIR/GBoardThemes/gboard_theme/$s-$f.zip
+done
+done
 if $MAGISK; then
 MODID="$IDGBT"; REMOVER -mm "$MODID"
-cp -rf $TMPDIR/$MODID $MODPATH
+mkdir -p $MODPATH/$MODID$MIPSE
+cp -rf $TMPDIR/GBoardThemes/gboard_theme $MODPATH/$MODID$MIPSE
 echo -e "ro.com.google.ime.theme_file=MD2BlackBlue.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" > $MODPATH/$MODID/system.prop
 MMPR -v "GBoard Themes" "$VIPGBT" "GBoard Themes $MSGFMM"; SET_PERM_RM
 else
 BUILD_PROP_BACKUP
 echo -e "\n# GBoard Themes\nro.com.google.ime.theme_file=MD2BlackBlue.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" >> $IPSBP
-cp -rf $TMPDIR/GBoardThemes$MIPSE/gboard_theme $IPSE
+cp -rf $TMPDIR/GBoardThemes/gboard_theme $IPSE
 SET_PERM_R $IPSE/gboard_theme 0 0 0755 0644
 fi
 UIP "$MSGDI"
@@ -4808,18 +4830,22 @@ IPSLS() {
 LAWNCHAIR=false
 UZTPN "QSRP" &
 SYSTEMLESSLAUNCHERS=false
-if $ATEN || $AELEVEN || $ATWELVE; then
 if $ATEN; then
 UIP -d "Сhoose Launcher" "Lawnchair $VIPASLQ - $VIPSL" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
 LAWNCHAIR=true
 fi
-elif $AELEVEN || $ATWELVE; then
+elif $AELEVEN; then
 UIP -d "Install Lawnchair $VIPASLR Or $VIPASLS?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
 LAWNCHAIR=true
 UIP -d "Сhoose Launcher" "$MSGVU Lawnchair $VIPASLR - $VIPSL" "$MSGVD Lawnchair $VIPASLS - $VIPSL"
 if $KEYFUNCTION; then OAPI=R; else OAPI=S; fi
+fi
+elif $ATWELVE; then
+UIP -d "Install Lawnchair $VIPASLS?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+LAWNCHAIR=true; OAPI=S
 fi
 fi
 if $LAWNCHAIR; then
@@ -4836,11 +4862,10 @@ cp -rf $TMPDIR/$MODID $MODPATH
 MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly Install Lawnchair On Your Device With Android 10-12 Recents UI Support"
 fi
 fi
-fi
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
 SYSTEMLESSLAUNCHERS=false
 MSGDELIMITER
-UIP "OPLauncher $VAIPSOPL - $VIPSOPL" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP "OPLauncher $VAIPSOPL - $VIPSOPL" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
 UIP "Installing OPLauncher $IAMM"
 SYSTEMLESSLAUNCHERS=true
@@ -4911,9 +4936,9 @@ if $ATEN || $AELEVEN; then
 SYSTEMLESSLAUNCHERS=false
 MSGDELIMITER
 if $ATEN; then
-UIP "ShadyLauncher $VIPSSLQ" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP "ShadyLauncher $VIPSSLQ" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 elif $AELEVEN; then
-UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 fi
 if $KEYFUNCTION; then
 UIP "Installing ShadyLauncher $IAMM"
@@ -5554,7 +5579,7 @@ fi
 IPNLSS() {
 UIP "Installing NLSound $IAMM"
 if $HIFI; then UIP "Device With Support Hi-Fi"; else UIP "Device Without Support Hi-Fi"; fi
-FIRMRN7PRO=$TMPDIR/NLSound/firmrn7pro; FIRMWARE=$TMPDIR/NLSound/firmware; NEWDIRAC=$TMPDIR/NLSound/newdirac; FIRMPOCOF1=$TMPDIR/NLSound/firmpocof1
+NEWDIRAC=$TMPDIR/NLSound/newdirac
 STEP1=false; STEP2=false; STEP3=false; STEP4=false; STEP5=false; STEP6=false; STEP7=false; STEP8=false; STEP9=false; STEP10=false; STEP11=false; STEP12=false; STEP13=false; STEP14=false; PATCH_MIXER_LITE=false; PATCHMC=false
 if FINDER "$ACXML"; then
 UIP -d "Disable Deep Buffer?" "This Option Disable Deep Buffer In Your Device" "If You Want More Low Frequencies Skip This Option" "$MSGVU Yes" "$MSGVD No $MSGNIS"
@@ -5613,9 +5638,8 @@ fi
 MAGISKMIRROR_CHECKER
 UZTPN "NLSound"
 MODID="$IDNLS"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID$MIPSVF
+mkdir -p $MODPATH/$MODID
 MMPR -vcs "NLSound" "$VIPNLS" "$VCIPNLS" "NLSound Team" "This module globally improves audio quality when recording video/audio and listening to audio on your device." "support=https://t.me/nlsound_support"
-cp -f $TMPDIR/NLSound/tfa9894.cnt $MODPATH/$MODID$MIPSVF
 echo "#!$MIPSB/sh
 MOUNT=/data; MODDIR=\${0%/*}
 FILE1=\$(find /sys/module -name high_perf_mode)
@@ -5682,11 +5706,11 @@ vendor.audio.tunnel.encode=true
 tunnel.audio.encode=true
 qc.tunnel.audio.encode=true
 audio.decoder_override_check=true
-use.non-omx.mp3.decoder=false
-use.non-omx.aac.decoder=false
-vendor.media.omx=0
 mpq.audio.decode=true
 audio.nat.codec.enabled=1
+use.non-omx.mp3.decoder=false
+use.non-omx.aac.decoder=false
+use.non-omx.flac.decoder=false
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
 media.stagefright.enable-aac=true
@@ -5733,7 +5757,6 @@ vendor.audio.feature.kpi_optimize.enable=true
 vendor.audio.feature.power_mode.enable=true 
 vendor.audio.feature.compress_meta_data.enable=false
 vendor.audio.feature.compr_cap.enable=false
-vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.ssrec.enable=true
 vendor.audio.feature.dynamic_ecns.enable=true
 vendor.audio.feature.concurrent_capture.enable=true
@@ -5751,25 +5774,29 @@ persist.vendor.audio.hifi.int_codec=true
 effect.reverb.pcm=1
 vendor.audio.safx.pbe.enabled=true
 vendor.audio.soundfx.usb=false
+vendor.audio.keep_alive.disabled=false
+vendor.audio.pp.asphere.enabled=true
 ro.vendor.audio.3d.audio.support=true
-ro.vendor.audio.soundfx.type=dirac
 ro.vendor.audio.sfx.speaker=false
 ro.vendor.audio.sfx.earadj=false
+ro.vendor.audio.sfx.audiovisual=false
+ro.vendor.audio.sfx.independentequalizer=false
 ro.vendor.audio.surround.support=true
 ro.vendor.audio.scenario.support=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
-ro.vendor.audio.xiaoaitongxue.aec=true
 persist.vendor.audio.ambisonic.capture=true
 persist.vendor.audio.ambisonic.auto.profile=true
 persist.vendor.audio.misound.disable=true
-ro.vendor.audio.afe.record=true
+vendor.audio.hdr.record.enable=true
+vendor.audio.3daudio.record.enable=true
 ro.vendor.audio.sdk.ssr=false
 ro.vendor.audio.recording.hd=true
 ro.ril.enable.amr.wideband=1
 persist.audio.lowlatency.rec=true
 ro.vendor.audio.game.mode=true
+ro.vendor.audio.game.vibrate=true
 ro.audio.soundtrigger.lowpower=false
 vendor.power.pasr.enabled=true
 vendor.audio.matrix.limiter.enable=0
@@ -8960,10 +8987,8 @@ SET_PERM_RM -msgdi
 }
 
 IPASTE() {
-if $MAGISK; then
-if [ $AELEVEN != true ] || [ $ATWELVE != true ]; then
+if $MAGISK && [ $ASDK -le 29 ]; then
 UCSA "Install App Systemizer (TE) $VIPASTE?" "" "$MSGNUS" "IPASTES"
-fi
 fi
 }
 
@@ -10006,7 +10031,7 @@ e) Remove Empty Files/Folders
 l) Remove Logs
 t) Remove VMDLTMP & Trash TrichromeLibrary\"
 if \$MMB; then echo -e \"\nm) Remove All Magisk Backup\"; fi
-echo \"r) Reboot Device
+echo \"\nr) Reboot Device
 q) Quit
 $MSGDELIMITER
 ?)\"
