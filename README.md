@@ -30,6 +30,7 @@
 
 <details> 
   <summary>Changelog</summary>
+
 #### 31.10.21 (61) ####
 * hosts файл с AdAway обновлен от 28.10.2021;
 * LSPosed для Riru и ZYGISK обновлен до 1.6.2 (6185);
