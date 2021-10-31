@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="26.10.21 (60)"
+VAIOPFMD="31.10.21 (61)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -13,7 +13,7 @@ POSTFSDATAD="$NVBASE/post-fs-data.d"
 
 { #Version Or Date Of Patches In This Patch
 #UI: Pills/NavBar/Gboard/Themes/BA/Sounds
-IDPO="Pills"; VIPPO="v1.9"
+IDPO="Pills"; VIPPO="v2.0"
 IDPCO="PillsColors"; VIPPCO="v1.4"
 IDPHOS="PillsHeight"; VIPPHO="v1.4"
 IDPSHNB="ShowHideNavigationBar"; VIPPSHNB="v1.0"
@@ -66,7 +66,7 @@ IDACP="acp"; VIPACP="v2.3"; VCIPACP="37"
 IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="25.10.2021"
+IDVAAH="AdAwayHosts"; VIPVAAH="28.10.2021"
 IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.7.7"; VCIPLPH="1737"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v16.9-210829"; VCIPVSH="169"
 IDVOH="Hosts"; VIPVOH="v1.1"
@@ -97,14 +97,14 @@ IDSNP="petnoires-safetyspoofer"; VIPSNP="v1-beta2"; VCIPSNP="16"
 IDSNPA="safetypatcher"; VIPSNPA="v3"; VCIPSNPA="5"
 IDSNPAA="safetynet-fix"; VIPSNPAA="v2.1.1"; VCIPSNPAA="20101"
 IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
-IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.1.1-v135"; VCIPMHPC="74"
+IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.1.1-v136"; VCIPMHPC="74"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
 IDRIRU="riru-core"; VIPRIRU="v26.1.3.r513.8e95115fd4"; VCIPRIRU="513"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
-IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.6.2 (6180)"; VCIPLSPOSEDR="6180"
-IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.6.2 (6180)"; VCIPLSPOSEDZ="6180"
+IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.6.2 (6185)"; VCIPLSPOSEDR="6185"
+IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.6.2 (6185)"; VCIPLSPOSEDZ="6185"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
 IDRMH="riru_momohider"; VIPRMH="0.0.7"; VCIPRMH="7"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
@@ -1189,7 +1189,7 @@ else
 MAGISKFIRSTTIME=false; FINDMAGISK=false; MAGISK=false
 fi
 if $FINDMAGISK; then
-if [ $MAGISKVC -lt 23000 ]; then UIP "Found Old Magisk, Please Install Magisk v24+ (23010+)!"; ZYGISK=false
+if [ $MAGISKVC -lt 23000 ]; then UIP "Found Old Magisk, Please Install Magisk v24+ (23011+)!"; ZYGISK=false
 elif [ $MAGISKVC -ge 23010 ]; then ZYGISK=true
 fi
 fi
@@ -3760,8 +3760,9 @@ IPPO() {
 if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pills ]; then
 UIP -d "$MSGFI Pills, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
-UIP "Removing..."
-rm -f $IPPSO/PillsTransparent.apk $IPPSO/PillsNotTransparent.apk $IPPSO/PillsImmersive.apk $AIOPFMDPH/pills
+UIP "Restore Stock Gestures Overlay..."
+BUCKUPER -r "$IPPSO/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk $IPPSO/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk $IPPSO/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk $IPPSO/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk"
+rm -f $IPPSO/Pills.apk $AIOPFMDPH/pills
 UIP "$MSGDRM"
 fi
 else
@@ -3777,17 +3778,14 @@ IPPOS() {
 PILLHIDE=false
 UIP -d "Choose Variant Pills:" "$MSGVU Full Hide/Immersive" "$MSGVD More Other Variants"
 if $KEYFUNCTION; then
-PILLSHIDE=true; PFSGVFPX=true; POFSGC=true
+PILLSHIDE=true; PFSGVFPX=true; POFSGC=true; IMMERSIVE="0dip"; FRAME="0dip"; PILLSWIDTHSIZE="0dip"; PILLSFATSIZE="0dip"
 else
-if [ $AELEVEN != true ] && [ $ATWELVE != true ]; then
+FRAME="48dip"
 UIP -d "Transparent Variant:" "$MSGVU Transparent" "$MSGVD Not Transparent"
 if $KEYFUNCTION; then
-PFSGVT=true
+IMMERSIVE="0dip"
 else
-PFSGVT=false
-fi
-else
-PFSGVT=false
+IMMERSIVE="16dip"
 fi
 UIP -d "Choose Width Size:" "$MSGVU 4dip/8dip (Dot)" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
@@ -3844,29 +3842,29 @@ fi
 if $POFSGC && $PFSGVFPX; then
 UIP "Installing Pills $IAMM"
 UZTPN "Pills"
+MODID="$IDPO"
 if $MAGISK; then
-MODID="$IDPO"; REMOVER -mm "PillsOverlay HideNavBar HideGesBar HidePillsOverlay $MODID"
+REMOVER -mm "PillsOverlay HideNavBar HideGesBar HidePillsOverlay $MODID"
+REPLACER -f "NavigationBarModeGesturalWideBack NavigationBarModeGesturalNarrowBack NavigationBarModeGesturalExtraWideBack NavigationBarModeGestural"
 mkdir -p $MODPATH/$MODID$MIPPSO
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlayWideBack-$IMMERSIVE-$FRAME-32dip.apk $MODPATH/$MODID$MIPPSO
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlayNarrowBack-$IMMERSIVE-$FRAME-18dip.apk $MODPATH/$MODID$MIPPSO
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlayExtraWideBack-$IMMERSIVE-$FRAME-40dip.apk $MODPATH/$MODID$MIPPSO
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlay-$IMMERSIVE-$FRAME-24dip.apk $MODPATH/$MODID$MIPPSO
+cp -f $TMPDIR/$MODID/Pills-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk $MODPATH/$MODID$MIPPSO
 if $PILLSHIDE; then
-cp -f $TMPDIR/$MODID/PillsImmersive.apk $MODPATH/$MODID$MIPPSO
 MMPR -v "Pills" "$VIPPO" "Pills $MSGFMM - Full Hide/Immersive"
 else
-cp -f $TMPDIR/$MODID/PillsNotTransparent-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk $MODPATH/$MODID$MIPPSO
-if $PFSGVT; then
-cp -f $TMPDIR/$MODID/PillsTransparent-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk $MODPATH/$MODID$MIPPSO
-fi
 MMPR -v "Pills" "$VIPPO" "Pills $MSGFMM - Size $PILLSFATSIZE/$PILLSWIDTHSIZE"
 fi
 SET_PERM_RM
 else
-if $PILLSHIDE; then
-cp -f $TMPDIR/$MODID/PillsImmersive.apk $IPPSO
-else
-cp -f $TMPDIR/Pills/PillsNotTransparent-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk $IPPSO/PillsNotTransparent.apk
-if $PFSGVT; then
-cp -f $TMPDIR/Pills/PillsTransparent-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk $IPPSO/PillsTransparent.apk
-fi
-fi
+BUCKUPER -s "$IPPSO/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk $IPPSO/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk $IPPSO/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk $IPPSO/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk"
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlayWideBack-$IMMERSIVE-$FRAME-32dip.apk $IPPSO/NavigationBarModeGesturalWideBack/NavigationBarModeGesturalOverlayWideBack.apk
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlayNarrowBack-$IMMERSIVE-$FRAME-18dip.apk $IPPSO/NavigationBarModeGesturalNarrowBack/NavigationBarModeGesturalOverlayNarrowBack.apk
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlayExtraWideBack-$IMMERSIVE-$FRAME-40dip.apk $IPPSO/NavigationBarModeGesturalExtraWideBack/NavigationBarModeGesturalOverlayExtraWideBack.apk
+cp -f $TMPDIR/$MODID/NavigationBarModeGesturalOverlay-$IMMERSIVE-$FRAME-24dip.apk $IPPSO/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk
+cp -f $TMPDIR/$MODID/Pills-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk $IPPSO/Pills.apk
 touch $AIOPFMDPH/pills
 fi
 UIP "$MSGDI"
@@ -7568,13 +7566,49 @@ PillsOverlayCS() {
 
 for PILLSFATSIZE in "0dip" "1dip" "2dip" "3dip" "4dip"; do
 for PILLSWIDTHSIZE in "0dip" "60dip" "120dip" "180dip" "240dip" "300dip" "8dip"; do
-OPTO="$STORAGE/AIOCOMPILE/Pills/PillsTransparent"
-OPNTO="$STORAGE/AIOCOMPILE/Pills/PillsNotTransparent"
+OPTO="$STORAGE/AIOCOMPILE/Pills/Pills"
 mkdir -p $OPTO/res/values $OPNTO/res/values
-echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.pills.transparent\">
-	<overlay android:category=\"com.android.internal.navigation_bar_mode\" android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\"/>
-	<application android:hasCode=\"false\" android:label=\"Pills Transparent - $PILLSFATSIZE/$PILLSWIDTHSIZE\"/>
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.pills\">
+	<overlay android:category=\"com.android.internal.navigation_bar_mode\" android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+	<application android:hasCode=\"false\" android:label=\"Pills - $PILLSFATSIZE/$PILLSWIDTHSIZE\"/>
 </manifest>" > $OPTO/AndroidManifest.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<dimen name=\"navigation_handle_radius\">$PILLSFATSIZE</dimen>
+	<dimen name=\"navigation_home_handle_width\">$PILLSWIDTHSIZE</dimen>
+</resources>" > $OPTO/res/values/dimens.xml
+
+APKBUILDER "$OPTO" "$OPTO-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk"
+done
+done
+
+for HIDE in "0dip" "16dip"; do
+for FRAME in "0dip" "48dip"; do
+NBMGO="$STORAGE/AIOCOMPILE/Pills/NavigationBarModeGesturalOverlay"
+NBMGOEWB="$STORAGE/AIOCOMPILE/Pills/NavigationBarModeGesturalOverlayExtraWideBack"
+NBMGONB="$STORAGE/AIOCOMPILE/Pills/NavigationBarModeGesturalOverlayNarrowBack"
+NBMGOWB="$STORAGE/AIOCOMPILE/Pills/NavigationBarModeGesturalOverlayWideBack"
+mkdir -p $NBMGO/res/values $NBMGOEWB/res/values $NBMGONB/res/values $NBMGOWB/res/values
+
+for PNNBMGO in "com.android.internal.systemui.navbar.gestural" "com.android.internal.systemui.navbar.gestural_extra_wide_back" "com.android.internal.systemui.navbar.gestural_narrow_back" "com.android.internal.systemui.navbar.gestural_wide_back"; do
+case $PNNBMGO in
+"com.android.internal.systemui.navbar.gestural") NAME=$NBMGO;;
+"com.android.internal.systemui.navbar.gestural_extra_wide_back") NAME=$NBMGOEWB;;
+"com.android.internal.systemui.navbar.gestural_narrow_back") NAME=$NBMGONB;;
+"com.android.internal.systemui.navbar.gestural_wide_back") NAME=$NBMGOWB;;
+esac
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"$PNNBMGO\">
+	<overlay android:category=\"com.android.internal.navigation_bar_mode\" android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\"/>
+	<application android:hasCode=\"false\" android:label=\"Gestural Navigation Bar\"/>
+</manifest>" > $NAME/AndroidManifest.xml
+done
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<integer name=\"config_navBarInteractionMode\">2</integer>
+	<integer name=\"config_navBarOpacityMode\">2</integer>
+</resources>" | tee $NBMGO/res/values/integers.xml $NBMGOEWB/res/values/integers.xml $NBMGONB/res/values/integers.xml $NBMGOWB/res/values/integers.xml > /dev/null
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
@@ -7583,56 +7617,28 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 	<bool name=\"config_navBarCanMove\">false</bool>
 	<bool name=\"config_navBarNeedsScrim\">false</bool>
 	<bool name=\"config_navBarTapThrough\">true</bool>
-</resources>" | tee $OPTO/res/values/bools.xml $OPNTO/res/values/bools.xml > /dev/null
+</resources>" | tee $NBMGO/res/values/bools.xml $NBMGOEWB/res/values/bools.xml $NBMGONB/res/values/bools.xml $NBMGOWB/res/values/bools.xml > /dev/null
 
+for CBGI in "18dip" "24dip" "32dip" "40dip"; do
+case $CBGI in
+"18dip") OP=$NBMGONB;;
+"24dip") OP=$NBMGO;;
+"32dip") OP=$NBMGOWB;;
+"40dip") OP=$NBMGOEWB;;
+esac
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-	<dimen name=\"config_backGestureInset\">24.0dip</dimen>
-	<dimen name=\"navigation_bar_frame_height\">48.0dip</dimen>
-	<dimen name=\"navigation_bar_gesture_height\">32.0dip</dimen>
-	<dimen name=\"navigation_bar_height\">0.0dip</dimen>
-	<dimen name=\"navigation_bar_height_landscape\">0.0dip</dimen>
-	<dimen name=\"navigation_bar_width\">0.0dip</dimen>
-	<dimen name=\"navigation_handle_horizontal_margin\">30.0dip</dimen>
-	<dimen name=\"navigation_handle_radius\">$PILLSFATSIZE</dimen>
-	<dimen name=\"navigation_handle_sample_horizontal_margin\">10.0dip</dimen>
-	<dimen name=\"navigation_home_handle_width\">$PILLSWIDTHSIZE</dimen>
-	<dimen name=\"navigation_home_handle_width_land\">305.0dip</dimen>
-</resources>" | tee $OPTO/res/values/dimens.xml $OPNTO/res/values/dimens.xml > /dev/null
-
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<resources>
-	<integer name=\"config_navBarInteractionMode\">2</integer>
-	<integer name=\"config_navBarOpacityMode\">2</integer>
-</resources>" | tee $OPTO/res/values/integers.xml $OPNTO/res/values/integers.xml > /dev/null
-
-echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.pills.not.transparent\">
-	<overlay android:category=\"com.android.internal.navigation_bar_mode\" android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
-	<application android:hasCode=\"false\" android:label=\"Pills Not Transparent - $PILLSFATSIZE/$PILLSWIDTHSIZE\"/>
-</manifest>" > $OPNTO/AndroidManifest.xml
-
-APKBUILDER "$OPTO" "$OPTO-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk"
-APKBUILDER "$OPNTO" "$OPNTO-$PILLSFATSIZE-$PILLSWIDTHSIZE.apk"
+    <dimen name=\"config_backGestureInset\">$CBGI</dimen>
+    <dimen name=\"navigation_bar_frame_height\">$FRAME</dimen>
+    <dimen name=\"navigation_bar_gesture_height\">18dip</dimen>
+    <dimen name=\"navigation_bar_height\">$HIDE</dimen>
+    <dimen name=\"navigation_bar_height_landscape\">$HIDE</dimen>
+    <dimen name=\"navigation_bar_width\">$HIDE</dimen>
+</resources>" > $OP/res/values/dimens.xml
+APKBUILDER "$OP" "$OP-$HIDE-$FRAME-$CBGI.apk"
 done
 done
-
-OPFH="$STORAGE/AIOCOMPILE/Pills/PillsImmersive"
-mkdir -p $OPFH/res/values
-echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.pills.immersive\">
-	<overlay android:category=\"com.android.internal.navigation_bar_mode\" android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
-	<application android:hasCode=\"false\" android:label=\"Pills Immersive\"/>
-</manifest>" > $OPFH/AndroidManifest.xml
-
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<resources>
-	<dimen name=\"navigation_handle_horizontal_margin\">0.0dip</dimen>
-	<dimen name=\"navigation_handle_radius\">0.0dip</dimen>
-	<dimen name=\"navigation_handle_sample_horizontal_margin\">0.0dip</dimen>
-	<dimen name=\"navigation_home_handle_width\">0.0dip</dimen>
-	<dimen name=\"navigation_home_handle_width_land\">0.0dip</dimen>
-</resources>" > $OPFH/res/values/bools.xml
-
-APKBUILDER "$OPFH" "$OPFH.apk"
+done
 
 for PILLSLIGHTCOLORS in "ff1a73e8" "ffb31818" "ff1ed760" "ffffa842" "ffff8055" "ffa86bd5" "ffff4151" "ff5e97f6" "ff47ae84"; do
 for PILLSDARKCOLORS in "ff1a73e8" "ffb31818" "ff1ed760" "ffffa842" "ffff8055" "ffa86bd5" "ffff4151" "ff5e97f6" "ff47ae84"; do
@@ -7677,29 +7683,6 @@ UCSA "Status Bar Increase Number Notification Icons Compile" "" "$MSGNUS" "SBINN
 SBINNICS() {
 ASBINNI="$STORAGE/AIOCOMPILE/SBINNI/AndroidStatusBarIncreaseNumberNotificationIcons"; SUISBINNI="$STORAGE/AIOCOMPILE/SBINNI/StatusBarIncreaseNumberNotificationIcons"
 mkdir -p $ASBINNI/res/values $SUISBINNI/res/values
-
-# for f in "20dip" "30dip" "40dip" "50dip" "60dip" "70dip"; do
-# case $f in
-# "20dip") NACINN="a";;
-# "30dip") NACINN="b";;
-# "40dip") NACINN="c";;
-# "50dip") NACINN="d";;
-# "60dip") NACINN="e";;
-# "70dip") NACINN="f";;
-# esac
-
-# echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.status.bar.increase.number.notification.icons.$NACINN\">
-	# <overlay android:category=\"com.android.internal.display_cutout_emulation\" android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\"/>
-	# <application android:hasCode=\"false\" android:label=\"Android Status Bar Increase Number Notification Icons $f\"/>
-# </manifest>" > $ASBINNI/AndroidManifest.xml
-
-# echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-# <resources>
-	# <dimen name=\"status_bar_height_landscape\">$f</dimen>
-# </resources>" > $ASBINNI/res/values/dimens.xml
-
-# APKBUILDER "$ASBINNI" "$ASBINNI-$f.apk"
-# done
 
 for f in 4 5 6 7 8 9 10; do
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.status.bar.increase.number.notification.icons\">

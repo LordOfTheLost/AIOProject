@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 26.10.21 (60) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/26.10.2021/AIOPFMD-26.10.21-%2860%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1JCfuoItoP9bl74dD5VYAv4tht_YtTBJX/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/59">TG</a>
+* Версия AIOPFMD: 31.10.21 (61) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.10.2021/AIOPFMD-31.10.21-%2861%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1_G9qJNGzxxpjlMKVbAiZb-SNvmCJNYmr/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/60">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -30,7 +30,11 @@
 
 <details> 
   <summary>Changelog</summary>
-
+#### 31.10.21 (61) ####
+* hosts файл с AdAway обновлен от 28.10.2021;
+* LSPosed для Riru и ZYGISK обновлен до 1.6.2 (6185);
+* MagiskHide Props Config обновлен до v6.1.1-v136;
+* Pills обновлен до v2.0 - полный фикс Full Hide/Immersive. Переделана работа прозрачности и тепер она доступна для 11-12ки.
 #### 26.10.21 (60) ####
 * Lawnchair S обновлен до 12 Alpha 2 - обновлен до v1.6;
 * Убран показ установки Lawnchair R на 12ке;
@@ -863,7 +867,7 @@
 		- Прозрачная зона таблетки;
 		- Не прозрачная зона таблетки;
 			- Ширина таблетки (Точка);
-			- Ширина таблетки (0) - скрытие жестовой таблетки с/без отступа в зависимости от прозрачности;
+			- Ширина таблетки (0) - скрытие жестовой таблетки с/без отступом в зависимости от прозрачности;
 			- Ширина таблетки (60);
 			- Ширина таблетки (120);
 			- Ширина таблетки (180);
