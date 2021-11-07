@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.10.21 (61) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.10.2021/AIOPFMD-31.10.21-%2861%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1_G9qJNGzxxpjlMKVbAiZb-SNvmCJNYmr/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/60">TG</a>
+* Версия AIOPFMD: 07.11.21 (62) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/07.11.2021/AIOPFMD-07.11.21-%2862%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1D3fquOE6xdOMQbm7TXQJjHp__1YD980H/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/61">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -31,11 +31,23 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 07.11.21 (62) ####
+* Lawnchair S обновлен до Alpha 3 - обновлен до v1.7;
+* GBoardThemes v1.3 - фикс темы по умолчанию;
+* Добавлена установка Safety Net Fix For Zygisk v2.2.0 (да, это за который надо платить сука. ПЛАТИТЬ ЗА РАНДОМ БЛЯДЬ);
+* SPosed для Riru и ZYGISK обновлен до v1.6.2 (6192);
+* hosts файл с AdAway обновлен от 04.11.2021;
+* Wifi Bonding теперь показывается до Android 12 - отвал WiFI на первоначалке;
+* Kill Logger обновлен до v1.5 - только цифры;
+* Функция MHIDE для модулей и патчей GPay и SafetyNet отключена для MAGISK 24+ так как я пока не разбирался с Zygisk да и мне насрать;
+* QS Count Icon And Rows обновлен до v1.4 - переход на оверлеи, установки как не MAGISK модуль и смена MODID;
+* Cache Cleaner обновлен до v2.3 - фикс отображения пунктов в терминале;
+* Прочие другие ускорения и улучшения.
 #### 31.10.21 (61) ####
 * hosts файл с AdAway обновлен от 28.10.2021;
 * LSPosed для Riru и ZYGISK обновлен до 1.6.2 (6185);
 * MagiskHide Props Config обновлен до v6.1.1-v136;
-* Pills обновлен до v2.0 - полный фикс Full Hide/Immersive. Переделана работа прозрачности и тепер она доступна для 11-12ки.
+* Pills обновлен до v2.0 - полный фикс Full Hide/Immersive. Переделана работа прозрачности и теперь она доступна для 11-12ки.
 #### 26.10.21 (60) ####
 * Lawnchair S обновлен до 12 Alpha 2 - обновлен до v1.6;
 * Убран показ установки Lawnchair R на 12ке;
@@ -931,7 +943,7 @@
 	- Значение 50;
 * Пункт (ALL) - Установка Gboard Themes в MD2 и разными цветами;
 * Пункт (ALL) <a href="https://github.com/nitanmarcel/Silky-Gboard">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-silky-gboard.4284323/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108108447">4PDA</a> - Установка GBoard Silk Theme Enabler - активирует новый дизайн из 12ки;
-* Пункт (ALL) (9-12) (\\) - Установка Status Bar Increase Number Notification Icons для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
+* Пункт (ALL) (10-12) (\\) - Установка Status Bar Increase Number Notification Icons для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
 	- 4 иконки;
 	- 5 иконок;
 	- 6 иконок;
@@ -1015,7 +1027,7 @@
 	- Значение 18sp;
 	- Значение 20sp;
 * Пункт (MAGISK) - Установка Single User Enabler - Убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
-* Пункт (ALL) (8.1-12) (\\) - Установка Status Bar Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара но оверлеями;
+* Пункт (ALL) (10-12) (\\) - Установка Status Bar Padding - работает как CPadjustor для увеличения/уменьшения отступов от краев статусбара но оверлеями;
 	- Выбрать одно одинаковое значение для обоих сторон;
 	- Выбрать два рызных значения для каждой стороны;
 		- Значение 0dip;
@@ -1029,7 +1041,7 @@
 		- Значение 40dip;
 		- Значение 45dip;
 		- Значение 50dip;
-* Пункт (MAGISK) (8.1-12) (\\) - Установка QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
+* Пункт (MAGISK) (10-12) (\\) - Установка QS Content Padding - для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
 	- Значение 0;
 	- Значение 5;
 	- Значение 10;
@@ -1039,7 +1051,7 @@
 	- Значение 30;
 	- Значение 35;
 	- Значение 40;
-* Пункт (MAGISK) (8.1-12) (\\) - Установка SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
+* Пункт (MAGISK) (10-12) (\\) - Установка SUI Rounded Size (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
 	- Значение 10;
 	- Значение 20;
 	- Значение 33;
@@ -1050,7 +1062,7 @@
 	- Значение 80;
 	- Значение 90;
 	- Значение 100;
-* Пункт (MAGISK) (8.1-12) (\\) - Установка QS Count Icon & Rows- даже если ваша прошивка с кастомизацией и выставлено например 6 иконок но в не раскрытой видно всего 5 - то этот модуль для вас:
+* Пункт (ALL) (10-12) (\\) - Установка QS Count Icon & Rows- даже если ваша прошивка с кастомизацией и выставлено например 6 иконок но в не раскрытой видно всего 5 - то этот модуль для вас:
 	- Выбор для не раскрытой:
 		- 4;
 		- 5;

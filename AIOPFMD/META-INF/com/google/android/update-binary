@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="31.10.21 (61)"
+VAIOPFMD="07.11.21 (62)"
 
 { #TMPDIR & Magisk Default Var
 IPDLTMP="/data/local/tmp"
@@ -20,7 +20,7 @@ IDPSHNB="ShowHideNavigationBar"; VIPPSHNB="v1.0"
 IDBGDS="BackGestureDisabler"; VIPBGD="v1.0"
 IDGBNBS="GboardNavBarSpacing"; VIPGBNBS="v1.2"
 IDGBRC="GBoardRoundedCorners"; VIPGBRC="v1.1"
-IDGBT="GBoardThemes"; VIPGBT="v1.2"
+IDGBT="GBoardThemes"; VIPGBT="v1.3"
 IDGBSTE="gboard-silk-theme"; VIPGBSTE="v0.4"; VCIPGBSTE="04"
 IDSBINNI="SBINNI"; VIPSBINNI="v1.7"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
@@ -33,7 +33,7 @@ IDSUE="SingleUserEnabler"; VIPSUE="v1.1"
 IDSBP="StatusBarPadding"; VIPSBP="v1.5"
 IDQSCP="QSContentPadding"; VIPQSCP="v1.1"
 IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"
-IDQSCIAR="QSCIAR"; VIPQSCIAR="v1.2"
+IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.4"
 IDEBB="BackgroundBlur"; VIPEBB="v1.0"
 IDBA="BootAnimation"; VIPBA="v1.3"
 IDOSEMOJI="emoji-replacer-809887617"; VIPOSEMOJI="1.0"; VCIPOSEMOJI="1"
@@ -42,7 +42,7 @@ IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 #Apps: GFU/GSF/SL/ASUSS/IA
 IDGFUL="FaceLock"; VIPGFUL="v1.0"
 IDGSF="GSF"; VIPGSF="v1.0"
-IDSL="Systemless_Lawnchair"; VIPSL="v1.6"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6.1"; VIPASLS="12 Alpha 2"
+IDSL="Systemless_Lawnchair"; VIPSL="v1.7"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6.1"; VIPASLS="12 Alpha 3"
 IDSOPL="Systemless_OPLauncher"; VIPSOPL="v6.2"; VCIPSOPL="30100"; VAIPSOPL="v5.1.0"
 IDSOUH="Systemless_OneUIHome"; VIPSOUHQ="v2.1"; VCIPSOUHQ="21"; VAIPSOUHQ="v11.0.50.67"; VIPSOUHR="v1.0"; VCIPSOUHR="1"; VAIPSOUHR="v12.1.07.19"
 IDSPL="Systemless_PixelLauncher"; VIPSPL="v1.0"; VIPASPLQ="v10 (703)"; VIPASPLR="v11 (825)"
@@ -66,7 +66,7 @@ IDACP="acp"; VIPACP="v2.3"; VCIPACP="37"
 IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="28.10.2021"
+IDVAAH="AdAwayHosts"; VIPVAAH="04.11.2021"
 IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.7.7"; VCIPLPH="1737"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v16.9-210829"; VCIPVSH="169"
 IDVOH="Hosts"; VIPVOH="v1.1"
@@ -81,7 +81,7 @@ IDBB="busybox-brutal"; VIPBB="v1.34.0.1"; VCIPBB="13401"
 IDZSAAPT="zipsigner"; VIPZSAAPT="3.0" VCIPZSAAPT="3016"
 IDSELC="SeLinuxChanger"; VIPSELC="v1.3"
 IDASTE="terminal_systemizer"; VIPASTE="v17.3.1"; VCIPASTE="70"
-IDCC="CacheCleaner"; VIPCC="v2.2"
+IDCC="CacheCleaner"; VIPCC="v2.3"
 IDDETACH="Detach"; VIPDETACH="v5.3"; VCIPDETACH="530"
 IDDETACH3="detach3"; VIPDETACH3="v3.08"; VCIPDETACH3="308"
 IDSQL3="73sydney.sqlite3"; VIPSQL3="v1.0"; VCIPSQL3="1"
@@ -95,7 +95,7 @@ IDFSLFM="FSFM"; VIPFSLFM="v1.2"
 #SafetyNet/MHPC/GPay
 IDSNP="petnoires-safetyspoofer"; VIPSNP="v1-beta2"; VCIPSNP="16"
 IDSNPA="safetypatcher"; VIPSNPA="v3"; VCIPSNPA="5"
-IDSNPAA="safetynet-fix"; VIPSNPAA="v2.1.1"; VCIPSNPAA="20101"
+IDSNPRZ="safetynet-fix"; VIPSNPR="v2.1.1"; VCIPSNPR="20101"; VIPSNPZ="v2.2.0"; VCIPSNPZ="20200"
 IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
 IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.1.1-v136"; VCIPMHPC="74"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
@@ -103,8 +103,8 @@ IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
 #Riru/Edx/LS/Posed/Mudules
 IDRIRU="riru-core"; VIPRIRU="v26.1.3.r513.8e95115fd4"; VCIPRIRU="513"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
 IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
-IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.6.2 (6185)"; VCIPLSPOSEDR="6185"
-IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.6.2 (6185)"; VCIPLSPOSEDZ="6185"
+IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.6.2 (6193)"; VCIPLSPOSEDR="6193"
+IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.6.2 (6193)"; VCIPLSPOSEDZ="6193"
 IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v10"; VCIPRIRUCW="10"
 IDRMH="riru_momohider"; VIPRMH="0.0.7"; VCIPRMH="7"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
@@ -113,7 +113,7 @@ IDFEG="ForceGestures"; VIPFEG="v1.1"
 IDHAP="EnablingHiddenApiPolicy"; VIPHAP="v1.2"
 IDAFUS="AFUSS"; VIPAFUS="v1.1"
 IDBPT="BuildPropTweaks"; VIPBPT="v1.9"
-IDKL="killlogger"; VIPKL="v1.4"; VCIPKL="5"
+IDKL="killlogger"; VIPKL="v1.5"; VCIPKL="6"
 IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.4"
@@ -342,7 +342,7 @@ MMUPDC="$(GET_FILE_PROP -pm "$PATCHMODEFILE" "MMUPDC")"
 LEGACYMODE="$(GET_FILE_PROP -pm "$PATCHMODEFILE" "LEGACYMODE")"
 EVENTSMODE="$(GET_FILE_PROP -pm "$PATCHMODEFILE" "EVENTSMODE")"
 PROPFILES="$IPSDP $IPSBP $IPVBP /data/local.prop /default.prop /build.prop"
-PROPFILESALT="$IPSSPBP $IPSBP $IPVBP"
+PROPFILESALT="$IPSBP $IPVBP"
 DMYHMS="$( date +"%d-%m-%Y-%H:%M:%S" )"; TIMED="$( date +"%d" )"; TIMEM="$( date +"%m" )"; TIMEY="$( date +"%Y" )"
 SYSCL="/sys/class/leds"
 LEDLSC="chmod 755 /sys/class/*/*/* /sys/module/*/*/*"
@@ -1018,19 +1018,15 @@ UIP "Happy Halloween!"
 fi
 fi
 done
-elif [ $TIMEM == 11 ]; then
-for t in 01 02 03 04 05 06 07 08 09 10; do
-if [ $TIMED == $t ]; then
-if $BOOTMODE; then
-UIP "Happy Halloween 🎃!"
-else
-UIP "Happy Halloween!"
-fi
-fi
-done
 elif [ $TIMEM == 12 ]; then
 for t in $(seq 20 1 31); do
 if [ $TIMED == $t ]; then
+UIP "Holiday Greetings!"
+fi
+done
+elif [ $TIMEM == 01 ]; then
+for t in 01; do
+if [ $TIMED == $t ]; then
 if $BOOTMODE; then
 UIP "Happy New Year ❄!"
 else
@@ -1038,14 +1034,9 @@ UIP "Happy New Year!"
 fi
 fi
 done
-elif [ $TIMEM == 01 ]; then
-for t in 01 02 03 04 05 06 07 08 09 10; do
+for t in 02 03 04 05 06 07 08 09 10; do
 if [ $TIMED == $t ]; then
-if $BOOTMODE; then
-UIP "Happy New Year ❄!"
-else
-UIP "Happy New Year!"
-fi
+UIP "Happy Holidays!"
 fi
 done
 fi
@@ -1666,11 +1657,13 @@ fi
 }
 
 MHIDE() {
+if [ $ZYGISK != true ]; then
 UIP "Using Magisk Hide"
 case $1 in
 -f) if $BOOTMODE; then magiskhide enable >/dev/null; for mhide in $2; do $mhide add $(echo $mhide | cut -f 1 -d '_') $(echo $mhide | cut -f 2 -d '_'); if [ $? -eq 0 ]; then UIP "$mhide: Hide Done"; else UIP "$mhide: Hide Failed"; fi; done; else echo -e "magiskhide enable; for mhide in $1; do mhide add \$(echo \$mhide | cut -f 1 -d '_') \$(echo \$mhide | cut -f 2 -d '_'); done" >> $MODPATH/$MODID/post-fs-data.sh; fi;;
 -l) if $BOOTMODE; then magiskhide enable >/dev/null; else echo "magiskhide enable" >> $MODPATH/$MODID/post-fs-data.sh; fi;;
 esac
+fi
 }
 
 WCANFTP() {
@@ -3609,7 +3602,8 @@ MMUPD_CHECKER "$IDFSLFM" "$VIPFSLFM" "IPFSLFMS"
 #SafetyNet/MHPC/GPay
 MMUPD_CHECKER -c "$IDSNP" "$VIPSNP" "$VCIPSNP" "IPSNPS"
 MMUPD_CHECKER -c "$IDSNPA" "$VIPSNPA" "$VCIPSNPA" "IPSNPS"
-MMUPD_CHECKER -c "$IDSNPAA" "$VIPSNPAA" "$VCIPSNPAA" "IPSNPS"
+if [ "$ASDK" -ge 24 ] && [ -d $MODPATH/$IDRIRU ] && [ ! -d $MODPATH/$IDLSPOSEDZ/zygisk ]; then MMUPD_CHECKER -c "$IDSNPRZ" "$VIPSNPR" "$VCIPSNPR" "IPSNPS"; fi
+if [ "$ASDK" -ge 24 ] && $ZYGISK && [ ! -d $MODPATH/$IDLSPOSEDR/riru ]; then MMUPD_CHECKER -c "$IDSNPRZ" "$VIPSNPZ" "$VCIPSNPZ" "IPSNPS"; fi
 MMUPD_CHECKER "$IDSNET" "$VIPSNET" "IPSNET"
 MMUPD_CHECKER "$IDFPMC" "$VIPFPMC" "IPFPMCS"
 MMUPD_CHECKER -c "$IDMHPC" "$VIPMHPC" "$VCIPMHPC" "IPMHPCS"
@@ -3766,10 +3760,8 @@ rm -f $IPPSO/Pills.apk $AIOPFMDPH/pills
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Pills $VIPPO?" "$MSGEFTC" "$MSGNUS" "IPPOS"
-fi
 fi
 fi
 }
@@ -3880,10 +3872,8 @@ rm -f $IPPSO/PillsColors.apk $AIOPFMDPH/pillscolors
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Pills Colors $VIPPCO?" "$MSGEFTC" "$MSGNUS" "IPPCOS"
-fi
 fi
 fi
 }
@@ -3944,10 +3934,8 @@ rm -f $IPPSO/PillsHeight.apk $AIOPFMDPH/pillsheight
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Pills Height $VIPPHO?" "$MSGEFTC" "$MSGNUS" "IPPHOS"
-fi
 fi
 fi
 }
@@ -3993,10 +3981,8 @@ UIP "$MSGDI"
 }
 
 IPBGD() {
-if $ATEN || $AELEVEN || $ATWELVE; then
-if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "back_gesture_inset_scale_left back_gesture_inset_scale_right"; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "back_gesture_inset_scale_left back_gesture_inset_scale_right"; then
 UCSA "Install Back Gesture Disabler $VIPBGD?" "" "$MSGNUS" "IPBGDS"
-fi
 fi
 }
 
@@ -4014,7 +4000,7 @@ MMPR -v "Back Gesture Disabler" "$VIPBGD" "Back Gesture Disabler $MSGFMM"; SET_P
 }
 
 IPGBNBS() {
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ "$ASDK" -ge 29 ]; then
 UCSA "Install GBoard NavBar Space $VIPGBNBS?" "$MSGEFTC" "$MSGNUS" "IPGBNBSS"
 fi
 }
@@ -4037,7 +4023,7 @@ fi
 }
 
 IPGBRC() {
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ "$ASDK" -ge 29 ]; then
 UCSA "Install GBoard Rounded Corners $VIPGBRC?" "$MSGEFTC" "$MSGNUS" "IPGBRCS"
 fi
 }
@@ -4101,11 +4087,11 @@ if $MAGISK; then
 MODID="$IDGBT"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID$MIPSE
 cp -rf $TMPDIR/GBoardThemes/gboard_theme $MODPATH/$MODID$MIPSE
-echo -e "ro.com.google.ime.theme_file=MD2BlackBlue.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" > $MODPATH/$MODID/system.prop
+echo -e "ro.com.google.ime.theme_file=MD2B-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" > $MODPATH/$MODID/system.prop
 MMPR -v "GBoard Themes" "$VIPGBT" "GBoard Themes $MSGFMM"; SET_PERM_RM
 else
 BUILD_PROP_BACKUP
-echo -e "\n# GBoard Themes\nro.com.google.ime.theme_file=MD2BlackBlue.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" >> $IPSBP
+echo -e "\n# GBoard Themes\nro.com.google.ime.theme_file=MD2B-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" >> $IPSBP
 cp -rf $TMPDIR/GBoardThemes/gboard_theme $IPSE
 SET_PERM_R $IPSE/gboard_theme 0 0 0755 0644
 fi
@@ -4173,10 +4159,8 @@ rm -f $IPPSO/SUIStatusBarIncreaseNumberNotificationIcons.apk $AIOPFMDPH/cutoutin
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
-if $APIE || $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Status Bar Increase Number Icons $VIPSBINNI?" "$MSGEFTC" "$MSGNUS" "IPSBINNIS"
-fi
 fi
 fi
 }
@@ -4222,7 +4206,7 @@ rm -f $IPPSO/RoundedUI*.apk $IPPSO/RoundedSL*.apk $AIOPFMDPH/roundedui
 UIP "$MSGDRM"
 fi
 else
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ "$ASDK" -ge 29 ]; then
 UCSA "Install RoundedUI $VIPRUI?" "$MSGEFTC" "$MSGNUS" "IPRUIS"
 fi
 fi
@@ -4254,10 +4238,8 @@ rm -f $IPPSO/AndroidBurnInProtection*.apk $IPPSO/SUIBurnInProtection*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Burn In Protection $VIPBIP?" "$MSGEFTC" "$MSGNUS" "IPBIPS"
-fi
 fi
 fi
 }
@@ -4300,7 +4282,7 @@ rm -f $IPPSO/NotificationSidePaddings*.apk $AIOPFMDPH/notificationsidepaddings
 UIP "$MSGDRM"
 fi
 else
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Notification Side Padding $VIPNSP?" "$MSGEFTC" "$MSGNUS" "IPNSPS"
 fi
 fi
@@ -4337,7 +4319,7 @@ rm -f $IPPSO/*StatusBarIconSpace*.apk $AIOPFMDPH/statusbariconspace
 UIP "$MSGDRM"
 fi
 else
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Status Bar Icon Space $VIPSBIS?" "$MSGEFTC" "$MSGNUS" "IPSBISS"
 fi
 fi
@@ -4381,7 +4363,7 @@ rm -f $IPPSO/StatusBarClockSize*.apk $AIOPFMDPH/statusbarclocksize
 UIP "$MSGDRM"
 fi
 else
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Status Bar Clock Size $VIPSBCS?" "$MSGEFTC" "$MSGNUS" "IPSBCSS"
 fi
 fi
@@ -4427,10 +4409,8 @@ rm -f $IPPSO/SUIStatusBarPadding.apk $AIOPFMDPH/suistatusbarpadding
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Status Bar Padding $VIPSBP?" "$MSGEFTC" "$MSGNUS" "IPSBPS"
-fi
 fi
 fi
 }
@@ -4465,10 +4445,8 @@ fi
 }
 
 IPQSCP() {
-if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "sysui_rounded_content_padding"; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "sysui_rounded_content_padding"; then
 UCSA "Install QS Content Padding $VIPQSCP?" "$MSGEFTC" "$MSGNUS" "IPQSCPS"
-fi
 fi
 }
 
@@ -4488,10 +4466,8 @@ fi
 }
 
 IPSUIRSRS() {
-if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "sysui_rounded_size"; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "sysui_rounded_size"; then
 UCSA "Install SUI Rounded Size $VIPSUIRSRS?" "$MSGEFTC" "$MSGNUS" "IPSUIRSRSS"
-fi
 fi
 }
 
@@ -4511,7 +4487,16 @@ fi
 }
 
 IPQSCIAR() {
-if $MAGISK && SP_CHECKER "$IPDSU/0/settings_secure.xml $IPDSU/0/settings_system.xml" "sysui_qqs_count qs_columns_portrait qs_columns_landscape qs_rows_portrait qs_rows_landscape"; then UCSA "Install QS Count Icon & Rows $VIPQSCIAR?" "$MSGEFTC" "$MSGNUS" "IPQSCIARS"; fi
+if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/qscounticonandrows ]; then
+UIP -d "$MSGFI QS Count Icon And Rows, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+UIP "Removing..."
+rm -f $IPPSO/QSCountIconAndRows*.apk $AIOPFMDPH/qscounticonandrows
+UIP "$MSGDRM"
+fi
+else
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA "Install QS Count Icon And Rows $VIPQSCIAR?" "$MSGEFTC" "$MSGNUS" "IPQSCIARS"; fi
+fi
 }
 
 IPQSCIARS() {
@@ -4521,24 +4506,24 @@ UCSF "$(seq 4 1 10)" "Expand Landscape QS:" "Count" "10"; SUIQSCL=$UCSFNMC
 UCSF "$(seq 1 1 3)" "QS Rows Portrait:" "Count" "3"; SUIQSRP=$UCSFNMC
 UCSF "$(seq 1 1 3)" "QS Rows Landscape:" "Count" "3"; SUIQSRL=$UCSFNMC
 if $UCSFNM; then
-UIP "Installing QS Count Icon & Rows $IAMM"
-if $BOOTMODE; then
-UIP "SUI QS Count Icon & Rows Activated Right Now";
-$SPSECURE sysui_qqs_count $SUIQSC; $SPSYSTEM qs_columns_portrait $SUIQSCP; $SPSYSTEM qs_columns_landscape $SUIQSCL; $SPSYSTEM qs_rows_portrait $SUIQSRP; $SPSYSTEM qs_rows_landscape $SUIQSRL
+UIP "Installing QS Count Icon And Rows $IAMM"
+UZTPN "QSCIAR"
+if $MAGISK; then
+MODID="$IDQSCIAR"; REMOVER -mm "$MODID QSCIAR"
+mkdir -p $MODPATH/$MODID$MIPSVO
+cp -f $TMPDIR/QSCIAR/QSCountIconAndRows-$SUIQSC-$SUIQSCP-$SUIQSCL-$SUIQSRP-$SUIQSRL.apk $MODPATH/$MODID$MIPSVO
+MMPR -v "SUI QS Count Icon And Rows" "$VIPQSCIAR" "QS Count Icon And Rows $MSGFMM"; SET_PERM_RM
+else
+cp -f $TMPDIR/QSCIAR/QSCountIconAndRows-$SUIQSC-$SUIQSCP-$SUIQSCL-$SUIQSRP-$SUIQSRL.apk $IPPSO
+touch $AIOPFMDPH/qscounticonandrows
 fi
-MODID="$IDQSCIAR"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID
-MMPR -v "SUI QS Count Icon & Rows" "$VIPQSCIAR" "QS Count Icon & Rows $MSGFMM"
-MBCCSERVICE "$SPSECURE sysui_qqs_count $SUIQSC; $SPSYSTEM qs_columns_portrait $SUIQSCP; $SPSYSTEM qs_columns_landscape $SUIQSCL; $SPSYSTEM qs_rows_portrait $SUIQSRP; $SPSYSTEM qs_rows_landscape $SUIQSRL"
-SET_PERM_RM -msgdi
+UIP "$MSGDI"
 fi
 }
 
 IPEBB() {
-if $MAGISK && [ $MIUI != true ]; then
-if $AELEVEN || $ATWELVE; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 30 ]; then
 UCSA "Install Background Blur $VIPEBB?" "$MSGEFTC" "$MSGNUS" "IPEBBS"
-fi
 fi
 }
 
@@ -4718,10 +4703,8 @@ $IPPMU/WirelessChargingStarted.ogg
 }
 
 IPFDNI() {
-if $MAGISK && [ $MIUI != true ] && $LEGACYMODE; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && $LEGACYMODE; then
 UCSA "Install Force Disable Notification Icons $VIPFDNI?" "" "$MSGNUS" "IPFDNIS"
-fi
 fi
 }
 
@@ -4816,10 +4799,8 @@ rm -f $AIOPFMDPH/systemlesslauncher
 UIP "$MSGDRM"
 fi
 else
-if $ATEN || $AELEVEN || $ATWELVE; then
-if [ $MIUI != true ]; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "Install Systemless Launcher?" "$MSGEFTC" "$MSGNUS" "IPSLS"
-fi
 fi
 fi
 }
@@ -5223,10 +5204,8 @@ WCANFTP -sl -ehap
 }
 
 IPDTSHPX() {
-if $APIE || $ATEN || $AELEVEN || $ATWELVE; then
-if $MAGISK && $FINDAIOPFMDA; then
+if $MAGISK && $FINDAIOPFMDA && [ "$ASDK" -ge 28 ]; then
 UCSA "Install DTS HPX $VIPDTSHPX?" "" "$MSGNUS" "IPDTSHPXS"
-fi
 fi
 }
 
@@ -7307,8 +7286,7 @@ UIP "$MSGDRM"
 }
 
 IPFBFM() {
-if $LEGACYMODE; then
-if $ATEN || $AELEVEN || $ATWELVE; then
+if $LEGACYMODE && [ "$ASDK" -ge 29 ]; then
 for FBLFM in "$MODPATH/ViPER4AndroidFX/service.sh" "$MODPATH/ViPER4AndroidFX-Legacy/service.sh" "$MODPATHUPD/ViPER4AndroidFX/service.sh" "$MODPATHUPD/ViPER4AndroidFX-Legacy/service.sh" "$MODPATH/ainur_sauron/service.sh" "$MODPATHUPD/ainur_sauron/service.sh"; do
 if [ -f $FBLFM ]; then
 UIP -d "Found $FBLFM, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
@@ -7318,7 +7296,6 @@ UIP "$MSGDRM"
 fi
 fi
 done
-fi
 fi
 }
 
@@ -7985,6 +7962,41 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 </resources>" > $PCOSBCSS/res/values/dimens.xml
 
 APKBUILDER "$PCOSBCSS" "$PCOSBCSS-$f.apk"
+done
+}
+
+QSCIARC() {
+UCSA "QS Count Icon & Rows" "" "$MSGNUS" "QSCIARCS"
+}
+
+QSCIARCS() {
+QSCIAR="$STORAGE/AIOCOMPILE/QSCountIconAndRows/QSCountIconAndRows"
+mkdir -p $QSCIAR/res/values
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.qs.count.icon.and.rows\">
+	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+	<application android:hasCode=\"false\" android:label=\"QS Count Icon And Rows\"/>
+</manifest>" > $QSCIAR/AndroidManifest.xml
+
+for SUIQSC in $(seq 4 1 10); do
+for SUIQSCP in $(seq 4 1 10); do
+for SUIQSCL in $(seq 4 1 10); do
+for SUIQSRP in $(seq 1 1 3); do
+for SUIQSRL in $(seq 1 1 3); do
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<integer name=\"quick_qs_panel_max_columns\">$SUIQSC</integer>
+	<integer name=\"config_qs_columns_portrait\">$SUIQSCP</integer>
+	<integer name=\"config_qs_columns_landscape\">$SUIQSCL</integer>
+	<integer name=\"config_qs_rows_portrait\">$SUIQSRP</integer>
+	<integer name=\"config_qs_rows_landscape\">$SUIQSRL</integer>
+</resources>" > $QSCIAR/res/values/integers.xml
+
+APKBUILDER "$QSCIAR" "$QSCIAR-$SUIQSC-$SUIQSCP-$SUIQSCL-$SUIQSRP-$SUIQSRL.apk"
+done
+done
+done
+done
 done
 }
 
@@ -8751,7 +8763,7 @@ UIP "$MSGDI"
 }
 
 IPWIFIB() {
-if $SNAPSOC && FINDER "$WCNSQCCFGI"; then
+if $SNAPSOC && [ $ASDK -le 30 ] && FINDER "$WCNSQCCFGI"; then
 UCSA "Install Wifi Bonding For Qualcomm $VIPWIFIB?" "" "$MSGNUS" "IPWIFIBS"
 fi
 }
@@ -10013,11 +10025,18 @@ c) Cache Cleaner
 e) Remove Empty Files/Folders
 l) Remove Logs
 t) Remove VMDLTMP & Trash TrichromeLibrary\"
-if \$MMB; then echo -e \"\nm) Remove All Magisk Backup\"; fi
-echo \"\nr) Reboot Device
+if \$MMB; then
+echo -e \"\nm) Remove All Magisk Backup
+r) Reboot Device
 q) Quit
 $MSGDELIMITER
 ?)\"
+else
+echo -e \"\nr) Reboot Device
+q) Quit
+$MSGDELIMITER
+?)\"
+fi
 read opt
 echo
 case \$opt in
@@ -10752,12 +10771,38 @@ resetprop ro.bootimage.build.fingerprint 'HUAWEI/CLT-L29/HWCLT:8.1.0/HUAWEICLT-L
 MMPR -vc "SafetyPatch" "$VIPSNPA" "$VCIPSNPA" "hackintosh5 @ xdaDevelopers" "Flash the module, reboot and give me thanks on XDA :)"
 MHIDE -l; SET_PERM_RM -msgdi
 fi
-if [ "$ASDK" -ge 24 ] && [ -d $MODPATH/$IDRIRU ]; then
-UIP -d "Install Safety Net Patch $VIPSNPAA?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if [ "$ASDK" -ge 24 ]; then
+SAFETYNET=false; SAFETYNETZ=false; SAFETYNETR=false
+if [ -d $MODPATH/$IDRIRU ]; then
+if $ZYGISK; then
+UIP -d "Install Safety Net Patch Zygisk Or Riru?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
+UIP -d "Install Safety Net Patch For:" "$MSGVU Zygisk $VIPSNPZ" "$MSGVD Riru $VIPSNPR"
+if $KEYFUNCTION; then
+SAFETYNET=true; SAFETYNETZ=true
+else
+SAFETYNET=true; SAFETYNETR=true
+fi
+else
+SAFETYNET=false
+fi
+else
+UIP -d "Install Safety Net Patch $VIPSNPR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+SAFETYNET=true; SAFETYNETR=true
+fi
+fi
+else
+UIP -d "Install Safety Net Patch $VIPSNPR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+SAFETYNET=true; SAFETYNETR=true
+fi
+fi
+if $SAFETYNET; then
 UIP "Installing Safety Net Patches $IAMM"
 UZTPN "SafetyNet"
-MODID="$IDSNPAA"; REMOVER -mm "$MODID"
+MODID="$IDSNPRZ"; REMOVER -mm "$MODID"
+if $SAFETYNETR; then
 mkdir -p $MODPATH/$MODID/riru
 UIP "Copy arm Libraries"
 cp -rf $TMPDIR/SafetyNet/riru/lib $MODPATH/$MODID/riru
@@ -10765,8 +10810,20 @@ if [ "$arch" = "arm64" ]; then
 UIP "Copy arm64 Libraries"
 cp -rf $TMPDIR/SafetyNet/riru/lib64 $MODPATH/$MODID/riru
 fi
-cp -f $TMPDIR/SafetyNet/classes.dex $MODPATH/$MODID
-MMPR -vc "Universal SafetyNet Fix" "$VIPSNPAA" "$VCIPSNPAA" "kdrag0n" "A universal fix for SafetyNet on Android 7–12 devices with hardware attestation and unlocked bootloaders. Requires MagiskHide and Riru v24.0.0 or newer."
+cp -f $TMPDIR/SafetyNet/riru/classes.dex $MODPATH/$MODID
+MMPR -vc "Universal SafetyNet Fix" "$VIPSNPR" "$VCIPSNPR" "kdrag0n" "A universal fix for SafetyNet on Android 7–12 devices with hardware attestation and unlocked bootloaders. Requires MagiskHide and Riru v24.0.0 or newer."
+elif $SAFETYNETZ; then
+mkdir -p $MODPATH/$MODID/zygisk
+UIP "Copy arm Libraries"
+cp -rf $TMPDIR/SafetyNet/zygisk/armeabi-v7a.so $MODPATH/$MODID/zygisk
+if [ "$arch" = "arm64" ]; then
+UIP "Copy arm64 Libraries"
+cp -rf $TMPDIR/SafetyNet/zygisk/armeabi-v8a.so $MODPATH/$MODID/zygisk
+fi
+cp -f $TMPDIR/SafetyNet/zygisk/classes.dex $MODPATH/$MODID
+MMPR -vc "Universal SafetyNet Fix" "$VIPSNPZ" "$VCIPSNPZ" "kdrag0n" "A universal fix for SafetyNet on Android 7–12 devices with hardware attestation and unlocked bootloaders."
+echo -e "#!$MIPSB/sh\nmagisk --denylist rm com.google.android.gms" > $MODPATH/$MODID/post-fs-data.sh
+fi
 echo "# RootBeer, Microsoft
 ro.build.tags=release-keys
 
@@ -10830,7 +10887,7 @@ fi
 }
 
 IPSNET() {
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ "$ASDK" -ge 29 ]; then
 UCSA "Install Safety Net Eval Type BASIC $VIPSNET?" "" "$MSGNUS" "IPSNETS"
 fi
 }
@@ -11123,10 +11180,8 @@ done
 { #Riru/Edx/LS/Posed/Mudules
 
 IPRIRU() {
-if $MAGISK; then
-if $AOREO || $APIE || $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ "$ASDK" -ge 27 ]; then
 UCSA "Install Riru Core v26 Or v25?" "" "$MSGNUS" "IPRIRUS"
-fi
 fi
 }
 
@@ -11301,10 +11356,8 @@ SET_PERM_RM -msgdi
 }
 
 IPEDXPOSED() {
-if $MAGISK && [ -f $MODPATH/$IDRIRU/legacy ]; then
-if $AOREO || $APIE || $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ -f $MODPATH/$IDRIRU/legacy ] && [ "$ASDK" -ge 27 ]; then
 UCSA "Install EdXposed $VIPEDXPOSED?" "" "$MSGNUS" "IPEDXPOSEDS"
-fi
 fi
 }
 
@@ -11594,8 +11647,7 @@ SET_PERM_RM -msgdi
 }
 
 IPLSPOSEDR() {
-if $AOREO || $APIE || $ATEN || $AELEVEN || $ATWELVE; then
-if $MAGISK; then
+if $MAGISK && [ "$ASDK" -ge 27 ]; then
 if [ -d $MODPATH/$IDRIRU ] && [ ! -f $MODPATH/$IDRIRU/legacy ]; then
 if $ZYGISK; then
 UCSA "Install LSPosed Zygisk Or Riru?" "" "$MSGNUS" "IPLSPOSEDS"
@@ -11604,7 +11656,6 @@ UCSA "Install LSPosed $VIPLSPOSEDR?" "" "$MSGNUS" "IPLSPOSEDS"
 fi
 else
 UCSA "Install LSPosed $VIPLSPOSEDZ?" "" "$MSGNUS" "IPLSPOSEDS"
-fi
 fi
 fi
 }
@@ -11796,10 +11847,8 @@ UIP "$MSGDI"
 }
 
 IRIRUCW() {
-if $MAGISK && [ -d $MODPATH/$IDRIRU ]; then
-if $APIE || $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ -d $MODPATH/$IDRIRU ] && [ "$ASDK" -ge 28 ]; then
 UCSA "Install Riru Clipboard Whitelist $VIPRIRUCW?" "" "$MSGNUS" "IRIRUCWS"
-fi
 fi
 }
 
@@ -11837,10 +11886,8 @@ SET_PERM_RM -msgdi
 }
 
 IPRMH() {
-if $MAGISK && [ -d $MODPATH/$IDRIRU ]; then
-if $APIE || $ATEN || $AELEVEN || $ATWELVE; then
+if $MAGISK && [ -d $MODPATH/$IDRIRU ] && [ "$ASDK" -ge 28 ]; then
 UCSA "Install Riru Momo Hider $VIPRMH?" "$MSGEFTC" "$MSGNUS" "IPRMHS"
-fi
 fi
 }
 
@@ -12007,11 +12054,8 @@ fi
 }
 
 IPFEG() {
-if $MAGISK && [ $MIUI != true ]; then
-if $ATEN || $AELEVEN || $ATWELVE; then
-MSGUC="Install Force Gestures $VIPFEG?"
-UCSA "$MSGUC" "" "$MSGNUS" "IPFEGS"
-fi
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
+UCSA "Install Force Gestures $VIPFEG?" "" "$MSGNUS" "IPFEGS"
 fi
 }
 
@@ -12033,10 +12077,8 @@ MMPR -v "Force Gestures" "$VIPFEG" "Force Gestures - If The Gesture Selection It
 }
 
 IPHAP() {
-if $MAGISK; then
-if $AELEVEN || $ATWELVE; then
+if $MAGISK && [ "$ASDK" -ge 30 ]; then
 UCSA "Install Enabling Hidden Api Policy $VIPHAP?" "" "$MSGNUS" "IPHAPS"
-fi
 fi
 }
 
@@ -12053,7 +12095,7 @@ MMPR -v "Enabling Hidden Api Policy" "$VIPHAP" "Enabling Hidden Api Policy $MSGF
 }
 
 IPAFUS() {
-if $MAGISK && [ $ATEN != true ] && [ $AELEVEN != true ] && [ $ATWELVE != true ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "install_non_market_apps"; then UCSA "Force Install Apps From Unknown Sources $VIPAFUS?" "" "$MSGNUS" "IPAFUSS"; fi
+if $MAGISK && [ "$ASDK" -le 28 ] && SP_CHECKER "$IPDSU/0/settings_secure.xml" "install_non_market_apps"; then UCSA "Force Install Apps From Unknown Sources $VIPAFUS?" "" "$MSGNUS" "IPAFUSS"; fi
 }
 
 IPAFUSS() {
@@ -12236,8 +12278,8 @@ debug_test=0
 debugtool.anrhistory=0
 libc.debug.malloc=0
 log.cffdump=0
-log.cffdump_no_memzero=0
-log.cffdump_with_ifh=0
+log.cffdump_no_memzero=0       
+log.cffdump_with_ifh=0                 
 log.dumpx=0 
 log.pm4=0
 log.pm4mem=0
@@ -12399,7 +12441,7 @@ UIP "$MSGDI"
 }
 
 IPFDM() {
-if $AOREO || $APIE || $ATEN || $AELEVEN || $ATWELVE; then
+if [ "$ASDK" -ge 27 ]; then
 UCSA "Install Force Dark Theme $VIPFDM?" "" "$MSGNUS" "IPFDMS"
 fi
 }
@@ -13560,7 +13602,7 @@ fi
 }
 
 IPGPUR() {
-if $ATEN || $AELEVEN || $ATWELVE; then
+if [ "$ASDK" -ge 29 ]; then
 UCSA "Install GPU Rendering $VIPGPUR?" "$MSGEFTC" "$MSGNUS" "IPGPURS"
 fi
 }
@@ -13754,6 +13796,7 @@ NSPC
 SBPC
 COSBCS
 CSBIS
+QSCIARC
 fi
 }
 
@@ -13839,7 +13882,7 @@ UIP -d "Net: GPS/TTL/DNS/WB/USBTF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if
 UIP -d "Utilities: BB/ZSigner/SELC/ASTE/CC" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UTILITIES_PRESETS; fi
 UIP -d "Other: DFO/STZD/DDVFE/FA/SBU" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then OTHER_PRESETS; fi
 IPHF
-if $MAGISK; then UIP -d "SafetyNet/MHPC/GPay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; if $AOREO || $APIE || $ATEN || $AELEVEN; then UIP -d "Riru/Edx/LS/Posed/Mudules" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_EDX_LS_POSED_PRESETS; fi; fi; fi
+if $MAGISK; then UIP -d "SafetyNet/MHPC/GPay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; if [ "$ASDK" -ge 27 ]; then UIP -d "Riru/Edx/LS/Posed/Mudules" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_EDX_LS_POSED_PRESETS; fi; fi; fi
 if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi
 UIP -d "Tweaks: FGS/BP/LED/UGMSD/USGP/VS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then MSGNUS="(/)"; TWEAKS_PRESETS; fi
 else
