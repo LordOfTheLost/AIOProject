@@ -1133,6 +1133,7 @@
 		- White;
 	- Radiant;
 	- OnePlus;
+	- Spark;
 			- FPS:
 				- 60;
 				- 30;
@@ -1144,6 +1145,7 @@
 	- Pixel (Pizdec);
 	- Samsung (OneUI 3.0);
 	- Oppo (Color OS 7);
+	- Spark (8.0);
 * Пункт (MAGISK & LEGACY) - Установка отключения иконок уведомлений в строке;
 
 <h3 align=center>Apps: GFU/GSF/SL/IA</h3>
