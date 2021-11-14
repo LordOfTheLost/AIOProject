@@ -1154,10 +1154,10 @@
 * Пункт (ALL & ADDON) (8.1, 9 и 10) (EOL) - Устанавливает "заглушку" для работы GCam без Gapps;
 * Пункт (ALL) (10-12) (\\) - Установка Systemless Launcher (Alt Variant Quick Switch):
 	- Установка Lawnchair Q/R/S <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка OPLauncher Q/R <a href="https://www.pling.com/p/1451515/">PLING</a || <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a> || <a href="https://t.me/mrsluffy_releases">TG</a>;
-	- Установка OneUIHome Q/R (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a> || <a href="https://t.me/AyraProject">TG</a>;;
+	- Установка OPLauncher Q/R <a href="https://www.pling.com/p/1451515/">PLING</a> || <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a> || <a href="https://t.me/mrsluffy_releases">TG</a>;
+	- Установка OneUIHome Q/R (ADDON) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a> || <a href="https://t.me/AyraProject">TG</a>;
 	- Установка PixelLauncher Q/R <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
-	- Установка ShadyLauncher Q/R <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка ShadyLauncher Q/R <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка AsusLauncher Q/R <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 * Пункт (ALL) (10-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a> || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
 * Пункт (ALL) (\\) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
@@ -1168,7 +1168,7 @@
 	
 <h3 align=center>Audio: VFX(P)/NL/AIST/SAQ/IB/ACP/AML</h3>
 
-* Пункт (ALL) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> ||<a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - Установка ViperFX:
+* Пункт (ALL) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - Установка ViperFX:
 	- Установка ViperFX v2.5.0.5:
 	- Установка ViperFX v2.7.1.6;
 		- Если установка через MAGISK, будет дан выбор:
@@ -1795,7 +1795,7 @@
 	- 3-й SafetyNet патч (7-12) (Riru Core) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> || <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
 * Пункт (ALL) (10-12) - Установка Set Safety Net Eval Type To BASIC - превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro (уехал кстати) будет называться BASIC);
 * Пункт (ALL) Force Play Market Certified - просто включает принудительно пройденную сертификацию в Play Market;
-* Пункт (MAGISK) <a href="<a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config;
+* Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - Установка Magisk Hide Props Config;
 * Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a> || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - Установка GPay SQLite Fix (появляется если патч находи NFC модуль и установлено приложение Gpay);
 
 <h3 align=center>Riru/Edx/LS/Posed/Mudules</h3>
