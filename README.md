@@ -1159,7 +1159,7 @@
 	- Установка PixelLauncher Q/R <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
 	- Установка ShadyLauncher Q/R <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка AsusLauncher Q/R <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-* Пункт (ALL) (10-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a> || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a - Установка ASUS Screenshot;
+* Пункт (ALL) (10-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a> || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a> - Установка ASUS Screenshot;
 * Пункт (ALL) (\\) - Начать установку из под /sdcard/Applications если в этой папки есть приложения;
 	- Установка в Data;
 	- Установка в System;
