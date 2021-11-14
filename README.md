@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 07.11.21 (62) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/07.11.2021/AIOPFMD-07.11.21-%2862%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1D3fquOE6xdOMQbm7TXQJjHp__1YD980H/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/61">TG</a>
+* Версия AIOPFMD: 15.11.21 (63) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/15.11.2021/AIOPFMD-15.11.21-%2863%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1U6jWOZRWXY8dxMMj2B6D5BGZ0OMV1XwD/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/62">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -31,11 +31,27 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 15.11.21 (63) ####
+* LSPosed для Riru и ZYGISK обновлен до v1.6.3 (6221);
+* Burn In Protection обновлен до v1.6:
+	- Добавил настройку сдвига для AOD и его иконок;
+	- Маленькие значения для всех других элементов теперь регулируют иконку сканера отпечатка пальца в экране (если кто захочет разделю выбор и на сканер);
+	- Убраны некоторые большые значения (сдвиг 10 на 10 даже на 597 DPI выглядит пиздец а на стоке для слепых вообще смерть);
+* Status Bar Increase Number Notification Icons обновлен до v1.8 - добавил выбор на размер точки: 0dip 2dip 4dip 6dip;
+* hosts файл с AdAway обновлен от 09.11.2021;
+* MagiskHide Props Config обновлен до v6.1.2-v137;
+* В Kill Logger добавлен один новый бинарник;
+* Lawnchair S обновлен до Alpha 4 - обновлен до v1.8;
+* В установку лаунчеров добавил конфликт на новый модуль OneUIHome который не работает;
+* Boot Animation обновлен до v1.4 - дабавил анимацию из Spark;
+* Media UI Sounds обновлен до v1.3 - дабавил звуки из Spark;
+* RoundedUI обновлен до v2.6 - дабавлены новые строки;
+* Может что-то ещё что забыл.
 #### 07.11.21 (62) ####
 * Lawnchair S обновлен до Alpha 3 - обновлен до v1.7;
 * GBoardThemes v1.3 - фикс темы по умолчанию;
 * Добавлена установка Safety Net Fix For Zygisk v2.2.0 (да, это за который надо платить сука. ПЛАТИТЬ ЗА РАНДОМ БЛЯДЬ);
-* SPosed для Riru и ZYGISK обновлен до v1.6.2 (6192);
+* LSPosed для Riru и ZYGISK обновлен до v1.6.2 (6193);
 * hosts файл с AdAway обновлен от 04.11.2021;
 * Wifi Bonding теперь показывается до Android 12 - отвал WiFI на первоначалке;
 * Kill Logger обновлен до v1.5 - только цифры;
@@ -944,13 +960,19 @@
 * Пункт (ALL) - Установка Gboard Themes в MD2 и разными цветами;
 * Пункт (ALL) <a href="https://github.com/nitanmarcel/Silky-Gboard">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-silky-gboard.4284323/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108108447">4PDA</a> - Установка GBoard Silk Theme Enabler - активирует новый дизайн из 12ки;
 * Пункт (ALL) (10-12) (\\) - Установка Status Bar Increase Number Notification Icons для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
-	- 4 иконки;
-	- 5 иконок;
-	- 6 иконок;
-	- 7 иконок;
-	- 8 иконок;
-	- 9 иконок;
-	- 10 иконок;
+	- Количество иконок:
+		- 4;
+		- 5;
+		- 6;
+		- 7;
+		- 8;
+		- 9;
+		- 10;
+			- Размер точки:
+				- 0dip;
+				- 2dip;
+				- 4dip;
+				- 6dip;	
 * Пункт (MAGISK) (10) - Установка GPay Power Menu (он же альтернатива меню выключения расположена с низу);
 * Пункт (ALL) (10-12) (\\) - Установка RoundedUI для скругления системы, лаунчеров и приложений которые подтягивают строки из системы:
 	- Значение 0;
@@ -965,19 +987,22 @@
 		- Значение 20;
 		- Значение 40;
 		- Значение 60;
-		- Значение 80;
-		- Значение 100;
-		- Значение 120;
 			- Количество dip смещения по горизонтали:
 				- Значение 4dip;
 				- Значение 6dip;
 				- Значение 8dip;
-				- Значение 10dip;
 					- Количество dip смещения по вертикали:
 						- Значение 4dip;
 						- Значение 6dip;
 						- Значение 8dip;
-						- Значение 10dip;
+							- Количество dip смещения для AOD по горизонтали:
+								- 20dip;
+								- 40dip;
+								- 60dip;
+									- Количество dip смещения для AOD по вертикали:
+										- 20dip;
+										- 40dip;
+										- 60dip;
 * Пункт (ALL) (10-12) (\\) - Установка Notification Side Padding - регулирует расстояние между строкой и краями экрана:
 	- Значение 0dip (как у OneUI);
 	- Значение 5dip;
