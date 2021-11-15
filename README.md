@@ -46,6 +46,7 @@
 * Boot Animation обновлен до v1.4 - дабавил анимацию из Spark;
 * Media UI Sounds обновлен до v1.3 - дабавил звуки из Spark;
 * RoundedUI обновлен до v2.6 - дабавлены новые строки;
+* AIST обновлен до v1.2 со всеми улучшениями;
 * Может что-то ещё что забыл.
 #### 07.11.21 (62) ####
 * Lawnchair S обновлен до Alpha 3 - обновлен до v1.7;
@@ -1201,7 +1202,7 @@
 	- PATCH_AUDIO_POLICY;
 * Пункт (MAGISK) (|\\) <a href="https://t.me/AIST_SUPPORT">TG</a> - Установка AIST:
 	- PATCH_VOLUMES;
-	- DOLBY VISION TWEAKS;
+	- HARMANKARDON;
 		- Patch media_codecs (может быть отвал);
 		- Replace media_codecs;
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - Установка System Audio Quality - Этот модуль улучшает общие качество звука;
