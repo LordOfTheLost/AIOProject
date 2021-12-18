@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 28.11.21 (64) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.11.2021/AIOPFMD-28.11.21-%2864%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1DAJUa52Cc6me103fAmV5HCf4avTP0fZ5/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/63">TG</a>
+* Версия AIOPFMD: 18.12.21 (65) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/18.12.2021/AIOPFMD-18.12.21-%2865%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1aEyMK5FysyQy8Bdkbuoy_nap_y-mNjiE/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/64">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -31,6 +31,29 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 18.12.21 (65) ####
+* Riru Core обновлен до v26.1.4.r522.8b379cedb5;
+* NLSound обновлен до v3.1 BETA:
+	- Всё как всегда;
+	- Некоторые пункты убраны и перемещены/заменены;
+* LSPosed для Riru и ZYGISK обновлен до v1.6.5 (6280);
+* hosts файл с AdAway обновлен от 14.12.2021;
+* Universal GMS Doze обновлён до v1.8.4 - MODID оставил старый и добавил зависимости где надо;
+* Добавлена установка Force MTP - принудительно активирует MTP потому как я заебался его включать и если забываю и подключаю к компу то в доме начинается РЕЗНЯ;
+* GBoard Silk Theme Changer обновлен до v1.0:
+	- Добавил больше строк;
+	- Смена MODID;
+	- Добавил два выбора;
+	- Удалил активатор на ломание кнопок других тем;
+	- Убрана строка которая меняет клавишу на говно;
+* GBoard Themes обновлен до v1.4:
+	- Добавлено пару тем (находятся в бете);
+	- Старые темы изменены;
+	- Добавлен выбор на скругления клавиш;
+	- Генерация с рандомным ID и именем;
+* USB Tethering Fix сменил MODID;
+* MCMODE теперь по умолчанию false потому-что кокеры ставят KillLogger не как модуль при установленном Magisk а потом у них не работает менеджер Magisk;
+* Может что-то ещё что забыл.
 #### 28.11.21 (64) ####
 * hosts файл с AdAway обновлен от 24.11.2021;
 * LSPosed для Riru и ZYGISK обновлен до v1.6.3 (6255);
@@ -1243,8 +1266,20 @@
 	- Значение 40;
 	- Значение 45;
 	- Значение 50;
-* Пункт (ALL) - (GBoard Themes) Установка Gboard Themes в MD2 и разными цветами;
-* Пункт (ALL) <a href="https://github.com/nitanmarcel/Silky-Gboard">GITHUB</a> || <a href="https://forum.xda-developers.com/t/module-silky-gboard.4284323/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108108447">4PDA</a> - (GBoard Silk Theme Enabler) активирует новый дизайн из 12ки;
+* Пункт (ALL) - (GBoard Themes) Установка Gboard Themes с разными цветами и пару вариантам ипо типу 3D и MD2:
+	- Скругление всего в клавиатуре:
+		- Значение 0;
+		- Значение 5;
+		- Значение 10;
+		- Значение 15;
+		- Значение 20;
+		- Значение 25;
+		- Значение 30;
+* Пункт (ALL) - (GBoard Silk Theme Changer) включает/выключает новый дизайн из 12ки:
+	- Включить;
+	- Выключить;
+		- Включить пузыри клавиш;
+		- Выключить пузыри клавиш;
 * Пункт (ALL) (10-12) (\\) - (Status Bar Increase Number Notification Icons) для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
 	- Количество иконок:
 		- 4;
@@ -1471,17 +1506,12 @@
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
 	- PATCH_IIR;
-	- PATCH_AUDIO_PLATFORM;
+	- PATCH_AUDIO_PLATFORM_INFO;
 	- PATCH_COMPANDERS;
 	- PATCH_AUDIO_CODEC;
 	- PATCH_DEVICE_FEATURES;
 	- PATCH_DIRAC;
 	- GENERAL_TWEAKS;
-	- PATCH_MIXER;
-		- Lite;
-		- Full (может быть отвал);
-			- Patch media_codecs (может быть отвал);
-			- Replace media_codecs;
 	- PATCH_IMPROVE_BLUETOOTH;
 	- PATCH_IO_POLICY;
 	- PATCH_AUDIO_POLICY;
@@ -2031,7 +2061,7 @@
 	- От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
 	- Альтернативный (в нем строки из MiRoom и других) (190000+ строк);
 
-<h3 align=center>Net: GPS/TTL/DNS/WB/USBTF</h3>
+<h3 align=center>Net: GPS/TTL/DNS/WB/APAUSBTF</h3>
 
 * Пункт (ALL) (SNAP/SM/SDM) <a href="https://github.com/Magisk-Modules-Repo/optmizedgpsconf">GITHUB (ссылка мертва)</a> - (Global Optimized GPS) добавляет оптимизированные строки в gps.conf (поддержку CN оставил);
 * Пункт (MAGISK) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - (TTL Fix) для раздачи интернета без ограничений оператора;
@@ -2041,7 +2071,7 @@
 		- Google DNS;
 		- CloudFlare DNS;
 * Пункт (ALL) (8.1+) (LEGACY) <a href="https://github.com/Magisk-Modules-Repo/wifi-bonding">GITHUB</a> - (Wifi Bonding) для увеличения пропускной способности Wifi (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
-* Пункт (ALL) (MI8) - (USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB для Mi8;
+* Пункт (ALL) (MI8) - (AP & USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для Mi8;
 
 <h3 align=center>Utilities: BB/ZSigner/SELC/ASTE/CC</h3>
 
@@ -2126,19 +2156,20 @@
 	- Settings Put;
 * Пункт (MAGISK) (11-12) - (Enabling Hidden Api Policy) снимает ограничения Google на некоторые классы приложений - нужен для некоторых аудиомодулей и не только;
 * Пункт (MAGISK) (<9) - (Force Install Apps From Unknown Sources) для принудительного включения пункта в разделе безопасности на установку из неизвестных источников;
-* Пункт (ALL) - (BuildProp Tweaks) общие твики не влияющие особо на производительность или энергосбережения (видео в 4К, и всякие твики по мелочи);
+* Пункт (ALL) - (BuildProp Tweaks) общие твики не влияющие на производительность или энергосбережения (видео в 4К, фикс AOD на кастомах, выключение предупреждения об высокой громкости и тд.);
 * Пункт (ALL) (|\\) - (Kill Logger) для отключения и убивания многих процессов/бинарников сбора логов:
 	- Оставить возможность снимать logcat или нет;
 	- Оставить возможность использовать dumpsys или нет;
 * Пункт (MAGISK) - (Force 4X MSAA) для включения 4X MSAA в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Disable HW Overlays) для включения отключение наложений после перезагрузки в настройках разработчика;
-* Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами (блин небезопасно...);
+* Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...);
+* Пункт (MAGISK) - (Force MTP) принудительно активирует MTP даже до первой загрузки;
 * Пункт (ALL) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере. Поддерживает фейс от Motorola, PE и CR (Kang с PE));
 * Пункт (ALL) (8.1-12) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
 * Пункт (MAGISK) - (Force Idle) для принудительного включения ожидания/простоя;
 * Пункт (MAGISK) - (Charging LED Light Off) полное отключения индикатора заряда/уведомлений;
-* Пункт (MAGISK) (\\) - (Start LEDLight Animation) при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет) (на Mi8 прикольно вариант Only LED выглядит - он и рекомендуется):
+* Пункт (MAGISK) (\\) - (Start LEDLight Animation) при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет):
 	- Тестировать анимации (после этого выбора на каждой анимации будет выбор, выбрать её или нет. После будет тест её и после теста дан выбор: шить или показать следующие анимации и так до конца);
 	- Прошивка без тестирования анимаций (если вы знаете что вам уже нравится);
 		- Только светодиод;
@@ -2417,7 +2448,7 @@
 	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
 	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
 	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
-	- MCMODE: Включает или отключает выбор в RECOVERY как установить через MAGISK или нет при DEBUGMODE - По умолчанию true.
+	- MCMODE: Включает или отключает выбор в RECOVERY как установить через MAGISK или нет при DEBUGMODE - По умолчанию false.
 	- ENDMODE: Позволяет вернутся в начало патча без перевыбора если что-то пропустили (выбор в самом конце) - По умолчанию true.
 	- MMUPDC: Добавляет проверку версий MAGISK модулей между патчем и установленными - По умолчанию true.
 	- LEGACYMODE: Включает показ старых/устаревших патчей/функций.
