@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 18.12.21 (65) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/18.12.2021/AIOPFMD-18.12.21-%2865%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1aEyMK5FysyQy8Bdkbuoy_nap_y-mNjiE/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/64">TG</a>
+* Версия AIOPFMD: 31.12.21 (66) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.12.2021/AIOPFMD-31.12.21-%2866%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1isA_EG4pDckWLlo3UeAWJKdEYWfN3Kip/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/65">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -30,14 +30,25 @@
 
 <details> 
   <summary>Changelog</summary>
-
+  
+#### 31.12.21 (66) ####
+* SafetyNet для Riru и ZYGISK обновлены до v2.1.3 и v2.2.1. Все остальные SafetyNet модули вырезаны ко всем хуям;
+* NLSound откачен до 3.0 Stable;
+* AdAway-hosts 30.12.2021;
+* Gboard Silk Theme Changer до 1.1 - добавил выбор на новые кнопки и фикс отключения некоторых элементов;
+* LSPosed для Riru и ZYGISK обновлен до v1.6.5 (6296);
+* Добавлена установка Wi-Fi & Mobile Data QS Style Changer для 12ки;
+* Добавлены строки на API 32;
+* Объединения некоторых команд;
+* Категория SafetyNet/MHPC/GPay опущена ниже Riru/Edx/LS/Posed/Mudules;
+* Может что-то ещё что забыл да и мне уже насрать.
 #### 18.12.21 (65) ####
 * Riru Core обновлен до v26.1.4.r522.8b379cedb5;
 * NLSound обновлен до v3.1 BETA:
 	- Всё как всегда;
 	- Некоторые пункты убраны и перемещены/заменены;
 * LSPosed для Riru и ZYGISK обновлен до v1.6.5 (6280);
-* hosts файл с AdAway обновлен от 14.12.2021;
+* hosts файл с AdAway обновлен от 15.12.2021;
 * Universal GMS Doze обновлён до v1.8.4 - MODID оставил старый и добавил зависимости где надо;
 * Добавлена установка Force MTP - принудительно активирует MTP потому как я заебался его включать и если забываю и подключаю к компу то в доме начинается РЕЗНЯ;
 * GBoard Silk Theme Changer обновлен до v1.0:
@@ -1280,6 +1291,8 @@
 	- Выключить;
 		- Включить пузыри клавиш;
 		- Выключить пузыри клавиш;
+			- Включить новый вид клавиш;
+			- Выключить новый вид клавиш;
 * Пункт (ALL) (10-12) (\\) - (Status Bar Increase Number Notification Icons) для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
 	- Количество иконок:
 		- 4;
@@ -1468,6 +1481,9 @@
 	- Oppo (Color OS 7);
 	- Spark (8.0);
 * Пункт (MAGISK & LEGACY) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
+* Пункт (MAGISK) (12) - (Wi-Fi & Mobile Data QS Style Changer) - изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
+	- Новый;
+	- Старый;
 
 <h3 align=center>Apps: GFU/GSF/SL/IA</h3>
 
@@ -1512,6 +1528,9 @@
 	- PATCH_DEVICE_FEATURES;
 	- PATCH_DIRAC;
 	- GENERAL_TWEAKS;
+	- PATCH_MIXER:
+		- Lite патчинг;
+		- Full патчинг;
 	- PATCH_IMPROVE_BLUETOOTH;
 	- PATCH_IO_POLICY;
 	- PATCH_AUDIO_POLICY;
@@ -2119,17 +2138,6 @@
 * Пункт (ALL) - (Show Battery Usage) проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
 * Пункт (MAGISK MANAGER) - (Get All Settings List) снятие Settings List для тестов;
 
-<h3 align=center>SafetyNet/MHPC/GPay</h3>
-
-* Пункт (MAGISK) (\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=774072&view=findpost&p=83848558">4PDA</a> - (Safety Net Patches) установка трёх актуальных (пока ещё актуальных) и универсальных SafetyNet патча;
-	- 1-й SafetyNet патч;
-	- 2-й SafetyNet патч <a href="https://forum.xda-developers.com/t/module-safetypatcher.3809879/">XDA</a>;
-	- 3-й SafetyNet патч (7-12) (Riru Core) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> || <a href="https://forum.xda-developers.com/t/magisk-module-universal-safetynet-fix-1-1-0.4217823/#post-84286769">XDA</a>;
-* Пункт (ALL) (10-12) - (Set Safety Net Eval Type To BASIC) превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro (уехал кстати) будет называться BASIC);
-* Пункт (ALL) - (Force Play Market Certified) просто включает принудительно пройденную сертификацию в Play Market;
-* Пункт (MAGISK) (TERMINAL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - (Magisk Hide Props Config) для настройки пропов устройства;
-* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a> || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - (GPay SQLite Fix) (появляется если находи NFC модуль и установлено приложение Gpay);
-
 <h3 align=center>Riru/Edx/LS/Posed/Mudules</h3>
 
 * Пункт (MAGISK) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - (Riru Core) для многих модулей;
@@ -2146,7 +2154,16 @@
 * Пункт (MAGISK) (8.1-12) (Riru Core) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108226592">4PDA</a> || <a href="https://github.com/canyie/Riru-MomoHider">GITHUB</a> - (Riru Momo Hider) для скрытия MAGISK от приложений:
 	- Полная активация;
 	- Активация по отдельности с небольшим описанием;
-	
+* Пункт (MAGISK) (12) (Riru Core) <a href="https://github.com/kdrag0n/android12-extensions">GITHUB</a> - (Android 12 Extensions) - добавляет больше настроек через приложение:
+
+<h3 align=center>SafetyNet/MHPC/GPay</h3>
+* Пункт (MAGISK) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> - (Safety Net Patches) - установка SafetyNet патчей для ZYGISK или Riru;
+* Пункт (ALL) (10-12) - (Set Safety Net Eval Type To BASIC) превращает ваш телефон в кирп... BASIC по всем названиям для прохода Safety Net (так что ваш Realme 6 Pro (уехал кстати) будет называться BASIC);
+* Пункт (ALL) - (Force Play Market Certified) просто включает принудительно пройденную сертификацию в Play Market;
+* Пункт (MAGISK) (TERMINAL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - (Magisk Hide Props Config) для настройки пропов устройства;
+* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a> || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - (GPay SQLite Fix) (появляется если находи NFC модуль и установлено приложение Gpay);
+
+
 <h3 align=center>Tweaks: FGS/BP/LED/UGMSD/USGP/VS</h3>
 
 * Пункт (MAGISK/MAGISK MANAGER) <a href="https://4pda.to/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - (Force Google Sync) принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);

@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="18.12.21 (65)"
+VAIOPFMD="31.12.21 (66)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -20,7 +20,6 @@ UNTARXZ="$BB/tar"
 UNZIP="$BB/unzip"
 TIMEOUT="$BB/timeout"
 ECHO="$BB/echo"
-FOLD="$BB/fold"
 HEAD="$BB/head"
 ZIPSIGNER="$AADDONS/zipsigner"
 ZIPSIGNERJAR="$ZIPSIGNER-3.0-dexed.jar"
@@ -38,7 +37,7 @@ IDBGDS="BackGestureDisabler"; VIPBGD="v1.0"
 IDGBNBS="GboardNavBarSpacing"; VIPGBNBS="v1.2"
 IDGBRC="GBoardRoundedCorners"; VIPGBRC="v1.1"
 IDGBT="GBoardThemes"; VIPGBT="v1.4"
-IDGBSTE="GboardSilkThemeChanger"; VIPGBSTE="v1.0"
+IDGBSTE="GboardSilkThemeChanger"; VIPGBSTE="v1.1"
 IDSBINNI="SBINNI"; VIPSBINNI="v1.8"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
 IDRUI="RoundedUI"; VIPRUI="v2.6"
@@ -56,6 +55,7 @@ IDBA="BootAnimation"; VIPBA="v1.4"
 IDOSEMOJI="iOS14.6_Emoji_for_Android"; VIPOSEMOJI="v1.5"; VCIPOSEMOJI="1"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.3"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
+IDWFAMDQSSC="WFAMDQSSC"; VIPWFAMDQSSC="v1.0"
 #Apps: GFU/GSF/SL/ASUSS/IA
 IDGFUL="FaceLock"; VIPGFUL="v1.0"
 IDGSF="GSF"; VIPGSF="v1.0"
@@ -74,7 +74,7 @@ IDVFXP="V4AFXPresets"; VIPVFXP="v1.3"
 IDJDSPM="ainur_jamesdsp"; VIPJDSPM="v4.3 (9-8-2021)"; VCIPJDSPM="83"
 IDDTSHPX="DTS_HPX"; VIPDTSHPX="zenz"; VCIPDTSHPX="58"
 IDAN="ainur_narsil"; VIPAN="MK I (09.09.2021)"; VCIPAN="52"
-IDNLS="NLSound"; VIPNLS="v3.1 BETA"; VCIPNLS="7"
+IDNLS="NLSound"; VIPNLS="v3.0 STABLE"; VCIPNLS="7"
 IDAIST="AIST"; VIPAIST="v1.2"; VCIPAIST="15"
 IDSAQ="systemaudioquality2"; VIPSAQ="2.0"; VCIPSAQ="2"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.0"
@@ -83,7 +83,7 @@ IDACP="acp"; VIPACP="v2.4"; VCIPACP="38"
 IDAML="aml"; VIPAML="v4.0"; VCIPAML="55"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="15.12.2021"
+IDVAAH="AdAwayHosts"; VIPVAAH="30.12.2021"
 IDVLPH="LuckyPatcherHosts"; VIPVLPH="v9.8.3"; VCIPLPH="1743"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v16.9-210829"; VCIPVSH="169"
 IDVOH="Hosts"; VIPVOH="v1.1"
@@ -109,22 +109,20 @@ IDSTZD="Systemless_TZData"; VIPSTZD="2020A&F"; VCIPSTZD="16"
 VIPDDVFE="02.11.2020"
 IDFPA="FingerprintActions"; VIPFPA="v1.1"
 IDFSLFM="FSFM"; VIPFSLFM="v1.2"
+#Riru/Edx/LS/Posed/Mudules
+IDRIRU="riru-core"; VIPRIRU="v26.1.4.r522.8b379cedb5"; VCIPRIRU="522"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
+IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
+IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.6.5 (6296)"; VCIPLSPOSEDR="6296"
+IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.6.5 (6296)"; VCIPLSPOSEDZ="6296"
+IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v11"; VCIPRIRUCW="11"
+IDRMH="riru_momohider"; VIPRMH="0.0.7"; VCIPRMH="7"
+IDATE="android12-extensions"; VIPATE="v9.0.0"; VCIPATE="9000000"
 #SafetyNet/MHPC/GPay
-IDSNP="petnoires-safetyspoofer"; VIPSNP="v1-beta2"; VCIPSNP="16"
-IDSNPA="safetypatcher"; VIPSNPA="v3"; VCIPSNPA="5"
-IDSNPRZ="safetynet-fix"; VIPSNPR="v2.1.1"; VCIPSNPR="20101"; VIPSNPZ="v2.2.0"; VCIPSNPZ="20200"
+IDSNPRZ="safetynet-fix"; VIPSNPR="v2.1.3"; VCIPSNPR="20103"; VIPSNPZ="v2.2.1"; VCIPSNPZ="20201"
 IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
 IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.1.2-v137"; VCIPMHPC="75"
 IDGPF="73sydney.gpay"; VIPGPF="v2.4"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
-#Riru/Edx/LS/Posed/Mudules
-IDRIRU="riru-core"; VIPRIRU="v26.1.4.r522.8b379cedb5"; VCIPRIRU="522"; VIPRIRUL="v25.4.4.r426.05efc94"; VCIPRIRUL="426"
-IDEDXPOSED="riru_edxposed"; VIPEDXPOSED="v0.5.2.2_4683-master"; VCIPEDXPOSED="4683"
-IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.6.5 (6282)"; VCIPLSPOSEDR="6282"
-IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.6.5 (6282)"; VCIPLSPOSEDZ="6282"
-IDRIRUCW="riru_clipboard_whitelist"; VIPRIRUCW="v11"; VCIPRIRUCW="11"
-IDRMH="riru_momohider"; VIPRMH="0.0.7"; VCIPRMH="7"
-IDATE="android12-extensions"; VIPATE="v9.0.0"; VCIPATE="9000000"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 IDFGS="ForceGoogleSync"; VIPFGS="v1.1"
 IDFEG="ForceGestures"; VIPFEG="v1.1"
@@ -328,6 +326,7 @@ VNDKQ="$(find $IPSL $IPVL -type d -iname "vndk*-Q")"
 VNDKQ64="$(find $IPSL64 $IPVL64 -type d -iname "vndk*-Q")"
 SDEVFE="$IPSEDF/*.xml"; VDEVFE="$IPVEDF/*.xml"
 SPGLOBAL="settings put global"; SPSECURE="settings put secure"; SPSYSTEM="settings put system"
+SGGLOBAL="settings get global"; SGSECURE="settings get secure"; SGSYSTEM="settings get system"
 if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.conf; PATCHMODEFILE="$STORAGE/PATCHMODE.conf"; fi
 case $PATCHMODEFILE in *sh*) mv $PATCHMODEFILE $STORAGE/PATCHMODE.conf; PATCHMODEFILE="$STORAGE/PATCHMODE.conf";; esac
 PMODE="$(GET_FILE_PROP -pm "$PATCHMODEFILE" "PMODE")"
@@ -1082,7 +1081,7 @@ if $FINDAIOPFMDA; then unzip -oq $AIOPFMDAFILE -d $TMPDIR 2>/dev/null; fi &
 CHECK_AVERSION() {
 ASDK="$(GREP_PROP "ro.build.version.sdk")"
 AVERSION="$(GREP_PROP "ro.build.version.release")"
-AKITKAT=false; ALOLLIPOP=false; AMARSHMALLOW=false; ANOUGAT=false; AOREO=false; APIE=false; ATEN=false; AELEVEN=false; ATWELVE=false
+AKITKAT=false; ALOLLIPOP=false; AMARSHMALLOW=false; ANOUGAT=false; AOREO=false; APIE=false; ATEN=false; AELEVEN=false; ATWELVE=false; ATWELVEL=false
 if [ "$ASDK" = "19" ] || [ "$AVERSION" = "4.4.4" ]; then AKITKAT=true; ACNV="KK"
 elif [ "$ASDK" = "22" ] || [ "$AVERSION" = "5.1.1" ]; then ALOLLIPOP=true; ACNV="L"
 elif [ "$ASDK" = "23" ] || [ "$AVERSION" = "6.0.1" ]; then AMARSHMALLOW=true; ACNV="M"
@@ -1092,9 +1091,10 @@ elif [ "$ASDK" = "28" ] || [ "$AVERSION" = "9" ] || [ "$AVERSION" = "9.0" ]; the
 elif [ "$ASDK" = "29" ] || [ "$AVERSION" = "10" ] || [ "$AVERSION" = "10.0" ]; then ATEN=true; ACNV="Q"
 elif [ "$ASDK" = "30" ] || [ "$AVERSION" = "11" ] || [ "$AVERSION" = "11.0" ]; then AELEVEN=true; ACNV="R"
 elif [ "$ASDK" = "31" ] || [ "$AVERSION" = "12" ] || [ "$AVERSION" = "12.0" ]; then UIP -d "Warning, SDK $ASDK Is Not Fully Support!"; ATWELVE=true; ACNV="S"
+elif [ "$ASDK" = "32" ] || [ "$AVERSION" = "12.1" ] || [ "$AVERSION" = "12.1.0" ]; then UIP -d "Warning, SDK $ASDK Is Not Fully Support!"; ATWELVEL=true; ACNV="SL"
 fi
 case $ASDK in
-"19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; *) UIP -d "Warning, SDK Not Supported/Found!";;
+"19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; "32");; *) UIP -d "Warning, SDK Not Supported/Found!";;
 esac
 DYNLIB=true
 [ $ASDK -lt 26 ] && DYNLIB=false
@@ -1275,18 +1275,6 @@ MSGDELIMITER() {
 $BOOTMODE && echo "$MSGDELIMITER" || echo -e "ui_print $MSGDELIMITER\nui_print" >> /proc/self/fd/$OUTFD
 }
 
-GREP_PROP() {
-local REGEX="s/^$1=//p"
-shift
-local FILES=$@
-[ -z "$FILES" ] && FILES="$PROPFILESALT"
-sed -n "$REGEX" $FILES 2>/dev/null | head -n 1
-}
-
-BUILD_PROP_BACKUP() {
-if [ -f $IPSBP ]; then cp -f $IPSBP "$IPSBP-$DMYHMS.bak"; fi
-}
-
 UNIVERSALUNZIP() {
 cd $TMPDIR/$UPN && $ZIPPACKER -r -0 $TMPDIR/$UPN * >/dev/null
 OFPATHZIP="$TMPDIR/$UPN"
@@ -1341,8 +1329,16 @@ star2lte
 z2_row
 beyond2lte
 "
-for lwrc in $LIBWORKAROUNDKIST; do if CHECK_DEVICE $lwrc; then Workaround=true; break; else Workaround=false; fi; done
-if [ $Workaround != true ]; then IPLIBW; fi
+for lwrc in $LIBWORKAROUNDKIST; do if CHECK_DEVICE $lwrc; then WORKAROUND=true; break; else WORKAROUND=false; fi; done
+if [ $WORKAROUND != true ]; then IPLIBW; fi
+}
+
+GREP_PROP() {
+local REGEX="s/^$1=//p"
+shift
+local FILES=$@
+[ -z "$FILES" ] && FILES="$PROPFILESALT"
+sed -n "$REGEX" $FILES 2>/dev/null | head -n 1
 }
 
 GET_FILE_PROP() {
@@ -1396,6 +1392,7 @@ for TARGET in $RORB; do
 case $1 in
 -r) if [ -f $TARGET.bak ]; then mv -f $TARGET.bak $TARGET; fi;;
 -s) if [ -f $TARGET ]; then for SBT in $TARGET; do cp -f $SBT $SBT.bak; done; fi;;
+-bp) if [ -f $TARGET ]; then cp -f $TARGET "$TARGET-$DMYHMS.bak"; fi;;
 esac
 done
 }
@@ -1618,8 +1615,10 @@ case $1 in
 esac
 }
 
-MGSERVICED() {
-echo "#/sbin/sh
+MSSERVICE() {
+case $1 in
+-s) echo -e "while true; do\nif [ \$(getprop sys.boot_completed) -eq 1 ]; then\n$2\nbreak\nfi\ndone" > $MODPATH/$MODID/service.sh;;
+*) echo "#/sbin/sh
 while true; do
 if [ \$(getprop sys.boot_completed) -eq 1 ]; then
 if [ -f $MODPATH/$MODID/disable ] || [ ! -d $MODPATH/$MODID ]; then
@@ -1634,11 +1633,8 @@ break
 fi
 fi
 done" > $SERVICED/$3.sh
-chmod 777 $SERVICED/$3.sh
-}
-
-MBCCSERVICE() {
-echo -e "while true; do\nif [ \$(getprop sys.boot_completed) -eq 1 ]; then\n$1\nbreak\nfi\ndone" > $MODPATH/$MODID/service.sh
+chmod 777 $SERVICED/$3.sh;;
+esac
 }
 
 OSP_DETECT() {
@@ -1728,9 +1724,9 @@ sed -i "/^$CONF {/,/^}/ s/$CONF {/$CONF {\n    $3 {\n        $4 {\n        }\n  
 elif [ ! "$(sed -n "/^$CONF {/,/^}/ {/$3 {/,/^    }/ {/$4 {/,/}/p}}" $2)" ]; then
 sed -i "/^$CONF {/,/^}/ {/$3 {/,/^    }/ s/$3 {/$3 {\n        $4 {\n        }/}" $2
 fi;;
-*.xml) if [ ! "$(sed -n "/^ *<$XML>/,/^ *<\/$XML>/p" $2)" ]; then
+*.xml) if [ ! "$(sed -n "/^ *<$XML>/,/^ *<\/$XML>/p" $2)" ]; then     
 sed -i "/<\/audio_effects_conf>/i\    <$XML>\n       <stream type=\"$3\">\n            <apply effect=\"$4\"\/>\n        <\/stream>\n    <\/$XML>" $2
-elif [ ! "$(sed -n "/^ *<$XML>/,/^ *<\/$XML>/ {/<stream type=\"$3\">/,/<\/stream>/p}" $2)" ]; then
+elif [ ! "$(sed -n "/^ *<$XML>/,/^ *<\/$XML>/ {/<stream type=\"$3\">/,/<\/stream>/p}" $2)" ]; then     
 sed -i "/^ *<$XML>/,/^ *<\/$XML>/ s/    <$XML>/    <$XML>\n        <stream type=\"$3\">\n            <apply effect=\"$4\"\/>\n        <\/stream>/" $2
 elif [ ! "$(sed -n "/^ *<$XML>/,/^ *<\/$XML>/ {/<stream type=\"$3\">/,/<\/stream>/ {/^ *<apply effect=\"$4\"\/>/p}}" $2)" ]; then
 sed -i "/^ *<$XML>/,/^ *<\/$XML>/ {/<stream type=\"$3\">/,/<\/stream>/ s/<stream type=\"$3\">/<stream type=\"$3\">\n            <apply effect=\"$4\"\/>/}" $2
@@ -1876,70 +1872,46 @@ for OMIX in $MPATHS; do
 UIP "Found $OMIX" "Patching..."
 MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
 case $1 in
--nl) PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX3 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX4 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX5 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX6 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX7 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX8 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX3 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX4 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX5 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX6 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX7 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX8 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX0 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX1 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX2 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX3 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX4 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX5 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX6 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX7 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX8 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX0 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX1 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX2 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX3 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX4 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX5 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX6 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX7 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX8 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX0 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX1 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX2 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX3 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX4 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX5 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX6 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX7 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX8 Mix Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_RX0 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_RX1 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_RX2 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_RX3 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX0 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX1 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX2 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX3 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX4 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX5 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX6 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX7 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX8 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX0 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX1 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX2 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX3 Digital Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="HPHL Volume"]' "18"
-PXMLNLS -u $MIX '/mixer/ctl[@name="HPHR Volume"]' "18";;
+-nl) PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX3 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX4 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX5 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX6 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX7 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX8 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX3 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX4 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX5 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX6 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX7 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX8 Mix Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX0 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX1 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX2 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX3 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX4 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX5 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX6 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX7 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="WSA_RX8 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX0 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX1 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX2 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX3 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX4 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX5 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX6 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX7 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_RX8 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "92"
+PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "92";;
 -aist) if $HIFI; then
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX0 Digital Volume"]' "86"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 Digital Volume"]' "90"
@@ -2140,82 +2112,42 @@ UIP "Start PATCH_MICROPHONE" "Patching Needed Files..."
 for OMIX in $MPATHS; do
 UIP "Found $OMIX" "Patching..."
 MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
-if $HIFI; then
 PXMLNLS -u $MIX '/mixer/ctl[@name="ADC1 Volume"]' "12"
 PXMLNLS -u $MIX '/mixer/ctl[@name="ADC2 Volume"]' "12"
 PXMLNLS -u $MIX '/mixer/ctl[@name="ADC3 Volume"]' "12"
 PXMLNLS -u $MIX '/mixer/ctl[@name="ADC4 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC0 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC1 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC2 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC3 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC4 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC5 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC6 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC7 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC8 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC0 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC1 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC2 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC3 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC4 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC5 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC6 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC7 Volume"]' "88"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC8 Volume"]' "88"
-else
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC1 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC2 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC3 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="ADC4 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC0 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC1 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC2 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC3 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC4 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC5 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC6 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC7 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DEC8 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC0 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC1 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC2 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC3 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC4 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC5 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC6 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC7 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC8 Volume"]' "90"
-fi
-PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="ADC1 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="ADC2 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="ADC3 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="ADC1 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="ADC3 Volume"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX0"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX1"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX2"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX3"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX4"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX5"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX6"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX7"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX8"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX9"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX10"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="DMIC MUX11"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX0"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX1"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX2"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX3"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX4"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX5"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX6"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX7"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX8"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX9"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX10"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="AMIC MUX11"]' "ZERO"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC0 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC1 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC2 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC3 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC4 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC5 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC6 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC7 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="DEC8 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC0 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC1 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC2 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC3 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC4 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC5 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC6 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC7 Volume"]' "94"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX_DEC8 Volume"]' "94"
+PXMLNLS -s $MIX '/mixer/ctl[@name="EC Reference Bit Format"]' "S16_LE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="EC Reference SampleRate"]' "48000"
+PXMLNLS -u $MIX '/mixer/ctl[@name="adc1"]/ctl[@name="ADC1 Volume"]' "12"
+PXMLNLS -u $MIX '/mixer/ctl[@name="adc2"]/ctl[@name="ADC2 Volume"]' "12"
+PXMLNLS -u $MIX '/mixer/ctl[@name="adc3"]/ctl[@name="ADC3 Volume"]' "12"
+PXMLNLS -u $MIX '/mixer/ctl[@name="asr-mic"]/ctl[@name="ADC1 Volume"]' "12"
+PXMLNLS -u $MIX '/mixer/ctl[@name="asr-mic"]/ctl[@name="ADC3 Volume"]' "12"
+PXMLNLS -u $MIX '/mixer/speaker-mic/adc1/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
+PXMLNLS -u $MIX '/mixer/handset-mic/adc1/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
+PXMLNLS -u $MIX '/mixer/secondary-mic/adc3/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
+PXMLNLS -u $MIX '/mixer/headset-mic/adc2/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
+PXMLNLS -u $MIX '/mixer/dmic-endfire/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
+PXMLNLS -u $MIX '/mixer/dmic-endfire-liquid/handset-dmic-endfire/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
+PXMLNLS -u $MIX '/mixer/dmic-broadside/speaker-dmic-broadside/ctl[@name="IIR1 INP1 MUX"]' "ZERO"
 UIP "Files Found And Patched"
 done
 }
@@ -2225,149 +2157,57 @@ UIP "Start PATCH_IIR" "Patching Needed Files..."
 for OMIX in $MPATHS; do
 UIP "Found $OMIX" "Patching..."
 MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="0"]' "268833620"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="1"]' "537398060"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="2"]' "267510580"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="3"]' "537398060"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="4"]' "267908744"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="0"]' "266468108"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="1"]' "544862876"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="2"]' "262421829"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="3"]' "544862876"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="4"]' "260454481"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="0"]' "262913321"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="1"]' "559557058"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="2"]' "252311547"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="3"]' "559557058"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="4"]' "246789412"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="0"]' "294517138"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="1"]' "572289454"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="2"]' "210943778"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="3"]' "572289454"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="4"]' "237025461"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="0"]' "329006442"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="1"]' "711929387"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="2"]' "110068469"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="3"]' "711929387"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="4"]' "170639455"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="0"]' "238395206"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="1"]' "689443228"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="2"]' "205354587"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="3"]' "689443228"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band1"][@id="4"]' "175314338"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="0"]' "262009200"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="1"]' "568438374"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="2"]' "243939794"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="3"]' "569025299"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band2"][@id="4"]' "238100463"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="0"]' "253440447"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="1"]' "842391711"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="2"]' "209259777"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="3"]' "842391711"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band3"][@id="4"]' "194264768"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="0"]' "268435456"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="1"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="2"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="3"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band4"][@id="4"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="0"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="1"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="2"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="3"]' "0"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Band5"][@id="4"]' "0"
 PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Enable Band0"]' "1"
 PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Enable Band1"]' "1"
 PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Enable Band2"]' "1"
 PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Enable Band3"]' "1"
 PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Enable Band4"]' "1"
 PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 Enable Band5"]' "1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP0 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP1 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP2 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP3 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP4 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP5 Volume"]' "90"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP1 MUX"]' "RX1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP2 MUX"]' "RX1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP3 MUX"]' "RX1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP1 MUX"]' "RX2"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP2 MUX"]' "RX2"
-PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP3 MUX"]' "RX2"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP0 Volume"]' "82"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP1 Volume"]' "82"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP2 Volume"]' "82"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP3 Volume"]' "82"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP4 Volume"]' "82"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP5 Volume"]' "82"
+PXMLNLS -u $MIX '/mixer/ctl[@name="IIR0 INP1 MUX"]' "headphones"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX1 HPF Switch"]' "On"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX2 HPF Switch"]' "On"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX3 HPF Switch"]' "On"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX1 HPF Switch"]' "On"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX2 HPF Switch"]' "On"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TX3 HPF Switch"]' "On"
 UIP "Files Found And Patched"
 done
 }
 
 PATCH_AUDIO_PLATFORM_INFO() {
-UIP "Start PATCH_AUDIO_PLATFORM_INFO" "Patching Needed Files..."
-case $1 in
--nl) for OAPLI in $APIXML; do
-UIP "Found $OAPLI" "Patching..."
-APLI="$MODPATH/$MODID$(echo $OAPLI | sed "s|^/vendor|$MIPSV|g")"
-mkdir -p `dirname $APLI`
-cp -f $MAGISKMIRROR$OAPLI $APLI
-sed -i 's/\t/  /g' $APLI
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/config_params/param[@key="native_audio_mode"]' "multiple_mix_dsp"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/config_params/param[@key="hifi_filter"]' "true"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/config_params/param[@key="perf_lock_opts"]' "0, 0x0, 0x0, 0x0, 0x0"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_REVERSE"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_SPEAKER_PROTECTED"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_HEADPHONES_44_1"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_SPEAKER"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_HEADPHONES"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info/bit_width_configs/device[@name="SND_DEVICE_OUT_BT_A2DP"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/app_types/app[@mode="default"]' "bit_width=24"
-PXMLNLS -s $APLI '/audio_platform_info_intcodec/app_types/app[@mode="default"]' "max_rate=192000"
-if [ ! "$(grep '<app_types>' $APLI)" ]; then
-sed -i "s/<\/audio_platform_info>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/audio_platform_info>/" $APLI
-else
-for i in 69936 69940; do
-[ "$(xmlstarlet sel -t -m "/audio_platform_info_extcodec/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<audio_platform_info_extcodec>/,/<\/audio_platform_info_extcodec>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI
-done
-fi
-sed -i 's/AUDIO_MICROPHONE_CHANNEL_MAPPING_PROCESSED/AUDIO_MICROPHONE_CHANNEL_MAPPING_DIRECT/g' $APLI
-UIP "Files Found And Patched"
-done
-for OMIX in $MPATHS; do
-UIP "Found $OMIX" "Patching..."
-MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
-PXMLNLS -s $MIX '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="EC Reference SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PXMLNLS -s $MIX '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PXMLNLS -s $MIX '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "KHZ_96"
-PXMLNLS -s $MIX '/mixer/ctl[@name="Display Port RX Bit Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="Display Port RX SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SEC_MI2S_RX Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SEC_MI2S_RX SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="WSA_CDC_DMA_0 RX Format"]' "DSD_DOP"
-PXMLNLS -s $MIX '/mixer/ctl[@name="WSA_CDC_DMA_RX_0 Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="WSA_CDC_DMA_RX_0 SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="WSA_CDC_DMA_0 TX Format"]' "DSD_DOP"
-PXMLNLS -s $MIX '/mixer/ctl[@name="WSA_CDC_DMA_TX_0 Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="WSA_CDC_DMA_TX_0 SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_0 RX Format"]' "DSD_DOP"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_RX_0 Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_RX_0 SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_RX_5 Channels"]' "Two"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_5 RX Format"]' "DSD_DOP"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_RX_5 Format"]' "S32_LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_RX_5 SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="DSD_L Switch"]' "1"
-PXMLNLS -s $MIX '/mixer/ctl[@name="DSD_R Switch"]' "1"
-PXMLNLS -s $MIX '/mixer/ctl[@name="ASM Bit Width"]' "24"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_CDC_DMA_0 RX Format"]' "DSD_DOP"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_CDC_DMA_RX_0 Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_CDC_DMA_RX_0 SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/path[@name="handset"]/ctl[@name="RX_CDC_DMA_RX_0 Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="WSA_CDC_DMA_RX_0 Port Mixer SLIM_7_TX"]' "1"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX_CDC_DMA_RX_0 Port Mixer SLIM_7_TX"]' "1"
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="SLIM_2_RX Format"]' "DSD_DOP"
-if $HIFI; then
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX SampleRate"]' "KHZ_192"
-PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="PRIM_MI2S_RX Format"]' "S24_3LE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="PRIM_MI2S_TX Format"]' "S24_3LE"
-fi
-if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
-PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
-fi
-UIP "Files Found And Patched"
-done
-for OSNDTRG in $SNDTRGS; do
-UIP "Found $OSNDTRG" "Patching..."
-STG="$MODPATH/$MODID$(echo $OSNDTRG | sed "s|^/vendor|$MIPSV|g")"
-mkdir -p `dirname $STG`
-cp -f $MAGISKMIRROR$OSNDTRG $STG
-sed -i 's/\t/  /g' $STG
-PXMLNLS -s $STG '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PXMLNLS -s $STG '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "KHZ_192"
-PXMLNLS -s $STG '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PXMLNLS -s $STG '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "KHZ_96"
-UIP "Files Found And Patched"
-done;;
--aist)
+UIP "Start PATCH_AUDIO_PLATFORM_INFO" "Patching Needed Files..." 
 for OAPLI in $APIIEXML; do
-UIP "Found $OAPLI" "Patching..."
 case $OAPLI in
 *audio_platform_info_intcodec.xml) APTYPE="audio_platform_info_intcodec";;
 *audio_platform_info_extcodec.xml) APTYPE="audio_platform_info_extcodec";;
@@ -2386,19 +2226,18 @@ PXMLNLS -s $APLI "/$APTYPE/bit_width_configs/device[@name=\"SND_DEVICE_OUT_SPEAK
 PXMLNLS -s $APLI "/$APTYPE/bit_width_configs/device[@name=\"SND_DEVICE_OUT_HEADPHONES_44_1\"]" "24"
 PXMLNLS -s $APLI "/$APTYPE/bit_width_configs/device[@name=\"SND_DEVICE_OUT_GAME_SPEAKER\"]" "24"
 PXMLNLS -s $APLI "/$APTYPE/bit_width_configs/device[@name=\"SND_DEVICE_OUT_GAME_HEADPHONES\"]" "24"
-PXMLNLS -s $APLI "/$APTYPE/bit_width_configs/device[@name=\"SND_DEVICE_OUT_BT_A2DP\"]" "24"
+PXMLNLS -s $APLI "/$APTYPE/bit_width_configs/device[@name=\"SND_DEVICE_OUT_BT_A2DP\"]" "24"	 
 PXMLNLS -u $APLI "/$APTYPE/app_types/app[@mode=\"default\"]" "bit_width=24"
 PXMLNLS -u $APLI "/$APTYPE/app_types/app[@mode=\"default\"]" "max_rate=192000"
 if [ ! "$(grep '<app_types>' $APLI)" ]; then
-sed -i "s/<\/$APTYPE>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/$APTYPE>/" $APLI
+sed -i "s/<\/$APTYPE>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"192000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"192000\" \/> \n  <app_types> \n<\/$APTYPE>/" $APLI		  
 else
 for i in 69936 69940; do
 [ "$(XMLSTARLET sel -t -m "/$APTYPE/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $APLI)" ] || sed -i "/<$APTYPE>/,/<\/$APTYPE>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"$i\" max_rate=\"192000\" \/> \n\1\2/}" $APLI			
 done
 fi
 UIP "Files Found And Patched"
-done;;
-esac
+done
 }
 
 PATCH_COMPANDERS() {
@@ -2424,8 +2263,6 @@ PXMLNLS -u $MIX '/mixer/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/ctl[@name="SpkrLeft COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/ctl[@name="SpkrRight COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="COMP3 Switch"]' 0
@@ -2444,8 +2281,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="WSA_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="asr-mic"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP3 Switch"]' 0
@@ -2454,18 +2289,12 @@ PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP5 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP6 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP7 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP8 Switch"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP0 RX1"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP0 RX2"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP1"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="COMP2"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="SpkrLeft COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="SpkrRight COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="WSA_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc1"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP3 Switch"]' 0
@@ -2474,18 +2303,12 @@ PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP5 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP6 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP7 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP8 Switch"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP0 RX1"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP0 RX2"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP1"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="COMP2"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="SpkrLeft COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="SpkrRight COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="WSA_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc2"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP3 Switch"]' 0
@@ -2494,18 +2317,12 @@ PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP5 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP6 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP7 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP8 Switch"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP0 RX1"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP0 RX2"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP1"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="COMP2"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="SpkrLeft COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="SpkrRight COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="WSA_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="adc3"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP3 Switch"]' 0
@@ -2514,18 +2331,12 @@ PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP5 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP6 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP7 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP8 Switch"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP0 RX1"]' 0
-PXMLNLS -s $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP0 RX2"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP1"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="COMP2"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="SpkrLeft COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="SpkrRight COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="WSA_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="va-enroll-mic"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP1 Switch"]' 0
@@ -2546,8 +2357,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="WSA_COMP
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="COMP3 Switch"]' 0
@@ -2566,8 +2375,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="WSA_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP2 Switch"]' 0
@@ -2588,8 +2395,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="WSA_COMP1 Switch"]
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP3 Switch"]' 0
@@ -2608,8 +2413,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="WSA_COMP1 Switch
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="speaker-mono-2"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="COMP3 Switch"]' 0
@@ -2628,8 +2431,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="WSA_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="handset"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -2650,8 +2451,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="COMP3 Switch"]' 0
@@ -2672,8 +2471,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_COMP1 Switch"]
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-ce"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="COMP3 Switch"]' 0
@@ -2694,8 +2491,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_COMP1 Switc
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-no-ce"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="COMP3 Switch"]' 0
@@ -2716,8 +2511,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="RX_COMP1 Swi
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-karaoke"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP3 Switch"]' 0
@@ -2736,8 +2529,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="WSA_COMP1 Switc
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP3 Switch"]' 0
@@ -2756,8 +2547,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="WSA_COMP1 Switch
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -2776,8 +2565,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_COMP1 Switch
 PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -2796,8 +2583,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="WSA_COMP1 Swit
 PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voice-headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -2816,8 +2601,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="WSA_COMP1 Switch
 PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="tty-headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="COMP3 Switch"]' 0
@@ -2836,8 +2619,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="WSA_COMP1 Swit
 PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="WSA_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="RX_COMP2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="true-native-mode"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="COMP3 Switch"]' 0
@@ -2858,8 +2639,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="RX_COMP1 Swi
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="headphones-generic"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -2880,8 +2659,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="RX_COMP1 S
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -2902,8 +2679,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="RX_COMP
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voice-anc-fb-headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="COMP3 Switch"]' 0
@@ -2924,8 +2699,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="RX_COMP1 Switch"]' 
 PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="aac-initial"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="COMP3 Switch"]' 0
@@ -2946,8 +2719,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-on"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="COMP3 Switch"]' 0
@@ -2968,8 +2739,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc2-on"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -2990,8 +2759,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="RX_COMP1 Swi
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="COMP3 Switch"]' 0
@@ -3012,8 +2779,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="RX_COMP
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="anc-off-headphone-combo"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="COMP3 Switch"]' 0
@@ -3034,8 +2799,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="RX_COMP1 Swi
 PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="voiceanc-headphone"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="COMP3 Switch"]' 0
@@ -3056,8 +2819,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="RX_COMP1 Switch"]'
 PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="ADSP testfwk"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="COMP3 Switch"]' 0
@@ -3078,8 +2839,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="bt-a2dp"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -3100,8 +2859,6 @@ PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name=
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP0 RX1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="deep-buffer-playback headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP3 Switch"]' 0
@@ -3121,9 +2878,7 @@ PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="WSA_COMP2 
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP0 RX1 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="HPHR_COMP Switch"]' 0
+PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback"]/ctl[@name="COMP0 RX2 Switch"]' 0	
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP3 Switch"]' 0
@@ -3143,27 +2898,21 @@ PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name=
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="RX_COMP1 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="RX_COMP2 Switch"]' 0
 PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP0 RX1 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP0 RX2 Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="HPHL_COMP Switch"]' 0
-PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="HPHR_COMP Switch"]' 0
+PXMLNLS -u $MIX '/mixer/path[@name="low-latency-playback headphones"]/ctl[@name="COMP0 RX2 Switch"]' 0	
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 16 Volume"]' 0
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 15 Volume"]' 0
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 29 Volume"]' 0
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 30 Volume"]' 0
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 31 Volume"]' 0
 PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 32 Volume"]' 0
-PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 41 Volume"]' 0
-PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 42 Volume"]' 0
-PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 43 Volume"]' 0
-PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 44 Volume"]' 0
-PXMLNLS -s $MIX '/mixer/ctl[@name="Compress Playback 45 Volume"]' 0
 UIP "Files Found And Patched"
 done
 }
 
 PATCH_AUDIO_CODEC() {
+UIP "Start PATCH_AUDIO_CODEC"
 if FINDER "$ACXML"; then
-UIP "Start PATCH_AUDIO_CODEC" "Patching Needed Files..."
+UIP "Patching Needed Files..."
 for OACONF in $ACXML; do
 UIP "Found $OACONF" "Patching..."
 ACONF="$MODPATH/$MODID$(echo $OACONF | sed "s|^/vendor|$MIPSV|g")"
@@ -3255,7 +3004,7 @@ persist.dirac.acs.controller=gef
 persist.dirac.gef.oppo.syss=true
 persist.dirac.config=64
 persist.dirac.gef.exs.did=50,50
-persist.dirac.gef.ext.did=500,500,500,500
+persist.dirac.gef.ext.did=450,450,450,450
 persist.dirac.gef.ins.did=0,0,0
 persist.dirac.gef.int.did=0,0,0,0
 persist.dirac.gef.ext.appt=0x00011130,0x00011134,0x00011136
@@ -3268,104 +3017,101 @@ persist.dirac.gef.ins.mid=268512738
 persist.dirac.gef.int.mid=268512736
 persist.dirac.path=/vendor/etc/dirac
 ro.dirac.acs.storeSettings=1
-persist.dirac.acs.ignore_error=1
-ro.audio.soundfx.dirac=true
-ro.vendor.audio.soundfx.type=dirac
-persist.audio.dirac.speaker=true" >> $MODPATH/$MODID/system.prop
+persist.dirac.acs.ignore_error=1" >> $MODPATH/$MODID/system.prop
 }
 
 PATCH_MIXER() {
 UIP "Start PATCH_MIXER" "Patching Needed Files..."
 case $1 in
 -nl) if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
-PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 ClassD Edge"]' "7"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 Volume"]' "30"
-echo -e '\n# PATCH MIXER\nro.sound.alsa=TAS2557' >> $MODPATH/$MODID/system.prop
+echo -e "\n# PATCH MIXER\nro.sound.alsa=TAS2557" >> $MODPATH/$MODID/system.prop
 fi
 for OMIX in $MPATHS; do
 UIP "Found $OMIX" "Patching..."
 MIX="$MODPATH/$MODID$(echo $OMIX | sed "s|^/vendor|$MIPSV|g")"
-if $HIFI; then
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX1 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX2 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX3 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX4 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX5 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX1 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX2 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX3 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX4 HPF cut off"]' "CF_NEG_3DB_4HZ"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX5 HPF cut off"]' "CF_NEG_3DB_4HZ"
-else
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX1 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX2 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX3 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX4 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RX5 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX1 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX2 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX3 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX4 HPF cut off"]' "MIN_3DB_4Hz"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TX5 HPF cut off"]' "MIN_3DB_4Hz"
+if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
+PXMLNLS -s $MIX '/mixer/path[@name="headphones-44.1"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 ClassD Edge"]' "7"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TAS2557 Volume"]' "30"
 fi
-PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="PowerCtrl"]' "0"
+PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="PowerCtrl"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="TFA Profile"]' "speaker"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT1 MIX3 DSD HPHL Switch"]' "1"
 PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT2 MIX3 DSD HPHR Switch"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="HiFi Function"]' "On"
-PXMLNLS -s $MIX '/mixer/ctl[@name="HiFi Filter"]' "1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="Adsp Working Mode"]' "full"
-PXMLNLS -s $MIX '/mixer/ctl[@name="Adsp Working Mode"]' "full"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TFA987X_ALGO_STATUS"]' "ENABLE"
-PXMLNLS -s $MIX '/mixer/ctl[@name="TFA987X_TX_ENABLE"]' "ENABLE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="HiFi Filter"]' "6"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HPHL"]' "Switch"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HPHR"]' "Switch"
+PXMLNLS -s $MIX '/mixer/ctl[@name="RX1 HPF cut off"]' "MIN_3DB_4Hz"
+PXMLNLS -s $MIX '/mixer/ctl[@name="RX2 HPF cut off"]' "MIN_3DB_4Hz"
+PXMLNLS -s $MIX '/mixer/ctl[@name="RX3 HPF cut off"]' "MIN_3DB_4Hz"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TX1 HPF cut off"]' "MIN_3DB_4Hz"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TX2 HPF cut off"]' "MIN_3DB_4Hz"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TX3 HPF cut off"]' "MIN_3DB_4Hz"
 PXMLNLS -s $MIX '/mixer/ctl[@name="Amp DSP Enable"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="BDE AMP Enable"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="Amp Volume Location"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="A2DP_SLIM7_UL_HL Switch"]' "1"
 PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM7_RX_DL_HL Switch"]' "1"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HFP_SLIM7_UL_HL Switch"]' "1"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HFP_PRI_AUX_UL_HL Switch"]' "1"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HFP_AUX_UL_HL Switch"]' "1"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HFP_INT_UL_HL Switch"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX SampleRate"]' "KHZ_192"
+PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX SampleRate"]' "KHZ_192"
+if $HIFI; then
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PXMLNLS -u $MIX '/mixer/path[@name="headphones"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PXMLNLS -u $MIX '/mixer/path[@name="hph-hifi-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PXMLNLS -u $MIX '/mixer/path[@name="hph-highquality-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PXMLNLS -u $MIX '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PXMLNLS -u $MIX '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX Format"]' "S24_3LE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX Format"]' "S24_3LE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="SLIM_5_RX Format"]' "S24_3LE"
+PXMLNLS -u $MIX '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_3LE"
+else
+if [ $PATCH_MIXER_LITE != true ]; then
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX HPH Mode"]' "HD2"
+fi
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX HPH HD2 Mode"]' "On"
+PXMLNLS -s $MIX '/mixer/ctl[@name="SLIM_7_RX Format"]' "S24_LE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX Format"]' "S24_LE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="headphones"]/ctl[@name="SLIM_5_RX Format"]' "S24_LE"
+PXMLNLS -u $MIX '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+fi
+if $PATCH_MIXER_LITE; then
+PXMLNLS -u $MIX '/mixer/ctl[@name="TFA987X_ALGO_STATUS"]' "ENABLE"
+PXMLNLS -u $MIX '/mixer/ctl[@name="TFA987X_TX_ENABLE"]' "ENABLE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="SLIMBUS_7_RX Channels"]' "Two"
+else
+PXMLNLS -u $MIX '/mixer/ctl[@name="Voice Sidetone Enable"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="MSM ASphere Set Param"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="HPH Idle Detect"]' "ON"
+PXMLNLS -s $MIX '/mixer/ctl[@name="ASM Bit Width"]' "24"
+PXMLNLS -s $MIX '/mixer/ctl[@name="HPHL_RDAC Switch"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="HPHR_RDAC Switch"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="AUX_RDAC Switch"]' "1"
+PXMLNLS -u $MIX '/mixer/ctl[@name="Adsp Working Mode"]' "full"
+PXMLNLS -s $MIX '/mixer/ctl[@name="Adsp Working Mode"]' "full"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT1 SEC MIX HPHL Switch"]' "1"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT2 SEC MIX HPHR Switch"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="RX INT3 SEC MIX LO1 Switch"]' "1"
+PXMLNLS -s $MIX '/mixer/ctl[@name="RX INT4 SEC MIX LO2 Switch"]' "1"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT0 DEM MUX"]' "CLSH_DSM_OUT"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT1 DEM MUX"]' "CLSH_DSM_OUT"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT2 DEM MUX"]' "CLSH_DSM_OUT"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT3 DEM MUX"]' "CLSH_DSM_OUT"
+PXMLNLS -u $MIX '/mixer/ctl[@name="RX INT4 DEM MUX"]' "CLSH_DSM_OUT"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HPHL"]' "Switch"
+PXMLNLS -u $MIX '/mixer/ctl[@name="HPHR"]' "Switch"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TFA987X_ALGO_STATUS"]' "ENABLE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="TFA987X_TX_ENABLE"]' "ENABLE"
+PXMLNLS -s $MIX '/mixer/path[@name="headphones-dsd"]/ctl[@name="SLIM_2_RX Format"]' "DSD_DOP"
 PXMLNLS -s $MIX '/mixer/ctl[@name="Ext Spk Boost"]' "ENABLE"
+PXMLNLS -s $MIX '/mixer/ctl[@name="Boost Option"]' "BOOST_ALWAYS"
 PXMLNLS -s $MIX '/mixer/ctl[@name="PowerCtrl"]' "0"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RCV AMP PCM Gain"]' "20"
-PXMLNLS -s $MIX '/mixer/ctl[@name="AMP PCM Gain"]' "20"
-PXMLNLS -s $MIX '/mixer/ctl[@name="RCV Boost Target Voltage"]' "170"
-PXMLNLS -s $MIX '/mixer/ctl[@name="Boost Target Voltage"]' "170"
-PXMLNLS -s $MIX '/mixer/ctl[@name="MultiMedia1 EQ Enable"]' "Off"
-PXMLNLS -s $MIX '/mixer/ctl[@name="MultiMedia2 EQ Enable"]' "Off"
-PXMLNLS -s $MIX '/mixer/ctl[@name="MultiMedia3 EQ Enable"]' "Off"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX0 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX1 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX2 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX3 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX4 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX5 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX6 MUX"]' "ZERO"
-PXMLNLS -u $MIX '/mixer/ctl[@name="SLIM RX7 MUX"]' "ZERO"
-if [ "$POCOX3" ]; then
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X PLAYBACK VOLUME LEFT"]' "56"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM MAX ATTN LEFT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM INFLECTION POINT LEFT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM ATTACT RATE LEFT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM RELEASE RATE LEFT"]' "7"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM ATTACK STEP LEFT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM RELEASE STEP LEFT"]' "3"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X RX MODE LEFT"]' "Receiver"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X BOOST VOLTAGE LEFT"]' "15"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X BOOST CURRENT LEFT"]' "63"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X PLAYBACK VOLUME RIGHT"]' "56"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM MAX ATTN RIGHT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM INFLECTION POINT RIGHT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM ATTACT RATE RIGHT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM RELEASE RATE RIGHT"]' "7"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM ATTACK STEP RIGHT"]' "0"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X LIM RELEASE STEP RIGHT"]' "3"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X BOOST VOLTAGE RIGHT"]' "12"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X BOOST CURRENT RIGHT"]' "55"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X VBAT LPF LEFT"]' "DISABLE"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256X VBAT LPF RIGHT"]' "DISABLE"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS256x Profile id"]' "1"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS25XX_SMARTPA_ENABLE"]' "ENABLE"
-PXMLNLS -u $MIX '/mixer/ctl[@name="Amp Output Level"]' "2"
-PXMLNLS -u $MIX '/mixer/ctl[@name="TAS25XX_ALGO_PROFILE"]' "MUSIC"
 fi
 UIP "Files Found And Patched"
 done;;
@@ -3882,13 +3628,11 @@ done
 PATCH_IMPROVE_BLUETOOTH() {
 UIP "Start PATCH_IMPROVE_BLUETOOTH"
 echo -e "\n# Improve Bluetooth
-qcom.hw.aac.encoder=true
 audio.effect.a2dp.enable=1
 vendor.audio.effect.a2dp.enable=1
-vendor.audio.hw.aac.encoder=true
 vendor.bt.pts.pbap=true
 ro.bluetooth.emb_wp_mode=false
-ro.bluetooth.wipower=false
+ro.bluetooth.wipower=false 
 ro.vendor.bluetooth.wipower=false
 persist.service.btui.use_aptx=1
 persist.bt.enableAptXHD=true
@@ -3907,13 +3651,14 @@ persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.bt.a2dp.addr_check_enabled_for_aac=true
 persist.vendor.bt.aac_frm_ctl.enabled=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true
+persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
-persist.vendor.qcom.bluetooth.enable.splita2dp=true
+persist.vendor.qcom.bluetooth.enable.splita2dp=true 
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 persist.vendor.qcom.bluetooth.enable.swb=true
-persist.bluetooth.disableabsvol=true
+persist.bluetooth.enabledelayreports=true
 persist.bluetooth.sbc_hd_higher_bitrate=1
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true" >> $MODPATH/$MODID/system.prop
 }
@@ -3999,6 +3744,7 @@ MMUPD_CHECKER "$IDBA" "$VIPBA" "IPBAS"
 MMUPD_CHECKER -c "$IDOSEMOJI" "$VIPOSEMOJI" "$VCIPOSEMOJI" "IPIOSEMOJIS"
 MMUPD_CHECKER "$IDMUIS" "$VIPMUIS" "IPMUISS"
 MMUPD_CHECKER "$IDFDNI" "$VIPFDNI" "IPFDNIS"
+MMUPD_CHECKER "$IDWFAMDQSSC" "$VIPWFAMDQSSC" "IPWFAMDQSSCS"
 #Apps: GFU/GSF/SL/ASUSS/IA
 if $FINDAIOPFMDA; then
 MMUPD_CHECKER "$IDGFUL" "$VIPGFUL" "IPGFULS"
@@ -4057,10 +3803,10 @@ MMUPD_CHECKER -c "$IDSTZD" "$VIPSTZD" "$VCIPSTZD" "IPSTZDS"
 MMUPD_CHECKER "$IDFPA" "$VIPFPA" "IPFPAS"
 MMUPD_CHECKER "$IDFSLFM" "$VIPFSLFM" "IPFSLFMS"
 #SafetyNet/MHPC/GPay
-MMUPD_CHECKER -c "$IDSNP" "$VIPSNP" "$VCIPSNP" "IPSNPS"
-MMUPD_CHECKER -c "$IDSNPA" "$VIPSNPA" "$VCIPSNPA" "IPSNPS"
-if [ "$ASDK" -ge 24 ] && [ -d $MODPATH/$IDRIRU ] && [ ! -d $MODPATH/$IDLSPOSEDZ/zygisk ]; then MMUPD_CHECKER -c "$IDSNPRZ" "$VIPSNPR" "$VCIPSNPR" "IPSNPS"; fi
-if [ "$ASDK" -ge 24 ] && $ZYGISK && [ ! -d $MODPATH/$IDLSPOSEDR/riru ]; then MMUPD_CHECKER -c "$IDSNPRZ" "$VIPSNPZ" "$VCIPSNPZ" "IPSNPS"; fi
+if [ "$ASDK" -ge 27 ]; then
+if [ -d $MODPATH/$IDRIRU ] && [ ! -d $MODPATH/$IDLSPOSEDZ/zygisk ]; then MMUPD_CHECKER -c "$IDSNPRZ" "$VIPSNPR" "$VCIPSNPR" "IPSNPS"; fi
+if $ZYGISK && [ ! -d $MODPATH/$IDLSPOSEDR/riru ]; then MMUPD_CHECKER -c "$IDSNPRZ" "$VIPSNPZ" "$VCIPSNPZ" "IPSNPS"; fi
+fi
 MMUPD_CHECKER "$IDSNET" "$VIPSNET" "IPSNET"
 MMUPD_CHECKER "$IDFPMC" "$VIPFPMC" "IPFPMCS"
 MMUPD_CHECKER -c "$IDMHPC" "$VIPMHPC" "$VCIPMHPC" "IPMHPCS"
@@ -4430,7 +4176,7 @@ mkdir -p $MODPATH/$MODID
 echo "qemu.hw.mainkeys=$ISHNBPVN" > $MODPATH/$MODID/system.prop
 MMPR -v "$ISHNBPV Navigation Bar" "$VIPPSHNB" "$ISHNBPV Navigation Bar"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 export newprop=$(echo qemu.hw.mainkeys=$ISHNBPVN | cut -d '=' -f1)
 sed -i "/qemu.hw.mainkeys=0/d" $IPSBP; sed -i "/qemu.hw.mainkeys=1/d" $IPSBP
 echo -e "# Show/Hide Navigation Bar\nqemu.hw.mainkeys=$ISHNBPVN" >> $IPSBP
@@ -4452,7 +4198,7 @@ if $KEYFUNCTION; then BGISR=0; else BGISR=1; fi
 UIP "Installing Back Gesture Disabler $IAMM"
 MODID="$IDBGDS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MGSERVICED "$SPSECURE back_gesture_inset_scale_left 1; $SPSECURE back_gesture_inset_scale_right 1" "$SPSECURE back_gesture_inset_scale_left $BGISL; $SPSECURE back_gesture_inset_scale_right $BGISR" "BGDS"
+MSSERVICE "$SPSECURE back_gesture_inset_scale_left 1; $SPSECURE back_gesture_inset_scale_right 1" "$SPSECURE back_gesture_inset_scale_left $BGISL; $SPSECURE back_gesture_inset_scale_right $BGISR" "BGDS"
 if $BOOTMODE; then UIP "Back Gesture Disabler Activated Right Now"; $SPSECURE back_gesture_inset_scale_left $BGISL; $SPSECURE back_gesture_inset_scale_right $BGISR; fi
 MMPR -v "Back Gesture Disabler" "$VIPBGD" "Back Gesture Disabler $MSGFMM"; SET_PERM_RM -msgdi
 }
@@ -4473,7 +4219,7 @@ mkdir -p $MODPATH/$MODID
 echo "ro.com.google.ime.kb_pad_port_b=$UCSFNMC" > $MODPATH/$MODID/system.prop
 MMPR -v "Gboard NavBar Spacing" "$VIPGBNBS" "Gboard NavBar Spacing - Set On $UCSFNMC"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "# Gboard NavBar Spacing\nro.com.google.ime.kb_pad_port_b=$UCSFNMC" >> $IPSBP
 fi
 UIP "$MSGDI"
@@ -4496,7 +4242,7 @@ mkdir -p $MODPATH/$MODID
 echo "ro.com.google.ime.corner_key_r=$UCSFNMC" > $MODPATH/$MODID/system.prop
 MMPR -v "GBoard Rounded Corners" "$VIPGBRC" "GBoard Rounded Corners $MSGFMM - Set On $UCSFNMC"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "# GBoard NavBar Space Remover\nro.com.google.ime.corner_key_r=$UCSFNMC" >> $IPSBP
 fi
 UIP "$MSGDI"
@@ -4544,7 +4290,7 @@ cp -rf $TMPDIR/GBoardThemes/gboard_theme $MODPATH/$MODID$MIPSE
 echo -e "ro.com.google.ime.theme_file=MD2B-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" > $MODPATH/$MODID/system.prop
 MMPR -v "GBoard Themes" "$VIPGBT" "GBoard Themes $MSGFMM"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "\n# GBoard Themes\nro.com.google.ime.theme_file=MD2B-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" >> $IPSBP
 cp -rf $TMPDIR/GBoardThemes/gboard_theme $IPSE
 SET_PERM_R $IPSE/gboard_theme 0 0 0755 0644
@@ -4570,13 +4316,19 @@ GBSTKSF="true"; GBSTKST="false"
 else
 GBSTKSF="false"; GBSTKST="true"
 fi
+UIP -d "Enable Or Disable Shaped Key?" "$MSGVU Enable" "$MSGVD Disable"
+if $KEYFUNCTION; then
+GBSTSKF="false"; GBSTSKT="true"
+else
+GBSTSKF="true"; GBSTSKT="false"
+fi
 UIP "Installing GBoard Silk Theme Changer $IAMM"
 if $MAGISK; then
 MODID="$IDGBSTE"; REMOVER -mm "$MODID gboard-silk-theme"
 mkdir -p $MODPATH/$MODID
 MMPR -v "Gboard Silk Theme Changer" "$VIPGBSTE" "Gboard Silk Theme Changer $MSGFMM - Silk Theme $GBSTS"
-MGSERVICED "sed -i -e \"s/\\\"animate_first_content_suggestion_results\\\" value=\\\"$GBSTT\\\"/\\\"animate_first_content_suggestion_results\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"branding_fadeout_delay_ms\\\" value=\\\"900\\\"/\\\"branding_fadeout_delay_ms\\\" value=\\\"9000000\\\"/g\" $GBSTEXML
+MSSERVICE "sed -i -e \"s/\\\"animate_first_content_suggestion_results\\\" value=\\\"$GBSTT\\\"/\\\"animate_first_content_suggestion_results\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"branding_fadeout_delay_ms\\\" value=\\\"9000000\\\"/\\\"branding_fadeout_delay_ms\\\" value=\\\"900\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"concept_prediction_sample_emoji_by_popularity\\\" value=\\\"$GBSTF\\\"/\\\"concept_prediction_sample_emoji_by_popularity\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"disable_vocabulary_capitalization\\\" value=\\\"$GBSTF\\\"/\\\"disable_vocabulary_capitalization\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"enable_animated_whatsapp_sticker_webp\\\" value=\\\"$GBSTT\\\"/\\\"enable_animated_whatsapp_sticker_webp\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
@@ -4610,22 +4362,22 @@ sed -i -e \"s/\\\"fast_access_bar_enable_instantly_remove\\\" value=\\\"$GBSTT\\
 sed -i -e \"s/\\\"keyboard_redesign_forbid_key_shadows\\\" value=\\\"$GBSTKST\\\"/\\\"keyboard_redesign_forbid_key_shadows\\\" value=\\\"$GBSTKSF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"keyboard_redesign_google_sans\\\" value=\\\"$GBSTT\\\"/\\\"keyboard_redesign_google_sans\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"lm_personalization_enabled\\\" value=\\\"$GBSTT\\\"/\\\"lm_personalization_enabled\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTT\\\"/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTF\\\"/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"nwp_threshold_for_two_words_completions\\\" value=\\\"-0.4\\\"/\\\"nwp_threshold_for_two_words_completions\\\" value=\\\"-0.3\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"pill_shaped_key\\\" value=\\\"true\\\"/\\\"pill_shaped_key\\\" value=\\\"false\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTT\\\"/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTT\\\"/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"nwp_threshold_for_two_words_completions\\\" value=\\\"-0.3\\\"/\\\"nwp_threshold_for_two_words_completions\\\" value=\\\"-0.4\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"pill_shaped_key\\\" value=\\\"$GBSTSKT\\\"/\\\"pill_shaped_key\\\" value=\\\"$GBSTSKF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"pseudo_spellchecker_mode\\\" value=\\\"0\\\"/\\\"pseudo_spellchecker_mode\\\" value=\\\"1\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"show_branding_interval_seconds\\\" value=\\\"86400000\\\"/\\\"show_branding_interval_seconds\\\" value=\\\"0\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"show_branding_interval_seconds\\\" value=\\\"0\\\"/\\\"show_branding_interval_seconds\\\" value=\\\"86400000\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"show_branding_on_space\\\" value=\\\"$GBSTT\\\"/\\\"show_branding_on_space\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"silk_on_all_pixel\\\" value=\\\"$GBSTT\\\"/\\\"silk_on_all_pixel\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"silk_theme\\\" value=\\\"$GBSTT\\\"/\\\"silk_theme\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"spellchecker_enable_language_trigger\\\" value=\\\"$GBSTT\\\"/\\\"spellchecker_enable_language_trigger\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"spellchecker_enable_rule_trigger\\\" value=\\\"$GBSTT\\\"/\\\"spellchecker_enable_rule_trigger\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"supports_battery_saver_theme\\\" value=\\\"$GBSTT\\\"/\\\"supports_battery_saver_theme\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"threshold_for_single_word_completions\\\" value=\\\"-8.0\\\"/\\\"threshold_for_single_word_completions\\\" value=\\\"-5.0\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"threshold_for_single_word_completions\\\" value=\\\"-5.0\\\"/\\\"threshold_for_single_word_completions\\\" value=\\\"-8.0\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"time_interval_percentile\\\" value=\\\"90\\\"/\\\"time_interval_percentile\\\" value=\\\"67\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"trigger_spell_check_in_composing_delay\\\" value=\\\"3000\\\"/\\\"trigger_spell_check_in_composing_delay\\\" value=\\\"1500\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"trigger_spell_check_in_sentence_delay\\\" value=\\\"2000\\\"/\\\"trigger_spell_check_in_sentence_delay\\\" value=\\\"1000\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"trigger_spell_check_in_composing_delay\\\" value=\\\"1500\\\"/\\\"trigger_spell_check_in_composing_delay\\\" value=\\\"3000\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"trigger_spell_check_in_sentence_delay\\\" value=\\\"1000\\\"/\\\"trigger_spell_check_in_sentence_delay\\\" value=\\\"2000\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"use_keyboard_redesign_on_existing_theme\\\" value=\\\"$GBSTT\\\"/\\\"use_keyboard_redesign_on_existing_theme\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"use_keyboard_redesign_on_existing_theme_on_all_users\\\" value=\\\"$GBSTT\\\"/\\\"use_keyboard_redesign_on_existing_theme_on_all_users\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"use_keyboard_redesign_theme_by_default\\\" value=\\\"$GBSTT\\\"/\\\"use_keyboard_redesign_theme_by_default\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
@@ -4664,10 +4416,10 @@ sed -i -e \"s/\\\"fast_access_bar_enable_instantly_remove\\\" value=\\\"$GBSTF\\
 sed -i -e \"s/\\\"keyboard_redesign_forbid_key_shadows\\\" value=\\\"$GBSTKSF\\\"/\\\"keyboard_redesign_forbid_key_shadows\\\" value=\\\"$GBSTKST\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"keyboard_redesign_google_sans\\\" value=\\\"$GBSTF\\\"/\\\"keyboard_redesign_google_sans\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"lm_personalization_enabled\\\" value=\\\"$GBSTF\\\"/\\\"lm_personalization_enabled\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTF\\\"/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTF\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTT\\\"/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTF\\\"/\\\"native_language_hint_by_system_locales\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTF\\\"/\\\"nebulae_enable_input_action_collection\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"nwp_threshold_for_two_words_completions\\\" value=\\\"-0.4\\\"/\\\"nwp_threshold_for_two_words_completions\\\" value=\\\"-0.3\\\"/g\" $GBSTEXML
-sed -i -e \"s/\\\"pill_shaped_key\\\" value=\\\"true\\\"/\\\"pill_shaped_key\\\" value=\\\"false\\\"/g\" $GBSTEXML
+sed -i -e \"s/\\\"pill_shaped_key\\\" value=\\\"$GBSTSKF\\\"/\\\"pill_shaped_key\\\" value=\\\"$GBSTSKT\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"pseudo_spellchecker_mode\\\" value=\\\"0\\\"/\\\"pseudo_spellchecker_mode\\\" value=\\\"1\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"show_branding_interval_seconds\\\" value=\\\"86400000\\\"/\\\"show_branding_interval_seconds\\\" value=\\\"0\\\"/g\" $GBSTEXML
 sed -i -e \"s/\\\"show_branding_on_space\\\" value=\\\"$GBSTF\\\"/\\\"show_branding_on_space\\\" value=\\\"$GBSTT\\\"/g\" $GBSTEXML
@@ -4722,10 +4474,10 @@ sed -i -e "s/\"fast_access_bar_enable_instantly_remove\" value=\"$GBSTF\"/\"fast
 sed -i -e "s/\"keyboard_redesign_forbid_key_shadows\" value=\"$GBSTKSF\"/\"keyboard_redesign_forbid_key_shadows\" value=\"$GBSTKST\"/g" $GBSTEXML
 sed -i -e "s/\"keyboard_redesign_google_sans\" value=\"$GBSTF\"/\"keyboard_redesign_google_sans\" value=\"$GBSTT\"/g" $GBSTEXML
 sed -i -e "s/\"lm_personalization_enabled\" value=\"$GBSTF\"/\"lm_personalization_enabled\" value=\"$GBSTT\"/g" $GBSTEXML
-sed -i -e "s/\"native_language_hint_by_system_locales\" value=\"$GBSTF\"/\"native_language_hint_by_system_locales\" value=\"$GBSTF\"/g" $GBSTEXML
-sed -i -e "s/\"nebulae_enable_input_action_collection\" value=\"$GBSTT\"/\"nebulae_enable_input_action_collection\" value=\"$GBSTT\"/g" $GBSTEXML
+sed -i -e "s/\"native_language_hint_by_system_locales\" value=\"$GBSTF\"/\"native_language_hint_by_system_locales\" value=\"$GBSTT\"/g" $GBSTEXML
+sed -i -e "s/\"nebulae_enable_input_action_collection\" value=\"$GBSTF\"/\"nebulae_enable_input_action_collection\" value=\"$GBSTT\"/g" $GBSTEXML
 sed -i -e "s/\"nwp_threshold_for_two_words_completions\" value=\"-0.4\"/\"nwp_threshold_for_two_words_completions\" value=\"-0.3\"/g" $GBSTEXML
-sed -i -e "s/\"pill_shaped_key\" value=\"true\"/\"pill_shaped_key\" value=\"false\"/g" $GBSTEXML
+sed -i -e "s/\"pill_shaped_key\" value=\"$GBSTSKF\"/\"pill_shaped_key\" value=\"$GBSTSKT\"/g" $GBSTEXML
 sed -i -e "s/\"pseudo_spellchecker_mode\" value=\"0\"/\"pseudo_spellchecker_mode\" value=\"1\"/g" $GBSTEXML
 sed -i -e "s/\"show_branding_interval_seconds\" value=\"86400000\"/\"show_branding_interval_seconds\" value=\"0\"/g" $GBSTEXML
 sed -i -e "s/\"show_branding_on_space\" value=\"$GBSTF\"/\"show_branding_on_space\" value=\"$GBSTT\"/g" $GBSTEXML
@@ -4796,7 +4548,7 @@ IPGPPMS() {
 UIP "Installing GPay Power Menu $IAMM"
 MODID="$IDGPPM"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MGSERVICED "$SPSECURE global_actions_panel_debug_enabled 0; $SPSECURE global_actions_panel_available 0" "$SPSECURE global_actions_panel_debug_enabled 1; $SPSECURE global_actions_panel_available 1" "GPPM"
+MSSERVICE "$SPSECURE global_actions_panel_debug_enabled 0; $SPSECURE global_actions_panel_available 0" "$SPSECURE global_actions_panel_debug_enabled 1; $SPSECURE global_actions_panel_available 1" "GPPM"
 if $BOOTMODE; then UIP "GPay Power Menu Activated Right Now"; $SPSECURE global_actions_panel_debug_enabled 1; $SPSECURE global_actions_panel_available 1; fi
 MMPR -v "GPay Power Menu" "$VIPGPPM" "Enable Google Pay Quick Wallet Access In The Power Menu"; SET_PERM_RM -msgdi
 }
@@ -5005,7 +4757,7 @@ IPSUES() {
 UIP "Installing Single User Enabler $IAMM"
 MODID="$IDSUE"; REMOVER -mm "$MODID SingleUserMod"
 mkdir -p $MODPATH/$MODID
-MGSERVICED "$SPGLOBAL guest_user_enabled 1" "$SPGLOBAL guest_user_enabled 0" "SUM"
+MSSERVICE "$SPGLOBAL guest_user_enabled 1" "$SPGLOBAL guest_user_enabled 0" "SUM"
 echo -e "fw.max_users=1\nfw.show_multiuserui=0" > $MODPATH/$MODID/system.prop
 MMPR -v "Single User Enabler" "$VIPSUE" "Disable MultiUsers $MSGFMM"; SET_PERM_RM -msgdi
 }
@@ -5070,7 +4822,7 @@ $SPSECURE sysui_rounded_content_padding $UCSFNMC
 fi
 MODID="$IDQSCP"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "$SPSECURE sysui_rounded_content_padding $UCSFNMC"
+MSSERVICE -s "$SPSECURE sysui_rounded_content_padding $UCSFNMC"
 MMPR -v "QS Content Padding" "$VIPQSCP" "QS Content Padding $MSGFMM - Set On $UCSFNMC"; SET_PERM_RM -msgdi
 fi
 }
@@ -5091,7 +4843,7 @@ $SPSECURE sysui_rounded_size $UCSFNMC
 fi
 MODID="$IDSUIRSRS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "$SPSECURE sysui_rounded_size $UCSFNMC"
+MSSERVICE -s "$SPSECURE sysui_rounded_size $UCSFNMC"
 MMPR -v "SUI Rounded Size" "$VIPSUIRSRS" "SUI Rounded Size $MSGFMM - Set On $UCSFNMC"; SET_PERM_RM -msgdi
 fi
 }
@@ -5327,8 +5079,21 @@ IPFDNIS() {
 UIP "Installing Force Disable Notification Icons $IAMM"
 MODID="$IDFDNI"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "cmd statusbar send-disable-flag notification-icons"
+MSSERVICE -s "cmd statusbar send-disable-flag notification-icons"
 MMPR -v "Force Disable Notification Icons" "$VIPFDNI" "Force Disable Notification Icons $MSGFMM"; SET_PERM_RM -msgdi
+}
+
+IPWFAMDQSSC() {
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA "Install Wi-Fi & Mobile Data QS Style Changer $VIPWFAMDQSSC?" "" "$MSGNUS" "IPWFAMDQSSCS"; fi
+}
+
+IPWFAMDQSSCS() {
+UIP "Installing Wi-Fi & Mobile Data QS Style Changer $IAMM"
+MODID="$IDWFAMDQSSC"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MSSERVICE "$SPGLOBAL settings_provider_model true; $SPSECURE sysui_qs_tiles \"internet,$($SGSECURE sysui_qs_tiles)\"" "$SPGLOBAL settings_provider_model false; $SPSECURE sysui_qs_tiles \"wifi,cell,$(settings get secure sysui_qs_tiles)\"" "WFAMDQSSC"
+if $BOOTMODE; then UIP "Wi-Fi & Mobile Data QS Style Changer Right Now"; $SPGLOBAL settings_provider_model false; $SPSECURE sysui_qs_tiles "wifi,cell,$($SGSECURE sysui_qs_tiles)"; fi
+MMPR -v "Wi-Fi & Mobile Data QS Style Changer" "$VIPGPPM" "Wi-Fi & Mobile Data QS Style Changer"; SET_PERM_RM -msgdi
 }
 
 } #
@@ -5586,7 +5351,7 @@ SET_PERM_RM -msgdi
 else
 cp -rf $TMPDIR/$MODID/system/* $SYSTEM
 touch $AIOPFMDPH/systemlesslauncher
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "#Systemless Launcher\nro.boot.vendor.overlay.static=false" >> $IPSBP
 UIP "$MSGDI"
 fi
@@ -5740,7 +5505,7 @@ AEP=$MODPATH/$MODID
 else
 mv -f $TMPDIR/$NPVFX$MIPSV $TMPDIR/$NPVFX; cp -rf $TMPDIR/$NPVFX/vendor/* $VENDOR; cp -rf $TMPDIR/$NPVFX/system/* $SYSTEM
 SET_PERM_R $IPSPA/$NPVFX 0 0 0755 0644
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "tunnel.decode=false\nlpa.use-stagefright=false\nlpa.releaselock=false\nlpa.decode=false" >> $IPSBP
 fi
 UIP "Patching Needed Files..."
@@ -6172,7 +5937,7 @@ IPNLSS() {
 UIP "Installing NLSound $IAMM"
 if $HIFI; then UIP "Device With Support Hi-Fi"; else UIP "Device Without Support Hi-Fi"; fi
 NEWDIRAC=$TMPDIR/NLSound/newdirac
-STEP1=false; STEP2=false; STEP3=false; STEP4=false; STEP5=false; STEP6=false; STEP7=false; STEP8=false; STEP9=false; STEP10=false; STEP11=false; STEP12=false; STEP13=false; STEP14=false; PATCHMC=false
+STEP1=false; STEP2=false; STEP3=false; STEP4=false; STEP5=false; STEP6=false; STEP7=false; STEP8=false; STEP9=false; STEP10=false; STEP11=false; STEP12=false; STEP13=false; STEP14=false; PATCH_MIXER_LITE=false; PATCHMC=false
 if FINDER "$ACXML"; then
 UIP -d "Disable Deep Buffer?" "This Option Disable Deep Buffer In Your Device" "If You Want More Low Frequencies Skip This Option" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP1=true; fi
@@ -6187,7 +5952,7 @@ if FINDER "$MPATHS"; then
 UIP -d "Patching IIR?" "IIR Directly Affects The Final Sound Quality" "And It Is Recommended To Try The Version" "With And Without It, Choosing The One That You Like The Most" "$MSGVU Yes $MSGRI" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP4=true; fi
 fi
-if FINDER "$APIXML" || FINDER "$MPATHS"; then
+if FINDER "$APIIEXML"; then
 UIP -d "Patching Audio Platform Files?" "Confirming This Option Will Allow The" "Module To Force 24-Bit Audio" "For Your Favorite Songs, As Well As Improve" "The Sound Quality During Video Recording" "$MSGVU Yes $MSGRI" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP5=true; fi
 fi
@@ -6209,7 +5974,11 @@ UIP -d "Install Tweaks In Prop File?" "This Option Will Change The Sound Quality
 if $KEYFUNCTION; then STEP10=true; fi
 if FINDER "$MPATHS"; then
 UIP -d "Install Patches In mixer_paths Files?" "A Large Set Of Universal Settings For Many Devices" "If You Encounter Problems After Installation" "Try Skipping This Option First" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-if $KEYFUNCTION; then STEP11=true; fi
+if $KEYFUNCTION; then
+STEP11=true
+UIP -d "What Option To Patch?" "$MSGVU Patch Light mixer_paths $MSGRI" "$MSGVD Patch Full mixer_paths"
+if $KEYFUNCTION; then PATCH_MIXER_LITE=true; fi
+fi
 UIP -d "Patch Or Replace media_codecs?" "$MSGVU Patch" "$MSGVD Replace $MSGRI"
 if $KEYFUNCTION; then PATCHMC=true; fi
 fi
@@ -6228,8 +5997,22 @@ UZTPN "NLSound"
 MODID="$IDNLS"; REMOVER -mm "$MODID $IDAIST"
 mkdir -p $MODPATH/$MODID
 MMPR -vcs "NLSound" "$VIPNLS" "$VCIPNLS" "NLSound Team" "This module globally improves audio quality when recording video/audio and listening to audio on your device." "support=https://t.me/nlsound_support"
+echo "#!$MIPSB/sh
+MOUNT=/data; MODDIR=\${0%/*}
+FILE1=\$(find /sys/module -name high_perf_mode)
+FILE2=\$(find /sys/module -name cpe_debug_mode)
+FILE3=\$(find /sys/module -name impedance_detect_en)
+echo 1 > \$FILE1; echo 1 > \$FILE2; echo 1 > \$FILE3" > $MODPATH/$MODID/post-fs-data.sh
+echo "allow audioserver audioserver_tmpfs file { read write execute }
+allow audioserver system_file file { execmod }
+allow mediaserver mediaserver_tmpfs file { read write execute }
+allow mediaserver system_file file { execmod }
+allow audioserver unlabeled file { read write execute open getattr }
+allow hal_audio_default hal_audio_default process { execmem }
+allow hal_audio_default hal_audio_default_tmpfs file { execute }
+allow hal_audio_default audio_data_file dir { search }" > $MODPATH/$MODID/sepolicy.rule
 REPLACER -f "AudioFX MusicFX"
-if $STEP2 || $STEP3 || $STEP4 || $STEP5 || $STEP6 || $STEP11; then
+if $STEP2 || $STEP3 || $STEP4 || $STEP6 || $STEP11; then
 UIP "Patching Needed Files..."
 for OMIX in $MPATHS; do
 UIP "Found $OMIX" "Patching..."
@@ -6255,25 +6038,20 @@ if $STEP1; then PATCH_DEEP_BUFFER -nl; fi
 if $STEP2; then PATCH_VOLUMES -nl; fi
 if $STEP3; then PATCH_MICROPHONE; fi
 if $STEP4; then PATCH_IIR; fi
-if $STEP5; then PATCH_AUDIO_PLATFORM_INFO -nl; fi
+if $STEP5; then PATCH_AUDIO_PLATFORM_INFO; fi
 if $STEP6; then PATCH_COMPANDERS; fi
 if $STEP7; then PATCH_AUDIO_CODEC; fi
 if $STEP8; then PATCH_DEVICE_FEATURES; fi
 if $STEP9; then PATCH_DIRAC; fi
 if $STEP10; then
 UIP "Start GENERAL_TWEAKS"
-echo -e "\n#NLSound Tweaks
-persist.vendor.audio.spv4.enable=true
+echo "persist.vendor.audio.spv4.enable=true
 persist.vendor.audio.avs.afe_api_version=9
-ro.vendor.audio.spk.clean=false
-ro.vendor.audio.surround.support=false
-ro.vendor.audio.scenario.support=false
 ro.mediacodec.min_sample_rate=7350
 ro.mediacodec.max_sample_rate=2822400
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.aac.sw.decoder.24bit=true
 vendor.audio.use.sw.alac.decoder=true
-flac.sw.decoder.24bit.support=true
 vendor.audio.flac.sw.encoder.24bit=true
 vendor.audio.aac.sw.encoder.24bit=true
 vendor.audio.use.sw.ape.decoder=true
@@ -6309,7 +6087,6 @@ vendor.av.offload.enable=true
 qc.av.offload.enable=true
 audio.offload.buffer.size.kb=32
 vendor.audio.offload.buffer.size.kb=32
-vendor.audio.offload.multiaac.enable=true
 lpa.decode=false
 lpa30.decode=false
 lpa.use-stagefright=false
@@ -6318,7 +6095,7 @@ af.thread.throttle=0
 af.fast.track.multiplier=2
 ro.af.client_heap_size_kbyte=7168
 vendor.audio_hal.in_period_size=144
-vendor.audio_hal.period_multiplier=3
+vendor.audio_hal.period_multiplier=3 
 vendor.audio.hal.output.suspend.supported=true
 audio.playback.mch.downsample=false
 ro.vendor.audio.playbackScene=true
@@ -6329,19 +6106,17 @@ vendor.audio.feature.external_dsp.enable=true
 vendor.audio.feature.external_speaker.enable=true
 vendor.audio.feature.external_speaker_tfa.enable=true
 vendor.audio.feature.ext_hw_plugin=true
-vendor.audio.feature.ras.enable=false
+vendor.audio.feature.ras.enable=true
 vendor.audio.feature.afe_proxy.enable=true
 vendor.audio.feature.src_trkn.enable=true
 vendor.audio.feature.spkr_prot.enable=true
 vendor.audio.feature.kpi_optimize.enable=true
-vendor.audio.feature.power_mode.enable=true
+vendor.audio.feature.power_mode.enable=true 
 vendor.audio.feature.compress_meta_data.enable=false
 vendor.audio.feature.compr_cap.enable=false
 vendor.audio.feature.ssrec.enable=true
 vendor.audio.feature.dynamic_ecns.enable=true
 vendor.audio.feature.concurrent_capture.enable=true
-vendor.audio.feature.snd_mon.enable=true
-vendor.audio.feature.deepbuffer_as_primary.enable=false
 vendor.audio.feature.devicestate_listener.enable=false
 vendor.audio.feature.thermal_listener.enable=false
 vendor.audio.feature.hifi_audio.enable=true
@@ -6357,14 +6132,14 @@ effect.reverb.pcm=1
 vendor.audio.safx.pbe.enabled=true
 vendor.audio.soundfx.usb=false
 vendor.audio.keep_alive.disabled=false
+vendor.audio.pp.asphere.enabled=true
 ro.vendor.audio.3d.audio.support=true
-ro.vendor.audio.soundfx.usb=false
 ro.vendor.audio.sfx.speaker=false
 ro.vendor.audio.sfx.earadj=false
-ro.vendor.audio.sfx.scenario=false
 ro.vendor.audio.sfx.audiovisual=false
 ro.vendor.audio.sfx.independentequalizer=false
 ro.vendor.audio.surround.support=true
+ro.vendor.audio.scenario.support=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
@@ -6373,25 +6148,21 @@ persist.vendor.audio.ambisonic.auto.profile=true
 persist.vendor.audio.misound.disable=true
 vendor.audio.hdr.record.enable=true
 vendor.audio.3daudio.record.enable=true
-ro.qc.sdk.audio.ssr=false
 ro.vendor.audio.sdk.ssr=false
-ro.vendor.audio.afe.record=false
 ro.vendor.audio.recording.hd=true
 ro.ril.enable.amr.wideband=1
 persist.audio.lowlatency.rec=true
+ro.vendor.audio.game.mode=true
+ro.vendor.audio.game.vibrate=true
+ro.audio.soundtrigger.lowpower=false
 vendor.power.pasr.enabled=true
 vendor.audio.matrix.limiter.enable=0
 vendor.audio.enable.mirrorlink=false
 vendor.audio.capture.enforce_legacy_copp_sr=true
+vendor.audio.spkr_prot.tx.sampling_rate=48000
 vendor.audio.snd_card.open.retries=50
 vendor.audio.volume.headset.gain.depcal=true
 vendor.audio.tfa9874.dsp.enabled=true
-vendor.audio.spkr_prot.tx.sampling_rate=48000
-ro.audio.soundtrigger.lowpower=false
-ro.vendor.audio.soundtrigger.adjconf=true
-ro.vendor.audio.game.mode=true
-ro.vendor.audio.game.vibrate=true
-ro.vendor.audio.sos=true
 ro.vendor.audio.multiroute=true
 ro.vendor.audio.enhance.support=true
 ro.vendor.audio.gain.support=true
@@ -9183,7 +8954,7 @@ mkdir -p \$MODDIR$MIPSE
 printf \"nameserver $ONetworkTweak\nnameserver $TNetworkTweak\" >> \$MODDIR$MIPSE/resolv.conf
 chmod 644 \$MODDIR$MIPSE/resolv.conf
 fi" > $MODPATH/$MODID/post-fs-data.sh
-MBCCSERVICE "iptables -t nat -A OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -A OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53; iptables -t nat -I OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -I OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53"
+MSSERVICE -s "iptables -t nat -A OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -A OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53; iptables -t nat -I OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -I OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53"
 MMPR -vc "Network Tweak" "$VIPNT" "$VCIPNT" "IMMIX" "Various Network Tweaks which will help to get better internet connectivity and low ping."
 echo "#!$MIPSB/sh
 echo \"0\" > /proc/sys/net/ipv4/tcp_timestamps
@@ -9202,7 +8973,7 @@ echo \"4096,16384,404480\" > /proc/sys/net/ipv4/tcp_wmem
 echo \"4096,87380,404480\" > /proc/sys/net/ipv4/tcp_rmem" > $MODPATH/$MODID/$MIPSEID/netspeed
 PINT=$MODPATH/$MODID/system.prop; SET_PERM_RM
 else
-BUILD_PROP_BACKUP; PINT=$IPSBP
+BUCKUPER -bp "$IPSBP"; PINT=$IPSBP
 fi
 echo "# Internet Tweaks
 net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
@@ -9466,7 +9237,7 @@ if $MAGISK; then
 MODID="$IDAPAUSBTF"; REMOVER -mm "$MODID USBTF"
 mkdir -p $MODPATH/$MODID
 MMPR -v "AP & USB Tethering Fix" "$VIPAPAUSBTF" "Access Point & USB Tethering Fix If Crash SUI Or If Rom Not Boot, Reboot & Etc"
-MBCCSERVICE "rm -rf $IPDSNS/*; chmod 400 $IPDSNS"
+MSSERVICE -s "rm -rf $IPDSNS/*; chmod 400 $IPDSNS"
 fi
 rm -rf $IPDSNS/*; chmod 400 $IPDSNS
 UIP "$MSGDI"
@@ -10970,7 +10741,7 @@ UIP "Installing GMS UnHide Script $IAMM"
 MHIDE -f "com.google.android.gms"
 MODID="$IDBDFFSOQSS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "magiskhide rm com.google.android.gms"
+MSSERVICE -s "magiskhide rm com.google.android.gms"
 MMPR -v "Battery Drain Fix For SL Or QS" "$VIPBDFFSOQSS" "Battery Drain Fix For Systemless Launcher Or Quick Switch (App & Terminal Version)"; SET_PERM_RM -msgdi
 fi
 }
@@ -11103,7 +10874,7 @@ IPFSLFMS() {
 UIP "Installing Fix Softloop For Miui $IAMM"
 MODID="$IDFSLFM"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "wm density reset; rm -rf $MODPATH/$MODID"
+MSSERVICE -s "wm density reset; rm -rf $MODPATH/$MODID"
 MMPR -v "Fix Softloop For Miui" "$VIPFSLFM" "Fix Softloop For Miui If DPI=800+"; SET_PERM_RM -msgdi
 }
 
@@ -11159,608 +10930,6 @@ settings list system > /sdcard/SystemList.sh
 settings list secure > /sdcard/SecureList.sh
 settings list global > /sdcard/GlobalList.sh
 UIP "Done"
-}
-
-} #
-
-{ #SafetyNet/MHPC/GPay
-
-IPSNP() {
-if $MAGISK; then
-UCSA "Install Safety Net Patches?" "$MSGEFTC" "$MSGNUS" "IPSNPS"
-fi
-}
-
-IPSNPS() {
-UIP -d "Install Safety Net Patch $VIPSNP?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if $KEYFUNCTION; then
-UIP "Installing Safety Net Patches $IAMM"
-MODID="$IDSNP"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID$MIPSB
-echo "#!$MIPSB/sh
-
-function usage() {
-[ \"\$(getprop persist.pnss.print)\" ] && PRINT=\$(getprop persist.pnss.print) || PRINT=\"default\"
-[ \"\$(getprop persist.pnss.appendage)\" ] && APPENDAGE=\$(getprop persist.pnss.appendage || APPENDAGE=\"default\") || APPENDAGE=\"default\"
-
-echo \"Universal SafetyNet Fix \$(getprop persist.pnss.version) settings
-
-Usage: pnss <option> <value>
-
-Options:
-set <finger/thumb> <value>
-Set your own fingerprint or thumbprint value:
-0:finger
-1:thumb
-Current: \${APPENDAGE} print: \$PRINT
-
-default
-Use the included settings.
-
-disable
-Use your device settings.\"
-}
-
-function ask_reboot() {
-echo \"You need reboot to apply changes, reboot now? y/n\"
-read reboot_opt
-[ \"\$reboot_opt\" == \"y\" ] || [ \"\$reboot_opt\" == \"Y\" ] && reboot
-}
-
-function convert_appendage() {
-[ \"\$1\" == \"0\" ] && APPENDAGE=\"finger\"
-[ \"\$1\" == \"1\" ] && APPENDAGE=\"thumb\"
-echo \$APPENDAGE
-}
-
-case \"\$1\" in
-set) setprop \"persist.pnss.appendage\" \"\$(convert_appendage \"\$2\")\" && setprop \"persist.pnss.print\" \"\$3\" && ask_reboot;;
-default) setprop \"persist.pnss.appendage\" \"finger\" && setprop \"persist.pnss.print\" \"1\" && ask_reboot;;
-disable) setprop \"persist.pnss.appendage\" \"0\" && setprop \"persist.pnss.print\" \"0\" && ask_reboot;;
-*) usage;;
-esac" > $MODPATH/$MODID$MIPSB/pnss
-echo "#!$MIPSB/sh
-exec &> /cache/petnoires-safetyspoofer.log
-
-LOGFILE=/cache/magisk.log
-
-function log_print() {
-echo \"\$1\"
-echo \"\$1\" >> \$LOGFILE
-log -p i -t Magisk \"\$1\"
-}
-
-set -x
-function background() {
-set +x; while :; do
-[ \"\$(getprop sys.boot_completed)\" == \"1\" ] && {
-set -x; break; }
-sleep 1
-done
-}
-BBX=$NVBASE/magisk/busybox
-RESETPROP=\"resetprop -v -n\"
-
-if [ -f \"/sbin/resetprop\" ]; then RESETPROP=\"/sbin/\$RESETPROP\"
-elif [ -f \"/sbin/magisk\" ]; then RESETPROP=\"/sbin/magisk \$RESETPROP\"
-elif [ -f \"/data/magisk/magisk\" ]; then RESETPROP=\"/data/magisk/magisk \$RESETPROP\"
-elif [ -f \"/magisk/.core/bin/resetprop\" ]; then RESETPROP=/magisk/.core/bin/\$RESETPROP
-elif [ -f \"/data/magisk/resetprop\" ]; then RESETPROP=/data/magisk/\$RESETPROP
-fi
-
-
-log_print \"*** [Universal Hide] Version: \$(\$BBX grep version= $MODPATH/$MODID/module.prop | \$BBX sed 's/version=//')\"
-
-[ ! \"\$(getprop persist.pnss.appendage)\" ] && setprop \"persist.pnss.appendage\" \"finger\"
-APPENDAGE=\$(getprop persist.pnss.appendage)
-
-[ \"\$(getprop persist.pnss.appendage)\" == \"0\" ] || {
-
-[ \"\$(getprop persist.pnss.print)\" == \"0\" ] || {
-[ \"\$(getprop persist.pnss.print)\" == \"1\" ] || [ ! \"\$(getprop persist.pnss.print)\" ] && PRINT=Xiaomi/sagit/sagit:7.1.1/NMF26X/V8.2.17.0.NCACNEC:user/release-keys || PRINT=\$(getprop persist.pnss.print)
-log_print \"*** [Universal Hide] Changing build \${APPENDAGE}print value\"
-\$RESETPROP \"ro.build.\${APPENDAGE}print\" \"\$PRINT\"
-\$RESETPROP \"ro.bootimage.build.\${APPENDAGE}print\" \"\$PRINT\"
-$RESETPROP \"ro.vendor.build.\${APPENDAGE}print\" \"\$PRINT\"
-if [ \$(getprop persist.pnss.appendage) == \"finger\" ]; then
-\$RESETPROP --delete \"ro.build.thumbprint\"
-\$RESETPROP --delete \"ro.bootimage.build.thumbprint\"
-\$RESETPROP --delete \"ro.vendor.build.thumbprint\"
-elif [ \$(getprop persist.pnss.appendage) == \"thumb\" ]; then
-\$RESETPROP --delete \"ro.build.fingerprint\"
-\$RESETPROP --delete \"ro.bootimage.build.fingerprint\"
-\$RESETPROP --delete \"ro.vendor.build.fingerprint\"
-fi
-}
-}
-
-log_print \"*** [Universal Hide] Hiding dangerous props\"
-
-VERIFYBOOT=\$(getprop ro.boot.verifiedbootstate)
-FLASHLOCKED=\$(getprop ro.boot.flash.locked)
-VERITYMODE=\$(getprop ro.boot.veritymode)
-KNOX1=\$(getprop ro.boot.warranty_bit)
-KNOX2=\$(getprop ro.warranty_bit)
-DEBUGGABLE=\$(getprop ro.debuggable)
-SECURE=\$(getprop ro.secure)
-BUILDTYPE=\$(getprop ro.build.type)
-BUILDTAGS=\$(getprop ro.build.tags)
-BUILDSELINUX=\$(getprop ro.build.selinux)
-RELOADPOLICY=\$(getprop selinux.reload_policy)
-
-[ \"\$VERIFYBOOT\" ] && [ \"\$VERIFYBOOT\" != \"green\" ] && \$RESETPROP \"ro.boot.verifiedbootstate\" \"green\"
-[ \"\$FLASHLOCKED\" ] && [ \"\$FLASHLOCKED\" != \"1\" ] && \$RESETPROP \"ro.boot.flash.locked\" \"1\"
-[ \"\$VERITYMODE\" ] && [ \"\$VERITYMODE\" != \"enforcing\" ] && \$RESETPROP \"ro.boot.veritymode\" \"enforcing\"
-[ \"\$KNOX1\" ] && [ \"\$KNOX1\" != \"0\" ] && \$RESETPROP \"ro.boot.warranty_bit\" \"0\"
-[ \"\$KNOX2\" ] && [ \"\$KNOX2\" != \"0\" ] && \$RESETPROP \"ro.warranty_bit\" \"0\"
-[ \"\$DEBUGGABLE\" ] && [ \"\$DEBUGGABLE\" != \"0\" ] && \$RESETPROP \"ro.debuggable\" \"0\"
-[ \"\$SECURE\" ] && [ \"\$SECURE\" != \"1\" ] && \$RESETPROP \"ro.secure\" \"1\"
-[ \"\$BUILDTYPE\" ] && [ \"\$BUILDTYPE\" != \"user\" ] && \$RESETPROP \"ro.build.type\" \"user\"
-[ \"\$BUILDTAGS\" ] && [ \"\$BUILDTAGS\" != \"release-keys\" ] && \$RESETPROP \"ro.build.tags\" \"release-keys\"
-[ \"\$BUILDSELINUX\" ] && [ \"\$BUILDSELINUX\" != \"0\" ] && \$RESETPROP \"ro.build.selinux\" \"0\"
-[ \"\$RELOADPOLICY\" ] && [ \"\$RELOADPOLICY\" != \"1\" ] && \$RESETPROP \"selinux.reload_policy\" \"1\"
-
-background &" > $MODPATH/$MODID/post-fs-data.sh
-MMPR -vc "PetNoires SafetySpoofer" "$VIPSNP" "$VCIPSNP" "PetNoire,Deiki & Nkh0472 & GrayJackFixxxer" "Try to fix SafetyNet on devices with MIUI Developer/Beta ROM, CyanogenMod, Lineage OS, Resurrection Remix, etc."
-MHIDE -l; SET_PERM_RM -msgdi
-fi
-UIP -d "Install Safety Net Patch $VIPSNPA?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if $KEYFUNCTION; then
-UIP "Installing Safety Net Patches $IAMM"
-MODID="$IDSNPA"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID$MIPSB
-echo "#!$MIPSB/sh
-
-#Debug script for safetypatch
-function menu {
-echo '############# SafetyPatch GUI #############'
-echo '# 1) Gather debug info                    #'
-echo '# 2) Disable cts until reboot             #'
-echo '# 3) Disable basicIntegrity until reboot  #'
-echo '## Enter your choice or any key to exit. ##'
-read ans
-if [ \"\$ans\" == \"1\" ]
-then
-echo 'Gathering debug info to $STORAGE/safetypatch.debug'
-echo '---/proc/cmdline---' > $STORAGE/safetypatch.debug
-cat /proc/cmdline >> $STORAGE/safetypatch.debug
-echo '---$IPDLTMP/cmdline---' >> $STORAGE/safetypatch.debug
-cat $IPDLTMP/cmdline >> $STORAGE/safetypatch.debug
-echo '---$MIPSBP---' >> $STORAGE/safetypatch.debug
-cat $MIPSBP >> $STORAGE/safetypatch.debug
-echo '---$IPDLTMP/build.prop---' >> $STORAGE/safetypatch.debug
-cat $IPDLTMP/build.prop >> $STORAGE/safetypatch.debug
-echo '--end of log---' >> $STORAGE/safetypatch.debug
-echo 'Logging Completed! Please send to the logs at https://forum.xda-developers.com/apps/magisk/module-safetypatcher-t3809879'
-elif [ \"\$ans\" == \"\2\" ]
-then
-umount -lf /proc/cmdline
-echo 'Disabled'
-elif [ \"\$ans\" == \"\3\" ]
-then
-umount -lf $MIPSBP
-echo 'Disabled'
-else
-echo 'Bye!'
-exit 0
-fi
-}
-while true
-do menu
-done" > $MODPATH/$MODID$MIPSB/safetypatch
-echo "#!$MIPSB/sh
-sed 's/ORANGE/GREEN/i' /proc/cmdline | sed 's/YELLOW/GREEN/i' > $IPDLTMP/cmdline
-mount -o bind $IPDLTMP/cmdline /proc/cmdline
-sed 's;^ro.*\.build\.fingerprint=.*;ro.build.fingerprint=HUAWEI/CLT-L29/HWCLT:8.1.0/HUAWEICLT-L29/128(C432):user/release-keys;' $MIPSBP > $IPDLTMP/build.prop
-mount -o bind $IPDLTMP/build.prop $MIPSBP
-# The build.prop thing seems to be useless, but at some point Google are sure to catch on and check in the raw build.prop to see if we're abusing getprop/resetprop.
-resetprop ro.build.fingerprint 'HUAWEI/CLT-L29/HWCLT:8.1.0/HUAWEICLT-L29/128(C432):user/release-keys'
-resetprop ro.bootimage.build.fingerprint 'HUAWEI/CLT-L29/HWCLT:8.1.0/HUAWEICLT-L29/128(C432):user/release-keys'" > $MODPATH/$MODID/post-fs-data.sh
-MMPR -vc "SafetyPatch" "$VIPSNPA" "$VCIPSNPA" "hackintosh5 @ xdaDevelopers" "Flash the module, reboot and give me thanks on XDA :)"
-MHIDE -l; SET_PERM_RM -msgdi
-fi
-if [ "$ASDK" -ge 24 ]; then
-SAFETYNET=false; SAFETYNETZ=false; SAFETYNETR=false
-if [ -d $MODPATH/$IDRIRU ]; then
-if $ZYGISK; then
-UIP -d "Install Safety Net Patch Zygisk Or Riru?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if $KEYFUNCTION; then
-UIP -d "Install Safety Net Patch For:" "$MSGVU Zygisk $VIPSNPZ" "$MSGVD Riru $VIPSNPR"
-if $KEYFUNCTION; then
-SAFETYNET=true; SAFETYNETZ=true
-else
-SAFETYNET=true; SAFETYNETR=true
-fi
-else
-SAFETYNET=false
-fi
-else
-UIP -d "Install Safety Net Patch $VIPSNPR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if $KEYFUNCTION; then
-SAFETYNET=true; SAFETYNETR=true
-fi
-fi
-else
-UIP -d "Install Safety Net Patch $VIPSNPR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if $KEYFUNCTION; then
-SAFETYNET=true; SAFETYNETR=true
-fi
-fi
-if $SAFETYNET; then
-UIP "Installing Safety Net Patches $IAMM"
-UZTPN "SafetyNet"
-MODID="$IDSNPRZ"; REMOVER -mm "$MODID"
-if $SAFETYNETR; then
-mkdir -p $MODPATH/$MODID/riru
-UIP "Copy arm Libraries"
-cp -rf $TMPDIR/SafetyNet/riru/lib $MODPATH/$MODID/riru
-if [ "$arch" = "arm64" ]; then
-UIP "Copy arm64 Libraries"
-cp -rf $TMPDIR/SafetyNet/riru/lib64 $MODPATH/$MODID/riru
-fi
-cp -f $TMPDIR/SafetyNet/riru/classes.dex $MODPATH/$MODID
-MMPR -vc "Universal SafetyNet Fix" "$VIPSNPR" "$VCIPSNPR" "kdrag0n" "A universal fix for SafetyNet on Android 7–12 devices with hardware attestation and unlocked bootloaders. Requires MagiskHide and Riru v24.0.0 or newer."
-elif $SAFETYNETZ; then
-mkdir -p $MODPATH/$MODID/zygisk
-UIP "Copy arm Libraries"
-cp -rf $TMPDIR/SafetyNet/zygisk/armeabi-v7a.so $MODPATH/$MODID/zygisk
-if [ "$arch" = "arm64" ]; then
-UIP "Copy arm64 Libraries"
-cp -rf $TMPDIR/SafetyNet/zygisk/armeabi-v8a.so $MODPATH/$MODID/zygisk
-fi
-cp -f $TMPDIR/SafetyNet/zygisk/classes.dex $MODPATH/$MODID
-MMPR -vc "Universal SafetyNet Fix" "$VIPSNPZ" "$VCIPSNPZ" "kdrag0n" "A universal fix for SafetyNet on Android 7–12 devices with hardware attestation and unlocked bootloaders."
-echo -e "#!$MIPSB/sh\nmagisk --denylist rm com.google.android.gms" > $MODPATH/$MODID/post-fs-data.sh
-fi
-echo "# RootBeer, Microsoft
-ro.build.tags=release-keys
-
-# Samsung
-ro.boot.warranty_bit=0
-ro.vendor.boot.warranty_bit=0
-ro.vendor.warranty_bit=0
-ro.warranty_bit=0
-
-# SafetyNet
-ro.boot.flash.locked=1
-ro.boot.verifiedbootstate=green
-ro.boot.veritymode=enforcing
-ro.boot.vbmeta.device_state=locked
-vendor.boot.vbmeta.device_state=locked
-
-# Other
-ro.build.type=user
-ro.debuggable=0
-ro.secure=1" > $MODPATH/$MODID/system.prop
-echo "#!$MIPSB/sh
-maybe_set_prop() {
-local prop=\"\$1\"
-local contains=\"\$2\"
-local value=\"\$3\"
-
-if [[ \"\$(getprop \"\$prop\")\" == *\"\$contains\"* ]]; then
-resetprop \"\$prop\" \"\$value\"
-fi
-}
-
-# Magisk recovery mode
-maybe_set_prop ro.bootmode recovery unknown
-maybe_set_prop ro.boot.mode recovery unknown
-maybe_set_prop vendor.boot.mode recovery unknown
-
-# MIUI cross-region flash
-maybe_set_prop ro.boot.hwc CN GLOBAL
-maybe_set_prop ro.boot.hwcountry China GLOBAL
-
-resetprop --delete ro.build.selinux
-
-# SELinux permissive
-if [[ \"\$(cat /sys/fs/selinux/enforce)\" == \"0\" ]]; then
-chmod 640 /sys/fs/selinux/enforce
-chmod 440 /sys/fs/selinux/policy
-fi
-
-# Late props which must be set after boot_completed
-{
-until [[ \"\$(getprop sys.boot_completed)\" == \"1\" ]]; do
-sleep 1
-done
-
-# avoid breaking OnePlus display modes/fingerprint scanners
-resetprop vendor.boot.verifiedbootstate green
-}&" > $MODPATH/$MODID/service.sh
-MHIDE -l; SET_PERM_RM -msgdi
-fi
-fi
-}
-
-IPSNET() {
-if [ "$ASDK" -ge 29 ]; then
-UCSA "Install Safety Net Eval Type BASIC $VIPSNET?" "" "$MSGNUS" "IPSNETS"
-fi
-}
-
-IPSNETS() {
-UIP "Installing Safety Net Eval Type BASIC $IAMM"
-if $MAGISK; then
-MODID="$IDSNET"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID
-MMPR -v "Safety Net Eval Type" "$VIPSNET" "Set Safety Net Eval Type To BASIC"; SET_PERM_RM; IPSNET=$MODPATH/$MODID/system.prop
-else
-BUILD_PROP_BACKUP; IPSNET=$IPSBP
-fi
-echo -e "\n# Set Safety Net Eval Type To BASIC\nro.product.model=BASIC\nro.product.system.model=BASIC\nro.product.vendor.model=BASIC\nro.product.product.model=BASIC\nro.product.odm.model=BASIC" >> $IPSNET
-UIP "$MSGDI"
-}
-
-IPMHPC() {
-if $MAGISK && [ $MAGISKFIRSTTIME != true ]; then
-UCSA "Install MagiskHide Props Config $VIPMHPC?" "" "$MSGNUS" "IPMHPCS"
-fi
-}
-
-IPMHPCS() {
-UZTPN "MHPC"; UNIVERSALUNZIP
-UIP "Usage:" "Run \"su -c props\" On Terminal In BootMode"
-WCANFTP -bb
-}
-
-IPFPMC() {
-if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then UCSA "Install Force Play Market Certified $VIPFPMC?" "" "$MSGNUS" "IPFPMCS"; fi
-}
-
-IPFPMCS() {
-UIP "Installing Force Play Market Certified $IAMM"
-if $MAGISK; then
-MODID="$IDFPMC"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID
-MBCCSERVICE "sed -i \"s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i \"s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml"
-MMPR -v "Force Play Market Certified" "$VIPFPMC" "Force Play Market Certified $MSGFMM"; SET_PERM_RM
-fi
-if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then sed -i "s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i "s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; fi
-UIP "$MSGDI"
-}
-
-IPGPF() {
-if [ -f $IPSFW/com.android.nfc_extras.jar ] || find $SYSTEM -name *NfcNci* >/dev/null; then
-if $FINDGAPPS; then
-UCSA "Install GooglePay Fix $VIPGPF?" "" "$MSGNUS" "IPGPFS"
-fi
-fi
-}
-
-IPGPFS() {
-UIP "Installing GooglePay Fix $IAMM"
-if $MAGISK; then
-MODID="$IDGPF"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID$IPPSXBM
-MMPR -vc "GPay SQLite Fix" "$VIPGPF" "$VCIPGPF" "73sydney" "Applies the full SQLite fix for Google Pay"
-echo "(
-#!$MIPSB/sh
-# Do NOT assume where your module will be located.
-# ALWAYS use \$MODDIR if you need to know where this script
-# and module is placed.
-# This will make sure your module will still work
-# if Magisk change its mount point in the future
-MODDIR=\${0%/*}
-
-# set script to run SQL commands
-runsql=1
-
-# set logfile variable
-logfile=\"/cache/payfixfirstrun.log\"
-
-# wait till boot completed - thanks to jcmm11
-until [ \"\$(getprop sys.boot_completed)\" = 1 ]
-do
-sleep 1
-done
-
-echo \"System boot completed\" > \$logfile
-echo \"\" >> \$logfile
-
-while (true); do
-if [ -f \"$MIPSB/chmod\" ]; then
-echo \"$MIPSB/chmod....accessible\" >> \$logfile
-echo \"\" >> \$logfile
-break;
-fi
-sleep 1
-done
-
-# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
-while (true); do
-if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
-echo \"/data/data/com.google.android.gms/databases/dg.db....accessible\" >> \$logfile
-echo \"\" >> \$logfile
-break;
-fi
-sleep 1
-done
-
-# check where sqlite is
-if [ -f /data/data/com.termux/files/usr/bin/sqlite3 ] ; then
-sqlpath=/data/data/com.termux/files/usr/bin
-echo \"[termux] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile
-elif [ -f /data/data/com.keramidas.TitaniumBackup/files/sqlite3 ] ; then
-sqlpath=/data/data/com.keramidas.TitaniumBackup/files
-echo \"[titanium] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile	
-elif [ -f $MIPSB/sqlite3 ] ; then
-sqlpath=$MIPSB
-echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile
-elif [ -f $MIPSXB/sqlite3 ] ; then
-sqlpath=$MIPSXB
-echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"SQLite3 binary not found, please install a SQLite3 binary, without this the fix *may* not work\" >> \$logfile
-echo \"I provide an SQLite3 Universal Binary Magisk Module, and links to SQLite3 binaries for other architectures\" >> \$logfile
-echo \"at https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-
-# stop Google Pay
-$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
-if [ \$? -eq 0 ] ; then
-echo \"Google Pay stopped successfully\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"Google Pay NOT stopped successfully\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-
-if [ \$runsql -eq 1 ]; then
-# set 777 permissions on dg.db
-$MIPSB/chmod 777 /data/data/com.google.android.gms/databases/dg.db
-perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
-if [ \$perms -eq 777 ]; then
-echo \"Chmod 777 command completed successfully\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"Chmod command FAILED\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-	
-# run sqlite 3 commands on dg.db
-\$sqlpath/sqlite3 /data/data/com.google.android.gms/databases/dg.db \"update main set c='0' where a like '%attest%';\"
-if [ \$? -eq 0 ] ; 	then
-echo \"SQLite3 command completed successfully\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"SQLite3 command FAILED\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-fi
-		
-# set 440 permissions on dg.db
-$MIPSB/chmod 440 /data/data/com.google.android.gms/databases/dg.db
-perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
-if [ \$perms -eq 440 ] ; then
-echo \"Chmod 440 command completed successfully\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-else
-echo \"Chmod command FAILED\" >> \$logfile
-echo \"Permissions reported as: \$perms\" >> \$logfile
-echo \"\" >> \$logfile
-fi
-sleep 2
-) &" > $MODPATH/$MODID/service.sh
-echo "# set payfixuninstall.log
-logfile=\"/cache/payfixuninstall.log\"
-
-# wait till boot completed - thanks to jcmm11
-until [ \"\$(getprop sys.boot_completed)\" = 1 ]
-do
-sleep 1
-done
-
-echo \"System boot completed\" > \$logfile
-echo \"\" > \$logfile
-
-while (true); do
-if [ -f \"$MIPSB/chmod\" ]; then
-echo \"$MIPSB/chmod....accessible\" > \$logfile
-echo \"\" > \$logfile
-break;
-fi
-sleep 1
-done
-
-# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
-while (true); do
-if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
-echo \"Database file dg.db....accessible\" > \$logfile
-echo \"\" > \$logfile
-break;
-fi
-sleep 1
-done
-
-# on to the main show............
-
-# stop Google Pay
-$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
-if [ \$? -eq 0 ] ; then
-echo \"Google Pay stopped successfully\" > \$logfile
-echo \"\" > \$logfile
-else
-echo \"Google Pay NOT stopped successfully\" > \$logfile
-echo \"\" > \$logfile
-fi
-sleep 2
-
-# set default 660 permissions on dg.db
-$MIPSB/chmod 660 /data/data/com.google.android.gms/databases/dg.db
-perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
-if [ \$perms -eq 660 ] ; then
-echo \"Chmod 660 command completed successfully\" > \$logfile
-echo \"Permissions reported as: \$perms\" > \$logfile
-echo \"\" > \$logfile
-else
-echo \"Chmod 660 command FAILED\" > \$logfile
-echo \"Permissions reported as: \$perms\" > \$logfile
-echo \"\" > \$logfile
-fi
-sleep 2
-
-# Don't modify anything after this
-if [ -f \$INFO ]; then
-while read LINE; do
-if [ \"\$(echo -n \$LINE | tail -c 1)\" == \"~\" ]; then
-continue
-elif [ -f \"\$LINE~\" ]; then
-mv -f \$LINE~ \$LINE
-else
-rm -f \$LINE
-while true; do
-LINE=\$(dirname \$LINE)
-[ \"\$(ls -A \$LINE 2>/dev/null)\" ] && break 1 || rm -rf \$LINE
-done
-fi
-done < \$INFO
-rm -f \$INFO
-fi" > $MODPATH/$MODID/uninstall.sh
-MHIDE -f "com.google.android.gsf_com.google.process.gapps com.google.android.gsf_com.google.process.gservices com.google.android.gms com.google.android.apps.walletnfcrel"
-if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
-UCSA "Clear Cache And Storage For Google Pay?" "Clear, I Understand The RISKS" "No, (It *May* Prevent The Module From Working)" "IPGPFA"
-fi
-cp -f $TMPDIR/SQLite3/sqlite3-$arch $MODPATH/$MODID$IPPSXBM/sqlite3
-SET_PERM_RM; WCANFTP -sq
-fi
-if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
-$SQLITE3 $IPDD/com.google.android.gms/databases/dg.db "update main set c='0' where a like '%attest%';"
-if [ $? -eq 0 ]; then
-UIP "SQLite3 Command Completed Successfully"
-rm -rf $IPDD/com.google.android.gms/app_dg_cache
-cp -f $TMPDIR/GPay/dg.db $IPDD/com.google.android.gms/databases
-chmod 440 $IPDD/com.google.android.gms/databases/dg.db
-else
-UIP "SQLite3 Command Failed"
-fi
-fi
-UIP "$MSGDI"
-}
-
-IPGPFA() {
-UIP "Clearing Google Pay Caches..."
-for x in com.google.android.apps.walletnfcrel
-do pm clear $x >&2
-if [ $? -eq 0 ]; then
-UIP "$x: Cleared Successfully"
-else
-UIP "$x: Not Cleared Successfully"
-fi
-done
 }
 
 } #
@@ -12287,20 +11456,18 @@ fi
 fi
 echo "#!$MIPSB/sh
 dir=\${0%/*}
-tmpLspdDex=\"$IPDLTMP/lspd.dex\"
+tmpLspdApk=\"$IPDLTMP/daemon.apk\"
 debug=\"false\"
-if [ -r \$tmpLspdDex ]; then
-java_options=\"-Djava.class.path=\$tmpLspdDex\"
-java_options=\"\$java_options -Dlsp.library.path=$IPDLTMP\"
-debug=\"true\"
-elif [ -d \"\$dir/system\" ]; then
-java_options=\"-Djava.class.path=\$dir$MIPSFW/lspd.dex\"
-java_options=\"\$java_options -Dlsp.library.path=\$dir\"
+
+if [ -r \$tmpLspdApk ]; then
+java_options=\"-Djava.class.path=\$tmpLspdApk\"
+java_options=\"\$java_options -Dlsp.library.path=/data/local/tmp\"
 debug=\"true\"
 else
-java_options=\"-Djava.class.path=\$dir/framework/lspd.dex\"
+java_options=\"-Djava.class.path=\$dir/daemon.apk\"
 java_options=\"\$java_options -Dlsp.library.path=\$dir\"
 fi
+
 if [ \$debug = \"true\" ]; then
 os_version=\$(getprop ro.build.version.sdk)
 if [ \"\$os_version\" -eq \"27\" ]; then
@@ -12311,8 +11478,8 @@ else
 java_options=\"\$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend=n,server=y\"
 fi
 fi
-# shellcheck disable=SC2086
-exec $MIPSB/app_process \$java_options $MIPSB --nice-name=lspd org.lsposed.lspd.core.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/lspd
+
+exec $MIPSB/app_process \$java_options $MIPSB --nice-name=lspd org.lsposed.lspd.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/lspd
 if $LSPOSEDR; then
 MMPR -vc "Riru - LSPosed" "$VIPLSPOSEDR" "$VCIPLSPOSEDR" "LSPosed Developers" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 12, 12L DP1. Requires Riru 25.0.1 or above installed."
 echo "allow system_server system_server process execmem" > $MODPATH/$MODID/sepolicy.rule
@@ -12322,7 +11489,12 @@ fi
 echo "dalvik.vm.dex2oat-flags=--inline-max-code-units=0" > $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
-rm -f \"$IPDLTMP/lspd.dex\"
+FLAVOR=riru
+if ! [ \"\$ZYGISK_ENABLED\" = \"\$([ \$FLAVOR = \"zygisk\" ] && echo 1)\" ]; then
+log -t \"LSPosed\" \"\$FLAVOR does not match, skipping\"
+exit
+fi
+rm -f \"$IPDLTMP/daemon.apk\"
 unshare -m sh -c \"\$MODDIR/lspd &\"" > $MODPATH/$MODID/post-fs-data.sh
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
@@ -12343,6 +11515,7 @@ pm install -r $TMPDIR/LSPosed/manager.apk >/dev/null
 fi
 mkdir -p $NVBASE/lspd
 cp -f $TMPDIR/LSPosed/manager.apk $NVBASE/lspd
+cp -f $TMPDIR/LSPosed/daemon.apk $MODPATH/$MODID
 SET_PERM_RM
 chmod 0744 $MODPATH/$MODID/lspd
 UIP "$MSGDI"
@@ -12522,7 +11695,7 @@ SET_PERM_RM -msgdi
 }
 
 IPATE() {
-if $MAGISK && [ -d $MODPATH/$IDRIRU ] && [ ! -f $MODPATH/$IDRIRU/legacy ] && $ATWELVE; then
+if $MAGISK && [ -d $MODPATH/$IDRIRU ] && [ ! -f $MODPATH/$IDRIRU/legacy ] && [ "$ASDK" -ge 31 ]; then
 UCSA "Install Android 12 Extensions $VIPATE?" "$MSGEFTC" "$MSGNUS" "IPATES"
 fi
 }
@@ -12607,6 +11780,419 @@ SET_PERM_RM -msgdi
 
 } #
 
+{ #SafetyNet/MHPC/GPay
+
+IPSNP() {
+if $MAGISK && [ "$ASDK" -ge 27 ] && [ -d $MODPATH/$IDRIRU ]; then
+UCSA "Install Safety Net Patches?" "$MSGEFTC" "$MSGNUS" "IPSNPS"
+fi
+}
+
+IPSNPS() {
+SAFETYNET=false; SAFETYNETZ=false; SAFETYNETR=false
+if [ -d $MODPATH/$IDRIRU ]; then
+if $ZYGISK; then
+UIP -d "Install Safety Net Patch Zygisk Or Riru?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+UIP -d "Install Safety Net Patch For:" "$MSGVU Zygisk $VIPSNPZ" "$MSGVD Riru $VIPSNPR"
+if $KEYFUNCTION; then
+SAFETYNET=true; SAFETYNETZ=true
+else
+SAFETYNET=true; SAFETYNETR=true
+fi
+else
+SAFETYNET=false
+fi
+else
+UIP -d "Install Safety Net Patch $VIPSNPR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+SAFETYNET=true; SAFETYNETR=true
+fi
+fi
+else
+UIP -d "Install Safety Net Patch $VIPSNPR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+SAFETYNET=true; SAFETYNETR=true
+fi
+fi
+if $SAFETYNET; then
+UIP "Installing Safety Net Patches $IAMM"
+UZTPN "SafetyNet"
+MODID="$IDSNPRZ"; REMOVER -mm "$MODID"
+if $SAFETYNETR; then
+mkdir -p $MODPATH/$MODID/riru
+UIP "Copy arm Libraries"
+cp -rf $TMPDIR/SafetyNet/riru/lib $MODPATH/$MODID/riru
+if [ "$arch" = "arm64" ]; then
+UIP "Copy arm64 Libraries"
+cp -rf $TMPDIR/SafetyNet/riru/lib64 $MODPATH/$MODID/riru
+fi
+cp -f $TMPDIR/SafetyNet/riru/classes.dex $MODPATH/$MODID
+MMPR -vc "Universal SafetyNet Fix" "$VIPSNPR" "$VCIPSNPR" "kdrag0n" "A universal fix for SafetyNet on Android 8–12 devices with hardware attestation and unlocked bootloaders. Requires MagiskHide and Riru v24.0.0 or newer."
+elif $SAFETYNETZ; then
+mkdir -p $MODPATH/$MODID/zygisk
+UIP "Copy arm Libraries"
+cp -rf $TMPDIR/SafetyNet/zygisk/armeabi-v7a.so $MODPATH/$MODID/zygisk
+if [ "$arch" = "arm64" ]; then
+UIP "Copy arm64 Libraries"
+cp -rf $TMPDIR/SafetyNet/zygisk/armeabi-v8a.so $MODPATH/$MODID/zygisk
+fi
+cp -f $TMPDIR/SafetyNet/zygisk/classes.dex $MODPATH/$MODID
+MMPR -vc "Universal SafetyNet Fix" "$VIPSNPZ" "$VCIPSNPZ" "kdrag0n" "A universal fix for SafetyNet on Android 8–12 devices with hardware attestation and unlocked bootloaders."
+echo -e "#!$MIPSB/sh\nmagisk --denylist rm com.google.android.gms" > $MODPATH/$MODID/post-fs-data.sh
+fi
+echo "# RootBeer, Microsoft
+ro.build.tags=release-keys
+
+# Samsung
+ro.boot.warranty_bit=0
+ro.vendor.boot.warranty_bit=0
+ro.vendor.warranty_bit=0
+ro.warranty_bit=0
+
+# SafetyNet
+ro.boot.flash.locked=1
+ro.boot.verifiedbootstate=green
+ro.boot.veritymode=enforcing
+ro.boot.vbmeta.device_state=locked
+vendor.boot.vbmeta.device_state=locked
+
+# Other
+ro.build.type=user
+ro.debuggable=0
+ro.secure=1" > $MODPATH/$MODID/system.prop
+echo "#!$MIPSB/sh
+maybe_set_prop() {
+local prop=\"\$1\"
+local contains=\"\$2\"
+local value=\"\$3\"
+
+if [[ \"\$(getprop \"\$prop\")\" == *\"\$contains\"* ]]; then
+resetprop \"\$prop\" \"\$value\"
+fi
+}
+
+# Magisk recovery mode
+maybe_set_prop ro.bootmode recovery unknown
+maybe_set_prop ro.boot.mode recovery unknown
+maybe_set_prop vendor.boot.mode recovery unknown
+
+# MIUI cross-region flash
+maybe_set_prop ro.boot.hwc CN GLOBAL
+maybe_set_prop ro.boot.hwcountry China GLOBAL
+
+resetprop --delete ro.build.selinux
+
+# SELinux permissive
+if [[ \"\$(cat /sys/fs/selinux/enforce)\" == \"0\" ]]; then
+chmod 640 /sys/fs/selinux/enforce
+chmod 440 /sys/fs/selinux/policy
+fi
+
+# Late props which must be set after boot_completed
+{
+until [[ \"\$(getprop sys.boot_completed)\" == \"1\" ]]; do
+sleep 1
+done
+
+# avoid breaking OnePlus display modes/fingerprint scanners
+resetprop vendor.boot.verifiedbootstate green
+}&" > $MODPATH/$MODID/service.sh
+MHIDE -l; SET_PERM_RM -msgdi
+fi
+}
+
+IPSNET() {
+if [ "$ASDK" -ge 29 ]; then
+UCSA "Install Safety Net Eval Type BASIC $VIPSNET?" "" "$MSGNUS" "IPSNETS"
+fi
+}
+
+IPSNETS() {
+UIP "Installing Safety Net Eval Type BASIC $IAMM"
+if $MAGISK; then
+MODID="$IDSNET"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MMPR -v "Safety Net Eval Type" "$VIPSNET" "Set Safety Net Eval Type To BASIC"; SET_PERM_RM; IPSNET=$MODPATH/$MODID/system.prop
+else
+BUCKUPER -bp "$IPSBP"; IPSNET=$IPSBP
+fi
+echo -e "\n# Set Safety Net Eval Type To BASIC\nro.product.model=BASIC\nro.product.system.model=BASIC\nro.product.vendor.model=BASIC\nro.product.product.model=BASIC\nro.product.odm.model=BASIC" >> $IPSNET
+UIP "$MSGDI"
+}
+
+IPMHPC() {
+if $MAGISK && [ $MAGISKFIRSTTIME != true ]; then
+UCSA "Install MagiskHide Props Config $VIPMHPC?" "" "$MSGNUS" "IPMHPCS"
+fi
+}
+
+IPMHPCS() {
+UZTPN "MHPC"; UNIVERSALUNZIP
+UIP "Usage:" "Run \"su -c props\" On Terminal In BootMode"
+WCANFTP -bb
+}
+
+IPFPMC() {
+if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then UCSA "Install Force Play Market Certified $VIPFPMC?" "" "$MSGNUS" "IPFPMCS"; fi
+}
+
+IPFPMCS() {
+UIP "Installing Force Play Market Certified $IAMM"
+if $MAGISK; then
+MODID="$IDFPMC"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MSSERVICE -s "sed -i \"s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i \"s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/g\" $IPDD/com.android.vending/shared_prefs/finsky.xml"
+MMPR -v "Force Play Market Certified" "$VIPFPMC" "Force Play Market Certified $MSGFMM"; SET_PERM_RM
+fi
+if [ -f $IPDD/com.android.vending/shared_prefs/finsky.xml ]; then sed -i "s/    <boolean name=\"device-google-certified\" value=\"false\" \/>/   <boolean name=\"device-google-certified\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; sed -i "s/    <boolean name=\"device-google-certified-basic-integrity\" value=\"false\" \/>/   <boolean name=\"device-google-certified-basic-integrity\" value=\"true\" \/>/gi" $IPDD/com.android.vending/shared_prefs/finsky.xml; fi
+UIP "$MSGDI"
+}
+
+IPGPF() {
+if [ -f $IPSFW/com.android.nfc_extras.jar ] || find $SYSTEM -name *NfcNci* >/dev/null; then
+if $FINDGAPPS; then
+UCSA "Install GooglePay Fix $VIPGPF?" "" "$MSGNUS" "IPGPFS"
+fi
+fi
+}
+
+IPGPFS() {
+UIP "Installing GooglePay Fix $IAMM"
+if $MAGISK; then
+MODID="$IDGPF"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID$IPPSXBM
+MMPR -vc "GPay SQLite Fix" "$VIPGPF" "$VCIPGPF" "73sydney" "Applies the full SQLite fix for Google Pay"
+echo "(
+#!$MIPSB/sh
+# Do NOT assume where your module will be located.
+# ALWAYS use \$MODDIR if you need to know where this script
+# and module is placed.
+# This will make sure your module will still work
+# if Magisk change its mount point in the future
+MODDIR=\${0%/*}
+
+# set script to run SQL commands
+runsql=1
+
+# set logfile variable
+logfile=\"/cache/payfixfirstrun.log\"
+
+# wait till boot completed - thanks to jcmm11
+until [ \"\$(getprop sys.boot_completed)\" = 1 ]
+do
+sleep 1
+done
+
+echo \"System boot completed\" > \$logfile
+echo \"\" >> \$logfile
+
+while (true); do
+if [ -f \"$MIPSB/chmod\" ]; then
+echo \"$MIPSB/chmod....accessible\" >> \$logfile
+echo \"\" >> \$logfile
+break;
+fi
+sleep 1
+done
+
+# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
+while (true); do
+if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
+echo \"/data/data/com.google.android.gms/databases/dg.db....accessible\" >> \$logfile
+echo \"\" >> \$logfile
+break;
+fi
+sleep 1
+done
+
+# check where sqlite is
+if [ -f /data/data/com.termux/files/usr/bin/sqlite3 ] ; then
+sqlpath=/data/data/com.termux/files/usr/bin
+echo \"[termux] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile
+elif [ -f /data/data/com.keramidas.TitaniumBackup/files/sqlite3 ] ; then
+sqlpath=/data/data/com.keramidas.TitaniumBackup/files
+echo \"[titanium] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile	
+elif [ -f $MIPSB/sqlite3 ] ; then
+sqlpath=$MIPSB
+echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile
+elif [ -f $MIPSXB/sqlite3 ] ; then
+sqlpath=$MIPSXB
+echo \"[standard] SQLite3 binary found in: \$sqlpath\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"SQLite3 binary not found, please install a SQLite3 binary, without this the fix *may* not work\" >> \$logfile
+echo \"I provide an SQLite3 Universal Binary Magisk Module, and links to SQLite3 binaries for other architectures\" >> \$logfile
+echo \"at https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+
+# stop Google Pay
+$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
+if [ \$? -eq 0 ] ; then
+echo \"Google Pay stopped successfully\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"Google Pay NOT stopped successfully\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+
+if [ \$runsql -eq 1 ]; then
+# set 777 permissions on dg.db
+$MIPSB/chmod 777 /data/data/com.google.android.gms/databases/dg.db
+perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
+if [ \$perms -eq 777 ]; then
+echo \"Chmod 777 command completed successfully\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"Chmod command FAILED\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+	
+# run sqlite 3 commands on dg.db
+\$sqlpath/sqlite3 /data/data/com.google.android.gms/databases/dg.db \"update main set c='0' where a like '%attest%';\"
+if [ \$? -eq 0 ] ; 	then
+echo \"SQLite3 command completed successfully\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"SQLite3 command FAILED\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+fi
+		
+# set 440 permissions on dg.db
+$MIPSB/chmod 440 /data/data/com.google.android.gms/databases/dg.db
+perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
+if [ \$perms -eq 440 ] ; then
+echo \"Chmod 440 command completed successfully\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+else
+echo \"Chmod command FAILED\" >> \$logfile
+echo \"Permissions reported as: \$perms\" >> \$logfile
+echo \"\" >> \$logfile
+fi
+sleep 2
+) &" > $MODPATH/$MODID/service.sh
+echo "# set payfixuninstall.log
+logfile=\"/cache/payfixuninstall.log\"
+
+# wait till boot completed - thanks to jcmm11
+until [ \"\$(getprop sys.boot_completed)\" = 1 ]
+do
+sleep 1
+done
+
+echo \"System boot completed\" > \$logfile
+echo \"\" > \$logfile
+
+while (true); do
+if [ -f \"$MIPSB/chmod\" ]; then
+echo \"$MIPSB/chmod....accessible\" > \$logfile
+echo \"\" > \$logfile
+break;
+fi
+sleep 1
+done
+
+# check the dg.db file is accessible before we start off doing anything - thanks to didgeridoohan
+while (true); do
+if [ -f \"/data/data/com.google.android.gms/databases/dg.db\" ]; then
+echo \"Database file dg.db....accessible\" > \$logfile
+echo \"\" > \$logfile
+break;
+fi
+sleep 1
+done
+
+# on to the main show............
+
+# stop Google Pay
+$MIPSB/am force-stop /data/data/com.google.android.apps.walletnfcrel
+if [ \$? -eq 0 ] ; then
+echo \"Google Pay stopped successfully\" > \$logfile
+echo \"\" > \$logfile
+else
+echo \"Google Pay NOT stopped successfully\" > \$logfile
+echo \"\" > \$logfile
+fi
+sleep 2
+
+# set default 660 permissions on dg.db
+$MIPSB/chmod 660 /data/data/com.google.android.gms/databases/dg.db
+perms=\$(stat -c %a /data/data/com.google.android.gms/databases/dg.db)
+if [ \$perms -eq 660 ] ; then
+echo \"Chmod 660 command completed successfully\" > \$logfile
+echo \"Permissions reported as: \$perms\" > \$logfile
+echo \"\" > \$logfile
+else
+echo \"Chmod 660 command FAILED\" > \$logfile
+echo \"Permissions reported as: \$perms\" > \$logfile
+echo \"\" > \$logfile
+fi
+sleep 2
+
+# Don't modify anything after this
+if [ -f \$INFO ]; then
+while read LINE; do
+if [ \"\$(echo -n \$LINE | tail -c 1)\" == \"~\" ]; then
+continue
+elif [ -f \"\$LINE~\" ]; then
+mv -f \$LINE~ \$LINE
+else
+rm -f \$LINE
+while true; do
+LINE=\$(dirname \$LINE)
+[ \"\$(ls -A \$LINE 2>/dev/null)\" ] && break 1 || rm -rf \$LINE
+done
+fi
+done < \$INFO
+rm -f \$INFO
+fi" > $MODPATH/$MODID/uninstall.sh
+MHIDE -f "com.google.android.gsf_com.google.process.gapps com.google.android.gsf_com.google.process.gservices com.google.android.gms com.google.android.apps.walletnfcrel"
+if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
+UCSA "Clear Cache And Storage For Google Pay?" "Clear, I Understand The RISKS" "No, (It *May* Prevent The Module From Working)" "IPGPFA"
+fi
+cp -f $TMPDIR/SQLite3/sqlite3-$arch $MODPATH/$MODID$IPPSXBM/sqlite3
+SET_PERM_RM; WCANFTP -sq
+fi
+if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
+$SQLITE3 $IPDD/com.google.android.gms/databases/dg.db "update main set c='0' where a like '%attest%';"
+if [ $? -eq 0 ]; then
+UIP "SQLite3 Command Completed Successfully"
+rm -rf $IPDD/com.google.android.gms/app_dg_cache
+cp -f $TMPDIR/GPay/dg.db $IPDD/com.google.android.gms/databases
+chmod 440 $IPDD/com.google.android.gms/databases/dg.db
+else
+UIP "SQLite3 Command Failed"
+fi
+fi
+UIP "$MSGDI"
+}
+
+IPGPFA() {
+UIP "Clearing Google Pay Caches..."
+for x in com.google.android.apps.walletnfcrel
+do pm clear $x >&2
+if [ $? -eq 0 ]; then
+UIP "$x: Cleared Successfully"
+else
+UIP "$x: Not Cleared Successfully"
+fi
+done
+}
+
+} #
+
 { #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 
 IPFGS() {
@@ -12635,7 +12221,7 @@ if $KEYFUNCTION || [ $BOOTMODE != true ]; then
 UIP "Installing Force Google Sync After Boot $IAMM"
 MODID="$IDFGS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "bmgr run; bmgr backupnow appdata; bmgr backupnow --all"
+MSSERVICE -s "bmgr run; bmgr backupnow appdata; bmgr backupnow --all"
 MMPR -v "Force Google Sync" "$VIPFGS" "Force Google Sync After Boot $MSGFMM"; SET_PERM_RM -msgdi
 fi
 }
@@ -12653,12 +12239,12 @@ mkdir -p $MODPATH/$MODID
 if SP_CHECKER "$IPDSU/0/settings_secure.xml" "navigation_mode"; then
 UIP -d "Choose Method:" "$MSGVU CMD Overlay" "$MSGVD Settings Put"
 if $KEYFUNCTION; then
-MBCCSERVICE "cmd overlay enable com.android.internal.systemui.navbar.gestural"
+MSSERVICE -s "cmd overlay enable com.android.internal.systemui.navbar.gestural"
 else
-MBCCSERVICE "$SPSECURE navigation_mode 2"
+MSSERVICE -s "$SPSECURE navigation_mode 2"
 fi
 else
-MBCCSERVICE "cmd overlay enable com.android.internal.systemui.navbar.gestural"
+MSSERVICE -s "cmd overlay enable com.android.internal.systemui.navbar.gestural"
 fi
 MMPR -v "Force Gestures" "$VIPFEG" "Force Gestures - If The Gesture Selection Item Disappeared After Installing Other Launchers Or Forced Hiding Gestures $MSGFMM"; SET_PERM_RM -msgdi
 }
@@ -12677,7 +12263,7 @@ if $BOOTMODE; then
 UIP "Enabling Hidden Api Policy Right Now"
 $SPGLOBAL hidden_api_policy 1; $SPGLOBAL hidden_api_policy_pre_p_apps 1; $SPGLOBAL hidden_api_policy_p_apps 1
 fi
-MBCCSERVICE "$SPGLOBAL hidden_api_policy 1; $SPGLOBAL hidden_api_policy_pre_p_apps 1; $SPGLOBAL hidden_api_policy_p_apps 1"
+MSSERVICE -s "$SPGLOBAL hidden_api_policy 1; $SPGLOBAL hidden_api_policy_pre_p_apps 1; $SPGLOBAL hidden_api_policy_p_apps 1"
 MMPR -v "Enabling Hidden Api Policy" "$VIPHAP" "Enabling Hidden Api Policy $MSGFMM"; SET_PERM_RM -msgdi
 }
 
@@ -12693,7 +12279,7 @@ $SPSECURE install_non_market_apps 1
 fi
 MODID="$IDAFUS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "$SPSECURE install_non_market_apps 1"
+MSSERVICE -s "$SPSECURE install_non_market_apps 1"
 MMPR -v "Allow Installation Of Apps From Unknown Sources" "$VIPAFUS" "Force Allow Installation Of Apps From Unknown Sources $MSGFMM"; SET_PERM_RM -msgdi
 }
 
@@ -12708,7 +12294,7 @@ MODID="$IDBPT"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
 MMPR -v "Build Prop Tweaks" "$VIPBPT" "Build Prop Tweaks $MSGFMM"; SET_PERM_RM; IPBPT="$MODPATH/$MODID/system.prop"
 else
-BUILD_PROP_BACKUP; IPBPT="$IPSBP"
+BUCKUPER -bp "$IPSBP"; IPBPT="$IPSBP"
 fi
 
 echo "# Enable 4K in YouTube
@@ -12758,9 +12344,9 @@ MODID="$IDKL"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID$MIPSB
 MMPR -vc "KillLogger" "$VIPKL" "$VCIPKL" "mrfrost475" "This module deletes the files responsible for the dump, logcat, and bug reports also prescribes logcat ban in build.prop"
 KLIPP=$MODPATH/$MODID/system.prop
-if SP_CHECKER "$IPDSU/0/settings_global.xml" "activity_starts_logging_enabled"; then MBCCSERVICE "$SPGLOBAL activity_starts_logging_enabled 0"; fi
+if SP_CHECKER "$IPDSU/0/settings_global.xml" "activity_starts_logging_enabled"; then MSSERVICE -s "$SPGLOBAL activity_starts_logging_enabled 0"; fi
 else
-BUILD_PROP_BACKUP; KLIPP=$IPSBP; touch $AIOPFMDPH/killlogger
+BUCKUPER -bp "$IPSBP"; KLIPP=$IPSBP; touch $AIOPFMDPH/killlogger
 fi
 if [ -f $IPSB/logcat ]; then UIP -d "You Don't Need logcat?" "$MSGVU Yes" "$MSGVD No"; if $KEYFUNCTION; then if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/logcat; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/logcat $AIOPFMDPH/KL; echo '' > $IPSB/logcat; fi; fi; fi
 if [ -f $IPSB/dumpsys ]; then UIP -d "You Don't Need dumpsys?" "$MSGVU Yes" "$MSGVD No"; if $KEYFUNCTION; then if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/dumpsys; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/dumpsys $AIOPFMDPH/KL; echo '' > $IPSB/dumpsys; fi; fi; fi
@@ -12868,7 +12454,7 @@ ro.config.nocheckin=1
 ro.kernel.android.checkjni=0
 ro.kernel.checkjni=0
 ro.logd.size=OFF" >> $KLIPP
-if $MAGISK; then MBCCSERVICE "echo \"0\" > /sys/block/mmcblk0/queue/iostats; echo \"0\" > /sys/block/mmcblk1/queue/iostats"; SET_PERM_RM; fi
+if $MAGISK; then MSSERVICE -s "echo \"0\" > /sys/block/mmcblk0/queue/iostats; echo \"0\" > /sys/block/mmcblk1/queue/iostats"; SET_PERM_RM; fi
 UIP "$MSGDI"
 }
 
@@ -12884,7 +12470,7 @@ mkdir -p $MODPATH/$MODID
 echo "debug.egl.force_msaa=true" > $MODPATH/$MODID/system.prop
 MMPR -v "Force MSAA Switcher" "$VIPFMSAAS" "Force 4X MSAA Switcher $MSGFMM"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "\n# Force 4X MSAA Switcher\ndebug.egl.force_msaa=true" >> $IPSBP
 fi
 UIP "$MSGDI"
@@ -12900,7 +12486,7 @@ IPFDHWOS() {
 UIP "Installing Force Disable HW Overlays $IAMM"
 MODID="$IDFDHWO"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "service call SurfaceFlinger 1008 i32 1"
+MSSERVICE -s "service call SurfaceFlinger 1008 i32 1"
 MMPR -v "Force Disable HW Overlays" "$VIPFDHWO" "Force Disable HW Overlays $MSGFMM"; SET_PERM_RM -msgdi
 }
 
@@ -12912,7 +12498,7 @@ IPFDEVADBS() {
 UIP "Installing Force Activate DEV & ADB $IAMM"
 MODID="$IDFDEVADB"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "$SPGLOBAL development_settings_enabled 1; $SPGLOBAL adb_enabled 1"
+MSSERVICE -s "$SPGLOBAL development_settings_enabled 1; $SPGLOBAL adb_enabled 1"
 echo "persist.security.adbinput=1
 persist.security.adbinstall=1
 persist.service.adb.enable=1
@@ -12933,7 +12519,7 @@ mkdir -p $IPDSDE/0
 if $MAGISK; then
 MODID="$IDFMTP"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "echo \"<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\\\"usb-screen-unlocked-config-0\\\">mtp</string>\n</map>\" > $IPDSDE/0/UsbDeviceManagerPrefs.xml"
+MSSERVICE -s "echo \"<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\\\"usb-screen-unlocked-config-0\\\">mtp</string>\n</map>\" > $IPDSDE/0/UsbDeviceManagerPrefs.xml"
 MMPR -v "Force MTP" "$VIPFMTP" "Force Activate MTP $MSGFMM"; SET_PERM_RM
 fi
 echo "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
@@ -12985,7 +12571,7 @@ fi
 fi
 MMPR -v "Switch $MSGSWITCHIR Face UnLock IR Camera" "$VIPSOOOFUIRC" "Switch $MSGSWITCHIR Face UnLock IR Camera $MSGFMM"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.motorola.faceunlock\nro.face.moto_unlock_service.cam_id=$SWITCHIR" >> $IPSBP
 else
@@ -13020,7 +12606,7 @@ mkdir -p $MODPATH/$MODID
 echo "debug.hwui.force_dark=true" > $MODPATH/$MODID/system.prop
 MMPR -v "Force Dark Mode" "$VIPFDM" "Force Dark Mode $MSGFMM"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "\n# Force Dark\ndebug.hwui.force_dark=true" >> $IPSBP
 fi
 UIP "$MSGDI"
@@ -13034,7 +12620,7 @@ IPFDPPS() {
 UIP "Installing Force Disabling Play Protect $IAMM"
 MODID="$IDFDPP"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "$SPGLOBAL upload_apk_enable 0; $SPGLOBAL package_verifier_enable 0; $SPGLOBAL package_verifier_user_consent -1; $SPGLOBAL verifier_verify_adb_installs 0"
+MSSERVICE -s "$SPGLOBAL upload_apk_enable 0; $SPGLOBAL package_verifier_enable 0; $SPGLOBAL package_verifier_user_consent -1; $SPGLOBAL verifier_verify_adb_installs 0"
 MMPR -v "Force Disabling Play Protect" "$VIPFDPP" "Force Disabling Play Protect $MSGFMM"; SET_PERM_RM -msgdi
 }
 
@@ -13047,7 +12633,7 @@ UIP "Installing Force Idle $IAMM"
 MODID="$IDFI"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
 if [ -f $MODPATH/killlogger/$MIPSB/dumpsys ]; then UIP "Found dumpsys In KillLogger - Removing dumpsys"; fi
-if SP_CHECKER "$IPDSU/0/settings_global.xml" "aggressive_idle_enabled aggressive_standby_enabled"; then MBCCSERVICE "$SPGLOBAL aggressive_idle_enabled 1; $SPGLOBAL aggressive_standby_enabled 1; dumpsys deviceidle force-idle; dumpsys deviceidle enable"; else MBCCSERVICE "dumpsys deviceidle force-idle; dumpsys deviceidle enable"; fi
+if SP_CHECKER "$IPDSU/0/settings_global.xml" "aggressive_idle_enabled aggressive_standby_enabled"; then MSSERVICE -s "$SPGLOBAL aggressive_idle_enabled 1; $SPGLOBAL aggressive_standby_enabled 1; dumpsys deviceidle force-idle; dumpsys deviceidle enable"; else MSSERVICE -s "dumpsys deviceidle force-idle; dumpsys deviceidle enable"; fi
 MMPR -v "Force Idle" "$VIPFI" "Force Idle $MSGFMM"; SET_PERM_RM -msgdi
 }
 
@@ -13471,7 +13057,7 @@ conflict=\$(xml=\$(find $NVBASE -iname \"*.xml\");for i in \$xml; do if grep -q 
 for i in \$conflict; do
 sed -i '/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-data-usage-save package=\"com.google.android.gms\"/d' \$i
 done" > $MODPATH/$MODID/post-fs-data.sh
-MBCCSERVICE "while [ \"\$(getprop sys.boot_completed)\" != \"1\" ]; do sleep 1; done; sleep 2m; for i in \$(ls /data/user/); do pm disable --user \$i com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; done; exit 0"
+MSSERVICE -s "while [ \"\$(getprop sys.boot_completed)\" != \"1\" ]; do sleep 1; done; sleep 2m; for i in \$(ls /data/user/); do pm disable --user \$i com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; done; exit 0"
 echo "gms='dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1'
 if [ \"\$gms\" = \"com.google.android.gms\" ]; then
 echo \"\033[0;31m Google Play services is Not Optimized \033[0m\"
@@ -14141,7 +13727,7 @@ MODID="$IDUSGP"; REMOVER -mm "$MODID"
 [ -d $IPSSPES ] && mkdir -p $MODPATH/$MODID$MIPSSPES && cp -f $TMPDIR/$MODID/* $MODPATH/$MODID$MIPSSPES
 MMPR -v "$MODID" "$VIPUSGP" "Activating Unlimited Storage For Google Photos (Maybe)"; SET_PERM_RM; IPUSGP=$MODPATH/$MODID/system.prop
 else
-BUILD_PROP_BACKUP; IPUSGP=$IPSBP
+BUCKUPER -bp "$IPSBP"; IPUSGP=$IPSBP
 touch $AIOPFMDPH/USGP
 [ -d $IPSES ] && cp -f $TMPDIR/USGP/* $IPSES
 [ -d $IPSSPES ] && cp -f $TMPDIR/USGP/* $IPSSPES
@@ -14160,7 +13746,7 @@ if $UCSFNM; then
 UIP "Installing Animation Scale $IAMM"
 MODID="$IDAS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
-MBCCSERVICE "$SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC"
+MSSERVICE -s "$SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC"
 if $BOOTMODE; then
 UIP "Enabling Animation Scale Right Now"
 $SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC
@@ -14204,7 +13790,7 @@ mkdir -p $MODPATH/$MODID
 echo "$GPURV" > $MODPATH/$MODID/build.prop
 MMPR -v "GPU Rendering" "$VIPGPUR" "GPU Rendering - Set In $GPURVR"; SET_PERM_RM
 else
-BUILD_PROP_BACKUP
+BUCKUPER -bp "$IPSBP"
 echo -e "# GPU Rendering\n$GPURV" >> $IPSBP
 fi
 UIP "$MSGDI"
@@ -14271,7 +13857,7 @@ MODID="$IDVS"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
 MMPR -v "Volume Steps" "$VIPVS" "Volume Steps $MSGFMM - Set On: Media $MEDIAVOLUMESTEPS, Call $CALLVOLUMESTEPS, System $SYSTEMVOLUMESTEPS, Alarm $ALARMVOLUMESTEPS"; SET_PERM_RM; IPVS=$MODPATH/$MODID/system.prop
 else
-BUILD_PROP_BACKUP; IPVS=$IPSBP
+BUCKUPER -bp "$IPSBP"; IPVS=$IPSBP
 fi
 if $SETMEDIAVOLUMESTEPS; then echo "ro.config.media_vol_steps=$MEDIAVOLUMESTEPS" >> $IPVS; fi
 if $SETCALLVOLUMESTEPS; then echo "ro.config.vc_call_vol_steps=$CALLVOLUMESTEPS" >> $IPVS; fi
@@ -14314,6 +13900,7 @@ IPBA
 IPIOSEMOJI
 IPMUIS
 IPFDNI
+IPWFAMDQSSC
 }
 
 APPS_PRESETS() {
@@ -14397,14 +13984,6 @@ SBATTERYUSAGE
 GASL
 }
 
-SAFETY_NET_AND_MHPC_PRESETS() {
-IPSNP
-IPSNET
-IPFPMC
-IPMHPC
-IPGPF
-}
-
 RIRU_AND_EDX_LS_POSED_PRESETS() {
 IPRIRU
 IPEDXPOSED
@@ -14412,6 +13991,14 @@ IPLSPOSEDR
 IRIRUCW
 IPRMH
 IPATE
+}
+
+SAFETY_NET_AND_MHPC_PRESETS() {
+IPSNP
+IPSNET
+IPFPMC
+IPMHPC
+IPGPF
 }
 
 TWEAKS_PRESETS() {
@@ -14451,7 +14038,7 @@ UIP -d "Net: GPS/TTL/DNS/WB/APAUSBTF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS";
 UIP -d "Utilities: BB/ZSigner/SELC/ASTE/CC" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UTILITIES_PRESETS; fi
 UIP -d "Other: DFO/STZD/DDVFE/FA/SBU" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then OTHER_PRESETS; fi
 IPHF
-if $MAGISK; then UIP -d "SafetyNet/MHPC/GPay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; if [ "$ASDK" -ge 27 ]; then UIP -d "Riru/Edx/LS/Posed/Mudules" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_EDX_LS_POSED_PRESETS; fi; fi; fi
+if $MAGISK; then if [ "$ASDK" -ge 27 ]; then UIP -d "Riru/Edx/LS/Posed/Mudules" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_EDX_LS_POSED_PRESETS; fi; fi; UIP -d "SafetyNet/MHPC/GPay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; fi
 if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi
 UIP -d "Tweaks: FGS/BP/LED/UGMSD/USGP/VS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then MSGNUS="(/)"; TWEAKS_PRESETS; fi
 else
