@@ -34,7 +34,7 @@
 #### 31.12.21 (66) ####
 * SafetyNet для Riru и ZYGISK обновлены до v2.1.3 и v2.2.1. Все остальные SafetyNet модули вырезаны ко всем хуям;
 * NLSound откачен до 3.0 Stable;
-* AdAway-hosts 30.12.2021;
+* hosts файл с AdAway обновлен от 30.12.2021;
 * Gboard Silk Theme Changer до 1.1 - добавил выбор на новые кнопки и фикс отключения некоторых элементов;
 * LSPosed для Riru и ZYGISK обновлен до v1.6.5 (6296);
 * Добавлена установка Wi-Fi & Mobile Data QS Style Changer для 12ки;
