@@ -1,17 +1,17 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.12.21 (66) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.12.2021/AIOPFMD-31.12.21-%2866%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1isA_EG4pDckWLlo3UeAWJKdEYWfN3Kip/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/65">TG</a>
-* Версия AIOPFMDA: 16.10.21 (8) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
+* Версия AIOPFMD: 12.02.22 (67) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/12.02.2022/AIOPFMD-12.02.22-%2867%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/17xzrs50U2QB9ps7wwxf2e6cWCVMLaz8b/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/66">TG</a>
+* Версия AIOPFMDA: 16.10.21 (8) (EOL) (работает только на 66й версии) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
 * Русский интерфейс: Нет, и не будет/не имеет смысла (а описание на русском во цЫрк).
 * Что нужно/может потребоваться:
-	- Желателен MAGISK 24+ (23010+) и/или RECOVERY (если на вашем телефоне есть OF и он у вас не стоит - то вы полная гнида);
+	- Желателен MAGISK 24.1+ (24100+) и/или RECOVERY (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64.
 	- Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Три патча LP или их альтернатива для оверлеев системы и лаунчеров (рекомендуется, но может и нет (рандом));
-	- SeLinux в Permissive (для аудиомодов как минимум);
+	- SeLinux в Permissive (для аудиомодов как минимум (с приложениями на такой же функционал идите нахуй));
 	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+));
 	- SqLite для модулей которым он нужен.
 * В общем что делает патч: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
@@ -26,11 +26,59 @@
 </details>
 
 ## All In One Patch For More Devices (AIOPFMD)
-* В данный момент AIOPFMD имеет 80+ пунктов в которых 180+ основных выборов и 390+ в режиме удаления.<br>
+* В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details> 
   <summary>Changelog</summary>
-  
+
+#### 12.02.22 (67) ####
+* Минимальная версия Magisk выставлена и теперь рекомендуется 24.1+ (24100+) (И ЭТО УГРОЗА);
+* AdAwayHosts обновлен от 08.02.2022;
+* Systemless Hosts обновлен до 17.0-220116;
+* LP Hosts обновлен до v9.9.5;
+* Riru Clipboard Whitelist обновлен до v14;
+* RoundedUI обновлен до v2.7 - добавил оверлеи для Moto и Pixelized лаунчеров;
+* LSPosed для Riru и ZYGISK обновлен до v1.7.2 (6379);
+* Wi-Fi & Mobile Data QS Style Changer обновлен до v1.1 - фикс файла проверки статуса модуля;
+* В Режим удаления/replace/restore добавлено приложение в обычный лист: Firewall и CtsShimPrivPrebuilt;
+* AIST обновлен до v1.3 со всеми улучшениями и фиксом отвала AAC для Mi8 и не только;
+* PATCH_AUDIO_PLATFORM_INFO для NLSound и AIST был изменен;
+* В Kill Logger добавлен replace бинарника atrace;
+* Добавлена установка Shamiko v0.4.3 (102);
+* Обновлена/Изменена/Улучшена функция MAGISKHL для EOLного Magisk и добавлена поддержка работы с ZYGISK;
+* NLSound обновлен до v3.2 STABLE:
+	- Фикс отвала звука при выборе Dirac для некоторых устройств/прошивок;
+	- В PATCH_MIXER убраны всё cut off которые приводят к бутлупу;
+* Фикс показа Safety Net Patch For Zygisk Or Riru при Zygisk;
+* Удалены ко всем хуям как и всё связанное с Аддоном AIO:
+	- Ainur Narsral;
+	- Ainur Jamesdsp;
+	- DTS_HPX;
+	- Systemless OneUIHome;
+	- Systemless PixelLauncher;
+	- Systemless Asus Launcher;
+	- Systemless OPLauncher;
+	- Systemless Lawnchair Q;
+	- Systemless ShadyLauncher Q;
+	- FaceLock;
+	- GSF;
+	- AsusLongshot;
+	- Riru Clipboard Whitelist;
+	- Terminal Systemizer;
+	- Systemless TZData;
+	- DDVFE;
+	- EdXposed;
+	- Riru Core Legacy;
+	- LuckyPatcherHosts;
+	- ZipSigner & aapt;
+	- SQLite3;
+* Lawnchair S обновлен до Alpha 5 - обновлен до v1.9;
+* Из BootAnimation удалено говно OnePlus;
+* Shady Launcher R обновлен до v2021.11.28 с черной темой;
+* Правки и улучшения по UI;
+* IOS Emoji обновлены до 15.4;
+* Media UI Sounds обновлен до v1.4 - добавил звуки из Arcane;
+* Pre EOL.
 #### 31.12.21 (66) ####
 * SafetyNet для Riru и ZYGISK обновлены до v2.1.3 и v2.2.1. Все остальные SafetyNet модули вырезаны ко всем хуям;
 * NLSound откачен до 3.0 Stable;
@@ -40,7 +88,7 @@
 * Добавлена установка Wi-Fi & Mobile Data QS Style Changer для 12ки;
 * Добавлены строки на API 32;
 * Объединения некоторых команд;
-* Категория SafetyNet/MHPC/GPay опущена ниже Riru/Edx/LS/Posed/Mudules;
+* Категория SafetyNet/MHPC/GPay опущена ниже Riru/LSPosed/Momo/Shamiko/A12Extensions;
 * Может что-то ещё что забыл да и мне уже насрать.
 #### 18.12.21 (65) ####
 * Riru Core обновлен до v26.1.4.r522.8b379cedb5;
@@ -172,7 +220,7 @@
 * Pills обновлен до v1.9;
 * LSPosed For Riru обновлен до v1.6.2 (6180);
 * Добавлена установка LSPosed For ZYGISK v1.6.2 (6180);
-* Активировал все пункты категории Riru/Edx/LS/Posed/Mudules для 12ки (забыл так как тестировал на 12ке с SDK 30 и думал что включил);
+* Активировал все пункты категории Riru/LSPosed/Momo/Shamiko/A12Extensions для 12ки (забыл так как тестировал на 12ке с SDK 30 и думал что включил);
 * Добавлена проверка на ZYGISK и MAGISK 24 - теперь некоторые пункты не будут показываться если у вас MAGISK <23 (жду когда Repo удалят полностью, вот кокеры повесятся);
 * Фикс путей Lib Workaround на который всем насрать;
 * В отличии от недавних бета версий изменений много и не все модули будут показаны как обновление если вы ставили новые из бет;
@@ -1471,7 +1519,7 @@
 			- FPS:
 				- 60;
 				- 30;
-* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106370289">4PDA</a> || <a href="https://forum.xda-developers.com/t/magisk-module-ios-14-6-14-5-14-2-emoji-for-messenger-fb-replace-default-android-emoji-change-messenger-fb-emoji-to-ios-14-emoji.4214993">XDA</a> || <a href="https://t.me/EmojiReplacer">TG</a> - (IOS EMOJI);
+* Пункт (ALL) - (IOS EMOJI);
 * Пункт (ALL) (\\) - (Media UI Sounds) установка звуков из разных оболочек и прошивок:
 	- Masik (Miui 12, Android 10):
 		- Альтернативный звук разблокировки из Masik;
@@ -1485,18 +1533,11 @@
 	- Новый;
 	- Старый;
 
-<h3 align=center>Apps: GFU/GSF/SL/IA</h3>
+<h3 align=center>Apps: Lawnchair/Shady/IA</h3>
 
-* Пункт (ALL & ADDON) (7.1.2, 8.1 и 9) (Arm, Arm64) (EOL) - (Google FaceUnlock) разблокировки по лицу при Gapps Pico (на практике уже не работает с новыми патчами безопасности на этих версия Android);
-* Пункт (ALL & ADDON) (8.1, 9 и 10) (EOL) - (GCam No GApps) устанавливает "заглушку" для работы GCam без Gapps;
-* Пункт (ALL) (10-12) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
-	- Установка Lawnchair (Q/R/S) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка OPLauncher (Q/R) <a href="https://www.pling.com/p/1451515/">PLING</a> || <a href="https://github.com/MrSluffy/LauncherMods">GITHUB</a> || <a href="https://t.me/mrsluffy_releases">TG</a>;
-	- Установка OneUIHome (Q/R) (ADDON) (EOL) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://github.com/Shady-Mods/systemless_oneuihome">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a> || <a href="https://t.me/AyraProject">TG</a>;
-	- Установка PixelLauncher (Q/R) <a href="https://www.apkmirror.com/apk/google-inc/pixel-launcher/">APKMIRROR</a>;
-	- Установка ShadyLauncher (Q/R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка AsusLauncher (Q/R) <a href="https://github.com/MrSluffy?tab=repositories">GITHUB</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-* Пункт (ALL) (10-12) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105278489">4PDA</a> || <a href="https://forum.xda-developers.com/t/magisk-screenshot-long-screenshot-mod-for-android-9-p-android-10-q-android-11-r.3956797/">XDA</a> - (ASUS Screenshot) установка порта скриншотера из прошивок ASUS с активацией через шторку;
+* Пункт (ALL) (11-12) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
+	- Установка Lawnchair (R/S) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+	- Установка ShadyLauncher (R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 * Пункт (ALL) (\\) - (Install App In /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть приложения;
 	- Установка в Data;
 	- Установка в System;
@@ -1512,11 +1553,8 @@
 			- Установка в data/app;
 			- Установка в system/priv-app;
 * Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX;
-* Пункт (MAGISK & ADDON) (5.1.1+) (EOL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101694132">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ainur_jamesdsp">GITHUB</a> || <a href="https://github.com/therealahrion/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> || <a href="https://github.com/james34602/JamesDSPManager">GITHUB</a> - (James DSP Manager):
-* Пункт (MAGISK & ADDON) (9-12) (EOL) <a href="https://forum.xda-developers.com/t/port-pie-dts-x-ultra-dts-headphone-x-27-03-update.3896233/">XDA</a> - (DTS HPX):
 	- Новый менеджер;
 	- Старый менеджер;
-* Пункт (MAGISK & ADDON) (EOL) <a href="https://github.com/Magisk-Modules-Repo/ainur_narsil">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/soundmod-ainur-audio-t3450516?__cf_chl_jschl_tk__=7d29d957158150c94eaa400d55500acd4fdcdf7b-1600982384-0-AfLI9NbkLXp9kh05wbmzJNHd97-th79IsBfC533jA9X3Af98u1bPRxYWtrj263UGihzscD4YjLD0DVzBXilUDe_8taFFdGPMpGWLUHjoArN-KC2BjhBxVJtjVuaYP-YaaVPLY1bvCPb5oKo7JhQ2acr0ytal99ZFrZ5cyNsFTUKdiemERMTsGhsdmF-jXyelg3_kyduRSa8Ik2_gt6-rhlPd1dvY5qUgkIXT6Hp6aOpwVUa73Y5lxCm-tqcenFWyvV4usMTrNUfwr_mRea1oZbDUgOErLnMofOCKlUVD8VaNZz-ljxNVeyeuTazN98tHqqjK034W81anVfl-j_IzMDSJrn5rknKlcxkmWXW0KpVN7XAbW9PtO8ey_8Ct5WG8ytokh02XBJsfTg9h8FB_7zk">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=744922&view=findpost&p=49541743">4PDA</a> - (Ainur Narsil) кривой высер который я так и не портировал так как есть NL и AIST;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - (NLSound) улучшает качество звука:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_VOLUMES;
@@ -1534,9 +1572,10 @@
 	- PATCH_IMPROVE_BLUETOOTH;
 	- PATCH_IO_POLICY;
 	- PATCH_AUDIO_POLICY;
-* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_SUPPORT">TG</a> - (AIST) улучшает качество звука и как по мне лучше NL:
+* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_SUPPORT">TG</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
 	- PATCH_VOLUMES;
-	- HARMANKARDON;
+	- DOLBYATMOS;
+	- DISABLESCRAMOFBLUETOOTH;
 		- Patch media_codecs (может быть отвал);
 		- Replace media_codecs;
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общие качество звука;
@@ -1572,7 +1611,7 @@
 
 <details> 
   <summary>Удаление приложений которые не влияют на работу прошивки:</summary>
-  
+
 * Удаляется если не Miui, но в режиме с выбором если Miui - появляется (больше делал для себя):
 	- Calculator
 	- Calendar
@@ -1629,6 +1668,7 @@
 	- CloudPrint
 	- CloudPrint2
 	- ColtPapers
+	- CtsShimPrivPrebuilt
 	- DeskClockGoogle
 	- DevicePersonalizationPrebuiltPixel2020
 	- DevicePersonalizationPrebuiltPixel4
@@ -1664,6 +1704,7 @@
 	- FM_TEST
 	- Facebook_stub
 	- FilesPrebuilt
+	- Firewall
 	- FitnessPrebuilt
 	- Focus
 	- FotaAgent
@@ -2092,28 +2133,22 @@
 * Пункт (ALL) (8.1+) (LEGACY) <a href="https://github.com/Magisk-Modules-Repo/wifi-bonding">GITHUB</a> - (Wifi Bonding) для увеличения пропускной способности Wifi (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
 * Пункт (ALL) (MI8) - (AP & USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для Mi8;
 
-<h3 align=center>Utilities: BB/ZSigner/SELC/ASTE/CC</h3>
+<h3 align=center>Utilities: BB/ZS/SELC/ASTE/CC</h3>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin;
 * Пункт (ALL) (TERMINAL) <a href="https://4pda.to/forum/index.php?act=findpost&pid=105625918&anchor=Spoil-105625918-1">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/zipsigner">GITHUB</a> || <a href="https://forum.xda-developers.com/showthread.php?t=2239421&__cf_chl_jschl_tk__=4984b5a76074a8f92f17c55fee2071aa1574e768-1594480192-0-ATXVAJgNEEJLDRbUbS3P4jRknd7-87y5tw9mUcw2j7kUIuWKvH37sHd2Oyii9vwlK2Q9DPkZkpv-x5cOt_BLvYCk_tL_4nAeUjS0UMBrPyLD8Kc7hA0joixn6aAvHGrSnlYn4KjFKCmnrf6zX1uAo53Kbs-REH3waSfoI1Zdsj8sEIXmA5bsgRPuqirEXvB2T9TXYtt61Y4smtb2beJ3NxoXAjdZTM9G3VB89h8FhEmzdGycuafim2fS9tLKWCHlZoaiKtlGe2cEy7wU8j-RVJen3l91-_jFZdClbNRogoIy2U92RkejzrXO81FV-pANEp-8-Qe6YkXevo564gBm_ChO0TxyJEbMI9YoZLRlM5Av">XDA</a> - (ZipSigner и aapt) для сборки приложений, получения информации об приложении или создания оверлеев;
 * Пункт (MAGISK) - (SeLinux Changer) для аудиомодов и не только если надо:
 	- Переключить в Permissive;
 	- Переключить в Enforcing;
-* Пункт (MAGISK) (<11) (TERMINAL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/terminal_systemizer">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-terminal-app-systemizer-ui-t3585851">XDA</a> - (App Systemizer (Terminal Emulator)) для перемещения приложений из пользовательского в системное в модуль MAGISK;
 * Пункт (ALL) (TERMINAL) - (Cache Cleaner) микро аналог SdMaid через терминал - удаляет все пустые папки в /sdcard и подкаталогах, а так же некоторые не нужные временные папки с кэшем и тд. (нужно в терминале написать su; CC);
-* Пункт (MAGISK MANAGER) (TERMINAL) - (Detach) для форсовых отключений обновлений приложений в Play Market:
-	- Detach <a href="https://github.com/Magisk-Modules-Repo/Detach">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=78599318">4PDA</a>;
-	- Detach3 <a href="https://forum.xda-developers.com/t/module-detach3-detach-market-links.3447494/">XDA</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103999905">4PDA</a>;
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/stylemessiah/SQLite3-Universal-Binaries">GITHUB</a> - (SQLite3) необходим для некоторых модулей или редактирования файлов;
 * Пункт (MAGISK) (RECOVERY TERMINAL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76263856">4PDA</a> || <a href="https://github.com/Rikj000/mm">GITHUB</a> || <a href="https://forum.xda-developers.com/t/2019-4-4-magisk-manager-for-recovery-mode-mm.3693165/">XDA</a> - (Magisk Manager For Recovery Mode) для более удобного управления модулями через терминал Recovery если не стоит OrangeFox в котором есть встроенный менеджер модулей;
 
-<h3 align=center>Other: DFO/STZD/DDVFE/FA/SBU</h3>
+<h3 align=center>Other: DFO/STZD/FA/SBU</h3>
 
 * Пункт (9-10) (LEGACY) - (Battery Drain Fix For SL Or QS) фикс жора батареи для QuickSwitch (Обычного и Терминального) и Systemless Launcher (если находить модули QuickSwitch или Systemless Launcher) - перемещает оверлеи если выбрали это в RECOVERY, или принудительное отключение HIDE на GMS который не влияет на GPay:
 	- Перенос оверлеев (RECOVERY);
 	- UnHide Method (MAGISK); 
-* Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=76267303">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/Systemless_TZData">GITHUB</a> - (Systemless TZData) для обновления на не обновляемых tzdata в древних прошивках;
-* Пункт (RECOVERY) <a href="https://github.com/Zackptg5/Disable_Dm-Verity_ForceEncrypt">GITHUB</a> || <a href="https://forum.xda-developers.com/android/software/universal-dm-verity-forceencrypt-t3817389/post77091359">XDA</a> - (DDVFE (Disable Dm Verity Force Encrypt)) из под своего бинирника для расшифровки прошивок;
 * Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок/телефонов у которых есть с выборами (выбор появляется только если в телефоне есть сканер отпечатка пальца или нужные файлы):
 	- Кнопка Включения;
 	- Включение экрана;
@@ -2138,12 +2173,9 @@
 * Пункт (ALL) - (Show Battery Usage) проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
 * Пункт (MAGISK MANAGER) - (Get All Settings List) снятие Settings List для тестов;
 
-<h3 align=center>Riru/Edx/LS/Posed/Mudules</h3>
+<h3 align=center>Riru/LSPosed/Momo/Shamiko/A12Extensions</h3>
 
 * Пункт (MAGISK) (8.1-12) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - (Riru Core) для многих модулей;
-	- Standart v26 For LSPosed;
-	- Legacy v25 For EdXposed;
-* Пункт (MAGISK) (8.1-12) (Riru Core Legacy) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/ElderDrivers/EdXposed">GITHUB</a> || <a href="https://github.com/ElderDrivers/EdXposedManager">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95991033">4PDA</a> - (EdXposed) для многих модулей;
 * Пункт (MAGISK) (8.1-12) (Riru Core Or ZYGISK) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> || <a href="https://t.me/LSPosedArchives">TG</a> - (LSPosed) для многих модулей:
 	- For ZYGISK;
 	- For Riru;
@@ -2154,7 +2186,8 @@
 * Пункт (MAGISK) (8.1-12) (Riru Core) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=108226592">4PDA</a> || <a href="https://github.com/canyie/Riru-MomoHider">GITHUB</a> - (Riru Momo Hider) для скрытия MAGISK от приложений:
 	- Полная активация;
 	- Активация по отдельности с небольшим описанием;
-* Пункт (MAGISK) (12) (Riru Core) <a href="https://github.com/kdrag0n/android12-extensions">GITHUB</a> - (Android 12 Extensions) - добавляет больше настроек через приложение:
+* Пункт (MAGISK) (12) (Riru Core) <a href="https://github.com/kdrag0n/android12-extensions">GITHUB</a> - (Android 12 Extensions) - добавляет больше настроек через приложение;
+* Пункт (MAGISK) (12) (ZYGISK) - (Shamiko) - для хайда говна;
 
 <h3 align=center>SafetyNet/MHPC/GPay</h3>
 * Пункт (MAGISK) <a href="https://github.com/kdrag0n/safetynet-fix">GITHUB</a> - (Safety Net Patches) - установка SafetyNet патчей для ZYGISK или Riru;
@@ -2184,7 +2217,7 @@
 * Пункт (ALL) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере. Поддерживает фейс от Motorola, PE и CR (Kang с PE));
 * Пункт (ALL) (8.1-12) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
-* Пункт (MAGISK) - (Force Idle) для принудительного включения ожидания/простоя;
+* Пункт (MAGISK & LEGACY) - (Force Idle) для принудительного включения ожидания/простоя;
 * Пункт (MAGISK) - (Charging LED Light Off) полное отключения индикатора заряда/уведомлений;
 * Пункт (MAGISK) (\\) - (Start LEDLight Animation) при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет):
 	- Тестировать анимации (после этого выбора на каждой анимации будет выбор, выбрать её или нет. После будет тест её и после теста дан выбор: шить или показать следующие анимации и так до конца);
