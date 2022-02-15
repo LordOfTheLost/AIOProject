@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 12.02.22 (67) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/12.02.2022/AIOPFMD-12.02.22-%2867%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/17xzrs50U2QB9ps7wwxf2e6cWCVMLaz8b/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/66">TG</a>
+* Версия AIOPFMD: 15.02.22 (68) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/15.02.2022/AIOPFMD-15.02.22-%2868%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/15P_7m-qhO5yB7OAlAXsUVzmUs95yK19S/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/68">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) (работает только на 66й версии) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -31,11 +31,15 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 15.02.22 (68) ####
+* Universal GMS Doze обновлён до v1.8.5 с фиксов на даблинг патчинга оригинала и убран обновлятор который ломается из за гнид которые делали Magisk;
+* V4AFXPresets обновлен до v1.4 - добавлены пути для v2.5.0.5 (может быть, мне насрать);
+* Вернул appt2 потому-что забыл что я повесился два года назад;
+* Фиксы всего (нет и мне похуй).
 #### 12.02.22 (67) ####
 * Минимальная версия Magisk выставлена и теперь рекомендуется 24.1+ (24100+) (И ЭТО УГРОЗА);
 * AdAwayHosts обновлен от 08.02.2022;
 * Systemless Hosts обновлен до 17.0-220116;
-* LP Hosts обновлен до v9.9.5;
 * Riru Clipboard Whitelist обновлен до v14;
 * RoundedUI обновлен до v2.7 - добавил оверлеи для Moto и Pixelized лаунчеров;
 * LSPosed для Riru и ZYGISK обновлен до v1.7.2 (6379);
@@ -2195,7 +2199,7 @@
 * Пункт (ALL) - (Force Play Market Certified) просто включает принудительно пройденную сертификацию в Play Market;
 * Пункт (MAGISK) (TERMINAL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94926904">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-magiskhide-props-config-t3789228?__cf_chl_jschl_tk__=a3131f7d48bc8aca910b13d152bfc50a282715ba-1593970618-0-ASbD84SVNaBpNlWp_-NU5N29InliDM9nuc7Xrm7kSHhzfEfTwdGfepfXiIIte7ykaweSPeRYWiUwx8VHfIudeqeNZEAfF1FcbQhGJgPKGlGlPGx7yojA6faOz75SePYLHb8I8UUMm3-3f8vXM9AM0nYhOx86imTcdZeKdJDVQ2akBmof7CrgYFlH32ffoDCnF7npcPqdSkacBjjUuRLEjjEgyfZZ-dUuKL1GdIH8Gf_-mIVxl3rxKFqmlcekGNGYx5PD2_wtfq6fUmIgdtY-bx9MySuKFGzu9gYjayR1J8FtKngzrhjoiTuM3jO0EaxV2m1UQhr2o2aLQ8BUXGZt0l8jHbrQSHqsbucM5OB8LjZNE7qiUAzAlT2R0xSJteD4ZKHRf35a403YF6YMrMaN6pw">XDA</a> - (Magisk Hide Props Config) для настройки пропов устройства;
 * Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=89520858">4PDA</a> || <a href="https://github.com/stylemessiah/GPay-SQLite-Fix">GITHUB</a> || <a href="https://forum.xda-developers.com/showpost.php?p=79643248&postcount=176">XDA</a> - (GPay SQLite Fix) (появляется если находи NFC модуль и установлено приложение Gpay);
-
+* Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
 
 <h3 align=center>Tweaks: FGS/BP/LED/UGMSD/USGP/VS</h3>
 
@@ -2216,7 +2220,6 @@
 * Пункт (MAGISK) - (Force MTP) принудительно активирует MTP даже до первой загрузки;
 * Пункт (ALL) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере. Поддерживает фейс от Motorola, PE и CR (Kang с PE));
 * Пункт (ALL) (8.1-12) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
-* Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
 * Пункт (MAGISK & LEGACY) - (Force Idle) для принудительного включения ожидания/простоя;
 * Пункт (MAGISK) - (Charging LED Light Off) полное отключения индикатора заряда/уведомлений;
 * Пункт (MAGISK) (\\) - (Start LEDLight Animation) при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет):

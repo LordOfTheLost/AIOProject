@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="12.02.22 (67)"
+VAIOPFMD="15.02.22 (68)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -60,7 +60,7 @@ IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/NL/AIST/SAQ/IB/ACP/AML
 IDVFXL="ViPER4AndroidFX-Legacy"; VIPVFXL="v2.5.0.5"; VCIPVFXL="86"
 IDVFX="ViPER4AndroidFX"; VIPVFX="v2.7.1.6"; VCIPVFX="2716"
-IDVFXP="V4AFXPresets"; VIPVFXP="v1.3"
+IDVFXP="V4AFXPresets"; VIPVFXP="v1.4"
 IDNLS="NLSound"; VIPNLS="v3.2 STABLE"; VCIPNLS="7"
 IDAIST="AIST"; VIPAIST="v1.3"; VCIPAIST="15"
 IDSAQ="systemaudioquality2"; VIPSAQ="2.0"; VCIPSAQ="2"
@@ -102,6 +102,7 @@ IDSNET="SafetyNetEvalType"; VIPSNET="v1.0"
 IDMHPC="MagiskHidePropsConf"; VIPMHPC="v6.1.2-v137"; VCIPMHPC="75"
 IDGPF="GPay-SQLite-Fix"; VIPGPF="v2.6"; VCIPGPF="1"
 IDFPMC="ForcePlayMarketCertified"; VIPFPMC="v1.0"
+IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 IDFGS="ForceGoogleSync"; VIPFGS="v1.1"
 IDFEG="ForceGestures"; VIPFEG="v1.1"
@@ -115,11 +116,10 @@ IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.4"
 IDFMTP="ForceMTP"; VIPFMTP="v1.0"
 IDSOOOFUIRC="SOOOFUIRC"; VIPSOOOFUIRC="v1.7"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
-IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
 IDCLEDLO="ChargingLEDLightOff"; VIPCLEDLO="v1.2"
 IDLEDLA="LEDLightAnimation"; VIPLEDLA="v1.2"
-IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.4"; VCIPUGMSD="184"
+IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.5"; VCIPUGMSD="185"
 IDUSGP="USGP"; VIPUSGP="v1.1"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.0"
@@ -878,6 +878,7 @@ case "$DARCH" in
 *armeabi*) arch="arm"; libarch="lib";;
 *) arch="unknown"; UIP -d "Warning, $arch Not Supported/Found!";;
 esac
+AAPT="$AADDONS/aapt-$arch"
 XMLSTARLET="$AADDONS/xmlstarlet-$arch"
 SQLITE3="$TMPDIR/SQLite3/sqlite3-$arch"
 FKEYCHECK="$ADDONS/keycheck-$arch"
@@ -4048,6 +4049,12 @@ MMUPD_CHECKER -c "$IDMMFRM" "$VIPMMFRM" "$VCIPMMFRM" "IPMMFRMS"
 MMUPD_CHECKER "$IDBDFFSOQSS" "$VIPBDFFSOQSS" "IPBDFFSOQSSS"
 MMUPD_CHECKER "$IDFPA" "$VIPFPA" "IPFPAS"
 MMUPD_CHECKER "$IDFSLFM" "$VIPFSLFM" "IPFSLFMS"
+#Riru/LSPosed/Momo/Shamiko/A12Extensions
+if [ ! -f $MODPATH/$IDRIRU/legacy ]; then MMUPD_CHECKER -c "$IDRIRU" "$VIPRIRU" "$VCIPRIRU" "IPRIRUS"; fi
+if [ -d $MODPATH/$IDRIRU ] && [ ! -f $MODPATH/$IDRIRU/legacy ]; then MMUPD_CHECKER -c "$IDLSPOSEDR" "$VIPLSPOSEDR" "$VCIPLSPOSEDR" "IPLSPOSEDS"; fi
+if $ZYGISK; then MMUPD_CHECKER -c "$IDLSPOSEDZ" "$VIPLSPOSEDZ" "$VCIPLSPOSEDZ" "IPLSPOSEDS"; fi
+MMUPD_CHECKER -c "$IDSHAMIKO" "$VIPSHAMIKO" "$VCIPSHAMIKO" "IPSHAMIKO"
+MMUPD_CHECKER -c "$IDRMH" "$VIPRMH" "$VCIPRMH" "IPRMH"
 #SafetyNet/MHPC/GPay
 if [ "$ASDK" -ge 27 ]; then
 if [ -d $MODPATH/$IDRIRU ] && [ ! -d $MODPATH/$IDLSPOSEDZ/zygisk ]; then MMUPD_CHECKER -c "$IDSNPRZ" "$VIPSNPR" "$VCIPSNPR" "IPSNPS"; fi
@@ -4057,12 +4064,7 @@ MMUPD_CHECKER "$IDSNET" "$VIPSNET" "IPSNET"
 MMUPD_CHECKER "$IDFPMC" "$VIPFPMC" "IPFPMCS"
 MMUPD_CHECKER -c "$IDMHPC" "$VIPMHPC" "$VCIPMHPC" "IPMHPCS"
 MMUPD_CHECKER -c "$IDGPF" "$VIPGPF" "$VCIPGPF" "IPGPFS"
-#Riru/LSPosed/Momo/Shamiko/A12Extensions
-if [ ! -f $MODPATH/$IDRIRU/legacy ]; then MMUPD_CHECKER -c "$IDRIRU" "$VIPRIRU" "$VCIPRIRU" "IPRIRUS"; fi
-if [ -d $MODPATH/$IDRIRU ] && [ ! -f $MODPATH/$IDRIRU/legacy ]; then MMUPD_CHECKER -c "$IDLSPOSEDR" "$VIPLSPOSEDR" "$VCIPLSPOSEDR" "IPLSPOSEDS"; fi
-if $ZYGISK; then MMUPD_CHECKER -c "$IDLSPOSEDZ" "$VIPLSPOSEDZ" "$VCIPLSPOSEDZ" "IPLSPOSEDS"; fi
-MMUPD_CHECKER -c "$IDSHAMIKO" "$VIPSHAMIKO" "$VCIPSHAMIKO" "IPSHAMIKO"
-MMUPD_CHECKER -c "$IDRMH" "$VIPRMH" "$VCIPRMH" "IPRMH"
+MMUPD_CHECKER "$IDFDPP" "$VIPFDPP" "IPFDPPS"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 MMUPD_CHECKER "$IDFGS" "$VIPFGS" "IPFGSS"
 MMUPD_CHECKER "$IDFEG" "$VIPFEG" "IPFEGS"
@@ -4076,7 +4078,6 @@ MMUPD_CHECKER "$IDFDEVADB" "$VIPFDEVADB" "IPFDEVADBS"
 MMUPD_CHECKER "$IDFMTP" "$VIPFMTP" "IPFMTPS"
 MMUPD_CHECKER "$IDSOOOFUIRC" "$VIPSOOOFUIRC" "IPSOOOFUIRCS"
 MMUPD_CHECKER "$IDFDM" "$VIPFDM" "IPFDMS"
-MMUPD_CHECKER "$IDFDPP" "$VIPFDPP" "IPFDPPS"
 MMUPD_CHECKER "$IDFI" "$VIPFI" "IPFIS"
 MMUPD_CHECKER "$IDCLEDLO" "$VIPCLEDLO" "IPCLEDLOS"
 MMUPD_CHECKER "$IDLEDLA" "$VIPLEDLA" "IPLEDLAS"
@@ -5558,19 +5559,20 @@ WCANFTP -sl -ehap
 }
 
 IPVFXP() {
-UCSA "Install Presets $VIPVFXP For ViperFX v2.7.1.6?" "" "$MSGNUS" "IPVFXPS"
+UCSA "Install Presets $VIPVFXP For ViperFX $VIPVFXL & $VIPVFX?" "" "$MSGNUS" "IPVFXPS"
 }
 
 IPVFXPS() {
-UIP "Installing Presets ViperFX $IAMM"
+UIP "Installing Presets ViperFX $VIPVFXL & $VIPVFX $IAMM"
 UZTPN "V4AFXPresets"
 mkdir -p $STORAGE/Android/data/com.pittvandewitt.viperfx/files
 cp -rf $TMPDIR/V4AFXPresets/* $STORAGE/Android/data/com.pittvandewitt.viperfx/files
+cp -rf $TMPDIR/V4AFXPresets/* $STORAGE/VIPER4Android
 if $MAGISK; then
 MODID="$IDVFXP"
 mkdir -p $MODPATH/$MODID
 echo "rm -rf $STORAGE/Android/data/com.pittvandewitt.viperfx" > $MODPATH/$MODID/uninstall.sh
-MMPR -v "V4AFX Presets" "$VIPVFXP" "V4AFX Presets For ViperFX v2.7.1.6 $MSGFMM"; SET_PERM_RM
+MMPR -v "V4AFX Presets" "$VIPVFXP" "V4AFX Presets For ViperFX $VIPVFXL & $VIPVFX $MSGFMM"; SET_PERM_RM
 fi
 UIP "$MSGDI"
 }
@@ -10554,7 +10556,7 @@ if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
 UCSA "Clear Cache And Storage For Google Pay?" "Clear, I Understand The RISKS" "No, (It *May* Prevent The Module From Working)" "IPGPFA"
 fi
 cp -f $TMPDIR/SQLite3/sqlite3-$arch $MODPATH/$MODID$IPPSXBM/sqlite3
-SET_PERM_RM; WCANFTP -sq
+SET_PERM_RM
 fi
 if [ -d "$IPDD/*com.google.android.apps.walletnfcrel*" ]; then
 $SQLITE3 $IPDD/com.google.android.gms/databases/dg.db "update main set c='0' where a like '%attest%';"
@@ -10580,6 +10582,18 @@ else
 UIP "$x: Not Cleared Successfully"
 fi
 done
+}
+
+IPFDPP() {
+if $MAGISK && SP_CHECKER "$IPDSU/0/settings_global.xml" "upload_apk_enable package_verifier_enable package_verifier_user_consent verifier_verify_adb_installs"; then UCSA "Install Force Disabling Play Protect $VIPFDPP?" "" "$MSGNUS" "IPFDPPS"; fi
+}
+
+IPFDPPS() {
+UIP "Installing Force Disabling Play Protect $IAMM"
+MODID="$IDFDPP"; REMOVER -mm "$MODID"
+mkdir -p $MODPATH/$MODID
+MSSERVICE -s "$SPGLOBAL upload_apk_enable 0; $SPGLOBAL package_verifier_enable 0; $SPGLOBAL package_verifier_user_consent -1; $SPGLOBAL verifier_verify_adb_installs 0"
+MMPR -v "Force Disabling Play Protect" "$VIPFDPP" "Force Disabling Play Protect $MSGFMM"; SET_PERM_RM -msgdi
 }
 
 } #
@@ -11004,18 +11018,6 @@ fi
 UIP "$MSGDI"
 }
 
-IPFDPP() {
-if $MAGISK && SP_CHECKER "$IPDSU/0/settings_global.xml" "upload_apk_enable package_verifier_enable package_verifier_user_consent verifier_verify_adb_installs"; then UCSA "Install Force Disabling Play Protect $VIPFDPP?" "" "$MSGNUS" "IPFDPPS"; fi
-}
-
-IPFDPPS() {
-UIP "Installing Force Disabling Play Protect $IAMM"
-MODID="$IDFDPP"; REMOVER -mm "$MODID"
-mkdir -p $MODPATH/$MODID
-MSSERVICE -s "$SPGLOBAL upload_apk_enable 0; $SPGLOBAL package_verifier_enable 0; $SPGLOBAL package_verifier_user_consent -1; $SPGLOBAL verifier_verify_adb_installs 0"
-MMPR -v "Force Disabling Play Protect" "$VIPFDPP" "Force Disabling Play Protect $MSGFMM"; SET_PERM_RM -msgdi
-}
-
 IPFI() {
 if $MAGISK && $LEGACYMODE; then UCSA "Install Force Idle $VIPFI?" "" "$MSGNUS" "IPFIS"; fi
 }
@@ -11417,7 +11419,7 @@ fi
 }
 
 IPUGMSD() {
-if $MAGISK && $FINDGAPPS && [ $ASDK -gt 23 ]; then
+if $MAGISK && $FINDGAPPS && [ $ASDK -ge 23 ]; then
 UCSA "Install Universal GMS Doze $VIPUGMSD?" "" "$MSGNUS" "IPUGMSDS"
 fi
 }
@@ -11428,36 +11430,43 @@ MODID="$IDUGMSD"; REMOVER -mm "$MODID universal-gms-doze"
 mkdir -p $MODPATH/$MODID/$IPPSXBM
 UIP "Patching Needed Files..."
 MAGISKMIRROR_CHECKER
-list=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do SEARCHPATH="$MAGISKMIRROR$i"; if grep -q 'allow-in-power-save package="com.google.android.gms"' $SEARCHPATH 2>/dev/null; then echo "$i"; fi; done)
-for i in $list; do
+GMS=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $MAGISKMIRROR$i 2>/dev/null; then echo "$i"; fi; done)
+IMS=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.ims"' $MAGISKMIRROR$i 2>/dev/null; then echo "$i"; fi; done)
+PST=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.apps.safetyhub"' $MAGISKMIRROR$i 2>/dev/null; then echo "$i"; fi; done)
+TRB=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.apps.turbo"' $MAGISKMIRROR$i 2>/dev/null; then echo "$i"; fi; done)
+for i in $GMS $IMS $PST $TRB; do
+if [ ! -f $MODPATH/$MODID/$i ]; then
 UIP "Found $i" "Patching..."
 mkdir -p `dirname $MODPATH/$MODID/$i`
 cp -f $i $MODPATH/$MODID/$i
-sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-usage-save package="com.google.android.gms"/d;/allow-in-power-save package="com.google.android.ims"/d;/allow-in-power-save package="com.google.android.apps.turbo"/d' $MODPATH/$MODID/$i
+sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-usage-save package="com.google.android.gms"/d' $MODPATH/$MODID/$i
+sed -i '/allow-in-power-save package="com.google.android.ims"/d;/allow-in-data-usage-save package="com.google.android.ims"/d' $MODPATH/$MODID/$i
+sed -i '/allow-in-power-save package="com.google.android.apps.safetyhub"/d;/allow-in-data-usage-save package="com.google.android.apps.safetyhub"/d' $MODPATH/$MODID/$i
+sed -i '/allow-in-power-save package="com.google.android.apps.turbo"/d;/allow-in-data-usage-save package="com.google.android.apps.turbo"/d' $MODPATH/$MODID/$i
 UIP "Files Found And Patched"
+fi
 done
-conflict=$(xml=$(find $NVBASE -name "*.xml");for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $i 2>/dev/null; then echo "$i"; fi; done)
+conflict=$(xml=$(find $NVBASE -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $i 2>/dev/null; then echo "$i"; fi; done)
 for i in $conflict; do
 search=$(echo "$i" | sed -e 's/\// /g' | awk '{print $4}')
 UIP "Conflicting Modules Detected" "Module: $search" "Found $i"
 sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-usage-save package="com.google.android.gms"/d' $i
 UIP "Files Found And Patched"
 done
-MOVERPATH
 echo "#!$MIPSB/sh
 conflict=\$(xml=\$(find $NVBASE -iname \"*.xml\");for i in \$xml; do if grep -q 'allow-in-power-save package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
 for i in \$conflict; do
 sed -i '/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-data-usage-save package=\"com.google.android.gms\"/d' \$i
 done" > $MODPATH/$MODID/post-fs-data.sh
-MSSERVICE -s "while [ \"\$(getprop sys.boot_completed)\" != \"1\" ]; do sleep 1; done; sleep 2m; for i in \$(ls /data/user/); do pm disable --user \$i com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; done; exit 0"
+MSSERVICE -s "for i in \$(ls /data/user/); do pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver; pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; done"
 echo "gms='dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1'
 if [ \"\$gms\" = \"com.google.android.gms\" ]; then
 echo \"\033[0;31m Google Play services is Not Optimized \033[0m\"
 else
 echo \"\033[0;32m Google Play services is Optimized \033[0m\"
 fi" > $MODPATH/$MODID/$IPPSXBM/gmsc
-MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Optimized and adjusted Google Play services"
-SET_PERM_RM -msgdi
+MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Patches Google Play services app and its background processes to be able using battery optimization. Pre-caution, this may leads to unpredictable battery usage as certain scripts blocking its functions."
+MOVERPATH; SET_PERM_RM -msgdi
 }
 
 SUGMSDO() {
@@ -12448,8 +12457,6 @@ APP_LIST
 MIUI_CHECKER
 BB_CHECKER
 ARCH_CHECKER
-SELINUX_CHECKER
-SQLITE_CHECKER
 SOC_CHECKER
 GAPPS_CHECKER
 PATCHMODE
