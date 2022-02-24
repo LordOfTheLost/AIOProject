@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="15.02.22 (68)"
+VAIOPFMD="24.02.22 (69)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -21,6 +21,7 @@ UNZIP="$BB/unzip"
 TIMEOUT="$BB/timeout"
 ECHO="$BB/echo"
 HEAD="$BB/head"
+ZIPALIGN="$AADDONS/zipalign"
 ZIPPACKER="$AADDONS/zip"
 } #
 
@@ -38,7 +39,7 @@ IDGBSTE="GboardSilkThemeChanger"; VIPGBSTE="v1.1"
 IDSBINNI="SBINNI"; VIPSBINNI="v1.8"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
 IDRUI="RoundedUI"; VIPRUI="v2.7"
-IDBIP="BurnInProtection"; VIPBIP="v1.6"
+IDBIP="BurnInProtection"; VIPBIP="v1.7"
 IDNSP="NotificationSidePaddings"; VIPNSP="v1.4"
 IDSBIS="StatusBarIconSpace"; VIPSBIS="v1.3"
 IDSBCS="StatusBarClockSize"; VIPSBCS="v1.0"
@@ -60,7 +61,7 @@ IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/NL/AIST/SAQ/IB/ACP/AML
 IDVFXL="ViPER4AndroidFX-Legacy"; VIPVFXL="v2.5.0.5"; VCIPVFXL="86"
 IDVFX="ViPER4AndroidFX"; VIPVFX="v2.7.1.6"; VCIPVFX="2716"
-IDVFXP="V4AFXPresets"; VIPVFXP="v1.4"
+IDVFXP="V4AFXPresets"; VIPVFXP="v1.5"
 IDNLS="NLSound"; VIPNLS="v3.2 STABLE"; VCIPNLS="7"
 IDAIST="AIST"; VIPAIST="v1.3"; VCIPAIST="15"
 IDSAQ="systemaudioquality2"; VIPSAQ="2.0"; VCIPSAQ="2"
@@ -70,7 +71,7 @@ IDACP="acp"; VIPACP="v2.5"; VCIPACP="39"
 IDAML="aml"; VIPAML="v4.1"; VCIPAML="56"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="08.02.2022"
+IDVAAH="AdAwayHosts"; VIPVAAH="21.02.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="17.0-220116"; VCIPVSH="170"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/TTL/DNS/WB/APAUSBTF
@@ -108,7 +109,7 @@ IDFGS="ForceGoogleSync"; VIPFGS="v1.1"
 IDFEG="ForceGestures"; VIPFEG="v1.1"
 IDHAP="EnablingHiddenApiPolicy"; VIPHAP="v1.2"
 IDAFUS="AFUSS"; VIPAFUS="v1.1"
-IDBPT="BuildPropTweaks"; VIPBPT="v2.0"
+IDBPT="BuildPropTweaks"; VIPBPT="v2.1"
 IDKL="killlogger"; VIPKL="v1.5"; VCIPKL="6"
 IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
@@ -120,7 +121,7 @@ IDFI="ForceIdle"; VIPFI="v1.0"
 IDCLEDLO="ChargingLEDLightOff"; VIPCLEDLO="v1.2"
 IDLEDLA="LEDLightAnimation"; VIPLEDLA="v1.2"
 IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.5"; VCIPUGMSD="185"
-IDUSGP="USGP"; VIPUSGP="v1.1"
+IDUSGP="USGP"; VIPUSGP="v1.2"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.0"
 IDVS="VolumeSteps"; VIPVS="v1.2"
@@ -4858,11 +4859,11 @@ UCSF "4dip 6dip" "Choose Vertical Shift:" "Shift" "6dip"
 VERTICALSWIFT=$UCSFNMC
 fi
 if $UCSFNM; then
-UCSF "20dip 40dip 60dip" "Choose AOD Horizontal Shift:" "Shift" "60dip"
+UCSF "20dip 30dip 40dip" "Choose AOD Horizontal Shift:" "Shift" "40dip"
 AODHORIZONTALSWIFT=$UCSFNMC
 fi
 if $UCSFNM; then
-UCSF "20dip 40dip 60dip" "Choose AOD Vertical Shift:" "Shift" "60dip"
+UCSF "20dip 30dip 40dip" "Choose AOD Vertical Shift:" "Shift" "40dip"
 AODVERTICALSWIFT=$UCSFNMC
 fi
 if $UCSFNM; then
@@ -5567,11 +5568,11 @@ UIP "Installing Presets ViperFX $VIPVFXL & $VIPVFX $IAMM"
 UZTPN "V4AFXPresets"
 mkdir -p $STORAGE/Android/data/com.pittvandewitt.viperfx/files
 cp -rf $TMPDIR/V4AFXPresets/* $STORAGE/Android/data/com.pittvandewitt.viperfx/files
-cp -rf $TMPDIR/V4AFXPresets/* $STORAGE/VIPER4Android
+cp -rf $TMPDIR/V4AFXPresets/* $STORAGE/ViPER4Android
 if $MAGISK; then
 MODID="$IDVFXP"
 mkdir -p $MODPATH/$MODID
-echo "rm -rf $STORAGE/Android/data/com.pittvandewitt.viperfx" > $MODPATH/$MODID/uninstall.sh
+echo "rm -rf $STORAGE/Android/data/com.pittvandewitt.viperfx $STORAGE/ViPER4Android" > $MODPATH/$MODID/uninstall.sh
 MMPR -v "V4AFX Presets" "$VIPVFXP" "V4AFX Presets For ViperFX $VIPVFXL & $VIPVFX $MSGFMM"; SET_PERM_RM
 fi
 UIP "$MSGDI"
@@ -7836,8 +7837,8 @@ mkdir -p $BIPAO/res/values $BIPAAO/res/values $BIPSUIO/res/values
 for SHIFTINTERVAL in 20 40 60; do
 for HORIZONTALSWIFT in 4dip 6dip; do
 for VERTICALSWIFT in 4dip 6dip; do
-for AODHORIZONTALSWIFT in 20dip 40dip 60dip; do
-for AODVERTICALSWIFT in 20dip 40dip 60dip; do
+for AODHORIZONTALSWIFT in 20dip 30dip 40dip; do
+for AODVERTICALSWIFT in 20dip 30dip 40dip; do
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>
 <manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.burn.in.protection\">
@@ -9746,39 +9747,38 @@ touch $MODPATH/$MODID/riru/lib64/libriru_lspd
 rm -f $MODPATH/$MODID/riru/lib/libdaemon.so
 else
 cp -f $TMPDIR/LSPosed/$MODID$MIPSL64/libdaemon.so $MODPATH/$MODID
-cp -f $TMPDIR/LSPosed/$MODID$MIPSL64/liblspd.so $MODPATH/$MODID/zygisk/armeabi-v8a.so
+cp -f $TMPDIR/LSPosed/$MODID$MIPSL64/liblspd.so $MODPATH/$MODID/zygisk/arm64-v8a.so
 fi
 fi
 echo "#!$MIPSB/sh
 
-dir=${0%/*}
-tmpLspdApk=\"/data/local/tmp/daemon.apk\"
+dir=\${0%/*}
+tmpLspdApk=\"$IPDLTMP/daemon.apk\"
 debug=\"false\"
 
 if [ -r \$tmpLspdApk ]; then
-java_options=\"-Djava.class.path=$tmpLspdApk\"
-java_options=\"$java_options -Dlsp.library.path=/data/local/tmp\"
+java_options=\"-Djava.class.path=\$tmpLspdApk\"
+java_options=\"\$java_options -Dlsp.library.path=$IPDLTMP\"
 debug=\"true\"
 else
-java_options=\"-Djava.class.path=$dir/daemon.apk\"
-java_options=\"$java_options -Dlsp.library.path=$dir\"
+java_options=\"-Djava.class.path=\$dir/daemon.apk\"
+java_options=\"\$java_options -Dlsp.library.path=\$dir\"
 fi
 
 if [ \$debug = \"true\" ]; then
-os_version=$(getprop ro.build.version.sdk)
-if [ \"$os_version\" -eq \"27\" ]; then
-java_options=\"$java_options -Xrunjdwp:transport=dt_android_adb,suspend=n,server=y -Xcompiler-option --debuggable\"
-elif [ \"$os_version\" -eq \"28\" ]; then
-java_options=\"$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend=n,server=y -Xcompiler-option --debuggable\"
+os_version=\$(getprop ro.build.version.sdk)
+if [ \"\$os_version\" -eq \"27\" ]; then
+java_options=\"\$java_options -Xrunjdwp:transport=dt_android_adb,suspend=n,server=y -Xcompiler-option --debuggable\"
+elif [ \"\$os_version\" -eq \"28\" ]; then
+java_options=\"\$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend=n,server=y -Xcompiler-option --debuggable\"
 else
-java_options=\"$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend=n,server=y\"
+java_options=\"\$java_options -XjdwpProvider:adbconnection -XjdwpOptions:suspend=n,server=y\"
 fi
 fi
 
-mount tmpfs -t tmpfs /data/resource-cache
+mount tmpfs -t tmpfs $IPDRESC
 
-# shellcheck disable=SC2086
-exec /system/bin/app_process \$java_options /system/bin --nice-name=lspd org.lsposed.lspd.Main \"$@\" >/dev/null 2>&1" > $MODPATH/$MODID/daemon
+exec $MIPSB/app_process \$java_options $MIPSB --nice-name=lspd org.lsposed.lspd.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/daemon
 if $LSPOSEDR; then
 MMPR -vcuj "Riru - LSPosed" "$VIPLSPOSEDR" "$VCIPLSPOSEDR" "LSPosed Developers" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 12, 12L DP1. Requires Riru 25.0.1 or above installed." "https://lsposed.github.io/LSPosed/release/riru.json"
 echo "allow system_server system_server process execmem" > $MODPATH/$MODID/sepolicy.rule
@@ -9810,7 +9810,7 @@ mkdir -p $NVBASE/lspd
 cp -f $TMPDIR/LSPosed/manager.apk $NVBASE/lspd
 cp -f $TMPDIR/LSPosed/daemon.apk $MODPATH/$MODID
 SET_PERM_RM
-chmod 0744 $MODPATH/$MODID/lspd
+chmod 744 $MODPATH/$MODID/daemon
 UIP "$MSGDI"
 }
 
@@ -10689,11 +10689,11 @@ MMPR -v "Allow Installation Of Apps From Unknown Sources" "$VIPAFUS" "Force Allo
 }
 
 IPBPT() {
-UCSA "Install BuildProp Tweaks $VIPBPT?" "" "$MSGNUS" "IPBPTS"
+UCSA "Install Build Prop Tweaks $VIPBPT?" "" "$MSGNUS" "IPBPTS"
 }
 
 IPBPTS() {
-UIP "Installing Build Prop Tweaks Patch $IAMM"
+UIP "Installing Build Prop Tweaks $IAMM"
 if $MAGISK; then
 MODID="$IDBPT"; REMOVER -mm "$MODID"
 mkdir -p $MODPATH/$MODID
@@ -10704,19 +10704,6 @@ fi
 
 echo "# Enable 4K in YouTube
 sys.display-size=3840x2160
-
-# Scrolling cache settings (1=cache on always, 2=cache on certain times, 3=cache off certain times, 4=cache off always)
-persist.sys.scrollingcache=4
-persist.sys.smoothscrollbar=true
-
-# Reduces touch delay to the screen
-touch.presure.scale=0.001
-
-# Interface smoothness
-persist.service.lgospd.enable=0
-persist.service.pcsync.enable=0
-ro.ril.enable.a52=1
-ro.ril.enable.a53=0
 
 # Animation AOD & LS Fix
 debug.force_no_blanking=true
@@ -11838,42 +11825,21 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <!-- This is meant to be the canonical feature identifying 2016 and newer Nexus devices. -->
     <feature name=\"com.google.android.feature.PIXEL_EXPERIENCE\" />
 
-    <!-- The feature identifying devices which are able to use the Turbo app -->
-    <feature name=\"com.google.android.feature.TURBO_PRELOAD\" />
-
-    <!-- The feature identifying devices which are able to use the Android Wellbeing app. -->
-    <feature name=\"com.google.android.feature.WELLBEING\" />
-
-    <!-- The feature identifying devices which are able to use the device-to-device migration
-        over cable provided by the Pixelmigrate app. -->
-    <feature name=\"com.google.android.feature.D2D_CABLE_MIGRATION_FEATURE\" />
+    <!-- Both versions of this string are needed due to a miscommunication. b/29978934 -->
+    <feature name=\"com.google.android.apps.photos.NEXUS_PRELOAD\" />
+    <feature name=\"com.google.android.apps.photos.nexus_preload\" />
 
     <!-- Enable Zero Touch Provisioning support for 2016 and newer Nexus devices. -->
     <feature name=\"com.google.android.feature.ZERO_TOUCH\" />
 
-    <!-- Allow WfcActivation app scheduled jobs to run when app in background. -->
-    <allow-in-power-save-except-idle package=\"com.google.android.wfcactivation\" />
+    <!-- Allow Google unbundled tethering entitlement app in background -->
+    <allow-in-power-save package=\"com.google.android.tetheringentitlement\" />
 
     <!-- Allow ssr detector service in background -->
     <allow-in-power-save package=\"com.google.SSRestartDetector\" />
 
-    <!-- Allow connectivitymonitor service in background -->
-    <allow-in-power-save package=\"com.google.android.connectivitymonitor\" />
-
-    <!-- Allow connectivitythermalpowermanager service in background -->
-    <allow-in-power-save package=\"com.google.android.connectivitythermalpowermanager\" />
-
     <!-- Allow ramdump uploader service in background -->
     <allow-in-power-save package=\"com.android.ramdump\" />
-
-    <!-- Whitelist log pkg so JobIntentService can work. b/71630894 -->
-    <allow-in-power-save-except-idle package=\"com.google.android.apps.carrier.log\" />
-
-    <!-- Whitelist so headless app JobIntentService can work. b/73250911 -->
-    <allow-in-power-save-except-idle package=\"com.google.android.carrier\" />
-
-    <!-- Whitelist so headless app JobService can work. b/135126855 -->
-    <allow-in-power-save-except-idle package=\"com.google.android.apps.carrier.carrierwifi\" />
 
     <!-- These are telephony components that need to run in the background -->
     <allow-in-power-save package=\"com.qualcomm.atfwd\" />
@@ -11882,19 +11848,6 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <allow-in-power-save package=\"com.qulacomm.qcrilmsgtunnel\" />
     <allow-in-power-save package=\"com.qualcomm.qti.ims\" />
     <allow-in-power-save package=\"com.qualcomm.qti.radioconfiginterface\" />
-
-    <!-- Pre-installed carrier apps which should be disabled until a matching SIM is inserted. -->
-    <disabled-until-used-preinstalled-carrier-app package=\"com.google.android.apps.tycho\" />
-
-    <!-- Whitelist so the app can run JobIntentService in background. b/77932342 -->
-    <allow-in-power-save-except-idle package=\"com.google.android.tetheringentitlement\" />
-    <!-- Tethering entitlement check app should have Internet access while in data saving mode,
-         even if they're in background. -->
-    <allow-in-data-usage-save package=\"com.google.android.tetheringentitlement\" />
-
-    <!-- Allow eMBMS middleware services to run in the background -->
-    <allow-in-power-save package=\"com.qualcomm.ltebc_vzw\" />
-    <allow-in-power-save package=\"com.qualcomm.ltebc\" />
 </config>" > $TMPDIR/USGP/nexus.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
@@ -12374,10 +12327,9 @@ SBATTERYUSAGE
 GASL
 }
 
-RIRU_AND_EDX_LS_POSED_PRESETS() {
+RIRU_AND_LSPOSED_PRESETS() {
 IPRIRU
 IPLSPOSEDR
-IRIRUCW
 IPRMH
 IPATE
 IPSHAMIKO
@@ -12428,7 +12380,7 @@ UIP -d "Net: GPS/TTL/DNS/WB/APAUSBTF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS";
 UIP -d "Utilities: BB/ZS/SELC/ASTE/CC" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UTILITIES_PRESETS; fi
 UIP -d "Other: DFO/STZD/FA/SBU" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then OTHER_PRESETS; fi
 IPHF
-if $MAGISK; then if [ "$ASDK" -ge 27 ]; then UIP -d "Riru/LSPosed/Momo/Shamiko/A12Extensions" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_EDX_LS_POSED_PRESETS; fi; fi; UIP -d "SafetyNet/MHPC/GPay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; fi
+if $MAGISK; then if [ "$ASDK" -ge 27 ]; then UIP -d "Riru/LSPosed/Momo/Shamiko/A12Extensions" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then RIRU_AND_LSPOSED_PRESETS; fi; fi; UIP -d "SafetyNet/MHPC/GPay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then SAFETY_NET_AND_MHPC_PRESETS; fi; fi
 if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi
 UIP -d "Tweaks: FGS/BP/LED/UGMSD/USGP/VS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then MSGNUS="(/)"; TWEAKS_PRESETS; fi
 else
@@ -12442,7 +12394,7 @@ UTILITIES_PRESETS
 OTHER_PRESETS
 IPHF
 SAFETY_NET_AND_MHPC_PRESETS
-RIRU_AND_EDX_LS_POSED_PRESETS
+RIRU_AND_LSPOSED_PRESETS
 TWEAKS_PRESETS
 fi
 }

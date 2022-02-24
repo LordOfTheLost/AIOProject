@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 15.02.22 (68) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/15.02.2022/AIOPFMD-15.02.22-%2868%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/15P_7m-qhO5yB7OAlAXsUVzmUs95yK19S/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/68">TG</a>
+* Версия AIOPFMD: 24.02.22 (69) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/24.02.2022/AIOPFMD-24.02.22-%2869%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1bbHp9V1N7SmFHXXCTFXNW5nn50ej2VuL/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/69">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) (работает только на 66й версии) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -31,6 +31,14 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 24.02.22 (69) ####
+* AdAwayHosts обновлен от 21.02.2022;
+* Фикс отвала Zygisk LSPosed;
+* Unlimited Storage For GPhotos обновлен до v1.2 - улучшения файла nexus для возможно лучшего срабатывания этого говна;
+* Фикс путей V4AFXPresets и удалятора на новые пути - обновлен до v1.5;
+* Build Prop Tweaks обновлен до v2.1 - убрал все кроме Enable 4K in YouTube, Animation AOD & LS Fix и Disable Safemedia;
+* Burn In Protection обновлен до v1.7 - добавил 30-30 для AOD и убран выбор на 60-60;
+* Предсмертная версия.
 #### 15.02.22 (68) ####
 * Universal GMS Doze обновлён до v1.8.5 с фиксов на даблинг патчинга оригинала и убран обновлятор который ломается из за гнид которые делали Magisk;
 * V4AFXPresets обновлен до v1.4 - добавлены пути для v2.5.0.5 (может быть, мне насрать);
@@ -2210,7 +2218,7 @@
 	- Settings Put;
 * Пункт (MAGISK) (11-12) - (Enabling Hidden Api Policy) снимает ограничения Google на некоторые классы приложений - нужен для некоторых аудиомодулей и не только;
 * Пункт (MAGISK) (<9) - (Force Install Apps From Unknown Sources) для принудительного включения пункта в разделе безопасности на установку из неизвестных источников;
-* Пункт (ALL) - (BuildProp Tweaks) общие твики не влияющие на производительность или энергосбережения (видео в 4К, фикс AOD на кастомах, выключение предупреждения об высокой громкости и тд.);
+* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах и выключение предупреждения об высокой громкости;
 * Пункт (ALL) (|\\) - (Kill Logger) для отключения и убивания многих процессов/бинарников сбора логов:
 	- Оставить возможность снимать logcat или нет;
 	- Оставить возможность использовать dumpsys или нет;
