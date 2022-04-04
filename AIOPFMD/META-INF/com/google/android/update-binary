@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="31.03.22 (70)"
+VAIOPFMD="04.04.22 (71)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -55,7 +55,7 @@ IDMUIS="MediaUISounds"; VIPMUIS="v1.4"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSSC="WFAMDQSSC"; VIPWFAMDQSSC="v1.1"
 #Apps: Lawnchair/Shady/IA
-IDSL="Systemless_Lawnchair"; VIPSL="v1.9"; VIPASLQ="10.0 Alpha 8"; VIPASLR="11 Alpha 6.1"; VIPASLS="12 Alpha 5"
+IDSL="Systemless_Lawnchair"; VIPSL="v1.9"; VIPASLS="12 Alpha 5"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
@@ -171,7 +171,14 @@ PARTITION_AND_MOUNTS() {
 if $BOOTMODE; then
 MSGDELIMITER
 else
-if [ -n "$(cat /proc/cmdline | grep slot_suffix)" ]; then DABP=true; SYSTEM_MOUNT="/system"; SYSTEM="$SYSTEM_MOUNT/system"; VENDOR="/vendor/vendor"; elif [ -n "$(cat /etc/fstab | grep /system_root)" ]; then DABP=false; SYSTEM_MOUNT="/system_root"; SYSTEM="$SYSTEM_MOUNT/system"; VENDOR="/vendor"; else DABP=false; SYSTEM_MOUNT="/system"; SYSTEM="$SYSTEM_MOUNT"; VENDOR="/vendor"; fi
+DABP=false
+if [ -n "$(cat /proc/cmdline | grep slot_suffix)" ]; then
+DABP=true; SYSTEM_MOUNT="/system"; SYSTEM="$SYSTEM_MOUNT/system"; VENDOR="/vendor/vendor"
+elif [ -n "$(cat /etc/fstab | grep /system_root)" ]; then
+SYSTEM_MOUNT="/system_root"; SYSTEM="$SYSTEM_MOUNT/system"; VENDOR="/vendor"
+else
+SYSTEM_MOUNT="/system"; SYSTEM="$SYSTEM_MOUNT"; VENDOR="/vendor"
+fi
 Mounts=""
 for p in "$SYSTEM_MOUNT" "$VENDOR"; do
 if [ -d "$p" ] && grep -q "$p" "/etc/fstab"; then
@@ -179,16 +186,14 @@ Mounts="$Mounts $p"
 fi
 done
 for m in $Mounts; do
-if IS_MOUNTED "$m"; then
-umount "$m"
-fi
+if IS_MOUNTED "$m"; then umount "$m"; fi
 mount "$m"
 done
-grep -q "$SYSTEM_MOUNT.*\sro[\s,]" /proc/mounts && mount -o remount,rw $SYSTEM_MOUNT  # remount whatever $SYSTEM_MOUNT is, sometimes necessary if mounted read-only
+grep -q "$SYSTEM_MOUNT.*\sro[\s,]" /proc/mounts && mount -o remount,rw $SYSTEM_MOUNT
 UIP -d "Mounting$Mounts"
 fi
-if [ -f /system/system/build.prop ]; then FTSYSTEM=true; FTSYSTEMROOT=false; SYSTEM="/system/system"; elif [ -f /system_root/system/build.prop ]; then FTSYSTEM=true; FTSYSTEMROOT=true; SYSTEM="/system_root/system"; elif [ -f /system/build.prop ]; then FTSYSTEM=false; FTSYSTEMROOT=false; SYSTEM="/system"; fi
-if [ $BOOTMODE != true ] && [ -n "$(cat /etc/fstab | grep /vendor)" ]; then FVENDOR=true; elif [ $BOOTMODE != true ] && [ -d $SYSTEM/vendor ]; then FVENDOR=false; VENDOR="$SYSTEM/vendor"; else VENDOR="/vendor"; fi
+if [ -f /system/system/build.prop ]; then SYSTEM="/system/system"; elif [ -f /system_root/system/build.prop ]; then SYSTEM="/system_root/system"; elif [ -f /system/build.prop ]; then SYSTEM="/system"; fi
+if [ $BOOTMODE != true ] && [ -n "$(cat /etc/fstab | grep /vendor)" ]; then :; elif [ $BOOTMODE != true ] && [ -d $SYSTEM/vendor ]; then VENDOR="$SYSTEM/vendor"; else VENDOR="/vendor"; fi
 }
 
 IMPORTANT_VARIABLES() {
@@ -265,12 +270,12 @@ IPDMDE="/data/misc_de"
 IPDRESC="/data/resource-cache"
 STORAGE="/data/media/0"
 ACXML="$(find $SYSTEM $VENDOR -type f -name "audio_configs*.xml")"
-ACCONF="$(find $SYSTEM $VENDOR -type f -name "audio_configs*.xml")"
-APIIEXML="$(find $SYSTEM $VENDOR -type f -name "audio_platform_info*.xml" -o -name "audio_platform_info_intcodec*.xml" -o -name "audio_platform_info_extcodec*.xml")"
+# ACCONF="$(find $SYSTEM $VENDOR -type f -name "audio_configs*.xml")"
+# APIIEXML="$(find $SYSTEM $VENDOR -type f -name "audio_platform_info*.xml" -o -name "audio_platform_info_intcodec*.xml" -o -name "audio_platform_info_extcodec*.xml")"
 APIXML="$(find $SYSTEM $VENDOR -type f -name "audio_platform_info*.xml")"
 AECONFXML="$(find $SYSTEM $VENDOR -type f -name "*audio_effects*.conf" -o -name "*audio_effects*.xml")"
 MPATHS="$(find $SYSTEM $VENDOR -type f -name "*mixer_paths*.xml")"
-STPI="$(find $SYSTEM $VENDOR -type f -name "sound_trigger_platform_info*.xml")"
+# STPI="$(find $SYSTEM $VENDOR -type f -name "sound_trigger_platform_info*.xml")"
 AIPCONF="$(find $SYSTEM $VENDOR -type f -name "*audio_io_policy*.conf" -o -name "*audio_output_policy*.conf")"
 AIPCONFA="$(find $SYSTEM $VENDOR -type f -name "audio_io_policy*.conf")"
 APCXML="$(find $SYSTEM $VENDOR -type f -name "audio_policy_configuration.xml")"
@@ -282,15 +287,12 @@ MPXML="$(find $IPVE -type f -name "media_profiles*.xml")"
 SNDTRGS="$(find $SYSTEM $VENDOR -type f -name "*sound_trigger_mixer_paths*.xml")"
 WCNSQCCFGI="$(find $SYSTEM $VENDOR -type f -name "WCNSS_qcom_cfg.ini")"
 GPSCONF="$(find $SYSTEM $VENDOR -type f -name "gps.conf")"
-SFXML="$(find $SYSTEM $VENDOR -type f -name "*SFXML_feature*.xml")"
-MGXML="$(find $SYSTEM $VENDOR -type f -name "*mixer_gains*.xml")"
-ADXML="$(find $SYSTEM $VENDOR -type f -name "*audio_device*.xml")"
-AETXML="$(find $SYSTEM $VENDOR -type f -name "*audio_effects_tune*.xml")"
-VNDK="$(find $IPSL $IPVL -type d -iname "*vndk*")"
-VNDK64="$(find $IPSL64 $IPSVL64 -type d -iname "*vndk*")"
-VNDKQ="$(find $IPSL $IPVL -type d -iname "vndk*-Q")"
-VNDKQ64="$(find $IPSL64 $IPVL64 -type d -iname "vndk*-Q")"
+# SFXML="$(find $SYSTEM $VENDOR -type f -name "*SFXML_feature*.xml")"
+# MGXML="$(find $SYSTEM $VENDOR -type f -name "*mixer_gains*.xml")"
+# ADXML="$(find $SYSTEM $VENDOR -type f -name "*audio_device*.xml")"
+# AETXML="$(find $SYSTEM $VENDOR -type f -name "*audio_effects_tune*.xml")"
 SDEVFE="$IPSEDF/*.xml"; VDEVFE="$IPVEDF/*.xml"
+XMLGLOBAL="$IPDSU/settings_global.xml"; XMLSECURE="$IPDSU/settings_secure.xml"; XMLSYSTEM="$IPDSU/settings_system.xml"
 SPGLOBAL="settings put global"; SPSECURE="settings put secure"; SPSYSTEM="settings put system"
 SGGLOBAL="settings get global"; SGSECURE="settings get secure"; SGSYSTEM="settings get system"
 if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.conf; PATCHMODEFILE="$STORAGE/PATCHMODE.conf"; fi
@@ -1464,23 +1466,9 @@ esac
 MSSERVICE() {
 case $1 in
 -s) echo -e "while true; do\nif [ \$(getprop sys.boot_completed) -eq 1 ]; then\n$2\nbreak\nfi\ndone" > $MODPATH/$MODID/service.sh;;
--u) echo -e "#/sbin/sh\nwhile true; do\nif [ ! -d $MODPATH/$MODID ] || [ -f $MODPATH/$MODID/remove ]; then $2; rm -f $SERVICED/$3.sh; fi\ndone" > $SERVICED/$3.sh;;
+-u) echo -e "#/sbin/sh\nwhile true; do\nif [ ! -d $MODPATH/$MODID ] || [ -f $MODPATH/$MODID/remove ]; then\n$2\nrm -f $SERVICED/$3.sh\nbreak\nelse\nbreak\nfi\ndone" > $SERVICED/$3.sh;;
 -uc) echo -e "#/sbin/sh\nwhile true; do\n$2\ndone" > $SERVICED/$3.sh;;
-*) echo "#/sbin/sh
-while true; do
-if [ \$(getprop sys.boot_completed) -eq 1 ]; then
-if [ -f $MODPATH/$MODID/disable ] || [ ! -d $MODPATH/$MODID ]; then
-$1
-if [ ! -d $MODPATH/$MODID ]; then
-rm -f $SERVICED/$3.sh
-fi
-break
-elif [ -d $MODPATH/$MODID ]; then
-$2
-break
-fi
-fi
-done" > $SERVICED/$3.sh;;
+*) echo "#/sbin/sh\n\nwhile true; do\nif [ \$(getprop sys.boot_completed) -eq 1 ]; then\nif [ -f $MODPATH/$MODID/disable ] || [ ! -d $MODPATH/$MODID ]; then\n$1\nif [ ! -d $MODPATH/$MODID ]; then\nrm -f $SERVICED/$3.sh\nfi\nbreak\nelif [ -d $MODPATH/$MODID ]; then\n$2\nbreak\nfi\nfi\ndone" > $SERVICED/$3.sh;;
 esac
 [ -f $SERVICED/$3.sh ] && chmod 777 $SERVICED/$3.sh
 }
@@ -3947,7 +3935,7 @@ esac
 }
 
 SP_CHECKER() {
-if [ $BOOTMODE != true ] && [ ! -f $IPDSU/settings_secure.xml ] && [ ! -f $IPDSU/settings_global.xml ] && [ ! -f $IPDSU/settings_system.xml ]; then
+if [ $BOOTMODE != true ] && [ ! -f $XMLSECURE ] && [ ! -f $XMLGLOBAL ] && [ ! -f $XMLSYSTEM ]; then
 return 0
 else
 for f in $1; do
@@ -3994,7 +3982,6 @@ MMUPD_CHECKER "$IDFDNI" "$VIPFDNI" "IPFDNIS"
 MMUPD_CHECKER "$IDWFAMDQSSC" "$VIPWFAMDQSSC" "IPWFAMDQSSCS"
 #Apps: Lawnchair/Shady/IA
 MMUPD_CHECKER "$IDSL" "$VIPSL" "IPSLS"
-if $ATEN; then MMUPD_CHECKER -c "$IDSSL" "$VIPSSLQ" "$VCIPSSLQ" "IPSLS"; fi
 if $AELEVEN; then MMUPD_CHECKER -c "$IDSSL" "$VIPSSLR" "$VCIPSSLR" "IPSLS"; fi
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
 MMUPD_CHECKER -c "$IDVFXL" "$VIPVFXL" "$VCIPVFXL" "IPVFXS"
@@ -4416,7 +4403,7 @@ SET_PERM_RM -msgdi
 }
 
 IPBGD() {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$IPDSU/settings_secure.xml" "back_gesture_inset_scale_left back_gesture_inset_scale_right"; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$XMLSECURE" "back_gesture_inset_scale_left back_gesture_inset_scale_right"; then
 UCSA "Install Back Gesture Disabler $VIPBGD?" "IPBGDS"
 fi
 }
@@ -4761,7 +4748,7 @@ fi
 }
 
 IPGPPM() {
-if $MAGISK && $ATEN && [ $MIUI != true ] && SP_CHECKER "$IPDSU/settings_secure.xml" "global_actions_panel_debug_enabled global_actions_panel_available"; then UCSA "Activate GPay Power Menu $VIPGPPM?" "IPGPPMS"; fi
+if $MAGISK && $ATEN && [ $MIUI != true ] && SP_CHECKER "$XMLSECURE" "global_actions_panel_debug_enabled global_actions_panel_available"; then UCSA "Activate GPay Power Menu $VIPGPPM?" "IPGPPMS"; fi
 }
 
 IPGPPMS() {
@@ -4940,7 +4927,7 @@ fi
 }
 
 IPSUE() {
-if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$IPDSU/settings_global.xml" "guest_user_enabled"; then UCSA "Install Single User Enabler $VIPSUE?" "IPSUES"; fi
+if $MAGISK && [ $MIUI != true ] && SP_CHECKER "$XMLGLOBAL" "guest_user_enabled"; then UCSA "Install Single User Enabler $VIPSUE?" "IPSUES"; fi
 }
 
 IPSUES() {
@@ -4994,7 +4981,7 @@ fi
 }
 
 IPQSCP() {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$IPDSU/settings_secure.xml" "sysui_rounded_content_padding"; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$XMLSECURE" "sysui_rounded_content_padding"; then
 UCSA -ent "Install QS Content Padding $VIPQSCP?" "IPQSCPS"
 fi
 }
@@ -5014,7 +5001,7 @@ fi
 }
 
 IPSUIRSRS() {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$IPDSU/settings_secure.xml" "sysui_rounded_size"; then
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && SP_CHECKER "$XMLSECURE" "sysui_rounded_size"; then
 UCSA -ent "Install SUI Rounded Size $VIPSUIRSRS?" "IPSUIRSRSS"
 fi
 }
@@ -5300,42 +5287,35 @@ fi
 }
 
 IPSLS() {
-LAWNCHAIR=false
 UZTPN "QSRP" &
 SYSTEMLESSLAUNCHERS=false
+if $AELEVEN || $ATWELVE; then
 if $AELEVEN; then
-UIP -d "Lawnchair $VIPASLR Or $VIPASLS" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-if $KEYFUNCTION; then
-LAWNCHAIR=true
-UIP -d "Сhoose Launcher" "$MSGVU Lawnchair $VIPASLR - $VIPSL" "$MSGVD Lawnchair $VIPASLS - $VIPSL"
-if $KEYFUNCTION; then OAPI=R; else OAPI=S; fi
-fi
+UIP -d "Install Lawnchair $VIPASLS" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 elif $ATWELVE; then
 UIP -d "Install Lawnchair $VIPASLS" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+fi
 if $KEYFUNCTION; then
-LAWNCHAIR=true; OAPI=S
-fi
-fi
-if $LAWNCHAIR; then
 UIP "Installing Lawnchair $IAMM"
 SYSTEMLESSLAUNCHERS=true
 MODID="$IDSL"
-UZTPN "$MODID-$OAPI"
-cp -rf $TMPDIR/$MODID-$OAPI $TMPDIR/$MODID
+UZTPN "$MODID-$ACNV"
+cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSA/Lawnchair/Lawnchair.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 mkdir -p $TMPDIR/$MODID$MIPPSO; cp -f $TMPDIR/QSRP/QuickStepRecentsProvider-$PACKAGENAME.apk $TMPDIR/$MODID$MIPPSO/QuickStepRecentsProvider.apk
 if $MAGISK; then
 REMOVER -mm "$MMLAUNCHERLIST"
 cp -rf $TMPDIR/$MODID $MODPATH
-MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly Install Lawnchair On Your Device With Android 10-12 Recents UI Support"
+MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly Install Lawnchair On Your Device With Android 11-12 Recents UI Support"
 touch $MODPATH/$MODID/update
+fi
 fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
 if $AELEVEN; then
 SYSTEMLESSLAUNCHERS=false
 MSGDELIMITER
-UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
 UIP "Installing ShadyLauncher $IAMM"
 SYSTEMLESSLAUNCHERS=true
@@ -8751,6 +8731,7 @@ echo
 OPTIONS
 }
 OPTIONS" | tee /data/CC $MODPATH/$MODID$MIPSB/CC > /dev/null
+MSSERVICE -u "rm -f /data/CC" "CC"
 sed -i "s/#!\/system\/bin\/sh/#!\/sbin\/sh/g" /data/CC
 SET_PERM /data/CC 0 0 0700
 SET_PERM_RM -msgdi
@@ -9274,7 +9255,7 @@ fi
 IPFEGS() {
 UIP "Installing Force Gestures $IAMM"
 PTMFI -nmp "$IDFEG"
-if SP_CHECKER "$IPDSU/settings_secure.xml" "navigation_mode"; then
+if SP_CHECKER "$XMLSECURE" "navigation_mode"; then
 UIP -d "Choose Method:" "$MSGVU CMD Overlay" "$MSGVD Settings Put"
 if $KEYFUNCTION; then
 MSSERVICE -s "cmd overlay enable com.android.internal.systemui.navbar.gestural"
@@ -9305,7 +9286,7 @@ MMPR -v "Enabling Hidden Api Policy" "$VIPHAP" "Enabling Hidden Api Policy $MSGF
 }
 
 IPAFUS() {
-if $MAGISK && [ "$ASDK" -le 28 ] && SP_CHECKER "$IPDSU/settings_secure.xml" "install_non_market_apps"; then UCSA "Force Install Apps From Unknown Sources $VIPAFUS?" "IPAFUSS"; fi
+if $MAGISK && [ "$ASDK" -le 28 ] && SP_CHECKER "$XMLSECURE" "install_non_market_apps"; then UCSA "Force Install Apps From Unknown Sources $VIPAFUS?" "IPAFUSS"; fi
 }
 
 IPAFUSS() {
@@ -9365,7 +9346,7 @@ if $MAGISK; then
 PTMFI -nm "$IDKL" "$MIPSB"
 MMPR -vc "KillLogger" "$VIPKL" "$VCIPKL" "mrfrost475" "This module deletes the files responsible for the dump, logcat, and bug reports also prescribes logcat ban in build.prop"
 KLIPP=$MODPATH/$MODID/system.prop
-if SP_CHECKER "$IPDSU/settings_global.xml" "activity_starts_logging_enabled"; then MSSERVICE -s "$SPGLOBAL activity_starts_logging_enabled 0"; fi
+if SP_CHECKER "$XMLGLOBAL" "activity_starts_logging_enabled"; then MSSERVICE -s "$SPGLOBAL activity_starts_logging_enabled 0"; fi
 else
 BUCKUPER -bp "$IPSBP"; KLIPP=$IPSBP; touch $AIOPFMDPH/killlogger
 fi
@@ -9511,7 +9492,7 @@ MMPR -v "Force Disable HW Overlays" "$VIPFDHWO" "Force Disable HW Overlays $MSGF
 }
 
 IPFDEVADB() {
-if $MAGISK && SP_CHECKER "$IPDSU/settings_global.xml" "development_settings_enabled adb_enabled adb_wifi_enabled verifier_verify_adb_installs"; then UCSA "Install Force Activate DEV & ADB $VIPFDEVADB?" "IPFDEVADBS"; fi
+if $MAGISK && SP_CHECKER "$XMLGLOBAL" "development_settings_enabled adb_enabled adb_wifi_enabled verifier_verify_adb_installs"; then UCSA "Install Force Activate DEV & ADB $VIPFDEVADB?" "IPFDEVADBS"; fi
 }
 
 IPFDEVADBS() {
@@ -9629,7 +9610,7 @@ SET_PERM_RM -msgdi
 }
 
 IPFDPP() {
-if $MAGISK && SP_CHECKER "$IPDSU/settings_global.xml" "upload_apk_enable package_verifier_enable package_verifier_user_consent verifier_verify_adb_installs"; then UCSA "Install Force Disabling Play Protect $VIPFDPP?" "IPFDPPS"; fi
+if $MAGISK && SP_CHECKER "$XMLGLOBAL" "upload_apk_enable package_verifier_enable package_verifier_user_consent verifier_verify_adb_installs"; then UCSA "Install Force Disabling Play Protect $VIPFDPP?" "IPFDPPS"; fi
 }
 
 IPFDPPS() {
@@ -9647,7 +9628,7 @@ IPFIS() {
 UIP "Installing Force Idle $IAMM"
 PTMFI -nmp "$IDFI"
 if [ -f $MODPATH/killlogger$MIPSB/dumpsys ]; then UIP "Found dumpsys In KillLogger - Removing dumpsys"; fi
-if SP_CHECKER "$IPDSU/settings_global.xml" "aggressive_idle_enabled aggressive_standby_enabled"; then MSSERVICE -s "$SPGLOBAL aggressive_idle_enabled 1; $SPGLOBAL aggressive_standby_enabled 1; dumpsys deviceidle force-idle; dumpsys deviceidle enable"; else MSSERVICE -s "dumpsys deviceidle force-idle; dumpsys deviceidle enable"; fi
+if SP_CHECKER "$XMLGLOBAL" "aggressive_idle_enabled aggressive_standby_enabled"; then MSSERVICE -s "$SPGLOBAL aggressive_idle_enabled 1; $SPGLOBAL aggressive_standby_enabled 1; dumpsys deviceidle force-idle; dumpsys deviceidle enable"; else MSSERVICE -s "dumpsys deviceidle force-idle; dumpsys deviceidle enable"; fi
 MMPR -v "Force Idle" "$VIPFI" "Force Idle $MSGFMM"; SET_PERM_RM -msgdi
 }
 
@@ -10722,7 +10703,7 @@ SET_PERM_RM -msgdi
 }
 
 IPAS() {
-if $MAGISK && SP_CHECKER "$IPDSU/settings_global.xml" "window_animation_scale transition_animation_scale animator_duration_scale"; then UCSA "Install Animation Scale $VIPAS?" "IPASS"; fi
+if $MAGISK && SP_CHECKER "$XMLGLOBAL" "window_animation_scale transition_animation_scale animator_duration_scale"; then UCSA "Install Animation Scale $VIPAS?" "IPASS"; fi
 }
 
 IPASS() {

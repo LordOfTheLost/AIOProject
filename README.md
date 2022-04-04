@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.03.22 (70) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.03.2022/AIOPFMD-31.03.22-%2870%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1xMgw4E8LLeXDwaY92_d1yx7x1dFFsUyq/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/70">TG</a>
+* Версия AIOPFMD: 04.04.22 (71) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/04.04.2022/AIOPFMD-04.04.22-%2871%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1AWrwcpJ2LHyngBMHhXvSQhB2X1tqK7VB/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/73">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) (работает только на 66й версии) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -12,8 +12,7 @@
 	- Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Три патча и/или третий патч LP или альтернатива для оверлеев системы и лаунчеров (рекомендуется, но может и нет (рандом));
 	- SeLinux в Permissive (для аудиомодов как минимум (с приложениями на такой же функционал идите нахуй));
-	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+));
-	- SqLite для модулей которым он нужен.
+	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)).
 * В общем что делает патч: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 
 <details> 
@@ -30,7 +29,12 @@
 
 <details> 
   <summary>Changelog</summary>
-
+#### 04.04.22 (71) ####
+* Фикс заloopивания некоторых скриптов (холода ещё не прошли, а руки греть надо же было);
+* Добавлен shшник для Cache Cleaner на удаления бинарника для Recovery;
+* Фикс четырех Segmentation fault;
+* Lawnchair 11 Alpha 6.1 удален - ебаное кривое квадратное говно (ну нету лаунчеров нормальных блять, всё в EOLе);
+* Пару мелких изменений.
 #### 31.03.22 (70) ####
 * Минимальная версия Magisk выставлена и теперь рекомендуется 24.3+ (24300+) (И ЭТО УГРОЗА);
 * Фикс фикса путей V4AFXPresets - обновлен до v1.6;
