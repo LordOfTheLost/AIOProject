@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 04.04.22 (71) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/04.04.2022/AIOPFMD-04.04.22-%2871%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1AWrwcpJ2LHyngBMHhXvSQhB2X1tqK7VB/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/73">TG</a>
+* Версия AIOPFMD: 10.04.22 (72) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/10.04.2022/AIOPFMD-10.04.22-%2872%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1-TbRvDycWUquYKDSIkdpAwjkuZBHj0uq/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/74">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) (работает только на 66й версии) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -29,6 +29,23 @@
 
 <details> 
   <summary>Changelog</summary>
+  
+#### 10.04.22 (72) ####
+* LSPosed для Riru и ZYGISK обновлен до v1.8.1 (6499);
+* Убран показ Reset Screen Lock после очистки /data на Android 12+;
+* AdAwayHosts обновлен от 07.04.2022;
+* Фикс цикла LSP и RIRU - РЕКОМЕНДУЮ переустановить/обновить;
+* Фикс конфликта создания "многоуровневых" папок модулей после захода в "Пункт Установки приложений" - РЕКОМЕНДУЮ переставить все модули которые были установлены после 70й версии ПРИ УСЛОВИИ что вы заходили в "Пункт Установки приложений" (крч так кроме меня никто не делает наверное но всё же);
+* Новый переименоватор пробелов для Пункт Установки приложений - что фиксит проблему выше и возможно даже тех которых не было;
+* Фикс некоторых разрешений;
+* В Kill Logger инвертированы выборы что логичнее;
+* Исправлены некоторые опечатки по UI патча;
+* WallpaperPickerGoogle, WallpaperPickerGooglePrebuilt и WallpaperPickerGoogleRelease перемещены в экспериментальный лист так как при удалении на 12ки есть отвал всего;
+* Обнаружение версии Android теперь только по SDK (ебаный 12L прописан как 12/12L а не 12.1) - это убирает некоторые пункты и выборы на 12.1 логично;
+* Force MTP перемещен в Legacy и требует версию до 12ки - пока так;
+* Wifi Patcher обновлен до v1.1 - фикс отвала Wifi на первоначалке на 12ке+;
+* В Режим удаления/replace/restore добавлено приложение в обычный лист: DevicePersonalizationPrebuiltPixel2021, GrapheneCamera, PixelWallpapers2021 и SecurityHubPrebuilt;
+* Форк Detach кстати будет но позже со многими изменениями/улучшениями и UI как в AIO/CC/MMFR.
 #### 04.04.22 (71) ####
 * Фикс заloopивания некоторых скриптов (холода ещё не прошли, а руки греть надо же было);
 * Добавлен shшник для Cache Cleaner на удаления бинарника для Recovery;
@@ -405,7 +422,7 @@
 * Из за распаковки аддона в фоне, некоторые пользователи умудрялись выбирать те же Анимации загрузки раньше распаковки в фоне - так что сделал проверку с задержкой если телефон не успел разпаковать (даже актуальнее на бюджетках или при отвале памяти);
 * Ну и ещё что-то по мелочи.
 #### 07.08.21 (50) ####
-* Откат Unlimited Storage For GPhotos до v1.0 и патч отправлен в Legaсy из за редкой работы и вообще говно сраное;
+* Откат Unlimited Storage For GPhotos до v1.0 и патч отправлен в Legacy из за редкой работы и вообще говно сраное;
 * Shady Launcher R обновлен до v2021.08.04;
 * hosts файл с AdAway обновлен от 02.08.2021;
 * Detach3 обновлен до v3.08;
@@ -1745,6 +1762,7 @@
 	- CtsShimPrivPrebuilt
 	- DeskClockGoogle
 	- DevicePersonalizationPrebuiltPixel2020
+	- DevicePersonalizationPrebuiltPixel2021
 	- DevicePersonalizationPrebuiltPixel4
 	- DevicePolicyPrebuilt
 	- DiagMonAgent
@@ -1828,6 +1846,7 @@
 	- GooglePrintRecommendationService
 	- GoogleTTS
 	- GoogleVrCore
+	- GrapheneCamera
 	- HTMLViewer
 	- Hangouts
 	- HangoutsDialer
@@ -1943,6 +1962,7 @@
 	- PicoTts
 	- PixelLiveWallpaperPrebuilt
 	- PixelWallpapers2020
+	- PixelWallpapers2021
 	- PlayGames
 	- PowerPoint_SamsungStub
 	- PrebuiltBugle
@@ -1987,6 +2007,7 @@
 	- SecHTMLViewer
 	- SecMyFiles2015_ESS
 	- SecSetupWizard2015
+	- SecurityHubPrebuilt
 	- SecurityLogAgent
 	- ShiftPapers
 	- Simple-Calendar
@@ -2025,9 +2046,6 @@
 	- VoiceSearchStub
 	- Wallet
 	- Wallpaper
-	- WallpaperPickerGoogle
-	- WallpaperPickerGooglePrebuilt
-	- WallpaperPickerGoogleRelease
 	- WallpapersBReel2017
 	- WallpapersBReel2019
 	- WallpapersBReel2020
@@ -2147,6 +2165,9 @@
 * TrichromeLibrary-Stub
 * VZWAPNLib
 * Vending
+* WallpaperPickerGoogle
+* WallpaperPickerGooglePrebuilt
+* WallpaperPickerGoogleRelease
 * WallpaperPicker_Zero2
 * WebView
 * WebViewGoogle
@@ -2279,7 +2300,7 @@
 * Пункт (MAGISK) - (Force 4X MSAA) для включения 4X MSAA в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Disable HW Overlays) для включения отключение наложений после перезагрузки в настройках разработчика;
 * Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...);
-* Пункт (MAGISK) - (Force MTP) принудительно активирует MTP даже до первой загрузки;
+* Пункт (MAGISK & LEGACY) (<11) - (Force MTP) принудительно активирует MTP даже до первой загрузки;
 * Пункт (ALL) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере если находит нужные файлы;
 * Пункт (ALL) (8.1-12.1) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);

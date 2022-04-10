@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="04.04.22 (71)"
+VAIOPFMD="10.04.22 (72)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -69,12 +69,12 @@ IDIBS="IncreaseBitrate"; VIPIBS="v1.0"
 IDAML="aml"; VIPAML="v4.1"; VCIPAML="56"
 #AdBlock/Hosts
 IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="31.03.2022"
+IDVAAH="AdAwayHosts"; VIPVAAH="07.04.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="17.0-220116"; VCIPVSH="170"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; VIPGPSP="1.0"
-IDWIFIP="WIFIPatcher"; VIPWIFIP="1.0"
+IDWIFIP="WIFIPatcher"; VIPWIFIP="1.1"
 IDTTLF="nfqttl"; VIPTTLF="v2.7"; VCIPTTLF="2"
 IDNT="NetworkTweak"; VIPNT="v6"; VCIPNT="6"
 IDAPAUSBTF="APAUSBTF"; VIPAPAUSBTF="v1.0"
@@ -88,8 +88,8 @@ IDFPA="FingerprintActions"; VIPFPA="v1.1"
 IDFSLFM="FSFM"; VIPFSLFM="v1.2"
 #Riru/LSPosed
 IDRIRU="riru-core"; VIPRIRU="v26.1.4.r522.8b379cedb5"; VCIPRIRU="522"
-IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.8.0 (6482)"; VCIPLSPOSEDR="6482"
-IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.8.0 (6482)"; VCIPLSPOSEDZ="6482"
+IDLSPOSEDR="riru_lsposed"; VIPLSPOSEDR="v1.8.1 (6499)"; VCIPLSPOSEDR="6499"
+IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.8.1 (6499)"; VCIPLSPOSEDZ="6499"
 #Tweaks: FGS/BP/LED/UGMSD/USGP/VS
 IDFGS="ForceGoogleSync"; VIPFGS="v1.1"
 IDFEG="ForceGestures"; VIPFEG="v1.1"
@@ -397,6 +397,7 @@ ColtPapers
 CtsShimPrivPrebuilt
 DeskClockGoogle
 DevicePersonalizationPrebuiltPixel2020
+DevicePersonalizationPrebuiltPixel2021
 DevicePersonalizationPrebuiltPixel4
 DevicePolicyPrebuilt
 DiagMonAgent
@@ -480,6 +481,7 @@ GooglePlus
 GooglePrintRecommendationService
 GoogleTTS
 GoogleVrCore
+GrapheneCamera
 HTMLViewer
 Hangouts
 HangoutsDialer
@@ -595,6 +597,7 @@ Photos
 PicoTts
 PixelLiveWallpaperPrebuilt
 PixelWallpapers2020
+PixelWallpapers2021
 PlayGames
 PowerPoint_SamsungStub
 PrebuiltBugle
@@ -639,6 +642,7 @@ SecEmailWidget-mass
 SecHTMLViewer
 SecMyFiles2015_ESS
 SecSetupWizard2015
+SecurityHubPrebuilt
 SecurityLogAgent
 ShiftPapers
 Simple-Calendar
@@ -677,9 +681,6 @@ VoiceSearch
 VoiceSearchStub
 Wallet
 Wallpaper
-WallpaperPickerGoogle
-WallpaperPickerGooglePrebuilt
-WallpaperPickerGoogleRelease
 WallpapersBReel2017
 WallpapersBReel2019
 WallpapersBReel2020
@@ -796,6 +797,9 @@ TrichromeLibrary
 TrichromeLibrary-Stub
 VZWAPNLib
 Vending
+WallpaperPickerGoogle
+WallpaperPickerGooglePrebuilt
+WallpaperPickerGoogleRelease
 WallpaperPicker_Zero2
 WebView
 WebViewGoogle
@@ -866,7 +870,7 @@ DARCH="$(GREP_PROP "ro.product.cpu.abi")"
 case "$DARCH" in
 *arm64*) arch="arm64"; libarch="lib64";;
 *armeabi*) arch="arm"; libarch="lib";;
-*) arch="unknown"; UIP -d "Warning, $arch Not Supported/Found!";;
+*) arch="unknown"; UIP -d "Warning! $arch Not Supported/Found!";;
 esac
 AAPT="$AADDONS/aapt-$arch"
 XMLSTARLET="$AADDONS/xmlstarlet-$arch"
@@ -1054,14 +1058,14 @@ CHECK_AVERSION() {
 ASDK="$(GREP_PROP "ro.build.version.sdk")"
 AVERSION="$(GREP_PROP "ro.build.version.release")"
 ATEN=false; AELEVEN=false; ATWELVE=false; ATWELVEL=false
-if [ "$ASDK" = "29" ] || [ "$AVERSION" = "10" ] || [ "$AVERSION" = "10.0" ]; then ATEN=true; ACNV="Q"
-elif [ "$ASDK" = "30" ] || [ "$AVERSION" = "11" ] || [ "$AVERSION" = "11.0" ]; then AELEVEN=true; ACNV="R"
-elif [ "$ASDK" = "31" ] || [ "$AVERSION" = "12" ] || [ "$AVERSION" = "12.0" ]; then UIP -d "Warning, SDK $ASDK Is Not Fully Support!"; ATWELVE=true; ACNV="S"
-elif [ "$ASDK" = "32" ] || [ "$AVERSION" = "12.1" ] || [ "$AVERSION" = "12.1.0" ]; then UIP -d "Warning, SDK $ASDK Is Not Fully Support!"; ATWELVEL=true; ACNV="SL"
-elif [ "$ASDK" = "33" ] || [ "$AVERSION" = "13" ]; then UIP -d "Warning, SDK $ASDK Is Not Fully Support!"; ATHIRTEEN=true; ACNV="T"
+if [ "$ASDK" = "29" ]; then ATEN=true; ACNV="Q"
+elif [ "$ASDK" = "30" ]; then AELEVEN=true; ACNV="R"
+elif [ "$ASDK" = "31" ]; then UIP -d "Warning! SDK $ASDK Is Not Fully Support!"; ATWELVE=true; ACNV="S"
+elif [ "$ASDK" = "32" ]; then UIP -d "Warning! SDK $ASDK Is Not Fully Support!"; ATWELVEL=true; ACNV="SL"
+elif [ "$ASDK" = "33" ]; then UIP -d "Warning! SDK $ASDK Is Not Fully Support!"; ATHIRTEEN=true; ACNV="T"
 fi
 case $ASDK in
-"19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; "32");; "33");; *) UIP -d "Warning, SDK Not Supported/Found!";;
+"19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; "32");; "33");; *) UIP -d "Warning! SDK Not Supported/Found!";;
 esac
 DYNLIB=true
 [ $ASDK -lt 26 ] && DYNLIB=false
@@ -1126,7 +1130,7 @@ UIP "UnMounting$Mounts"
 for m in $Mounts; do
 case $m in
 $SYSTEM_MOUNT) if $DABP; then mount -o ro $SYSTEM_MOUNT; else umount $SYSTEM_MOUNT; fi;;
-*) umount "$m";;
+*) if IS_MOUNTED "$m"; then umount "$m"; fi;;
 esac
 done
 fi
@@ -1287,7 +1291,10 @@ done
 }
 
 SET_PERM_RM() {
-if $MAGISK; then SET_PERM_R $MODPATH/$MODID 0 0 0755 0644; [ -d $MODPATH/$MODID$MIPSB ] && chmod -R 777 $MODPATH/$MODID$MIPSB; [ -d $MODPATH/$MODID$MIPSXB ] && chmod -R 777 $MODPATH/$MODID$MIPSXB; fi; case $1 in -msgdi) UIP "$MSGDI";; esac
+if $MAGISK; then SET_PERM_R $MODPATH/$MODID 0 0 0755 0644; [ -d $MODPATH/$MODID$MIPSB ] && chmod -R 777 $MODPATH/$MODID$MIPSB; [ -d $MODPATH/$MODID$MIPSXB ] && chmod -R 777 $MODPATH/$MODID$MIPSXB; fi
+[ -f $MODPATH/$MODID/daemon ] && chmod 744 $MODPATH/$MODID/daemon
+[ -f $MODPATH/$MODID/nfqttl ] && chmod 777 $MODPATH/$MODID/nfqttl
+case $1 in -msgdi) UIP "$MSGDI";; esac
 }
 
 UZTPN() {
@@ -1398,15 +1405,14 @@ $AAPT p -f -v -M $1/AndroidManifest.xml \
 # cp -f $1/signed.apk $2
 # fi
 # else
+# # DALVIKVM() {
+# # dalvikvm -Djava.io.tmpdir=. -Xnodex2oat -Xnoimage-dex2oat -cp $ZIPSIGNERJAR com.topjohnwu.utils.ZipSigner "$@" 2>/dev/null \
+# # || dalvikvm -Djava.io.tmpdir=. -Xnoimage-dex2oat -cp $ZIPSIGNERJAR com.topjohnwu.utils.ZipSigner "$@";
+# # }
 UIP "No Sign $2"
 $ZIPALIGN -c 4 $1/unsigned.apk
 cp -f $1/unsigned.apk $2
 # fi
-}
-
-DALVIKVM() {
-dalvikvm -Djava.io.tmpdir=. -Xnodex2oat -Xnoimage-dex2oat -cp $ZIPSIGNERJAR com.topjohnwu.utils.ZipSigner "$@" 2>/dev/null \
-|| dalvikvm -Djava.io.tmpdir=. -Xnoimage-dex2oat -cp $ZIPSIGNERJAR com.topjohnwu.utils.ZipSigner "$@";
 }
 
 APKPERM() {
@@ -1467,7 +1473,7 @@ MSSERVICE() {
 case $1 in
 -s) echo -e "while true; do\nif [ \$(getprop sys.boot_completed) -eq 1 ]; then\n$2\nbreak\nfi\ndone" > $MODPATH/$MODID/service.sh;;
 -u) echo -e "#/sbin/sh\nwhile true; do\nif [ ! -d $MODPATH/$MODID ] || [ -f $MODPATH/$MODID/remove ]; then\n$2\nrm -f $SERVICED/$3.sh\nbreak\nelse\nbreak\nfi\ndone" > $SERVICED/$3.sh;;
--uc) echo -e "#/sbin/sh\nwhile true; do\n$2\ndone" > $SERVICED/$3.sh;;
+-uc) echo -e "#/sbin/sh\nwhile true; do\n$2nbreak\ndone" > $SERVICED/$3.sh;;
 *) echo "#/sbin/sh\n\nwhile true; do\nif [ \$(getprop sys.boot_completed) -eq 1 ]; then\nif [ -f $MODPATH/$MODID/disable ] || [ ! -d $MODPATH/$MODID ]; then\n$1\nif [ ! -d $MODPATH/$MODID ]; then\nrm -f $SERVICED/$3.sh\nfi\nbreak\nelif [ -d $MODPATH/$MODID ]; then\n$2\nbreak\nfi\nfi\ndone" > $SERVICED/$3.sh;;
 esac
 [ -f $SERVICED/$3.sh ] && chmod 777 $SERVICED/$3.sh
@@ -4057,6 +4063,7 @@ fi
 
 QCDFP() {
 for f in $EQCDFP; do
+if [ -f $f ]; then
 if grep -m1 "^$1" $f >/dev/null; then
 local g=$(grep -m1 "^$1" $f)
 sed -i "s~$g~$1=$2~g" $f
@@ -4069,15 +4076,16 @@ sed -i "s~$g~$1=$2~g" $f
 else
 echo -e "\n$3\n$1=$2" >> $f
 fi
+fi
 done
 }
 
 PTMFI() {
 case "$1" in
--nm) MODID="$2"; REMOVER -mm "$MODID"; for p in $3; do mkdir -p "$MODPATH/$MODID$p"; done;;
--np) MODID="$2"; REMOVER -mm "$MODID $3"; mkdir -p "$MODPATH/$MODID";;
+-nm) MODID="$2"; local IP="$3"; REMOVER -mm "$MODID"; for MP in $IP; do mkdir -p "$MODPATH/$MODID$MP"; done;;
+-np) MODID="$2"; local DMM="$3"; REMOVER -mm "$MODID $DMM"; mkdir -p "$MODPATH/$MODID";;
 -nmp) MODID="$2"; REMOVER -mm "$MODID"; mkdir -p "$MODPATH/$MODID";;
-*) MODID="$1"; REMOVER -mm "$MODID $2"; for p in $3; do mkdir -p "$MODPATH/$MODID$p"; done;;
+*) MODID="$1"; local DMM="$2"; local IP="$3"; REMOVER -mm "$MODID $DMM"; for MP in $IP; do mkdir -p "$MODPATH/$MODID$MP"; done;;
 esac
 touch $MODPATH/$MODID/update
 }
@@ -4990,10 +4998,7 @@ IPQSCPS() {
 UCSA -a "$(seq 0 5 40)" "Choose Padding Size:" "Padding Size" "40"
 if $UCSFNM; then
 UIP "Installing QS Content Padding $IAMM"
-if $BOOTMODE; then
-UIP "QS Content Padding Activated Right Now"
-$SPSECURE sysui_rounded_content_padding $UCSFNMC
-fi
+if $BOOTMODE; then UIP "QS Content Padding Activated Right Now"; $SPSECURE sysui_rounded_content_padding $UCSFNMC; fi
 PTMFI -nmp "$IDQSCP"
 MSSERVICE -s "$SPSECURE sysui_rounded_content_padding $UCSFNMC"
 MMPR -v "QS Content Padding" "$VIPQSCP" "QS Content Padding $MSGFMM - Set On $UCSFNMC"; SET_PERM_RM -msgdi
@@ -5010,10 +5015,7 @@ IPSUIRSRSS() {
 UCSA -a "0 10 20 33 40 50 60 70 80 90 100" "Choose Rounded Size:" "Rounded Size" "100"
 if $UCSFNM; then
 UIP "Installing SUI Rounded Size $IAMM"
-if $BOOTMODE; then
-UIP "SUI Rounded Size Activated Right Now"
-$SPSECURE sysui_rounded_size $UCSFNMC
-fi
+if $BOOTMODE; then UIP "SUI Rounded Size Activated Right Now"; $SPSECURE sysui_rounded_size $UCSFNMC; fi
 PTMFI -nmp "$IDSUIRSRS"
 MSSERVICE -s "$SPSECURE sysui_rounded_size $UCSFNMC"
 MMPR -v "SUI Rounded Size" "$VIPSUIRSRS" "SUI Rounded Size $MSGFMM - Set On $UCSFNMC"; SET_PERM_RM -msgdi
@@ -5279,7 +5281,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ]; then
-if  $AELEVEN || $ATWELVE; then
+if $AELEVEN || $ATWELVE; then
 UCSA -ent "Install Systemless Launcher?" "IPSLS"
 fi
 fi
@@ -5349,7 +5351,7 @@ fi
 
 IPAPP() {
 if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then
-UCSA "Install App In $STORAGE/Applications?" "IPAPPS"
+UCSA "Install App From $STORAGE/Applications?" "IPAPPS"
 fi
 }
 
@@ -5358,8 +5360,8 @@ UIP -d "Choose Path Variant:" "$MSGVU Install Every App In Data" "$MSGVD Install
 if $KEYFUNCTION; then IAPPASD=true; else IAPPASD=false; fi
 UIP -d "Choose Install Variant:" "$MSGVU Install Every App With Confirm" "$MSGVD Install Every App Without Confirm"
 if $KEYFUNCTION; then IEAW=true; else IEAW=false; fi
-dirname=$STORAGE/Applications; IFS=$'\n'
-for i in $(find $dirname -depth -name '* *'); do mv $i $(dirname $i)/$(basename $i| tr ' ' '_'); done
+cd $STORAGE/Applications
+for F in *; do if [ -f "$F" ]; then mv "$F" `echo $F | tr ' ' '_'`; fi; done
 for APKINPUT in $(ls $STORAGE/Applications); do
 if [ -f $STORAGE/Applications/$APKINPUT ]; then
 if $IEAW; then
@@ -5455,7 +5457,7 @@ done
 touch $MODPATH/$MODID/update
 MOVERPATH
 SET_PERM_RM -msgdi
-WCANFTP "-sl -ehap -aml"
+WCANFTP "-sl -ehap"
 }
 
 IPVFXP() {
@@ -6951,7 +6953,7 @@ SET_PERM_RM -msgdi
 { #Removal: RSL/RSO/RSTA/RWFSB
 
 RPASSF() {
-if [ $BOOTMODE != true ] && [ -d $IPDS ]; then
+if [ $BOOTMODE != true ] && [ -d $IPDS ] && [ ! -f $IPDS/storage.xml ]; then
 UCSA "Reset Screen Lock?" "RPASSFS"
 fi
 }
@@ -8112,19 +8114,6 @@ QCDFP "gEnablefwlog" "0" "# Firmware log mode\n# Valid values are 0,1,2\n# 0=Dis
 QCDFP "gEnablePacketLog" "0" "# Enable pkt log\n# 1 - enable, 0 - disable"
 echo -e "\nEND" >> $EQCDFP
 cp -f $TMPDIR/WCNSS_qcom_cfg.ini $MODPATH/$MODID$MIPSVE/wifi
-mkdir -p /data/vendor/wifi
-echo "LOG_PATH_FLAG = 0
-MAX_LOG_FILE_SIZE = 0
-MAX_ARCHIVES = 0
-MAX_PKTLOG_ARCHIVES = 0
-LOG_STORAGE_PATH = /data/vendor/wlan_logs
-AVAILABLE_MEMORY_THRESHOLD = 0
-MAX_LOG_BUFFER = 0
-MAX_PKTLOG_BUFFER = 0
-HOST_LOG_FILE = /data/vendor/wlan_logs/buffered_cnsshost_log.txt
-FIRMWARE_LOG_FILE = /data/vendor/wlan_logs/buffered_cnssfw_log.txt
-ENABLE_FLUSH_LOG = 0
-REAL_TIME_WRITE = 0" > /data/vendor/wifi/cnss_diag.conf
 SET_PERM_RM -msgdi
 }
 
@@ -8183,7 +8172,6 @@ ip6tables -t mangle -I PREROUTING -j nfqttli
 ip6tables -t mangle -I POSTROUTING -j nfqttlo
 exit 0" > $MODPATH/$MODID/service.sh
 cp -f $TMPDIR/NFQTTL/nfqttl-$arch $MODPATH/$MODID/nfqttl
-chmod 777 $MODPATH/$MODID/nfqttl
 if $BOOTMODE; then
 pkill -9 nfqttl
 if $MODPATH/$MODID/nfqttl -d -s4 ; then
@@ -9143,16 +9131,31 @@ cp -f $TMPDIR/LSPosed/$MODID$MIPSL64/libdaemon.so $MODPATH/$MODID
 cp -f $TMPDIR/LSPosed/$MODID$MIPSL64/liblspd.so $MODPATH/$MODID/zygisk/arm64-v8a.so
 fi
 fi
+if [ "$ASDK" -ge 29 ]; then
+UIP "Copy dex2oat Binaries"
+cp -rf $TMPDIR/LSPosed/bin $MODPATH/$MODID
+UIP "Patching Binaries"
+DEV_PATH=$(tr -dc 'a-f0-9' < /dev/urandom | head -c 16)
+while [ -d "/dev/$DEV_PATH" ]; do
+DEV_PATH=$(tr -dc 'a-f0-9' < /dev/urandom | head -c 16)
+done
+sed -i "s/placeholder_\/dev\/................/placeholder_\/dev\/$DEV_PATH/" "$MODPATH/$MODID/libdaemon.so"
+sed -i "s/placeholder_\/dev\/................/placeholder_\/dev\/$DEV_PATH/" "$MODPATH/$MODID/bin/dex2oat32"
+sed -i "s/placeholder_\/dev\/................/placeholder_\/dev\/$DEV_PATH/" "$MODPATH/$MODID/bin/dex2oat64"
+else
+echo "dalvik.vm.dex2oat-flags=--inline-max-code-units=0" > $MODPATH/$MODID/system.prop
+fi
 touch $MODPATH/$MODID/update
 echo "#!$MIPSB/sh
 
 dir=\${0%/*}
+magiskPath=\$(magisk --path)
 tmpLspdApk=\"$IPDLTMP/daemon.apk\"
 debug=false
 
 if [ -r \$tmpLspdApk ]; then
 java_options=\"-Djava.class.path=\$tmpLspdApk\"
-java_options=\"\$java_options -Dlsp.library.path=$IPDLTMP\"
+java_options=\"\$java_options -Dlsp.library.path=/data/local/tmp\"
 debug=\"true\"
 else
 java_options=\"-Djava.class.path=\$dir/daemon.apk\"
@@ -9183,6 +9186,17 @@ fi
 done
 fi
 \$debug && log -p d -t \"LSPosed\" \"start $LSPFLAVOR daemon \$*\"
+
+if [ \"\$(getprop ro.build.version.sdk)\" -ge 29 ]; then
+umount /apex/com.android.art/bin/dex2oat*
+mkdir \"\$magiskPath/dex2oat\"
+cp -p /apex/com.android.art/bin/dex2oat32 \"\$magiskPath/dex2oat/dex2oat32\"
+cp -p /apex/com.android.art/bin/dex2oat64 \"\$magiskPath/dex2oat/dex2oat64\"
+chcon -R u:object_r:magisk_file:s0 \"\$magiskPath/dex2oat\"
+mount --bind \"\$magiskPath/dex2oat/dex2oat32\" /apex/com.android.art/bin/dex2oat32
+mount --bind \"\$magiskPath/dex2oat/dex2oat64\" /apex/com.android.art/bin/dex2oat64
+fi
+
 exec $MIPSB/app_process \$java_options $MIPSB --nice-name=lspd org.lsposed.lspd.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/daemon
 if $LSPOSEDR; then
 MMPR -vcuj "Riru - LSPosed" "$VIPLSPOSEDR" "$VCIPLSPOSEDR" "LSPosed Developers" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 13 DP2. Requires Riru 25.0.1 or above installed." "https://lsposed.github.io/LSPosed/release/riru.json"
@@ -9190,11 +9204,16 @@ echo "allow system_server system_server process execmem" > $MODPATH/$MODID/sepol
 else
 MMPR -vcuj "Zygisk - LSPosed" "$VIPLSPOSEDZ" "$VCIPLSPOSEDZ" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 13 DP2. Requires Magisk 24.0+ and Zygisk enabled." "https://lsposed.github.io/LSPosed/release/zygisk.json"
 fi
-echo "dalvik.vm.dex2oat-flags=--inline-max-code-units=0" > $MODPATH/$MODID/system.prop
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
+MODNAME=\${MODDIR##*/}
+MAGISK_PATH=\$(magisk --path)
 rm -f \"$IPDLTMP/daemon.apk\"
 cd \"\$MODDIR\"
+if [ \"\$(getprop ro.build.version.sdk)\" -ge 29 ]; then
+mount --bind \"\$MAGISK_PATH/.magisk/modules/\$MODNAME/bin/dex2oat32\" \"/apex/com.android.art/bin/dex2oat32\"
+mount --bind \"\$MAGISK_PATH/.magisk/modules/\$MODNAME/bin/dex2oat64\" \"/apex/com.android.art/bin/dex2oat64\"
+fi
 unshare -m sh -c \"\$MODDIR/daemon &\"" > $MODPATH/$MODID/post-fs-data.sh
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
@@ -9204,11 +9223,13 @@ MSSERVICE -uc "if [ ! -d \"$MODPATH/riru_lsposed\" ] && [ ! -d \"$MODPATH/zygisk
 UIP "Installing LSPosed Manager"
 if $BOOTMODE; then
 pm install -r $TMPDIR/LSPosed/manager.apk >/dev/null
+else
+mkdir -p $MODPATH/$MODID$MIPSA/LSPosedManager
+cp -f $TMPDIR/LSPosed/manager.apk $MODPATH/$MODID$MIPSA/LSPosedManager/LSPosedManager.apk
 fi
 mkdir -p $NVBASE/lspd
 cp -f $TMPDIR/LSPosed/manager.apk $NVBASE/lspd
 cp -f $TMPDIR/LSPosed/daemon.apk $MODPATH/$MODID
-chmod 744 $MODPATH/$MODID/daemon
 SET_PERM_RM -msgdi
 }
 
@@ -9277,10 +9298,7 @@ fi
 IPHAPS() {
 UIP "Installing Enabling Hidden Api Policy $IAMM"
 PTMFI -nmp "$IDHAP"
-if $BOOTMODE; then
-UIP "Enabling Hidden Api Policy Right Now"
-$SPGLOBAL hidden_api_policy 1; $SPGLOBAL hidden_api_policy_pre_p_apps 1; $SPGLOBAL hidden_api_policy_p_apps 1
-fi
+if $BOOTMODE; then UIP "Enabling Hidden Api Policy Right Now"; $SPGLOBAL hidden_api_policy 1; $SPGLOBAL hidden_api_policy_pre_p_apps 1; $SPGLOBAL hidden_api_policy_p_apps 1; fi
 MSSERVICE -s "$SPGLOBAL hidden_api_policy 1; $SPGLOBAL hidden_api_policy_pre_p_apps 1; $SPGLOBAL hidden_api_policy_p_apps 1"
 MMPR -v "Enabling Hidden Api Policy" "$VIPHAP" "Enabling Hidden Api Policy $MSGFMM"; SET_PERM_RM -msgdi
 }
@@ -9291,10 +9309,7 @@ if $MAGISK && [ "$ASDK" -le 28 ] && SP_CHECKER "$XMLSECURE" "install_non_market_
 
 IPAFUSS() {
 UIP "Installing AIOAFUS $IAMM"
-if $BOOTMODE; then
-UIP "Enabling Install Apps From Unknown Sources Right Now"
-$SPSECURE install_non_market_apps 1
-fi
+if $BOOTMODE; then UIP "Enabling Install Apps From Unknown Sources Right Now"; $SPSECURE install_non_market_apps 1; fi
 PTMFI -nmp "$IDAFUS"
 MSSERVICE -s "$SPSECURE install_non_market_apps 1"
 MMPR -v "Allow Installation Of Apps From Unknown Sources" "$VIPAFUS" "Force Allow Installation Of Apps From Unknown Sources $MSGFMM"; SET_PERM_RM -msgdi
@@ -9350,8 +9365,8 @@ if SP_CHECKER "$XMLGLOBAL" "activity_starts_logging_enabled"; then MSSERVICE -s 
 else
 BUCKUPER -bp "$IPSBP"; KLIPP=$IPSBP; touch $AIOPFMDPH/killlogger
 fi
-if [ -f $IPSB/logcat ]; then UIP -d "You Don't Need logcat?" "$MSGVU Yes" "$MSGVD No"; if $KEYFUNCTION; then if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/logcat; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/logcat $AIOPFMDPH/KL; echo '' > $IPSB/logcat; fi; fi; fi
-if [ -f $IPSB/dumpsys ]; then UIP -d "You Don't Need dumpsys?" "$MSGVU Yes" "$MSGVD No"; if $KEYFUNCTION; then if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/dumpsys; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/dumpsys $AIOPFMDPH/KL; echo '' > $IPSB/dumpsys; fi; fi; fi
+if [ -f $IPSB/logcat ]; then UIP -d "You Need logcat?" "$MSGVU Yes, Need" "$MSGVD No Need"; if $KEYFUNCTION; then :; else if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/logcat; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/logcat $AIOPFMDPH/KL; echo '' > $IPSB/logcat; fi; fi; fi
+if [ -f $IPSB/dumpsys ]; then UIP -d "You Need dumpsys?" "$MSGVU Yes, Need" "$MSGVD No Need"; if $KEYFUNCTION; then :; else if $MAGISK; then echo '' > $MODPATH/$MODID$MIPSB/dumpsys; else mkdir -p $AIOPFMDPH/KL; cp -f $IPSB/dumpsys $AIOPFMDPH/KL; echo '' > $IPSB/dumpsys; fi; fi; fi
 UIP "Create Daemons Dummy Files In $MIPSB"
 KLDL="
 DumpSystemInfo
@@ -9510,17 +9525,17 @@ MMPR -v "Force DEV & ADB" "$VIPFDEVADB" "Force Activate DEV & ADB $MSGFMM"; SET_
 }
 
 IPFMTP() {
+if $MAGISK && $LEGACYMODE && [ "$ASDK" -le 30 ]; then
 UCSA "Install Force Activate MTP $VIPFMTP?" "IPFMTPS"
+fi
 }
 
 IPFMTPS() {
 UIP "Installing Force Activate MTP $IAMM"
 mkdir -p $IPDSDE/0
-if $MAGISK; then
 PTMFI -nmp "$IDFMTP"
 MSSERVICE -s "echo \"<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\\\"usb-screen-unlocked-config-0\\\">mtp</string>\n</map>\" > $IPDSDE/0/UsbDeviceManagerPrefs.xml"
 MMPR -v "Force MTP" "$VIPFMTP" "Force Activate MTP $MSGFMM"
-fi
 echo "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
 <map>
     <string name=\"usb-screen-unlocked-config-0\">mtp</string>
@@ -10712,10 +10727,7 @@ if $UCSFNM; then
 UIP "Installing Animation Scale $IAMM"
 PTMFI -nmp "$IDAS"
 MSSERVICE -s "$SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC"
-if $BOOTMODE; then
-UIP "Enabling Animation Scale Right Now"
-$SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC
-fi
+if $BOOTMODE; then UIP "Enabling Animation Scale Right Now"; $SPGLOBAL window_animation_scale $UCSFNMC; $SPGLOBAL transition_animation_scale $UCSFNMC; $SPGLOBAL animator_duration_scale $UCSFNMC; fi
 MMPR -v "Animation Scale" "$VIPAS" "Animation Scale - Set On $UCSFNMC $MSGFMM"; SET_PERM_RM -msgdi
 fi
 }
@@ -10965,7 +10977,7 @@ PRESETS() {
 if [ -d $MODPATH ] && [ $MAGISKFIRSTTIME != true ] && $MAGISK && $MMUPDC; then for mmc in $(ls $MODPATH); do if [ -d "$MODPATH/$mmc" ]; then UCSA -ent "Checking Update?" "MMUPD_LIST" && break; fi; done; fi
 if $PDESIGN; then
 UIP -d "UI: Pills/NavBar/Gboard/Themes/BA/Sounds" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UI_PRESETS; fi
-if $MIUI && [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; else UIP -d "Apps: Lawnchair/Shady/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; fi
+if $MIUI && [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; elif [ "$ASDK" -ge 32 ] && [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; else UIP -d "Apps: Lawnchair/Shady/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; fi
 UIP -d "Audio: VFX(P)/NL/AIST/SAQ/IB/AML" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then AUDIO_PRESETS; fi
 if $BOOTMODE; then REMOVAL_PRESETS; else UIP -d "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then REMOVAL_PRESETS; fi; fi
 if $TESTMODE; then UIP -d "Test/Coming Soon" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then TEST_COMING_SOON_PRESETS; fi; fi
