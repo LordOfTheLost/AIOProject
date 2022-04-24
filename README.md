@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 20.04.22 (73) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.04.2022/AIOPFMD-20.04.22-%2873%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1gJ4z5i_OcdqTUn0th7XMFmaBrXiCeadt/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/75">TG</a>
+* Версия AIOPFMD: 25.04.22 (74) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2022/AIOPFMD-25.04.22-%2874%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1SvIxlzVifU-jKFv6n2u3VbhDg_oYAVrS/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/76">TG</a>
 * Версия AIOPFMDA: 16.10.21 (8) (EOL) (работает только на 66й версии) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.10.2021/AIOPFMDA-16.10.21-%288%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1E7KHnhu-E6FDp5hLYDDvj7yC2ia6unYI/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/57">TG</a>
 * Версия AIOCPFMD: 16.05.21 (35) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOCPFMD-16.05.21-%2835%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VLHMAoCWiAcg3JDt1ja2Cqr1uytcNndv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/32">TG</a>
 * Версия AIOIARPFMD: 16.05.21 (26) (EOL) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.05.2021/AIOIARPFMD-16.05.21-%2826%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1TqoDkASfoX2sxFTXOD5vQCS49b8zx3ZZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/33">TG</a>
@@ -30,6 +30,12 @@
 <details> 
   <summary>Changelog</summary>
 
+#### 25.04.22 (74) ####
+* Добавил лаунчер с CR 8.4 - пока лучше нету ничего для SL не изобрели;
+* Вернул Shady для Q;
+* Kill Logger обновлен до v1.9;
+* Убрано создание пустого листа APPRMLIST.con - так и знал что кокеры будут ну ни чё удалите его если он не нужен и не будет доп выбора;
+* Остальное мне делать лень и заебало пока.
 #### 20.04.22 (73) ####
 * RoundedUI обновлен до v2.9 - много новых строк для 12ки и убраны выборы и теперь до 12ки будет 33 по умолчанию а после 11ки 30 (да и кому нужны были квадраты/скругленные квадраты кроме Gугла конечно же);
 * Media UI Sounds обновлен до v1.5 - обновлены звуки Arcana;
@@ -1670,11 +1676,12 @@
 	- Новый;
 	- Старый;
 
-<h3 align=center>Apps: Lawnchair/Shady/IA</h3>
+<h3 align=center>Apps: Lawnchair/Shady/CR/IA</h3>
 
-* Пункт (ALL) (11-12.0) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
+* Пункт (ALL) (10-12.1) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
 	- Установка Lawnchair (R/S) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка ShadyLauncher (R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка ShadyLauncher (Q/R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка CRLauncher (SL) <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
 * Пункт (ALL) (\\) - (Install App In /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть приложения;
 	- Установка в Data;
 	- Установка в System;

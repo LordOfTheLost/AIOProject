@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="20.04.22 (73)"
+VAIOPFMD="25.04.22 (74)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -55,9 +55,10 @@ IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.1"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.5"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSSC="WFAMDQSSC"; VIPWFAMDQSSC="v1.1"
-#Apps: Lawnchair/Shady/IA
+#Apps: Lawnchair/Shady/CR/IA
 IDSL="Systemless_Lawnchair"; VIPSL="v1.9"; VIPASLS="12 Alpha 5"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
+IDSCRL="Systemless_CRLauncher"; VIPSCRL="1.0"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
 IDVFXL="ViPER4AndroidFX-Legacy"; VIPVFXL="v2.5.0.5"; VCIPVFXL="86"
@@ -100,7 +101,7 @@ IDFEG="ForceGestures"; VIPFEG="v1.1"
 IDHAP="EnablingHiddenApiPolicy"; VIPHAP="v1.2"
 IDAFUS="AFUSS"; VIPAFUS="v1.1"
 IDBPT="BuildPropTweaks"; VIPBPT="v2.1"
-IDKL="KillLogger"; VIPKL="v1.7"; VCIPKL="8"
+IDKL="KillLogger"; VIPKL="v1.9"; VCIPKL="19"
 IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.5"
@@ -816,6 +817,7 @@ WebViewStub
 LAUNCHERLIST="
 AsusLauncher
 AsusLauncherDev
+DerpLauncherQuickStep
 EasyLauncher2_Zero
 EnigmaLauncher
 Launcher3QuickStep
@@ -838,17 +840,17 @@ TrebuchetQuickStep
 "
 
 MMLAUNCHERLIST="
-$IDSL
-Systemless_AsusLauncher
-$IDSMLR
-Systemless_OPLauncher
-$Systemless_OneUIHome
-Systemless_PixelLauncher
-$IDSSL
 MotoLauncher
 OneUIHome
+Systemless_AsusLauncher
+Systemless_CRLauncher
+Systemless_Lawnchair
 Systemless_Lawnchair_Plus
+Systemless_OPLauncher
+Systemless_OneUIHome
+Systemless_PixelLauncher
 Systemless_PixelLauncherX
+Systemless_ShadyLauncher
 com.pixelated.launcher
 quickstepswitcher
 quickswitch_terminal
@@ -4068,9 +4070,11 @@ MMUPD_CHECKER "$IDIOSEMOJI" "$VIPIOSEMOJI" "IPIOSEMOJIS"
 MMUPD_CHECKER "$IDMUIS" "$VIPMUIS" "IPMUISS"
 MMUPD_CHECKER "$IDFDNI" "$VIPFDNI" "IPFDNIS"
 MMUPD_CHECKER "$IDWFAMDQSSC" "$VIPWFAMDQSSC" "IPWFAMDQSSCS"
-#Apps: Lawnchair/Shady/IA
+#Apps: Lawnchair/Shady/CR/IA
 MMUPD_CHECKER "$IDSL" "$VIPSL" "IPSLS"
+if $ATEN; then MMUPD_CHECKER -c "$IDSSL" "$VIPSSLQ" "$VCIPSSLQ" "IPSLS"; fi
 if $AELEVEN; then MMUPD_CHECKER -c "$IDSSL" "$VIPSSLR" "$VCIPSSLR" "IPSLS"; fi
+if $ATWELVEL; then MMUPD_CHECKER "$IDSCRL" "$VIPSCRL" "IPSLS"; fi
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
 MMUPD_CHECKER -c "$IDVFXL" "$VIPVFXL" "$VCIPVFXL" "IPVFXS"
 MMUPD_CHECKER -c "$IDVFX" "$VIPVFX" "$VCIPVFX" "IPVFXS"
@@ -5400,7 +5404,7 @@ MMPR -v "Wi-Fi & Mobile Data QS Style Changer" "$VIPGPPM" "Wi-Fi & Mobile Data Q
 
 } #
 
-{ #Apps: Lawnchair/Shady/IA
+{ #Apps: Lawnchair/Shady/CR/IA
 
 IPSL() {
 if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/systemlesslauncher ]; then
@@ -5412,10 +5416,8 @@ rm -f $AIOPFMDPH/systemlesslauncher
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
-if $AELEVEN || $ATWELVE; then
+if [ $MIUI != true ] && [ $ASDK -ge 29 ]; then
 UCSA -ent "Install Systemless Launcher?" "IPSLS"
-fi
 fi
 fi
 }
@@ -5446,22 +5448,51 @@ fi
 fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
-if $AELEVEN; then
+if $ATEN || $AELEVEN; then
 SYSTEMLESSLAUNCHERS=false
 MSGDELIMITER
-UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $ATEN; then
+UIP "ShadyLauncher $VIPSSLQ" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+elif $AELEVEN; then
+UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+fi
 if $KEYFUNCTION; then
 UIP "Installing ShadyLauncher $IAMM"
 SYSTEMLESSLAUNCHERS=true
 MODID="$IDSSL"
+UZTPN "Systemless_ShadyLauncher-$ACNV"
+cp -rf $TMPDIR/Systemless_ShadyLauncher-$ACNV $TMPDIR/$MODID
+APKPERM "$TMPDIR/$MODID$MIPSA/ShadyQuickStep/ShadyQuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
+mkdir -p $TMPDIR/$MODID$MIPPSO; cp -f $TMPDIR/QSRP/QuickStepRecentsProvider-$PACKAGENAME.apk $TMPDIR/$MODID$MIPPSO/QuickStepRecentsProvider.apk
+if $MAGISK; then
+IPSLSA
+cp -rf $TMPDIR/$MODID $MODPATH
+if $ATEN; then
+MMPR -vc "Systemless Shady Launcher" "$VIPSSLQ" "$VCIPSSLQ" "SKULSHADY" "Systemlessly install Shady Launcher on your device with Android 10 recents UI support. Launcher created by SKULSHADY."
+elif $AELEVEN; then
+MMPR -vc "Systemless Shady Launcher" "$VIPSSLR" "$VCIPSSLR" "SKULSHADY" "Systemlessly install Shady Launcher on your device with Android 11 recents UI support. Launcher created by SKULSHADY."
+fi
+fi
+fi
+fi
+fi
+if [ $SYSTEMLESSLAUNCHERS != true ]; then
+if $ATWELVEL; then
+SYSTEMLESSLAUNCHERS=false
+MSGDELIMITER
+UIP "CR Launcher $VIPSCRL" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+UIP "Installing CR Launcher $IAMM"
+SYSTEMLESSLAUNCHERS=true
+MODID="$IDSCRL"
 UZTPN "$MODID-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
-APKPERM "$TMPDIR/$MODID$MIPSA/ShadyQuickStep/ShadyQuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
+APKPERM "$TMPDIR/$MODID$MIPSA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 mkdir -p $TMPDIR/$MODID$MIPPSO; cp -f $TMPDIR/QSRP/QuickStepRecentsProvider-$PACKAGENAME.apk $TMPDIR/$MODID$MIPPSO/QuickStepRecentsProvider.apk
 if $MAGISK; then
 REMOVER -mm "$MMLAUNCHERLIST"
 cp -rf $TMPDIR/$MODID $MODPATH
-MMPR -vc "Systemless Shady Launcher" "$VIPSSLR" "$VCIPSSLR" "SKULSHADY" "Systemlessly install Shady Launcher on your device with Android 11 recents UI support. Launcher created by SKULSHADY."
+MMPR -v "Systemless CR Launcher" "$VIPSCRL" "Systemlessly Install CR Launcher On Your Device With Android 12L Recents UI Support"
 touch $MODPATH/$MODID/update
 fi
 fi
@@ -7372,7 +7403,7 @@ else
 RMLISTCHOICECONFIRMATION=false
 DWSGTRRRM=true
 fi
-if [ -f $STORAGE/APPRMLIST* ]; then APPRMLISTFILE="$(find $STORAGE/APPRMLIST*)"; FINDAPPRMLIST=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/APPRMLIST* ]; then APPRMLISTFILE="$(find $STORAGE/$f/APPRMLIST*)"; FINDAPPRMLIST=true; break; else FINDAPPRMLIST=false; fi; done; fi; if [ $FINDAPPRMLIST != true ]; then touch $STORAGE/APPRMLIST.conf; APPRMLISTFILE="$STORAGE/APPRMLIST.conf"; fi
+if [ -f $STORAGE/APPRMLIST* ]; then APPRMLISTFILE="$(find $STORAGE/APPRMLIST*)"; FINDAPPRMLIST=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/APPRMLIST* ]; then APPRMLISTFILE="$(find $STORAGE/$f/APPRMLIST*)"; FINDAPPRMLIST=true; break; else FINDAPPRMLIST=false; fi; done; fi
 if $FINDAPPRMLIST; then
 UIP -d "Choose Variant:" "$MSGVU Use APPRMLIST.conf & Patch List" "$MSGVD Use Only APPRMLIST.conf"
 if $KEYFUNCTION; then
@@ -10239,8 +10270,7 @@ if $MAGISK; then
 PTMFI "$IDKL" "killlogger killlogger++" "$MIPSB $MIPSEI"
 MMPR -vc "KillLogger" "$VIPKL" "$VCIPKL" "mrfrost475" "This module deletes the files responsible for the dump, logcat, and bug reports also prescribes logcat ban in build.prop"
 KLIPP=$MODPATH/$MODID/system.prop
-if SP_CHECKER "$XMLGLOBAL" "activity_starts_logging_enabled dropbox_max_files"; then MSSERVICE "$SPGLOBAL dropbox_max_files 1; $SPGLOBAL activity_starts_logging_enabled 1" "$SPGLOBAL dropbox_max_files 0; $SPGLOBAL activity_starts_logging_enabled 0" "KL"; fi
-MSSERVICE -s "echo \"0\" > /sys/block/mmcblk0/queue/iostats; echo \"0\" > /sys/block/mmcblk1/queue/iostats"
+if SP_CHECKER "$XMLGLOBAL" "activity_starts_logging_enabled dropbox_max_files"; then MSSERVICE "$SPGLOBAL dropbox_max_files 1; $SPGLOBAL activity_starts_logging_enabled 1; echo \"1\" > /sys/block/mmcblk0/queue/iostats; echo \"1\" > /sys/block/mmcblk1/queue/iostats" "$SPGLOBAL dropbox_max_files 0; $SPGLOBAL activity_starts_logging_enabled 0; echo \"0\" > /sys/block/mmcblk0/queue/iostats; echo \"0\" > /sys/block/mmcblk1/queue/iostats" "KL"; fi
 else
 BUCKUPER -bp "$IPSBP"; KLIPP=$IPSBP; touch $AIOPFMDPH/killlogger
 fi
@@ -10250,6 +10280,7 @@ UIP "Create Daemons Dummy Files In $MIPSB"
 
 KLDL="
 DumpSystemInfo
+aee_dumpstate
 atrace
 bugreport
 bugreportz
@@ -10261,6 +10292,7 @@ dataLogDaemon
 debuggerd
 debuggerd64
 dexdump
+dexoptanalyzer
 diag_socket_log
 dmesg
 dmlog
@@ -10268,7 +10300,9 @@ dumpkmap
 dumpleases
 dumpstate
 emdlogger1
+emdlogger2
 emdlogger3
+emdlogger5
 hcidump
 hexdump
 i2cdump
@@ -10278,12 +10312,14 @@ log
 log_ctr
 log_service
 logd
+logger
 loggerlauncher
 logname
 logread
 logwrapper
 lpdump
 lpdumpd
+mdlogger
 memorydumper
 minidumpd
 mobile_log_d
@@ -10293,6 +10329,7 @@ oatdump
 outdump
 setlogcons
 subsystem_ramdump
+svlogd
 tcpdump
 tombstoned
 trace.sh
@@ -10315,10 +10352,17 @@ atrace.rc
 atrace_userdebug.rc
 bugreport.rc
 dataLogDaemon.rc
+debuggerd.rc
+debuggerd64.rc
 dumpstate.rc
+emdlogger1.rc
+emdlogger2.rc
+emdlogger5.rc
 log_service.rc
 logd.rc
 lpdumpd.rc
+mdlogger.rc
+mobile_log_d.rc
 modemlog_connmgr_service.rc
 slogmodem.rc
 tombstoned.rc
@@ -11563,7 +11607,7 @@ PRESETS() {
 if [ -d $MODPATH ] && [ $MAGISKFIRSTTIME != true ] && $MAGISK && $MMUPDC; then for mmc in $(ls $MODPATH); do if [ -d "$MODPATH/$mmc" ]; then UCSA -ent "Checking Update?" "MMUPD_LIST" && break; fi; done; fi
 if $PDESIGN; then
 UIP -d "UI: Pills/NavBar/Gboard/Themes/BA/Sounds" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UI_PRESETS; fi
-if $MIUI && [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; elif [ "$ASDK" -ge 32 ] && [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; else UIP -d "Apps: Lawnchair/Shady/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; fi
+if $MIUI && [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; else UIP -d "Apps: Lawnchair/Shady/CR/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; fi
 UIP -d "Audio: VFX(P)/NL/AIST/SAQ/IB/AML" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then AUDIO_PRESETS; fi
 if $BOOTMODE; then REMOVAL_PRESETS; else UIP -d "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then REMOVAL_PRESETS; fi; fi
 if $TESTMODE; then UIP -d "Test/Coming Soon" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then TEST_COMING_SOON_PRESETS; fi; fi
