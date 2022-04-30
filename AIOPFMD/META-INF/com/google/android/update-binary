@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="25.04.22 (74)"
+VAIOPFMD="30.04.22 (75)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -39,16 +39,17 @@ IDGBSTE="GboardSilkThemeChanger"; VIPGBSTE="v1.1"
 IDSBINNI="SBINNI"; VIPSBINNI="v1.9"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
 IDRUI="RoundedUI"; VIPRUI="v2.9"
-IDBIP="BurnInProtection"; VIPBIP="v1.8"
+IDBIP="BurnInProtection"; VIPBIP="v1.9"
 IDNSP="NotificationSidePaddings"; VIPNSP="v1.4"
 IDSBISP="StatusBarIconSpace"; VIPSBISP="v1.3"
-IDSBISI="StatusBarIconSize"; VIPSBISI="v1.0"
+IDSBISI="StatusBarIconSize"; VIPSBISI="v1.1"
 IDSBCS="StatusBarClockSize"; VIPSBCS="v1.1"
 IDSUE="SingleUserEnabler"; VIPSUE="v1.1"
 IDSBP="StatusBarPadding"; VIPSBP="v1.6"
 IDQSCP="QSContentPadding"; VIPQSCP="v1.1"
 IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"
-IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.5"
+IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.6"
+IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.0"
 IDEBB="BackgroundBlur"; VIPEBB="v1.0"
 IDBA="BootAnimation"; VIPBA="v1.5"
 IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.1"
@@ -61,17 +62,16 @@ IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.
 IDSCRL="Systemless_CRLauncher"; VIPSCRL="1.0"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
-IDVFXL="ViPER4AndroidFX-Legacy"; VIPVFXL="v2.5.0.5"; VCIPVFXL="86"
-IDVFX="ViPER4AndroidFX"; VIPVFX="v2.7.1.6"; VCIPVFX="2716"
-IDVFXP="V4AFXPresets"; VIPVFXP="v1.6"
+IDVFX="ViPER4AndroidFX"; VIPVFX="v1.0"
+IDVFXP="V4AFXPresets"; VIPVFXP="v1.7"
 IDNLS="NLSound"; VIPNLS="v3.3 STABLE"; VCIPNLS="8"
 IDAIST="AIST"; VIPAIST="v1.4.30"; VCIPAIST="30"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.0"; VCIPSAQ="2"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.0"
 IDAML="aml"; VIPAML="v4.1"; VCIPAML="56"
 #AdBlock/Hosts
-IDDAB="disableadblock"; VIPDAB="1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="19.04.2022"
+IDDAB="DisableAdBlocker"; VIPDAB="1.0"; VCIPDAB="1"
+IDVAAH="AdAwayHosts"; VIPVAAH="27.04.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="17.0-220116"; VCIPVSH="170"
 IDVOH="Hosts"; VIPVOH="v1.1"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
@@ -82,8 +82,8 @@ IDNT="NetworkTweak"; VIPNT="v6"; VCIPNT="6"
 IDAPAUSBTF="APAUSBTF"; VIPAPAUSBTF="v1.0"
 #Utilities: BB/SELC/CC/MMFR/DETACH
 IDBB="busybox-brutal"; VIPBB="v1.35.0.1"; VCIPBB="13501"
-IDSELC="SeLinuxChanger"; VIPSELC="v1.3"
-IDCC="CacheCleaner"; VIPCC="v2.5"
+IDSELC="SELinuxChanger"; VIPSELC="v1.3"
+IDCC="CacheCleaner"; VIPCC="v2.6"
 IDMMFR="MMFR"; VIPMMFR="v1.0"
 IDDETACH="DETACH" VIPDETACH="v1.0"
 #Other: FA/LED/FSFM/UAA/SBU/GASL
@@ -1064,8 +1064,8 @@ AVERSION="$(GREP_PROP "ro.build.version.release")"
 ATEN=false; AELEVEN=false; ATWELVE=false; ATWELVEL=false
 if [ "$ASDK" = "29" ]; then ATEN=true; ACNV="Q"
 elif [ "$ASDK" = "30" ]; then AELEVEN=true; ACNV="R"
-elif [ "$ASDK" = "31" ]; then UIP -d "Warning! SDK $ASDK Is Not Fully Support!"; ATWELVE=true; ACNV="S"
-elif [ "$ASDK" = "32" ]; then UIP -d "Warning! SDK $ASDK Is Not Fully Support!"; ATWELVEL=true; ACNV="SL"
+elif [ "$ASDK" = "31" ]; then ATWELVE=true; ACNV="S"
+elif [ "$ASDK" = "32" ]; then ATWELVEL=true; ACNV="SL"
 elif [ "$ASDK" = "33" ]; then UIP -d "Warning! SDK $ASDK Is Not Fully Support!"; ATHIRTEEN=true; ACNV="T"
 fi
 case $ASDK in
@@ -1515,14 +1515,14 @@ local FINDFPATH=$1; local FPATCCODE=$2
 for FPATH in $FINDFPATH; do
 UIP "Found $FPATH" "Patching..."
 if $MAGISK; then
-mkdir -p `dirname $MODPATH/$MODID/$FPATH`
-cp -f $MAGISKMP$FPATH $MODPATH/$MODID/$FPATH
+mkdir -p `dirname $MODPATH/$MODID$FPATH`
+cp -f $MAGISKMP$FPATH $MODPATH/$MODID$FPATH
 UIP "Files Found And Patched"
 fi
 done
 if $MAGISK; then
 for FCODE in $FPATCCODE; do
-sed -i $FCODE $MODPATH/$MODID/$FPATH
+sed -i $FCODE $MODPATH/$MODID$FPATH
 done
 MOVERPATH
 SET_PERM_RM
@@ -4064,6 +4064,7 @@ MMUPD_CHECKER "$IDSBP" "$VIPSBP" "IPSBPS"
 MMUPD_CHECKER "$IDQSCP" "$VIPQSCP" "IPQSCPS"
 MMUPD_CHECKER "$IDSUIRSRS" "$VIPSUIRSRS" "IPSUIRSRSS"
 MMUPD_CHECKER "$IDQSCIAR" "$VIPQSCIAR" "IPQSCIARS"
+MMUPD_CHECKER "$IDSBPD" "$VIPSBPD" "IPSBPDS"
 MMUPD_CHECKER "$IDEBB" "$VIPEBB" "IPEBBS"
 MMUPD_CHECKER "$IDBA" "$VIPBA" "IPBAS"
 MMUPD_CHECKER "$IDIOSEMOJI" "$VIPIOSEMOJI" "IPIOSEMOJIS"
@@ -4076,8 +4077,7 @@ if $ATEN; then MMUPD_CHECKER -c "$IDSSL" "$VIPSSLQ" "$VCIPSSLQ" "IPSLS"; fi
 if $AELEVEN; then MMUPD_CHECKER -c "$IDSSL" "$VIPSSLR" "$VCIPSSLR" "IPSLS"; fi
 if $ATWELVEL; then MMUPD_CHECKER "$IDSCRL" "$VIPSCRL" "IPSLS"; fi
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
-MMUPD_CHECKER -c "$IDVFXL" "$VIPVFXL" "$VCIPVFXL" "IPVFXS"
-MMUPD_CHECKER -c "$IDVFX" "$VIPVFX" "$VCIPVFX" "IPVFXS"
+MMUPD_CHECKER "$IDVFX" "$VIPVFX" "IPVFXS"
 MMUPD_CHECKER "$IDVFXP" "$VIPVFXP" "IPVFXPS"
 MMUPD_CHECKER -c "$IDNLS" "$VIPNLS" "$VCIPNLS" "IPNLSS"
 MMUPD_CHECKER -c "$IDAIST" "$VIPAIST" "$VCIPAIST" "IPAISTS"
@@ -5148,7 +5148,7 @@ rm -f $IPPSO/QSCountIconAndRows*.apk $AIOPFMDPH/qscounticonandrows
 UIP "$MSGDRM"
 fi
 else
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "Install QS Count Icon And Rows $VIPQSCIAR?" "IPQSCIARS"; fi
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "Install QS Count Icon And Rows $VIPQSCIAR?" "IPQSCIARS"; fi
 fi
 }
 
@@ -5185,6 +5185,35 @@ touch $AIOPFMDPH/qscounticonandrows
 fi
 SET_PERM_RM -msgdi
 fi
+}
+
+IPSBPD() {
+if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbarprivacydot ]; then
+UIP -d "$MSGFI Status Bar Privacy Dot, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $KEYFUNCTION; then
+UIP "Removing..."
+rm -f $IPPSO/StatusBarPrivacyDot*.apk $AIOPFMDPH/statusbarprivacydot
+UIP "$MSGDRM"
+fi
+else
+if [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "Install Status Bar Privacy Dot $VIPSBPD?" "IPSBPDS"; fi
+fi
+}
+
+IPSBPDS() {
+UIP "Installing Status Bar Privacy Dot $IAMM"
+UIP -d "Choose Variant:" "$MSGVU Disable" "$MSGVD Optimized"
+if $KEYFUNCTION; then SBPDV=Disable; else SBPDV=Optimized; fi
+UZTPN "SBPD"
+if $MAGISK; then
+PTMFI -nm "$IDSBPD" "$MIPPSO"
+cp -f $TMPDIR/SBPD/StatusBarPrivacyDot-$SBPDV.apk $MODPATH/$MODID$MIPPSO
+MMPR -v "Status Bar Privacy Dot" "$VIPSBPD" "Status Bar Privacy Dot $MSGFMM Set On: $SBPDV"
+else
+cp -f $TMPDIR/DSBPD/StatusBarPrivacyDot-$SBPDV.apk $IPPSO
+touch $AIOPFMDPH/statusbarprivacydot
+fi
+SET_PERM_RM -msgdi
 }
 
 IPEBB() {
@@ -5435,8 +5464,8 @@ if $KEYFUNCTION; then
 UIP "Installing Lawnchair $IAMM"
 SYSTEMLESSLAUNCHERS=true
 MODID="$IDSL"
-UZTPN "$MODID-$ACNV"
-cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
+UZTPN "$MODID-S"
+cp -rf $TMPDIR/$MODID-S $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSA/Lawnchair/Lawnchair.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 mkdir -p $TMPDIR/$MODID$MIPPSO; cp -f $TMPDIR/QSRP/QuickStepRecentsProvider-$PACKAGENAME.apk $TMPDIR/$MODID$MIPPSO/QuickStepRecentsProvider.apk
 if $MAGISK; then
@@ -5557,43 +5586,40 @@ UIP "$MSGDI"
 
 IPVFX() {
 if $MAGISK && FINDER "$AECONFXML"; then
-UCSA "Install ViperFX $VIPVFXL Or $VIPVFX" "IPVFXS"
+if [ $ASDK -le 30 ] && [ ! $ASDK -le 22 ]; then
+UCSA "Install ViperFX v2.5.0.5 Or v2.7.1.6?" "IPVFXS"
+elif [ $ASDK -le 22 ]; then
+UCSA "Install ViperFX v2.5.0.5?" "IPVFXS"
+elif [ $ASDK -ge 31 ]; then
+UCSA "Install ViperFX v2.7.2.1?" "IPVFXS"
+fi
 fi
 }
 
 IPVFXS() {
-UZTPN "V4AFX"
-mkdir -p $TMPDIR/V4AFX/ViPERN$MIPSVE $TMPDIR/V4AFX/ViPERN$MIPSVE $TMPDIR/V4AFX/ViPERN$MIPSPA $TMPDIR/V4AFX/ViPERN$MIPSEP
-UIP -d "Choose Version:" "$MSGVU ViperFX $VIPVFXL" "$MSGVD ViperFX $VIPVFX"
-if $KEYFUNCTION; then
-VIPERCHOOSEVERSION=true; NPVFX="$IDVFXL"
-else
-VIPERCHOOSEVERSION=false; NPVFX="$IDVFX"
-fi
 UIP "Installing ViperFX $IAMM"
-mv -f $TMPDIR/V4AFX/ViPERN $TMPDIR/$NPVFX
-mv -f $TMPDIR/V4AFX/$NPVFX $TMPDIR/$NPVFX$MIPSPA
-APKPERM "$TMPDIR/$NPVFX$MIPSPA/$NPVFX/$NPVFX.apk" "$TMPDIR/$NPVFX$MIPSEP"
-REMOVER -mm "ViPER4AndroidFX ViPER4AndroidFX-Legacy"
+UZTPN "V4AFX"
+PTMFI "$IDVFX" "ViPER4AndroidFX ViPER4AndroidFX-Legacy" "$MIPSVLS $MIPSPA/ViPER4AndroidFX"
+if [ $ASDK -le 30 ] && [ ! $ASDK -le 22 ]; then
+UIP -d "Choose Version:" "$MSGVU ViperFX v2.5.0.5" "$MSGVD ViperFX v2.7.1.6"
+if $KEYFUNCTION; then V4AFX="2.5.0.5"; else V4AFX="2.7.1.6"; fi
+elif [ $ASDK -le 22 ]; then
+V4AFX="2.5.0.5"
+elif [ $ASDK -ge 31 ]; then
+V4AFX="2.7.2.1"
+mkdir -p $MODPATH/$MODID$MIPPSO
+cp -f $TMPDIR/V4AFX/ViPER4AndroidFX-Black-Blue.apk $MODPATH/$MODID$MIPPSO
+fi
 if $BOOTMODE; then
-UIP -d "Choose Apk Install Variant:" "$MSGVU Install As Data App" "$MSGVD Install As System App"
-if $KEYFUNCTION; then
-pm install -r $TMPDIR/$NPVFX$MIPSPA/$NPVFX/$NPVFX.apk >/dev/null
-rm -rf $TMPDIR/$NPVFX$MIPSPA
-fi
-fi
-MODID="$NPVFX"
-if $VIPERCHOOSEVERSION; then
-cp -rf $TMPDIR/$NPVFX $MODPATH
-MMPR -vcs "ViPER4AndroidFX Legacy" "$VIPVFXL" "$VCIPVFXL" "ViPER520, ZhuHang, Ahrion, Zackptg5" "ViPER4Android FX is an audio enhancing software to provide everyone with a better audio experience (You can choose between Material 2.5, 2.5.0.5, and 2.3.4.0 during install)" "https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058"
-echo -e "tunnel.decode=false\nlpa.use-stagefright=false\nlpa.releaselock=false\nlpa.decode=false" > $MODPATH/$NPVFX/system.prop
+pm install -r $TMPDIR/V4AFX/ViPER4AndroidFX-$V4AFX.apk >/dev/null
+rm -rf $MODPATH/$MODID$MIPSPA
 else
-cp -rf $TMPDIR/$NPVFX $MODPATH
-MMPR -vcsd "ViPER4AndroidFX" "$VIPVFX" "$VCIPVFX" "pittvandewitt, MrWhite214" "ViPER4Android FX is an audio enhancing software to provide everyone with a better audio experience" "http://t.me/ViPER4AndroidFX" "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=53H9TP89FLWUU"
-echo "#!$IPSB/sh
-# Kill audioserver PID if it exists already
-SERVERPID=\$(pidof audioserver)
-[ \"\$SERVERPID\" ] && kill \$SERVERPID" > $MODPATH/$NPVFX/post-fs-data.sh
+cp -f $TMPDIR/V4AFX/ViPER4AndroidFX-$V4AFX.apk $MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk
+APKPERM "$MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk" "$MODPATH/$MODID$MIPSEP"
+fi
+MMPR -v "ViPER4AndroidFX" "$VIPVFX" "ViPER4AndroidFX v$V4AFX Is An Audio Enhancing Software To Provide Everyone With A Better Audio Experience"
+echo -e "tunnel.decode=false\nlpa.use-stagefright=false\nlpa.releaselock=false\nlpa.decode=false" > $MODPATH/$MODID/system.prop
+echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" | tee $MODPATH/$MODID/service.sh $MODPATH/$MODID/post-fs-data.sh > /dev/null
 echo "allow audioserver audioserver_tmpfs file { read write execute }
 allow audioserver system_file file { execmod }
 allow mediaserver mediaserver_tmpfs file { read write execute }
@@ -5603,28 +5629,28 @@ allow hal_audio_default hal_audio_default process { execmem }
 allow hal_audio_default hal_audio_default_tmpfs file { execute }
 allow hal_audio_default audio_data_file dir { search }
 allow app app_data_file file { execute_no_trans }
-allow mtk_hal_audio mtk_hal_audio_tmpfs file { execute }" > $MODPATH/$NPVFX/sepolicy.rule
-fi
+allow mtk_hal_audio mtk_hal_audio_tmpfs file { execute }" > $MODPATH/$MODID/sepolicy.rule
+MSSERVICE -u "pm uninstall -k --user 0 com.pittvandewitt.viperfx" "V4AFX"
+cp -f $TMPDIR/V4AFX/libv4a_fx_ics.so $MODPATH/$MODID$MIPSVLS
+cp -f $TMPDIR/V4AFX/libstdc++.so $MODPATH/$MODID$MIPSVL
 REPLACER -f "AudioFX MusicFX"
-AEP=$MODPATH/$MODID
 UIP "Patching Needed Files..."
 for AE in $AECONFXML; do
 UIP "Found $AE" "Patching..."
-mkdir -p `dirname $AEP$AE`
-cp -f $MAGISKMP$AE $AEP$AE
-FILE="$(echo $AEP$AE | sed "s|^/vendor|$MIPSV|g")"
+mkdir -p `dirname $MODPATH/$MODID$AE`
+cp -f $MAGISKMP$AE $MODPATH/$MODID$AE
+FILE="$(echo $MODPATH/$MODID$AE | sed "s|^/vendor|$MIPSV|g")"
 OSP_DETECT $FILE
 ALBP "v4a_standard_fx" "$MODID" "$DYNLIBPATCH\/lib\/soundfx" "libv4a_fx_ics.so" "41d3c987-e6cf-11e3-a88a-11aba5d5c51b"
 UIP "Files Found And Patched"
 done
-touch $MODPATH/$MODID/update
 MOVERPATH
 SET_PERM_RM -msgdi
 WCANFTP "-sl -ehap"
 }
 
 IPVFXP() {
-UCSA "Install Presets $VIPVFXP For ViperFX $VIPVFXL & $VIPVFX?" "IPVFXPS"
+UCSA "Install Presets $VIPVFXP For ViperFX?" "IPVFXPS"
 }
 
 IPVFXPS() {
@@ -5633,10 +5659,11 @@ UZTPN "V4AFXPresets"
 mkdir -p $STORAGE/Android/data/com.pittvandewitt.viperfx/files $STORAGE/ViPER4Android
 cp -rf $TMPDIR/V4AFXPresets/* $STORAGE/Android/data/com.pittvandewitt.viperfx/files
 cp -rf $TMPDIR/V4AFXPresets/* $STORAGE/ViPER4Android
+mv $STORAGE/ViPER4Android/Preset $STORAGE/ViPER4Android/Profile
 if $MAGISK; then
 PTMFI -nmp "$IDVFXP"
-MSSERVICE -u "rm -rf $STORAGE/Android/data/com.pittvandewitt.viperfx $STORAGE/ViPER4Android" "VPFXPRM"
-MMPR -v "V4AFX Presets" "$VIPVFXP" "V4AFX Presets For ViperFX $VIPVFXL & $VIPVFX $MSGFMM"
+MSSERVICE -u "rm -rf $STORAGE/Android/data/com.pittvandewitt.viperfx $STORAGE/ViPER4Android" "VPFXP"
+MMPR -v "V4AFX Presets" "$VIPVFXP" "V4AFX Presets For ViperFX $MSGFMM"
 fi
 SET_PERM_RM -msgdi
 }
@@ -8035,7 +8062,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>
 <manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.burn.in.protection\">
 	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
-	<application android:hasCode=\"false\" android:label=\"SystemUI Burn In Protection\"/>
+	<application android:hasCode=\"false\" android:label=\"SUI Burn In Protection\"/>
 </manifest>" > $BIPSUIO/AndroidManifest.xml
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
@@ -8235,23 +8262,23 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmln
 
 for SUIQSNC in 2 3 4; do
 for SUIQSMR in $(seq 1 1 10); do
-
+QQSPMTL="4"; SUIQSNCL="4"
 case $SUIQSNC in
-"2") QQSPMT="4"; SUIQSNCL="4";;
-"3") QQSPMT="6"; SUIQSNCL="3";;
-"4") QQSPMT="8"; SUIQSNCL="4";;
+"2") QQSPMTP="4";;
+"3") QQSPMTP="6";;
+"4") QQSPMTP="8";;
 esac
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-	<integer name=\"quick_qs_panel_max_tiles\">$QQSPMT</integer>
+	<integer name=\"quick_qs_panel_max_tiles\">$QQSPMTP</integer>
 	<integer name=\"quick_settings_max_rows\">$SUIQSMR</integer>
 	<integer name=\"quick_settings_num_columns\">$SUIQSNC</integer>
 </resources>" > $QSCIAR/res/values/integers.xml
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-	<integer name=\"quick_qs_panel_max_tiles\">$QQSPMT</integer>
+	<integer name=\"quick_qs_panel_max_tiles\">$QQSPMTL</integer>
 	<integer name=\"quick_settings_num_columns\">$SUIQSNCL</integer>
 </resources>" > $QSCIAR/res/values-land/integers.xml
 
@@ -8290,17 +8317,56 @@ SBISS="$STORAGE/AIOCOMPILE/StatusBarIconSize/StatusBarIconSize"
 mkdir -p $SBISS/res/values
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.status.bar.icon.size\">
-    <overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+	<application android:hasCode=\"false\" android:label=\"Status Bar Icon Size\"/>
 </manifest>" > $SBISS/AndroidManifest.xml
 
 for SBISSC in 12dip 13dip 14dip 15dip 16dip 17dip 18dip; do
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-    <dimen name=\"status_bar_icon_drawing_size\">$SBISSC</dimen>
+	<dimen name=\"status_bar_icon_drawing_size\">$SBISSC</dimen>
 </resources>" > $SBISS/res/values/dimens.xml
 APKBUILDER "$SBISS" "$SBISS-$SBISSC.apk"
 done
+}
 
+CSBPD() {
+UCSA "Status Bar Privacy Dot" "CSBPDS"
+}
+
+CSBPDS() {
+CSBPDPO="$STORAGE/AIOCOMPILE/StatusBarPrivacyDot/StatusBarPrivacyDot"
+mkdir -p $CSBPDPO-Disable/res/values $CSBPDPO-Optimized/res/values
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<dimen name=\"ongoing_appops_chip_bg_corner_radius\">24dp</dimen>
+	<dimen name=\"ongoing_appops_chip_icon_margin\">3.25dip</dimen>
+	<dimen name=\"ongoing_appops_chip_max_width\">56dp</dimen>
+	<dimen name=\"ongoing_appops_chip_min_width\">24dp</dimen>
+	<dimen name=\"ongoing_appops_chip_side_padding\">4dp</dimen>
+	<dimen name=\"ongoing_appops_dot_diameter\">5dp</dimen>
+	<dimen name=\"ongoing_appops_dot_min_padding\">15dp</dimen>
+</resources>" | tee $CSBPDPO-Disable/res/values/dimens.xml $CSBPDPO-Optimized/res/values/dimens.xml > /dev/null
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.status.bar.privacy.dot.disable\">
+	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+	<application android:hasCode=\"false\" android:label=\"Status Bar Privacy Dot - Disable\"/>
+</manifest>" > $CSBPDPO-Disable/AndroidManifest.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<bool name=\"config_enablePrivacyDot\">false</bool>
+</resources>" > $CSBPDPO-Disable/res/values/bools.xml
+APKBUILDER "$CSBPDPO-Disable" "$CSBPDPO-Disable.apk"
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.status.bar.privacy.dot.optimized\">
+	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+	<application android:hasCode=\"false\" android:label=\"Status Bar Privacy Dot - Optimized\"/>
+</manifest>" > $CSBPDPO-Optimized/AndroidManifest.xml
+
+
+APKBUILDER "$CSBPDPO-Optimized" "$CSBPDPO-Optimized.apk"
 }
 
 } #
@@ -8326,7 +8392,7 @@ UIP -d "Сhoose Hosts File" "$MSGVU Empty Hosts $VIPDAB" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then
 UIP "Installing Hosts Files $IAMM"
 if $MAGISK; then
-PTMFI "$IDDAB" "AdAwayHosts hosts Hosts LuckyPatcherHosts SystemlessHostsUnified disableadblock systemless-hosts" "$MIPSE"
+PTMFI "$IDDAB" "DisableAdBlocker AdAwayHosts hosts Hosts LuckyPatcherHosts SystemlessHostsUnified disableadblock systemless-hosts" "$MIPSE"
 MMPR -vc "Disable Ad Blocker" "$VIPDAB" "$VCIPDAB" "DriffeX" "Restores stock hosts file for disable Ad Block"
 echo -e "127.0.0.1 localhost\n::1 ip6-localhost" > $MODPATH/$MODID$MIPSE/hosts
 else
@@ -8666,10 +8732,8 @@ if [ -a $MIPSE/resolv.conf ]; then
 mkdir -p \$MODDIR$MIPSE
 printf \"nameserver $ONetworkTweak\nnameserver $TNetworkTweak\" >> \$MODDIR$MIPSE/resolv.conf
 chmod 644 \$MODDIR$MIPSE/resolv.conf
-fi" > $MODPATH/$MODID/post-fs-data.sh
-MSSERVICE -s "iptables -t nat -A OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -A OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53; iptables -t nat -I OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -I OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53"
-MMPR -vc "Network Tweak" "$VIPNT" "$VCIPNT" "IMMIX" "Various Network Tweaks which will help to get better internet connectivity and low ping."
-echo "#!$MIPSB/sh
+fi
+
 echo \"0\" > /proc/sys/net/ipv4/tcp_timestamps
 echo \"1\" > /proc/sys/net/ipv4/tcp_tw_reuse
 echo \"1\" > /proc/sys/net/ipv4/tcp_sack
@@ -8682,8 +8746,10 @@ echo \"404480\" > /proc/sys/net/core/wmem_max
 echo \"404480\" > /proc/sys/net/core/rmem_max
 echo \"256960\" > /proc/sys/net/core/rmem_default
 echo \"256960\" > /proc/sys/net/core/wmem_default
-echo \"4096,16384,404480\" > /proc/sys/net/ipv4/tcp_wmem
-echo \"4096,87380,404480\" > /proc/sys/net/ipv4/tcp_rmem" > $MODPATH/$MODID/$MIPSEID/netspeed
+echo \"4096 16384 404480\" > /proc/sys/net/ipv4/tcp_wmem
+echo \"4096 87380 404480\" > /proc/sys/net/ipv4/tcp_rmem" > $MODPATH/$MODID/post-fs-data.sh
+MSSERVICE -s "iptables -t nat -A OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -A OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53; iptables -t nat -I OUTPUT -p tcp --dport 53 -j DNAT --to-destination $ONetworkTweak:53; iptables -t nat -I OUTPUT -p udp --dport 53 -j DNAT --to-destination $TNetworkTweak:53"
+MMPR -vc "Network Tweak" "$VIPNT" "$VCIPNT" "IMMIX" "Various Network Tweaks which will help to get better internet connectivity and low ping."
 PINT=$MODPATH/$MODID/system.prop
 else
 BUCKUPER -bp "$IPSBP"; PINT=$IPSBP
@@ -8795,34 +8861,6 @@ ro.config.combined_signal=true
 telephony.lteOnCdmaDevice=1
 ro.telephony.default_network=33,33
 
-# Better call voice quality
-ro.ril.enable.amr.wideband=1
-
-# Bluetooth Bitrate
-persist.bt.enableAptXHD=true
-persist.service.btui.use_aptx=1
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
-persist.bluetooth.a2dp_offload.cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
-persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
-persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac
-persist.bluetooth.disableabsvol=true
-persist.vendor.btstack.enable.splita2dp=true
-persist.vendor.btstack.aac_frm_ctl.enabled=true
-persist.vendor.btstack.enable.twsplus=true
-persist.vendor.btstack.connect.peer_earbud=true
-persist.vendor.btstack.enable.twsplussho=true
-ro.bluetooth.emb_wp_mode=false
-ro.bluetooth.wipower=false
-ro.bluetooth.remote.autoconnect=true
-ro.bluetooth.request.master=true
-ro.vendor.bluetooth.wipower=false
-persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
-persist.vendor.qcom.bluetooth.twsp_state.enabled=false
-persist.vendor.qcom.bluetooth.enable.splita2dp=true
-
-# SMS APN Retry
-ro.gsm.2nd_data_retry_config=max/_retries=3, 2000, 2000, 2000
-
 # Support For IPV4 and IPV6
 persist.telephony.support.ipv6=1
 persist.telephony.support.ipv4=1" >> $PINT
@@ -8894,7 +8932,7 @@ fi
 }
 
 IPSELCS() {
-PTMFI -nmp "$IDSELC"
+PTMFI -np "$IDSELC" "SeLinuxChanger"
 SLSP="Permissive"; SLSE="Enforcing"
 SELINUX_CHECKER
 UIP "Change SELinux" "SELinux Now: $SELINUXS" "$MSGVU In $SLSP" "$MSGVD In $SLSE"
@@ -9058,6 +9096,12 @@ OPTIONS() {
 [ ! -d $MODPATH/$IDBB ] && echo -e \"$MSGSD Brutal Busybox No Found!\n\"
 [ -d $MODPATH/$IDBB$MIPSB ] && FIND=$MODPATH/$IDBB$MIPSB/find || FIND=$MODPATH/$IDBB$MIPSXB/find
 
+VMDLC=false
+VMDLTMP=\"\$(find $IPDA -type d -name \"vmdl*.tmp\" -o -name \"com.google.android.trichromelibrary*\")\"
+for f in \$VMDLTMP; do
+VMDLC=true
+done
+
 MMB=false
 for rmmb in \$(ls /data); do
 case \$rmmb in
@@ -9074,8 +9118,8 @@ $MSGDELIMITER
 c) Cache Cleaner
 e) Remove Empty Files/Folders (All In /data)
 el) Remove Empty Files/Folders (Only In /sdcard)
-l) Remove Logs
-t) Remove VMDLTMP & Trash TrichromeLibrary\n\"
+l) Remove Logs\n\"
+if \$VMDLC; then echo -e \"t) Remove VMDLTMP & Trash TrichromeLibrary\"; fi
 if \$MMB; then echo -e \"m) Remove All Magisk Backup\"; fi
 echo \"r) Reboot Device
 q) Quit
@@ -9088,7 +9132,7 @@ c | C) CC;;
 e | E) clear; RMEF;;
 el | EL) clear; RMEF -l;;
 l | L) RMLOG;;
-t | T) VMDL;;
+t | T) if \$VMDLC; then VMDL; fi;;
 m | M) if \$MMB; then RMMB; fi;;
 r | R) reboot;;
 q | Q) exit 0;;
@@ -10582,16 +10626,16 @@ PTMFI -nmp "$IDSOOOFUIRC"
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.motorola.faceunlock\nro.face.moto_unlock_service.cam_id=$SWITCHIR" > $MODPATH/$MODID/system.prop
 else
-mkdir -p $MODPATH/$MODID/$MIPPVO
+mkdir -p $MODPATH/$MODID$MIPPVO
 if [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ]; then
 echo "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.pixelexperience.faceunlock" > $MODPATH/$MODID/system.prop
-cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-org.pixelexperience.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID/$MIPPVO/FaceUnlockService__auto_generated_rro_vendor.apk
+cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-org.pixelexperience.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID$MIPPVO/FaceUnlockService__auto_generated_rro_vendor.apk
 elif [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ]; then
 echo "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.crdroid.faceunlock" > $MODPATH/$MODID/system.prop
-cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.crdroid.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID/$MIPPVO/FaceUnlockService__auto_generated_rro_vendor.apk
+cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.crdroid.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID$MIPPVO/FaceUnlockService__auto_generated_rro_vendor.apk
 else
 echo "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.aospextended.faceunlock" > $MODPATH/$MODID/system.prop
-cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.aospextended.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID/$MIPPVO/FaceUnlockService__auto_generated_rro_vendor.apk
+cp -f $TMPDIR/SOOOFUIRC/FaceUnlockService-com.aospextended.faceunlock-$MSGSWITCHIR.apk $MODPATH/$MODID$MIPPVO/FaceUnlockService__auto_generated_rro_vendor.apk
 fi
 fi
 MMPR -v "Switch $MSGSWITCHIR Face UnLock IR Camera" "$VIPSOOOFUIRC" "Switch $MSGSWITCHIR Face UnLock IR Camera $MSGFMM"
@@ -10674,14 +10718,14 @@ IMS=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'a
 PST=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.apps.safetyhub"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
 TRB=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.apps.turbo"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
 for i in $GMS $IMS $PST $TRB; do
-if [ ! -f $MODPATH/$MODID/$i ]; then
+if [ ! -f $MODPATH/$MODID$i ]; then
 UIP "Found $i" "Patching..."
-mkdir -p `dirname $MODPATH/$MODID/$i`
-cp -f $i $MODPATH/$MODID/$i
-sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-usage-save package="com.google.android.gms"/d' $MODPATH/$MODID/$i
-sed -i '/allow-in-power-save package="com.google.android.ims"/d;/allow-in-data-usage-save package="com.google.android.ims"/d' $MODPATH/$MODID/$i
-sed -i '/allow-in-power-save package="com.google.android.apps.safetyhub"/d;/allow-in-data-usage-save package="com.google.android.apps.safetyhub"/d' $MODPATH/$MODID/$i
-sed -i '/allow-in-power-save package="com.google.android.apps.turbo"/d;/allow-in-data-usage-save package="com.google.android.apps.turbo"/d' $MODPATH/$MODID/$i
+mkdir -p `dirname $MODPATH/$MODID$i`
+cp -f $i $MODPATH/$MODID$i
+sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-usage-save package="com.google.android.gms"/d' $MODPATH/$MODID$i
+sed -i '/allow-in-power-save package="com.google.android.ims"/d;/allow-in-data-usage-save package="com.google.android.ims"/d' $MODPATH/$MODID$i
+sed -i '/allow-in-power-save package="com.google.android.apps.safetyhub"/d;/allow-in-data-usage-save package="com.google.android.apps.safetyhub"/d' $MODPATH/$MODID$i
+sed -i '/allow-in-power-save package="com.google.android.apps.turbo"/d;/allow-in-data-usage-save package="com.google.android.apps.turbo"/d' $MODPATH/$MODID$i
 UIP "Files Found And Patched"
 fi
 done
@@ -10703,7 +10747,7 @@ if [ \"\$gms\" = \"com.google.android.gms\" ]; then
 echo \"\033[0;31m Google Play services is Not Optimized \033[0m\"
 else
 echo \"\033[0;32m Google Play services is Optimized \033[0m\"
-fi" > $MODPATH/$MODID/$IPPSXBM/gmsc
+fi" > $MODPATH/$MODID$IPPSXBM/gmsc
 MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Patches Google Play services app and its background processes to be able using battery optimization. Pre-caution, this may leads to unpredictable battery usage as certain scripts blocking its functions."
 MOVERPATH; SET_PERM_RM -msgdi
 }
@@ -11391,7 +11435,7 @@ UIP "Installing GPU Rendering $IAMM"
 if $MAGISK; then
 PTMFI -nmp "$IDGPUR"
 echo "$GPURV" > $MODPATH/$MODID/build.prop
-MMPR -v "GPU Rendering" "$VIPGPUR" "GPU Rendering - Set In $GPURVR"
+MMPR -v "GPU Rendering" "$VIPGPUR" "GPU Rendering - Set On $GPURVR"
 else
 BUCKUPER -bp "$IPSBP"
 echo -e "# GPU Rendering\n$GPURV" >> $IPSBP
@@ -11498,6 +11542,7 @@ IPSBP
 IPQSCP
 IPSUIRSRS
 IPQSCIAR
+IPSBPD
 IPEBB
 IPBA
 IPIOSEMOJI
@@ -11546,6 +11591,7 @@ COSBCS
 CSBIS
 QSCIARC
 CSBISIZE
+CSBPD
 fi
 }
 
@@ -11607,7 +11653,7 @@ PRESETS() {
 if [ -d $MODPATH ] && [ $MAGISKFIRSTTIME != true ] && $MAGISK && $MMUPDC; then for mmc in $(ls $MODPATH); do if [ -d "$MODPATH/$mmc" ]; then UCSA -ent "Checking Update?" "MMUPD_LIST" && break; fi; done; fi
 if $PDESIGN; then
 UIP -d "UI: Pills/NavBar/Gboard/Themes/BA/Sounds" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UI_PRESETS; fi
-if $MIUI && [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; else UIP -d "Apps: Lawnchair/Shady/CR/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; fi
+if find $STORAGE/Applications -type f -name "*.apk" >/dev/null && [ $MIUI != true ] && [ $ASDK -ge 29 ]; then UIP -d "Apps: Lawnchair/Shady/CR/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; elif [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; fi
 UIP -d "Audio: VFX(P)/NL/AIST/SAQ/IB/AML" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then AUDIO_PRESETS; fi
 if $BOOTMODE; then REMOVAL_PRESETS; else UIP -d "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then REMOVAL_PRESETS; fi; fi
 if $TESTMODE; then UIP -d "Test/Coming Soon" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then TEST_COMING_SOON_PRESETS; fi; fi
