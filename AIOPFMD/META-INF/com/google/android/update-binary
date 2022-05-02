@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="30.04.22 (75)"
+VAIOPFMD="02.05.22 (76)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -59,7 +59,7 @@ IDWFAMDQSSC="WFAMDQSSC"; VIPWFAMDQSSC="v1.1"
 #Apps: Lawnchair/Shady/CR/IA
 IDSL="Systemless_Lawnchair"; VIPSL="v1.9"; VIPASLS="12 Alpha 5"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
-IDSCRL="Systemless_CRLauncher"; VIPSCRL="1.0"
+IDSCRL="Systemless_CRLauncher"; VIPSCRL="1.1"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
 IDVFX="ViPER4AndroidFX"; VIPVFX="v1.0"
