@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="02.05.22 (76)"
+VAIOPFMD="03.05.22 (77)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -59,10 +59,10 @@ IDWFAMDQSSC="WFAMDQSSC"; VIPWFAMDQSSC="v1.1"
 #Apps: Lawnchair/Shady/CR/IA
 IDSL="Systemless_Lawnchair"; VIPSL="v1.9"; VIPASLS="12 Alpha 5"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
-IDSCRL="Systemless_CRLauncher"; VIPSCRL="1.1"
+IDSCRL="Systemless_CRLauncher"; VIPSCRL="1.2"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/NL/AIST/SAQ/IB/AML
-IDVFX="ViPER4AndroidFX"; VIPVFX="v1.0"
+IDVFX="V4AFX"; VIPVFX="v1.1"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.7"
 IDNLS="NLSound"; VIPNLS="v3.3 STABLE"; VCIPNLS="8"
 IDAIST="AIST"; VIPAIST="v1.4.30"; VCIPAIST="30"
@@ -5617,7 +5617,7 @@ else
 cp -f $TMPDIR/V4AFX/ViPER4AndroidFX-$V4AFX.apk $MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk
 APKPERM "$MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk" "$MODPATH/$MODID$MIPSEP"
 fi
-MMPR -v "ViPER4AndroidFX" "$VIPVFX" "ViPER4AndroidFX v$V4AFX Is An Audio Enhancing Software To Provide Everyone With A Better Audio Experience"
+MMPR -v "V4AFX" "$VIPVFX" "V4AFX v$V4AFX Is An Audio Enhancing Software To Provide Everyone With A Better Audio Experience"
 echo -e "tunnel.decode=false\nlpa.use-stagefright=false\nlpa.releaselock=false\nlpa.decode=false" > $MODPATH/$MODID/system.prop
 echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" | tee $MODPATH/$MODID/service.sh $MODPATH/$MODID/post-fs-data.sh > /dev/null
 echo "allow audioserver audioserver_tmpfs file { read write execute }
@@ -5663,7 +5663,7 @@ mv $STORAGE/ViPER4Android/Preset $STORAGE/ViPER4Android/Profile
 if $MAGISK; then
 PTMFI -nmp "$IDVFXP"
 MSSERVICE -u "rm -rf $STORAGE/Android/data/com.pittvandewitt.viperfx $STORAGE/ViPER4Android" "VPFXP"
-MMPR -v "V4AFX Presets" "$VIPVFXP" "V4AFX Presets For ViperFX $MSGFMM"
+MMPR -v "V4AFX Presets" "$VIPVFXP" "V4AFX Presets For V4AFX $MSGFMM"
 fi
 SET_PERM_RM -msgdi
 }
@@ -11653,7 +11653,7 @@ PRESETS() {
 if [ -d $MODPATH ] && [ $MAGISKFIRSTTIME != true ] && $MAGISK && $MMUPDC; then for mmc in $(ls $MODPATH); do if [ -d "$MODPATH/$mmc" ]; then UCSA -ent "Checking Update?" "MMUPD_LIST" && break; fi; done; fi
 if $PDESIGN; then
 UIP -d "UI: Pills/NavBar/Gboard/Themes/BA/Sounds" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then UI_PRESETS; fi
-if find $STORAGE/Applications -type f -name "*.apk" >/dev/null && [ $MIUI != true ] && [ $ASDK -ge 29 ]; then UIP -d "Apps: Lawnchair/Shady/CR/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; elif [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; fi
+if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null && [ $MIUI != true ] && [ $ASDK -ge 29 ]; then UIP -d "Apps: Lawnchair/Shady/CR/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then APPS_PRESETS; fi; elif [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; elif [ ! -d $STORAGE/Applications ]  && [ $MIUI != true ] && [ $ASDK -ge 29 ]; then IPSL; fi
 UIP -d "Audio: VFX(P)/NL/AIST/SAQ/IB/AML" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then AUDIO_PRESETS; fi
 if $BOOTMODE; then REMOVAL_PRESETS; else UIP -d "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then REMOVAL_PRESETS; fi; fi
 if $TESTMODE; then UIP -d "Test/Coming Soon" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if $KEYFUNCTION; then TEST_COMING_SOON_PRESETS; fi; fi
