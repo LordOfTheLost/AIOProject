@@ -1,21 +1,56 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 03.05.22 (77) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/03.05.2022/AIOPFMD-03.05.22-%2877%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1w9F0P8zSTseGpml1epHmQfcjGJAI30Sr/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/79">TG</a>
+* Версия AIOPFMD: 18.05.22 (78) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/18.05.2022/AIOPFMD-18.05.22-%2878%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jjXXviSEw58PiUx56Qjx9Dj7yA9CoA4s/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/80">TG</a>
 * Русский интерфейс: Нет, и не будет/не имеет смысла (а описание на русском во цЫрк).
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64.
 	- Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
-	- Три патча и/или третий патч LP или альтернатива для оверлеев системы и лаунчеров (рекомендуется, но может и нет (рандом));
+	- Третий патч LP для оверлеев системы и/или лаунчеров (рекомендуется, но может и нет (рандом));
 	- SELinux в Permissive (для аудиомодов как минимум (с приложениями на такой же функционал идите нахуй));
 	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)).
 * В общем что делает патч: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
-<details> 
+<details>
   <summary>Changelog</summary>
-
+  
+#### 18.05.22 (78) ####
+* В Режим удаления/replace/restore добавлено приложение в обычный лист: DeviceIntelligenceNetworkPrebuilt (ой какие мы блять интеллигентные);
+* Фикс нескорых версий модулей;
+* Switch On/Off Face UnLock IR Camera обновлен до v1.8 - добавлена полная работа на 12+;
+* Из Force Gestures убран альтернативный выбор на settings put;
+* LSPosed для Riru и ZYGISK обновлен до v1.8.3 (6552);
+* Из PATCHMODE удалены: EVENTSMODE и PDESIGN;
+* AIST обновлен до v1.5.34:
+	- Фикс полного отвала звука на некоторых BT ушах с APTX для AIST;
+	- Фикс полного отвала системных звуков и отвала телефона при увеличении звука;
+	- Изменения от 1.6 Т13 (шыза);
+	- Остальные фиксы и улучшения;
+* Фикс отвалов звука на некоторых ушах в NL и пару других улучшений;
+* Улучшения по работе/патчингу AML (хотя по факту там надо 80% всего переделать но мне пока лень;
+* Улучшение по работе/патчингу ViperFX;
+* Добавлена установка Dolby Atmos от ZTE версии DAX2 2.6.0.28 или DAX3 3.5.1.28 (потом подумаю может выбор дам но DAX3 лучше по всему а пока как определит прошивка такая будет версия):
+	- Добавлен выбор на конфликт между AIST и NL (если спросит) - если ни AIST или NL не пользуетесь можно выбирать а так половина файлов улетит просто в мусор и с AML улетят почти все;
+	- Улучшения по всему но ещё есть что улучшать;
+	- Конфинг модуля ACDB не создаю - 99,9% тех кто ставит модули никогда не заглядывает в папку модуля и даже не знает что такое ACDB и НАХУЯ ТАМ ЭТОТ КОНФИНГ;
+	- Поддержку ACDB не добавлял вообще - если вдруг будет надобность добавлю его в AIO и адаптирую под все аудиомодули;
+	- Количество конфликтов между аудиомодами из AIO сведены к минимуму;
+* AdAwayHosts обновлен от 12.05.2022;
+* ViperFX обновлен до v1.2 - фикс доп sh;
+* Добавлена установка Corvus лаунчера с vS2.1-Revolt и это тоже не порт;
+* Лаунчер с CR 8.5 обновлен до последней версии от 17.05 - обновлен до v1.3 с ThemePicker от Corvus;
+* Фикс не MAGISK путей для Wifi Patcher;
+* Media UI Sounds обновлен до v1.6 - обновлены звуки со Spark 12.3, исправлено пару файлов и звуков Oppo;
+* Все update.json кроме LSP были удалены ко всем хуям - некоторым было приятно после обнов сток модулей улететь в бутлуп или остаются без звука;
+* Build Prop Tweaks обновлен до v2.2 - добавил Force Fake Encryption и SurfaceFlinger Buffers на 3;
+* Cache Cleaner обновлен до v2.7 - использование сток find при отсутствии установленного BB;
+* GPU Rendering обновлен до v1.1 - улучшена подцепка пропа на некоторых прошивках Android 12+;
+* Фикс бутлупа на некоторых ебано-конченных прошивках по типу PixelPlusUI;
+* Boot Animation обновлен до v1.6 - добавил аниму с Zephyrus;
+* Lawnchair обновлен до 12.1 Alpha 1 - обновлен до v2.0;
+* И ещё много всего остального улучшено и переделано. Но в любом случае я сделал малую часть из того что хотел сделать в этой обнове но пока заебался.
 #### 03.05.22 (77) ####
 * Фикс показа пункта установки лаунчеров при некоторых обстоятельствах;
 * V4AFX обновлен до v1.1 - сменил MODID, убран Developer Mode в 2.5.0.5 а в 2.7.2.1 удалены пункты говна;
@@ -41,7 +76,7 @@
 * Clear Cacher обновлен до v2.6 - добавил проверку на пункт VMDLTMP & Trash TrichromeLibrary;
 * Может чё ещё.
 #### 25.04.22 (74) ####
-* Добавил лаунчер с CR 8.4 - пока лучше нету ничего для SL не изобрели;
+* Добавил лаунчер с CR 8.4 - пока лучше ничего для SL ещё не изобрели;
 * Вернул Shady для Q;
 * Kill Logger обновлен до v1.9;
 * Убрано создание пустого листа APPRMLIST.con - так и знал что кокеры будут ну ни чё удалите его если он не нужен и не будет доп выбора;
@@ -1515,7 +1550,7 @@
 	- Значение 20dip;
 	- Значение 25dip;
 	- Значение 30dip;
-		-Регулирует расстояние между первым уведомлением в QS:
+		- Регулирует расстояние между первым уведомлением в QS:
 			- Значение 0dip;
 			- Значение 5dip;
 			- Значение 10dip;
@@ -1569,7 +1604,7 @@
 	- Значение 19sp;
 	- Значение 20sp;
 * Пункт (MAGISK) (NOT MIUI) - (Single User Enabler) убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
-* Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Status Bar Padding) для увеличения/уменьшения отступов от краев статусбара;
+* Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Status Bar Padding) для увеличения/уменьшения отступов от краев начала статусбара;
 	- Выбрать одно одинаковое значение для обоих сторон;
 	- Выбрать два разных значения для каждой стороны;
 		- Значение 0dip;
@@ -1612,16 +1647,16 @@
 			- 3;
 			- 4;
 				- Общее количество для раскрытой в портрете и суммируется с выбором первого выбора:
-						- 1;
-						- 2;
-						- 3;
-						- 4;
-						- 5;
-						- 6;
-						- 7;
-						- 8;
-						- 9;
-						- 10;
+					- 1;
+					- 2;
+					- 3;
+					- 4;
+					- 5;
+					- 6;
+					- 7;
+					- 8;
+					- 9;
+					- 10;
 	- До 12ки:
 		- Выбор для не раскрытой:
 			- 4;
@@ -1659,7 +1694,7 @@
 	- Disable;
 	- Optimized;
 * Пункт (MAGISK) (NOT MIUI) (11-12.1) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает эффект размытия в шторке и не только;
-* Пункт (ALL) (NOT MIUI) (\\) - (Boot Animation) новые анимации при запуске телефона:
+* Пункт (ALL) (NOT MIUI) (\\) - (Boot Animation) смена анимации при запуске телефона на одну из:
 	- Pixel:
 		- Black;
 		- White;
@@ -1672,6 +1707,8 @@
 	- Radiant;
 	- OnePlus;
 	- Spark;
+	- Awalen;
+	- Zephyrus;
 			- FPS:
 				- 60;
 				- 30;
@@ -1683,28 +1720,32 @@
 	- Pixel (Pizdec);
 	- Samsung (OneUI 3.0);
 	- Oppo (Color OS 7);
-	- Spark (8.0);
+	- Spark (12.3);
+	- Arcana (6.0);
 * Пункт (MAGISK & LEGACY) (NOT MIUI) (10-12.1) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
 * Пункт (MAGISK) (NOT MIUI) (12.0-12.1) - (Wi-Fi & Mobile Data QS Style Changer) - изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
 	- Новый;
 	- Старый;
 
-<h3 align=center>Apps: Lawnchair/Shady/CR/IA</h3>
+<h3 align=center>Apps: Lawnchair/Shady/CR/Corvus/IA</h3>
 
-* Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
-	- Установка Lawnchair (R/S) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+* Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
+	- Установка Lawnchair (Q/R/S/SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка ShadyLauncher (Q/R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка CRLauncher (SL) <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
-* Пункт (ALL) (\\) - (Install App In /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть приложения;
+	- Установка CorvusLauncher (SL) <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
+* Пункт (ALL) (\\) - (Install App In /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть apk файлы (apks не поддерживает);
 	- Установка в Data;
 	- Установка в System;
 		- С подтверждением для каждого;
 		- Без подтверждением;
 	
-<h3 align=center>Audio: VFX(P)/NL/AIST/SAQ/IB/AML</h3>
+<h3 align=center>Audio: VFX(P)/DOLBY/NL/AIST/SAQ/IB/AML</h3>
 
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6 и  v2.7.2.1 в зависимости от версии Android;
 * Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX.
+* Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos RC1 или RC4:
+	- Disabling Ultra Low Latency Playback;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - (NLSound) улучшает качество звука:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_VOLUMES;
@@ -1717,18 +1758,19 @@
 	- PATCH_DIRAC;
 	- GENERAL_TWEAKS;
 	- PATCH_MIXER:
-		- Lite патчинг;
-		- Full патчинг;
+		- Patch media_codecs (может быть отвал);
+		- Replace media_codecs;
 	- PATCH_IMPROVE_BLUETOOTH;
 	- PATCH_IO_POLICY;
 	- PATCH_AUDIO_POLICY;
-* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
+* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> <a href="https://t.me/AIST_UPDATES">TG Stable Update</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
-	- DOLBYATMOS;
-	- DISABLESCRAMOFBLUETOOTH;
-		- Patch media_codecs (может быть отвал);
-		- Replace media_codecs;
+	- Fixing 192kHz For Audio Output;
+	- Replacing 16 Bit With 24 Bit;
+		- Выбор для Mixer:
+			- Patch media_codecs (может быть отвал);
+			- Replace media_codecs;
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общие качество звука;
 * Пункт (ALL) - (Increase Bitrate) патчит все файлы media_profiles*.xml в /vendor - улучшает качество записи аудио во многих местах;
 * Пункт (MAGISK) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - (Audio Modification Library) исправляет конфликты вывода аудиомодов между друг другом для их нормальной работы вместе;
@@ -1820,6 +1862,7 @@
 	- ColtPapers
 	- CtsShimPrivPrebuilt
 	- DeskClockGoogle
+	- DeviceIntelligenceNetworkPrebuilt
 	- DevicePersonalizationPrebuiltPixel2020
 	- DevicePersonalizationPrebuiltPixel2021
 	- DevicePersonalizationPrebuiltPixel4
@@ -2364,12 +2407,10 @@
 
 * Пункт (MAGISK/MAGISK MANAGER) <a href="https://4pda.to/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - (Force Google Sync) принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
 	- Если установка через Recovery, предлагает установку скрипта синхронизации после перезагрузки;
-* Пункт (MAGISK) (NOT MIUI) (10-12.1) - (Force Gestures) для принудительного переключения кнопки навигации на жесты после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов или подобного:
-	- CMD Overlay;
-	- Settings Put;
+* Пункт (MAGISK) (NOT MIUI) (10-12.1) - (Force Gestures) для принудительного переключения кнопки навигации на жесты после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов или подобного;
 * Пункт (MAGISK) (11-12.1) - (Enabling Hidden Api Policy) снимает ограничения Google на некоторые классы приложений - нужен для некоторых аудиомодулей и не только;
 * Пункт (MAGISK) (<9.0) - (Force Install Apps From Unknown Sources) для принудительного включения пункта в разделе безопасности на установку из неизвестных источников;
-* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций) и выключение предупреждения об высокой громкости;
+* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости, Force Fake Encryption и SurfaceFlinger Buffers на 3;
 * Пункт (ALL) (|\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105651495">4PDA</a> - (Kill Logger) для отключения и убивания многих процессов/бинарников сбора логов:
 	- Оставить возможность снимать logcat или нет <a href="https://developer.android.com/studio/command-line/logcat">Developer Android</a>;
 	- Оставить возможность использовать dumpsys или нет <a href="https://developer.android.com/studio/command-line/dumpsys">Developer Android</a>;
@@ -2429,28 +2470,27 @@
 * Я понимаю что это читать никто не будет, и я не любитель объяснять или что-то показывать, но я попытался как-то объяснить что и куда/как.
 * Что означает патч прошивается из под своего архива или нет:
 	- Все патчи перенесены/портированы в этот патч.
-	- И почему сток патчи говно - вы прошили прошивку и MAGISK начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему либо как в случае с NL всё полностью сломано.
-		- А этот патч это позволяет (кроме некоторых патчей работающих из Bootmode).
-		- Да и уже почти все сток патчи НЕВОЗМОЖНО поставить через RECOVERY из за того что разрабам просто лень делать многие моменты.
+	- И почему сток патчи говно - вы прошили прошивку и MAGISK начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему либо как в случае с NL всё полностью сломано;
+		- А этот патч это позволяет (кроме некоторых патчей работающих из Bootmode);
+		- Да и уже почти все сток патчи НЕВОЗМОЖНО поставить через RECOVERY из за того что разрабам просто лень делать многие моменты;
 		- Я же стараюсь делать что бы всё было возможно и работало как с MAGISK так и без него параллельно улучшая что реализовано криво теми кто делал модули;
+		- Так же многие модули полностью сломаны и конфликтуют между собою и я эжто "исправляю";
 
 <h3 align=center>Особые надписи и переменные в этих патчах и файле PATCHMODE</h3>
 
 * (М) и/или (MM) - Magisk/Manager/Modules.
 * (R) - Recommended.
-* PATCHMODE это файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
+* PATCHMODE.conf это файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
 	- PMODE: Открывает некоторые тестовые пункты/патчи (в PATCHMODE напротив "PMODE=" написать: U(ser) или D(ebug)) - Прописать только букву - По умолчанию D(ebug).
-	- PDESIGN: Изменяет "дизайн" патча (в PATCHMODE напротив "PDESIGN=" написать: N(ew) или O(ld)) - прописать только букву - По умолчанию N(ew).
 	- KMETHOD: Принудительное переключение между старым и новым методом "KeyCheck" (в PATCHMODE напротив "KMETHOD=" написать: N(ew), O(ld) или A(lt) - прописать только букву - По умолчанию N, но после при первом запуске патча без настроенного файла PATCHMODE будет первый бинд, и на каком будет всё нормально - тот и будет по умолчанию прописан в PATCHMODE.
 	- TKEY: Включится вторая проверка (без нее на некоторых устройствах/прошивках бывает дабл кнопок или наоборот отсутствие и невозможность бинда (касается только KMETHOD O(ld)) в PATCHMODE напротив "TKEY=" написать: false или true - По умолчанию false.
 	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
 	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
 	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
-	- MCMODE: Включает или отключает выбор в RECOVERY как установить через MAGISK или нет при DEBUGMODE - По умолчанию false.
+	- MCMODE: Включает или отключает выбор в RECOVERY как установить через MAGISK или нет при DEBUGMODE - По умолчанию false (многие патчи не поддерживаются и это просто как временно-постоянная заглушка так что работа не гарантируется).
 	- ENDMODE: Позволяет вернутся в начало патча без перевыбора если что-то пропустили (выбор в самом конце) - По умолчанию true.
 	- MMUPDC: Добавляет проверку версий MAGISK модулей между патчем и установленными - По умолчанию true.
-	- LEGACYMODE: Включает показ старых/устаревших патчей/функций.
-	- EVENTSMODE: Включает поздравительные ивенты (почти как в Terraria) ЧТО.
+	- LEGACYMODE: Включает показ старых/устаревших патчей/функций - По умолчанию false.
 * All - Установка патчей из под MM или RECOVERY и/или как модуль MAGISK так и нет.
 * (\\) - Означает что в этом пункте есть возможность выхода из подпунктов к следующему выбору.
 * (|\\) - Означает что в этом пункте есть возможность пропустить подпункты, но установка основного патча будет произведена.
