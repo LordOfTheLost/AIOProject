@@ -1,12 +1,12 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 18.05.22 (78) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/18.05.2022/AIOPFMD-18.05.22-%2878%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jjXXviSEw58PiUx56Qjx9Dj7yA9CoA4s/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/80">TG</a>
+* Версия AIOPFMD: 19.05.22 (79) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/19.05.2022/AIOPFMD-19.05.22-%2879%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1lBOhzS5gUGMfY9c7OrT-BP0ThvN_3AXZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/81">TG</a>
 * Русский интерфейс: Нет, и не будет/не имеет смысла (а описание на русском во цЫрк).
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64.
-	- Установленный BB для многих модулей (в основном, которые используют терминал или имеют сложные shшники);
+	- Установленный BB для некоторых модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Третий патч LP для оверлеев системы и/или лаунчеров (рекомендуется, но может и нет (рандом));
 	- SELinux в Permissive (для аудиомодов как минимум (с приложениями на такой же функционал идите нахуй));
 	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)).
@@ -15,7 +15,20 @@
 
 <details>
   <summary>Changelog</summary>
-  
+
+#### 19.05.22 (79) ####
+* Dolby Atmos обновлен до v1.1:
+	- Фикс полного отвала на некоторых ублюдских прошивках по типу LOS;
+	- Выбор на DAXAPP;
+	- Некоторые другие улучшения;
+* Изменения AIST от 1.6 Т15;
+* Boot Animation обновлен до v1.7 - фикс зажовывания некоторых анимаций;
+* Фиксы UI патча;
+* Фикс показа Lawnchair на 11-12.0;
+* Исправлен показ рекомендации установки Enabling Hidden Api Policy до 11ки;
+* Фикс RO при удалении в Recovery;
+* Для некоторых лаунчеров и оверлеев добавлено уведомление что нужен/может понадобится для правильной работы третий патч LP;
+* Lawnchair обновлен до 12.1 Alpha 2 - обновлен до v2.1.
 #### 18.05.22 (78) ####
 * В Режим удаления/replace/restore добавлено приложение в обычный лист: DeviceIntelligenceNetworkPrebuilt (ой какие мы блять интеллигентные);
 * Фикс нескорых версий модулей;
@@ -29,10 +42,10 @@
 	- Изменения от 1.6 Т13 (шыза);
 	- Остальные фиксы и улучшения;
 * Фикс отвалов звука на некоторых ушах в NL и пару других улучшений;
-* Улучшения по работе/патчингу AML (хотя по факту там надо 80% всего переделать но мне пока лень;
+* Улучшения по работе/патчингу AML (хотя по факту там надо 80% всего переделать но мне пока лень);
 * Улучшение по работе/патчингу ViperFX;
 * Добавлена установка Dolby Atmos от ZTE версии DAX2 2.6.0.28 или DAX3 3.5.1.28 (потом подумаю может выбор дам но DAX3 лучше по всему а пока как определит прошивка такая будет версия):
-	- Добавлен выбор на конфликт между AIST и NL (если спросит) - если ни AIST или NL не пользуетесь можно выбирать а так половина файлов улетит просто в мусор и с AML улетят почти все;
+	- Добавлен выбор на конфликт между AIST и NL (если спросит) - если ни AIST или NL не пользуетесь можно выбирать, а так половина файлов улетит просто в мусор и с AML улетят почти все;
 	- Улучшения по всему но ещё есть что улучшать;
 	- Конфинг модуля ACDB не создаю - 99,9% тех кто ставит модули никогда не заглядывает в папку модуля и даже не знает что такое ACDB и НАХУЯ ТАМ ЭТОТ КОНФИНГ;
 	- Поддержку ACDB не добавлял вообще - если вдруг будет надобность добавлю его в AIO и адаптирую под все аудиомодули;
@@ -1730,7 +1743,7 @@
 <h3 align=center>Apps: Lawnchair/Shady/CR/Corvus/IA</h3>
 
 * Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
-	- Установка Lawnchair (Q/R/S/SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+	- Установка Lawnchair (R/S/SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка ShadyLauncher (Q/R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка CRLauncher (SL) <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
 	- Установка CorvusLauncher (SL) <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
@@ -1746,6 +1759,7 @@
 * Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX.
 * Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos RC1 или RC4:
 	- Disabling Ultra Low Latency Playback;
+	- DAX App;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - (NLSound) улучшает качество звука:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_VOLUMES;

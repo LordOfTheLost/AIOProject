@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="18.05.22 (78)"
+VAIOPFMD="19.05.22 (79)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -53,13 +53,13 @@ IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"
 IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.6"
 IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.0"
 IDEBB="BackgroundBlur"; VIPEBB="v1.0"
-IDBA="BootAnimation"; VIPBA="v1.6"
+IDBA="BootAnimation"; VIPBA="v1.7"
 IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.1"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.6"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSSC="WFAMDQSSC"; VIPWFAMDQSSC="v1.1"
 #Apps: Lawnchair/Shady/CR/Corvus/IA
-IDSL="Systemless_Lawnchair"; VIPSL="v2.0"; VIPASLS="12.1 Alpha 1"
+IDSL="Systemless_Lawnchair"; VIPSL="v2.1"; VIPASLS="12 Alpha 5"; VIPASLSL="12.1 Alpha 2"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
 IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.3"
 IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.0"
@@ -67,7 +67,7 @@ IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/DOLBY/NL/AIST/SAQ/IB/AML
 IDVFX="V4AFX"; VIPVFX="v1.2"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.7"
-IDDA="DolbyAtmos"; VIPDA="v1.0"
+IDDA="DolbyAtmos"; VIPDA="v1.1"
 IDNLS="NLSound"; VIPNLS="v3.3 STABLE"; VCIPNLS="8"
 IDAIST="AIST"; VIPAIST="v1.5.34"; VCIPAIST="34"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.0"; VCIPSAQ="2"
@@ -183,6 +183,7 @@ SYSTEM_MOUNT="/system_root"; SYSTEM="$SYSTEM_MOUNT/system"; VENDOR="/vendor"
 else
 SYSTEM_MOUNT="/system"; SYSTEM="$SYSTEM_MOUNT"; VENDOR="/vendor"
 fi
+MOUNTS=""
 for p in "$SYSTEM_MOUNT" "$VENDOR"; do
 if [ -d "$p" ] && grep -q "$p" "/etc/fstab"; then
 MOUNTS="$MOUNTS $p"
@@ -1535,9 +1536,10 @@ esac
 WCANFTP() {
 for c in $1; do
 case $c in
--sl) SELINUX_CHECKER; if $SELINUX || [ $BOOTMODE != true ]; then if [ ! -d $MODPATH/$IDSELC ]; then UIP "Note $MSGRI: Change SELinux In Permissive!"; IPSELC; fi; fi;;
--bb) BB_CHECKER; if [ $FBUSYBOX != true ]; then UIP "Note $MSGRI: The Functionality Requires A BusyBox!"; IPBB; fi;;
--ehap) if [ ! -d $MODPATH/$IDHAP ]; then UIP "Note $MSGRI: The Functionality Requires A Enabling Hidden Api Policy!"; IPHAP; fi;;
+-sl) SELINUX_CHECKER; if $SELINUX || [ $BOOTMODE != true ]; then if [ ! -d $MODPATH/$IDSELC ]; then UIP "Note $MSGRI:" "Change SELinux In Permissive!"; IPSELC; fi; fi;;
+-bb) BB_CHECKER; if [ $FBUSYBOX != true ]; then UIP "Note $MSGRI:" "The Functionality Requires A BusyBox!"; IPBB; fi;;
+-ehap) if [ ! -d $MODPATH/$IDHAP ] && [ $ASDK -ge 30 ]; then UIP "Note $MSGRI:" "The Functionality Requires A Enabling Hidden Api Policy!"; IPHAP; fi;;
+-lp) if [ ! -d $MODPATH/luckypatcher ]; then UIP "Note $MSGRI:" "The Functionality Requires A Lucky Patcher - Third Patch!"; fi;;
 esac
 done
 }
@@ -2258,40 +2260,32 @@ PSXCF -s $PSF '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND
 PSXCF -s $PSF '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_SPEAKER"]' "24"
 PSXCF -s $PSF '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_GAME_HEADPHONES"]' "24"
 PSXCF -s $PSF '/audio_platform_info_extcodec/bit_width_configs/device[@name="SND_DEVICE_OUT_BT_A2DP"]' "24"
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER" bit_width="16"/name="SND_DEVICE_OUT_SPEAKER" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_HEADPHONES" bit_width="16"/name="SND_DEVICE_OUT_HEADPHONES" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="16"/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="16"/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="16"/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="16"/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="16"/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_BT_A2DP" bit_width="16"/name="SND_DEVICE_OUT_BT_A2DP" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/name="SND_DEVICE_OUT_SPEAKER" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_HEADPHONES" bit_width="24"/name="SND_DEVICE_OUT_HEADPHONES" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="24"/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="24"/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="24"/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="24"/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="24"/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_BT_A2DP" bit_width="24"/name="SND_DEVICE_OUT_BT_A2DP" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER" value="24"/name="SND_DEVICE_OUT_SPEAKER" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_HEADPHONES" value="24"/name="SND_DEVICE_OUT_HEADPHONES" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER_REVERSE" value="24"/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" value="24"/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_HEADPHONES_44_1" value="24"/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_GAME_SPEAKER" value="24"/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_GAME_HEADPHONES" value="24"/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="32"/g' $PSF
-sed -i 's/name="SND_DEVICE_OUT_BT_A2DP" value="24"/name="SND_DEVICE_OUT_BT_A2DP" bit_width="32"/g' $PSF
-PSXCF -s $PSF '/audio_platform_info/app_types/app[@mode="default"]' 'bit_width=32'
+sed -i 's/name="SND_DEVICE_OUT_SPEAKER" bit_width="16"/name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_HEADPHONES" bit_width="16"/name="SND_DEVICE_OUT_HEADPHONES" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="16"/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="16"/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="16"/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="16"/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="16"/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_BT_A2DP" bit_width="16"/name="SND_DEVICE_OUT_BT_A2DP" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_SPEAKER" value="24"/name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_HEADPHONES" value="24"/name="SND_DEVICE_OUT_HEADPHONES" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_SPEAKER_REVERSE" value="24"/name="SND_DEVICE_OUT_SPEAKER_REVERSE" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" value="24"/name="SND_DEVICE_OUT_SPEAKER_PROTECTED" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_HEADPHONES_44_1" value="24"/name="SND_DEVICE_OUT_HEADPHONES_44_1" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_GAME_SPEAKER" value="24"/name="SND_DEVICE_OUT_GAME_SPEAKER" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_GAME_HEADPHONES" value="24"/name="SND_DEVICE_OUT_GAME_HEADPHONES" bit_width="24"/g' $PSF
+sed -i 's/name="SND_DEVICE_OUT_BT_A2DP" value="24"/name="SND_DEVICE_OUT_BT_A2DP" bit_width="24"/g' $PSF
+PSXCF -s $PSF '/audio_platform_info/app_types/app[@mode="default"]' 'bit_width=24'
 PSXCF -s $PSF '/audio_platform_info/app_types/app[@mode="default"]' 'max_rate=384000'
-PSXCF -s $PSF '/audio_platform_info_intcodec/app_types/app[@mode="default"]' 'bit_width=32'
+PSXCF -s $PSF '/audio_platform_info_intcodec/app_types/app[@mode="default"]' 'bit_width=24'
 PSXCF -s $PSF '/audio_platform_info_intcodec/app_types/app[@mode="default"]' 'max_rate=384000'
-PSXCF -s $PSF '/audio_platform_info_extcodec/app_types/app[@mode="default"]' 'bit_width=32'
+PSXCF -s $PSF '/audio_platform_info_extcodec/app_types/app[@mode="default"]' 'bit_width=24'
 PSXCF -s $PSF '/audio_platform_info_extcodec/app_types/app[@mode="default"]' 'max_rate=384000'
 if [ ! "$(grep '<app_types>' $PSF)" ]; then
-sed -i "s/<\/audio_platform_info>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"32\" id=\"69936\" max_rate=\"384000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"32\" id=\"69940\" max_rate=\"384000\" \/> \n  <app_types> \n<\/audio_platform_info>/" $PSF
-sed -i "s/<\/audio_platform_info_intcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"32\" id=\"69936\" max_rate=\"384000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"32\" id=\"69940\" max_rate=\"384000\" \/> \n  <app_types> \n<\/audio_platform_info_intcodec>/" $PSF
-sed -i "s/<\/audio_platform_info_extcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"32\" id=\"69936\" max_rate=\"384000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"32\" id=\"69940\" max_rate=\"384000\" \/> \n  <app_types> \n<\/audio_platform_info_extcodec>/" $PSF
+sed -i "s/<\/audio_platform_info>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"384000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"384000\" \/> \n  <app_types> \n<\/audio_platform_info>/" $PSF
+sed -i "s/<\/audio_platform_info_intcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"384000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"384000\" \/> \n  <app_types> \n<\/audio_platform_info_intcodec>/" $PSF
+sed -i "s/<\/audio_platform_info_extcodec>/  <app_types> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69936\" max_rate=\"384000\" \/> \n    <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"24\" id=\"69940\" max_rate=\"384000\" \/> \n  <app_types> \n<\/audio_platform_info_extcodec>/" $PSF
 else
 for i in 69936 69940; do
 [ "$($XMLSTARLET sel -t -m "/audio_platform_info/app_types/app[@uc_type=\"PCM_PLAYBACK\"][@mode=\"default\"][@id=\"$i\"]" -c . $PSF)" ] || sed -i "/<audio_platform_info>/,/<\/audio_platform_info>/ {/<app_types>/,/<\/app_types>/ s/\(^ *\)\(<\/app_types>\)/\1  <app uc_type=\"PCM_PLAYBACK\" mode=\"default\" bit_width=\"32\" id=\"$i\" max_rate=\"384000\" \/> \n\1\2/}" $PSF
@@ -4060,13 +4054,6 @@ sed -i 's/sampling_rates 44100/sampling_rates 8000|11025|12000|16000|22050|24000
 sed -i 's/sampling_rates 44100|48000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|64000|88200|96000|128000|176400|192000/g' $PSF
 UIP "Files Found And Patched"
 done
-for FMPATHS in $MPATHS; do
-UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
-sed -i 's/value="KHZ_48"/value="KHZ_192"/g' $PSF
-sed -i 's/value="KHZ_44P1"/value="KHZ_192"/g' $PSF
-UIP "Files Found And Patched"
-done
 }
 
 PATCH_16_BIT_WITH_24_BIT(){
@@ -4988,6 +4975,7 @@ else
 cp -f $TMPDIR/RoundedUI/Rounded*-$UCSFNMC.apk $IPPSO; touch $AIOPFMDPH/roundedui
 fi
 SET_PERM_RM -msgdi
+WCANFTP -lp
 }
 
 IPBIP() {
@@ -5557,28 +5545,24 @@ IPSLS() {
 UZTPN "QSRP" &
 SYSTEMLESSLAUNCHERS=false
 if $AELEVEN || $ATWELVE || $ATWELVEL; then
-if $AELEVEN || $ATWELVEL; then
-UIP -s "Install Lawnchair $VIPASLS - $VIPSL" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-elif $ATWELVE; then
-UIP -s "Install Lawnchair $VIPASLS - $VIPSL" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-fi
+if $ATWELVEL; then UIP -s "Install Lawnchair $VIPASLSL - $VIPSL" "$MSGVU Yes" "$MSGVD No $MSGNIS"; ACNVL="SL"; else UIP -s "Install Lawnchair $VIPASLS - $VIPSL" "$MSGVU Yes" "$MSGVD No $MSGNIS"; ACNVL="S"; fi
 if $KEYFUNCTION; then
 UIP "Installing Lawnchair $IAMM"
 PTMFI -np "$IDSL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
-UZTPN "$MODID-SL"
-cp -rf $TMPDIR/$MODID-SL $TMPDIR/$MODID
+UZTPN "$MODID-$ACNVL"
+cp -rf $TMPDIR/$MODID-$ACNVL $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSA/Lawnchair/Lawnchair.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
-MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly Install Lawnchair On Your Device With Android 10-12.1 Recents UI Support"
+MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly Install Lawnchair On Your Device With Android 11-12.1 Recents UI Support"
 fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
 if $ATEN || $AELEVEN; then
 MSGCS
 if $ATEN; then
-UIP "ShadyLauncher $VIPSSLQ" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+UIP "ShadyLauncher $VIPSSLQ" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 elif $AELEVEN; then
-UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+UIP "ShadyLauncher $VIPSSLR" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 fi
 if $KEYFUNCTION; then
 UIP "Installing ShadyLauncher $IAMM"
@@ -5632,6 +5616,7 @@ cp -rf $TMPDIR/$MODID/* $MODPATH/$MODID
 REPLACER -f "$LAUNCHERLIST"
 MOVERPATH
 SET_PERM_RM -msgdi
+if [ -d $MODPATH/$IDSL ] || [ -d $MODPATH/$IDSSL ]; then WCANFTP -lp; fi
 fi
 }
 
@@ -5769,7 +5754,7 @@ fi
 }
 
 IPDAS() {
-DARAW=false
+DARAW=false; DAXAPP=false
 if FINDER "$APCONFXML"; then
 if getprop | grep -Eq "disable.raw\]: \[0"; then
 :
@@ -5778,6 +5763,10 @@ UIP -s "Disabling Ultra Low Latency Playback (RAW)?" "AIST, NL & System Audio Qu
 if $KEYFUNCTION; then DARAW=true; fi
 fi
 fi
+
+UIP -s "Choose Dolby App:" "$MSGVU DAX3 v3.5.1.28 $MSGRI" "$MSGVD DAX2 v2.6.0.28"
+if $KEYFUNCTION; then DAXAPP=true; fi
+
 UIP "Installing Dolby Atmos $IAMM"
 UZTPN "DolbyAtmos"
 PTMFI -np "$IDDA" "dolbyatmos DolbyAudio MotoDolby SoundEnhancement MiSound AudioFxMoto MotoWaves"
@@ -5906,7 +5895,12 @@ if [ \"$ASDK\" -ge 30 ]; then
 appops set \$PKG AUTO_REVOKE_PERMISSIONS_IF_UNUSED ignore
 fi
 fi
-done" > $MODPATH/$MODID/service.sh
+done
+
+GPSF=\`getprop audio.rotation\`
+if [ \"\$GPSF\" == 1 ]; then
+resetprop ro.audio.monitorRotation true
+fi" > $MODPATH/$MODID/service.sh
 echo "#!$MIPSB/sh
 MODPATH=\${0%/*}
 
@@ -6156,7 +6150,9 @@ cp -rf $TMPDIR/DolbyAtmos/system_32/* $TMPDIR/DolbyAtmos/system
 rm -rf `find $TMPDIR/DolbyAtmos -type d -name *64`
 fi
 DALIB="$(find $SYSTEM $VENDOR -type f -name "libhidltransport.so" -o -name "libhwbinder.so")"
+
 if FINDER "$DALIB"; then :; else cp -rf $TMPDIR/DolbyAtmos/system_support/* $TMPDIR/DolbyAtmos/system; fi
+
 DAMXML="$(find $IPSE/vintf $IPVE/vintf -type f -name "manifest.xml")"
 if FINDER "$DAMXML"; then
 UIP "Patching Needed Files..."
@@ -6178,23 +6174,6 @@ sed -i '/<manifest/a\
         </interface>\
         <fqname>@1.0::IDms/default</fqname>\
     </hal>' $PSF
-UIP "Files Found And Patched"
-fi
-done
-fi
-
-DASHWSC="$(find $IPSE/selinux $IPVE/selinux -type f -name "*_hwservice_contexts")"
-if FINDER "$DASHWSC"; then
-UIP "Patching Needed Files..."
-for FDASHWSC in $DASHWSC; do
-if ! getprop | grep -Eq "dolby.skip.*\]: \[1"\
-&& ! grep -Eq 'u:object_r:hal_dms_hwservice:s0|u:object_r:default_android_hwservice:s0' $FDASHWSC; then
-UIP "Found $FDASHWSC" "Patching..."
-PSF="$(echo $MODPATH/$MODID$FDASHWSC | sed "s|^/vendor|$MIPSV|g")"
-mkdir -p `dirname $PSF`
-cp -f $MAGISKMP$FDASHWSC $PSF
-sed -i '1i\
-vendor.dolby.hardware.dms::IDms u:object_r:hal_dms_hwservice:s0' $PSF
 UIP "Files Found And Patched"
 fi
 done
@@ -6263,21 +6242,14 @@ sed -i 's/frequency="1031"/frequency="844"/g' $PSF
 sed -i 's/frequency="1313"/frequency="1031"/g' $PSF
 sed -i 's/frequency="1688"/frequency="1313"/g' $PSF
 
-GPSF=`getprop audio.rotation`
-PSF=$MODPATH/$MODID/service.sh
-if [ "$GPSF" == 1 ]; then
-UIP "Activating ro.audio.monitorRotation=true"
-sed -i '1i\
-resetprop ro.audio.monitorRotation true' $PSF
-fi
-
-if getprop | grep -Eq "dolby.rc1\]: \[1"; then
-UIP "Install DAX2 v2.6.0.28"
-DAAPP="DAX3 daxService"
-else
+if $DAXAPP; then
 UIP "Install DAX3 v3.5.1.28"
 DAAPP="DAX2"
+else
+UIP "Install DAX2 v2.6.0.28"
+DAAPP="DAX3 daxService"
 fi
+
 for FDAAPP in $DAAPP; do
 rm -rf `find $TMPDIR/DolbyAtmos/system -type d -name $FDAAPP`
 REPLACER -f "$FDAAPP"
@@ -6286,6 +6258,9 @@ done
 cp -rf $TMPDIR/DolbyAtmos/system $MODPATH/$MODID
 
 MOVERPATH
+[ -d $MODPATH/$MODID/system/apex ] && rm -rf $MODPATH/$MODID/system/apex
+[ -d $MODPATH/$MODID$MIPSE/vintf/manifest ] && rm -rf $MODPATH/$MODID$MIPSE/vintf/manifest
+[ -d $MODPATH/$MODID$MIPSVE/vintf/manifest ] && rm -rf $MODPATH/$MODID$MIPSVE/vintf/manifest
 SET_PERM_RM
 FILE=`find $MODPATH/$MODID$MIPSVB -type f`
 for FILES in $FILE; do chmod 0755 $FILES; chown 0.2000 $FILES; done
@@ -6699,7 +6674,7 @@ if $KEYFUNCTION; then STEP1=true; fi
 UIP -s "Boost Microphones Volume Levels?" "This Item Boosting Microphones Volume Levels" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if $KEYFUNCTION; then STEP2=true; fi
 fi
-if FINDER "$PCXML" || FINDER "$AIPCONF" || FINDER "$MPATHS"; then
+if FINDER "$PCXML" || FINDER "$AIPCONF"; then
 UIP -s "Fixing 192kHz For Audio Output?" "System Audio Quality CONFLICT!" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
 if $KEYFUNCTION; then STEP3=true; fi
 UIP -s "Replacing 16 Bit With 24 Bit?" "System Audio Quality CONFLICT!" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
