@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="19.05.22 (79)"
+VAIOPFMD="22.05.22 (80)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -55,19 +55,19 @@ IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.0"
 IDEBB="BackgroundBlur"; VIPEBB="v1.0"
 IDBA="BootAnimation"; VIPBA="v1.7"
 IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.1"
-IDMUIS="MediaUISounds"; VIPMUIS="v1.6"
+IDMUIS="MediaUISounds"; VIPMUIS="v1.7"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSSC="WFAMDQSSC"; VIPWFAMDQSSC="v1.1"
 #Apps: Lawnchair/Shady/CR/Corvus/IA
-IDSL="Systemless_Lawnchair"; VIPSL="v2.1"; VIPASLS="12 Alpha 5"; VIPASLSL="12.1 Alpha 2"
+IDSL="Systemless_Lawnchair"; VIPSL="v2.2"; VIPASLS="12 Alpha 5"; VIPASLSL="12.1 Alpha 3"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
-IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.3"
-IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.0"
+IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.4"
+IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.1"
 IDAIOIARPFMD="AIOIARPFMD"; VAIOIARPFMD="$VAIOPFMD"
 #Audio: VFX(P)/DOLBY/NL/AIST/SAQ/IB/AML
-IDVFX="V4AFX"; VIPVFX="v1.2"
+IDVFX="V4AFX"; VIPVFX="v1.3"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.7"
-IDDA="DolbyAtmos"; VIPDA="v1.1"
+IDDA="DolbyAtmos"; VIPDA="v1.2"
 IDNLS="NLSound"; VIPNLS="v3.3 STABLE"; VCIPNLS="8"
 IDAIST="AIST"; VIPAIST="v1.5.34"; VCIPAIST="34"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.0"; VCIPSAQ="2"
@@ -183,7 +183,6 @@ SYSTEM_MOUNT="/system_root"; SYSTEM="$SYSTEM_MOUNT/system"; VENDOR="/vendor"
 else
 SYSTEM_MOUNT="/system"; SYSTEM="$SYSTEM_MOUNT"; VENDOR="/vendor"
 fi
-MOUNTS=""
 for p in "$SYSTEM_MOUNT" "$VENDOR"; do
 if [ -d "$p" ] && grep -q "$p" "/etc/fstab"; then
 MOUNTS="$MOUNTS $p"
@@ -192,6 +191,7 @@ done
 for m in $MOUNTS; do
 if IS_MOUNTED "$m"; then umount "$m"; fi
 mount "$m"
+mount -o remount,rw "$m"
 done
 grep -q "$SYSTEM_MOUNT.*\sro[\s,]" /proc/mounts && mount -o remount,rw $SYSTEM_MOUNT
 UIP -s "Mounting$MOUNTS"
@@ -834,6 +834,7 @@ TrebuchetQuickStep
 MMLAUNCHERLIST="
 MotoLauncher
 OneUIHome
+PPL
 Systemless_AsusLauncher
 Systemless_CRLauncher
 Systemless_CorvusLauncher
@@ -1026,7 +1027,7 @@ esac
 DYNLIB=true
 [ $ASDK -lt 26 ] && DYNLIB=false
 [ -z $DYNLIB ] && DYNLIB=false
-if $DYNLIB; then DYNLIBPATCH="\/vendor"; else DYNLIBPATCH="\/system"; fi
+if $DYNLIB; then DYNLIBPATCH="\/vendor\/lib\/soundfx"; else DYNLIBPATCH="\/system\/lib\/soundfx"; fi
 }
 
 CHECK_DEVICE() {
@@ -1411,6 +1412,15 @@ This XML file declares which platform apps that need to access internal APIs.
   <hidden-api-whitelisted-app package=\"$PACKAGENAME\" />
 </config>" > $APKDIROUTPUT/$PACKAGENAME-package-whitelist.xml
 chmod 644 $APKDIROUTPUT/$PACKAGENAME-package-whitelist.xml
+}
+
+MKSCXML() {
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<config>
+    <hidden-api-whitelisted-app package=\"$PACKAGENAME\" />
+    <allow-in-power-save package=\"$PACKAGENAME\" />
+</config>" > $APKDIROUTPUT/config-$PACKAGENAME.xml
+chmod 644 $APKDIROUTPUT/config-$PACKAGENAME.xml
 }
 
 MMPR() {
@@ -3866,6 +3876,21 @@ cp -f $TMPDIR/NLSound/*.xml $MODPATH/$MODID$MIPSVE
 fi
 }
 
+PATCH_FIX_MICRO() {
+UIP "Start PATCH_FIX_MICRO" "Patching Needed Files..."
+for FMPATHS in $MPATHS; do
+UIP "Found $FMPATHS" "Patching..."
+PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band0"]' "1"
+PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band1"]' "1"
+PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band2"]' "1"
+PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band3"]' "1"
+PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band4"]' "1"
+PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band5"]' "1"
+UIP "Files Found And Patched"
+done
+}
+
 PATCH_IO_POLICY(){
 UIP "Start PATCH_IO_POLICY" "Patching Needed Files..."
 for FAIPCONF in $AIPCONF; do
@@ -5455,7 +5480,7 @@ fi
 }
 
 IPMUISS() {
-UCSA -a "Masik OnePlus Pixel Samsung Oppo Spark Arcana" "Choose Media Variant:" "Media From" "Arcana"
+UCSA -a "Masik OnePlus Pixel Samsung Oppo Spark Arcana LiteOS" "Choose Media Variant:" "Media From" "LiteOS"
 if $UCSFNM; then
 UIP "Installing Media UI Sounds $IAMM"
 UZTPN "MediaUISounds"
@@ -5595,7 +5620,7 @@ fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
 MSGCS
-UIP "Corvus Launcher vS2.1-Revolt - $VIPSCL" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP "Corvus Launcher vS3.0-Revenant - $VIPSCL" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if $KEYFUNCTION; then
 UIP "Installing Corvus Launcher $IAMM"
 PTMFI -np "$IDSCL" "$MMLAUNCHERLIST"
@@ -5749,7 +5774,7 @@ SET_PERM_RM -msgdi
 
 IPDA() {
 if $MAGISK && [ $ASDK -ge 28 ]; then
-UCSA "Install Dolby Atmos $VIPDA?" "IPDAS"
+UCSA -eno "Install Dolby Atmos $VIPDA?" "IPDAS"
 fi
 }
 
@@ -5951,31 +5976,7 @@ chmod 0770 \$DIR
 chown 1013.1013 \$DIR
 chcon u:object_r:vendor_data_file:s0 \$DIR
 
-NAME=manifest.xml
-M=\$ETC/vintf/\$NAME
-MODM=\$MODETC/vintf/\$NAME
-rm -f \$MODM
-FILE=\`find \$MAGISKTMP/mirror/*/etc/vintf\\
-           \$MAGISKTMP/mirror/*/*/etc/vintf\\
-           /*/etc/vintf /*/*/etc/vintf -type f -name *.xml\`
-if ! grep -A2 vendor.dolby.hardware.dms \$FILE | grep 1.0; then
-cp -f \$M \$MODM
-if [ -f \$MODM ]; then
-sed -i '/<manifest/a\\
-    <hal format=\"hidl\">\\
-        <name>vendor.dolby.hardware.dms</name>\\
-        <transport>hwbinder</transport>\\
-        <version>1.0</version>\\
-        <interface>\\
-            <name>IDms</name>\\
-            <instance>default</instance>\\
-        </interface>\\
-        <fqname>@1.0::IDms/default</fqname>\\
-    </hal>' \$MODM
-mount -o bind \$MODM /system/etc/vintf/\$NAME
-killall hwservicemanager
-fi
-fi" > $MODPATH/$MODID/post-fs-data.sh
+killall hwservicemanager" > $MODPATH/$MODID/post-fs-data.sh
 echo "ro.control_privapp_permissions=log" > $MODPATH/$MODID/system.prop
 
 if FINDER "$AECONFXML"; then
@@ -6144,7 +6145,7 @@ else
 UIP "Not Disabling Ultra Low Latency Playback (RAW)"
 fi
 
-REPLACER -f "AudioFX MusicFX"
+REPLACER -f "AudioFX MusicFX MiSound Dirac DiracAudioControlService"
 if [ "$arch" != "arm64" ]; then
 cp -rf $TMPDIR/DolbyAtmos/system_32/* $TMPDIR/DolbyAtmos/system
 rm -rf `find $TMPDIR/DolbyAtmos -type d -name *64`
@@ -6178,6 +6179,23 @@ UIP "Files Found And Patched"
 fi
 done
 fi
+
+# DASHWSC="$(find $IPSE/selinux $IPVE/selinux -type f -name "*_hwservice_contexts")"
+# if FINDER "$DASHWSC"; then
+# UIP "Patching Needed Files..."
+# for FDASHWSC in $DASHWSC; do
+# if ! getprop | grep -Eq "dolby.skip.*\]: \[1"\
+# && ! grep -Eq 'u:object_r:hal_dms_hwservice:s0|u:object_r:default_android_hwservice:s0' $FDASHWSC; then
+# UIP "Found $FDASHWSC" "Patching..."
+# PSF="$(echo $MODPATH/$MODID$FDASHWSC | sed "s|^/vendor|$MIPSV|g")"
+# mkdir -p `dirname $PSF`
+# cp -f $MAGISKMP$FDASHWSC $PSF
+# sed -i '1i\
+# vendor.dolby.hardware.dms::IDms u:object_r:hal_dms_hwservice:s0' $PSF
+# UIP "Files Found And Patched"
+# fi
+# done
+# fi
 
 for FDASO in inlibstagefrightdolby.so libstagefright_soft_ddpdec.so; do
 if [ -f $IPVL/$FDASO ]; then
@@ -6245,10 +6263,15 @@ sed -i 's/frequency="1688"/frequency="1313"/g' $PSF
 if $DAXAPP; then
 UIP "Install DAX3 v3.5.1.28"
 DAAPP="DAX2"
+APKPERM "$TMPDIR/$MODID$MIPSPA/DAX3/DAX3.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
+APKPERM "$TMPDIR/$MODID$MIPSPA/DAXService/DAXService.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
 else
 UIP "Install DAX2 v2.6.0.28"
 DAAPP="DAX3 daxService"
+APKPERM "$TMPDIR/$MODID$MIPSPA/DAX2/DAX2.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
 fi
+
+echo -e "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<permissions>\n    <library name=\"dolby_dax\"\n        file=\"/system/framework/dolby_dax.jar\"/>\n</permissions>" > $TMPDIR/$MODID$MIPSEP/dolby_dax.xml
 
 for FDAAPP in $DAAPP; do
 rm -rf `find $TMPDIR/DolbyAtmos/system -type d -name $FDAAPP`
@@ -6271,9 +6294,7 @@ for DIRS in $DIR; do chown 0.2000 $DIRS; done
 chcon -R u:object_r:vendor_file:s0 $MODPATH/$MODID$MIPSV
 chcon -R u:object_r:vendor_configs_file:s0 $MODPATH/$MODID$MIPSVE
 chcon u:object_r:hal_dms_default_exec:s0 $MODPATH/$MODID$MIPSVBHW/vendor.dolby.hardware.dms@*-service
-
 UIP "$MSGDI"
-WCANFTP "-sl -ehap"
 }
 
 IPNLS() {
@@ -6341,7 +6362,7 @@ UZTPN "NLSound"
 PTMFI -np "$IDNLS" "$IDAIST"
 MMPR -vcs "NLSound" "$VIPNLS" "$VCIPNLS" "NLSound Team" "This module globally improves audio quality when recording video/audio and listening to audio on your device." "support=https://t.me/nlsound_support"
 REPLACER -f "AudioFX MusicFX"
-if $STEP2 || $STEP3 || $STEP4 || $STEP5 || $STEP6 || $STEP11; then PSFTTS "$MPATHS"; fi
+if $STEP2 || $STEP3 || $STEP4 || $STEP5 || $STEP6 || $STEP11 || CHECK_DEVICE dipper; then PSFTTS "$MPATHS"; fi
 if $STEP1 || $STEP7; then PSFTTS "$ACXML"; fi
 echo "#!$MIPSB/sh
 resetprop vendor.audio.flac.sw.decoder.24bit true
@@ -6656,6 +6677,7 @@ if $STEP11; then PATCH_MIXER -nl; fi
 if $STEP12; then PATCH_IMPROVE_BLUETOOTH -nl; fi
 if $STEP13; then PATCH_IO_POLICY -nl; fi
 if $STEP14; then PATCH_AUDIO_POLICY; fi
+if CHECK_DEVICE dipper; then PATCH_FIX_MICRO; fi
 MOVERPATH
 SET_PERM_RM -msgdi
 }
@@ -7330,6 +7352,8 @@ if [ -d $IPSEDF ] || [ -d $IPVEDF ]; then PATCH_DEVICE_FEATURES -aist; fi
 if FINDER "$BTCSCONF" || FINDER "$BTSCONF"; then PATCH_IMPROVE_BLUETOOTH -aist; fi
 if FINDER "$AIPCONF"; then PATCH_IO_POLICY -aist; fi
 if FINDER "$DAXXML"; then PATCH_DOLBY; fi
+if FINDER "$DAXXML"; then PATCH_DOLBY; fi
+if CHECK_DEVICE dipper; then PATCH_FIX_MICRO; fi
 MOVERPATH
 SET_PERM_RM -msgdi
 }

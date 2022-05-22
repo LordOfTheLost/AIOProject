@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 19.05.22 (79) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/19.05.2022/AIOPFMD-19.05.22-%2879%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1lBOhzS5gUGMfY9c7OrT-BP0ThvN_3AXZ/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/81">TG</a>
+* Версия AIOPFMD: 22.05.22 (80) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/22.05.2022/AIOPFMD-22.05.22-%2880%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/17wwWT99nENEUqmHhWHM43uQvifr3AvBR/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/86">TG</a>
 * Русский интерфейс: Нет, и не будет/не имеет смысла (а описание на русском во цЫрк).
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
@@ -9,13 +9,26 @@
 	- Установленный BB для некоторых модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Третий патч LP для оверлеев системы и/или лаунчеров (рекомендуется, но может и нет (рандом));
 	- SELinux в Permissive (для аудиомодов как минимум (с приложениями на такой же функционал идите нахуй));
-	- Enabling Hidden Api Policy (для аудиомодов как минимум (Android 11+)).
+	- Enabling Hidden Api Policy (для некоторых аудиомодов как минимум (Android 11+)).
 * В общем что делает патч: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details>
   <summary>Changelog</summary>
 
+#### 22.05.22 (80) ####
+* Lawnchair обновлен до 12.1 Alpha 3 - обновлен до v2.2;
+* Dolby Atmos обновлен до v1.2:
+	- Убрал предложение установки SELinux и Enabling Hidden Api Policy;
+	- Улучшение Replace для MIUI;
+	- Улучшения по разрешениям приложениям;
+* Фикс патчинга путей музыкальных либов;
+* ViperFX обновлен до v1.3 - общие изменения для музыкальных модулей;
+* Улучшения по mount и проблем с RO;
+* Corvus Launcher обновлен до v1.1 - от 22.05 с Corvus S3.0-Revenant с Theme Picker;
+* CR Launcher обновлен до v1.4 - Theme Picker от 22.05 с Corvus S3.0-Revenant;
+* Media UI Sounds обновлен до v1.7 - добавил звуки из LiteOS;
+* Фикс эхо/шуршания микрофона для Mi8 в AIST и NL.
 #### 19.05.22 (79) ####
 * Dolby Atmos обновлен до v1.1:
 	- Фикс полного отвала на некоторых ублюдских прошивках по типу LOS;
