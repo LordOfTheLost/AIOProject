@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 22.05.22 (80) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/22.05.2022/AIOPFMD-22.05.22-%2880%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/17wwWT99nENEUqmHhWHM43uQvifr3AvBR/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/86">TG</a>
+* Версия AIOPFMD: 23.05.22 (81) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2022/AIOPFMD-23.05.22-%2881%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1BW1RTfg6VjVgIydxQa35dr7UtNqW-Ewz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/87">TG</a>
 * Русский интерфейс: Нет, и не будет/не имеет смысла (а описание на русском во цЫрк).
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
@@ -16,6 +16,13 @@
 <details>
   <summary>Changelog</summary>
 
+#### 23.05.22 (81) ####
+* Исправлено правильное создание модулей при некорректном echo в прошивке:
+	- AML;
+	- Clear Cacher;
+	- Magisk Manager For Recovery;
+	- DETACH;
+* В AIST изменения от v1.6.11 T15.
 #### 22.05.22 (80) ####
 * Lawnchair обновлен до 12.1 Alpha 3 - обновлен до v2.2;
 * Dolby Atmos обновлен до v1.2:
@@ -1793,7 +1800,7 @@
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> <a href="https://t.me/AIST_UPDATES">TG Stable Update</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
-	- Fixing 192kHz For Audio Output;
+	- Fixing 96kHz For Audio Output;
 	- Replacing 16 Bit With 24 Bit;
 		- Выбор для Mixer:
 			- Patch media_codecs (может быть отвал);

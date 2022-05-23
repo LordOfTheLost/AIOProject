@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="22.05.22 (80)"
+VAIOPFMD="23.05.22 (81)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -22,6 +22,7 @@ EVENTS="$BB/events"
 UNTARXZ="$BB/tar"
 UNZIP="$BB/unzip"
 TIMEOUT="$BB/timeout"
+ECHO="$BB/echo"
 HEAD="$BB/head"
 ZIPALIGN="$AADDONS/zipalign"
 ZIPPACKER="$AADDONS/zip"
@@ -1695,7 +1696,7 @@ case $1 in
 esac
 for FACXML in $ACXML; do
 UIP "Found $FACXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FACXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FACXML"
 case $1 in
 -nl) PSXCF -u $PSF '/configs/property[@name="audio.deep_buffer.media"]' "false";;
 -aist) PSXCF -u $PSF '/configs/property[@name="audio.deep_buffer.media"]' "true"
@@ -1755,7 +1756,7 @@ PATCH_VOLUMES() {
 UIP "Start PATCH_VOLUMES" "Patching Needed Files..."
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 case $1 in
 -nl) PSXCF -u $PSF '/mixer/ctl[@name="RX0 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/ctl[@name="RX1 Digital Volume"]' "90"
@@ -1960,7 +1961,7 @@ PATCH_MICROPHONE() {
 UIP "Start PATCH_MICROPHONE" "Patching Needed Files..."
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 case $1 in
 -nl) if $HIRES; then
 PSXCF -u $PSF '/mixer/ctl[@name="ADC1 Volume"]' "12"
@@ -2077,7 +2078,7 @@ PATCH_IIR() {
 UIP "Start PATCH_IIR" "Patching Needed Files..."
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Band1"][@id="0"]' "268833620"
 PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Band1"][@id="1"]' "537398060"
 PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Band1"][@id="2"]' "267510580"
@@ -2130,7 +2131,7 @@ UIP "Start PATCH_AUDIO_PLATFORM_INFO" "Patching Needed Files..."
 case $1 in
 -nl) for FAPIXML in $APIXML; do
 UIP "Found $FAPIXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAPIXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FAPIXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAPIXML $PSF
 sed -i 's/\t/  /g' $PSF
@@ -2159,7 +2160,7 @@ fi
 done
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 PSXCF -s $PSF '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "KHZ_192"
@@ -2228,7 +2229,7 @@ vendor.audio.aac.sw.encoder.24bit=true
 persist.vendor.audio.format.24bit=true" >> $MODPATH/$MODID/system.prop
 for FSNDTRGS in $SNDTRGS; do
 UIP "Found $FSNDTRGS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FSNDTRGS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FSNDTRGS"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FSNDTRGS $PSF
 sed -i 's/\t/  /g' $PSF
@@ -2242,7 +2243,7 @@ UIP "Files Found And Patched"
 done;;
 -aist) for FAPIXML in $APIXML; do
 UIP "Found $FAPIXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAPIXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FAPIXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAPIXML $PSF
 sed -i 's/\t/  /g' $PSF
@@ -2312,7 +2313,7 @@ PATCH_COMPANDERS() {
 UIP "Start PATCH_COMPANDERS" "Patching Needed Files..."
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 PSXCF -u $PSF '/mixer/ctl[@name="COMP1 Switch"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="COMP2 Switch"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="COMP3 Switch"]' "0"
@@ -3074,7 +3075,7 @@ if FINDER "$ACXML"; then
 UIP "Patching Needed Files..."
 for FACXML in $ACXML; do
 UIP "Found $FACXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FACXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FACXML"
 PSXCF -u $PSF '/configs/property[@name="audio.offload.disable"]' "false"
 PSXCF -u $PSF '/configs/property[@name="audio.offload.min.duration.secs"]' "30"
 PSXCF -u $PSF '/configs/property[@name="persist.vendor.audio.sva.conc.enabled"]' "false"
@@ -3120,7 +3121,7 @@ PATCH_DEVICE_FEATURES() {
 UIP "Start PATCH_DEVICE_FEATURES" "Patching Needed Files..."
 for ODEFE in $SDEVFE $VDEVFE; do
 UIP "Found $ODEFE" "Patching..."
-PDF="$MODPATH/$MODID$(echo $ODEFE | sed "s|^/vendor|$MIPSV|g")"
+PDF="$MODPATH/$MODID$ODEFE"
 mkdir -p `dirname $PDF`
 cp -f $MAGISKMP$ODEFE $PDF
 sed -i 's/\t/  /g' $PDF
@@ -3163,7 +3164,7 @@ PATCH_DIRAC() {
 UIP "Start PATCH_DIRAC" "Patching Needed Files..."
 for FAECONFXML in $AECONFXML; do
 UIP "Found $FAECONFXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAECONFXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FAECONFXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAECONFXML $PSF
 OSP_DETECT $PSF
@@ -3207,7 +3208,7 @@ case $1 in
 -nl) if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then echo -e "\n# PATCH MIXER\nro.sound.alsa=TAS2557" >> $MODPATH/$MODID/system.prop; fi
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 if [ "$RN5PRO" ] || [ "$MI9" ] || [ "$MI8" ] || [ "$MI8P" ] || [ "$MI9P" ] || [ "$MIA2" ]; then
 PSXCF -s $PSF '/mixer/ctl[@name="TAS2557 ClassD Edge"]' "7"
 PSXCF -s $PSF '/mixer/ctl[@name="TAS2557 Volume"]' "30"
@@ -3321,7 +3322,7 @@ UIP "Files Found And Patched"
 done;;
 -aist) for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 if $HIRES; then
 PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
 PSXCF -u $PSF '/mixer/path[@name="top-speaker"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
@@ -3854,7 +3855,7 @@ if $PATCHMC && FINDER "$MCGAX"; then
 UIP "Patching Needed Files..."
 for FMCGAX in $MCGAX; do
 UIP "Found $FMCGAX" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMCGAX | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMCGAX"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FMCGAX $PSF
 case $PSF in
@@ -3880,7 +3881,7 @@ PATCH_FIX_MICRO() {
 UIP "Start PATCH_FIX_MICRO" "Patching Needed Files..."
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band0"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band1"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="IIR0 Enable Band2"]' "1"
@@ -3895,7 +3896,7 @@ PATCH_IO_POLICY(){
 UIP "Start PATCH_IO_POLICY" "Patching Needed Files..."
 for FAIPCONF in $AIPCONF; do
 UIP "Found $FAIPCONF" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAIPCONF | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FAIPCONF"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAIPCONF $PSF
 case $1 in
@@ -3922,7 +3923,7 @@ PATCH_AUDIO_POLICY() {
 UIP "Start PATCH_AUDIO_POLICY" "Patching Needed Files..."
 for FAPCXML in $PCXML; do
 UIP "Found $FAPCXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAPCXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FAPCXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAPCXML $PSF
 sed -i 's/speaker_drc_enabled="true"/speaker_drc_enabled="false"/g' $PSF
@@ -3975,7 +3976,7 @@ persist.bluetooth.sbc_hd_higher_bitrate=1
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true" >> $MODPATH/$MODID/system.prop;;
 -aist) for FBTCSCONF in $BTCSCONF; do
 UIP "Found $FBTCSCONF" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FBTCSCONF | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FBTCSCONF"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FBTCSCONF $PSF
 sed -i 's/\t/  /g' $PSF
@@ -3987,7 +3988,7 @@ UIP "Files Found And Patched"
 done
 for FBTSCONF in $BTSCONF; do
 UIP "Found $FBTSCONF" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FBTSCONF | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FBTSCONF"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FBTSCONF $PSF
 sed -i 's/\t/  /g' $PSF
@@ -4021,7 +4022,7 @@ PATCH_DOLBY(){
 UIP "Start PATCH_DOLBY" "Patching Needed Files..."
 for FDAXXML in $DAXXML; do
 UIP "Found $FDAXXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FDAXXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FDAXXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FDAXXML $PSF
 sed -i 's/\t/  /g' $PSF
@@ -4060,23 +4061,23 @@ UIP "Files Found And Patched"
 done
 }
 
-PATCH_FIXING_192KHZ_SOUND(){
+PATCH_FIXING_96KHZ_SOUND(){
 UIP "Start PATCH_FIXING_96KHZ_SOUND" "Patching Needed Files..."
 for FAPCXML in $PCXML; do
 UIP "Found $FAPCXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAPCXML | sed "s|^/vendor|$MIPSV|g")"
-sed -i 's/samplingRates="44100,48000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="44100,48000,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="44100"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="48000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
+PSF="$MODPATH/$MODID$FAPCXML"
+sed -i 's/samplingRates="44100,48000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000"/g' $PSF
+sed -i 's/samplingRates="44100,48000,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000"/g' $PSF
+sed -i 's/samplingRates="44100"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000"/g' $PSF
+sed -i 's/samplingRates="48000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000"/g' $PSF
 UIP "Files Found And Patched"
 done
 for FAPIOCXML in $AIPCONF; do
 UIP "Found $FAPIOCXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAPIOCXML | sed "s|^/vendor|$MIPSV|g")"
-sed -i 's/sampling_rates 48000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|64000|88200|96000|128000|176400|192000/g' $PSF
-sed -i 's/sampling_rates 44100/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|64000|88200|96000|128000|176400|192000/g' $PSF
-sed -i 's/sampling_rates 44100|48000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|64000|88200|96000|128000|176400|192000/g' $PSF
+PSF="$MODPATH/$MODID$FAPIOCXML"
+sed -i 's/sampling_rates 48000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|64000|88200|96000/g' $PSF
+sed -i 's/sampling_rates 44100/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|64000|88200|96000/g' $PSF
+sed -i 's/sampling_rates 44100|48000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|64000|88200|96000/g' $PSF
 UIP "Files Found And Patched"
 done
 }
@@ -4085,13 +4086,13 @@ PATCH_16_BIT_WITH_24_BIT(){
 UIP "Start PATCH_16_BIT_WITH_24_BIT" "Patching Needed Files..."
 for FAPCXML in $PCXML; do
 UIP "Found $FAPCXML" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAPCXML | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FAPCXML"
 sed -i 's/profile name="" format="AUDIO_FORMAT_PCM_16_BIT"/profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"/g' $PSF
 UIP "Files Found And Patched"
 done
 for FMPATHS in $MPATHS; do
 UIP "Found $FMPATHS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FMPATHS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FMPATHS"
 PSXCF -u $PSF '/mixer/ctl[@name="ADC0 Volume"]' "20"
 PSXCF -u $PSF '/mixer/ctl[@name="ADC1 Volume"]' "20"
 PSXCF -u $PSF '/mixer/ctl[@name="ADC2 Volume"]' "20"
@@ -4130,7 +4131,7 @@ done
 PSFTTS() {
 for FPSFTTS in $1; do
 UIP "Found $FPSFTTS" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FPSFTTS | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FPSFTTS"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FPSFTTS $PSF
 sed -i 's/\t/  /g' $PSF
@@ -6697,7 +6698,7 @@ UIP -s "Boost Microphones Volume Levels?" "This Item Boosting Microphones Volume
 if $KEYFUNCTION; then STEP2=true; fi
 fi
 if FINDER "$PCXML" || FINDER "$AIPCONF"; then
-UIP -s "Fixing 192kHz For Audio Output?" "System Audio Quality CONFLICT!" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
+UIP -s "Fixing 96kHz For Audio Output?" "System Audio Quality CONFLICT!" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
 if $KEYFUNCTION; then STEP3=true; fi
 UIP -s "Replacing 16 Bit With 24 Bit?" "System Audio Quality CONFLICT!" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
 if $KEYFUNCTION; then STEP4=true; fi
@@ -7342,7 +7343,7 @@ if FINDER "$ACXML"; then PSFTTS "$ACXML"; fi
 if $STEP1; then PATCH_VOLUMES -aist; fi
 if $STEP2; then PATCH_MICROPHONE -aist; fi
 if $STEP3 || $STEP4; then PSFTTS "$PCXML $AIPCONF"; fi
-if $STEP3; then PATCH_FIXING_192KHZ_SOUND; fi
+if $STEP3; then PATCH_FIXING_96KHZ_SOUND; fi
 if $STEP4; then PATCH_16_BIT_WITH_24_BIT; fi
 if FINDER "$MPATHS"; then PATCH_MIXER -aist; fi
 if FINDER "$APIXML"; then PATCH_AUDIO_PLATFORM_INFO -aist; fi
@@ -7351,7 +7352,6 @@ if FINDER "$PCXML"; then PATCH_AUDIO_POLICY -aist; fi
 if [ -d $IPSEDF ] || [ -d $IPVEDF ]; then PATCH_DEVICE_FEATURES -aist; fi
 if FINDER "$BTCSCONF" || FINDER "$BTSCONF"; then PATCH_IMPROVE_BLUETOOTH -aist; fi
 if FINDER "$AIPCONF"; then PATCH_IO_POLICY -aist; fi
-if FINDER "$DAXXML"; then PATCH_DOLBY; fi
 if FINDER "$DAXXML"; then PATCH_DOLBY; fi
 if CHECK_DEVICE dipper; then PATCH_FIX_MICRO; fi
 MOVERPATH
@@ -7371,7 +7371,7 @@ MMPR -vc "System Audio Quality" "$VIPSAQ" "$VCIPSAQ" "Ichigo Kywrosaki" "This Mo
 UIP "Patching Needed Files..."
 for FAIPAOPCONF in $AIPAOPCONF; do
 UIP "Found $FAIPAOPCONF" "Patching..."
-PSF="$MODPATH/$MODID$(echo $FAIPAOPCONF | sed "s|^/vendor|$MIPSV|g")"
+PSF="$MODPATH/$MODID$FAIPAOPCONF"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAIPAOPCONF $PSF
 sed -i '/default {/p;/default {/,/}/d;' $PSF
@@ -7521,7 +7521,7 @@ set_perm_recursive $MODPATH/$MODID$MIPSV 0 0 0755 0644 u:object_r:vendor_file:s0
 [ -d $MODPATH/$MODID$MIPSVE ] && set_perm_recursive $MODPATH/$MODID$MIPSVE 0 0 0755 0644 u:object_r:vendor_configs_file:s0
 fi
 exit 0" > $MODPATH/$MODID/post-fs-data.sh
-echo "# Variables
+$ECHO "# Variables
 [ \"\$(magisk --path 2>/dev/null)\" ] && MAGISKTMP=\"\$(magisk --path 2>/dev/null)/.magisk\" || MAGISKTMP=\"/sbin/.magisk\"
 [ $ASDK -ge 26 ] && libdir=\"/vendor\" || libdir=\"/system\"
 
@@ -7594,7 +7594,7 @@ if \$replace && [ \"\$(sed -n \"/^effects {/,/^}/ {/^  \$effname {/,/^  }/p}\" \
 spaces=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
 sed -i \"/^effects {/,/^}/ {/^\$spaces\$effname {/,/^\$spaces}/d}\" \$file
 fi
-[ ! \"\$(sed -n \"/^effects {/,/^}/ {/^  \$effname {/,/^  }/p}\" \$file)\" ] && sed -i \"s/^effects {/effects {\\\n  \$effname {\\\n    library proxy\\\n    uuid \$uid\\\n\\\n    libsw {\\\n      library \$libname_sw\\\n      uuid \$uid_sw\\\n    }\\\n\\\n    libhw {\\\n      library \$libname_hw\\\n      uuid \$uid_hw\\\n    }\\\n  }/g\" \$file
+[ ! \"\$(sed -n \"/^effects {/,/^}/ {/^  \$effname {/,/^  }/p}\" \$file)\" ] && sed -i \"s/^effects {/effects {\\n  \$effname {\\n    library proxy\\n    uuid \$uid\\n\\n    libsw {\\n      library \$libname_sw\\n      uuid \$uid_sw\\n    }\\n\\n    libhw {\\n      library \$libname_hw\\n      uuid \$uid_hw\\n    }\\n  }/g\" \$file
 if \$lib; then
 patch_cfgs -fl \"\$file\" \"proxy\" \"\$libdir/lib/soundfx/libeffectproxy.so\"
 if \$replace; then
@@ -7611,24 +7611,24 @@ if \$replace && [ \"\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/,/}/p}\" \$
 spaces=\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
 sed -i \"/^libraries {/,/^}/ {/^\$spaces\$libname {/,/^\$spaces}/d}\" \$file
 fi
-[ ! \"\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/,/}/p}\" \$file)\" ] && sed -i \"s|^libraries {|libraries {\\\n  \$libname {\\\n    path \$libpath\\\n  }|\" \$file
+[ ! \"\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/,/}/p}\" \$file)\" ] && sed -i \"s|^libraries {|libraries {\\n  \$libname {\\n    path \$libpath\\n  }|\" \$file
 fi
 if \$effect; then
 if \$replace && [ \"\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/,/}/p}\" \$file)\" ]; then
 spaces=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
 sed -i \"/^effects {/,/^}/ {/^\$spaces\$effname {/,/^\$spaces}/d}\" \$file
 fi
-[ ! \"\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/,/}/p}\" \$file)\" ] && sed -i \"s|^effects {|effects {\\\n  \$effname {\\\n    library \$libname\\\n    uuid \$uid\\\n  }|\" \$file
+[ ! \"\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/,/}/p}\" \$file)\" ] && sed -i \"s|^effects {|effects {\\n  \$effname {\\n    library \$libname\\n    uuid \$uid\\n  }|\" \$file
 fi
 if \$outsp && [ \"$ASDK\" -ge 26 ]; then
 local OIFS=\$IFS; local IFS=','
 for i in \$type; do
 if [ ! \"\$(sed -n \"/^\$conf {/,/^}/p\" \$file)\" ]; then
-echo -e \"\\\n\$conf {\\\n    \$i {\\\n        \$effname {\\\n        }\\\n    }\\\n}\" >> \$file
+echo -e \"\\n\$conf {\\n    \$i {\\n        \$effname {\\n        }\\n    }\\n}\" >> \$file
 elif [ ! \"\$(sed -n \"/^\$conf {/,/^}/ {/\$i {/,/^    }/p}\" \$file)\" ]; then
-sed -i \"/^\$conf {/,/^}/ s/\$conf {/\$conf {\\\n    \$i {\\\n        \$effname {\\\n        }\\\n    }/\" \$file
+sed -i \"/^\$conf {/,/^}/ s/\$conf {/\$conf {\\n    \$i {\\n        \$effname {\\n        }\\n    }/\" \$file
 elif [ ! \"\$(sed -n \"/^\$conf {/,/^}/ {/\$i {/,/^    }/ {/\$effname {/,/}/p}}\" \$file)\" ]; then
-sed -i \"/^\$conf {/,/^}/ {/\$i {/,/^    }/ s/\$i {/\$i {\\\n        \$effname {\\\n        }/}\" \$file
+sed -i \"/^\$conf {/,/^}/ {/\$i {/,/^    }/ s/\$i {/\$i {\\n        \$effname {\\n        }/}\" \$file
 fi
 done
 local IFS=\$OIFS
@@ -7640,7 +7640,7 @@ if \$replace && [ \"\$(sed -n \"/<effects>/,/<\/effects>/ {/^ *<effectProxy name
 sed -i \"/<effects>/,/<\/effects>/ {/^ *<effectProxy name=\"\$effname\".*>/,/^ *<\/effectProxy>/d}\" \$file
 sed -i \"/<effects>/,/<\/effects>/ {/^ *<effect name=\"\$effname\".*\/>/d}\" \$file
 fi
-[ ! \"\$(sed -n \"/<effects>/,/<\/effects>/ {/^ *<effectProxy name=\"\$effname\".*>/,/^ *<\/effectProxy>/p}\" \$file)\" -a ! \"\$(sed -n \"/<effects>/,/<\/effects>/ {/^ *<effect name=\"\$effname\".*>/,/^ *\/>/p}\" \$file)\" ] && sed -i -e \"/<effects>/ a\        <effectProxy name=\"\$effname\" library=\"proxy\" uuid=\"\$uid\">\\\n            <libsw library=\"\$libname_sw\" uuid=\"\$uid_sw\"\/>\\\n            <libhw library=\"\$libname_hw\" uuid=\"\$uid_hw\"\/>\\\n        <\/effectProxy>\" \$file
+[ ! \"\$(sed -n \"/<effects>/,/<\/effects>/ {/^ *<effectProxy name=\"\$effname\".*>/,/^ *<\/effectProxy>/p}\" \$file)\" -a ! \"\$(sed -n \"/<effects>/,/<\/effects>/ {/^ *<effect name=\"\$effname\".*>/,/^ *\/>/p}\" \$file)\" ] && sed -i -e \"/<effects>/ a\        <effectProxy name=\"\$effname\" library=\"proxy\" uuid=\"\$uid\">\\n            <libsw library=\"\$libname_sw\" uuid=\"\$uid_sw\"\/>\\n            <libhw library=\"\$libname_hw\" uuid=\"\$uid_hw\"\/>\\n        <\/effectProxy>\" \$file
 if \$lib; then
 patch_cfgs -fl \"\$file\" \"proxy\" \"\$libdir/lib/soundfx/libeffectproxy.so\"
 if \$replace; then
@@ -7669,11 +7669,11 @@ if \$outsp && [ \"$ASDK\" -ge 26 ]; then
 local OIFS=\$IFS; local IFS=','
 for i in \$type; do
 if [ ! \"\$(sed -n \"/^ *<\$xml>/,/^ *<\/\$xml>/p\" \$file)\" ]; then
-sed -i \"/<\/audio_effects_conf>/i\    <\$xml>\\\n       <stream type=\"\$type\">\\\n            <apply effect=\"\$effname\"\/>\\\n        <\/stream>\\\n    <\/\$xml>\" \$file
+sed -i \"/<\/audio_effects_conf>/i\    <\$xml>\\n       <stream type=\"\$type\">\\n            <apply effect=\"\$effname\"\/>\\n        <\/stream>\\n    <\/\$xml>\" \$file
 elif [ ! \"\$(sed -n \"/^ *<\$xml>/,/^ *<\/\$xml>/ {/<stream type=\"\$type\">/,/<\/stream>/p}\" \$file)\" ]; then
-sed -i \"/^ *<\$xml>/,/^ *<\/\$xml>/ s/    <\$xml>/    <\$xml>\\\n        <stream type=\"\$type\">\\\n            <apply effect=\"\$effname\"\/>\\\n        <\/stream>/\" \$file
+sed -i \"/^ *<\$xml>/,/^ *<\/\$xml>/ s/    <\$xml>/    <\$xml>\\n        <stream type=\"\$type\">\\n            <apply effect=\"\$effname\"\/>\\n        <\/stream>/\" \$file
 elif [ ! \"\$(sed -n \"/^ *<\$xml>/,/^ *<\/\$xml>/ {/<stream type=\"\$type\">/,/<\/stream>/ {/^ *<apply effect=\"\$effname\"\/>/p}}\" \$file)\" ]; then
-sed -i \"/^ *<\$xml>/,/^ *<\/\$xml>/ {/<stream type=\"\$type\">/,/<\/stream>/ s/<stream type=\"\$type\">/<stream type=\"\$type\">\\\n            <apply effect=\"\$effname\"\/>/}\" \$file
+sed -i \"/^ *<\$xml>/,/^ *<\/\$xml>/ {/<stream type=\"\$type\">/,/<\/stream>/ s/<stream type=\"\$type\">/<stream type=\"\$type\">\\n            <apply effect=\"\$effname\"\/>/}\" \$file
 fi
 done
 local IFS=\$OIFS
@@ -7717,7 +7717,7 @@ for lib in \$libs; do
 for audmod in $MODPATH/$MODID/.scripts/\$(basename \$lib)~*; do
 uuid=\$(basename \$audmod | sed -r \"s/.*~(.*).sh/\1/\")
 hexuuid=\"\$(echo \$uuid | sed -r -e \"s/^(..)(..)(..)(..)-(..)(..)-(..)(..)-/\4\3\2\1\6\5\8\7-/\" -e \"s/-(..)(..)-(............)\$/\2\1\3/\")\"
-xxd -p \$lib | tr -d '\\\n' | grep -q \"\$hexuuid\" || continue
+xxd -p \$lib | tr -d '\\n' | grep -q \"\$hexuuid\" || continue
 \$(grep -xq \"\$modname\" $NVBASE/$MODID/modlist 2>/dev/null) || echo \"\$modname\" >> $NVBASE/$MODID/modlist
 libfile=\"\$(echo \$lib | sed -e \"s|\$mod||\" -e \"s|$MIPSV|/vendor|\")\"
 . \$audmod
@@ -9167,7 +9167,7 @@ fi
 UIP "Installing Network Tweak $IAMM"
 if $MAGISK; then
 PTMFI -nmp "$IDNT"
-echo "#!$MIPSB/sh
+$ECHO "#!$MIPSB/sh
 MODDIR=\${0%/*}
 
 # Set CF DNS servers address
@@ -9203,7 +9203,7 @@ $DNSSETPROP
 # Edit the resolv conf file if it exist
 if [ -a $MIPSE/resolv.conf ]; then
 mkdir -p \$MODDIR$MIPSE
-printf \"nameserver $ONetworkTweak\\\nnameserver $TNetworkTweak\" >> \$MODDIR$MIPSE/resolv.conf
+printf \"nameserver $ONetworkTweak\\nnameserver $TNetworkTweak\" >> \$MODDIR$MIPSE/resolv.conf
 chmod 644 \$MODDIR$MIPSE/resolv.conf
 fi
 
@@ -9430,7 +9430,7 @@ IPCCS() {
 UIP "Installing Cache Cleaner $IAMM"
 PTMFI -nm "$IDCC" "$MIPSB"
 MMPR -v "Cache Cleaner" "$VIPCC" "Cache Cleaner For Remove More Empty/TMP/Trash Folder & Files - Usage: Run \"su -c CC\" In Terminal On BootMode Or Run \"*/CC\" In Recovery Terminal"
-echo "#!$MIPSB/sh
+$ECHO "#!$MIPSB/sh
 
 Spinner() {
 case \${_indicator} in
@@ -9581,7 +9581,7 @@ done
 clear
 echo \"$MSGSD Cache Cleaner $VIPCC\"
 [ -d $MODPATH/$IDBB$MIPSB ] && FIND=$MODPATH/$IDBB$MIPSB/find || FIND=$MODPATH/$IDBB$MIPSXB/find
-[ ! -d $MODPATH/$IDBB ] && echo -e \"$MSGSD Brutal Busybox No Found!\\\n$MSGSD Use Stock Find\" && FIND=find
+[ ! -d $MODPATH/$IDBB ] && echo -e \"$MSGSD Brutal Busybox No Found!\\n$MSGSD Use Stock Find\" && FIND=find
 local opt=\"\"
 while :; do
 echo -n \"$MSGCS
@@ -9590,7 +9590,7 @@ $MSGCS
 c) Cache Cleaner
 e) Remove Empty Files/Folders (All In /data)
 el) Remove Empty Files/Folders (Only In /sdcard)
-l) Remove Logs\\\n\"
+l) Remove Logs\\n\"
 if \$VMDLC; then echo -e \"t) Remove VMDLTMP & Trash TrichromeLibrary\"; fi
 if \$MMB; then echo -e \"m) Remove All Magisk Backup\"; fi
 echo \"r) Reboot Device
@@ -9612,7 +9612,7 @@ q | Q) exit 0;;
 esac
 break
 done
-echo -en \"\\\n$MSGSD Press <Enter> To Continue, \\\"q <Enter>\\\" To Quit \"
+echo -en \"\\n$MSGSD Press <Enter> To Continue, \\\"q <Enter>\\\" To Quit \"
 read opt
 [ -z \"\$opt\" ] || exit 0
 echo
@@ -9636,7 +9636,7 @@ fi
 IPMMFRS() {
 UIP "Magisk Manager For Recovery $IAMM"
 PTMFI "$IDMMFR" "mm" "$MIPSB"
-echo "#!/sbin/sh
+$ECHO "#!/sbin/sh
 
 MMODULES() { ls -1 \$MMFRP | grep -v 'lost+found' || echo \"$MSGSD <None>\"; }
 
@@ -9647,7 +9647,7 @@ for MODULES in \$(MMODULES | grep -v \<None\> || :); do
 echo -n \"$MSGSD \$MODULES [\"
 [ -f \$MMFRP/\$MODULES/\$FILE ] && echo \"\$PRESENT]\" || echo \"\$ABSENT]\"
 done
-echo -en \"\\\n$MSGSD Input Pattern(s) (NAME Or GBoardThemes|GBoardT|GBoa):\"
+echo -en \"\\n$MSGSD Input Pattern(s) (NAME Or GBoardThemes|GBoardT|GBoa):\"
 read input
 echo
 for MODULES in \$(MMODULES | grep -v \<None\> || :); do
@@ -9659,18 +9659,18 @@ done
 }
 
 MMNT() {
-echo -e \"$MSGSD Status Magisk Mount\\\n\"
+echo -e \"$MSGSD Status Magisk Mount\\n\"
 [ -f $NVBASE/magisk.img ] && { MCHANGER auto_mount ON OFF || :; } \
 || MCHANGER skip_mount OFF ON
 }
 
 MDISABLE() {
-echo -e \"$MSGSD Status ON/OFF\\\n\"
+echo -e \"$MSGSD Status ON/OFF\\n\"
 MCHANGER disable OFF ON
 }
 
 MREMOVE() {
-echo -e \"$MSGSD Mark For Removal ([X])\\\n\"
+echo -e \"$MSGSD Mark For Removal ([X])\\n\"
 MCHANGER remove X \" \"
 }
 
@@ -9709,7 +9709,7 @@ MAGISKVC=\"\$(grep -m1 \"^MAGISK_VER_CODE=\" \"$IPDMM/util_functions.sh\")\"
 elif [ -d $NVBASE/magisk ] && [ -f $NVBASE/magisk/util_functions.sh ]; then
 MAGISKVC=\"\$(grep -m1 \"^MAGISK_VER_CODE=\" \"$NVBASE/magisk/util_functions.sh\")\"
 else
-echo -e \"$MSGSD No Magisk Installation Found Or Installed Version Is Not Supported!\\\n\"
+echo -e \"$MSGSD No Magisk Installation Found Or Installed Version Is Not Supported!\\n\"
 exit 1
 fi
 clear
@@ -9730,7 +9730,7 @@ $MSGCS
 read opt
 echo
 case \$opt in
-l | L) echo -e \"$MSGSD Installed Modules\\\n\"; MMODULES;;
+l | L) echo -e \"$MSGSD Installed Modules\\n\"; MMODULES;;
 c | C) MCORE;;
 m | M) MMNT;;
 d | D) MDISABLE;;
@@ -9740,7 +9740,7 @@ q | Q) exit 0;;
 esac
 break
 done
-echo -en \"\\\n$MSGSD Press <Enter> To Continue, \\\"q <Enter>\\\" To Quit \"
+echo -en \"\\n$MSGSD Press <Enter> To Continue, \\\"q <Enter>\\\" To Quit \"
 read opt
 [ -z \"\$opt\" ] || exit 0
 echo
@@ -9844,7 +9844,10 @@ done < "$DETACHCFG"
 fi
 fi
 
-MSSERVICE -s "if [ -f $STORAGE/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/DETACH*)\"; FINDDETACHCFG=true; else for f in \$(ls $STORAGE); do if [ -f $STORAGE/\$f/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/\$f/DETACH*)\"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ \$FINDDETACHCFG != true ]; then echo \"com.google.android.youtube\" > $STORAGE/DETACH.conf; DETACHCFG=\"$STORAGE/DETACH.conf\"; fi
+$ECHO "#/sbin/sh
+while true; do
+if [ \$(getprop sys.boot_completed) -eq 1 ]; then
+if [ -f $STORAGE/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/DETACH*)\"; FINDDETACHCFG=true; else for f in \$(ls $STORAGE); do if [ -f $STORAGE/\$f/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/\$f/DETACH*)\"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ \$FINDDETACHCFG != true ]; then echo \"com.google.android.youtube\" > $STORAGE/DETACH.conf; DETACHCFG=\"$STORAGE/DETACH.conf\"; fi
 
 SET_PERM() {
 chown \$2:\$3 \$1 || return 1
@@ -9864,7 +9867,7 @@ pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobSer
 pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService\" >&2
 cmd appops set --uid $VENDINGPKG GET_USAGE_STATS ignore
 pkill -f \"$VENDINGPKG\"
-echo -e \"\\\n\" >> \$DETACHCFG
+echo -e \"\\n\" >> \$DETACHCFG
 
 if [ \"\`grep -v '#' \$DETACHCFG\`\" ]; then
 echo \"Detaching Packages\"
@@ -9887,7 +9890,10 @@ PKGNAME=\"\`echo \$PKGNAME | cut -c 2-\`\"
 \$SQLITE3 $VENDINGLOCDB \"UPDATE appstate SET auto_update = '1' WHERE package_name = '\$PKGNAME'\"
 fi
 done < \"\$DETACHCFG\"
-fi"
+fi
+break
+fi
+done" > $MODPATH/$MODID/service.sh
 
 SET_PERM_RM -msgdi
 UIP "Usage:" "Run \"su -c DETACH\" In Terminal On BootMode"
