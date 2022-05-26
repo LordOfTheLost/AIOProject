@@ -1,21 +1,33 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 23.05.22 (81) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.05.2022/AIOPFMD-23.05.22-%2881%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1BW1RTfg6VjVgIydxQa35dr7UtNqW-Ewz/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/87">TG</a>
+* Версия AIOPFMD: 26.05.22 (82) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/26.05.2022/AIOPFMD-26.05.22-%2882%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/10dsDOigoqmWRcUk44fAa3Q9ASePAL7Mn/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/88">TG</a>
 * Русский интерфейс: Нет, и не будет/не имеет смысла (а описание на русском во цЫрк).
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64.
 	- Установленный BB для некоторых модулей (в основном, которые используют терминал или имеют сложные shшники);
 	- Третий патч LP для оверлеев системы и/или лаунчеров (рекомендуется, но может и нет (рандом));
-	- SELinux в Permissive (для аудиомодов как минимум (с приложениями на такой же функционал идите нахуй));
-	- Enabling Hidden Api Policy (для некоторых аудиомодов как минимум (Android 11+)).
+	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй));
+	- Enabling Hidden Api Policy (для аудиомодов с UI (Android 11+)).
 * В общем что делает патч: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details>
   <summary>Changelog</summary>
 
+#### 26.05.22 (82) ####
+* В Killlogger убран выбор на dumpsys;
+* Удалены ко всем хуям:
+	- Riru LSPposed;
+	- Riru;
+	- Other Hosts;
+* Улучшение патчинга в Bootmode для Dolby Atmos и вернул проверку на SELinux так как он нужен для правильной работы;
+* CR Launcher обновлен до v1.5 от 24.05;
+* Добавлена установка Energized Hosts Unified (721000+ строк) от 26.05.2022;
+* Дописал описания во многие module.prop для модулей;
+* В AIST изменения от v1.6.11 T18.
+* Пару других мелких фиксов и улучшений.
 #### 23.05.22 (81) ####
 * Исправлено правильное создание модулей при некорректном echo в прошивке:
 	- AML;
@@ -35,7 +47,7 @@
 * Corvus Launcher обновлен до v1.1 - от 22.05 с Corvus S3.0-Revenant с Theme Picker;
 * CR Launcher обновлен до v1.4 - Theme Picker от 22.05 с Corvus S3.0-Revenant;
 * Media UI Sounds обновлен до v1.7 - добавил звуки из LiteOS;
-* Фикс эхо/шуршания микрофона для Mi8 в AIST и NL.
+* Фикс эхо/шуршания микрофона для MI8 в AIST и NL.
 #### 19.05.22 (79) ####
 * Dolby Atmos обновлен до v1.1:
 	- Фикс полного отвала на некоторых ублюдских прошивках по типу LOS;
@@ -235,7 +247,7 @@
 * LSPosed для Riru и ZYGISK обновлен до v1.7.2 (6379);
 * Wi-Fi & Mobile Data QS Style Changer обновлен до v1.1 - фикс файла проверки статуса модуля;
 * В Режим удаления/replace/restore добавлено приложение в обычный лист: Firewall и CtsShimPrivPrebuilt;
-* AIST обновлен до v1.3 со всеми улучшениями и фиксом отвала AAC для Mi8 и не только;
+* AIST обновлен до v1.3 со всеми улучшениями и фиксом отвала AAC для MI8 и не только;
 * PATCH_AUDIO_PLATFORM_INFO для NLSound и AIST был изменен;
 * В Kill Logger добавлен replace бинарника atrace;
 * Добавлена установка Shamiko v0.4.3 (102);
@@ -489,7 +501,7 @@
 * NLSound в NL убрал выбор на Full и Lite версию PATCH_MIXER - пока будет только Lite иначе может быть отвал. И пару фиксов что нашел;
 * А нормальных изменений пока нет и в ближайшие недели а может месяцы не будет.
 #### 23.08.21 (55) ####
-* NLSound обновлен до v2.6 BETA со многими фиксами, улучшениями и доработками. Убран выбор Disable Useless Fluence для Mi8 из за отвала микрофона (у кого так же на других телефонах - можете сообщить);
+* NLSound обновлен до v2.6 BETA со многими фиксами, улучшениями и доработками. Убран выбор Disable Useless Fluence для MI8 из за отвала микрофона (у кого так же на других телефонах - можете сообщить);
 * LSPosed не обновляю до v1.5.1 (5898) по причине умершего разраба после пары отвалов UI и полного умирания телефона;
 * Некоторые улучшения для будущих патчей/функций а может и нет...
 #### 20.08.21 (54) ####
@@ -610,7 +622,7 @@
 * В пункт установки приложений добавлен отсев папок внутри чтобы не было полного отвала;
 * PillsOverlay обновлен до 1.7 - по просьбам вернул Full Hide/Immersive;
 * NLSound обновлен до v2.5.1 BETA;
-* Добавил USB Tethering Fix - фикс отвалов всего из за раздачи интернета по USB для Mi8;
+* Добавил USB Tethering Fix - фикс отвалов всего из за раздачи интернета по USB для MI8;
 * В Режим удаления/replace/restore добавлены приложения в обычный лист: OneOSSpace и OneOSSTATS;
 * Status Bar Padding обновлен до v1.2 - переход на оверлеи и так же с установкой как не Magisk;
 * Добавлена установка Detach3 v3.07 - пока-что из под своего архива;
@@ -1079,7 +1091,7 @@
 * Другие мелкие изменения.
 #### 22.11.20 (14) ####
 * Time To Live Fix обновлен до v2.5;
-* В увеличение количества иконок добавлен выбор на 34dip в ландшафте для DSB (Mi8 и Poco F1);
+* В увеличение количества иконок добавлен выбор на 34dip в ландшафте для DSB (MI8 и Poco F1);
 * UIROUNDED обновлен до v1.4 (рандомная работа не перестает удивлять) - улучшения и доп скругления;
 * в UIROUNDED добавлена альт версия для "особых" прошивок по типу Nusantara 2.4 (иногда используется с выбором в расширенных настройках на большое скругление если такой выбор есть);
 * в UIROUNDED добавлены оверлеи на 35 и 40 dip - не везде адекватно работает. А где работает там телефон превращается в OneUI;
@@ -1185,7 +1197,7 @@
 * Добавлены новые пути для Android 11 (спасибо Google за /system_root/system/system_ext и only read /sbin);
 * В режим удаления добавлены приложения: Browser2, AndroidAutoStubPrebuilt, AndroidAutoStub, MiMover, FDroid, FDroidPrivilegedExtension, Focus, MozillaNlpBackend, ColtPapers, EnigmaLauncher, OmniSwitch, QPGallery, DevicePersonalizationPrebuiltPixel4, DevicePolicyPrebuilt, FilesPrebuilt, GoogleCamera, HelpRtcPrebuilt, MatchmakerPrebuiltPixel4, NexusWallpapersStubPrebuilt2019, NovaBugreportWrapper, ScribePrebuilt, SoundAmplifierPrebuilt, YouTubeMusicPrebuilt, ShiftPapers, OPWidget, OPWeather, Chrome-Stub, RevengeMessages, RevengeOSCalculator и RetroMusicPlayerPrebuilt;
 * В некоторые аудиомоды добавлен Lib Workaround с авто определением;
-* Добавлено включение/Отключение IR камеры для разблокировки по лицу (только если у вас есть com.motorola.faceunlock) для поддерживаемых прошивок/телефонов по типу Mi8/PocoF1;;
+* Добавлено включение/Отключение IR камеры для разблокировки по лицу (только если у вас есть com.motorola.faceunlock) для поддерживаемых прошивок/телефонов по типу MI8/POCOF1;;
 * Другие множественные улучшения за пару месяцев которые я просто уже забыл.
 #### 19.07.20 (9) ####
 * Global Optimized GPS - исправлен бэкапы и восстановление файлов если ставился не как ММ;
@@ -1554,7 +1566,7 @@
 				- 6dip;	
 * Пункт (MAGISK) (NOT MIUI) (10) - (GPay Power Menu) (он же альтернатива меню выключения расположена с низу);
 * Пункт (ALL) (10-12.1) (\\) - (RoundedUI) для скругления системы, лаунчеров и приложений которые подтягивают строки из системы (и это лучше VGM);
-* Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Burn In Protection) включает смещение пикселей в статус баре и не только (работает только на тех прошивках, в которых это встроено но отключено):
+* Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Burn In Protection) включает смещение пикселей в статус баре, жестовой зоне/зоне NavBar и AOD (работает только на тех прошивках, в которых это встроено но отключено):
 	- Время смещения (в секундах):
 		- Значение 20;
 		- Значение 40;
@@ -1575,7 +1587,7 @@
 										- 20dip;
 										- 40dip;
 										- 60dip;
-* Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Notification Side Padding) регулирует расстояние между шторкой и краями экрана:
+* Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Notification Side Padding) регулирует расстояние между шторкой и краями экрана/уведомлениями шторки и уведомлений на экране блокировки:
 	- Значение 0dip (как у OneUI);
 	- Значение 5dip;
 	- Значение 10dip;
@@ -1661,7 +1673,7 @@
 	- Значение 30;
 	- Значение 35;
 	- Значение 40;
-* Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (SUI Rounded Size) (не путать с RoundedUI) для скругления по краям экрана если доступно прошивкой;
+* Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (SUI Rounded Size) (не путать с RoundedUI) для скругления экрана по краям если доступно прошивкой;
 	- Значение 10;
 	- Значение 20;
 	- Значение 30; (12+)
@@ -1726,7 +1738,7 @@
 * Пункт (ALL) (NOT MIUI) (12.0-12.1) - (Status Bar Privacy Dot) - можно как полностью отключить точку приватности и освободить пространство справа, так и выбрать оптимальный вариант где и точка будет и места больше:
 	- Disable;
 	- Optimized;
-* Пункт (MAGISK) (NOT MIUI) (11-12.1) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает эффект размытия в шторке и не только;
+* Пункт (MAGISK) (NOT MIUI) (11-12.1) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает эффект размытия в шторке и в некоторых других местах системы;
 * Пункт (ALL) (NOT MIUI) (\\) - (Boot Animation) смена анимации при запуске телефона на одну из:
 	- Pixel:
 		- Black;
@@ -2348,11 +2360,11 @@
 
 <h3 align=center>AdBlock/Hosts</h3>
 
-* Пункт (ALL) (\\) - (AdBlock/Hosts) установка одного из пяти Hosts файлов:
+* Пункт (ALL) (\\) - (AdBlock/Hosts) установка одного из четырех Hosts файлов:
 	- Пустой Hosts (Отключение блокировки);
-	- Hosts из AdAway (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
-	- От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
-	- Альтернативный (в нем строки из MiRoom и других) (190000+ строк);
+	- AdAway Hosts (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
+	- Hosts Unified От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
+	- Energized Hosts Unified (721000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a>
 
 <h3 align=center>Net: GPS/WIFI/TTL/DNS/APAUSBTF</h3>
 
@@ -2364,9 +2376,9 @@
 	- По отдельности:
 		- Google DNS;
 		- CloudFlare DNS;
-* Пункт (ALL) (MI8) - (AP & USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для Mi8;
+* Пункт (ALL) (MI8) - (AP & USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для MI8;
 
-<h3 align=center>Utilities: BB/SELC/CC/MMFR/DETACH</h3>
+<h3 align=center>Utilities: BB/SELC/CC/MMFR/DETACH/LSPosed</h3>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin (использование: su -c busybox в терминале (BootMode));
 * Пункт (MAGISK) - (SELinux Changer) для аудиомодов и не только если надо:
@@ -2392,6 +2404,7 @@
 	- d) Detaching;
 	- l) Show DETACH List;
 	- q) Quit;
+* Пункт (MAGISK) (TERMINAL) (8.1-12.1) (ZYGISK) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> || <a href="https://t.me/LSPosedArchives">TG</a> - (LSPosed) для многих модулей:
 
 <h3 align=center>Other: FA/LED/FSFM/UAA/SBU/GASL</h3>
 
@@ -2430,13 +2443,6 @@
 * Пункт (ALL) - (Show Battery Usage) проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
 * Пункт (MAGISK MANAGER) - (Get All Settings List) снятие Settings List для тестов;
 
-<h3 align=center>Riru/LSPosed</h3>
-
-* Пункт (MAGISK) (8.1-12.1) <a href="https://edxp.meowcat.org">Official Site</a> || <a href="https://github.com/RikkaApps/Riru">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95330581">4PDA</a> - (Riru Core) для многих модулей;
-* Пункт (MAGISK) (8.1-12.1) (Riru Core Or ZYGISK) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> || <a href="https://t.me/LSPosedArchives">TG</a> - (LSPosed) для многих модулей:
-	- For ZYGISK;
-	- For Riru;
-
 <h3 align=center>Tweaks: FGS/BP/KL/UGMSD/USGP/VS</h3>
 
 * Пункт (MAGISK/MAGISK MANAGER) <a href="https://4pda.to/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - (Force Google Sync) принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
@@ -2447,7 +2453,6 @@
 * Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости, Force Fake Encryption и SurfaceFlinger Buffers на 3;
 * Пункт (ALL) (|\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105651495">4PDA</a> - (Kill Logger) для отключения и убивания многих процессов/бинарников сбора логов:
 	- Оставить возможность снимать logcat или нет <a href="https://developer.android.com/studio/command-line/logcat">Developer Android</a>;
-	- Оставить возможность использовать dumpsys или нет <a href="https://developer.android.com/studio/command-line/dumpsys">Developer Android</a>;
 * Пункт (MAGISK) - (Force 4X MSAA) для включения 4X MSAA в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Disable HW Overlays) для включения отключение наложений после перезагрузки в настройках разработчика;
 * Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...);
@@ -2472,7 +2477,7 @@
 	- Значение 0.9;
 	- Значение 1.0 (В основном сток);
 * Пункт (ALL) (10-12.1) - (GPU Rendering) для принудительного выставления если нет переключателя в настройках для разработчика. Переключает принудительно настройки графического рендеринга: OpenGL (По умолчанию), OpenGL Skia (более быстрее чем OpenGL), OpenGL Skia Vulkan (самый быстрый вариант но с возможными артефактами);
-* Пункт (ALL) (\\) (//) - (Volume Steps) для изменения шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов, громкость будильника:
+* Пункт (ALL) (\\) (//) - (Volume Steps) для изменения шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов и громкость будильника:
 	- Редактировать доступные значения вместе;
 	- Редактировать каждое значение отдельно;
 		- Значение 10;
