@@ -1,21 +1,97 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 26.05.22 (82) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/26.05.2022/AIOPFMD-26.05.22-%2882%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/10dsDOigoqmWRcUk44fAa3Q9ASePAL7Mn/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/88">TG</a>
-* Русский интерфейс: Нет, и не будет/не имеет смысла (а описание на русском во цЫрк).
+* Версия AIOPFMD: 11.07.22 (83) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/11.07.2022/AIOPFMD-11.07.22-%2883%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/134NJht9qs8btDkNQywOGlwTAoCnzxkOc/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/90">TG</a>
 * Что нужно/может потребоваться:
-	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
+	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh или ASH-BASH (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64.
+	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет)
 	- Установленный BB для некоторых модулей (в основном, которые используют терминал или имеют сложные shшники);
-	- Третий патч LP для оверлеев системы и/или лаунчеров (рекомендуется, но может и нет (рандом));
 	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй));
-	- Enabling Hidden Api Policy (для аудиомодов с UI (Android 11+)).
+	- Enabling Hidden Api Policy (для ViperFX (Android 11.0));
+	- Audio Modification Library если стоит Dolby и ViperFX.
+	- Audio Library Crackling Fix если есть проблемы с ситемыными звуками/уведомлениями (хрип или треск);
 * В общем что делает патч: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details>
   <summary>Changelog</summary>
 
+#### 11.07.22 (83) ####
+* В Magisk 25.1 сломали вывод и теперь при обновлении вывода он всегда будет находится в верхнем положении что убивает навигацию по патчу;
+* Dolby Atmos обновлен до v1.3:
+	- Изменена иконка (пока такая);
+	- Фикс Deep Sleep на некоторых прошивках (возможно это фиксит не только Deep Sleep);
+	- Фикс конфликта аудиопатчинга;
+	- Убраны далбинги и улучшен патчинг;
+	- Фикс UUID dirac_gef
+	- Выбор Disabling Ultra Low Latency убран из за полной переделки что позволяет патчить конфликты;
+	- Интеграция с System Audio Quality;
+	- Фикс черных экранов для Miui с репатчингом и двойной перезагрузкой при перепрошиве /vendor;
+	- Пару других улучшений;
+* ViperFX обновлен до v1.4
+	- В v2.5.0.5 и v2.7.1.6 фикс иконки на некоторых прошивках/темах;
+	- Добавлены xml для Battery Unrestricted;
+	- Убрана установка APK в BOOTMODE чтобы кокеры не сосали;
+	- Пару других улучшений;
+* Изменения по NLSound и AIST:
+	- Убран выбор между патчингом и заменой media_codecs - теперь есть только выбор патчить или нет;
+	- Улучшение и полная переделка пункта выше;
+	- Убраны уведомления первого патчинга при копировании;
+	- Некоторые другие улучшения;
+* В NLSound фикс UUID dirac_gef и убран конфликт dirac_gef c ViperFX и Dolby;
+* В AIST изменения от v1.6.12 T144:
+	- Фикс майнинга и отвала audioserver;
+	- Убран вывод звука "в/через пизду" что приводило к максимальной громкости даже при DND;
+	- Остальными улучшениями;
+* Energized Hosts обновлен от 10.07.2022;
+* hosts файл с AdAway обновлен от 11.07.2022;
+* Brutal Busybox обновлен до v1.36.0.1;
+* Из PATCHMODE удалены: MCMODE, TKEY и KMETHOD;
+* По навигации в патче:
+	- Удалены все способы навигации ко всем хуям;
+	- Добавлен один новый и он будет использоваться по умолчанию всегда;
+	- Остальные вариации от основного возможно будут позже (или уже не будут если Magisk не фиксанут свой высер с выводом);
+* Corvus Launcher обновлен до v1.2 - от 10.07 с Corvus S3.2-Vindicate с Theme Picker;
+* CR Launcher обновлен до v1.6 - лаунчер от 09.07 с CR 8.6 и Theme Picker от 10.07 с Corvus S3.2-Vindicate;
+* Все рекомендуемые патчи будут устанавливается автоматически без выборов кроме патчей LP разумеется;
+* Добавлена надпись установлен модуль или нет в виде: [V] - установлен или [X] - не установлен;
+* Hosts файлы и Launcherы в апдейтере теперь будут сами обновятся без перевыборы на них же (логично);
+* В Режим удаления/replace/restore добавлено приложение в обычный лист: SimIcons, wellbeingconf, googleconf, SparkWallpaperStub и CameraExtensionsProxy;
+* Добавлена установка Sushi Launcher из riceDroid 3.0 от 08.07 с Theme Picker от 10.07 с Corvus S3.2-Vindicate;
+* Возвращение пункта из самых первых версий AIO - Добавлена установка Audio Library Crackling Fix для исправления потрескивания аудиобиблиотеки для аудиомодулей, стоковых эквалайзеров или библиотек с проблемами и потрескиванием системного звука/уведомлений - автоустанавливается если будет необходим;
+* AML, NFQTTL и Brutal BusyBox сменили MODID;
+* Улучшения по AML:
+	- AML теперь автоустанавливается если будет необходим;
+	- Так же после смены MODID и улучшений он может быть не совместим с некоторыми аудиомодулями не из AIO (соболезную) но с поддержкой старых AML скриптов из других модулей;
+	- Улучшения и фиксы многих команд;
+	- При отключении теперь работает как удаление модуля а не создает отвал пизды (логично сука);
+	- Интеграция с ALCF, System Audio Quality, Increase Bitrate и Dolby Atmos;
+	- Вывод на уровень POST доп sh;
+	- Поддержка с acdb удалена;
+	- Добавлена поддержка dirac_gef из NLSound;
+	- Версия теперь 4.2;
+	- Куча других улучшений и переделок;
+* Boot Animation обновлен до v1.8 - добавлена анимация из VoidUI Eternity;
+* Lawnchair обновлен до 12.1.0 Dev (#988) - обновлен до v2.3:
+	- Добавлена установка Lawnfeed;
+	- Добавлена установка Lawnicons V2 (1000+ Icons);
+* Lawnchair для R-S удален;
+* RoundedUI обновлен до v3.0 - добавлена одна строка скругления для 12.0+;
+* Status Bar Privacy Dot обновлен до v1.1 - добавлена одна строка для скругления;
+* System Audio Quality обновлен до v2.1:
+	- Убраны конфликты с другими аудиомодулями;
+	- Добавлена установка как не MM;
+	- Интеграция с Dolby Atmos;
+* Increase Bitrate обновлен до v1.1 - убраны возможные конфликты с неизвестными аудиомодулями;
+* Media UI Sounds теперь устанавливается на MIUI;
+* Фикс chmod на sh;
+* Исправлены пути MAGISK для старых устройств;
+* Фикс правильного показа пунктов для Miui;
+* Патчи LP больше не нужны;
+* Switch On/Off Face UnLock IR Camera обновлен до v1.9 - фикс работы для некоторых прошивок типо RiceDroid;
+* Mount на все нужные разделы (правильно работать в RECOVERY при условии нормального RECOVERY и fstab);
+* И ещё очень много всего остального.
 #### 26.05.22 (82) ####
 * В Killlogger убран выбор на dumpsys;
 * Удалены ко всем хуям:
@@ -26,7 +102,7 @@
 * CR Launcher обновлен до v1.5 от 24.05;
 * Добавлена установка Energized Hosts Unified (721000+ строк) от 26.05.2022;
 * Дописал описания во многие module.prop для модулей;
-* В AIST изменения от v1.6.11 T18.
+* В AIST изменения от v1.6.11 T18;
 * Пару других мелких фиксов и улучшений.
 #### 23.05.22 (81) ####
 * Исправлено правильное создание модулей при некорректном echo в прошивке:
@@ -47,7 +123,7 @@
 * Corvus Launcher обновлен до v1.1 - от 22.05 с Corvus S3.0-Revenant с Theme Picker;
 * CR Launcher обновлен до v1.4 - Theme Picker от 22.05 с Corvus S3.0-Revenant;
 * Media UI Sounds обновлен до v1.7 - добавил звуки из LiteOS;
-* Фикс эхо/шуршания микрофона для MI8 в AIST и NL.
+* Фикс эхо/шуршания микрофона для MI8 в AIST и NLSound.
 #### 19.05.22 (79) ####
 * Dolby Atmos обновлен до v1.1:
 	- Фикс полного отвала на некоторых ублюдских прошивках по типу LOS;
@@ -73,11 +149,11 @@
 	- Фикс полного отвала системных звуков и отвала телефона при увеличении звука;
 	- Изменения от 1.6 Т13 (шыза);
 	- Остальные фиксы и улучшения;
-* Фикс отвалов звука на некоторых ушах в NL и пару других улучшений;
+* Фикс отвалов звука на некоторых ушах в NLSound и пару других улучшений;
 * Улучшения по работе/патчингу AML (хотя по факту там надо 80% всего переделать но мне пока лень);
 * Улучшение по работе/патчингу ViperFX;
 * Добавлена установка Dolby Atmos от ZTE версии DAX2 2.6.0.28 или DAX3 3.5.1.28 (потом подумаю может выбор дам но DAX3 лучше по всему а пока как определит прошивка такая будет версия):
-	- Добавлен выбор на конфликт между AIST и NL (если спросит) - если ни AIST или NL не пользуетесь можно выбирать, а так половина файлов улетит просто в мусор и с AML улетят почти все;
+	- Добавлен выбор на конфликт между AIST и NLSound (если спросит) - если ни AIST или NLSound не пользуетесь можно выбирать, а так половина файлов улетит просто в мусор и с AML улетят почти все;
 	- Улучшения по всему но ещё есть что улучшать;
 	- Конфинг модуля ACDB не создаю - 99,9% тех кто ставит модули никогда не заглядывает в папку модуля и даже не знает что такое ACDB и НАХУЯ ТАМ ЭТОТ КОНФИНГ;
 	- Поддержку ACDB не добавлял вообще - если вдруг будет надобность добавлю его в AIO и адаптирую под все аудиомодули;
@@ -147,7 +223,7 @@
 * LSPosed для Riru и ZYGISK обновлен до v1.8.2 (6519);
 * Boot Animation обновлен до v1.5 - добавлена анима с Awaken;
 * В Режим удаления/replace/restore добавлены приложения в обычный лист: EvoEgg, OdadPrebuilt и BetterBug;
-* NLSound обновлен до v3.3 STABLE - все пункты оставил как были и без аддона. Фиксы и прочие. Если следующая версия будет с такими же шарадами говна - NL будет удален;
+* NLSound обновлен до v3.3 STABLE - все пункты оставил как были и без аддона. Фиксы и прочие. Если следующая версия будет с такими же шарадами говна - NLSound будет удален;
 * На 12ках+ многие патчи могут работать на половину или вообще НИКАК - это зависит от прошивки и пока не поставишь не узнаешь;
 * APPRMLIST.sh теперь может и будет называться APPRMLIST.conf и так же расположен на одной папке выше от внутренней памяти;
 * KMETHOD переключён принудительно на N - у кого будут наблюдаться проблемы с выборами в самом низу написано что и для чего настраивается в PATCHMODE или удалите его - пока так, а позже я сделаю опять проверки на проверки для тех кто умудряется начать "не так";
@@ -468,7 +544,7 @@
 * Фикс touch libvolumelistener в ACP;
 * Добавлена установка AIST v1.1:
 	- Многое переделано и улучшено по сравнению с оригиналом;
-	- Добавлено пару новых вариантов по сравнению с оригиналом (в основном с NL так как патчинг почти одинаков)
+	- Добавлено пару новых вариантов по сравнению с оригиналом (в основном с NLSound так как патчинг почти одинаков)
 	- Не добавлялись трешовые оригинальные пункты - только на звук;
 * LSPosed обновлен до v1.6.2 (6152);
 * Добавлено множество новых проверок в нужных местах. Так что теперь в некоторых случаях воздух находиться и патчится не будет. Так же возможно исчезнут подпункты которые логично будут не доступны из того что нечего патчить;
@@ -498,7 +574,7 @@
 * Оба Detach перемещены в EOL Addon;
 * Исправлена функция MHIDE которая использовалась в патчах на SafetyNet и GayFix.
 #### 23.08.21 (56) ####
-* NLSound в NL убрал выбор на Full и Lite версию PATCH_MIXER - пока будет только Lite иначе может быть отвал. И пару фиксов что нашел;
+* NLSound убрал выбор на Full и Lite версию PATCH_MIXER - пока будет только Lite иначе может быть отвал. И пару фиксов что нашел;
 * А нормальных изменений пока нет и в ближайшие недели а может месяцы не будет.
 #### 23.08.21 (55) ####
 * NLSound обновлен до v2.6 BETA со многими фиксами, улучшениями и доработками. Убран выбор Disable Useless Fluence для MI8 из за отвала микрофона (у кого так же на других телефонах - можете сообщить);
@@ -1754,11 +1830,12 @@
 	- Spark;
 	- Awalen;
 	- Zephyrus;
+	- VoidU;
 			- FPS:
 				- 60;
 				- 30;
 * Пункт (ALL) - (IOS EMOJI) установка IOS EMOJI (ну логично блять);
-* Пункт (ALL) (NOT MIUI) (\\) - (Media UI Sounds) установка звуков из разных оболочек и прошивок:
+* Пункт (ALL) (\\) - (Media UI Sounds) установка звуков из разных оболочек и прошивок:
 	- Masik (Miui 12, Android 10):
 		- Альтернативный звук разблокировки из Masik;
 	- OnePlus (OxygenOS);
@@ -1768,31 +1845,33 @@
 	- Spark (12.3);
 	- Arcana (6.0);
 * Пункт (MAGISK & LEGACY) (NOT MIUI) (10-12.1) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
-* Пункт (MAGISK) (NOT MIUI) (12.0-12.1) - (Wi-Fi & Mobile Data QS Style Changer) - изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
+* Пункт (MAGISK) (NOT MIUI) (12.0-12.1) - (Wi-Fi & Mobile Data QS Old Style) - изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
 	- Новый;
 	- Старый;
 
-<h3 align=center>Apps: Lawnchair/Shady/CR/Corvus/IA</h3>
+<h3 align=center>Apps: Lawnchair/Shady/CR/Corvus/Sushi/IA</h3>
 
 * Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
-	- Установка Lawnchair (R/S/SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+	- Установка Lawnchair (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка ShadyLauncher (Q/R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка CRLauncher (SL) <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
-	- Установка CorvusLauncher (SL) <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
+	- Установка CRLauncher (SL) <a href="https://github.com/crdroidandroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
+	- Установка CorvusLauncher (SL) <a href="https://github.com/Corvus-R/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
+	- Установка Sushi Launcher (SL) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
 * Пункт (ALL) (\\) - (Install App In /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть apk файлы (apks не поддерживает);
 	- Установка в Data;
 	- Установка в System;
 		- С подтверждением для каждого;
 		- Без подтверждением;
 	
-<h3 align=center>Audio: VFX(P)/DOLBY/NL/AIST/SAQ/IB/AML</h3>
+<h3 align=center>Audio: VFX(P)/DOLBY/NLSOUND/AIST/SAQ/IB/AML/ALCF</h3>
 
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6 и  v2.7.2.1 в зависимости от версии Android;
 * Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX.
-* Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos RC1 или RC4:
-	- Disabling Ultra Low Latency Playback;
-	- DAX App;
-* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/nlsound_updates">TG</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - (NLSound) улучшает качество звука:
+* Пункт (MAGISK) - (Dolby Atmos) установка ZTE Dolby Atmos:
+	- App:
+		- DAX3 v3.5.1.2;
+		- DAX2 v2.6.0.28;
+* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/nlsound_updates">TG Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - (NLSound) улучшает качество звука:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
@@ -1803,23 +1882,20 @@
 	- PATCH_DEVICE_FEATURES;
 	- PATCH_DIRAC;
 	- GENERAL_TWEAKS;
-	- PATCH_MIXER:
-		- Patch media_codecs (может быть отвал);
-		- Replace media_codecs;
+	- PATCH_MIXER;
 	- PATCH_IMPROVE_BLUETOOTH;
-	- PATCH_IO_POLICY;
 	- PATCH_AUDIO_POLICY;
-* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> <a href="https://t.me/AIST_UPDATES">TG Stable Update</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
+	- PATCH_AUDIO_POLICY_CONFIGURATION;
+	- PATCH_MEDIA_CODECS;
+* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
-	- Fixing 96kHz For Audio Output;
-	- Replacing 16 Bit With 24 Bit;
-		- Выбор для Mixer:
-			- Patch media_codecs (может быть отвал);
-			- Replace media_codecs;
+	- PATCH_FIXING_KHZ:
+	- PATCH_MEDIA_CODECS;
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общие качество звука;
 * Пункт (ALL) - (Increase Bitrate) патчит все файлы media_profiles*.xml в /vendor - улучшает качество записи аудио во многих местах;
 * Пункт (MAGISK) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - (Audio Modification Library) исправляет конфликты вывода аудиомодов между друг другом для их нормальной работы вместе;
+* Пункт (MAGISK) - (Audio Library Crackling Fix) для исправления потрескивания аудиобиблиотеки для аудиомодулей, стоковых эквалайзеров или библиотек с проблемами и потрескиванием системного звука/уведомлений;
 
 <h3 align=center>Removal: RSL/RSO/RSTA/RWFSB</h3>
 
@@ -1878,6 +1954,7 @@
 	- AndroidAutoStubPrebuilt
 	- AndroidForWork
 	- AudioFX
+	- BasicDreams
 	- BatteryTile
 	- BetterBug
 	- BookmarkProvider
@@ -1893,6 +1970,7 @@
 	- CalendarGoogle
 	- CalendarGooglePrebuilt
 	- Camera2
+	- CameraExtensionsProxy
 	- CameraGo
 	- CarHomeGoogle
 	- CarrierServices
@@ -2160,6 +2238,7 @@
 	- SecurityHubPrebuilt
 	- SecurityLogAgent
 	- ShiftPapers
+	- SimIcons
 	- Simple-Calendar
 	- SimpleCalendar
 	- SimpleGallery
@@ -2169,6 +2248,7 @@
 	- Snap
 	- SnapdragonMusic
 	- SoundAmplifierPrebuilt
+	- SparkWallpaperStub
 	- SprdQuickSearchBox
 	- StatusBarLyricExt
 	- Street
@@ -2222,6 +2302,7 @@
 	- facebook-appmanager
 	- facebook-installer
 	- facebook-services
+	- googleconf
 	- greenguard
 	- iWnnIME
 	- iWnnIME_Kbd_White
@@ -2232,6 +2313,7 @@
 	- messaging
 	- stats
 	- talkback
+	- wellbeingconf
 </details>
 
 <details> 
@@ -2241,7 +2323,6 @@
 * AndroidMigratePrebuilt
 * AndroidPlatformServices
 * BackupRestoreConfirmation
-* BasicDreams
 * BrowserProviderProxy
 * BuiltInPrintService
 * CalendarProvider
@@ -2364,7 +2445,7 @@
 	- Пустой Hosts (Отключение блокировки);
 	- AdAway Hosts (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts Unified От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
-	- Energized Hosts Unified (721000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a>
+	- Energized Hosts Unified (700000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a>
 
 <h3 align=center>Net: GPS/WIFI/TTL/DNS/APAUSBTF</h3>
 
@@ -2495,38 +2576,39 @@
 
 <h3 align=center>Что на чем и где было протестировано</h3>
 
-* Патчи были протестированный на версиях Android: 5.1.1, 6.0.1, 7.1.2, 8.1, 9.0, 10.0, 11.0, 12.0, 12.1 и Miui 10, 11, 12, 12.5 (соответственно от пунктов что показываются в патче).
+* Патчи были протестированный на версиях Android: 5.1.1, 6.0.1, 7.1.2, 8.1, 9.0, 10.0, 11.0, 12.0, 12.1 и Miui 10, 11, 12, 12.5 (соответственно от пунктов что показываются).
 * На девайсах протестировано мною лично: <a href="https://4pda.to/devdb/xiaomi_mi8">MI8</a>, <a href="https://4pda.to/devdb/xiaomi_redmi_note_5_pro">RN5</a>, <a href="https://4pda.to/devdb/redmi_note_7">RN7</a>, <a href="https://4pda.to/devdb/jiayu_s3">Jiayu S3</a>, <a href="https://4pda.to/devdb/samsung_gt_i9500_galaxy_s_4">Samsung Galaxy S4</a>, <a href="https://4pda.to/devdb/sony_xperia_z5_dual">Sony Xperia Z5 Dual</a>, <a href="https://4pda.to/devdb/samsung_galaxy_j3_2016_sm_j320f">Samsung Galaxy J3 SM-J320H</a>, <a href="https://4pda.to/devdb/nomi_i5010_evo_m">Nomi i5010 Evo M</a>.
 
 <h3 align=center>Почему, как и зачем</h3>
 
-* Это пати, который основан на методе выбора "KeyCheck" (выбор патчей/пунктов клавишами громкости) - на данный момент это самый большой патч с данной реализацией (и нет, это работает по похожему принципу который реализован в некоторых патчей для Magisk но по другому и он будет улучшаться).
+* Это патчи, который основан на методе "getevent" - на данный момент это самый большой патч с данной реализацией.
 * Патчи были перенесены и улучшены/переделаны в модули и наоборот со многими вариантами и альтернативами которые тоже будут улучшатся/добавляться.
 * Патчи были созданы благодаря: topjohnwu за Magisk, Open GApps Project за раннюю реализацию логов, BiTGApps Project за раннюю реализацию маунта, Google за кривой высер Android и всех кто создал модули которые здесь имеются и многих пользователей MI8.
 * В дальнейшем будут добавляться множество новых выборов/методов/фиксов/и полезных патчей а также исправление найденных ошибок (нет).
-* Я делал патчи для себя, и выложил для пользователей которым это может будет полезно и такие есть. 
+* Я делал патчи для себя, и выложил для пользователей которым это может будет полезно. 
 * Я тестировал их на своих телефонах но это не означает что мне можно доверять (вдруг я вам /system_root/system/system_ext/product/priv-app/SystemUI форматну), так что Всё, что вы делаете со своим девайсом/телефоном - вы делаете на свой страх и риск.
 * Я понимаю что это читать никто не будет, и я не любитель объяснять или что-то показывать, но я попытался как-то объяснить что и куда/как.
 * Что означает патч прошивается из под своего архива или нет:
 	- Все патчи перенесены/портированы в этот патч.
-	- И почему сток патчи говно - вы прошили прошивку и MAGISK начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему либо как в случае с NL всё полностью сломано;
+	- И почему сток патчи говно - вы прошили прошивку и MAGISK начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему либо как в случае с NLSound всё полностью сломано;
 		- А этот патч это позволяет (кроме некоторых патчей работающих из Bootmode);
 		- Да и уже почти все сток патчи НЕВОЗМОЖНО поставить через RECOVERY из за того что разрабам просто лень делать многие моменты;
 		- Я же стараюсь делать что бы всё было возможно и работало как с MAGISK так и без него параллельно улучшая что реализовано криво теми кто делал модули;
-		- Так же многие модули полностью сломаны и конфликтуют между собою и я эжто "исправляю";
+		- Так же многие модули полностью сломаны и конфликтуют между собою и я это "исправляю";
+		- При отключении многих модулей будет отвал пизды (AML момент) либо ничего не произойдет что не логично а тут это реализовано.
+* Патчи будут добавляться/улучшаться по мере их нахождения/тестирования/времени и желания.
+* Если есть проблемы(желательно с логами если были ошибки или что-то не сработало как надо)/пожелания/предложения писать в <a href="https://t.me/AIOProject_Chat">TG Chat</a> (не надо).
 
 <h3 align=center>Особые надписи и переменные в этих патчах и файле PATCHMODE</h3>
 
 * (М) и/или (MM) - Magisk/Manager/Modules.
-* (R) - Recommended.
+* (R) - Recommended/Рекомендуется к установке/выбору.
+* Надписи возле названий модуля и версии означают: [V] - установлен или [X] - не установлен.
 * PATCHMODE.conf это файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
 	- PMODE: Открывает некоторые тестовые пункты/патчи (в PATCHMODE напротив "PMODE=" написать: U(ser) или D(ebug)) - Прописать только букву - По умолчанию D(ebug).
-	- KMETHOD: Принудительное переключение между старым и новым методом "KeyCheck" (в PATCHMODE напротив "KMETHOD=" написать: N(ew), O(ld) или A(lt) - прописать только букву - По умолчанию N, но после при первом запуске патча без настроенного файла PATCHMODE будет первый бинд, и на каком будет всё нормально - тот и будет по умолчанию прописан в PATCHMODE.
-	- TKEY: Включится вторая проверка (без нее на некоторых устройствах/прошивках бывает дабл кнопок или наоборот отсутствие и невозможность бинда (касается только KMETHOD O(ld)) в PATCHMODE напротив "TKEY=" написать: false или true - По умолчанию false.
 	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
 	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
 	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
-	- MCMODE: Включает или отключает выбор в RECOVERY как установить через MAGISK или нет при DEBUGMODE - По умолчанию false (многие патчи не поддерживаются и это просто как временно-постоянная заглушка так что работа не гарантируется).
 	- ENDMODE: Позволяет вернутся в начало патча без перевыбора если что-то пропустили (выбор в самом конце) - По умолчанию true.
 	- MMUPDC: Добавляет проверку версий MAGISK модулей между патчем и установленными - По умолчанию true.
 	- LEGACYMODE: Включает показ старых/устаревших патчей/функций - По умолчанию false.
@@ -2536,8 +2618,3 @@
 * (|) - Означает что следующий выбор будет в этом подпункте пункта.
 * (/) - Означает что следующий выбор будет последним в этом подпункте пункта с возможность выхода из него и ничего не прошивая.
 * (//) - Если не выбирать этот пункт, будет выход/завершение работы патча.
-
-<h3 align=center>Связь (до связи) и отзывы/пожелания</h3>
-
-* Патчи будут добавляться/улучшаться по мере их нахождения/тестирования/времени и желания.
-* Если есть проблемы(желательно с логами если были ошибки или что-то не сработало как надо)/пожелания/предложения писать в <a href="https://t.me/AIOProject_Chat">TG Chat</a> (не надо).
