@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 11.07.22 (83) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/11.07.2022/AIOPFMD-11.07.22-%2883%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/134NJht9qs8btDkNQywOGlwTAoCnzxkOc/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/90">TG</a>
+* Версия AIOPFMD: 12.07.22 (84) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/12.07.2022/AIOPFMD-12.07.22-%2884%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jq-6ytmnWKlLVoEnQ2V669b0qTNEua0i/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/92">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh или ASH-BASH (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64.
@@ -16,7 +16,18 @@
 
 <details>
   <summary>Changelog</summary>
-
+  
+#### 12.07.22 (84) ####
+* Switch On/Off Face UnLock IR Camera обновлен до v2.0 - фикс работы для тех прошивок где работало раньше но с v1.9 перестало;
+* Energized Hosts обновлен от 12.07.2022;
+* AIST обновлен до v1.6.12 T145;
+* Corvus Launcher обновлен до v1.3 - от 12.07 с Corvus S3.2-Vindicate с Theme Picker;
+* Sushi Launcher обновлен до v1.1 - от 12.07 с riceDroid 3.0 от 12.07 с Theme Picker от 12.07 с Corvus S3.2-Vindicate;
+* CR Launcher обновлен до v1.7 - Theme Picker от 12.07 с Corvus S3.2-Vindicate;
+* Lawnchair обновлен до 12.1.0 Dev (#989) - обновлен до v2.4;
+* Audio Library Crackling Fix - обновлен до v1.1;
+* Фикс установки лаунчеров при обновлений;
+* Пару мелких фиксов.
 #### 11.07.22 (83) ####
 * В Magisk 25.1 сломали вывод и теперь при обновлении вывода он всегда будет находится в верхнем положении что убивает навигацию по патчу;
 * Dolby Atmos обновлен до v1.3:

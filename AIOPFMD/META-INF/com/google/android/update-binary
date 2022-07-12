@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="11.07.22 (83)"
+VAIOPFMD="12.07.22 (84)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -56,26 +56,26 @@ IDMUIS="MediaUISounds"; VIPMUIS="v1.7"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
 #Apps: Lawnchair/Shady/CR/Corvus/Sushi/IA
-IDSL="Systemless_Lawnchair"; VIPSL="v2.3"; VIPASLSL="12.1.0 Dev (#988)"
+IDSL="Systemless_Lawnchair"; VIPSL="v2.4"; VIPASLSL="12.1.0 Dev (#989)"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
-IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.5"; VIPSCRLA="v8.6"
-IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.2"; VIPSCLA="v3.2-Vindicate"
-IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.0"; VIPSSULA="v3.0"
+IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.6"; VIPSCRLA="v8.6"
+IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.3"; VIPSCLA="v3.2-Vindicate"
+IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.1"; VIPSSULA="v3.0"
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.4"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.7"
 IDDA="DolbyAtmos"; VIPDA="v1.3"
 IDNLS="NLSound"; VIPNLS="v3.3 STABLE"; VCIPNLS="8"
-IDAIST="AIST"; VIPAIST="v1.6.12"; VCIPAIST="144"
+IDAIST="AIST"; VIPAIST="v1.6.12"; VCIPAIST="145"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.1"
 IDAML="AML"; VIPAML="v4.2"; VCIPAML="42"
-IDALCF="ALCF"; VIPALCF="v1.0"
+IDALCF="ALCF"; VIPALCF="v1.1"
 #AdBlock/Hosts
 IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="10.07.2022"
+IDVAAH="AdAwayHosts"; VIPVAAH="12.07.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="17.0-220116"; VCIPVSH="170"
-IDEH="EnergizedHosts"; VIPEH="11.07.2022"
+IDEH="EnergizedHosts"; VIPEH="12.07.2022"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; VIPGPSP="v1.0"
 IDWIFIP="WIFIPatcher"; VIPWIFIP="v1.2"
@@ -105,7 +105,7 @@ IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.5"
 IDFMTP="ForceMTP"; VIPFMTP="v1.0"
-IDSOOOFUIRC="SOOOFUIRC"; VIPSOOOFUIRC="v1.9"
+IDSOOOFUIRC="SOOOFUIRC"; VIPSOOOFUIRC="v2.0"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
@@ -1599,7 +1599,7 @@ PSXCF -u $PSF '/configs/flag[@name="wma_offload_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="a2dp_offload_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="anc_headset_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="audio_zoom_enabled"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="audiosphere_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="audiosphere_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="custom_stereo_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="battery_listener_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="dsm_feedback_enabled"]' "true"
@@ -3251,10 +3251,10 @@ PSXCF -u $PSF '/mixer/ctl[@name="HPHR"]' "Switch"
 PSXCF -u $PSF '/mixer/ctl[@name="Load acoustic model"]' "1"
 fi
 PSXCF -u $PSF '/mixer/ctl[@name="Voice Sidetone Enable"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="Codec Wideband"]' "0"
-PSXCF -s $PSF '/mixer/ctl[@name="Codec Wideband"]' "0"
+PSXCF -u $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
+PSXCF -u $PSF '/mixer/ctl[@name="Codec Wideband"]' "1"
+PSXCF -s $PSF '/mixer/ctl[@name="Codec Wideband"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="HiFi Function"]' "On"
@@ -5566,7 +5566,9 @@ if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
 UIP -s "Install Sushi Launcher $VIPSSULA - $VIPSSUL?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then IPSLSULS; fi
 fi
-if $SYSTEMLESSLAUNCHERS; then
+}
+
+IPSLSE () {
 echo -e "ro.boot.vendor.overlay.static=false\nro.control_privapp_permissions=disable" > $MODPATH/$MODID/system.prop
 mkdir -p $TMPDIR/$MODID$MIPPSO; cp -f $TMPDIR/QSRP/QuickStepRecentsProvider-$PACKAGENAME.apk $TMPDIR/$MODID$MIPPSO/QuickStepRecentsProvider.apk
 if [ -d $TMPDIR/$MODID$MIPSSEPA/ThemePicker ]; then
@@ -5576,7 +5578,6 @@ cp -rf $TMPDIR/$MODID/* $MODPATH/$MODID
 REPLACER -f "$LAUNCHERLIST"
 MOVERPATH
 SET_PERM_RM -msgdi
-fi
 }
 
 IPSLLS () {
@@ -5590,6 +5591,7 @@ APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnfeed/Lawnfeed.apk" "$TMPDIR/$MODID$MIPSEP"; H
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnicons/Lawnicons.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnchair/Lawnchair.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly Install Lawnchair For Android 12.1 With Recents UI Support"
+IPSLSE
 }
 
 IPSLSLS () {
@@ -5605,6 +5607,7 @@ MMPR -vc "Systemless Shady Launcher" "$VIPSSLQ" "$VCIPSSLQ" "SKULSHADY" "Systeml
 elif $AELEVEN; then
 MMPR -vc "Systemless Shady Launcher" "$VIPSSLR" "$VCIPSSLR" "SKULSHADY" "Systemlessly Install Shady Launcher For Android 11 With Recents UI Support. Launcher Created By SKULSHADY."
 fi
+IPSLSE
 }
 
 IPSLCRS () {
@@ -5617,6 +5620,7 @@ cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 cp -rf $TMPDIR/$IDSCL-$ACNV/system/system_ext $TMPDIR/$MODID/system
 APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 MMPR -v "Systemless CR Launcher" "$VIPSCRL" "Systemlessly Install CR Launcher For Android 12.1 With Recents UI Support"
+IPSLSE
 }
 
 IPSLCLS () {
@@ -5628,6 +5632,7 @@ UZTPN "$MODID-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 MMPR -v "Systemless Corvus Launcher" "$VIPSCL" "Systemlessly Install Corvus Launcher For Android 12.1 With Recents UI Support"
+IPSLSE
 }
 
 IPSLSULS () {
@@ -5640,6 +5645,7 @@ cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 cp -rf $TMPDIR/$IDSCL-$ACNV/system/system_ext $TMPDIR/$MODID/system
 APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 MMPR -v "Systemless Sushi Launcher" "$VIPSSUL" "Systemlessly Install Sushi Launcher For Android 12.1 With Recents UI Support"
+IPSLSE
 }
 
 IPAPP () {
@@ -6648,10 +6654,10 @@ af.thread.throttle=0
 af.fast_track_multiplier=0
 audio.adm.buffering.ms=2
 vendor.audio.adm.buffering.ms=2
-audio.offload.buffer.size.kb=128
-vendor.audio.offload.buffer.size.kb=128
-audio.native.dsd.buffer.size.kb=128
-vendor.audio.native.dsd.buffer.size.kb=128
+audio.offload.buffer.size.kb=192
+vendor.audio.offload.buffer.size.kb=192
+audio.native.dsd.buffer.size.kb=192
+vendor.audio.native.dsd.buffer.size.kb=192
 audio.sys.noisy.broadcast.delay=0
 vendor.audio.sys.noisy.broadcast.delay=0
 audio.sys.offload.pstimeout.secs=0
@@ -6771,8 +6777,8 @@ audio.safemedia.bypass=true
 vendor.audio.safemedia.bypass=true
 persist.vendor.audio.safemedia.bypass=true
 persist.audio.safemedia.bypass=true
-audio.pp.asphere.enabled=true
-vendor.audio.pp.asphere.enabled=true
+audio.pp.asphere.enabled=false
+vendor.audio.pp.asphere.enabled=false
 persist.audio.lowlatency.rec=true
 persist.vendor.audio.hp=true
 persist.vendor.audio.lowlatency.rec=true
@@ -8141,7 +8147,7 @@ IPALCFS () {
 UIP "Installing Audio Library Crackling Fix $IAMM"
 PTMFI -nmp "$IDALCF"
 MMPR -v "Audio Library Crackling Fix" "$VIPALCF" "Audio Library Crackling Fix For Audio Modules, Stock Equalizers Or Libraries With Problems And Crackling System Sound/Notifications"
-REPLACER -a "libaudiopreprocessing.so libdownmix.so libldnhncr.so libqcomvoiceprocessing.so libshoebox.so libvolumelistener.so" "$IPVLS $IPVLS64"
+REPLACER -a "libaudiopreprocessing.so libasphere.so libdownmix.so libldnhncr.so libqcomvoiceprocessing.so libshoebox.so libvolumelistener.so" "$IPVLS $IPVLS64"
 MOVERPATH
 echo "[ -d \"/sbin/.magisk\" ] && MAGISKMP=\"/sbin/.magisk/mirror\" || MAGISKMP=\$(find \`magisk --path\` -type d -name \"mirror\" | head -n 1)
 AECONFXML=\"\$(find /vendor -type f -name \"*audio_effects*.xml\")\"
@@ -8153,7 +8159,7 @@ for FAECONFXML in \$ALLMODAECONFXML; do
 if [ -f \$FAECONFXML ] && [ ! -f \$FAECONFXML.bak ]; then
 PAECONFXML=true
 cp -f \$FAECONFXML \$FAECONFXML.bak
-sed -i \"/audio_pre_processing/d;/downmix/d;/loudness_enhancer/d;/shoebox/d;/volume_listener/d\" \$FAECONFXML
+sed -i \"/audio_pre_processing/d;/audiosphere/d;/downmix/d;/loudness_enhancer/d;/shoebox/d;/volume_listener/d\" \$FAECONFXML
 elif [ -f \$FAECONFXML ] && [ -f \$FAECONFXML.bak ]; then
 PAECONFXML=true
 fi
@@ -8166,7 +8172,7 @@ for FAECONFXML in \$AECONFXML; do
 PSF=\"$MODPATH/$MODID\$FAECONFXML\"
 mkdir -p \`dirname \$PSF\`
 cp -f \$MAGISKMP\$FAECONFXML \$PSF
-sed -i \"/audio_pre_processing/d;/downmix/d;/loudness_enhancer/d;/shoebox/d;/volume_listener/d\" \$PSF
+sed -i \"/audio_pre_processing/d;/audiosphere/d;/downmix/d;/loudness_enhancer/d;/shoebox/d;/volume_listener/d\" \$PSF
 mkdir -p $MODPATH/$MODID/system/vendor; cp -rf $MODPATH/$MODID/vendor/* $MODPATH/$MODID/system/vendor; rm -rf $MODPATH/$MODID/vendor
 done
 fi" > $MODPATH/$MODID/post-fs-data.sh
@@ -10959,6 +10965,7 @@ bmgr backupnow appdata >/dev/null
 UIP "Running Incremental Backup For All Packages"
 bmgr backupnow --all >/dev/null
 UIP "Force Google Sync Done" "Check The Settings, After A Couple Of Minutes Everything Is In Sync"
+CEMODID="$IDFGS"
 UIP -s "Install Force Google Sync $VIPFGS?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 fi
 if KEYCHOOSE || [ $BOOTMODE != true ]; then
@@ -11392,7 +11399,7 @@ FUPNXML="com.aospextended.faceunlock"
 fi
 if $MAGISK; then
 PTMFI -nmp "$IDSOOOFUIRC"
-echo -e "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,com.crdroid.faceunlock\nro.face_unlock_service.enabled=$ASWITCHIR" > $MODPATH/$MODID/system.prop
+echo -e "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,$FUPNXML\nro.face_unlock_service.enabled=$ASWITCHIR" > $MODPATH/$MODID/system.prop
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "\nro.face.moto_unlock_service.cam_id=$SWITCHIR" > $MODPATH/$MODID/system.prop
 else
