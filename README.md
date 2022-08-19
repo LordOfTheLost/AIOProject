@@ -1,28 +1,58 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 12.07.22 (84) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/12.07.2022/AIOPFMD-12.07.22-%2884%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1jq-6ytmnWKlLVoEnQ2V669b0qTNEua0i/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/92">TG</a>
+* Версия AIOPFMD: 19.08.22 (85) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/19.08.2022/AIOPFMD-19.08.22-%2885%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VMZ-NFu8UojC7D0OZlrNGjwm8oRvPddK/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/94">TG</a>
 * Что нужно/может потребоваться:
-	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh или ASH-BASH (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
+	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64.
+	- Кастомный Android 10+ (но можно пробовать на любое говно ставить).
 	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет)
-	- Установленный BB для некоторых модулей (в основном, которые используют терминал или имеют сложные shшники);
+	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники;
 	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй));
 	- Enabling Hidden Api Policy (для ViperFX (Android 11.0));
 	- Audio Modification Library если стоит Dolby и ViperFX.
-	- Audio Library Crackling Fix если есть проблемы с ситемыными звуками/уведомлениями (хрип или треск);
-* В общем что делает патч: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
+	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск);
+* В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details>
   <summary>Changelog</summary>
   
+#### 19.08.22 (85) ####
+* Lawnchair обновлен до 12.1.0 Alpha 4 - обновлен до v2.5 и обновлены Lawnicons до v2.6;
+* Sushi Launcher обновлен до v1.2 - от 19.08 из riceDroid v5.0;
+* AIST обновлен до v1.6;
+* CR Launcher обновлен до v1.7 - лаунчер от 19.08 из CR 8.8;
+* Universal GMS Doze обновлен до v1.8.6:
+	- Вывод конфликтов на уровень post
+	- Убран даблинг патчинга конфликтов;
+	- Доп строка по оптимизации сервисов;
+	- Патчинг на GMS оставлен;
+	- Добавлен фикс уведомлений если были проблемы с ними;
+	- Убран костыль который работал бы только в сток модуле;
+* Audio Library Crackling Fix обновлен до v1.2 - добавлен репатчинг после обновления;
+* Increase Bitrate обновлен до v1.2 - добавлен репатчинг после обновления;
+* В Режим удаления/replace/restore добавлены приложения в обычный лист: Covers, SmartCookieWeb, Camera и AboutBliss а ANGLE перенесен в экспериментальный лист;
+* Добавлена установка Spark Launcher из Spark 12.6 от 16.08;
+* Добавлена установка Derp Launcher из DerpFest v12-Shinju от 16.08;
+* Media UI Sounds обновлен до v1.8:
+	- Убрал звуки из LiteOS;
+	- Два варианта с увеличенной громкостью и стандартной;
+* Dolby Atmos обновлен до v1.4 - изменены пути поиска для проверки патчинга manifest.xml, фикс правил и убран отвал на некоторых прошивках;
+* DETACH обновлен до v1.1 - улучшение работы;
+* Разделил лаунчеры и установку своих приложений по категориям;
+* Background Blur обновлен до v1.1 - убран kill surfaceflinger что возвращает загрузку/перезагрузку телефона к стоку на 12+, так же добавлена установка как не MM;
+* Corvus Launcher обновлен до v1.4 - от 17.08 из Corvus S4.0-Leviathan;
+* Energized Hosts обновлен от 18.08.2022 и добавлен выбор Basic;
+* hosts файл с AdAway обновлен от 19.08.2022;
+* TTL Fix обновлен до v2.8;
+* Фикс некоторых выводов до действий что бы не выглядело словно зависло.
 #### 12.07.22 (84) ####
 * Switch On/Off Face UnLock IR Camera обновлен до v2.0 - фикс работы для тех прошивок где работало раньше но с v1.9 перестало;
 * Energized Hosts обновлен от 12.07.2022;
 * AIST обновлен до v1.6.12 T145;
 * Corvus Launcher обновлен до v1.3 - от 12.07 с Corvus S3.2-Vindicate с Theme Picker;
-* Sushi Launcher обновлен до v1.1 - от 12.07 с riceDroid 3.0 от 12.07 с Theme Picker от 12.07 с Corvus S3.2-Vindicate;
+* Sushi Launcher обновлен до v1.1 - с riceDroid 3.0 от 12.07 с Theme Picker от 12.07 с Corvus S3.2-Vindicate;
 * CR Launcher обновлен до v1.7 - Theme Picker от 12.07 с Corvus S3.2-Vindicate;
 * Lawnchair обновлен до 12.1.0 Dev (#989) - обновлен до v2.4;
 * Audio Library Crackling Fix - обновлен до v1.1;
@@ -317,7 +347,7 @@
 * Фикс отвала Zygisk LSPosed;
 * Unlimited Storage For GPhotos обновлен до v1.2 - улучшения файла nexus для возможно лучшего срабатывания этого говна;
 * Фикс путей V4AFXPresets и удалятора на новые пути - обновлен до v1.5;
-* Build Prop Tweaks обновлен до v2.1 - убрал все кроме Enable 4K in YouTube, Animation AOD & LS Fix и Disable Safemedia;
+* Build Prop Tweaks обновлен до v2.1 - убрал все кроме Enable 4K In YouTube, Animation AOD & LS Fix и Disable Safemedia;
 * Burn In Protection обновлен до v1.7 - добавил 30-30 для AOD и убран выбор на 60-60;
 * Предсмертная версия.
 #### 15.02.22 (68) ####
@@ -1825,7 +1855,7 @@
 * Пункт (ALL) (NOT MIUI) (12.0-12.1) - (Status Bar Privacy Dot) - можно как полностью отключить точку приватности и освободить пространство справа, так и выбрать оптимальный вариант где и точка будет и места больше:
 	- Disable;
 	- Optimized;
-* Пункт (MAGISK) (NOT MIUI) (11-12.1) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает эффект размытия в шторке и в некоторых других местах системы;
+* Пункт (ALL) (NOT MIUI) (11-12.1) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает эффект размытия в шторке и в некоторых других местах системы;
 * Пункт (ALL) (NOT MIUI) (\\) - (Boot Animation) смена анимации при запуске телефона на одну из:
 	- Pixel:
 		- Black;
@@ -1855,20 +1885,29 @@
 	- Oppo (Color OS 7);
 	- Spark (12.3);
 	- Arcana (6.0);
+	- Cesium;
+		- Выбор громкости звуков:
+			- Обычная громкость всех звуков;
+			- Повышенная громкость всех звуков;
 * Пункт (MAGISK & LEGACY) (NOT MIUI) (10-12.1) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
 * Пункт (MAGISK) (NOT MIUI) (12.0-12.1) - (Wi-Fi & Mobile Data QS Old Style) - изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
 	- Новый;
 	- Старый;
 
-<h3 align=center>Apps: Lawnchair/Shady/CR/Corvus/Sushi/IA</h3>
+<h3 align=center>Launchers: Lawn/Shady/CR/Corvus/Sushi/Spark/Derp</h3>
 
 * Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
-	- Установка Lawnchair (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка ShadyLauncher (Q/R) <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка CRLauncher (SL) <a href="https://github.com/crdroidandroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
-	- Установка CorvusLauncher (SL) <a href="https://github.com/Corvus-R/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
+	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
+	- Установка CR Launcher (SL) <a href="https://github.com/crdroidandroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
+	- Установка Corvus Launcher (SL) <a href="https://github.com/Corvus-R/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
 	- Установка Sushi Launcher (SL) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
-* Пункт (ALL) (\\) - (Install App In /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть apk файлы (apks не поддерживает);
+	- Установка Spark Launcher (SL) <a href="https://github.com/Spark-Rom/packages_apps_Launcher3">GITHUB</a> || <a href="https://spark-os.live">OFFSITE</a> || <a href="https://t.me/SparkOSChannel">TG</a>;
+	- Установка Derp Launcher (SL) <a href="https://github.com/DerpFest-12/packages_apps_DerpLauncher">GITHUB</a> || <a href="https://derpfest.org">OFFSITE</a> || <a href="https://t.me/derpfestupdates">TG</a>;
+
+<h3 align=center>Install App From /sdcard/Application</h3>
+
+* Пункт (ALL) (\\) - (Install App From /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть apk файлы (apks не поддерживает);
 	- Установка в Data;
 	- Установка в System;
 		- С подтверждением для каждого;
@@ -1898,10 +1937,12 @@
 	- PATCH_AUDIO_POLICY;
 	- PATCH_AUDIO_POLICY_CONFIGURATION;
 	- PATCH_MEDIA_CODECS;
-* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
+* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=116366772">4PDA</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
 	- PATCH_FIXING_KHZ:
+		- 96 KHZ;
+		- 192 KHZ;
 	- PATCH_MEDIA_CODECS;
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общие качество звука;
 * Пункт (ALL) - (Increase Bitrate) патчит все файлы media_profiles*.xml в /vendor - улучшает качество записи аудио во многих местах;
@@ -1915,8 +1956,8 @@
 * Пункт (ALL) (\\) - (Remove/Replace/Restore Mode) (список приложений будет пополнятся). Удаляйте/Затирайте что знаете, я разжёвывать не буду - <a href="https://4pda.to/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску (4PDA)</a>:
 	- Если находит /system/bin/aiopfmdph/Replace.txt:
 	- Восстановить apk;
-		- Восстановить Apk с подтверждением каждого;
-		- Восстановить Apk без подтверждения каждого;
+		- Восстановить Apk с подтверждением каждого только для Сток листа и APPRMLIST.conf;
+		- Восстановить Apk без подтверждения каждого только для Сток листа и APPRMLIST.conf;
 	- Не восстанавливать;
 		- Удалять приложения (RECOVERY);
 		- Отправлять их в replace (ALL);
@@ -1949,9 +1990,9 @@
 * Другие приложения:
 	- 404Clock
 	- AEXPapers
-	- ANGLE
 	- APlayer
 	- AbleMusic
+	- AboutBliss
 	- Abstruct
 	- AccuweatherPhone2015_MASS_HD_SWS
 	- AdAway
@@ -1980,6 +2021,7 @@
 	- CalculatorGooglePrebuilt
 	- CalendarGoogle
 	- CalendarGooglePrebuilt
+	- Camera
 	- Camera2
 	- CameraExtensionsProxy
 	- CameraGo
@@ -1995,6 +2037,7 @@
 	- CloudPrint
 	- CloudPrint2
 	- ColtPapers
+	- Covers
 	- CtsShimPrivPrebuilt
 	- DeskClockGoogle
 	- DeviceIntelligenceNetworkPrebuilt
@@ -2254,6 +2297,7 @@
 	- SimpleCalendar
 	- SimpleGallery
 	- SimpleGalleryPro
+	- SmartCookieWeb
 	- SmartManagerSDK
 	- SmartManager_OLEDHD
 	- Snap
@@ -2330,6 +2374,7 @@
 <details> 
   <summary>Удаление приложений которые могут повлиять на работу прошивки:</summary>
 
+* ANGLE
 * AmbientSensePrebuilt
 * AndroidMigratePrebuilt
 * AndroidPlatformServices
@@ -2456,12 +2501,12 @@
 	- Пустой Hosts (Отключение блокировки);
 	- AdAway Hosts (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts Unified От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
-	- Energized Hosts Unified (700000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a>
+	- Energized Hosts (400000+/700000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Basic или Unified;
 
 <h3 align=center>Net: GPS/WIFI/TTL/DNS/APAUSBTF</h3>
 
-* Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (GPS Patcher) патчит gps.conf добавляет правильные пути сертификатов, отключает логи, улучшает связь GPS (нет), выставляет универсальный pool.ntp.org и прочие улучшения;
-* Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (Wifi Patcher) патчит WCNSS_qcom_cfg.ini для увеличения пропускной способности Wifi, отключения ненужных логов и прочих улучшений (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
+* Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (GPS Patcher) регенерирует gps.conf добавляет правильные пути сертификатов, отключает логи, улучшает связь GPS (нет), выставляет универсальный pool.ntp.org и прочие улучшения;
+* Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (Wifi Patcher) регенерирует WCNSS_qcom_cfg.ini для увеличения пропускной способности Wifi, отключения ненужных логов и прочих улучшений (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
 * Пункт (MAGISK) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - (TTL Fix) для раздачи интернета без ограничений оператора;
 * Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=104647697">4PDA</a> - (Network Tweak) альтернативный DNS-сервер от Google и/или CloudFlare:
 	- Google и CloudFlare DNS;
@@ -2592,21 +2637,24 @@
 
 <h3 align=center>Почему, как и зачем</h3>
 
-* Это патчи, который основан на методе "getevent" - на данный момент это самый большой патч с данной реализацией.
+* Это патч, который основан на методе "getevent" - на данный момент это самый большой патч с данной реализацией.
+* Что есть:
+	- Все патчи перенесены/портированы в этот патч и оно могут полностью отличатся от стока работой (установкой и так всегда будут отличатся);
+	- Патчинг/Репатчинг/Регенерация сток файлов;
+	- Отключение модуля срабатывает как удаление до его включения (почти все так уже делают);
+	- Совместный репатчинг аудиомодов для предотвращения конфликтов;
+	- Логичные конфликты между собой;
+	- И дохуя всего остального чего нету в сток модулях и не будет.
+* Почему сток патчи говно - вы прошили прошивку и MAGISK начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему либо как в случае с NLSound всё полностью сломано;
+	- А этот патч это позволяет (кроме некоторых патчей работающих из Bootmode);
+	- Да и уже почти все сток патчи НЕВОЗМОЖНО поставить через RECOVERY из за того что разрабам просто лень делать многие моменты;
+	- Я же стараюсь делать что бы всё было возможно и работало как с MAGISK так и без него параллельно улучшая что реализовано криво теми кто делал модули;
+	- Так же многие модули полностью сломаны и конфликтуют между собою и я это "исправляю";
+	- При отключении многих модулей будет отвал пизды (AML момент) либо ничего не произойдет что не логично а тут это реализовано.
 * Патчи были перенесены и улучшены/переделаны в модули и наоборот со многими вариантами и альтернативами которые тоже будут улучшатся/добавляться.
-* Патчи были созданы благодаря: topjohnwu за Magisk, Open GApps Project за раннюю реализацию логов, BiTGApps Project за раннюю реализацию маунта, Google за кривой высер Android и всех кто создал модули которые здесь имеются и многих пользователей MI8.
 * В дальнейшем будут добавляться множество новых выборов/методов/фиксов/и полезных патчей а также исправление найденных ошибок (нет).
 * Я делал патчи для себя, и выложил для пользователей которым это может будет полезно. 
 * Я тестировал их на своих телефонах но это не означает что мне можно доверять (вдруг я вам /system_root/system/system_ext/product/priv-app/SystemUI форматну), так что Всё, что вы делаете со своим девайсом/телефоном - вы делаете на свой страх и риск.
-* Я понимаю что это читать никто не будет, и я не любитель объяснять или что-то показывать, но я попытался как-то объяснить что и куда/как.
-* Что означает патч прошивается из под своего архива или нет:
-	- Все патчи перенесены/портированы в этот патч.
-	- И почему сток патчи говно - вы прошили прошивку и MAGISK начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему либо как в случае с NLSound всё полностью сломано;
-		- А этот патч это позволяет (кроме некоторых патчей работающих из Bootmode);
-		- Да и уже почти все сток патчи НЕВОЗМОЖНО поставить через RECOVERY из за того что разрабам просто лень делать многие моменты;
-		- Я же стараюсь делать что бы всё было возможно и работало как с MAGISK так и без него параллельно улучшая что реализовано криво теми кто делал модули;
-		- Так же многие модули полностью сломаны и конфликтуют между собою и я это "исправляю";
-		- При отключении многих модулей будет отвал пизды (AML момент) либо ничего не произойдет что не логично а тут это реализовано.
 * Патчи будут добавляться/улучшаться по мере их нахождения/тестирования/времени и желания.
 * Если есть проблемы(желательно с логами если были ошибки или что-то не сработало как надо)/пожелания/предложения писать в <a href="https://t.me/AIOProject_Chat">TG Chat</a> (не надо).
 

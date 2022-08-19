@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="12.07.22 (84)"
+VAIOPFMD="19.08.22 (85)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -49,37 +49,39 @@ IDQSCP="QSContentPadding"; VIPQSCP="v1.1"
 IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"
 IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.6"
 IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.1"
-IDEBB="BackgroundBlur"; VIPEBB="v1.0"
+IDEBB="BackgroundBlur"; VIPEBB="v1.1"
 IDBA="BootAnimation"; VIPBA="v1.8"
 IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.1"
-IDMUIS="MediaUISounds"; VIPMUIS="v1.7"
+IDMUIS="MediaUISounds"; VIPMUIS="v1.8"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
-#Apps: Lawnchair/Shady/CR/Corvus/Sushi/IA
-IDSL="Systemless_Lawnchair"; VIPSL="v2.4"; VIPASLSL="12.1.0 Dev (#989)"
+#Launchers: Lawn/Shady/CR/Corvus/Sushi/Spark/Derp
+IDSL="Systemless_Lawnchair"; VIPSL="v2.5"; VIPASLSL="12.1.0 Alpha 4"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
-IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.6"; VIPSCRLA="v8.6"
-IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.3"; VIPSCLA="v3.2-Vindicate"
-IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.1"; VIPSSULA="v3.0"
+IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.7"; VIPSCRLA="v8.8"
+IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.4"; VIPSCLA="v4.0-Leviathan"
+IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.2"; VIPSSULA="v5.0"
+IDSSPL="Systemless_SparkLauncher"; VIPSSPL="v1.0"; VIPSSPLA="v12.6"
+IDSDFL="Systemless_DerpLauncher"; VIPSDFL="v1.0"; VIPSDFLA="v12-Shinju"
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.4"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.7"
-IDDA="DolbyAtmos"; VIPDA="v1.3"
+IDDA="DolbyAtmos"; VIPDA="v1.4"
 IDNLS="NLSound"; VIPNLS="v3.3 STABLE"; VCIPNLS="8"
-IDAIST="AIST"; VIPAIST="v1.6.12"; VCIPAIST="145"
+IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="50"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
-IDIBS="IncreaseBitrate"; VIPIBS="v1.1"
+IDIBS="IncreaseBitrate"; VIPIBS="v1.2"
 IDAML="AML"; VIPAML="v4.2"; VCIPAML="42"
-IDALCF="ALCF"; VIPALCF="v1.1"
+IDALCF="ALCF"; VIPALCF="v1.2"
 #AdBlock/Hosts
 IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="12.07.2022"
+IDVAAH="AdAwayHosts"; VIPVAAH="19.08.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="17.0-220116"; VCIPVSH="170"
-IDEH="EnergizedHosts"; VIPEH="12.07.2022"
+IDEH="EnergizedHosts"; VIPEH="19.08.2022"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; VIPGPSP="v1.0"
 IDWIFIP="WIFIPatcher"; VIPWIFIP="v1.2"
-IDTTLF="NFQTTL"; VIPTTLF="v2.7"; VCIPTTLF="27"
+IDTTLF="NFQTTL"; VIPTTLF="v2.8"; VCIPTTLF="28"
 IDNT="NetworkTweak"; VIPNT="v6.0"; VCIPNT="60"
 IDAPAUSBTF="APAUSBTF"; VIPAPAUSBTF="v1.0"
 #Utilities: BB/SELC/CC/MMFR/DETACH/LSPosed
@@ -87,7 +89,7 @@ IDBB="BrutalBusyBox"; VIPBB="v1.36.0.1"; VCIPBB="13601"
 IDSELC="SELinuxChanger"; VIPSELC="v1.3"
 IDCC="CacheCleaner"; VIPCC="v2.7"
 IDMMFR="MMFR"; VIPMMFR="v1.0"
-IDDETACH="DETACH" VIPDETACH="v1.0"
+IDDETACH="DETACH" VIPDETACH="v1.1"
 IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.8.3 (6552)"; VCIPLSPOSEDZ="6552"
 #Other: FA/LED/FSFM/UAA/SBU/GASL
 IDFPA="FingerprintActions"; VIPFPA="v1.1"
@@ -109,7 +111,7 @@ IDSOOOFUIRC="SOOOFUIRC"; VIPSOOOFUIRC="v2.0"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
-IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.5"; VCIPUGMSD="185"
+IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.6"; VCIPUGMSD="186"
 IDUSGP="USGP"; VIPUSGP="v1.2"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.1"
@@ -356,9 +358,9 @@ Mms
 STOCKLIST="
 404Clock
 AEXPapers
-ANGLE
 APlayer
 AbleMusic
+AboutBliss
 Abstruct
 AccuweatherPhone2015_MASS_HD_SWS
 AdAway
@@ -387,6 +389,7 @@ CalculatorGoogle
 CalculatorGooglePrebuilt
 CalendarGoogle
 CalendarGooglePrebuilt
+Camera
 Camera2
 CameraExtensionsProxy
 CameraGo
@@ -402,6 +405,7 @@ ClockPackage_MASS_Le
 CloudPrint
 CloudPrint2
 ColtPapers
+Covers
 CtsShimPrivPrebuilt
 DeskClockGoogle
 DeviceIntelligenceNetworkPrebuilt
@@ -661,6 +665,7 @@ Simple-Calendar
 SimpleCalendar
 SimpleGallery
 SimpleGalleryPro
+SmartCookieWeb
 SmartManagerSDK
 SmartManager_OLEDHD
 Snap
@@ -735,6 +740,7 @@ wellbeingconf
 "
 
 EXPERIMENTALLIST="
+ANGLE
 AmbientSensePrebuilt
 AndroidMigratePrebuilt
 AndroidPlatformServices
@@ -827,6 +833,7 @@ AsusLauncherDev
 DerpLauncherQuickStep
 EasyLauncher2_Zero
 EnigmaLauncher
+FluidLauncherQuickStep
 Launcher3QuickStep
 Lawnchair
 NeLauncher
@@ -854,6 +861,7 @@ Systemless_AsusLauncher
 Systemless_CRLauncher
 Systemless_CorvusLauncher
 Systemless_CorvusLauncher_Port
+Systemless_DerpLauncher
 Systemless_DerpLauncher_Port
 Systemless_Lawnchair
 Systemless_LawnchairExtra
@@ -864,6 +872,7 @@ Systemless_OneUIHome
 Systemless_PixelLauncher
 Systemless_PixelLauncherX
 Systemless_ShadyLauncher
+Systemless_SparkLauncher
 Systemless_SushiLauncher
 com.pixelated.launcher
 quickstepswitcher
@@ -932,7 +941,7 @@ esac
 AAPT="$ADDONS/aapt-$ARCH"
 XMLSTARLET="$ADDONS/xmlstarlet-$ARCH"
 SQLITE3="$ADDONS/sqlite3-$ARCH";;
-sel) if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUX=true; SELINUXS='Enforcing'; SELINUXSN='1'; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUX=false; SELINUXS='Permissive'; SELINUXSN='0'; fi;;
+sel) if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUX=true; SELINUXS="Enforcing"; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUX=false; SELINUXS="Permissive"; fi;;
 soc) SD617=$(grep "ro.board.platform=msm8952" $PROPFILES)
 SD625=$(grep "ro.board.platform=msm8953" $PROPFILES)
 SD660=$(grep "ro.board.platform=sdm660" $PROPFILES)
@@ -1576,7 +1585,8 @@ PSF="$MODPATH/$MODID$FACXML"
 case $1 in
 -nl) PSXCF -u $PSF '/configs/property[@name="audio.deep_buffer.media"]' "false";;
 -aist) PSXCF -u $PSF '/configs/property[@name="audio.deep_buffer.media"]' "true"
-PSXCF -u $PSF '/configs/property[@name="audio.offload.video"]' "false"
+PSXCF -u $PSF '/configs/property[@name="audio.offload.video"]' "true"
+PSXCF -u $PSF '/configs/property[@name="audio.offload.disable"]' "false"
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.av.streaming.offload.enable"]' "false"
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.offload.track.enable"]' "true"
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.offload.multiple.enabled"]' "false"
@@ -1587,42 +1597,38 @@ PSXCF -u $PSF '/configs/property[@name="vendor.audio.use.sw.mpegh.decoder"]' "tr
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.flac.sw.decoder.24bit"]' "true"
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.hw.aac.encoder"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="fm_power_opt"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="aac_adts_offload_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="alac_offload_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="ape_offload_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="flac_offload_enabled"]' "false"
+PSXCF -u $PSF '/configs/flag[@name="aac_adts_offload_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="alac_offload_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="ape_offload_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="flac_offload_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="pcm_offload_enabled_16"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="pcm_offload_enabled_24"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="qti_flac_decoder"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="vorbis_offload_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="wma_offload_enabled"]' "false"
+PSXCF -u $PSF '/configs/flag[@name="vorbis_offload_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="wma_offload_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="a2dp_offload_enabled"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="anc_headset_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="audio_zoom_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="audio_zoom_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="audiosphere_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="custom_stereo_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="battery_listener_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="dsm_feedback_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="dynamic_ecns_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="ext_hw_plugin_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="ext_qdsp_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="ext_spkr_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="ext_spkr_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="ext_spkr_tfa_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="hfp_enabled"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="hifi_audio_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="hfp_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="hwdep_cal_enabled"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="incall_music_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="keep_alive_enabled"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="kpi_optimize_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="kpi_optimize_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="maxx_audio_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="multi_voice_session"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="receiver_aided_stereo"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="snd_monitor_enabled"]' "false"
+PSXCF -u $PSF '/configs/flag[@name="receiver_aided_stereo"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="spkr_prot_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="usb_offload_burst_mode"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="usb_offload_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="usb_offload_sidetone_vol_enabled"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="use_deep_buffer_as_primary_output"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="vbat_enabled"]' "false";;
+PSXCF -u $PSF '/configs/flag[@name="use_deep_buffer_as_primary_output"]' "false";;
 esac
 UIP "$MSGFFAP"
 fi
@@ -3010,22 +3016,25 @@ sed -i 's/name="support_a2dp_latency">false</name="support_a2dp_latency">true</g
 sed -i 's/name="support_sound_assist">false</name="support_sound_assist">true</g' $PDF
 sed -i 's/name="support_truetone">false</name="support_truetone">true</g' $PDF
 sed -i 's/name="support_new_silentmode">false</name="support_new_silentmode">true</g' $PDF
-sed -i 's/name="support_audio_share">false</name="support_audio_share">true</g' $PDF
+sed -i 's/name="support_audio_share">true</name="support_audio_share">false</g' $PDF
 sed -i 's/name="support_qcom_sound">false</name="support_qcom_sound">true</g' $PDF
 sed -i 's/name="support_24bit_record">false</name="support_24bit_record">true</g' $PDF
 sed -i 's/name="support_audio_loopback">false</name="support_audio_loopback">true</g' $PDF
-sed -i 's/name="support_phone_call_noise_suppression">true</name="support_phone_call_noise_suppression">false</g' $PDF
 sed -i 's/name="support_bluetooth_fast_connect">false</name="support_bluetooth_fast_connect">true</g' $PDF
 sed -i 's/name="support_adv_audio_unicast">false</name="support_adv_audio_unicast">true</g' $PDF
 sed -i 's/name="support_adv_audio_bca">false</name="support_adv_audio_bca">true</g' $PDF
 sed -i 's/name="support_adv_audio_bcs">false</name="support_adv_audio_bcs">true</g' $PDF
+sed -i 's/name="support_phone_call_noise_suppression">false</name="support_phone_call_noise_suppression">true</g' $PDF
+sed -i 's/name="support_camera_audio_focus">false</name="support_camera_audio_focus">true</g' $PDF
 sed -i '/<features>/a\
-    <bool name="support_dolby_version_brighten">true</bool>\
     <bool name="support_adv_audio_unicast">true</bool>\
     <bool name="support_adv_audio_bca">true</bool>\
     <bool name="support_adv_audio_bcs">true</bool>\
     <bool name="support_lhdc_offload">true</bool>\
-    <bool name="support_audio_share">true</bool>\
+    <bool name="support_audio_share">false</bool>\
+	<bool name="support_voip_record">true</bool>\
+    <bool name="support_qcom_sound">true</bool>\
+    <bool name="support_main_xiaoai">true</bool>\
     <bool name="support_24bit_record">true</bool>' $PDF
 esac
 UIP "$MSGFFAP"
@@ -3201,27 +3210,54 @@ done;;
 if [ -f $MAGISKMP$FMPATHS ]; then
 UIP "Found $FMPATHS" "Patching..."
 PSF="$MODPATH/$MODID$FMPATHS"
+sed -i 's/COMP Switch" value="1"/COMP Switch" value="0"/g' $PSF
+sed -i 's/COMP0 Switch" value="1"/COMP0 Switch" value="0"/g' $PSF
+sed -i 's/COMP1 Switch" value="1"/COMP1 Switch" value="0"/g' $PSF
+sed -i 's/COMP2 Switch" value="1"/COMP2 Switch" value="0"/g' $PSF
+sed -i 's/COMP3 Switch" value="1"/COMP3 Switch" value="0"/g' $PSF
+sed -i 's/COMP4 Switch" value="1"/COMP4 Switch" value="0"/g' $PSF
+sed -i 's/COMP5 Switch" value="1"/COMP5 Switch" value="0"/g' $PSF
+sed -i 's/COMP6 Switch" value="1"/COMP6 Switch" value="0"/g' $PSF
+sed -i 's/COMP7 Switch" value="1"/COMP7 Switch" value="0"/g' $PSF
+sed -i 's/COMP8 Switch" value="1"/COMP8 Switch" value="0"/g' $PSF
+sed -i 's/Softclip0 Enable" value="1"/Softclip0 Enable" value="0"/g' $PSF
+sed -i 's/Softclip1 Enable" value="1"/Softclip1 Enable" value="0"/g' $PSF
+sed -i 's/Softclip2 Enable" value="1"/Softclip2 Enable" value="0"/g' $PSF
+sed -i 's/Softclip3 Enable" value="1"/Softclip3 Enable" value="0"/g' $PSF
+sed -i 's/Softclip4 Enable" value="1"/Softclip4 Enable" value="0"/g' $PSF
+sed -i 's/Softclip5 Enable" value="1"/Softclip5 Enable" value="0"/g' $PSF
+sed -i 's/Softclip6 Enable" value="1"/Softclip6 Enable" value="0"/g' $PSF
+sed -i 's/Softclip7 Enable" value="1"/Softclip7 Enable" value="0"/g' $PSF
+sed -i 's/Softclip8 Enable" value="1"/Softclip8 Enable" value="0"/g' $PSF
+sed -i 's/SpkrLeft BOOST Switch" value="1"/SpkrLeft BOOST Switch" value="0"/g' $PSF
+sed -i 's/SpkrRight BOOST Switch" value="1"/SpkrRight BOOST Switch" value="0"/g' $PSF
+sed -i 's/SpkrLeft SWR DAC_Port Switch" value="1"/SpkrLeft SWR DAC_Port Switch" value="0"/g' $PSF
+sed -i 's/SpkrRight SWR DAC_Port Switch" value="1"/SpkrRight SWR DAC_Port Switch" value="0"/g' $PSF
+sed -i 's/HPHL_RDAC Switch" value="0"/HPHL_RDAC Switch" value="1"/g' $PSF
+sed -i 's/HPHR_RDAC Switch" value="0"/HPHR_RDAC Switch" value="1"/g' $PSF
 if $HIRES; then
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="top-speaker"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="bottom-speaker"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="hph-hifi-mode"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -s $PSF '/mixer/path[@name="hph-hifi-mode"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="hph-highquality-mode"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -s $PSF '/mixer/path[@name="hph-highquality-mode"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -s $PSF '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB_HIFI"
-PSXCF -s $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB_HIFI"
-PSXCF -u $PSF '/mixer/path[@name="voice-headset"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -u $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
-PSXCF -s $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX HPH Mode"]' "CLS_H_LOHIFI"
+PSXCF -u $PSF '/mixer/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PSXCF -u $PSF '/mixer/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="top-speaker"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="bottom-speaker"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="hph-hifi-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -s $PSF '/mixer/path[@name="hph-hifi-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="hph-highquality-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -s $PSF '/mixer/path[@name="hph-highquality-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -s $PSF '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -s $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="voice-headset"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -u $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
+PSXCF -s $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX HPH Mode"]' "CLS_AB"
 PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -u $PSF '/mixer/path[@name="top-speaker"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -u $PSF '/mixer/path[@name="bottom-speaker"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
@@ -3237,6 +3273,8 @@ PSXCF -u $PSF '/mixer/path[@name="hph-highquality-mode"]/ctl[@name="RX_HPH_PWR_M
 PSXCF -s $PSF '/mixer/path[@name="hph-highquality-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -u $PSF '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -s $PSF '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PSXCF -u $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PSXCF -s $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -u $PSF '/mixer/path[@name="voice-headset"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -s $PSF '/mixer/path[@name="voice-headset"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -u $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
@@ -3250,30 +3288,126 @@ PSXCF -u $PSF '/mixer/ctl[@name="HPHL"]' "Switch"
 PSXCF -u $PSF '/mixer/ctl[@name="HPHR"]' "Switch"
 PSXCF -u $PSF '/mixer/ctl[@name="Load acoustic model"]' "1"
 fi
+PSXCF -u $PSF '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference SampleRate"]' "96000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-wb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-swb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip display-port1"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference SampleRate"]' "96000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-wb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-swb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip display-port1"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference SampleRate"]' "48000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -u $PSF '/mixer/ctl[@name="Voice Sidetone Enable"]' "0"
+PSXCF -u $PSF '/mixer/ctl[@name="Audiosphere Enable"]' "Off"
+PSXCF -s $PSF '/mixer/ctl[@name="Audiosphere Enable"]' "Off"
 PSXCF -u $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="Codec Wideband"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="Codec Wideband"]' "1"
+PSXCF -u $PSF '/mixer/ctl[@name="Codec Wideband"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="Codec Wideband"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="HiFi Function"]' "On"
 PSXCF -s $PSF '/mixer/ctl[@name="HiFi Function"]' "On"
-PSXCF -u $PSF '/mixer/ctl[@name="Custom Filter"]' "ON"
-PSXCF -s $PSF '/mixer/ctl[@name="Custom Filter"]' "ON"
+PSXCF -u $PSF '/mixer/ctl[@name="Custom Filter"]' "OFF"
+PSXCF -s $PSF '/mixer/ctl[@name="Custom Filter"]' "OFF"
 PSXCF -u $PSF '/mixer/ctl[@name="Filter Shape"]' "Slow Rolloff"
 PSXCF -s $PSF '/mixer/ctl[@name="Filter Shape"]' "Slow Rolloff"
-PSXCF -u $PSF '/mixer/ctl[@name="EC Reference Channels"]' "Zero"
-PSXCF -u $PSF '/mixer/ctl[@name="EC Reference Bit Format"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="EC Reference SampleRate"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrLeft BOOST Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrRight BOOST Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrLeft VISENSE Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrRight VISENSE Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrLeft SWR DAC_Port Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrRight SWR DAC_Port Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="ANC OUT HPHL Enable Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="ANC OUT HPHR Enable Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="Virtual Bass Boost"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="Virtual Bass Boost"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="WSA_RX0 EC_HQ Switch"]' "1"
@@ -3293,8 +3427,6 @@ PSXCF -u $PSF '/mixer/ctl[@name="RX INT3 DEM MUX"]' "CLSH_DSM_OUT"
 PSXCF -u $PSF '/mixer/ctl[@name="RX INT4 DEM MUX"]' "CLSH_DSM_OUT"
 PSXCF -u $PSF '/mixer/ctl[@name="HPH Idle Detect"]' "ON"
 PSXCF -s $PSF '/mixer/ctl[@name="HPH Idle Detect"]' "ON"
-PSXCF -u $PSF '/mixer/ctl[@name="HPHL_RDAC Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="HPHR_RDAC Switch"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="A2DP_SLIM7_UL_HL Switch"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="PCM_RX_DL_HL Switch"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="USB_DL_HL Switch"]' "1"
@@ -3356,20 +3488,6 @@ PSXCF -u $PSF '/mixer/ctl[@name="SEN_MI2S_RX_DL_HL Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="WSA_CDC_DMA_RX_0_DL_HL Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="RX_CDC_DMA_RX_0_DL_HL Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="RX_CDC_DMA_RX_1_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="RCV Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="TH Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="TL Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="BH Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="BL Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Channels"]' "Zero"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Bit Format"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference SampleRate"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Channels"]' "Zero"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Channels"]' "Zero"
 PSXCF -u $PSF '/mixer/path[@name="ultrasound-suspend"]/ctl[@name="Mi_Ultrasound Suspend"]' "1"
 PSXCF -u $PSF '/mixer/path[@name="ultrasound-suspend"]/ctl[@name="Ultrasound Suspend"]' "1"
 PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS_DL_HL Switch"]' "1"
@@ -3436,226 +3554,11 @@ PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_S
 PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_PRI_AUX_UL_HL Switch"]' "1"
 PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_AUX_UL_HL Switch"]' "1"
 PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_INT_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-and-headphones"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="speaker-mono-2"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-handset"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-and-haptics"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="headphones-dsd"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="voice-headphones"]/ctl[@name="HPHR_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP3 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP4 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP5 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP6 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP7 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="COMP8 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="SpkrLeft COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="SpkrRight COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="WSA_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="WSA_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="RX_COMP1 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="RX_COMP2 Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="HPHL_COMP Switch"]' "0"
-PSXCF -u $PSF '/mixer/path[@name="tty-headphones"]/ctl[@name="HPHR_COMP Switch"]' "0"
+PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="RCV Boost Class-H Tracking Enable"]' "1"
+PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="TH Boost Class-H Tracking Enable"]' "1"
+PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="TL Boost Class-H Tracking Enable"]' "1"
+PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="BH Boost Class-H Tracking Enable"]' "1"
+PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="BL Boost Class-H Tracking Enable"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="AUX_HPF Enable"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="AUX_HPF Enable"]' "Off"
 PSXCF -u $PSF '/mixer/ctl[@name="A2DP_HPF Enable"]' "Off"
@@ -3666,8 +3569,6 @@ PSXCF -u $PSF '/mixer/ctl[@name="HPF Enable"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="HPF Enable"]' "Off"
 PSXCF -u $PSF '/mixer/ctl[@name="LDOH Enable"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="LDOH Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="LPI Enable"]' "0"
-PSXCF -s $PSF '/mixer/ctl[@name="LPI Enable"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="ST Enable"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="ST Enable"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="BDE Enable"]' "1"
@@ -3716,10 +3617,10 @@ PSXCF -u $PSF '/mixer/ctl[@name="BL Boost Class-H Tracking Enable"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="BL Boost Class-H Tracking Enable"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="BL AMP Enable Switch"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="BL AMP Enable Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RX_FIR Filter"]' "ON"
-PSXCF -s $PSF '/mixer/ctl[@name="RX_FIR Filter"]' "ON"
-PSXCF -u $PSF '/mixer/path[@name="headphones-hifi-filter"]/ctl[@name="RX_FIR Filter"]' "ON"
-PSXCF -s $PSF '/mixer/path[@name="headphones-hifi-filter"]/ctl[@name="RX_FIR Filter"]' "ON"
+PSXCF -u $PSF '/mixer/ctl[@name="RX_FIR Filter"]' "OFF"
+PSXCF -s $PSF '/mixer/ctl[@name="RX_FIR Filter"]' "OFF"
+PSXCF -u $PSF '/mixer/path[@name="headphones-hifi-filter"]/ctl[@name="RX_FIR Filter"]' "OFF"
+PSXCF -s $PSF '/mixer/path[@name="headphones-hifi-filter"]/ctl[@name="RX_FIR Filter"]' "OFF"
 PSXCF -u $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="AFE Input Channels"]' "Two"
 PSXCF -s $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="AFE Input Channels"]' "Two"
 PSXCF -u $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="TWS Channel Mode"]' "Two"
@@ -3808,50 +3709,57 @@ PSF="$MODPATH/$MODID$FAIPAOPCONF"
 case $1 in
 -nl) sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT/AUDIO_OUTPUT_FLAG_DIRECT_PCM/g' $PSF
 sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT_PCM_PCM/AUDIO_OUTPUT_FLAG_DIRECT_PCM/g' $PSF;;
--aist) sed -i 's/sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF
-sed -i 's/sampling_rates 44100|48000|88200|96000|176400|192000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF
-sed -i 's/sampling_rates 32000|44100|48000|88200|96000|176400|192000|352800/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF
-sed -i '/default_24/,+6d' $PSF
-sed -i '/deep_buffer_24/,+6d' $PSF
-sed -i '/direct_pcm_16/,+6d' $PSF
-sed -i '/compress/,+6d' $PSF
+-aist) sed -i '/deep_buffer_24/,+6d' $PSF
+sed -i '/direct_pcm/,+6d' $PSF
+sed -i 's/AUDIO_FORMAT_PCM_16_BIT_OFFLOAD|//g' $PSF
+sed -i 's/AUDIO_FORMAT_PCM_24_BIT_OFFLOAD|//g' $PSF
+sed -i 's/AUDIO_FORMAT_PCM_32_BIT_OFFLOAD|//g' $PSF
 sed -i '/^outputs/a\
   deep_buffer_24 {\
     flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
     formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 96000\
+    sampling_rates 48000\
     bit_width 24\
     app_type 69940\
-  }' $PSF
-sed -i '/^outputs/a\
+  }\
   deep_buffer_24bit {\
     flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
     formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 96000\
+    sampling_rates 48000\
     bit_width 24\
     app_type 69940\
-  }' $PSF
-sed -i '/^outputs/a\
-  default_24 {\
-    flags AUDIO_OUTPUT_FLAG_PRIMARY\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 96000\
+  }\
+  direct_pcm_16 {\
+    flags AUDIO_OUTPUT_FLAG_DIRECT\
+    formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT\
+    sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000\
     bit_width 24\
-    app_type 69937\
-  }' $PSF
-sed -i '/^outputs/a\
-  default_24bit {\
-    flags AUDIO_OUTPUT_FLAG_PRIMARY\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 96000\
+    app_type 69936\
+  }\
+  direct_pcm_24 {\
+    flags AUDIO_OUTPUT_FLAG_DIRECT\
+    formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT\
+    sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000\
     bit_width 24\
-    app_type 69937\
+    app_type 69940\
+  }\
+  direct_pcm_32 {\
+    flags AUDIO_OUTPUT_FLAG_DIRECT\
+    formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_32_BIT\
+    sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000\
+    bit_width 32\
+    app_type 69942\
   }' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_RAW/AUDIO_OUTPUT_FLAG_NONE/g' $PSF
-sed -i 's/formats AUDIO_FORMAT_PCM_16_BIT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT/formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT/g' $PSF
-sed -i 's/formats AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT/formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT/g' $PSF
-sed -i 's/formats AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT/formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT/g' $PSF
-sed -i 's/formats AUDIO_FORMAT_PCM_32_BIT/formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_32_BIT/g' $PSF
+sed -i '/AUDIO_FORMAT_MP3/a\
+AIST' $PSF
+sed -i '/AIST/,+1d' $PSF
+sed -i '/AUDIO_FORMAT_MP3/a\
+    sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000' $PSF
+sed -i 's/RAW/NONE/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_VOIP_RX/AUDIO_OUTPUT_FLAG_MMAP_NOIRQ|AUDIO_OUTPUT_FLAG_VOIP_RX/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_DIRECT/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_MMAP_NOIRQ/g' $PSF
+sed -i 's/sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF
+sed -i 's/sampling_rates 32000|44100|48000|88200|96000|176400|192000|352800/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF;;
 esac
 UIP "$MSGFFAP"
 fi
@@ -3873,14 +3781,12 @@ sed -i 's/samplingRates="32000,44100,48000,64000,88200,96000,128000,176400,19200
 sed -i 's/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
 sed -i 's/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
 sed -i 's/samplingRates="44100,48000,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
 sed -i 's/samplingRates="44100,48000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
 sed -i 's/samplingRates="32000 44100 48000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
 sed -i 's/samplingRates="32000 44100 48000 64000 88200 96000 128000 176400 192000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
 sed -i 's/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
 sed -i 's/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
 sed -i 's/samplingRates="44100 48000 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
-sed -i 's/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
 sed -i 's/samplingRates="44100 48000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
 sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1,AUDIO_CHANNEL_OUT_6POINT1,AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
 sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
@@ -3893,8 +3799,14 @@ sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCou
 sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
 sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
 sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/raw/none/g' $PSF
-sed -i 's/RAW/NONE/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_VOIP_RX/AUDIO_OUTPUT_FLAG_MMAP_NOIRQ|AUDIO_OUTPUT_FLAG_VOIP_RX/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_DIRECT/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_MMAP_NOIRQ/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_VOIP_RX/AUDIO_OUTPUT_FLAG_MMAP_NOIRQ AUDIO_OUTPUT_FLAG_VOIP_RX/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_VOIP_RX AUDIO_OUTPUT_FLAG_DIRECT/AUDIO_OUTPUT_FLAG_VOIP_RX AUDIO_OUTPUT_FLAG_MMAP_NOIRQ/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_FAST|AUDIO_OUTPUT_FLAG_RAW/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_RAW|AUDIO_OUTPUT_FLAG_FAST/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_FAST AUDIO_OUTPUT_FLAG_RAW/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
+sed -i 's/AUDIO_OUTPUT_FLAG_RAW AUDIO_OUTPUT_FLAG_FAST/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
 sed -i '/channelMasks="AUDIO_CHANNEL_OUT_STEREO"/a\
 \
 \
@@ -3929,18 +3841,13 @@ sed -i '/flags="AUDIO_OUTPUT_FLAG_DIRECT"/,+1d' $PSF
 sed -i '/mixPort name="direct_pcm" role="source"/a\
                         flags="AUDIO_OUTPUT_FLAG_DIRECT">\
                     <profile name="" format="AUDIO_FORMAT_PCM_FLOAT"' $PSF
-sed -i '/AUDIO_OUTPUT_FLAG_PRIMARY/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/AUDIO_OUTPUT_FLAG_PRIMARY/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
 sed -i '/AUDIO_OUTPUT_FLAG_DEEP_BUFFER/a\
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
-                             samplingRates="96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
 AIST' $PSF
 sed -i '/AUDIO_OUTPUT_FLAG_VIRTUAL_DEEP_BUFFER/a\
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
-                             samplingRates="96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
 AIST' $PSF
 sed -i '/AUDIO_DEVICE_OUT_EARPIECE/a\
                     <profile name="" format="dynamic"\
@@ -4049,8 +3956,6 @@ sed -i '/name="usb_accessory output" role="source"/a\
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
 sed -i 's/ AUDIO_FORMAT_LHDC_LL//g' $PSF
 sed -i 's/AUDIO_FORMAT_LHDC/AUDIO_FORMAT_LHDC AUDIO_FORMAT_LHDC_LL/g' $PSF
-sed -i 's/"AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD|AUDIO_OUTPUT_FLAG_NON_BLOCKING"/"AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD|AUDIO_OUTPUT_FLAG_NON_BLOCKING|AUDIO_OUTPUT_FLAG_GAPLESS_OFFLOAD"/g' $PSF
-sed -i 's/"AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD AUDIO_OUTPUT_FLAG_NON_BLOCKING"/"AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD AUDIO_OUTPUT_FLAG_NON_BLOCKING AUDIO_OUTPUT_FLAG_GAPLESS_OFFLOAD"/g' $PSF
 sed -i '/AIST/,+3d' $PSF;;
 esac
 UIP "$MSGFFAP"
@@ -4130,7 +4035,6 @@ PSF="$MODPATH/$MODID$FDAXXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FDAXXML $PSF
 sed -i 's/\t/  /g' $PSF
-sed -i 's/mi-surround-compressor-steering-enable value="false"/mi-surround-compressor-steering-enable value="true"/g' $PSF
 sed -i 's/mi-adaptive-virtualizer-steering-enable value="false"/mi-adaptive-virtualizer-steering-enable value="true"/g' $PSF
 sed -i 's/mi-virtualizer-binaural-steering-enable value="true"/mi-virtualizer-binaural-steering-enable value="false"/g' $PSF
 sed -i 's/bass-enhancer-enable value="false"/bass-enhancer-enable value="true"/g' $PSF
@@ -4153,14 +4057,17 @@ sed -i 's/global_setting virtual_bass_process="13"/global_setting virtual_bass_p
 sed -i 's/global_setting virtual_bass_process="14"/global_setting virtual_bass_process="0"/g' $PSF
 sed -i 's/global_setting virtual_bass_process="15"/global_setting virtual_bass_process="0"/g' $PSF
 sed -i 's/volume-leveler-compressor-enable value="true"/volume-leveler-compressor-enable value="false"/g' $PSF
+sed -i 's/regulator-enable value="true"/regulator-enable value="false"/g' $PSF
+sed -i 's/audio-optimizer-enable value="true"/audio-optimizer-enable value="false"/g' $PSF
+sed -i 's/volume-modeler-enable value="true"/volume-modeler-enable value="false"/g' $PSF
+sed -i 's/height-filter-mode value="0"/height-filter-mode value="1"/g' $PSF
 sed -i 's/regulator-sibilance-suppress-enable value="true"/regulator-sibilance-suppress-enable value="false"/g' $PSF
-sed -i 's/virtualizer-enable value="true"/virtualizer-enable value="false"/g' $PSF
 sed -i 's/graphic-equalizer-enable value="false"/graphic-equalizer-enable value="true"/g' $PSF
 sed -i 's/reverb-suppression-enable value="false"/reverb-suppression-enable value="true"/g' $PSF
 sed -i 's/surround-decoder-enable value="false"/surround-decoder-enable value="true"/g' $PSF
 sed -i 's/hearing-protection-enable value="true"/hearing-protection-enable value="false"/g' $PSF
-sed -i 's/regulator-speaker-dist-enable value="false"/regulator-speaker-dist-enable value="true"/g' $PSF
-sed -i 's/tuned_rate="48000"/tuned_rate="192000"/g' $PSF
+sed -i 's/regulator-speaker-dist-enable value="true"/regulator-speaker-dist-enable value="false"/g' $PSF
+sed -i 's/tuned_rate="48000"/tuned_rate="384000"/g' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -4172,7 +4079,26 @@ for FPCXML in $APCXML; do
 if [ -f $MAGISKMP$FPCXML ]; then
 UIP "Found $FPCXML" "Patching..."
 PSF="$MODPATH/$MODID$FPCXML"
-sed -i 's/samplingRates="96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/samplingRates="192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/g' $PSF
+if $SRKHZ; then
+sed -i '/AUDIO_OUTPUT_FLAG_DEEP_BUFFER/a\
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
+                             samplingRates="96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
+AIST' $PSF
+sed -i '/AUDIO_OUTPUT_FLAG_VIRTUAL_DEEP_BUFFER/a\
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
+                             samplingRates="96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
+AIST' $PSF
+else
+sed -i '/AUDIO_OUTPUT_FLAG_DEEP_BUFFER/a\
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
+                             samplingRates="192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
+AIST' $PSF
+sed -i '/AUDIO_OUTPUT_FLAG_VIRTUAL_DEEP_BUFFER/a\
+                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
+                             samplingRates="192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
+AIST' $PSF
+fi
+sed -i '/AIST/,+2d' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -4180,7 +4106,40 @@ for FAPIOCXML in $AIPAOPCONF; do
 if [ -f $MAGISKMP$FAPIOCXML ]; then
 UIP "Found $FAPIOCXML" "Patching..."
 PSF="$MODPATH/$MODID$FAPIOCXML"
-sed -i 's/sampling_rates 96000/sampling_rates 192000/g' $PSF
+sed -i '/deep_buffer_24/,+6d' $PSF
+if $SRKHZ; then
+sed -i '/^outputs/a\
+  deep_buffer_24 {\
+    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
+    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
+    sampling_rates 96000\
+    bit_width 24\
+    app_type 69940\
+  }\
+  deep_buffer_24bit {\
+    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
+    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
+    sampling_rates 96000\
+    bit_width 24\
+    app_type 69940\
+  }' $PSF
+else
+sed -i '/^outputs/a\
+  deep_buffer_24 {\
+    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
+    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
+    sampling_rates 192000\
+    bit_width 24\
+    app_type 69940\
+  }\
+  deep_buffer_24bit {\
+    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
+    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
+    sampling_rates 192000\
+    bit_width 24\
+    app_type 69940\
+  }' $PSF
+fi
 UIP "$MSGFFAP"
 fi
 done
@@ -4217,7 +4176,7 @@ CHECKER -mmupd "$IDIOSEMOJI" "$VIPIOSEMOJI" "IPIOSEMOJIS"
 CHECKER -mmupd "$IDMUIS" "$VIPMUIS" "IPMUISS"
 CHECKER -mmupd "$IDFDNI" "$VIPFDNI" "IPFDNIS"
 CHECKER -mmupd "$IDWFAMDQSOS" "$VIPWFAMDQSOS" "IPWFAMDQSOSS"
-#Apps: Lawnchair/Shady/CR/Corvus/Sushi/IA
+#Launchers: Lawn/Shady/CR/Corvus/Sushi/Spark/Derp
 if $ATWELVEL; then CHECKER -mmupd "$IDSL" "$VIPSL" "IPSLLS"; fi
 if $ATEN; then CHECKER -mmupd -c "$IDSSL" "$VIPSSLQ" "$VCIPSSLQ" "IPSLSLS"; fi
 if $AELEVEN; then CHECKER -mmupd -c "$IDSSL" "$VIPSSLR" "$VCIPSSLR" "IPSLSLS"; fi
@@ -4225,6 +4184,8 @@ if $ATWELVEL; then
 CHECKER -mmupd "$IDSCRL" "$VIPSCRL" "IPSLCRS"
 CHECKER -mmupd "$IDSCL" "$VIPSCL" "IPSLCLS"
 CHECKER -mmupd "$IDSSUL" "$VIPSSUL" "IPSLSULS"
+CHECKER -mmupd "$IDSSPL" "$VIPSSPL" "IPSSPLS"
+CHECKER -mmupd "$IDSDFL" "$VIPSDFL" "IPSDFLS"
 fi
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 CHECKER -mmupd "$IDVFX" "$VIPVFX" "IPVFXS"
@@ -5295,7 +5256,7 @@ SET_PERM_RM -msgdi
 }
 
 IPEBB () {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 30 ]; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 30 ]; then
 CEMODID="$IDEBB"
 UCSA -ent "Install Background Blur $VIPEBB?" "IPEBBS"
 fi
@@ -5303,9 +5264,16 @@ fi
 
 IPEBBS () {
 UIP "Background Blur $IAMM"
+if $MAGISK; then
 PTMFI -nmp "$IDEBB"
-echo "resetprop ro.surface_flinger.supports_background_blur 1 && killall surfaceflinger" > $MODPATH/$MODID/service.sh
-MMPR -v "Background Blur" "$VIPEBB" "Enable Background Blur For QS, Launcher Resents, Etc"; SET_PERM_RM -msgdi
+echo "ro.surface_flinger.supports_background_blur=1" > $MODPATH/$MODID/system.prop
+MMPR -v "Background Blur" "$VIPEBB" "Enable Background Blur For QS, Launcher Resents, Etc"
+SET_PERM_RM
+else
+BUCKUPER -bp
+echo -e "\n#Background Blur\nro.surface_flinger.supports_background_blur=1" >> $IPSBP
+fi
+UIP "$MSGDI"
 }
 
 IPBA () {
@@ -5450,20 +5418,23 @@ fi
 }
 
 IPMUISS () {
-UCSA -a "Masik OnePlus Pixel Samsung Oppo Spark Arcana LiteOS" "Choose Media Variant:" "Media From" "LiteOS"
+MASIKALT=false
+UCSA -a "Masik OnePlus Pixel Samsung Oppo Spark Arcana" "Choose Media Variant:" "Media From" "Arcana"
 if $UCSFNM; then
+case $UCSFNMC in
+"Masik") UIP -s "Use Masik Alt Lock Unlock Sound?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then MASIKALT=true; fi;;
+esac
+UIP -s "Choose Sounds Volume:" "$MSGVU Standart Volume" "$MSGVD Boost Volume"; if KEYCHOOSE; then MUIP="VS"; else MUIP="VB"; fi
 UIP "Installing Media UI Sounds $IAMM"
 UZTPN "MediaUISounds"
-case $UCSFNMC in
-"Masik") UIP -s "Use Masik Alt Lock Unlock Sound?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then mv -f $TMPDIR/MediaUISounds/MasikAlt/* $TMPDIR/MediaUISounds/Masik; fi;;
-esac
 if $MAGISK; then
+if $MASIKALT; then mv -f $TMPDIR/MediaUISounds/$MUIP/MasikAlt/* $TMPDIR/MediaUISounds/$MUIP/Masik; fi
 PTMFI "$IDMUIS" "MediaUiSounds" "$MIPPMU"
-cp -f $TMPDIR/$MODID/$UCSFNMC/* $MODPATH/$MODID$MIPPMU
+cp -f $TMPDIR/$MODID/$MUIP/$UCSFNMC/* $MODPATH/$MODID$MIPPMU
 MMPR -v "Media UI Sounds" "$VIPMUIS" "Media UI Sounds From $UCSFNMC"
 else
 IPMUISSA
-cp -f $TMPDIR/MediaUISounds/$UCSFNMC/* $IPPMU
+cp -f $TMPDIR/MediaUISounds/$MUIP/$UCSFNMC/* $IPPMU
 touch $AIOPFMDPH/mediauisounds
 fi
 SET_PERM_RM -msgdi
@@ -5529,12 +5500,12 @@ MMPR -v "Wi-Fi & Mobile Data QS Old Style" "$VIPGPPM" "Wi-Fi & Mobile Data QS Ol
 
 } #
 
-{ #Apps: Lawnchair/Shady/CR/Corvus/Sushi/IA
+{ #Launchers: Lawn/Shady/CR/Corvus/Sushi/Spark/Derp
 
 IPSL () {
 if $MAGISK && [ $MIUI != true ] && [ $ASDK -ge 29 ]; then
 SYSTEMLESSLAUNCHERS=false
-CEMODID="$IDSL $IDSSL $IDSCRL $IDSCL $IDSSUL"
+CEMODID="$IDSL $IDSSL $IDSCRL $IDSCL $IDSSUL $IDSSPL $IDSDFL"
 UCSA -ent "Install Systemless Launcher?" "IPSLS"
 fi
 }
@@ -5563,12 +5534,21 @@ UIP -s "Install Corvus Launcher $VIPSCLA - $VIPSCL?" "$MSGVU Yes" "$MSGVD No $MS
 if KEYCHOOSE; then IPSLCLS; fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
-UIP -s "Install Sushi Launcher $VIPSSULA - $VIPSSUL?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "Install Sushi Launcher $VIPSSULA - $VIPSSUL?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then IPSLSULS; fi
+fi
+if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
+UIP -s "Install Spark Launcher $VIPSSPLA - $VIPSSPL?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+if KEYCHOOSE; then IPSSPLS; fi
+fi
+if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
+UIP -s "Install Derp Launcher $VIPSDFLA - $VIPSDFL?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then IPSDFLS; fi
 fi
 }
 
 IPSLSE () {
+UZTPN "QSRP"
 echo -e "ro.boot.vendor.overlay.static=false\nro.control_privapp_permissions=disable" > $MODPATH/$MODID/system.prop
 mkdir -p $TMPDIR/$MODID$MIPPSO; cp -f $TMPDIR/QSRP/QuickStepRecentsProvider-$PACKAGENAME.apk $TMPDIR/$MODID$MIPPSO/QuickStepRecentsProvider.apk
 if [ -d $TMPDIR/$MODID$MIPSSEPA/ThemePicker ]; then
@@ -5581,7 +5561,6 @@ SET_PERM_RM -msgdi
 }
 
 IPSLLS () {
-UZTPN "QSRP"
 UIP "Installing Lawnchair $IAMM"
 PTMFI -np "$IDSL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
@@ -5595,7 +5574,6 @@ IPSLSE
 }
 
 IPSLSLS () {
-UZTPN "QSRP"
 UIP "Installing Shady Launcher $IAMM"
 PTMFI -np "$IDSSL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
@@ -5611,7 +5589,6 @@ IPSLSE
 }
 
 IPSLCRS () {
-UZTPN "QSRP"
 UIP "Installing CR Launcher $IAMM"
 PTMFI -np "$IDSCRL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
@@ -5624,7 +5601,6 @@ IPSLSE
 }
 
 IPSLCLS () {
-UZTPN "QSRP"
 UIP "Installing Corvus Launcher $IAMM"
 PTMFI -np "$IDSCL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
@@ -5636,7 +5612,6 @@ IPSLSE
 }
 
 IPSLSULS () {
-UZTPN "QSRP"
 UIP "Installing Sushi Launcher $IAMM"
 PTMFI -np "$IDSSUL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
@@ -5647,6 +5622,34 @@ APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPD
 MMPR -v "Systemless Sushi Launcher" "$VIPSSUL" "Systemlessly Install Sushi Launcher For Android 12.1 With Recents UI Support"
 IPSLSE
 }
+
+IPSSPLS () {
+UIP "Installing Spark Launcher $IAMM"
+PTMFI -np "$IDSSPL" "$MMLAUNCHERLIST"
+SYSTEMLESSLAUNCHERS=true
+UZTPN "$IDSSPL-$ACNV" "$IDSCL-$ACNV"
+cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
+cp -rf $TMPDIR/$IDSCL-$ACNV/system/system_ext $TMPDIR/$MODID/system
+APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
+MMPR -v "Systemless Spark Launcher" "$VIPSSUL" "Systemlessly Install Spark Launcher For Android 12.1 With Recents UI Support"
+IPSLSE
+}
+
+IPSDFLS () {
+UIP "Installing Derp Launcher $IAMM"
+PTMFI -np "$IDSDFL" "$MMLAUNCHERLIST"
+SYSTEMLESSLAUNCHERS=true
+UZTPN "$IDSDFL-$ACNV" "$IDSCL-$ACNV"
+cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
+cp -rf $TMPDIR/$IDSCL-$ACNV/system/system_ext $TMPDIR/$MODID/system
+APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
+MMPR -v "Systemless Derp Launcher" "$VIPSDFL" "Systemlessly Install Derp Launcher For Android 12.1 With Recents UI Support"
+IPSLSE
+}
+
+} #
+
+{ #Install App From $STORAGE/Applications
 
 IPAPP () {
 if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then
@@ -5773,7 +5776,6 @@ fi
 IPDAS () {
 UIP -s "Choose Dolby App:" "$MSGVU DAX3 v3.5.1.28 $MSGRI" "$MSGVD DAX2 v2.6.0.28"
 if KEYCHOOSE; then DAXAPP=true; else DAXAPP=false; fi
-
 UIP "Installing Dolby Atmos $IAMM"
 UZTPN "DolbyAtmos"
 PTMFI -np "$IDDA" "dolbyatmos DolbyAudio MotoDolby SoundEnhancement MiSound AudioFxMoto MotoWaves"
@@ -5809,6 +5811,8 @@ dontaudit { hal_audio_default mtk_hal_audio audioserver } system_file file { rea
 allow { hal_audio_default mtk_hal_audio audioserver } system_file file { read open getattr execute }
 dontaudit zygote { device unlabeled } file write
 allow zygote { device unlabeled } file write
+dontaudit init system_file file mounton
+allow init system_file file mounton
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
@@ -5818,8 +5822,8 @@ dontaudit { hal_audio_default mtk_hal_audio audioserver } { default_prop boottim
 allow { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop } file { read open getattr map }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
 allow { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } audio_prop file read
-allow { hal_audio_default mtk_hal_audio audioserver } audio_prop file read
+dontaudit { hal_audio_default mtk_hal_audio audioserver } audio_prop file { read open getattr }
+allow { hal_audio_default mtk_hal_audio audioserver } audio_prop file { read open getattr }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
 allow { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file open
@@ -5864,8 +5868,6 @@ VIBRATOR=\`realpath /*/bin/hw/vendor.qti.hardware.vibrator.service*\`
 POWER=\`realpath /*/bin/hw/vendor.mediatek.hardware.mtkpower@*-service\`
 [ \"\$POWER\" ] && killall \$POWER
 killall android.hardware.sensors@2.0-service-mediatek
-killall [chre_kthread] [scp_power_reset]
-killall [charger_in] [charger_thread] [tcpc_power_off]
 killall android.hardware.light-service.mt6768
 CAMERA=\`realpath /*/bin/hw/android.hardware.camera.provider@*-service_64\`
 [ \"\$CAMERA\" ] && killall \$CAMERA" > $MODPATH/$MODID/service.sh
@@ -5879,7 +5881,7 @@ chcon u:object_r:vendor_data_file:s0 \$DIR
 OPMANIFESTXML=\$MAGISKMP/mirror$MIPSE/vintf/manifest.xml
 PMANIFESTXML=$MODPATH/$MODID$MIPSE/vintf/manifest.xml
 rm -f \$PMANIFESTXML
-FMANIFESTXML=\`find \$MAGISKMP/mirror/*/etc/vintf \$MAGISKMP/mirror/*/*/etc/vintf /*/etc/vintf /*/*/etc/vintf -type f -name *.xml\`
+FMANIFESTXML=\"\$MAGISKTMP/mirror/*/etc/vintf/manifest.xml \$MAGISKTMP/mirror/*/*/etc/vintf/manifest.xml /*/etc/vintf/manifest.xml /*/*/etc/vintf/manifest.xml \$MAGISKTMP/mirror/*/etc/vintf/manifest/*.xml \$MAGISKTMP/mirror/*/*/etc/vintf/manifest/*.xml /*/etc/vintf/manifest/*.xml /*/*/etc/vintf/manifest/*.xml\"
 if ! getprop | grep -Eq \"dolby.skip.*\]: \[1\"\\
 && ! grep -A2 vendor.dolby.hardware.dms \$FMANIFESTXML | grep -Eq 1.0; then
 cp -f \$OPMANIFESTXML \$PMANIFESTXML
@@ -6637,8 +6639,12 @@ UIP -s "Boost Microphones Volume Levels?" "This Item Boosting Microphones Volume
 if KEYCHOOSE; then STEP2=true; fi
 fi
 if FINDER "$APCXML" || FINDER "$AIPAOPCONF"; then
-UIP -s "Fixing 192kHz For Audio Output?" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
-if KEYCHOOSE; then STEP3=true; fi
+UIP -s "Fixing 96kHz Or 192kHz For Audio Output?" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
+if KEYCHOOSE; then
+STEP3=true
+UIP -s "$MSGVU 96kHz" "$MSGVD 192kHz"
+if KEYCHOOSE; then SRKHZ=true; else SRKHZ=false; fi
+fi
 fi
 if FINDER "$MCGAX"; then
 UIP -s "Patch Media Codecs Files?" "$MSGVU Yes $MSGRI" "$MSGVD No $MSGNIS"
@@ -6649,21 +6655,22 @@ if $HIRES; then UIP "Device With Support Hi-Res"; else UIP "Device Without Suppo
 PTMFI -np "$IDAIST" "$IDNLS"
 MMPR -vcs "AIST For Devices Based On Qualcomm" "$VIPAIST" "$VCIPAIST" "Oleg_Skalskiy" "This Module Improving Audio Quality On Android" "https://t.me/AIST_FLOOD"
 echo "# GENERAL PARAMETERS BY AIST
-af.resampler.quality=0
 af.thread.throttle=0
 af.fast_track_multiplier=0
-audio.adm.buffering.ms=2
-vendor.audio.adm.buffering.ms=2
-audio.offload.buffer.size.kb=192
-vendor.audio.offload.buffer.size.kb=192
-audio.native.dsd.buffer.size.kb=192
-vendor.audio.native.dsd.buffer.size.kb=192
+audio.adm.buffering.ms=7
+vendor.audio.adm.buffering.ms=7
+audio.adm.phaseshift.ms=7
+vendor.audio.adm.phaseshift.ms=7
+audio.offload.buffer.size.kb=512
+vendor.audio.offload.buffer.size.kb=512
+audio.native.dsd.buffer.size.kb=512
+vendor.audio.native.dsd.buffer.size.kb=512
+audio.truehd.buffer.size.kb=512
+vendor.audio.truehd.buffer.size.kb=512
 audio.sys.noisy.broadcast.delay=0
 vendor.audio.sys.noisy.broadcast.delay=0
 audio.sys.offload.pstimeout.secs=0
 vendor.audio.sys.offload.pstimeout.secs=0
-audio.sys.routing.latency=0
-vendor.audio.sys.routing.latency=0
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
 media.stagefright.enable-aac=true
@@ -6676,7 +6683,6 @@ debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec_delayed_params=0
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
-vendor.mm.enable.qcom_parser=16776959
 vendor.mm.enable.qcom_parser=16777215
 persist.mm.enable.prefetch=true
 vendor.audio.offload.multiaac.enable=true
@@ -6696,20 +6702,16 @@ persist.vendor.audio.spv3.enable=false
 persist.vendor.audio.spv4.enable=false
 persist.vendor.audio.spv5.enable=false
 persist.vendor.audio.hac.enable=false
-persist.vendor.audio.delta.refresh=true
+persist.vendor.audio.delta.refresh=false
 persist.vendor.audio.bcl.enabled=false
 persist.vendor.audio.ll_playback_bargein=false
 persist.vendor.audio.ozo.codec.enable=true
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
-persist.vendor.audio.vbat.enabled=false
-persist.vendor.audio.ras.enabled=false
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
-persist.audio_hal.dsp_bit_width_enforce_mode=24
 ro.qc.sdk.audio.ssr=false
-ro.vendor.audio.dump.mixer=false
 ro.vendor.audio.sdk.ssr=false
+ro.vendor.audio.dump.mixer=false
 ro.audio.playbackScene=false
 ro.vendor.audio.playbackScene=false
 ro.vendor.audio.recording.hd=true
@@ -6721,14 +6723,13 @@ ro.vendor.audio.spk.stereo=true
 ro.vendor.audio.spk.clean=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.sfx.independentequalizer=false
-ro.vendor.audio.sfx.earadj=true
+ro.vendor.audio.sfx.earadj=false
 ro.vendor.audio.sfx.speaker=true
 ro.vendor.audio.sfx.harmankardon=true
+ro.vendor.audio.sfx.spk.movie=true
 ro.vendor.audio.gain.support=true
 ro.vendor.audio.karaok.support=true
 ro.vendor.camera.karaok.support=true
-ro.vendor.audio.zoom.support=false
-ro.vendor.audio.zoom.type=0
 ro.vendor.audio.ns.support=true
 ro.vendor.audio.enhance.support=true
 ro.audio.monitorRotation=true
@@ -6737,40 +6738,36 @@ ro.vendor.audio.game.mode=true
 ro.vendor.audio.game.vibrate=true
 ro.vendor.audio.aiasst.support=true
 ro.vendor.audio.soundtrigger.lowpower=false
-ro.vendor.audio.soundtrigger.adjconf=true
-ro.vendor.audio.soundtrigger.pangaea=1
+ro.vendor.audio.soundtrigger.adjconf=false
+ro.vendor.audio.soundtrigger.pangaea=0
 ro.vendor.audio.soundtrigger.sva-5.0=1
 ro.vendor.audio.soundtrigger.sva-6.0=1
-ro.vendor.audio.soundtrigger.training.level=50
-ro.vendor.audio.soundtrigger.xanzn.gmm.level=80
-ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=80
-ro.vendor.audio.soundtrigger.xanzn.cnn.level=158
-ro.vendor.audio.soundtrigger.xanzn.vop.level=21
-ro.vendor.audio.soundtrigger.xatx.gmm.level=54
-ro.vendor.audio.soundtrigger.xatx.gmm.user.level=54
-ro.vendor.audio.soundtrigger.xatx.cnn.level=95
-ro.vendor.audio.soundtrigger.xatx.vop.level=0
-ro.vendor.audio.soundtrigger.appdefine.gmm.level=55
-ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=65
-ro.vendor.audio.soundtrigger.appdefine.cnn.level=45
-ro.vendor.audio.soundtrigger.appdefine.vop.level=10
-ro.vendor.audio.soundtrigger.snr=9
 ro.vendor.audio.soundfx.usb=true
+ro.vendor.audio.ring.filter=true
 ro.vendor.audio.feature.fade=true
 ro.vendor.audio.us.proximity=false
-ro.vendor.audio.3d.audio.support=false
 ro.vendor.audio.camera.loopback.support=true
 ro.vendor.audio.support.sound.id=true
+ro.vendor.standard.video.enable=true
 ro.vendor.audio.videobox.switch=true
-ro.vendor.audio.dolby.vision.support=true
-ro.vendor.audio.dolby.vision.capture.support=true
-ro.vendor.audio.dolby.surround.enable=true
-ro.vendor.audio.surround.support=true
+ro.vendor.video_box.version=2
+ro.vendor.audio.feature.spatial=7
+ro.vendor.audio.multichannel.5point1.headset=true
+ro.vendor.audio.multichannel.5point1=true
+ro.vendor.audio.notify5Point1InUse=true
+ro.vendor.audio.multi.channel=true
+ro.vendor.audio.dolby.eq.half=false
+ro.vendor.audio.dolby.vision.support=false
+ro.vendor.audio.dolby.vision.capture.support=false
+ro.vendor.audio.dolby.surround.enable=false
+ro.vendor.audio.surround.support=false
 ro.vendor.audio.surround.headphone.only=false
+ro.vendor.audio.elus.enable=true
 ro.vendor.audio.sfx.scenario=true
 ro.vendor.audio.scenario.support=true
-persist.vendor.audio.auto.scenario=false
-use.voice.path.for.pcm.voip=true
+persist.vendor.audio.auto.scenario=true
+vendor.audio.game3D.switch=1
+vendor.audio.game4D.switch=1
 audio.hal.output.suspend.supported=false
 vendor.audio.hal.output.suspend.supported=false
 audio.safemedia.bypass=true
@@ -6787,7 +6784,6 @@ sys.haptic.infinitelevel=true
 sys.haptic.dynamiceffect=true
 sys.haptic.dynamiceffect.richtap=true
 sys.haptic.ignoreWhenCamera=true
-sys.haptic.intensityforkeyboard=true
 audio.safx.pbe.enabled=false
 vendor.audio.safx.pbe.enabled=false
 audio.playback.mch.downsample=false
@@ -6798,8 +6794,6 @@ vendor.audio.nat.codec.enabled=1
 effect.reverb.pcm=0
 vendor.audio.matrix.limiter.enable=0
 audio.matrix.limiter.enable=0
-vendor.audio.game4D.switch=0
-vendor.audio.game3D.switch=0
 vendor.audio.tunnel.encode=false
 audio.tunnel.encode=false
 ro.vendor.audio.tunnel.encode=false
@@ -6807,52 +6801,50 @@ vendor.tunnel.audio.encode=false
 tunnel.audio.encode=false
 persist.speaker.prot.enable=false
 persist.vendor.speaker.prot.enable=false
+audio.offload.pcm.enable=false
 audio.offload.pcm.16bit.enable=false
 audio.offload.pcm.24bit.enable=false
 audio.offload.pcm.32bit.enable=false
 audio.offload.pcm.64bit.enable=false
 audio.offload.pcm.float.enable=false
+vendor.audio.offload.pcm.enable=false
 vendor.audio.offload.pcm.16bit.enable=false
 vendor.audio.offload.pcm.24bit.enable=false
 vendor.audio.offload.pcm.32bit.enable=false
 vendor.audio.offload.pcm.64bit.enable=false
 vendor.audio.offload.pcm.float.enable=false
+audio.offload.pcm.enabled=false
 audio.offload.pcm.16bit.enabled=false
 audio.offload.pcm.24bit.enabled=false
 audio.offload.pcm.32bit.enabled=false
 audio.offload.pcm.64bit.enabled=false
 audio.offload.pcm.float.enabled=false
+vendor.audio.offload.pcm.enabled=false
 vendor.audio.offload.pcm.16bit.enabled=false
 vendor.audio.offload.pcm.24bit.enabled=false
 vendor.audio.offload.pcm.32bit.enabled=false
 vendor.audio.offload.pcm.64bit.enabled=false
 vendor.audio.offload.pcm.float.enabled=false
-audio.hwacceffects.needed=true
-vendor.audio.hwacceffects.needed=true
-ro.config.hw_music_lp=true
-ro.config.music_lp_vol=true
+audio.hwacceffects.needed=false
+vendor.audio.hwacceffects.needed=false
 audio.high.resolution.enable=true
 vendor.audio.high.resolution.enable=true
 persist.sys.mitalk.enable=true
-vendor.audio.volume.headset.gain.depcal=true
-persist.smartamp.enable=false
-ro.config.audio.speaker_boost=yes
+vendor.audio.volume.headset.gain.depcal=false
 ro.have_aacencode_feature=1
 vendor.audio.playback.dsp.pathdelay=0
 vendor.audio.usb.disable.sidetone=true
 ro.telephony.call_ring.multiple=false
-vendor.audio.3daudio.record.enable=false
 audio.legacy.postproc=false
-vendor.audio.hdr.record.enable=false
+vendor.audio.hdr.record.enable=true
 persist.dirac.acs.ignore_error=1
 audio.passthrough.volume.route2cec=true
 persist.vendor.audio_fx.waves.maxxsense=true
 persist.vendor.audio_fx.waves.processing=true
 persist.vendor.audio_fx.waves.proc_twks=true
-persist.vendor.audio_fx.waves.systrace=false
+persist.vendor.audio_fx.waves.systrace=true
 vendor.audio.c2.preferred=true
 debug.c2.use_dmabufheaps=1
-vendor.audio.ultrasound.stoplatency=9999
 ro.camera.sound.forced=1
 audio.enable.mirrorlink=false
 vendor.audio.enable.mirrorlink=false
@@ -6860,13 +6852,10 @@ ro.vendor.audio.enable.mirrorlink=false
 audio.lowpower=false
 vendor.audio.lowpower=false
 ro.vendor.audio.lowpower=false
-ro.vendor.audio.elus.enable=true
 
 # OPLUS GENERAL PARAMETERS BY AIST TEAM
-ro.oplus.audio.custom.media_vol_default=false
-ro.oplus.audio.notsupport.audioscence=1
+ro.oplus.audio.custom.media_vol_default=true
 ro.oplus.audio.support.audioscence.v2=1
-ro.oplus.audio.dolby.offload=0
 ro.oplus.platform.audio.bitrate=true
 
 # XIAO GENERAL PARAMETERS BY AIST TEAM
@@ -7210,16 +7199,6 @@ use.non-omx.heif.encoder=false
 use.non-omx.pcm.encoder=false
 
 # HiFi/Dolby PARAMETERS BY AIST TEAM
-ro.audio.hifi.volume=90
-ro.vendor.audio.hifi.volume=90
-audio.hifi.volume=90
-vendor.audio.hifi.volume=90
-persist.audio.hifi.volume=90
-persist.vendor.audio.hifi.volume=90
-qcom.audio.hifi.volume=90
-qcom.vendor.audio.hifi.volume=90
-qc.audio.hifi.volume=90
-qc.vendor.audio.hifi.volume=90
 audio.hifi.int_codec=true
 vendor.audio.hifi.int_codec=true
 audio.hifi.ext_codec=true
@@ -7247,15 +7226,16 @@ vendor.audio.use.dts_eagle=true
 DTS_EAGLE_PLATFORM_SUPPORT=true
 DTS_NEW_PARAM_READY=1
 ro.feature.dolby_enable=true
-dolby.dap.param.tee=false
-audio.gef.enable.traces=false
+dolby.dap.param.tee=true
+audio.gef.enable.traces=true
 audio.gef.debug.flags=true
-vendor.dolby.dap.param.tee=false
-vendor.audio.gef.enable.traces=false
+vendor.dolby.dap.param.tee=true
+vendor.audio.gef.enable.traces=true
 vendor.audio.gef.debug.flags=true
-ro.platform.disable.audiorawout=false
+ro.platform.disable.audiorawout=true
+ro.platform.support.dolby=true
 ro.platform.support.dts=true
-ro.vendor.platform.disable.audiorawout=false
+ro.vendor.platform.disable.audiorawout=true
 ro.vendor.platform.support.dolby=true
 ro.vendor.platform.support.dts=true
 vendor.dts.audio.skip_shadow=true
@@ -7263,7 +7243,6 @@ vendor.dts.audio.set_bypass=true
 vendor.dts.audio.log_time=false
 vendor.dts.audio.allow_offload=true
 vendor.dts.audio.print_eagle=true
-ro.vendor.audio.dolby.eq.half=true
 
 # BT PARAMETERS BY AIST TEAM
 persist.service.btui.use_aptx=1
@@ -7281,11 +7260,13 @@ audio.effect.a2dp.enable=1
 vendor.audio.effect.a2dp.enable=1
 persist.sys.btsatck.absvolfeature=true
 persist.vendor.btsatck.absvolfeature=true
+persist.bluetooth.enable_dynamic_absvol=false
 persist.vendor.bt.a2dp.addr_check_enabled_for_aac=true
 persist.bluetooth.avrcpversion=avrcp16
 persist.bluetooth.mapversion=map14
 bt.max.hfpclient.connections=5
-persist.sys.fflag.override.settings_bluetooth_hearing_aid=false
+persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
+sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.bluetooth.enablenewavrcp=true
 persist.vendor.qcom.enablenewavrcp=true
 persist.vendor.qcom.bluetooth.enablenewavrcp=true
@@ -7297,6 +7278,7 @@ persist.vendor.qcom.bluetooth.enable.splita2dp=true
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=false
 persist.vendor.btstack.aac_vbr_frm_ctl.enabled=false
 persist.vendor.qcom.bluetooth.aac_vbr_frm_ctl.enabled=false
+ro.vendor.bluetooth.a2dp_aac_vbr.is_disabled=true
 persist.vendor.bt.enable.swb=true
 persist.vendor.bt.enable.swbpm=true
 persist.vendor.btstack.enable.swb=true
@@ -7309,19 +7291,18 @@ persist.bluetooth.sbc_hd_higher_bitrate=1
 persist.bt.sbc_hd_enabled=1
 persist.vendor.qcom.bluetooth.a2dp_mcast_test.enabled=false
 persist.af.losslessbt.on=1
+bluetooth.a2dp.lhdc=true
 persist.bluetooth.a2dp.lhdc=true
 persist.bluetooth.dualconnection.supported=true
 persist.bluetooth.gamemode=true
-ro.vendor.bluetooth.a2dp_aac_vbr.is_disabled=true
-vendor.bluetooth.ldac.abr=true
-persist.vendor.bluetooth.a4wp=true
-persist.vendor.bluetooth.a2dp.hal.implementation=true
-persist.vendor.bt.a2dp.hal.implementation=true
+vendor.bluetooth.ldac.abr=false
+persist.vendor.bluetooth.a2dp.hal.implementation=false
+persist.vendor.bt.a2dp.hal.implementation=false
 persist.bluetooth.bluetooth_audio_hal.disabled=false
-persist.bluetooth.enablepagescan=flase
-persist.vendor.bt.a2dp.mac_whitelist=false
-ro.bluetooth.emb_wp_mode=true
-ro.vendor.bluetooth.emb_wp_mode=true
+persist.vendor.bluetooth.modem_nv_support=false
+persist.vendor.btstack.lc3_reset_adv_audio_mask=true
+persist.bluetooth.enablepagescan=true
+persist.vendor.bt.a2dp.mac_whitelist=true
 audio.a2dp.codec.latency=true
 vendor.audio.a2dp.codec.latency=true
 ro.vendor.audio.a2dp.codec.latency=true
@@ -7330,34 +7311,32 @@ persist.vendor.service.bt.iot.enablelogging=false
 persist.vendor.bt.iotinfo.report.enable=false
 persist.vendor.service.bt.iotinfo.report.enable=false
 persist.bt.iot.enablelogging=flase
-persist.bluetooth.a2dp.lhdc=true
 persist.sys.bluetooth.wearcheck_support=true
 persist.sys.bluetooth.gatt.cache.support=true
 persist.sys.bluetooth.ble.retry.support=true
 persist.sys.bluetooth.rssi_distance.support=true
-bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
-bluetooth.profile.bas.client.enabled=true
-bluetooth.profile.gatt.enabled=true
+bluetooth.profile.avrcp.controller.enabled=false
 bluetooth.profile.hfp.ag.enabled=true
-bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.asha.central.enabled=true
+bluetooth.profile.gatt.enabled=true
 bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.hid.device.enabled=true
 bluetooth.profile.map.server.enabled=true
 bluetooth.profile.opp.enabled=true
 bluetooth.profile.pan.nap.enabled=true
 bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
-bluetooth.profile.sap.server.enabled=true
-ro.vendor.bluetooth.csip_qti=true
+bluetooth.profile.sap.server.enabled=false
+vendor.audio.hfp.enable=false
+ro.vendor.bluetooth.csip_qti=false
 
 # OPLUS BT PARAMETERS BY AIST TEAM
-persist.sys.oplus.bt.diagnose_tool_on=true
-persist.sys.oplus.bt.acl_optimize=true
-persist.sys.oplus.bt.codec_negotiation_timeout_mechanism.enable=true
-persist.sys.oplus.bt.log_off_bt=true
+persist.sys.oplus.bt.binaural_record=false
+persist.sys.oplus.bt.acl_optimize=false
+persist.sys.oplus.bt.log_off_bt=false
 persist.sys.oplus.bt.switch_log.enable=false
-persist.sys.oplus.bt.inquiry_cache=true
 
 # AHAL PARAMETERS BY AIST TEAM
 audio.offload.video=true
@@ -7377,9 +7356,7 @@ vendor.audio.offload.passthrough=false
 ro.vendor.audio.offload.passthrough=false
 ro.vendor.audio.offload.multiple.enabled=false
 vendor.audio.offload.multiple.enabled=false
-audio.offload.disable=false
-vendor.audio.offload.disable=false
-ro.vendor.audio.offload.disable=false
+use.voice.path.for.pcm.voip=true
 vendor.voice.path.for.pcm.voip=true
 audio.decoder_override_check=true
 ro.vendor.audio.hw.aac.decoder=true
@@ -7395,37 +7372,34 @@ ro.bluetooth.a2dp_offload.supported=true
 persist.bluetooth.a2dp_offload.disabled=false
 vendor.audio.keep_alive.disabled=false
 vendor.audio.feature.a2dp_offload.enable=true
-vendor.audio.feature.anc_headset.enable=false
 vendor.audio.feature.battery_listener.enable=false
 vendor.audio.feature.devicestate_listener.enable=false
 vendor.audio.feature.thermal_listener.enable=false
 vendor.audio.feature.custom_stereo.enable=false
 vendor.audio.feature.dsm_feedback.enable=true
+vendor.audio.feature.dynamic_ecns.enable=true
 vendor.audio.feature.ext_hw_plugin.enable=false
 vendor.audio.feature.external_dsp.enable=false
 vendor.audio.feature.external_qdsp.enable=false
-vendor.audio.feature.external_speaker.enable=true
+vendor.audio.feature.external_speaker.enable=false
 vendor.audio.feature.external_speaker_tfa.enable=false
-vendor.audio.feature.hfp.enable=true
-vendor.audio.feature.hifi_audio.enable=true
+vendor.audio.feature.hfp.enable=false
 vendor.audio.feature.hwdep_cal.enable=true
-vendor.audio.feature.incall_music.enable=true
 vendor.audio.feature.multi_voice_session.enable=true
 vendor.audio.feature.keep_alive.enable=true
-vendor.audio.feature.kpi_optimize.enable=true
+vendor.audio.feature.kpi_optimize.enable=false
 vendor.audio.feature.maxx_audio.enable=true
-vendor.audio.feature.ras.enable=false
+vendor.audio.feature.ras.enable=true
 vendor.audio.feature.spkr_prot.enable=false
 vendor.audio.feature.usb_offload.enable=true
 vendor.audio.feature.usb_offload_burst_mode.enable=true
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false
 vendor.audio.feature.deepbuffer_as_primary.enable=false
-vendor.audio.feature.audiosphere.enable=true
-vendor.audio.feature.asphere.enable=true
+vendor.audio.feature.audiosphere.enable=false
+vendor.audio.feature.asphere.enable=false
 vendor.audio.feature.audiozoom.enable=false
-vendor.audio.feature.vbat.enable=false
-vendor.audio.feature.snd_mon.enable=false
 vendor.audio.feature.dmabuf.cma.memory.enable=true
+vendor.audio.feature.power_mode.enable=false
 
 # SYSTEM PARAMETERS BY AIST TEAM
 vendor.hab.vendor.verified=false
@@ -7434,19 +7408,11 @@ vendor.hab.system_ext.verified=false
 vendor.hab.oem.verified=false
 vendor.hab.product.verified=false
 vendor.hab.odm.verified=false
-ro.control_privapp_permissions=disable" > $MODPATH/$MODID/system.prop
+ro.control_privapp_permissions=disable
+vendor.skip.init=0" > $MODPATH/$MODID/system.prop
 REPLACER -f "AudioFX MusicFX"
-echo "allow audioserver audioserver_tmpfs file { read write execute }
-allow audioserver system_file file { execmod }
-allow mediaserver mediaserver_tmpfs file { read write execute }
-allow mediaserver system_file file { execmod }
-allow audioserver unlabeled file { read write execute open getattr }
-allow hal_audio_default hal_audio_default process { execmem }
-allow hal_audio_default hal_audio_default_tmpfs file { execute }
-allow hal_audio_default audio_data_file dir { search }
-allow app app_data_file file { execute_no_trans }
-allow mtk_hal_audio mtk_hal_audio_tmpfs file { execute }" > $MODPATH/$MODID/sepolicy.rule
-echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID\nresetprop --delete ro.build.selinux\nif [[ \"\$(cat /sys/fs/selinux/enforce)\" == \"0\" ]]; then\nchmod 0640 /sys/fs/selinux/enforce\nchmod 0440 /sys/fs/selinux/policy\nfi" | tee $MODPATH/$MODID/service.sh $MODPATH/$MODID/post-fs-data.sh > /dev/null
+echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" | tee $MODPATH/$MODID/service.sh $MODPATH/$MODID/post-fs-data.sh > /dev/null
+echo -e "\nresetprop -p --delete persist.vendor.ssr.restart_level\nresetprop -p --delete ro.media.recorder-max-base-layer-fps\nresetprop -p --delete ro.miui.fpstool_enabled\nresetprop -p --delete persist.vendor.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete persist.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete vendor.audio.ultrasound.stoplatency" > $MODPATH/$MODID/service.s
 if FINDER "$MPATHS"; then PSXCF -psf "$MPATHS"; fi
 if FINDER "$ACXML"; then PSXCF -psf "$ACXML"; fi
 if FINDER "$APCXML"; then PSXCF -psf "$APCXML"; fi
@@ -7577,8 +7543,16 @@ UIP "Found $FSTPIXML" "Patching..."
 PSF="$MODPATH/$MODID$FSTPIXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FSTPIXML $PSF
-sed -i 's/platform_lpi_enable="true"/platform_lpi_enable="false"/g' $PSF
-sed -i 's/support_non_lpi_without_ec="false"/support_non_lpi_without_ec="true"/g' $PSF
+sed -i 's/sva_transparent_disabled="false"/sva_transparent_disabled="true"/g' $PSF
+sed -i 's/concurrent_capture="false"/concurrent_capture="true"/g' $PSF
+sed -i 's/concurrent_voice_call="true"/concurrent_voice_call="false"/g' $PSF
+sed -i 's/concurrent_voip_call="true"/concurrent_voip_call="false"/g' $PSF
+sed -i 's/va_mic_clk_switch="false"/va_mic_clk_switch="true"/g' $PSF
+sed -i '/<common_config>/a\
+        <param concurrent_voice_call="false"/>\
+        <param concurrent_voip_call="false"/>\
+        <param va_mic_clk_switch="true"/>\
+        <param sva_transparent_disabled="true"/>' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -7707,6 +7681,7 @@ cp -f \$FMPXML \$FMPXML.bak
 sed -i \"s/192000/320000/g\" $FMPXML
 elif [ -f \$FMPXML ] && [ -f \$FMPXML.bak ]; then
 PMPXML=true
+sed -i \"s/192000/320000/g\" $FMPXML
 fi
 done
 fi
@@ -8162,6 +8137,7 @@ cp -f \$FAECONFXML \$FAECONFXML.bak
 sed -i \"/audio_pre_processing/d;/audiosphere/d;/downmix/d;/loudness_enhancer/d;/shoebox/d;/volume_listener/d\" \$FAECONFXML
 elif [ -f \$FAECONFXML ] && [ -f \$FAECONFXML.bak ]; then
 PAECONFXML=true
+sed -i \"/audio_pre_processing/d;/audiosphere/d;/downmix/d;/loudness_enhancer/d;/shoebox/d;/volume_listener/d\" \$FAECONFXML
 fi
 done
 fi
@@ -8240,7 +8216,7 @@ UCSA -ent "Go To Remove/Replace/Restore Mode?" "GTRRRMS"
 GTRRRMS () {
 DWSGTRRRM=false; RWSGTRRRM=false; RMTSAV=false; CAILIST=false
 if [ -f $AIOPFMDPH/Replace.txt ] && [ $BOOTMODE != true ]; then
-UIP -s "Found Replace apk, Restote?" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"
+UIP -s "Found Replace APK, Restote?" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 REPLACELIST=$(cat $AIOPFMDPH/Replace.txt)
 UIP -s "Choose Variant:" "$MSGVU Restore Every App With Confirm $MSGRI" "$MSGVD Restore Every App Without Confirm"
@@ -8270,9 +8246,9 @@ RMTSAV=true
 fi
 fi
 if $RMTSAV; then
-UIP -s "Choose Variant:" "$MSGVU Replace Every App Found With Confirm $MSGRI" "$MSGVD Replace Every App Found Without Confirm"
+UIP -s "Choose Variant For Stock List & APPRMLIST.conf:" "$MSGVU Replace Every App Found With Confirm $MSGRI" "$MSGVD Replace Every App Found Without Confirm"
 else
-UIP -s "Choose Variant:" "$MSGVU Remove Every App Found With Confirm $MSGRI" "$MSGVD Remove Every App Found Without Confirm"
+UIP -s "Choose Variant For Stock List & APPRMLIST.conf:" "$MSGVU Remove Every App Found With Confirm $MSGRI" "$MSGVD Remove Every App Found Without Confirm"
 fi
 if KEYCHOOSE; then
 RMLISTCHOICECONFIRMATION=true
@@ -9253,7 +9229,7 @@ UIP -s "$MSGVU Systemless Hosts $VIPVSH (90000+)" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 IPSHFS
 else
-UIP -s "$MSGVU Energized Hosts Unified $VIPEH (700000+)" "$MSGVD No $MSGNUS"
+UIP -s "$MSGVU Energized Hosts (400000+ Or 700000+) $VIPEH" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 IPEHFS
 fi
@@ -9263,8 +9239,8 @@ fi
 }
 
 IPESHFS () {
-UZTPN "Hosts"
 UIP "Installing Empty Hosts Files $IAMM"
+UZTPN "Hosts"
 if $MAGISK; then
 PTMFI "$IDDAB" "$MMHOSTSLIST" "$MIPSE"
 MMPR -vc "Disable Ad Blocker" "$VIPDAB" "$VCIPDAB" "DriffeX" "Restores Stock Hosts File For Disable Ad Block"
@@ -9277,8 +9253,8 @@ SET_PERM_RM -msgdi
 }
 
 IPAAHFS () {
-UZTPN "Hosts"
 UIP "Installing AdAway Hosts Files $IAMM"
+UZTPN "Hosts"
 HOSTSFILE="AdAway-hosts"
 if $MAGISK; then
 PTMFI "$IDVAAH" "$MMHOSTSLIST" "$MIPSE"
@@ -9291,8 +9267,8 @@ SET_PERM_RM -msgdi
 }
 
 IPSHFS () {
-UZTPN "Hosts"
 UIP "Installing Systemless Hosts Files $IAMM"
+UZTPN "Hosts"
 HOSTSFILE="Systemless-hosts"
 if $MAGISK; then
 PTMFI "$IDVSH" "$MMHOSTSLIST" "$MIPSE"
@@ -9305,13 +9281,14 @@ SET_PERM_RM -msgdi
 }
 
 IPEHFS () {
-UZTPN "Hosts"
+UIP -s "Choose Basic Or Unified" "$MSGVU Basic (400000+) $MSGRI" "$MSGVD Unified (700000+)"; if KEYCHOOSE; then FEHF="Basic"; else FEHF="Unified"; fi
 UIP "Installing Energized Hosts Files $IAMM"
-HOSTSFILE="Energized-hosts"
+UZTPN "Hosts"
+HOSTSFILE="Energized-$FEHF-hosts"
 if $MAGISK; then
 PTMFI "$IDEH" "$MMHOSTSLIST" "$MIPSE"
 cp -f $TMPDIR/Hosts/$HOSTSFILE $MODPATH/$MODID$MIPSE/hosts
-MMPR -v "$MODID" "$VIPEH" "Energized Hosts Unified Files"
+MMPR -v "$MODID" "$VIPEH" "Energized Hosts $FEHF Files"
 else
 BUCKUPER -s "$IPSE/hosts"; cp -f $TMPDIR/Hosts/$HOSTSFILE $IPSE/hosts
 fi
@@ -9477,36 +9454,28 @@ count=\$((\$count+1))
 sleep 5
 done
 iptables -t mangle -N nfqttli
-iptables -t mangle -A nfqttli -m mark --mark 0x10000001 -j RETURN
-iptables -t mangle -A nfqttli -m mark --mark 0x10000002 -j RETURN
-iptables -t mangle -A nfqttli -j NFQUEUE --queue-num 0x1000
+iptables -t mangle -A nfqttli -j NFQUEUE --queue-num 6464
 iptables -t mangle -N nfqttlo
-iptables -t mangle -A nfqttlo -m mark --mark 0x10000001 -j RETURN
-iptables -t mangle -A nfqttlo -m mark --mark 0x10000003 -j RETURN
-iptables -t mangle -A nfqttlo -j NFQUEUE --queue-num 0x1000
-iptables -t mangle -I PREROUTING -j nfqttli
-iptables -t mangle -I POSTROUTING -j nfqttlo
+iptables -t mangle -A nfqttlo -j NFQUEUE --queue-num 6464
+iptables -t mangle -A PREROUTING -j nfqttli
+iptables -t mangle -A OUTPUT -j nfqttlo
 ip6tables -t mangle -N nfqttli
-ip6tables -t mangle -A nfqttli -m mark --mark 0x10000001 -j RETURN
-ip6tables -t mangle -A nfqttli -m mark --mark 0x10000002 -j RETURN
-ip6tables -t mangle -A nfqttli -j NFQUEUE --queue-num 0x1000
+ip6tables -t mangle -A nfqttli -j NFQUEUE --queue-num 6464
 ip6tables -t mangle -N nfqttlo
-ip6tables -t mangle -A nfqttlo -m mark --mark 0x10000001 -j RETURN
-ip6tables -t mangle -A nfqttlo -m mark --mark 0x10000003 -j RETURN
-ip6tables -t mangle -A nfqttlo -j NFQUEUE --queue-num 0x1000
-ip6tables -t mangle -I PREROUTING -j nfqttli
-ip6tables -t mangle -I POSTROUTING -j nfqttlo
+ip6tables -t mangle -A nfqttlo -j NFQUEUE --queue-num 6464
+ip6tables -t mangle -A PREROUTING -j nfqttli
+ip6tables -t mangle -A POSTROUTING -j nfqttlo
 exit 0" > $MODPATH/$MODID/service.sh
 cp -f $TMPDIR/NFQTTL/nfqttl-$ARCH $MODPATH/$MODID/nfqttl
 if $BOOTMODE; then
 pkill -9 nfqttl
-if $MODPATH/$MODID/nfqttl -d -s4 ; then
+if $MODPATH/$MODID/nfqttl -d -s4; then
 UIP "Run nfqttl Success!"
 else
 UIP "Run nfqttl Fail!"
 fi
 iptables -t mangle -D PREROUTING -j nfqttli
-iptables -t mangle -D POSTROUTING -j nfqttlo
+iptables -t mangle -D OUTPUT -j nfqttlo
 iptables -t mangle -F nfqttli
 iptables -t mangle -X nfqttli
 iptables -t mangle -F nfqttlo
@@ -9518,25 +9487,17 @@ ip6tables -t mangle -X nfqttli
 ip6tables -t mangle -F nfqttlo
 ip6tables -t mangle -X nfqttlo
 if iptables -t mangle -N nfqttli &&\
-iptables -t mangle -A nfqttli -m mark --mark 0x10000001 -j RETURN &&\
-iptables -t mangle -A nfqttli -m mark --mark 0x10000002 -j RETURN &&\
-iptables -t mangle -A nfqttli -j NFQUEUE --queue-num 0x1000 &&\
-iptables -t mangle -A PREROUTING -j nfqttli &&\
+iptables -t mangle -A nfqttli -j NFQUEUE --queue-num 6464 &&\
 iptables -t mangle -N nfqttlo &&\
-iptables -t mangle -A nfqttlo -m mark --mark 0x10000001 -j RETURN &&\
-iptables -t mangle -A nfqttlo -m mark --mark 0x10000003 -j RETURN &&\
-iptables -t mangle -A nfqttlo -j NFQUEUE --queue-num 0x1000 &&\
-iptables -t mangle -I POSTROUTING -j nfqttlo &&\
+iptables -t mangle -A nfqttlo -j NFQUEUE --queue-num 6464 &&\
+iptables -t mangle -A PREROUTING -j nfqttli &&\
+iptables -t mangle -A OUTPUT -j nfqttlo &&\
 ip6tables -t mangle -N nfqttli &&\
-ip6tables -t mangle -A nfqttli -m mark --mark 0x10000001 -j RETURN &&\
-ip6tables -t mangle -A nfqttli -m mark --mark 0x10000002 -j RETURN &&\
-ip6tables -t mangle -A nfqttli -j NFQUEUE --queue-num 0x1000 &&\
-ip6tables -t mangle -A PREROUTING -j nfqttli &&\
+ip6tables -t mangle -A nfqttli -j NFQUEUE --queue-num 6464 &&\
 ip6tables -t mangle -N nfqttlo &&\
-ip6tables -t mangle -A nfqttlo -m mark --mark 0x10000001 -j RETURN &&\
-ip6tables -t mangle -A nfqttlo -m mark --mark 0x10000003 -j RETURN &&\
-ip6tables -t mangle -A nfqttlo -j NFQUEUE --queue-num 0x1000 &&\
-ip6tables -t mangle -I POSTROUTING -j nfqttlo ; then
+ip6tables -t mangle -A nfqttlo -j NFQUEUE --queue-num 6464 &&\
+ip6tables -t mangle -A PREROUTING -j nfqttli &&\
+ip6tables -t mangle -A POSTROUTING -j nfqttlo; then
 UIP "Set Rule IpTables Success!"
 else
 UIP "Set Rule IpTables Fail!"
@@ -10226,7 +10187,7 @@ VENDINGLOCDB="$IPDD/$VENDINGPKG/databases/localappstate.db"
 
 if $BOOTMODE; then
 KEY="$((5*5))"
-if [ -f $STORAGE/DETACH* ]; then DETACHCFG="$(find $STORAGE/DETACH*)"; FINDDETACHCFG=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/DETACH* ]; then DETACHCFG="$(find $STORAGE/$f/DETACH*)"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ $FINDDETACHCFG != true ]; then echo -e "com.google.android.youtube\ncom.google.ar.core" > $STORAGE/DETACH.conf; DETACHCFG="$STORAGE/DETACH.conf"; fi
+if [ -f $STORAGE/DETACH* ]; then DETACHCFG="$(find $STORAGE/DETACH*)"; FINDDETACHCFG=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/DETACH* ]; then DETACHCFG="$(find $STORAGE/$f/DETACH*)"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ $FINDDETACHCFG != true ]; then echo -e "com.google.android.youtube\ncom.google.android.apps.youtube.music\ncom.google.ar.core" > $STORAGE/DETACH.conf; DETACHCFG="$STORAGE/DETACH.conf"; fi
 UIP "Disable Vending Components"
 pm disable "$VENDINGPKG/com.google.android.finsky.scheduler.process.backgroundimpl.AlarmManagerServiceBackground" >&2
 pm disable "$VENDINGPKG/com.google.android.finsky.rollbackmanager.RollbackReceiver" >&2
@@ -10235,7 +10196,7 @@ pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobServ
 pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService" >&2
 cmd appops set --uid $VENDINGPKG GET_USAGE_STATS ignore
 pkill -f "$VENDINGPKG"
-echo -e "\n" >> $DETACHCFG
+am force-stop com.android.vending
 
 if [ "`grep -v '#' $DETACHCFG`" ]; then
 UIP "Detaching Packages"
@@ -10264,7 +10225,7 @@ fi
 $ECHO "#/sbin/sh
 while true; do
 if [ \$(getprop sys.boot_completed) -eq 1 ]; then
-if [ -f $STORAGE/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/DETACH*)\"; FINDDETACHCFG=true; else for f in \$(ls $STORAGE); do if [ -f $STORAGE/\$f/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/\$f/DETACH*)\"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ \$FINDDETACHCFG != true ]; then echo \"com.google.android.youtube\" > $STORAGE/DETACH.conf; DETACHCFG=\"$STORAGE/DETACH.conf\"; fi
+if [ -f $STORAGE/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/DETACH*)\"; FINDDETACHCFG=true; else for f in \$(ls $STORAGE); do if [ -f $STORAGE/\$f/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/\$f/DETACH*)\"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ \$FINDDETACHCFG != true ]; then echo -e \"com.google.android.youtube\ncom.google.android.apps.youtube.music\ncom.google.ar.core\" > $STORAGE/DETACH.conf; DETACHCFG=\"$STORAGE/DETACH.conf\"; fi
 
 SET_PERM () {
 chown \$2:\$3 \$1 || return 1
@@ -10284,7 +10245,7 @@ pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobSer
 pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService\" >&2
 cmd appops set --uid $VENDINGPKG GET_USAGE_STATS ignore
 pkill -f \"$VENDINGPKG\"
-echo -e \"\\n\" >> \$DETACHCFG
+am force-stop com.android.vending
 
 if [ \"\`grep -v '#' \$DETACHCFG\`\" ]; then
 echo \"Detaching Packages\"
@@ -10934,9 +10895,9 @@ fi
 
 GASLS () {
 UIP "Getting All Settings List..."
-settings list system > /sdcard/SystemList.sh
-settings list secure > /sdcard/SecureList.sh
-settings list global > /sdcard/GlobalList.sh
+settings list system > $STORAGE/SystemList.sh
+settings list secure > $STORAGE/SecureList.sh
+settings list global > $STORAGE/GlobalList.sh
 UIP "Done"
 }
 
@@ -11475,42 +11436,35 @@ IPUGMSDS () {
 UIP "Installing Universal GMS Doze $IAMM"
 PTMFI "$IDUGMSD" "universal-gms-doze" "$IPPSXBM"
 UIP "$MSGPNF"
-GMS=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
-IMS=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.ims"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
-PST=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.apps.safetyhub"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
-TRB=$(xml=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.apps.turbo"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
-for i in $GMS $IMS $PST $TRB; do
+LOCATION=$(XML=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $XML; do if grep -q 'allow-unthrottled-location package="com.google.android.gms"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
+SAVE=$(XML=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $XML; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
+IGNORE=$(XML=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $XML; do if grep -q 'allow-ignore-location-settings package="com.google.android.gms"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
+for i in $LOCATION $SAVE $IGNORE; do
 if [ ! -f $MODPATH/$MODID$i ]; then
 UIP "Found $i" "Patching..."
 mkdir -p `dirname $MODPATH/$MODID$i`
 cp -f $i $MODPATH/$MODID$i
-sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-usage-save package="com.google.android.gms"/d' $MODPATH/$MODID$i
-sed -i '/allow-in-power-save package="com.google.android.ims"/d;/allow-in-data-usage-save package="com.google.android.ims"/d' $MODPATH/$MODID$i
-sed -i '/allow-in-power-save package="com.google.android.apps.safetyhub"/d;/allow-in-data-usage-save package="com.google.android.apps.safetyhub"/d' $MODPATH/$MODID$i
-sed -i '/allow-in-power-save package="com.google.android.apps.turbo"/d;/allow-in-data-usage-save package="com.google.android.apps.turbo"/d' $MODPATH/$MODID$i
+sed -i '/allow-unthrottled-location package="com.google.android.gms"/d;/allow-in-power-save package="com.google.android.gms"/d;/allow-ignore-location-settings package="com.google.android.gms"/d' $MODPATH/$MODID$i
 UIP "$MSGFFAP"
 fi
 done
-conflict=$(xml=$(find $NVBASE -name "*.xml"); for i in $xml; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $i 2>/dev/null; then echo "$i"; fi; done)
-for i in $conflict; do
-search=$(echo "$i" | sed -e 's/\// /g' | awk '{print $4}')
-UIP "Conflicting Modules Detected" "Module: $search" "Found $i"
-sed -i '/allow-in-power-save package="com.google.android.gms"/d;/allow-in-data-usage-save package="com.google.android.gms"/d' $i
-UIP "$MSGFFAP"
-done
 echo "#!$MIPSB/sh
-conflict=\$(xml=\$(find $NVBASE -iname \"*.xml\");for i in \$xml; do if grep -q 'allow-in-power-save package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
-for i in \$conflict; do
-sed -i '/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-data-usage-save package=\"com.google.android.gms\"/d' \$i
-done" > $MODPATH/$MODID/post-fs-data.sh
-MSSERVICE -s "for i in \$(ls /data/user/); do pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver; pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; done"
+LOCATION=\$(XML=\$(find $MODPATH -name \"*.xml\");for i in \$XML; do if grep -q 'allow-unthrottled-location package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
+SAVE=\$(XML=\$(find $MODPATH -name \"*.xml\"); for i in \$XML; do if grep -q 'allow-in-power-save package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
+IGNORE=\$(XML=\$(find $MODPATH -name \"*.xml\");for i in \$XML; do if grep -q 'allow-ignore-location-settings package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
+for i in \$LOCATION \$SAVE \$IGNORE; do
+SEARCH=\$(echo \"\$i\" | sed -e 's/\// /g' | awk '{print \$4}')
+sed -i '/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-data-usage-save package=\"com.google.android.gms\"/d' \$i
+done
+cd $IPDD; find . -type f -name '*gms*' -delete" > $POSTFSDATAD/UGMSD.sh
+MSSERVICE -s "pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver; pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; pm disable com.google.android.gms/.chimera.GmsIntentOperationService"
 echo "gms='dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1'
 if [ \"\$gms\" = \"com.google.android.gms\" ]; then
 echo \"\033[0;31m Google Play services is Not Optimized \033[0m\"
 else
 echo \"\033[0;32m Google Play services is Optimized \033[0m\"
 fi" > $MODPATH/$MODID$IPPSXBM/gmsc
-MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Patches Google Play Services App And Its Background Processes To Be Able Using Battery Optimization. Pre-Caution, This May Leads To Unpredictable Battery Usage As Certain Scripts Blocking Its Functions"
+MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Patches Google Play Services App And Its Background Processes To Be Able To Use Battery Optimizations"
 MOVERPATH; SET_PERM_RM -msgdi
 }
 
@@ -11524,8 +11478,8 @@ fi
 
 SUGMSDOS () {
 MSGCS
-gms="dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1"
-if [ "$gms" = com.google.android.gms ]; then UIP "Google Play Services Is Not Optimized"; else UIP "Google Play Services Is Optimized"; fi
+GMSС="dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1"
+if [ "$GMSС" = com.google.android.gms ]; then UIP "Google Play Services Is Not Optimized"; else UIP "Google Play Services Is Optimized"; fi
 }
 
 IPUSGP () {
@@ -12286,7 +12240,8 @@ fi
 PRESETS () {
 if [ -d $MODPATH ] && [ $MAGISKFIRSTTIME != true ] && $MAGISK && $MMUPDC; then for mmc in $(ls $MODPATH); do if [ -d "$MODPATH/$mmc" ]; then UCSA -ent "Checking Update?" "MMUPD_LIST" && break; fi; done; fi
 UIP -s "UI: Pills/NavBar/Gboard/Themes/BA/Sounds" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS; fi
-if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null && [ $ASDK -ge 0 ] && [ $MIUI != true ]; then UIP -s "Apps: Lawnchair/Shady/CR/Corvus/Sushi/IA" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then APPS_PRESETS; fi; elif [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; elif [ ! -d $STORAGE/Applications ] && $MAGISK && [ $MIUI != true ] && [ $ASDK -ge 29 ] && [ $ASDK -ne 31 ]; then IPSL; fi
+if $MAGISK && [ $MIUI != true ] && [ $ASDK -ge 29 ] && [ $ASDK -ne 31 ]; then IPSL; fi
+if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; fi
 UIP -s "Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then AUDIO_PRESETS; fi
 if $BOOTMODE; then REMOVAL_PRESETS; else UIP -s "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then REMOVAL_PRESETS; fi; fi
 if $TESTMODE; then UIP -s "Test/Coming Soon" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then TEST_COMING_SOON_PRESETS; fi; fi
