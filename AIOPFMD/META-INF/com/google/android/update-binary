@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="19.08.22 (85)"
+VAIOPFMD="03.09.22 (86)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -27,7 +27,7 @@ ZIPPACKER="$ADDONS/zip"
 { #Version Or Date Of Patches In This Patch
 #UI: Pills/NavBar/Gboard/Themes/BA/Sounds
 IDPO="Pills"; VIPPO="v2.0"
-IDPCO="PillsColors"; VIPPCO="v1.4"
+IDPCO="PillsColors"; VIPPCO="v1.5"
 IDPHOS="PillsHeight"; VIPPHO="v1.4"
 IDPSHNB="ShowHideNavigationBar"; VIPPSHNB="v1.0"
 IDBGDS="BackGestureDisabler"; VIPBGD="v1.0"
@@ -50,34 +50,34 @@ IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"
 IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.6"
 IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.1"
 IDEBB="BackgroundBlur"; VIPEBB="v1.1"
-IDBA="BootAnimation"; VIPBA="v1.8"
+IDBA="BootAnimation"; VIPBA="v1.9"
 IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.1"
-IDMUIS="MediaUISounds"; VIPMUIS="v1.8"
+IDMUIS="MediaUISounds"; VIPMUIS="v1.9"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
 #Launchers: Lawn/Shady/CR/Corvus/Sushi/Spark/Derp
 IDSL="Systemless_Lawnchair"; VIPSL="v2.5"; VIPASLSL="12.1.0 Alpha 4"
 IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
-IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.7"; VIPSCRLA="v8.8"
-IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.4"; VIPSCLA="v4.0-Leviathan"
-IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.2"; VIPSSULA="v5.0"
+IDSCRL="Systemless_CRLauncher"; VIPSCRL="v1.8"; VIPSCRLA="v8.8"
+IDSCL="Systemless_CorvusLauncher"; VIPSCL="v1.5"; VIPSCLA="v4.0-Leviathan"
+IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.3"; VIPSSULA="v5.0"
 IDSSPL="Systemless_SparkLauncher"; VIPSSPL="v1.0"; VIPSSPLA="v12.6"
-IDSDFL="Systemless_DerpLauncher"; VIPSDFL="v1.0"; VIPSDFLA="v12-Shinju"
+IDSDFL="Systemless_DerpLauncher"; VIPSDFL="v1.1"; VIPSDFLA="v12-Shinju"
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.4"
-IDVFXP="V4AFXPresets"; VIPVFXP="v1.7"
-IDDA="DolbyAtmos"; VIPDA="v1.4"
+IDVFXP="V4AFXPresets"; VIPVFXP="v1.8"
+IDDA="DolbyAtmos"; VIPDA="v1.5"
 IDNLS="NLSound"; VIPNLS="v3.3 STABLE"; VCIPNLS="8"
-IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="50"
+IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="0109"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.2"
 IDAML="AML"; VIPAML="v4.2"; VCIPAML="42"
 IDALCF="ALCF"; VIPALCF="v1.2"
 #AdBlock/Hosts
 IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="19.08.2022"
+IDVAAH="AdAwayHosts"; VIPVAAH="31.08.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="17.0-220116"; VCIPVSH="170"
-IDEH="EnergizedHosts"; VIPEH="19.08.2022"
+IDEH="EnergizedHosts"; VIPEH="03.09.2022"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; VIPGPSP="v1.0"
 IDWIFIP="WIFIPatcher"; VIPWIFIP="v1.2"
@@ -92,7 +92,7 @@ IDMMFR="MMFR"; VIPMMFR="v1.0"
 IDDETACH="DETACH" VIPDETACH="v1.1"
 IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.8.3 (6552)"; VCIPLSPOSEDZ="6552"
 #Other: FA/LED/FSFM/UAA/SBU/GASL
-IDFPA="FingerprintActions"; VIPFPA="v1.1"
+IDFPA="FingerprintActions"; VIPFPA="v1.2"
 IDLEDLO="LEDLightOff"; VIPLEDLO="v1.3"
 IDLEDLA="LEDLightAnimation"; VIPLEDLA="v1.2"
 IDFSLFM="FSFM"; VIPFSLFM="v1.2"
@@ -101,18 +101,18 @@ IDFGS="ForceGoogleSync"; VIPFGS="v1.1"
 IDFEG="ForceGestures"; VIPFEG="v1.1"
 IDHAP="EnablingHiddenApiPolicy"; VIPHAP="v1.2"
 IDAFUS="AFUSS"; VIPAFUS="v1.1"
-IDBPT="BuildPropTweaks"; VIPBPT="v2.2"
+IDBPT="BuildPropTweaks"; VIPBPT="v2.3"
 IDKL="KillLogger"; VIPKL="v1.9"; VCIPKL="19"
 IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
-IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.5"
+IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.6"
 IDFMTP="ForceMTP"; VIPFMTP="v1.0"
 IDSOOOFUIRC="SOOOFUIRC"; VIPSOOOFUIRC="v2.0"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
 IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.6"; VCIPUGMSD="186"
-IDUSGP="USGP"; VIPUSGP="v1.2"
+IDUSGP="USGP"; VIPUSGP="v1.3"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.1"
 IDVS="VolumeSteps"; VIPVS="v1.2"
@@ -1144,13 +1144,18 @@ $BOOTMODE && echo "$MSGCS" || echo -e "ui_print $MSGCS\nui_print" >> /proc/self/
 }
 
 UCSA () {
-if $MAGISK && [ "$CEMODID" ]; then
-for SCEMODID in $CEMODID; do if [ -d $MODPATH/$SCEMODID ]; then MSGCEMODID="[V]"; break; else MSGCEMODID="[X]"; fi; done
+if $MAGISK; then
+case $1 in
+-eno | -ent) CEMODID="$4";;
+-s | -a) :;;
+*) CEMODID="$3";;
+esac
+[ "$CEMODID" ] && for SCEMODID in $CEMODID; do if [ -d $MODPATH/$SCEMODID ]; then MSGCEMODID="[V]"; break; else MSGCEMODID="[X]"; fi; done
 fi
 case $1 in
--eno) UIP -s "$2 $MSGCEMODID" "$MSGVU Yes $MSGEEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then $3; else $4; fi;;
--ent) UIP -s "$2 $MSGCEMODID" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then $3; else $4; fi;;
--s) UIP -s "$2" "$MSGVU Yes $3" "$MSGVD No $4"; if KEYCHOOSE; then $5; else $6; fi;;
+-eno) UIP -s "$2 $MSGCEMODID" "$MSGVU Yes $MSGEEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then $3; fi;;
+-ent) UIP -s "$2 $MSGCEMODID" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then $3; fi;;
+-s) UIP -s "$2" "$MSGVU Yes $3" "$MSGVD No $4"; if KEYCHOOSE; then $5; fi;;
 -a) MSGUCSF=true
 local UCSFNMPC=$2
 for UCSFNMC in $(echo $UCSFNMPC | cut -f 1 -d '_'); do
@@ -1173,7 +1178,7 @@ else
 UCSFNM=false
 fi
 done;;
-*) UIP -s "$1 $MSGCEMODID" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then $2; else $3; fi;;
+*) UIP -s "$1 $MSGCEMODID" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then $2; fi;;
 esac
 CEMODID=""; SCEMODID=""; MSGCEMODID=""
 }
@@ -3235,6 +3240,23 @@ sed -i 's/SpkrLeft SWR DAC_Port Switch" value="1"/SpkrLeft SWR DAC_Port Switch" 
 sed -i 's/SpkrRight SWR DAC_Port Switch" value="1"/SpkrRight SWR DAC_Port Switch" value="0"/g' $PSF
 sed -i 's/HPHL_RDAC Switch" value="0"/HPHL_RDAC Switch" value="1"/g' $PSF
 sed -i 's/HPHR_RDAC Switch" value="0"/HPHR_RDAC Switch" value="1"/g' $PSF
+sed -i 's/Boost Class-H Tracking Enable" value="0"/Boost Class-H Tracking Enable" value="1"/g' $PSF
+sed -i 's/DRE DRE Switch" value="0"/DRE DRE Switch" value="1"/g' $PSF
+sed -i 's/"HFP_SLIM7_UL_HL Switch" value="1"/"HFP_SLIM7_UL_HL Switch" value="0"/g' $PSF
+sed -i 's/"HFP_PRI_AUX_UL_HL Switch" value="1"/"HFP_PRI_AUX_UL_HL Switch" value="0"/g' $PSF
+sed -i 's/"HFP_AUX_UL_HL Switch" value="1"/"HFP_AUX_UL_HL Switch" value="0"/g' $PSF
+sed -i 's/"HFP_INT_UL_HL Switch" value="0"/"HFP_INT_UL_HL Switch" value="1"/g' $PSF
+sed -i 's/"SCO_SLIM7_DL_HL Switch" value="1"/"SCO_SLIM7_DL_HL Switch" value="0"/g' $PSF
+sed -i 's/"SLIMBUS7_DL_HL Switch" value="1"/"SLIMBUS7_DL_HL Switch" value="0"/g' $PSF
+sed -i 's/"SLIM7_RX_DL_HL Switch" value="1"/"SLIM7_RX_DL_HL Switch" value="0"/g' $PSF
+sed -i 's/"PCM_RX_DL_HL Switch" value="1"/"PCM_RX_DL_HL Switch" value="0"/g' $PSF
+sed -i 's/"USB_DL_HL Switch" value="1"/"USB_DL_HL Switch" value="0"/g' $PSF
+sed -i 's/"A2DP_SLIM7_UL_HL Switch" value="0"/"A2DP_SLIM7_UL_HL Switch" value="1"/g' $PSF
+sed -i 's/"RX INT0 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT0 DEM MUX" value="NORMAL_DSM_OUT"/g' $PSF
+sed -i 's/"RX INT1 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT1 DEM MUX" value="NORMAL_DSM_OUT"/g' $PSF
+sed -i 's/"RX INT2 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT2 DEM MUX" value="NORMAL_DSM_OUT"/g' $PSF
+sed -i 's/"RX INT3 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT3 DEM MUX" value="NORMAL_DSM_OUT"/g' $PSF
+sed -i 's/"RX INT4 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT4 DEM MUX" value="NORMAL_DSM_OUT"/g' $PSF
 if $HIRES; then
 PSXCF -u $PSF '/mixer/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -u $PSF '/mixer/ctl[@name="RX HPH Mode"]' "CLS_AB"
@@ -3276,25 +3298,25 @@ PSXCF -s $PSF '/mixer/path[@name="hph-lowpower-mode"]/ctl[@name="RX_HPH_PWR_MODE
 PSXCF -u $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -s $PSF '/mixer/path[@name="hph-class-ab-mode"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -u $PSF '/mixer/path[@name="voice-headset"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
-PSXCF -s $PSF '/mixer/path[@name="voice-headset"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
+PSXCF -s $PSF '/mixer/path[@name="voice-headset"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI" 
 PSXCF -u $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 PSXCF -s $PSF '/mixer/path[@name="bt-a2dp"]/ctl[@name="RX_HPH_PWR_MODE"]' "LOHIFI"
 else
 PSXCF -s $PSF '/mixer/ctl[@name="RX_HPH_PWR_MODE"]' "HIRES"
 PSXCF -u $PSF '/mixer/ctl[@name="RX HPH Mode"]' "HD2"
 PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX_HPH_PWR_MODE"]' "HIRES"
-PSXCF -s $PSF '/mixer/ctl[@name="VBoost Ctrl"]' "AlwaysOn"
+fi
+PSXCF -s $PSF '/mixer/ctl[@name="VBoost Ctrl"]' "AlwaysOff"
 PSXCF -u $PSF '/mixer/ctl[@name="HPHL"]' "Switch"
 PSXCF -u $PSF '/mixer/ctl[@name="HPHR"]' "Switch"
-PSXCF -u $PSF '/mixer/ctl[@name="Load acoustic model"]' "1"
-fi
+PSXCF -u $PSF '/mixer/ctl[@name="Load acoustic model"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3302,7 +3324,7 @@ PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Re
 PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference SampleRate"]' "96000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3316,11 +3338,11 @@ PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference 
 PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3332,7 +3354,7 @@ PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Re
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3340,13 +3362,13 @@ PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC 
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3354,7 +3376,7 @@ PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Re
 PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference SampleRate"]' "96000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference SampleRate"]' "192000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3368,11 +3390,11 @@ PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference 
 PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3384,7 +3406,7 @@ PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Re
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
@@ -3392,10 +3414,22 @@ PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC 
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference SampleRate"]' "48000"
 PSXCF -s $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "192000"
+PSXCF -s $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference SampleRate"]' "384000"
 PSXCF -u $PSF '/mixer/ctl[@name="Voice Sidetone Enable"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="Audiosphere Enable"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="Audiosphere Enable"]' "Off"
+PSXCF -u $PSF '/mixer/ctl[@name="Set HPX OnOff"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="Set HPX OnOff"]' "0"
+PSXCF -u $PSF '/mixer/ctl[@name="Set HPX ActiveBe"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="Set HPX ActiveBe"]' "0"
+PSXCF -u $PSF '/mixer/ctl[@name="DS2 OnOff"]' "Off"
+PSXCF -s $PSF '/mixer/ctl[@name="DS2 OnOff"]' "Off"
+PSXCF -u $PSF '/mixer/ctl[@name="HiFi Filter"]' "Off"
+PSXCF -s $PSF '/mixer/ctl[@name="HiFi Filter"]' "Off"
+PSXCF -u $PSF '/mixer/ctl[@name="SmartPA Switch"]' "1"
+PSXCF -s $PSF '/mixer/ctl[@name="SmartPA Switch"]' "1"
+PSXCF -u $PSF '/mixer/ctl[@name="THD3 Compensation"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="THD3 Compensation"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="Codec Wideband"]' "0"
@@ -3404,8 +3438,8 @@ PSXCF -u $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="HiFi Function"]' "On"
 PSXCF -s $PSF '/mixer/ctl[@name="HiFi Function"]' "On"
-PSXCF -u $PSF '/mixer/ctl[@name="Custom Filter"]' "OFF"
-PSXCF -s $PSF '/mixer/ctl[@name="Custom Filter"]' "OFF"
+PSXCF -u $PSF '/mixer/ctl[@name="Custom Filter"]' "ON"
+PSXCF -s $PSF '/mixer/ctl[@name="Custom Filter"]' "ON"
 PSXCF -u $PSF '/mixer/ctl[@name="Filter Shape"]' "Slow Rolloff"
 PSXCF -s $PSF '/mixer/ctl[@name="Filter Shape"]' "Slow Rolloff"
 PSXCF -u $PSF '/mixer/ctl[@name="Virtual Bass Boost"]' "Off"
@@ -3416,24 +3450,10 @@ PSXCF -s $PSF '/mixer/ctl[@name="WSA_RX3 EC_HQ Switch"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="WSA_RX4 EC_HQ Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="RX INT1 SEC MIX HPHL Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="RX INT2 SEC MIX HPHR Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="RX INT3 SEC MIX LO1 Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="RX INT4 SEC MIX LO2 Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="RX INT1 MIX3 DSD HPHL Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="RX INT2 MIX3 DSD HPHR Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RX INT0 DEM MUX"]' "CLSH_DSM_OUT"
-PSXCF -u $PSF '/mixer/ctl[@name="RX INT1 DEM MUX"]' "CLSH_DSM_OUT"
-PSXCF -u $PSF '/mixer/ctl[@name="RX INT2 DEM MUX"]' "CLSH_DSM_OUT"
-PSXCF -u $PSF '/mixer/ctl[@name="RX INT3 DEM MUX"]' "CLSH_DSM_OUT"
-PSXCF -u $PSF '/mixer/ctl[@name="RX INT4 DEM MUX"]' "CLSH_DSM_OUT"
 PSXCF -u $PSF '/mixer/ctl[@name="HPH Idle Detect"]' "ON"
 PSXCF -s $PSF '/mixer/ctl[@name="HPH Idle Detect"]' "ON"
-PSXCF -s $PSF '/mixer/ctl[@name="A2DP_SLIM7_UL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="PCM_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="USB_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="SLIM7_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="A2DP_SLIM7_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="PCM_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="USB_DL_HL Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="SLIM_7_RX Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/ctl[@name="SLIM_7_RX SampleRate"]' "KHZ_192"
 PSXCF -u $PSF '/mixer/ctl[@name="SLIM_7_RX Channels"]' "Two"
@@ -3458,107 +3478,12 @@ PSXCF -s $PSF '/mixer/ctl[@name="SLIM7_RX ADM Channels"]' "Two"
 PSXCF -s $PSF '/mixer/ctl[@name="SLIMBUS7_RX ADM Format"]' "S24_LE"
 PSXCF -s $PSF '/mixer/ctl[@name="SLIMBUS7_RX ADM SampleRate"]' "KHZ_192"
 PSXCF -s $PSF '/mixer/ctl[@name="SLIMBUS7_RX ADM Channels"]' "Two"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIM7_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SCO_SLIM7_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="SCO_SLIM7_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="HFP_SLIM7_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="HFP_PRI_AUX_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="HFP_AUX_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="HFP_INT_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS0_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS1_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS2_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS3_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS4_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS5_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS6_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SLIMBUS7_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="INT0_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="INT1_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="INT2_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="INT3_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="INT4_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="PRI_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SEC_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="TERT_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="QUAT_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="QUIN_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="SEN_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="WSA_CDC_DMA_RX_0_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RX_CDC_DMA_RX_0_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RX_CDC_DMA_RX_1_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-suspend"]/ctl[@name="Mi_Ultrasound Suspend"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-suspend"]/ctl[@name="Ultrasound Suspend"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS0_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS1_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS2_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS3_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS4_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS5_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS6_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS7_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT0_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT1_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT2_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT3_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT4_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="PRI_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SEC_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="TERT_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="QUAT_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="QUIN_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SEN_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="WSA_CDC_DMA_RX_0_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="WSA_CDC_DMA_RX_1_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="RX_CDC_DMA_RX_0_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="RX_CDC_DMA_RX_1_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="USB_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIM7_RX_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SCO_SLIM7_DL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="A2DP_SLIM7_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_SLIM7_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_PRI_AUX_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_AUX_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_INT_UL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS0_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS1_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS2_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS3_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS4_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS5_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS6_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIMBUS7_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT0_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT1_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT2_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT3_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="INT4_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="PRI_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SEC_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="TERT_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="QUAT_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="QUIN_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SEN_MI2S_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="WSA_CDC_DMA_RX_0_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="WSA_CDC_DMA_RX_1_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="RX_CDC_DMA_RX_0_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="RX_CDC_DMA_RX_1_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="USB_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SLIM7_RX_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="SCO_SLIM7_DL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="A2DP_SLIM7_UL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_SLIM7_UL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_PRI_AUX_UL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_AUX_UL_HL Switch"]' "1"
-PSXCF -s $PSF '/mixer/path[@name="ultrasound-proximity-output"]/ctl[@name="HFP_INT_UL_HL Switch"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="RCV Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="TH Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="TL Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="BH Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/path[@name="handset"]/ctl[@name="BL Boost Class-H Tracking Enable"]' "1"
+PSXCF -s $PSF '/mixer/ctl[@name="SCO_SLIM7_DL_HL Switch"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="SLIMBUS7_DL_HL Switch"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="SLIM7_RX_DL_HL Switch"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="PCM_RX_DL_HL Switch"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="USB_DL_HL Switch"]' "0"
+PSXCF -s $PSF '/mixer/ctl[@name="A2DP_SLIM7_UL_HL Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="AUX_HPF Enable"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="AUX_HPF Enable"]' "Off"
 PSXCF -u $PSF '/mixer/ctl[@name="A2DP_HPF Enable"]' "Off"
@@ -3572,51 +3497,11 @@ PSXCF -s $PSF '/mixer/ctl[@name="LDOH Enable"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="ST Enable"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="ST Enable"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="BDE Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="BDE AMP Enable"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="BDE Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="BDE AMP Enable"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="Amp DSP Enable"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="Amp DSP Enable"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="DRE En"]' "1"
 PSXCF -s $PSF '/mixer/ctl[@name="DRE En"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RCV DRE DRE Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="RCV DRE DRE Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="TH DRE DRE Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="TH DRE DRE Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="TL DRE DRE Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="TL DRE DRE Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="BH DRE DRE Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="BH DRE DRE Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="BL DRE DRE Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="BL DRE DRE Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RCV Boost Class-H Tracking Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="RCV Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RCV AMP Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="RCV AMP Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="RCV AMP Enable Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="RCV AMP Enable Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="Boost Class-H Tracking Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="AMP Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="AMP Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="AMP Enable Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="AMP Enable Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="TH Boost Class-H Tracking Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="TH Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="TH AMP Enable Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="TH AMP Enable Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="TL Boost Class-H Tracking Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="TL Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="TL AMP Enable Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="TL AMP Enable Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="BH Boost Class-H Tracking Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="BH Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="BH AMP Enable Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="BH AMP Enable Switch"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="BL Boost Class-H Tracking Enable"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="BL Boost Class-H Tracking Enable"]' "1"
-PSXCF -u $PSF '/mixer/ctl[@name="BL AMP Enable Switch"]' "1"
-PSXCF -s $PSF '/mixer/ctl[@name="BL AMP Enable Switch"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="RX_FIR Filter"]' "OFF"
 PSXCF -s $PSF '/mixer/ctl[@name="RX_FIR Filter"]' "OFF"
 PSXCF -u $PSF '/mixer/path[@name="headphones-hifi-filter"]/ctl[@name="RX_FIR Filter"]' "OFF"
@@ -3731,14 +3616,14 @@ sed -i '/^outputs/a\
   }\
   direct_pcm_16 {\
     flags AUDIO_OUTPUT_FLAG_DIRECT\
-    formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT\
+    formats AUDIO_FORMAT_PCM_16_BIT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_32_BIT\
     sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000\
     bit_width 24\
     app_type 69936\
   }\
   direct_pcm_24 {\
     flags AUDIO_OUTPUT_FLAG_DIRECT\
-    formats AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_32_BIT\
+    formats AUDIO_FORMAT_PCM_24_BIT_PACKED|AUDIO_FORMAT_PCM_8_24_BIT|AUDIO_FORMAT_PCM_FLOAT|AUDIO_FORMAT_PCM_32_BIT\
     sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000\
     bit_width 24\
     app_type 69940\
@@ -3756,8 +3641,6 @@ sed -i '/AIST/,+1d' $PSF
 sed -i '/AUDIO_FORMAT_MP3/a\
     sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000' $PSF
 sed -i 's/RAW/NONE/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_VOIP_RX/AUDIO_OUTPUT_FLAG_MMAP_NOIRQ|AUDIO_OUTPUT_FLAG_VOIP_RX/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_DIRECT/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_MMAP_NOIRQ/g' $PSF
 sed -i 's/sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF
 sed -i 's/sampling_rates 32000|44100|48000|88200|96000|176400|192000|352800/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF;;
 esac
@@ -3799,10 +3682,6 @@ sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCou
 sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
 sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
 sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT|AUDIO_OUTPUT_FLAG_VOIP_RX/AUDIO_OUTPUT_FLAG_MMAP_NOIRQ|AUDIO_OUTPUT_FLAG_VOIP_RX/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_DIRECT/AUDIO_OUTPUT_FLAG_VOIP_RX|AUDIO_OUTPUT_FLAG_MMAP_NOIRQ/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_VOIP_RX/AUDIO_OUTPUT_FLAG_MMAP_NOIRQ AUDIO_OUTPUT_FLAG_VOIP_RX/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_VOIP_RX AUDIO_OUTPUT_FLAG_DIRECT/AUDIO_OUTPUT_FLAG_VOIP_RX AUDIO_OUTPUT_FLAG_MMAP_NOIRQ/g' $PSF
 sed -i 's/AUDIO_OUTPUT_FLAG_FAST|AUDIO_OUTPUT_FLAG_RAW/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
 sed -i 's/AUDIO_OUTPUT_FLAG_RAW|AUDIO_OUTPUT_FLAG_FAST/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
 sed -i 's/AUDIO_OUTPUT_FLAG_FAST AUDIO_OUTPUT_FLAG_RAW/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
@@ -3837,10 +3716,6 @@ sed -i '/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO"/a\
 \
 \
 ' $PSF
-sed -i '/flags="AUDIO_OUTPUT_FLAG_DIRECT"/,+1d' $PSF
-sed -i '/mixPort name="direct_pcm" role="source"/a\
-                        flags="AUDIO_OUTPUT_FLAG_DIRECT">\
-                    <profile name="" format="AUDIO_FORMAT_PCM_FLOAT"' $PSF
 sed -i '/AUDIO_OUTPUT_FLAG_DEEP_BUFFER/a\
                     <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
@@ -4038,8 +3913,8 @@ sed -i 's/\t/  /g' $PSF
 sed -i 's/mi-adaptive-virtualizer-steering-enable value="false"/mi-adaptive-virtualizer-steering-enable value="true"/g' $PSF
 sed -i 's/mi-virtualizer-binaural-steering-enable value="true"/mi-virtualizer-binaural-steering-enable value="false"/g' $PSF
 sed -i 's/bass-enhancer-enable value="false"/bass-enhancer-enable value="true"/g' $PSF
-sed -i 's/bass-mbdrc-enable value="true"/bass-mbdrc-enable value="false"/g' $PSF
-sed -i 's/bass-extraction-enable value="false"/bass-extraction-enable value="true"/g' $PSF
+sed -i 's/bass-mbdrc-enable value="false"/bass-mbdrc-enable value="true"/g' $PSF
+sed -i 's/bass-extraction-enable value="true"/bass-extraction-enable value="false"/g' $PSF
 sed -i 's/virtual-bass-process-enable value="true"/virtual-bass-process-enable value="false"/g' $PSF
 sed -i 's/global_setting virtual_bass_process="1"/global_setting virtual_bass_process="0"/g' $PSF
 sed -i 's/global_setting virtual_bass_process="2"/global_setting virtual_bass_process="0"/g' $PSF
@@ -4057,10 +3932,6 @@ sed -i 's/global_setting virtual_bass_process="13"/global_setting virtual_bass_p
 sed -i 's/global_setting virtual_bass_process="14"/global_setting virtual_bass_process="0"/g' $PSF
 sed -i 's/global_setting virtual_bass_process="15"/global_setting virtual_bass_process="0"/g' $PSF
 sed -i 's/volume-leveler-compressor-enable value="true"/volume-leveler-compressor-enable value="false"/g' $PSF
-sed -i 's/regulator-enable value="true"/regulator-enable value="false"/g' $PSF
-sed -i 's/audio-optimizer-enable value="true"/audio-optimizer-enable value="false"/g' $PSF
-sed -i 's/volume-modeler-enable value="true"/volume-modeler-enable value="false"/g' $PSF
-sed -i 's/height-filter-mode value="0"/height-filter-mode value="1"/g' $PSF
 sed -i 's/regulator-sibilance-suppress-enable value="true"/regulator-sibilance-suppress-enable value="false"/g' $PSF
 sed -i 's/graphic-equalizer-enable value="false"/graphic-equalizer-enable value="true"/g' $PSF
 sed -i 's/reverb-suppression-enable value="false"/reverb-suppression-enable value="true"/g' $PSF
@@ -4304,8 +4175,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDPO"
-UCSA -ent "Install Pills $VIPPO?" "IPPOS"
+UCSA -ent "Install Pills $VIPPO?" "IPPOS" "$IDPO"
 fi
 fi
 }
@@ -4414,8 +4284,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDPCO"
-UCSA -ent "Install Pills Colors $VIPPCO?" "IPPCOS"
+UCSA -ent "Install Pills Colors $VIPPCO?" "IPPCOS" "$IDPCO"
 fi
 fi
 }
@@ -4439,8 +4308,9 @@ fi
 }
 
 IPPCOAS () {
-for PILLSCOLORS in "ff1a73e8" "ff5e97f6" "ffb31818" "ffff4151" "ff1ed760" "ff47ae84" "ffffa842" "ffff8055" "ffa86bd5"; do
+for PILLSCOLORS in "Accent" "ff1a73e8" "ff5e97f6" "ffb31818" "ffff4151" "ff1ed760" "ff47ae84" "ffffa842" "ffff8055" "ffa86bd5"; do
 case $PILLSCOLORS in
+"Accent") NAMEPILLSCOLORS="System Accent";;
 "ff1a73e8") NAMEPILLSCOLORS="Blue";;
 "ff5e97f6") NAMEPILLSCOLORS="Light Blue";;
 "ffb31818") NAMEPILLSCOLORS="Red";;
@@ -4476,8 +4346,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDPHOS"
-UCSA -ent "Install Pills Height $VIPPHO?" "IPPHOS"
+UCSA -ent "Install Pills Height $VIPPHO?" "IPPHOS" "$IDPHOS"
 fi
 fi
 }
@@ -4500,8 +4369,7 @@ fi
 }
 
 IPPSHNB () {
-CEMODID="$IDPCO"
-UCSA "Install Show/Hide Navigation Bar $VIPPSHNB?" "IPPSHNBS"
+UCSA "Install Show/Hide Navigation Bar $VIPPSHNB?" "IPPSHNBS" "$IDPCO"
 }
 
 IPPSHNBS () {
@@ -4523,8 +4391,7 @@ SET_PERM_RM -msgdi
 
 IPBGD () {
 if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && CHECKER -sp "$XMLSECURE" "back_gesture_inset_scale_left back_gesture_inset_scale_right"; then
-CEMODID="$IDBGDS"
-UCSA "Install Back Gesture Disabler $VIPBGD?" "IPBGDS"
+UCSA "Install Back Gesture Disabler $VIPBGD?" "IPBGDS" "$IDBGDS"
 fi
 }
 
@@ -4542,8 +4409,7 @@ MMPR -v "Back Gesture Disabler" "$VIPBGD" "Back Gesture Disabler"; SET_PERM_RM -
 
 IPGBNBS () {
 if [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDGBNBS"
-UCSA -ent "Install GBoard NavBar Space $VIPGBNBS?" "IPGBNBSS"
+UCSA -ent "Install GBoard NavBar Space $VIPGBNBS?" "IPGBNBSS" "$IDGBNBS"
 fi
 }
 
@@ -4565,8 +4431,7 @@ fi
 
 IPGBRC () {
 if [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDGBRC"
-UCSA -ent "Install GBoard Rounded Corners $VIPGBRC?" "IPGBRCS"
+UCSA -ent "Install GBoard Rounded Corners $VIPGBRC?" "IPGBRCS" "$IDGBRC"
 fi
 }
 
@@ -4587,8 +4452,7 @@ fi
 }
 
 IPGBT () {
-CEMODID="$IDGBT"
-UCSA "Install GBoard Themes $VIPGBT?" "IPGBTS"
+UCSA "Install GBoard Themes $VIPGBT?" "IPGBTS" "$IDGBT"
 }
 
 IPGBTS () {
@@ -4637,8 +4501,7 @@ fi
 }
 
 IPGBSTE () {
-CEMODID="$IDGBSTE"
-UCSA "Install GBoard Silk Theme Changer $VIPGBSTE?" "IPGBSTES"
+UCSA "Install GBoard Silk Theme Changer $VIPGBSTE?" "IPGBSTES" "$IDGBSTE"
 }
 
 IPGBSTES () {
@@ -4848,8 +4711,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDSBINNI"
-UCSA -ent "Install Status Bar Increase Number Icons $VIPSBINNI?" "IPSBINNIS"
+UCSA -ent "Install Status Bar Increase Number Icons $VIPSBINNI?" "IPSBINNIS" "$IDSBINNI"
 fi
 fi
 }
@@ -4873,7 +4735,7 @@ fi
 }
 
 IPGPPM () {
-if $MAGISK && $ATEN && [ $MIUI != true ] && CHECKER -sp "$XMLSECURE" "global_actions_panel_debug_enabled global_actions_panel_available"; then CEMODID="$IDGPPM"; UCSA "Activate GPay Power Menu $VIPGPPM?" "IPGPPMS"; fi
+if $MAGISK && $ATEN && [ $MIUI != true ] && CHECKER -sp "$XMLSECURE" "global_actions_panel_debug_enabled global_actions_panel_available"; then UCSA "Activate GPay Power Menu $VIPGPPM?" "IPGPPMS" "$IDGPPM"; fi
 }
 
 IPGPPMS () {
@@ -4894,8 +4756,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDRUI"
-UCSA -ent "Install RoundedUI $VIPRUI?" "IPRUIS"
+UCSA -ent "Install RoundedUI $VIPRUI?" "IPRUIS" "$IDRUI"
 fi
 fi
 }
@@ -4924,8 +4785,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDBIP"
-UCSA -ent "Install Burn In Protection $VIPBIP?" "IPBIPS"
+UCSA -ent "Install Burn In Protection $VIPBIP?" "IPBIPS" "$IDBIP"
 fi
 fi
 }
@@ -4961,8 +4821,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDNSP"
-UCSA -ent "Install Notification Side Paddings $VIPNSP?" "IPNSPS"
+UCSA -ent "Install Notification Side Paddings $VIPNSP?" "IPNSPS" "$IDNSP"
 fi
 fi
 }
@@ -4994,8 +4853,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDSBISP"
-UCSA -ent "Install Status Bar Icon Space $VIPSBISP?" "IPSBISPS"
+UCSA -ent "Install Status Bar Icon Space $VIPSBISP?" "IPSBISPS" "$IDSBISP"
 fi
 fi
 }
@@ -5031,8 +4889,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDSBISI"
-UCSA -ent "Install Status Bar Icon Size $VIPSBISI?" "IPSBISIS"
+UCSA -ent "Install Status Bar Icon Size $VIPSBISI?" "IPSBISIS" "$IDSBISI"
 fi
 fi
 }
@@ -5064,8 +4921,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDSBCS"
-UCSA -ent "Install Status Bar Clock Size $VIPSBCS?" "IPSBCSS"
+UCSA -ent "Install Status Bar Clock Size $VIPSBCS?" "IPSBCSS" "$IDSBCS"
 fi
 fi
 }
@@ -5088,7 +4944,7 @@ fi
 }
 
 IPSUE () {
-if $MAGISK && [ $MIUI != true ] && CHECKER -sp "$XMLGLOBAL" "guest_user_enabled"; then CEMODID="$IDSUE"; UCSA "Install Single User Enabler $VIPSUE?" "IPSUES"; fi
+if $MAGISK && [ $MIUI != true ] && CHECKER -sp "$XMLGLOBAL" "guest_user_enabled"; then UCSA "Install Single User Enabler $VIPSUE?" "IPSUES" "$IDSUE"; fi
 }
 
 IPSUES () {
@@ -5109,8 +4965,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDSBP"
-UCSA -ent "Install Status Bar Padding $VIPSBP?" "IPSBPS"
+UCSA -ent "Install Status Bar Padding $VIPSBP?" "IPSBPS" "$IDSBP"
 fi
 fi
 }
@@ -5144,8 +4999,7 @@ fi
 
 IPQSCP () {
 if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && CHECKER -sp "$XMLSECURE" "sysui_rounded_content_padding"; then
-CEMODID="$IDQSCP"
-UCSA -ent "Install QS Content Padding $VIPQSCP?" "IPQSCPS"
+UCSA -ent "Install QS Content Padding $VIPQSCP?" "IPQSCPS" "$IDQSCP"
 fi
 }
 
@@ -5162,8 +5016,7 @@ fi
 
 IPSUIRSRS () {
 if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && CHECKER -sp "$XMLSECURE" "sysui_rounded_size"; then
-CEMODID="$IDSUIRSRS"
-UCSA -ent "Install SUI Rounded Size $VIPSUIRSRS?" "IPSUIRSRSS"
+UCSA -ent "Install SUI Rounded Size $VIPSUIRSRS?" "IPSUIRSRSS" "$IDSUIRSRS"
 fi
 }
 
@@ -5187,7 +5040,7 @@ rm -f $IPPSO/QSCountIconAndRows*.apk $AIOPFMDPH/qscounticonandrows
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then CEMODID="$IDQSCIAR"; UCSA -ent "Install QS Count Icon And Rows $VIPQSCIAR?" "IPQSCIARS"; fi
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "Install QS Count Icon And Rows $VIPQSCIAR?" "IPQSCIARS" "$IDQSCIAR"; fi
 fi
 }
 
@@ -5235,7 +5088,7 @@ rm -f $IPPSO/StatusBarPrivacyDot*.apk $AIOPFMDPH/statusbarprivacydot
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then CEMODID="$IDSBPD"; UCSA -ent "Install Status Bar Privacy Dot $VIPSBPD?" "IPSBPDS"; fi
+if [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "Install Status Bar Privacy Dot $VIPSBPD?" "IPSBPDS" "$IDSBPD"; fi
 fi
 }
 
@@ -5257,8 +5110,7 @@ SET_PERM_RM -msgdi
 
 IPEBB () {
 if [ $MIUI != true ] && [ "$ASDK" -ge 30 ]; then
-CEMODID="$IDEBB"
-UCSA -ent "Install Background Blur $VIPEBB?" "IPEBBS"
+UCSA -ent "Install Background Blur $VIPEBB?" "IPEBBS" "$IDEBB"
 fi
 }
 
@@ -5287,8 +5139,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ $MIUI != true ]; then
-CEMODID="$IDBA"
-UCSA "Install Boot Animation $VIPBA?" "IPBAS"
+UCSA "Install Boot Animation $VIPBA?" "IPBAS" "$IDBA"
 fi
 fi
 }
@@ -5305,11 +5156,6 @@ if KEYCHOOSE; then
 UIP -s "Choose Color Variant:" "$MSGVU Black" "$MSGVD White"
 if KEYCHOOSE; then BADIR=TENXB; else BADIR=TENXW; fi; BATC=true; BANAME=TenX
 else
-UIP -s "Choose Boot Animation:" "$MSGVU PixelPlusUI" "$MSGVD $MSGNIS"
-if KEYCHOOSE; then
-UIP -s "Choose Color Variant:" "$MSGVU Black" "$MSGVD White"
-if KEYCHOOSE; then BADIR=PPUIB; else BADIR=PPUIW; fi; BATC=true; BANAME=PixelPlusUI
-else
 UIP -s "Choose Boot Animation:" "$MSGVU Radiant" "$MSGVD $MSGNIS"
 if KEYCHOOSE; then
 BATC=true; BADIR=RADIANT; BANAME=Radiant
@@ -5322,15 +5168,9 @@ UIP -s "Choose Boot Animation:" "$MSGVU Awaken" "$MSGVD $MSGNIS"
 if KEYCHOOSE; then
 BATC=true; BADIR=AWAKEN; BANAME=Awaken
 else
-UIP -s "Choose Boot Animation:" "$MSGVU Zephyrus" "$MSGVD $MSGNIS"
-if KEYCHOOSE; then
-BATC=true; BADIR=ZEPHYRUS; BANAME=Zephyrus
-else
 UIP -s "Choose Boot Animation:" "$MSGVU VoidUI" "$MSGVD $MSGNUS"
 if KEYCHOOSE; then
 BATC=true; BADIR=VOIDUI; BANAME=VoidUI
-fi
-fi
 fi
 fi
 fi
@@ -5369,9 +5209,7 @@ rm -f $AIOPFMDPH/iosemoji
 UIP "$MSGDRM"
 fi
 else
-
-CEMODID="$IDIOSEMOJI"
-UCSA "Install IOS Emoji From IOS 15.4 $VIPIOSEMOJI?" "IPIOSEMOJIS"
+UCSA "Install IOS Emoji From IOS 15.4 $VIPIOSEMOJI?" "IPIOSEMOJIS" "$IDIOSEMOJI"
 fi
 }
 
@@ -5412,8 +5250,7 @@ rm -f $AIOPFMDPH/MediaUISounds
 UIP "$MSGDRM"
 fi
 else
-CEMODID="$IDMUIS"
-UCSA "Install Media UI Sounds $VIPMUIS?" "IPMUISS"
+UCSA "Install Media UI Sounds $VIPMUIS?" "IPMUISS" "$IDMUIS"
 fi
 }
 
@@ -5423,6 +5260,7 @@ UCSA -a "Masik OnePlus Pixel Samsung Oppo Spark Arcana" "Choose Media Variant:" 
 if $UCSFNM; then
 case $UCSFNMC in
 "Masik") UIP -s "Use Masik Alt Lock Unlock Sound?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then MASIKALT=true; fi;;
+"OnePlus") UIP -s "Choose UI Sound From:" "$MSGVU OOS 12" "$MSGVD OOS 11"; if KEYCHOOSE; then MUIC="/12"; else MUIC="/11"; fi;;
 esac
 UIP -s "Choose Sounds Volume:" "$MSGVU Standart Volume" "$MSGVD Boost Volume"; if KEYCHOOSE; then MUIP="VS"; else MUIP="VB"; fi
 UIP "Installing Media UI Sounds $IAMM"
@@ -5430,11 +5268,11 @@ UZTPN "MediaUISounds"
 if $MAGISK; then
 if $MASIKALT; then mv -f $TMPDIR/MediaUISounds/$MUIP/MasikAlt/* $TMPDIR/MediaUISounds/$MUIP/Masik; fi
 PTMFI "$IDMUIS" "MediaUiSounds" "$MIPPMU"
-cp -f $TMPDIR/$MODID/$MUIP/$UCSFNMC/* $MODPATH/$MODID$MIPPMU
+cp -f $TMPDIR/$MODID/$MUIP/$UCSFNMC$MUIC/* $MODPATH/$MODID$MIPPMU
 MMPR -v "Media UI Sounds" "$VIPMUIS" "Media UI Sounds From $UCSFNMC"
 else
 IPMUISSA
-cp -f $TMPDIR/MediaUISounds/$MUIP/$UCSFNMC/* $IPPMU
+cp -f $TMPDIR/MediaUISounds/$MUIP/$UCSFNMC$MUIC/* $IPPMU
 touch $AIOPFMDPH/mediauisounds
 fi
 SET_PERM_RM -msgdi
@@ -5474,8 +5312,7 @@ $IPPMU/WirelessChargingStarted.ogg
 
 IPFDNI () {
 if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && $LEGACYMODE; then
-CEMODID="$IDFDNI"
-UCSA "Install Force Disable Notification Icons $VIPFDNI?" "IPFDNIS"
+UCSA "Install Force Disable Notification Icons $VIPFDNI?" "IPFDNIS" "$IDFDNI"
 fi
 }
 
@@ -5487,7 +5324,7 @@ MMPR -v "Force Disable Notification Icons" "$VIPFDNI" "Force Disable Notificatio
 }
 
 IPWFAMDQSOS () {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then CEMODID="$IDWFAMDQSOS"; UCSA "Install Wi-Fi & Mobile Data QS Old Style $VIPWFAMDQSOS?" "IPWFAMDQSOSS"; fi
+if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA "Install Wi-Fi & Mobile Data QS Old Style $VIPWFAMDQSOS?" "IPWFAMDQSOSS" "$IDWFAMDQSOS"; fi
 }
 
 IPWFAMDQSOSS () {
@@ -5505,8 +5342,7 @@ MMPR -v "Wi-Fi & Mobile Data QS Old Style" "$VIPGPPM" "Wi-Fi & Mobile Data QS Ol
 IPSL () {
 if $MAGISK && [ $MIUI != true ] && [ $ASDK -ge 29 ]; then
 SYSTEMLESSLAUNCHERS=false
-CEMODID="$IDSL $IDSSL $IDSCRL $IDSCL $IDSSUL $IDSSPL $IDSDFL"
-UCSA -ent "Install Systemless Launcher?" "IPSLS"
+UCSA -ent "Install Systemless Launcher?" "IPSLS" "$IDSL $IDSSL $IDSCRL $IDSCL $IDSSUL $IDSSPL $IDSDFL"
 fi
 }
 
@@ -5653,8 +5489,7 @@ IPSLSE
 
 IPAPP () {
 if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then
-CEMODID="AIOIARPFMD"
-UCSA "Install App From $STORAGE/Applications?" "IPAPPS"
+UCSA -ent "Install App From $STORAGE/Applications?" "IPAPPS" "AIOIARPFMD"
 fi
 }
 
@@ -5697,13 +5532,12 @@ UIP "$MSGDI"
 
 IPVFX () {
 if $MAGISK && FINDER "$AECONFXML"; then
-CEMODID="$IDVFX"
 if [ $ASDK -le 30 ] && [ ! $ASDK -le 22 ]; then
-UCSA "Install ViperFX $VIPVFX - v2.5.0.5 Or v2.7.1.6?" "IPVFXS"
+UCSA "Install ViperFX $VIPVFX - v2.5.0.5 Or v2.7.1.6?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -le 22 ]; then
-UCSA "Install ViperFX $VIPVFX - v2.5.0.5?" "IPVFXS"
+UCSA "Install ViperFX $VIPVFX - v2.5.0.5?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -ge 31 ]; then
-UCSA "Install ViperFX $VIPVFX - v2.7.2.1?" "IPVFXS"
+UCSA "Install ViperFX $VIPVFX - v2.7.2.1?" "IPVFXS" "$IDVFX"
 fi
 fi
 }
@@ -5747,8 +5581,7 @@ WCANFTP "-sl -ehap -alcf -aml"
 }
 
 IPVFXP () {
-CEMODID="$IDVFXP"
-UCSA "Install Presets $VIPVFXP For ViperFX?" "IPVFXPS"
+UCSA "Install Presets $VIPVFXP For ViperFX?" "IPVFXPS" "$IDVFXP"
 }
 
 IPVFXPS () {
@@ -5768,18 +5601,15 @@ SET_PERM_RM -msgdi
 
 IPDA () {
 if $MAGISK && [ $ASDK -ge 28 ]; then
-CEMODID="$IDDA"
-UCSA -eno "Install Dolby Atmos $VIPDA?" "IPDAS"
+UCSA -eno "Install Dolby Atmos $VIPDA?" "IPDAS" "$IDDA"
 fi
 }
 
 IPDAS () {
-UIP -s "Choose Dolby App:" "$MSGVU DAX3 v3.5.1.28 $MSGRI" "$MSGVD DAX2 v2.6.0.28"
-if KEYCHOOSE; then DAXAPP=true; else DAXAPP=false; fi
 UIP "Installing Dolby Atmos $IAMM"
 UZTPN "DolbyAtmos"
 PTMFI -np "$IDDA" "dolbyatmos DolbyAudio MotoDolby SoundEnhancement MiSound AudioFxMoto MotoWaves"
-MMPR -v "Dolby Atmos" "$VIPDA" "An EQ Global Type Soundfx Ported From ZTE A2019 Pro (Based On Dolby Atmos RC4 And RC1 By @guitardedhero)"
+MMPR -v "Dolby Atmos" "$VIPDA" "Dolby Atmos - Is An Audio Enhancing Software To Provide Everyone With A Better Audio Experience"
 echo "dontaudit system_server system_file file write
 allow system_server system_file file write
 type system_lib_file
@@ -6101,8 +5931,7 @@ fi
 DALIB="$(find $SYSTEM $VENDOR -type f -name "libhidltransport.so" -o -name "libhwbinder.so")"
 if FINDER "$DALIB"; then :; else cp -rf $TMPDIR/DolbyAtmos/system_support/* $TMPDIR/DolbyAtmos/system; fi
 
-DAMXML="$(find $IPVE/vintf -type f -name "manifest.xml")"
-if FINDER "$DAMXML"; then
+if [ -f $IPVE/vintf/manifest.xml ]; then
 UIP "$MSGPNF"
 if $BOOTMODE; then mount -o rw,remount $MAGISKMP/vendor; DAPATH=$MAGISKMP/vendor/etc/vintf/manifest.xml; else DAPATH=$IPVE/vintf/manifest.xml; fi
 if ! getprop | grep -Eq "dolby.skip.*\]: \[1"\
@@ -6199,33 +6028,19 @@ sed -i 's/frequency="11250"/frequency="9000"/g' $PSF
 sed -i 's/frequency="13875"/frequency="11250"/g' $PSF
 sed -i 's/frequency="19688"/frequency="13875"/g' $PSF
 
-if $DAXAPP; then
-UIP "Install DAX3 v3.5.1.28"
-DAAPP="DAX2"
-APKPERM "$TMPDIR/$MODID$MIPSPA/DAX3/DAX3.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
+APKPERM "$TMPDIR/$MODID$MIPSPA/DAXUI/DAXUI.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
 APKPERM "$TMPDIR/$MODID$MIPSPA/DAXService/DAXService.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
-else
-UIP "Install DAX2 v2.6.0.28"
-DAAPP="DAX3 daxService"
-APKPERM "$TMPDIR/$MODID$MIPSPA/DAX2/DAX2.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
-fi
 
 echo -e "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<permissions>\n    <library name=\"dolby_dax\"\n        file=\"/system/framework/dolby_dax.jar\"/>\n</permissions>" > $TMPDIR/$MODID$MIPSEP/dolby_dax.xml
-
-for FDAAPP in $DAAPP; do
-rm -rf `find $TMPDIR/DolbyAtmos/system -type d -name $FDAAPP`
-done
-
-REPLACER -f "$DAAPP AudioFX MusicFX MiSound Dirac DiracAudioControlService"
-
+REPLACER -f "DaxUI daxService AudioFX MusicFX MiSound Dirac DiracAudioControlService"
 cp -rf $TMPDIR/DolbyAtmos/system $MODPATH/$MODID
 REPLACER -a "dumpstate" "$IPSB"
 REPLACER -a "vendor.dolby.hardware.dms@2.0-service" "$IPVBHW"
-
+if $MIUI || [ $ASDK -le 30 ]; then
+mkdir -p $MODPATH/$MODID$MIPPSO
+cp -f $TMPDIR/DolbyAtmos/DAXUI-ForceColor.apk $MODPATH/$MODID$MIPPSO
+fi
 MOVERPATH
-[ -d $MODPATH/$MODID/system/apex ] && rm -rf $MODPATH/$MODID/system/apex
-[ -d $MODPATH/$MODID$MIPSE/vintf/manifest ] && rm -rf $MODPATH/$MODID$MIPSE/vintf/manifest
-[ -d $MODPATH/$MODID$MIPSVE/vintf/manifest ] && rm -rf $MODPATH/$MODID$MIPSVE/vintf/manifest
 SET_PERM_RM
 FILE=`find $MODPATH/$MODID$MIPSVB -type f`
 for FILES in $FILE; do chmod 0755 $FILES; chown 0.2000 $FILES; done
@@ -6239,8 +6054,7 @@ WCANFTP "-sl -alcf -aml"
 
 IPNLS () {
 if $MAGISK && $SNAPSOC; then
-CEMODID="$IDNLS"
-UCSA -eno "Install NLSound $VIPNLS?" "IPNLSS"
+UCSA -eno "Install NLSound $VIPNLS?" "IPNLSS" "$IDNLS"
 fi
 }
 
@@ -6625,8 +6439,7 @@ WCANFTP "-alcf -aml"
 
 IPAIST () {
 if $MAGISK && $SNAPSOC; then
-CEMODID="$IDAIST"
-UCSA -eno "Install AIST $VIPAIST?" "IPAISTS"
+UCSA -eno "Install AIST $VIPAIST?" "IPAISTS" "$IDAIST"
 fi
 }
 
@@ -6678,6 +6491,7 @@ media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
+media.stagefright.audio.deep=false
 media.recorder.show_manufacturer_and_model=true
 debug.stagefright.omx_default_rank=0
 debug.stagefright.ccodec_delayed_params=0
@@ -6703,6 +6517,7 @@ persist.vendor.audio.spv4.enable=false
 persist.vendor.audio.spv5.enable=false
 persist.vendor.audio.hac.enable=false
 persist.vendor.audio.delta.refresh=false
+persist.vendor.audio.ha_proxy.enabled=true
 persist.vendor.audio.bcl.enabled=false
 persist.vendor.audio.ll_playback_bargein=false
 persist.vendor.audio.ozo.codec.enable=true
@@ -6766,8 +6581,11 @@ ro.vendor.audio.elus.enable=true
 ro.vendor.audio.sfx.scenario=true
 ro.vendor.audio.scenario.support=true
 persist.vendor.audio.auto.scenario=true
+vendor.audio.game2D.switch=1
 vendor.audio.game3D.switch=1
 vendor.audio.game4D.switch=1
+vendor.audio.game5D.switch=1
+vendor.audio.game6D.switch=1
 audio.hal.output.suspend.supported=false
 vendor.audio.hal.output.suspend.supported=false
 audio.safemedia.bypass=true
@@ -6849,9 +6667,9 @@ ro.camera.sound.forced=1
 audio.enable.mirrorlink=false
 vendor.audio.enable.mirrorlink=false
 ro.vendor.audio.enable.mirrorlink=false
-audio.lowpower=false
-vendor.audio.lowpower=false
-ro.vendor.audio.lowpower=false
+audio.lowpower=true
+vendor.audio.lowpower=true
+ro.vendor.audio.lowpower=true
 
 # OPLUS GENERAL PARAMETERS BY AIST TEAM
 ro.oplus.audio.custom.media_vol_default=true
@@ -7220,9 +7038,9 @@ persist.audio.hifi_dac=ON
 persist.vendor.audio.hifi_adv_support=1
 persist.vendor.audio.hifi_dac=ON
 persist.lge.hifiquaddac=true
-use.dts_eagle=true
-audio.use.dts_eagle=true
-vendor.audio.use.dts_eagle=true
+use.dts_eagle=flase
+audio.use.dts_eagle=flase
+vendor.audio.use.dts_eagle=flase
 DTS_EAGLE_PLATFORM_SUPPORT=true
 DTS_NEW_PARAM_READY=1
 ro.feature.dolby_enable=true
@@ -7243,6 +7061,8 @@ vendor.dts.audio.set_bypass=true
 vendor.dts.audio.log_time=false
 vendor.dts.audio.allow_offload=true
 vendor.dts.audio.print_eagle=true
+vendor.audio.dolby.ds2.enabled=false
+vendor.audio.dolby.ds2.hardbypass=false
 
 # BT PARAMETERS BY AIST TEAM
 persist.service.btui.use_aptx=1
@@ -7250,7 +7070,6 @@ persist.service.btui.use_aptxhd=1
 persist.bt.enableAptXHD=true
 persist.bt.a2dp.aptx_disable=false
 persist.bt.a2dp.aptx_hd_disable=false
-persist.vendor.btstack.connect.peer_earbud=true
 persist.vendor.qcom.bluetooth.connect.peer_earbud=true
 persist.bluetooth.aptxadaptive_offload.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
@@ -7318,7 +7137,7 @@ persist.sys.bluetooth.rssi_distance.support=true
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.avrcp.controller.enabled=false
-bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.hfp.ag.enabled=false
 bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.gatt.enabled=true
 bluetooth.profile.hid.host.enabled=true
@@ -7344,9 +7163,9 @@ av.offload.enable=true
 audio.deep_buffer.media=true
 vendor.audio.deep_buffer.media=true
 ro.vendor.audio.deep_buffer.media=true
-audio.offload.gapless.enabled=true
-vendor.audio.offload.gapless.enabled=true
-ro.vendor.audio.offload.gapless.enabled=true
+audio.offload.gapless.enabled=false
+vendor.audio.offload.gapless.enabled=false
+ro.vendor.audio.offload.gapless.enabled=false
 ro.vendor.audio.av.streaming.offload.enable=false
 vendor.audio.av.streaming.offload.enable=false
 audio.offload.track.enable=true
@@ -7356,6 +7175,9 @@ vendor.audio.offload.passthrough=false
 ro.vendor.audio.offload.passthrough=false
 ro.vendor.audio.offload.multiple.enabled=false
 vendor.audio.offload.multiple.enabled=false
+audio.offload.disable=false
+vendor.audio.offload.disable=false
+ro.vendor.audio.offload.disable=false
 use.voice.path.for.pcm.voip=true
 vendor.voice.path.for.pcm.voip=true
 audio.decoder_override_check=true
@@ -7368,6 +7190,8 @@ audio.hw.aac.encoder=true
 qcom.hw.aac.encoder=true
 audio.hw.aac.decoder=true
 qcom.hw.aac.decoder=true
+vendor.audio.kpi_optimize.enable=false
+vendor.audio.battery_listener.enable=false
 ro.bluetooth.a2dp_offload.supported=true
 persist.bluetooth.a2dp_offload.disabled=false
 vendor.audio.keep_alive.disabled=false
@@ -7412,7 +7236,7 @@ ro.control_privapp_permissions=disable
 vendor.skip.init=0" > $MODPATH/$MODID/system.prop
 REPLACER -f "AudioFX MusicFX"
 echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" | tee $MODPATH/$MODID/service.sh $MODPATH/$MODID/post-fs-data.sh > /dev/null
-echo -e "\nresetprop -p --delete persist.vendor.ssr.restart_level\nresetprop -p --delete ro.media.recorder-max-base-layer-fps\nresetprop -p --delete ro.miui.fpstool_enabled\nresetprop -p --delete persist.vendor.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete persist.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete vendor.audio.ultrasound.stoplatency" > $MODPATH/$MODID/service.s
+echo -e "\nresetprop -p --delete persist.vendor.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete persist.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete vendor.audio.ultrasound.stoplatency" > $MODPATH/$MODID/service.s
 if FINDER "$MPATHS"; then PSXCF -psf "$MPATHS"; fi
 if FINDER "$ACXML"; then PSXCF -psf "$ACXML"; fi
 if FINDER "$APCXML"; then PSXCF -psf "$APCXML"; fi
@@ -7575,8 +7399,7 @@ UIP "$MSGDRM"
 fi
 else
 if FINDER "$AIPAOPCONF"; then
-CEMODID="$IDSAQ"
-UCSA "Install System Audio Quality $VIPSAQ?" "IPSAQS"
+UCSA "Install System Audio Quality $VIPSAQ?" "IPSAQS" "$IDSAQ"
 fi
 fi
 }
@@ -7657,8 +7480,7 @@ UIP "$MSGDRM"
 fi
 else
 if FINDER "$MPXML"; then
-CEMODID="$IDIBS"
-UCSA "Install Increase Bitrate $VIPIBS?" "IPIBS"
+UCSA "Install Increase Bitrate $VIPIBS?" "IPIBS" "$IDIBS"
 fi
 fi
 }
@@ -7725,8 +7547,7 @@ UIP "$MSGDI"
 
 IPAML () {
 if $MAGISK; then
-CEMODID="$IDAML"
-UCSA "Install Audio Modification Library $VIPAML?" "IPAMLS"
+UCSA "Install Audio Modification Library $VIPAML?" "IPAMLS" "$IDAML"
 fi
 }
 
@@ -8113,8 +7934,7 @@ SET_PERM_RM -msgdi
 
 IPALCF () {
 if $MAGISK; then
-CEMODID="$IDALCF"
-UCSA "Install Audio Library Crackling Fix $VIPALCF?" "IPALCFS"
+UCSA "Install Audio Library Crackling Fix $VIPALCF?" "IPALCFS" "$IDALCF"
 fi
 }
 
@@ -8209,8 +8029,7 @@ UIP "$MSGDRM"
 }
 
 GTRRRM () {
-CEMODID="RTSA"
-UCSA -ent "Go To Remove/Replace/Restore Mode?" "GTRRRMS"
+UCSA -ent "Go To Remove/Replace/Restore Mode?" "GTRRRMS" "RTSA"
 }
 
 GTRRRMS () {
@@ -8751,7 +8570,7 @@ for PILLSLIGHTCOLORS in "ff1a73e8" "ffb31818" "ff1ed760" "ffffa842" "ffff8055" "
 for PILLSDARKCOLORS in "ff1a73e8" "ffb31818" "ff1ed760" "ffffa842" "ffff8055" "ffa86bd5" "ffff4151" "ff5e97f6" "ff47ae84"; do
 OPCO="$STORAGE/AIOCOMPILE/Pills/PillsColors"
 mkdir -p $OPCO/res/values
-echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.internal.systemui.pill.colors.mod\">
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.internal.systemui.pill.colors\">
 	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
 	<application android:hasCode=\"false\" android:label=\"Pill Colors - $PILLSLIGHTCOLORS-$PILLSDARKCOLORS\"/>
 </manifest>" > $OPCO/AndroidManifest.xml
@@ -9211,8 +9030,7 @@ BUCKUPER -r "$IPSE/hosts"
 UIP "$MSGDRS"
 fi
 else
-CEMODID="$IDDAB $IDVAAH $IDVSH $IDEH"
-UCSA -ent "AdBlock/Hosts" "IPHFS"
+UCSA -ent "AdBlock/Hosts" "IPHFS" "$IDDAB $IDVAAH $IDVSH $IDEH"
 fi
 }
 
@@ -9229,7 +9047,7 @@ UIP -s "$MSGVU Systemless Hosts $VIPVSH (90000+)" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 IPSHFS
 else
-UIP -s "$MSGVU Energized Hosts (400000+ Or 700000+) $VIPEH" "$MSGVD No $MSGNUS"
+UIP -s "$MSGVU Energized Hosts $VIPEH (400000+ Or 700000+)" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 IPEHFS
 fi
@@ -9310,8 +9128,7 @@ UIP "$MSGDRM"
 fi
 else
 if $SNAPSOC && [ $ASDK -ge 27 ] && FINDER "$GPSCONF"; then
-CEMODID="$IDGPSP"
-UCSA "Install GPS Patcher $VIPGPSP?" "IPGPSPS"
+UCSA "Install GPS Patcher $VIPGPSP?" "IPGPSPS" "$IDGPSP"
 fi
 fi
 }
@@ -9389,8 +9206,7 @@ UIP "$MSGDRM"
 fi
 else
 if $SNAPSOC && [ $ASDK -ge 27 ] && FINDER "$WCNSQCCFGI"; then
-CEMODID="$IDWIFIP"
-UCSA "Install Wifi Patcher $VIPWIFIP?" "IPWIFIPS"
+UCSA "Install Wifi Patcher $VIPWIFIP?" "IPWIFIPS" "$IDWIFIP"
 fi
 fi
 }
@@ -9421,8 +9237,7 @@ SET_PERM_RM -msgdi
 
 IPTTLF () {
 if $MAGISK; then
-CEMODID="$IDTTLF"
-UCSA "Install TTL Fix $VIPTTLF?" "IPTTLFS"
+UCSA "Install TTL Fix $VIPTTLF?" "IPTTLFS" "$IDTTLF"
 fi
 }
 
@@ -9508,8 +9323,7 @@ fi
 }
 
 IPNT () {
-CEMODID="$IDNT"
-UCSA "Install Network Tweak $VIPNT?" "IPNTS"
+UCSA "Install Network Tweak $VIPNT?" "IPNTS" "$IDNT"
 }
 
 IPNTS () {
@@ -9709,8 +9523,7 @@ SET_PERM_RM -msgdi
 
 IPAPAUSBTF () {
 if CHECKER "device" "dipper" && [ -d $IPDSNS ]; then
-CEMODID="$IDAPAUSBTF"
-UCSA "Install AP & USB Tethering Fix $VIPAPAUSBTF?" "IPAPAUSBTFS"
+UCSA "Install AP & USB Tethering Fix $VIPAPAUSBTF?" "IPAPAUSBTFS" "$IDAPAUSBTF"
 fi
 }
 
@@ -9742,8 +9555,7 @@ rm -f $SYSTEM/$BUSYBOX/busybox $AIOPFMDPH/busyboxbrutal
 UIP "$MSGDRM"
 fi
 else
-CEMODID="$IDBB"
-UCSA "Install Brutal BusyBox $VIPBB?" "IPBBS"
+UCSA "Install Brutal BusyBox $VIPBB?" "IPBBS" "$IDBB"
 fi
 }
 
@@ -9770,8 +9582,7 @@ UIP "Usage:" "Run \"su -c busybox\" In Terminal On BootMode"
 IPSELC () {
 if $MAGISK; then
 PAI=false
-CEMODID="$IDSELC"
-UCSA "Install SELinux Changer $VIPSELC?" "IPSELCS"
+UCSA "Install SELinux Changer $VIPSELC?" "IPSELCS" "$IDSELC"
 fi
 }
 
@@ -9798,8 +9609,7 @@ SET_PERM_RM -msgdi
 
 IPCC () {
 if $MAGISK; then
-CEMODID="$IDCC"
-UCSA "Install Cache Cleaner $VIPCC?" "IPCCS"
+UCSA "Install Cache Cleaner $VIPCC?" "IPCCS" "$IDCC"
 fi
 }
 
@@ -10006,8 +9816,7 @@ WCANFTP "-bb"
 
 IPMMFR () {
 if $MAGISK; then
-CEMODID="$IDMMFR"
-UCSA "Install Magisk Manager For Recovery $VIPMMFR?" "IPMMFRS"
+UCSA "Install Magisk Manager For Recovery $VIPMMFR?" "IPMMFRS" "$IDMMFR"
 fi
 }
 
@@ -10136,8 +9945,7 @@ UIP "Usage:" "Run \"su -c MMFR\" In Terminal On BootMode" "Or Run \"*/MMFR\" In 
 
 IPDETACH () {
 if $MAGISK && $FINDGAPPS; then
-CEMODID="$IDDETACH"
-UCSA "Install DETACH $VIPDETACH?" "IPDETACHS"
+UCSA "Install DETACH $VIPDETACH?" "IPDETACHS" "$IDDETACH"
 fi
 }
 
@@ -10181,6 +9989,7 @@ OPTIONS
 OPTIONS" > $MODPATH/$MODID$MIPSB/DETACH
 
 cp -f $SQLITE3 $MODPATH/$MODID
+
 VENDINGPKG="com.android.vending"
 VENDINGLIBDB="$IPDD/$VENDINGPKG/databases/library.db"
 VENDINGLOCDB="$IPDD/$VENDINGPKG/databases/localappstate.db"
@@ -10195,8 +10004,8 @@ pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementReceive
 pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobService" >&2
 pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService" >&2
 cmd appops set --uid $VENDINGPKG GET_USAGE_STATS ignore
-pkill -f "$VENDINGPKG"
-am force-stop com.android.vending
+pkill -f $VENDINGPKG
+am force-stop $VENDINGPKG
 
 if [ "`grep -v '#' $DETACHCFG`" ]; then
 UIP "Detaching Packages"
@@ -10244,8 +10053,8 @@ pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementReceiv
 pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobService\" >&2
 pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService\" >&2
 cmd appops set --uid $VENDINGPKG GET_USAGE_STATS ignore
-pkill -f \"$VENDINGPKG\"
-am force-stop com.android.vending
+pkill -f $VENDINGPKG
+am force-stop $VENDINGPKG
 
 if [ \"\`grep -v '#' \$DETACHCFG\`\" ]; then
 echo \"Detaching Packages\"
@@ -10279,8 +10088,7 @@ UIP "Usage:" "Run \"su -c DETACH\" In Terminal On BootMode"
 
 IPLSPOSEDR () {
 if $MAGISK && $ZYGISK && [ "$ASDK" -ge 27 ]; then
-CEMODID="$IDLSPOSEDZ"
-UCSA "Install LSPosed Zygisk $VIPLSPOSEDZ?" "IPLSPOSEDS"
+UCSA "Install LSPosed Zygisk $VIPLSPOSEDZ?" "IPLSPOSEDS" "$IDLSPOSEDZ"
 fi
 }
 
@@ -10354,7 +10162,7 @@ fi
 \$debug && log -p d -t \"LSPosed\" \"start zygisk daemon \$*\"
 
 exec $MIPSB/app_process \$java_options $MIPSB --nice-name=lspd org.lsposed.lspd.Main \"\$@\" >/dev/null 2>&1" > $MODPATH/$MODID/daemon
-MMPR -vcuj "Zygisk - LSPosed" "$VIPLSPOSEDZ" "$VCIPLSPOSEDZ" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 13 Beta 1. Requires Magisk 24.0+ and Zygisk enabled." "https://lsposed.github.io/LSPosed/release/zygisk.json"
+MMPR -vcuj "Zygisk - LSPosed" "$VIPLSPOSEDZ" "$VCIPLSPOSEDZ" "LSPosed Developers" "Another enhanced implementation of Xposed Framework. Supports Android 8.1 ~ 13 Beta 1. Requires Magisk 24.0+ and Zygisk enabled." "https://lsposed.github.io/LSPosed/release/zygisk.json"
 echo "#!$MIPSB/sh
 MODDIR=\${0%/*}
 rm -f \"$IPDLTMP/daemon.apk\"
@@ -10392,8 +10200,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ -f $IPSUKL/uinput-fpc.kl ] || [ -f $IPSUKL/uinput-gf.kl ] || [ -f $IPSUKL/uinput-goodix.kl ] || [ -f $IPVUKL/uinput-fpc.kl ] || [ -f $IPVUKL/uinput-gf.kl ] || [ -f $IPVUKL/uinput-goodix.kl ]; then
-CEMODID="$IDFPA"
-UCSA -ent "Install Fingerprint Actions $VIPFPA?" "IPFPAS"
+UCSA -ent "Install Fingerprint Actions $VIPFPA?" "IPFPAS" "$IDFPA"
 fi
 fi
 }
@@ -10422,20 +10229,14 @@ done
 if $FINGERVARIANT; then
 UIP "Installing Fingerprint Actions $IAMM"
 mkdir -p $TMPDIR/FingerprintActions$MIPSVUKL $TMPDIR/FingerprintActions$MIPSUKL
-cd $TMPDIR/FingerprintActions
-FILESUINPUT="
-.$MIPSUKL/uinput-fpc.kl
-.$MIPSVUKL/uinput-fpc.kl
-.$MIPSUKL/uinput-gf.kl
-.$MIPSVUKL/uinput-gf.kl
-.$MIPSUKL/uinput-goodix.kl
-.$MIPSVUKL/uinput-goodix.kl
-"
-for ADDSTRING in $FILESUINPUT; do echo -e "key  96    $NAMEKEYFUNCTION\nkey  102   $NAMEKEYFUNCTION" >> $ADDSTRING; done
+for kln in fpc gf goodix; do
+if [ -f $MAGISKMP$IPSUKL/uinput-$kln.kl ]; then cp -f $MAGISKMP$IPSUKL/uinput-$kln.kl $TMPDIR/FingerprintActions/$MIPSUKL; sed -i "/96/d;/102/d" $TMPDIR/FingerprintActions/$MIPSUKL/uinput-$kln.kl; echo -e "key 96 $NAMEKEYFUNCTION\nkey 102 $NAMEKEYFUNCTION" >> $TMPDIR/FingerprintActions/$MIPSUKL/uinput-$kln.kl; fi
+if [ -f $MAGISKMP$IPVUKL/uinput-$kln.kl ]; then cp -f $MAGISKMP$IPVUKL/uinput-$kln.kl $TMPDIR/FingerprintActions/$MIPSVUKL; sed -i "/96/d;/102/d" $TMPDIR/FingerprintActions/$MIPSVUKL/uinput-$kln.kl; echo -e "key 96 $NAMEKEYFUNCTION\nkey 102 $NAMEKEYFUNCTION" >> $TMPDIR/FingerprintActions/$MIPSVUKL/uinput-$kln.kl; fi
+done
 if $MAGISK; then
 PTMFI -nmp "$IDFPA"
 cp -rf $TMPDIR/$MODID/* $MODPATH/$MODID
-MMPR -v "Fingerprint Actions" "$VIPFPA" "This Mod Makes The Fingerprint Scanner Work Like The Power Button - Lock/Unlock The Screen And Reboot Menu With A Long Press/etc."
+MMPR -v "Fingerprint Actions" "$VIPFPA" "This Module Makes The Fingerprint Scanner Work Like The Power Button/Lock/Unlock The Screen/Reboot Menu With A Long Press/etc - Set On: $NAMEKEYFUNCTION"
 else
 BUCKUPER -s "$IPSUKL/uinput-fpc.kl $IPSUKL/uinput-gf.kl $IPSUKL/uinput-goodix.kl $IPVUKL/uinput-fpc.kl $IPVUKL/uinput-gf.kl $IPVUKL/uinput-goodix.kl"
 cp -f $TMPDIR/FingerprintActions$MIPSVUKL/* $IPSUKL; cp -f $TMPDIR/FingerprintActions$MIPSUKL/* $IPVUKL
@@ -10449,8 +10250,7 @@ fi
 IPCLEDLO () {
 if $MAGISK; then
 if [ -f $LEDMBRED ] || [ -f $LEDMBGREEN ] || [ -f $LEDMBBLUE ] || [ -f $LEDMBWHITE ]; then
-CEMODID="$IDLEDLO"
-UCSA "Install Charging LED Light Off $VIPLEDLO?" "IPCLEDLOS"
+UCSA "Install Charging LED Light Off $VIPLEDLO?" "IPCLEDLOS" "$IDLEDLO"
 fi
 fi
 }
@@ -10465,8 +10265,7 @@ MMPR -v "Charging LED Light Off" "$VIPLEDLO" "Charging LED Light Off"; SET_PERM_
 IPLEDLA () {
 if $MAGISK; then
 if [ -f $LEDRED ] || [ -f $LEDGREEN ] || [ -f $LEDBLUE ] || [ -f $LEDWHITE ] || [ -f $FLASHLIGHT ] || [ -f $BUTTONBACKLIGHT ]; then
-CEMODID="$IDLEDLA"
-UCSA -ent "Install LED Light Animation $VIPLEDLA?" "IPLEDLAS"
+UCSA -ent "Install LED Light Animation $VIPLEDLA?" "IPLEDLAS" "$IDLEDLA"
 fi
 fi
 }
@@ -10825,7 +10624,7 @@ fi
 fi
 
 if $ANIMATIONVARIANT; then
-UIP "Installing LED Light Animation Mod $IAMM"
+UIP "Installing LED Light Animation $IAMM"
 MMPR -v "LED Light Animation" "$VIPLEDLA" "LED Light Animation At Boot Time"
 SET_PERM_RM -msgdi
 else
@@ -10835,8 +10634,7 @@ fi
 
 IPFSLFM () {
 if $MAGISK && [ $BOOTMODE != true ] && $MIUI; then
-CEMODID="$IDFSLFM"
-UCSA "Install Fix Softloop For Miui (If DPI 800+) $VIPFSLFM?" "IPFSLFMS"
+UCSA "Install Fix Softloop For Miui (If DPI 800+) $VIPFSLFM?" "IPFSLFMS" "$IDFSLFM"
 fi
 }
 
@@ -10894,9 +10692,11 @@ fi
 }
 
 GASLS () {
-UIP "Getting All Settings List..."
+UIP "Getting All System List..."
 settings list system > $STORAGE/SystemList.sh
+UIP "Getting All Secure List..."
 settings list secure > $STORAGE/SecureList.sh
+UIP "Getting All Global List..."
 settings list global > $STORAGE/GlobalList.sh
 UIP "Done"
 }
@@ -10908,12 +10708,10 @@ UIP "Done"
 IPFGS () {
 if $MAGISK; then
 if $BOOTMODE; then
-MSGUC="Run Or Install Force Google Sync?"
+UCSA "Run Or Install Force Google Sync?" "IPFGSS" "$IDFGS"
 else
-CEMODID="$IDFGS"
-MSGUC="Install Force Google Sync $VIPFGS?"
+UCSA "Install Force Google Sync $VIPFGS?" "IPFGSS" "$IDFGS"
 fi
-UCSA "$MSGUC" "IPFGSS"
 fi
 }
 
@@ -10926,8 +10724,7 @@ bmgr backupnow appdata >/dev/null
 UIP "Running Incremental Backup For All Packages"
 bmgr backupnow --all >/dev/null
 UIP "Force Google Sync Done" "Check The Settings, After A Couple Of Minutes Everything Is In Sync"
-CEMODID="$IDFGS"
-UIP -s "Install Force Google Sync $VIPFGS?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "Install Force Google Sync $VIPFGS?" "$MSGVU Yes" "$MSGVD No $MSGNUS" "$IDFGS"
 fi
 if KEYCHOOSE || [ $BOOTMODE != true ]; then
 UIP "Installing Force Google Sync After Boot $IAMM"
@@ -10939,8 +10736,7 @@ fi
 
 IPFEG () {
 if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDFEG"
-UCSA "Install Force Gestures $VIPFEG?" "IPFEGS"
+UCSA "Install Force Gestures $VIPFEG?" "IPFEGS" "$IDFEG"
 fi
 }
 
@@ -10953,8 +10749,7 @@ MMPR -v "Force Gestures" "$VIPFEG" "Force Gestures - If The Gesture Selection It
 
 IPHAP () {
 if $MAGISK && [ "$ASDK" -ge 30 ]; then
-CEMODID="$IDHAP"
-UCSA "Install Enabling Hidden Api Policy $VIPHAP?" "IPHAPS"
+UCSA "Install Enabling Hidden Api Policy $VIPHAP?" "IPHAPS" "$IDHAP"
 fi
 }
 
@@ -10967,7 +10762,7 @@ MMPR -v "Enabling Hidden Api Policy" "$VIPHAP" "Enabling Hidden Api Policy"; SET
 }
 
 IPAFUS () {
-if $MAGISK && [ "$ASDK" -le 28 ] && CHECKER -sp "$XMLSECURE" "install_non_market_apps"; then CEMODID="$IDAFUS"; UCSA "Force Install Apps From Unknown Sources $VIPAFUS?" "IPAFUSS"; fi
+if $MAGISK && [ "$ASDK" -le 28 ] && CHECKER -sp "$XMLSECURE" "install_non_market_apps"; then UCSA "Force Install Apps From Unknown Sources $VIPAFUS?" "IPAFUSS" "$IDAFUS"; fi
 }
 
 IPAFUSS () {
@@ -10979,15 +10774,14 @@ MMPR -v "Allow Installation Of Apps From Unknown Sources" "$VIPAFUS" "Force Allo
 }
 
 IPBPT () {
-CEMODID="$IDBPT"
-UCSA "Install Build Prop Tweaks $VIPBPT?" "IPBPTS"
+UCSA "Install Build Prop Tweaks $VIPBPT?" "IPBPTS" "$IDBPT"
 }
 
 IPBPTS () {
 UIP "Installing Build Prop Tweaks $IAMM"
 if $MAGISK; then
 PTMFI -nmp "$IDBPT"
-MMPR -v "Build Prop Tweaks" "$VIPBPT" "Build Prop Tweaks: Enable 4K in YouTube, Animation AOD & LS Fix, Disable Safemedia, FramebufferSurface & Force Fake Encryption"; IPBPT="$MODPATH/$MODID/system.prop"
+MMPR -v "Build Prop Tweaks" "$VIPBPT" "Build Prop Tweaks: Enable 4K in YouTube, Animation AOD & LS Fix, Disable Safemedia & Force Fake Encryption"; IPBPT="$MODPATH/$MODID/system.prop"
 else
 BUCKUPER -bp "$IPSBP"; IPBPT="$IPSBP"
 fi
@@ -11002,9 +10796,6 @@ debug.force_no_blanking=true
 audio.safemedia.bypass=true
 persist.audio.safemedia.bypass=true
 persist.vendor.audio.safemedia.bypass=true
-
-# Controls The Number Of Buffers SurfaceFlinger Will Allocate For Use In FramebufferSurface
-ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Force Fake Encryption
 ro.crypto.state=encrypted" >> $IPBPT
@@ -11026,8 +10817,7 @@ rm -rf $AIOPFMDPH/KL $AIOPFMDPH/killlogger
 UIP "$MSGDRS"
 fi
 else
-CEMODID="$IDKL"
-UCSA "Install Kill Logger $VIPKL?" "IPKLS"
+UCSA "Install Kill Logger $VIPKL?" "IPKLS" "$IDKL"
 fi
 }
 
@@ -11257,8 +11047,7 @@ SET_PERM_RM -msgdi
 }
 
 IPFMSAAS () {
-CEMODID="$IDFMSAAS"
-UCSA "Install Force 4X MSAA Switcher $VIPFMSAAS?" "IPFMSAASS"
+UCSA "Install Force 4X MSAA Switcher $VIPFMSAAS?" "IPFMSAASS" "$IDFMSAAS"
 }
 
 IPFMSAASS () {
@@ -11276,8 +11065,7 @@ SET_PERM_RM -msgdi
 
 IPFDHWO () {
 if $MAGISK; then
-CEMODID="$IDFDHWO"
-UCSA "Install Force Disable HW Overlays $VIPFDHWO?" "IPFDHWOS"
+UCSA "Install Force Disable HW Overlays $VIPFDHWO?" "IPFDHWOS" "$IDFDHWO"
 fi
 }
 
@@ -11289,13 +11077,14 @@ MMPR -v "Force Disable HW Overlays" "$VIPFDHWO" "Force Disable HW Overlays In De
 }
 
 IPFDEVADB () {
-if $MAGISK && CHECKER -sp "$XMLGLOBAL" "development_settings_enabled adb_enabled adb_wifi_enabled verifier_verify_adb_installs"; then CEMODID="$IDFDEVADB"; UCSA "Install Force Activate DEV & ADB $VIPFDEVADB?" "IPFDEVADBS"; fi
+if $MAGISK && CHECKER -sp "$XMLGLOBAL" "development_settings_enabled adb_enabled adb_wifi_enabled verifier_verify_adb_installs"; then UCSA "Install Force Activate DEV & ADB $VIPFDEVADB?" "IPFDEVADBS" "$IDFDEVADB"; fi
 }
 
 IPFDEVADBS () {
+UIP -s "Enabled ADB WIFI?" "$MSGVU Yes" "$MSGVD No"; if KEYCHOOSE; then ADBWIFI="; sleep 20; $SPGLOBAL adb_wifi_enabled 1"; else ADBWIFI=""; fi
 UIP "Installing Force Activate DEV & ADB $IAMM"
 PTMFI -nmp "$IDFDEVADB"
-MSSERVICE -s "$SPGLOBAL development_settings_enabled 1; $SPGLOBAL adb_enabled 1; $SPGLOBAL adb_wifi_enabled 1; $SPGLOBAL verifier_verify_adb_installs 0"
+MSSERVICE -s "$SPGLOBAL development_settings_enabled 1; $SPGLOBAL adb_enabled 1; $SPGLOBAL verifier_verify_adb_installs 0$ADBWIFI"
 echo "persist.security.adbinput=1
 persist.security.adbinstall=1
 persist.service.adb.enable=1
@@ -11308,8 +11097,7 @@ MMPR -v "Force DEV & ADB" "$VIPFDEVADB" "Force Activate Developer Settings & ADB
 
 IPFMTP () {
 if $MAGISK && $LEGACYMODE && [ "$ASDK" -le 30 ]; then
-CEMODID="$IDFMTP"
-UCSA "Install Force Activate MTP $VIPFMTP?" "IPFMTPS"
+UCSA "Install Force Activate MTP $VIPFMTP?" "IPFMTPS" "$IDFMTP"
 fi
 }
 
@@ -11319,10 +11107,7 @@ mkdir -p $IPDSDE/0
 PTMFI -nmp "$IDFMTP"
 MSSERVICE -s "echo \"<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\\\"usb-screen-unlocked-config-0\\\">mtp</string>\n</map>\" > $IPDSDE/0/UsbDeviceManagerPrefs.xml"
 MMPR -v "Force MTP" "$VIPFMTP" "Force Activate MTP In Developer Settings After ReBoot"
-echo "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
-<map>
-    <string name=\"usb-screen-unlocked-config-0\">mtp</string>
-</map>" > $IPDSDE/0/UsbDeviceManagerPrefs.xml
+echo -e "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\"usb-screen-unlocked-config-0\">mtp</string>\n</map>" > $IPDSDE/0/UsbDeviceManagerPrefs.xml
 SET_PERM_RM -msgdi
 }
 
@@ -11337,8 +11122,7 @@ UIP "$MSGDRM"
 fi
 else
 if [ -f $IPSEP/com.motorola.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.aospextended.faceunlock.xml ]; then
-CEMODID="$IDSOOOFUIRC"
-UCSA "Switch On/Off Face UnLock IR Camera $VIPSOOOFUIRC?" "IPSOOOFUIRCS"
+UCSA "Switch On/Off Face UnLock IR Camera $VIPSOOOFUIRC?" "IPSOOOFUIRCS" "$IDSOOOFUIRC"
 fi
 fi
 fi
@@ -11385,8 +11169,7 @@ WCANFTP "-sl"
 
 IPFDM () {
 if [ "$ASDK" -ge 27 ]; then
-CEMODID="$IDFDM"
-UCSA "Install Force Dark Theme $VIPFDM?" "IPFDMS"
+UCSA "Install Force Dark Theme $VIPFDM?" "IPFDMS" "$IDFDM"
 fi
 }
 
@@ -11404,7 +11187,7 @@ SET_PERM_RM -msgdi
 }
 
 IPFDPP () {
-if $MAGISK && CHECKER -sp "$XMLGLOBAL" "upload_apk_enable package_verifier_enable package_verifier_user_consent verifier_verify_adb_installs"; then CEMODID="$IDFDPP"; UCSA "Install Force Disabling Play Protect $VIPFDPP?" "IPFDPPS"; fi
+if $MAGISK && CHECKER -sp "$XMLGLOBAL" "upload_apk_enable package_verifier_enable package_verifier_user_consent verifier_verify_adb_installs"; then UCSA "Install Force Disabling Play Protect $VIPFDPP?" "IPFDPPS" "$IDFDPP"; fi
 }
 
 IPFDPPS () {
@@ -11415,7 +11198,7 @@ MMPR -v "Force Disabling Play Protect" "$VIPFDPP" "Force Disabling Play Protect"
 }
 
 IPFI () {
-if $MAGISK && $LEGACYMODE; then CEMODID="$IDFI"; UCSA "Install Force Idle $VIPFI?" "IPFIS"; fi
+if $MAGISK && $LEGACYMODE; then UCSA "Install Force Idle $VIPFI?" "IPFIS" "$IDFI"; fi
 }
 
 IPFIS () {
@@ -11427,14 +11210,13 @@ MMPR -v "Force Idle" "$VIPFI" "Force Idle"; SET_PERM_RM -msgdi
 
 IPUGMSD () {
 if $MAGISK && $FINDGAPPS && [ $ASDK -ge 23 ]; then
-CEMODID="$IDUGMSD"
-UCSA "Install Universal GMS Doze $VIPUGMSD?" "IPUGMSDS"
+UCSA "Install Universal GMS Doze $VIPUGMSD?" "IPUGMSDS" "$IDUGMSD"
 fi
 }
 
 IPUGMSDS () {
 UIP "Installing Universal GMS Doze $IAMM"
-PTMFI "$IDUGMSD" "universal-gms-doze" "$IPPSXBM"
+PTMFI -np "$IDUGMSD" "universal-gms-doze"
 UIP "$MSGPNF"
 LOCATION=$(XML=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $XML; do if grep -q 'allow-unthrottled-location package="com.google.android.gms"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
 SAVE=$(XML=$(find $SYSTEM $VENDOR -name "*.xml"); for i in $XML; do if grep -q 'allow-in-power-save package="com.google.android.gms"' $MAGISKMP$i 2>/dev/null; then echo "$i"; fi; done)
@@ -11449,6 +11231,7 @@ UIP "$MSGFFAP"
 fi
 done
 echo "#!$MIPSB/sh
+if [ -d $MODPATH/$MODID ] && [ ! -f $MODPATH/$MODID/disable ]; then
 LOCATION=\$(XML=\$(find $MODPATH -name \"*.xml\");for i in \$XML; do if grep -q 'allow-unthrottled-location package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
 SAVE=\$(XML=\$(find $MODPATH -name \"*.xml\"); for i in \$XML; do if grep -q 'allow-in-power-save package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
 IGNORE=\$(XML=\$(find $MODPATH -name \"*.xml\");for i in \$XML; do if grep -q 'allow-ignore-location-settings package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
@@ -11456,62 +11239,62 @@ for i in \$LOCATION \$SAVE \$IGNORE; do
 SEARCH=\$(echo \"\$i\" | sed -e 's/\// /g' | awk '{print \$4}')
 sed -i '/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-data-usage-save package=\"com.google.android.gms\"/d' \$i
 done
-cd $IPDD; find . -type f -name '*gms*' -delete" > $POSTFSDATAD/UGMSD.sh
-MSSERVICE -s "pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver; pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver; pm disable com.google.android.gms/.chimera.GmsIntentOperationService"
-echo "gms='dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1'
-if [ \"\$gms\" = \"com.google.android.gms\" ]; then
-echo \"\033[0;31m Google Play services is Not Optimized \033[0m\"
-else
-echo \"\033[0;32m Google Play services is Optimized \033[0m\"
-fi" > $MODPATH/$MODID$IPPSXBM/gmsc
+cd $IPDD; find . -type f -name '*gms*' -delete
+elif [ ! -d $MODPATH/$MODID ]; then
+rm -f $POSTFSDATAD/UGMSD.sh
+fi" > $POSTFSDATAD/UGMSD.sh
+echo "sleep 1m
+pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver
+pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver
+pm disable com.google.android.gms/.chimera.GmsIntentOperationService
+cmd appops set com.google.android.gms BOOT_COMPLETED ignore
+cmd appops set com.google.android.ims BOOT_COMPLETED ignore
+cmd appops set com.google.android.gms BOOT_COMPLETED ignore
+cmd appops set com.google.android.ims BOOT_COMPLETED ignore
+cmd appops set com.google.android.gms.location.history BOOT_COMPLETED ignore
+cmd appops set com.google.android.gm BOOT_COMPLETED ignore
+cmd appops set com.google.android.marvin.talkback BOOT_COMPLETED ignore
+cmd appops set com.google.android.apps.googleassistant BOOT_COMPLETED ignore
+cmd appops set com.google.android.apps.carrier.log BOOT_COMPLETED ignore
+cmd appops set com.android.providers.partnerbookmarks BOOT_COMPLETED ignore
+cmd appops set com.google.android.apps.wellbeing BOOT_COMPLETED ignore
+cmd appops set com.google.android.as BOOT_COMPLETED ignore
+cmd appops set com.android.connectivity.metrics BOOT_COMPLETED ignore
+cmd appops set com.android.bips BOOT_COMPLETED ignore
+cmd appops set com.google.android.printservice.recommendation BOOT_COMPLETED ignore
+cmd appops set com.android.hotwordenrollment.xgoogle BOOT_COMPLETED ignore
+cmd appops set com.google.android.printservice.recommendation BOOT_COMPLETED ignore
+cmd appops set com.android.hotwordenrollment.xgoogle BOOT_COMPLETED ignore
+cmd appops set com.google.android.gms AUTO_START ignore
+cmd appops set com.google.android.ims AUTO_START ignore
+cmd appops set com.xiaomi.finddevice AUTO_START ignore
+cmd appops set com.miui.analytics AUTO_START ignore
+cmd appops set com.google.android.gms.location.history AUTO_START ignore
+cmd appops set com.google.android.gm AUTO_START ignore
+cmd appops set com.google.android.marvin.talkback AUTO_START ignore
+cmd appops set com.google.android.apps.googleassistant AUTO_START ignore
+cmd appops set com.google.android.apps.carrier.log AUTO_START ignore
+cmd appops set com.android.providers.partnerbookmarks AUTO_START ignore
+cmd appops set com.google.android.apps.wellbeing AUTO_START ignore
+cmd appops set com.google.android.as AUTO_START ignore
+cmd appops set com.android.connectivity.metrics AUTO_START ignore
+cmd appops set com.android.bips AUTO_START ignore
+cmd appops set com.google.android.printservice.recommendation AUTO_START ignore
+cmd appops set com.android.hotwordenrollment.okgoogle AUTO_START ignore
+cmd appops set com.android.hotwordenrollment.xgoogle AUTO_START ignore" > $MODPATH/$MODID/service.sh
 MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Patches Google Play Services App And Its Background Processes To Be Able To Use Battery Optimizations"
 MOVERPATH; SET_PERM_RM -msgdi
 }
 
-SUGMSDO () {
-if $BOOTMODE; then
-if [ -d $MODPATH/UniversalGMSDoze ] || [ -d $MODPATH/universal-gms-doze ]; then
-UCSA "Show Universal GMS Doze Optimized?" "SUGMSDOS"
-fi
-fi
-}
-
-SUGMSDOS () {
-MSGCS
-GMSС="dumpsys deviceidle whitelist | grep -o com.google.android.gms | head -n 1"
-if [ "$GMSС" = com.google.android.gms ]; then UIP "Google Play Services Is Not Optimized"; else UIP "Google Play Services Is Optimized"; fi
-}
-
 IPUSGP () {
 if [ $ASDK -ge 28 ]; then
-CEMODID="$IDUSGP"
-UCSA "Install Unlimited Storage For GPhotos $VIPUSGP?" "IPUSGPS"
+UCSA "Install Unlimited Storage For GPhotos $VIPUSGP?" "IPUSGPS" "$IDUSGP"
 fi
 }
 
 IPUSGPS () {
 UIP "Installing USGP $IAMM"
 mkdir -p $TMPDIR/USGP
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<!-- Copyright (C) 2015 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the \"License\");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an \"AS IS\" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-
-<!-- The OMA DM service must be whitelisted so they are always able to run. -->
-<config>
-    <allow-in-power-save package=\"com.android.omadm.service\" />
-</config>" > $TMPDIR/USGP/allowlist_com.android.omadm.service.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <!-- Copyright (C) 2014 The Android Open Source Project
 
@@ -11537,7 +11320,8 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <allow-in-power-save package=\"com.google.android.gms\" />
     <allow-in-data-usage-save package=\"com.google.android.gms\" />
     <allow-unthrottled-location package=\"com.google.android.gms\" />
-    <allow-ignore-location-settings package=\"com.google.android.gms\" />
+    <allow-ignore-location-settings package=\"com.google.android.gms\" attributionTag=\"com.google.android.gms.thunderbird\" />
+    <allow-ignore-location-settings package=\"com.google.android.dialer\" attributionTag=\"*\" />
 
     <!-- OobConfig must always have network access to fetch enterprise and carrier lock config. -->
     <allow-in-power-save-except-idle package=\"com.google.android.apps.work.oobconfig\" />
@@ -11565,6 +11349,9 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <!-- If GoogleCellBroadcastServiceModule is installed, let it run in the background -->
     <allow-in-power-save package=\"com.google.android.cellbroadcastreceiver\" />
 
+    <!-- If \"Personal Safety\" app is installed, let it run in the background -->
+    <allow-in-power-save package=\"com.google.android.apps.safetyhub\" />
+
     <!-- If CarrierServices is installed, it must always have network access to
          reliably receive IMS messages. -->
     <allow-in-power-save package=\"com.google.android.ims\" />
@@ -11574,12 +11361,14 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
     <!-- Apps below are required on all GMS devices -->
     <app-link package=\"com.android.vending\" />
+    <app-link package=\"com.google.android.gms\" />
     <app-link package=\"com.google.android.apps.maps\" />
     <app-link package=\"com.google.android.youtube\" />
     <app-link package=\"com.google.android.apps.docs\" />
     <app-link package=\"com.google.android.talk\" />
     <app-link package=\"com.google.android.apps.photos\" />
     <app-link package=\"com.google.android.apps.youtube.music\" />
+    <app-link package=\"com.google.android.googlequicksearchbox\" />
 
     <!-- Apps below are optional on GMS devices -->
     <app-link package=\"com.google.android.apps.tycho\" />
@@ -11591,19 +11380,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <app-link package=\"com.google.android.videos\" />
     <app-link package=\"com.google.android.calendar\" />
     <app-link package=\"com.google.android.apps.wallpaper\" />
-
-    <!-- These are the packages that are white-listed to be able to run as system user -->
-    <system-user-whitelisted-app package=\"com.android.vending\" />
-    <system-user-whitelisted-app package=\"com.google.android.gms\" />
-    <system-user-whitelisted-app package=\"com.google.android.gms.policy_auth\" />
-    <system-user-whitelisted-app package=\"com.google.android.play.games\" />
-    <system-user-whitelisted-app package=\"com.google.android.tts\" />
-
-    <!-- These are the packages that are uninstalled for system user -->
-    <!-- Apps below are required on all GMS devices -->
-    <system-user-blacklisted-app package=\"com.google.android.googlequicksearchbox\" />
-    <!-- Apps below are optional on GMS devices -->
-    <system-user-blacklisted-app package=\"com.google.android.launcher\" />
+    <app-link package=\"com.google.android.apps.tips\" />
 
     <!-- Whitelist of what components are permitted as backup data transports.  The
          'service' attribute here is a flattened ComponentName string. -->
@@ -11621,6 +11398,11 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <allow-association target=\"com.google.android.as\" allowed=\"com.android.providers.telephony\" />
     <allow-association target=\"com.google.android.as\" allowed=\"com.android.systemui\" />
     <allow-association target=\"com.google.android.as\" allowed=\"com.google.android.providers.media.module\" />
+    <!-- AI services can bind to its open-source network component. -->
+    <allow-association target=\"com.google.android.as\" allowed=\"com.google.android.as.oss\" />
+
+    <!-- AI services open-source network component can only bind back to the core package. -->
+    <allow-association target=\"com.google.android.as.oss\" allowed=\"com.google.android.as\" />
 
     <!-- Specify the explicit set of other applications whose app data directories are
         accessible by other applications. -->
@@ -11729,7 +11511,6 @@ This XML file declares which platform apps that need to access internal APIs.
   <hidden-api-whitelisted-app package=\"com.google.android.gsf\" />
   <hidden-api-whitelisted-app package=\"com.google.android.hardwareinfo\" />
   <hidden-api-whitelisted-app package=\"com.google.android.hiddenmenu\" />
-  <hidden-api-whitelisted-app package=\"com.google.android.onetimeinitializer\" />
   <hidden-api-whitelisted-app package=\"com.google.android.permissioncontroller\" />
   <hidden-api-whitelisted-app package=\"com.google.android.partner.provisioning\" />
   <hidden-api-whitelisted-app package=\"com.google.android.partnersetup\" />
@@ -11745,7 +11526,6 @@ This XML file declares which platform apps that need to access internal APIs.
   <hidden-api-whitelisted-app package=\"com.google.android.tungsten.setupwraith\" />
   <hidden-api-whitelisted-app package=\"com.google.android.tv.bugreportsender\" />
   <hidden-api-whitelisted-app package=\"com.google.android.tv.frameworkpackagestubs\" />
-  <hidden-api-whitelisted-app package=\"com.google.android.tv.pairedsetup\" />
   <hidden-api-whitelisted-app package=\"com.google.android.vendorloggingservice\" />
   <hidden-api-whitelisted-app package=\"com.google.android.volta\" />
   <hidden-api-whitelisted-app package=\"com.google.android.wfcactivation\" />
@@ -11767,94 +11547,48 @@ This XML file declares which platform apps that need to access internal APIs.
   <hidden-api-whitelisted-app package=\"org.chromium.arc.tts\" />
 </config>" > $TMPDIR/USGP/google-hiddenapi-package-whitelist.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<!--
-  ~ Copyright (C) 2018 The Android Open Source Project
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the \"License\");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~      http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an \"AS IS\" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License
-  -->
-
-<!--
-This XML file declares packages eligible for rollback.
--->
-<config>
-  <!-- Mainline modules (apk or apex) go here. -->
-  <rollback-whitelisted-app package=\"com.google.android.adbd\" />
-  <rollback-whitelisted-app package=\"com.google.android.angle\" />
-  <rollback-whitelisted-app package=\"com.google.android.captiveportallogin\" />
-  <rollback-whitelisted-app package=\"com.google.android.cellbroadcast\" />
-  <rollback-whitelisted-app package=\"com.google.android.conscrypt\" />
-  <rollback-whitelisted-app package=\"com.google.android.documentsui\" />
-  <rollback-whitelisted-app package=\"com.google.android.ext.services\" />
-  <rollback-whitelisted-app package=\"com.google.android.extservices\" />
-  <rollback-whitelisted-app package=\"com.google.android.ipsec\" />
-  <rollback-whitelisted-app package=\"com.google.android.media\" />
-  <rollback-whitelisted-app package=\"com.google.android.media.swcodec\" />
-  <rollback-whitelisted-app package=\"com.google.android.mediaprovider\" />
-  <rollback-whitelisted-app package=\"com.google.android.modulemetadata\" />
-  <rollback-whitelisted-app package=\"com.google.android.networkstack\" />
-  <rollback-whitelisted-app package=\"com.google.android.networkstack.permissionconfig\" />
-  <rollback-whitelisted-app package=\"com.google.android.neuralnetworks\" />
-  <rollback-whitelisted-app package=\"com.google.android.os.statsd\" />
-  <rollback-whitelisted-app package=\"com.google.android.permission\" />
-  <rollback-whitelisted-app package=\"com.google.android.permissioncontroller\" />
-  <rollback-whitelisted-app package=\"com.google.android.resolv\" />
-  <rollback-whitelisted-app package=\"com.google.android.sdkext\" />
-  <rollback-whitelisted-app package=\"com.google.android.tethering\" />
-  <rollback-whitelisted-app package=\"com.google.android.tzdata\" />
-  <rollback-whitelisted-app package=\"com.google.android.tzdata2\" />
-  <rollback-whitelisted-app package=\"com.google.android.wifi\" />
-  <rollback-whitelisted-app package=\"com.google.mainline.telemetry\" />
-  <!-- Mainline modules as apk-in-apex go here. -->
-  <rollback-whitelisted-app package=\"com.android.cellbroadcastreceiver\" />
-  <rollback-whitelisted-app package=\"com.android.cellbroadcastservice\" />
-  <rollback-whitelisted-app package=\"com.android.networkstack.tethering\" />
-  <rollback-whitelisted-app package=\"com.google.android.cellbroadcastreceiver\" />
-  <rollback-whitelisted-app package=\"com.google.android.cellbroadcastservice\" />
-  <rollback-whitelisted-app package=\"com.google.android.hotspot2.osulogin\" />
-  <rollback-whitelisted-app package=\"com.google.android.networkstack.tethering\" />
-  <rollback-whitelisted-app package=\"com.google.android.providers.media.module\" />
-  <rollback-whitelisted-app package=\"com.google.android.wifi.resources\" />
-</config>" > $TMPDIR/USGP/google-rollback-package-whitelist.xml
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-
-<!--
- This XML file declares installer eligible for committing stage install.
--->
-<config>
-  <whitelisted-staged-installer package=\"com.android.vending\" />
-</config>" > $TMPDIR/USGP/google-staged-installer-whitelist.xml
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
 <!-- These are configurations that should exist on Google's 2016 and newer Nexus devices. -->
 <config>
     <!-- This is meant to be the canonical feature identifying 2016 and newer Nexus devices. -->
     <feature name=\"com.google.android.feature.PIXEL_EXPERIENCE\" />
 
-    <!-- Both versions of this string are needed due to a miscommunication. b/29978934 -->
-    <feature name=\"com.google.android.apps.photos.NEXUS_PRELOAD\" />
-    <feature name=\"com.google.android.apps.photos.nexus_preload\" />
+    <!-- The feature identifying devices which are able to use the Turbo app -->
+    <feature name=\"com.google.android.feature.TURBO_PRELOAD\" />
 
-    <!-- Enable Zero Touch Provisioning support for 2016 and newer Nexus devices. -->
-    <feature name=\"com.google.android.feature.ZERO_TOUCH\" />
+    <!-- The feature identifying devices which are able to use the Android Wellbeing app. -->
+    <feature name=\"com.google.android.feature.WELLBEING\" />
 
-    <!-- Allow Google unbundled tethering entitlement app in background -->
-    <allow-in-power-save package=\"com.google.android.tetheringentitlement\" />
+    <!-- The feature identifying devices which are able to use the device-to-device migration
+        over cable provided by the Pixelmigrate app. -->
+    <feature name=\"com.google.android.feature.D2D_CABLE_MIGRATION_FEATURE\" />
+
+    <!-- Allow WfcActivation app scheduled jobs to run when app in background. -->
+    <allow-in-power-save-except-idle package=\"com.google.android.wfcactivation\" />
 
     <!-- Allow ssr detector service in background -->
     <allow-in-power-save package=\"com.google.SSRestartDetector\" />
 
+    <!-- Allow connectivitymonitor service in background -->
+    <allow-in-power-save package=\"com.google.android.connectivitymonitor\" />
+
+    <!-- Allow connectivitythermalpowermanager service in background -->
+    <allow-in-power-save package=\"com.google.android.connectivitythermalpowermanager\" />
+
+    <!-- Allow iwlan service in backgroud-->
+    <allow-in-power-save package=\"com.google.android.iwlan\" />
+
     <!-- Allow ramdump uploader service in background -->
     <allow-in-power-save package=\"com.android.ramdump\" />
+
+    <!-- Whitelist log pkg so JobIntentService can work. b/71630894 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.apps.carrier.log\" />
+
+    <!-- Whitelist so headless app JobIntentService can work. b/73250911 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.carrier\" />
+
+    <!-- Whitelist so headless app JobService can work. b/135126855 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.apps.carrier.carrierwifi\" />
 
     <!-- These are telephony components that need to run in the background -->
     <allow-in-power-save package=\"com.qualcomm.atfwd\" />
@@ -11863,28 +11597,37 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <allow-in-power-save package=\"com.qulacomm.qcrilmsgtunnel\" />
     <allow-in-power-save package=\"com.qualcomm.qti.ims\" />
     <allow-in-power-save package=\"com.qualcomm.qti.radioconfiginterface\" />
+
+    <!-- Pre-installed carrier apps which should be disabled until a matching SIM is inserted. -->
+    <disabled-until-used-preinstalled-carrier-app package=\"com.google.android.apps.tycho\" />
+
+    <!-- Whitelist so the app can run JobIntentService in background. b/77932342 -->
+    <allow-in-power-save-except-idle package=\"com.google.android.tetheringentitlement\" />
+    <!-- Tethering entitlement check app should have Internet access while in data saving mode,
+         even if they're in background. -->
+    <allow-in-data-usage-save package=\"com.google.android.tetheringentitlement\" />
+
+    <!-- Allow eMBMS middleware services to run in the background -->
+    <allow-in-power-save package=\"com.qualcomm.ltebc_vzw\" />
+    <allow-in-power-save package=\"com.qualcomm.ltebc\" />
+
+    <!-- Allow gnss pixel monitor to run in the background -->
+    <allow-in-power-save package=\"com.google.android.gnsspixelmonitor\" />
 </config>" > $TMPDIR/USGP/nexus.xml
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-
-<!-- These are configurations that should exist on devices that support Next Generation Assistant -->
-<config>
-    <!-- This feature is meant to be the feature identifying devices that support NGA -->
-    <feature name=\"com.google.android.feature.NEXT_GENERATION_ASSISTANT\" />
-</config>" > $TMPDIR/USGP/nga.xml
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-
-<!-- These are configurations that should exist on Google's 2016 Pixel devices. -->
-<config>
-    <!-- Both versions of this string are needed due to a miscommunication. b/29978934 -->
-    <feature name=\"com.google.android.apps.photos.NEXUS_PRELOAD\" />
-    <feature name=\"com.google.android.apps.photos.nexus_preload\" />
-</config>" > $TMPDIR/USGP/pixel_2016_exclusive.xml
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
 <!-- These are configurations that should exist on Google's 2017 and newer Nexus devices. -->
 <config>
     <!-- This is meant to be the canonical feature identifying 2017 and newer Nexus devices. -->
     <feature name=\"com.google.android.feature.PIXEL_2017_EXPERIENCE\" />
+
+    <!--
+       This is the canonical feature identifying devices which bundle Google Fi support. The
+       Fi app and associated apps will be bundled (but may be disabled until a matching SIM
+       is inserted).
+       This feature may not be present before Android S.
+    -->
+    <feature name=\"com.google.android.feature.GOOGLE_FI_BUNDLED\" />
 
     <!-- Allow SCONE JobIntentService & Services to run in background -->
     <allow-in-power-save package=\"com.google.android.apps.scone\" />
@@ -11902,6 +11645,14 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
     <!-- Allow MDS ExperimentService to run in background -->
     <allow-in-power-save package=\"com.google.mds\" />
+
+    <!-- Allow OMA DM to run in background -->
+    <allow-in-power-save package=\"com.android.omadm.service\" />
+    <allow-in-power-save package=\"com.android.sdm.plugins.connmo\" />
+    <allow-in-power-save package=\"com.android.sdm.plugins.dcmo\" />
+    <allow-in-power-save package=\"com.android.sdm.plugins.diagmon\" />
+    <allow-in-power-save package=\"com.android.vzwomatrigger\" />
+    <allow-in-power-save package=\"com.android.sdm.plugins.usccdm\" />
 
     <!-- Hide DocumentsUi Launcher/Downloads intent handling. DocumentsUi
          PrebootReceiver does not properly hide the launcher in work profile,
@@ -11926,16 +11677,6 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
         <component class=\".RegulatoryInfoDisplayActivity\" enabled=\"true\" />
     </component-override>
 
-    <!-- Stub for Fi to request bug reports, disabled until a Fi SIM is added.
-         Included for all in-market devices receiving the R OTA as well as
-         devices launching with R. -->
-    <disabled-until-used-preinstalled-carrier-associated-app
-        package=\"com.google.android.apps.nova.bugreportwrapper\"
-        carrierAppPackage=\"com.google.android.apps.tycho\"
-        addedInSdk=\"30\" />
-    <!-- Allow access to BugreportManager. -->
-    <bugreport-whitelisted package=\"com.google.android.apps.nova.bugreportwrapper\" />
-
     <!-- Feature flag on RVC builds for AER requirements, b/159247801 -->
     <feature name=\"com.google.android.feature.AER_OPTIMIZED\" />
 
@@ -11950,8 +11691,17 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <!-- Allow PixelLogger LoggingService to run in background -->
     <allow-in-power-save package=\"com.android.pixellogger\" />
 
+    <!-- Allow Pixel Logger to take bug report. -->
+    <bugreport-whitelisted package=\"com.android.pixellogger\" />
+
     <!-- Allow Flipendo in power save. Will be present on pre-2020 devices for dogfooding. -->
     <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
+
+    <!-- The AI services open-source network component can bind to the odad package. -->
+    <allow-association target=\"com.google.android.as.oss\" allowed=\"com.google.android.odad\" />
+
+    <!-- The odad package can only bind to the AI services open-source network component. -->
+    <allow-association target=\"com.google.android.odad\" allowed=\"com.google.android.as.oss\" />
 
     <!-- This is meant to be the canonical feature identifying 2018 and newer Pixel devices. -->
     <feature name=\"com.google.android.feature.PIXEL_2018_EXPERIENCE\" />
@@ -11996,117 +11746,24 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
     <!-- Allow Flipendo in power save. -->
     <allow-in-power-save-except-idle package=\"com.google.android.flipendo\" />
 </config>" > $TMPDIR/USGP/pixel_experience_2020_midyear.xml
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<!-- Copyright (C) 2019 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the \"License\");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an \"AS IS\" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<!-- System packages to preinstall on all devices with handheld_product, per user type.
-     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
--->
-<config>
-    <install-in-user-type package=\"com.android.wallpapercropper\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-</config>" > $TMPDIR/USGP/preinstalled-packages-platform-handheld-product.xml
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<!-- Copyright (C) 2019 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the \"License\");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an \"AS IS\" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<!-- System packages to preinstall on all devices with frameworks-base-overlays, per user type.
-     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
--->
-<config>
-    <install-in-user-type package=\"com.android.internal.display.cutout.emulation.corner\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.display.cutout.emulation.double\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.display.cutout.emulation.tall\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural_extra_wide_back\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural_narrow_back\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.systemui.navbar.gestural_wide_back\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.systemui.navbar.threebutton\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.android.internal.systemui.navbar.twobutton\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-</config>" > $TMPDIR/USGP/preinstalled-packages-platform-overlays.xml
-echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
-<!-- System packages to preinstall on Pixel 2017-and-newer devices, per user type.
-     Documentation at frameworks/base/data/etc/preinstalled-packages-platform.xml
--->
-<config>
-    <install-in-user-type package=\"com.android.wallpaper.livepicker\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.google.android.apps.nexuslauncher\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.google.android.apps.wallpaper\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.google.android.apps.wallpaper.nexus\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.google.android.calculator\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-    <install-in-user-type package=\"com.google.android.deskclock\">
-        <install-in user-type=\"FULL\" />
-    </install-in-user-type>
-</config>" > $TMPDIR/USGP/preinstalled-packages-product-pixel-2017-and-newer.xml
 if $MAGISK; then
 PTMFI -nm "$IDUSGP" "$MIPSES $MIPSSPES"
 cp -f $TMPDIR/$MODID/* $MODPATH/$MODID$MIPSES
 cp -f $TMPDIR/$MODID/* $MODPATH/$MODID$MIPSSPES
-MMPR -v "$MODID" "$VIPUSGP" "Activating Unlimited Storage For Google Photos (Maybe)"; IPUSGP=$MODPATH/$MODID/system.prop
+MMPR -v "$MODID" "$VIPUSGP" "Activating Unlimited Storage For Google Photos"
+echo -e "ro.com.google.clientidbase=android-google\nro.opa.eligible_device=true" >> $MODPATH/$MODID/system.prop
 else
-BUCKUPER -bp "$IPSBP"; IPUSGP=$IPSBP
+BUCKUPER -bp "$IPSBP"
+echo -e "\n# Activating Unlimited Storage For Google Photos\nro.com.google.clientidbase=android-google\nro.opa.eligible_device=true" >> $IPSBP
 touch $AIOPFMDPH/USGP
 [ -d $IPSES ] && cp -f $TMPDIR/USGP/* $IPSES
 [ -d $IPSSPES ] && cp -f $TMPDIR/USGP/* $IPSSPES
 fi
-echo -e "\n# Activating Unlimited Storage For Google Photos (Maybe)\nro.com.google.clientidbase=android-google\nro.opa.eligible_device=true" >> $IPUSGP
 SET_PERM_RM -msgdi
 }
 
 IPAS () {
-if $MAGISK && CHECKER -sp "$XMLGLOBAL" "window_animation_scale transition_animation_scale animator_duration_scale"; then CEMODID="$IDAS"; UCSA "Install Animation Scale $VIPAS?" "IPASS"; fi
+if $MAGISK && CHECKER -sp "$XMLGLOBAL" "window_animation_scale transition_animation_scale animator_duration_scale"; then UCSA "Install Animation Scale $VIPAS?" "IPASS" "$IDAS"; fi
 }
 
 IPASS () {
@@ -12122,8 +11779,7 @@ fi
 
 IPGPUR () {
 if [ "$ASDK" -ge 29 ]; then
-CEMODID="$IDGPUR"
-UCSA -ent "Install GPU Rendering $VIPGPUR?" "IPGPURS"
+UCSA -ent "Install GPU Rendering $VIPGPUR?" "IPGPURS" "$IDGPUR"
 fi
 }
 
@@ -12163,7 +11819,7 @@ fi
 }
 
 IPVS () {
-if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi; CEMODID="$IDVS"; UCSA -ent "Install Volume Steps $VIPVS?" "IPVSS"
+if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi; UCSA -ent "Install Volume Steps $VIPVS?" "IPVSS" "$IDVS"
 }
 
 IPVSS () {
@@ -12285,11 +11941,6 @@ IPFDNI
 IPWFAMDQSOS
 }
 
-APPS_PRESETS () {
-IPSL
-IPAPP
-}
-
 AUDIO_PRESETS () {
 IPVFX
 IPVFXP
@@ -12372,7 +12023,6 @@ IPFDM
 IPFDPP
 IPFI
 IPUGMSD
-SUGMSDO
 IPUSGP
 IPAS
 IPGPUR

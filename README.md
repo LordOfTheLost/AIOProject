@@ -1,28 +1,60 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 19.08.22 (85) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/19.08.2022/AIOPFMD-19.08.22-%2885%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1VMZ-NFu8UojC7D0OZlrNGjwm8oRvPddK/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/94">TG</a>
+* Версия AIOPFMD: 03.09.22 (86) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/03.09.2022/AIOPFMD-03.09.22-%2886%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1FCuCPuuq-SNPM22xbedLNHr5RAQGNcGv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/96">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
-	- Архитектура Arm или Arm64.
-	- Кастомный Android 10+ (но можно пробовать на любое говно ставить).
-	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет)
+	- Архитектура Arm или Arm64;
+	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
+	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет);
 	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники;
 	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй));
 	- Enabling Hidden Api Policy (для ViperFX (Android 11.0));
-	- Audio Modification Library если стоит Dolby и ViperFX.
-	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск);
+	- Audio Modification Library если стоит Dolby и ViperFX;
+	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск).
 * В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details>
   <summary>Changelog</summary>
-  
+
+#### 03.09.22 (86) ####
+* Dolby Atmos обновлен до v1.5:
+	- Убраны выборы и удалены DAX3 v3.5.1.2 и DAX2 v2.6.0.28;
+	- Переработка DAXUI с поддержкой Monet;
+	- Иконка с поддержкой Monet;
+	- Убраны костыли, пару улучшений и фиксов;
+	- Force Color для Miui и SDK <=30 (на Miui с Android 12+ не тестировалось так что он тоже оставлен);
+* Energized Hosts обновлен от 03.09.2022;
+* hosts файл с AdAway обновлен от 31.08.2022;
+* AIST обновлен до v1.6 (0109) - релизная версия и бет больше не будет;
+* Build Prop Tweaks обновлен до v2.3 - убрал FramebufferSurface;
+* Derp Launcher обновлен до v1.1 - от 30.08;
+* Sushi Launcher обновлен до v1.3 - от 24.08 из riceDroid v5.0;
+* Corvus Launcher обновлен до v1.5 - от 31.08 из Corvus S4.0-Leviathan;
+* CR Launcher обновлен до v1.8 - от 01.09 из CR 8.8;
+* Media UI Sounds обновлен до v1.9 - добавил звуки из OOS 12;
+* Unlimited Storage For Google Photos обновлен до v1.3 - обновил конфинги/удалил старые;
+* Фикс module.prop для LSPosed;
+* Presets For ViperFX обновлен до v1.8 - конвертировал все пресеты под 2.7.2.X (не ну мне похуй было);
+* Force DEV & ADB обновлен до v1.6 - сделал задержку для выбора ADB WIFI и сделал на него выбор;
+* Улучшения по Universal GMS Doze:
+	- Давлены доп строки в скрипт при загрузке;
+	- Бинарник проверки gmsc удалил ко всем хуям;
+	- Фикс удаления post скрипта;
+* Show Universal GMS Doze Optimized удален ко всем хуям;
+* Pills Colors обновлен до v1.5 - выбор цвета акцента системы и фикс package name;
+* Boot Animation обновлен до v1.9 - обновил от VoidUI и удалил с Zephyrus и PPUI;
+* Fingerprint Actions обновлен до v1.2:
+	- Новый патчинг;
+	- Фикс конфликтов;
+	- Новое описание;
+* Оптимизация кода и фиксы по UI в самом патче.
 #### 19.08.22 (85) ####
 * Lawnchair обновлен до 12.1.0 Alpha 4 - обновлен до v2.5 и обновлены Lawnicons до v2.6;
 * Sushi Launcher обновлен до v1.2 - от 19.08 из riceDroid v5.0;
-* AIST обновлен до v1.6;
-* CR Launcher обновлен до v1.7 - лаунчер от 19.08 из CR 8.8;
+* AIST обновлен до v1.6 (1908);
+* CR Launcher обновлен до v1.7 - от 19.08 из CR 8.8;
 * Universal GMS Doze обновлен до v1.8.6:
 	- Вывод конфликтов на уровень post
 	- Убран даблинг патчинга конфликтов;
@@ -229,7 +261,7 @@
 * AdAwayHosts обновлен от 27.04.2022;
 * В Network Tweak оставил только самое нужное и что работает а таже улучшил пару моментов;
 * Улучшение некоторых моментов;
-* V4AFXPresets обновлен до v1.7 - чистка говна и фикс пути для 2.7 на присеты (кто их использует вообще);
+* V4AFXPresets обновлен до v1.7 - чистка говна и фикс пути для 2.7 на пресеты (кто их использует вообще);
 * Изменения по ViperFX:
 	- Добавлена установка версии 2.7.2.1 с чёрной темой (наконец блять, да? Нет, пизда);
 	- MODID теперь всегда будет один а версия другая (мне так проще);
@@ -1600,6 +1632,7 @@
 * Пункт (ALL) (NOT MIUI) (10-12.1) (\\) - (Pills Colors) Установка разного цвета жестовой "таблетки":
 	- Выбрать один цвет для Light и Dark который определяется самим приложением;
 	- Выбрать разный цвет для Light и Dark который определяется самим приложением;
+		- Accent (Systen Accent);
 		- Blue (ff1a73e8);
 		- Light Blue (ff5e97f6);
 		- Red (ffb31818);
@@ -1863,14 +1896,10 @@
 	- TenX:
 		- Black;
 		- White;
-	- PixelPlusUI:
-		- Black;
-		- White;
 	- Radiant;
 	- OnePlus;
 	- Spark;
 	- Awalen;
-	- Zephyrus;
 	- VoidU;
 			- FPS:
 				- 60;
@@ -1879,13 +1908,14 @@
 * Пункт (ALL) (\\) - (Media UI Sounds) установка звуков из разных оболочек и прошивок:
 	- Masik (Miui 12, Android 10):
 		- Альтернативный звук разблокировки из Masik;
-	- OnePlus (OxygenOS);
+	- OnePlus:
+		- OxygenOS 11;
+		- OxygenOS 12;
 	- Pixel (Pizdec);
-	- Samsung (OneUI 3.0);
+	- Samsung (OneUI 3.0/4.1);
 	- Oppo (Color OS 7);
-	- Spark (12.3);
+	- Spark (12.6);
 	- Arcana (6.0);
-	- Cesium;
 		- Выбор громкости звуков:
 			- Обычная громкость всех звуков;
 			- Повышенная громкость всех звуков;
@@ -1900,7 +1930,7 @@
 	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка CR Launcher (SL) <a href="https://github.com/crdroidandroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
-	- Установка Corvus Launcher (SL) <a href="https://github.com/Corvus-R/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
+	- Установка Corvus Launcher (SL) <a href="https://github.com/Corvus-AOSP/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
 	- Установка Sushi Launcher (SL) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
 	- Установка Spark Launcher (SL) <a href="https://github.com/Spark-Rom/packages_apps_Launcher3">GITHUB</a> || <a href="https://spark-os.live">OFFSITE</a> || <a href="https://t.me/SparkOSChannel">TG</a>;
 	- Установка Derp Launcher (SL) <a href="https://github.com/DerpFest-12/packages_apps_DerpLauncher">GITHUB</a> || <a href="https://derpfest.org">OFFSITE</a> || <a href="https://t.me/derpfestupdates">TG</a>;
@@ -1917,10 +1947,7 @@
 
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6 и  v2.7.2.1 в зависимости от версии Android;
 * Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX.
-* Пункт (MAGISK) - (Dolby Atmos) установка ZTE Dolby Atmos:
-	- App:
-		- DAX3 v3.5.1.2;
-		- DAX2 v2.6.0.28;
+* Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/nlsound_updates">TG Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - (NLSound) улучшает качество звука:
 	- PATCH_DEEP_BUFFER;
 	- PATCH_VOLUMES;
@@ -2545,12 +2572,12 @@
 
 <h3 align=center>Other: FA/LED/FSFM/UAA/SBU/GASL</h3>
 
-* Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок/телефонов у которых есть с выборами (выбор появляется только если в телефоне есть сканер отпечатка пальца или нужные файлы):
+* Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок/телефонов у которых есть uinput-fpc/gf/goodix.kl файлы с выборами:
 	- Кнопка Включения;
 	- Включение экрана;
 	- Перейти на главный экран;
 	- Запуск проигрыватели по умолчанию;
-	- Запуск Камеры по умолчанию;
+	- Запуск Камеры по умолчанию/снимок в камере;
 	- Запуск Браузера по умолчанию;
 	- Клавиша назад;
 	- Клавиша меню;
@@ -2587,19 +2614,20 @@
 * Пункт (MAGISK) (NOT MIUI) (10-12.1) - (Force Gestures) для принудительного переключения кнопки навигации на жесты после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов или подобного;
 * Пункт (MAGISK) (11-12.1) - (Enabling Hidden Api Policy) снимает ограничения Google на некоторые классы приложений - нужен для некоторых аудиомодулей и не только;
 * Пункт (MAGISK) (<9.0) - (Force Install Apps From Unknown Sources) для принудительного включения пункта в разделе безопасности на установку из неизвестных источников;
-* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости, Force Fake Encryption и SurfaceFlinger Buffers на 3;
+* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости и Force Fake Encryption;
 * Пункт (ALL) (|\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105651495">4PDA</a> - (Kill Logger) для отключения и убивания многих процессов/бинарников сбора логов:
 	- Оставить возможность снимать logcat или нет <a href="https://developer.android.com/studio/command-line/logcat">Developer Android</a>;
 * Пункт (MAGISK) - (Force 4X MSAA) для включения 4X MSAA в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Disable HW Overlays) для включения отключение наложений после перезагрузки в настройках разработчика;
-* Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...);
+* Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...):
+	- Включить ADB WIFI;
+	- Не включать ADB WIFI;
 * Пункт (MAGISK & LEGACY) (<11) - (Force MTP) принудительно активирует MTP даже до первой загрузки;
 * Пункт (ALL) (NOT MIUI) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере если находит нужные файлы;
 * Пункт (ALL) (8.1-12.1) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
 * Пункт (MAGISK & LEGACY) - (Force Idle) для принудительного включения ожидания/простоя;
-* Пункт (MAGISK) (6.0.1-12.1) (TERMINAL) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - (Universal GMS Doze) для оптимизирования сервисов Google Play;
-* Пункт (MAGISK MANAGER) (Universal GMS Doze) - (Show Universal GMS Doze Optimized) для проверка работы/оптимизации Universal GMS Doze;
+* Пункт (MAGISK) (6.0.1-12.1) (TERMINAL) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - (Universal GMS Doze) для оптимизирования сервисов Google;
 * Пункт (ALL) (8.1-12.1) - (Unlimited Storage Google Photos) бесконечное хранилище для GPhoto - работает как есть;
 * Пункт (MAGISK) (\\) - (Animation Scale) для принудительного выставления анимации системы:
 	- Значение 0.0;
@@ -2658,12 +2686,12 @@
 * Патчи будут добавляться/улучшаться по мере их нахождения/тестирования/времени и желания.
 * Если есть проблемы(желательно с логами если были ошибки или что-то не сработало как надо)/пожелания/предложения писать в <a href="https://t.me/AIOProject_Chat">TG Chat</a> (не надо).
 
-<h3 align=center>Особые надписи и переменные в этих патчах и файле PATCHMODE</h3>
+<h3 align=center>Особые обозначения и переменные в этих патчах и файле PATCHMODE</h3>
 
 * (М) и/или (MM) - Magisk/Manager/Modules.
 * (R) - Recommended/Рекомендуется к установке/выбору.
 * Надписи возле названий модуля и версии означают: [V] - установлен или [X] - не установлен.
-* PATCHMODE.conf это файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
+* PATCHMODE.conf это - файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
 	- PMODE: Открывает некоторые тестовые пункты/патчи (в PATCHMODE напротив "PMODE=" написать: U(ser) или D(ebug)) - Прописать только букву - По умолчанию D(ebug).
 	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
 	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
