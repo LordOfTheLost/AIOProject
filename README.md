@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 03.09.22 (86) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/03.09.2022/AIOPFMD-03.09.22-%2886%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1FCuCPuuq-SNPM22xbedLNHr5RAQGNcGv/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/96">TG</a>
+* Версия AIOPFMD: 16.09.22 (87) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.09.2022/AIOPFMD-16.09.22-%2887%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/12OE3TuS8BNmCdMXlSlsTvbp3asJLPNRH/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/98">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,29 @@
 <details>
   <summary>Changelog</summary>
 
+#### 16.09.22 (87) ####
+* Energized Hosts обновлен от 16.09.2022;
+* hosts файл с AdAway обновлен от 15.09.2022;
+* Удалены ко всем хуям:
+	- CR Launcher;
+	- Corvus Launcher;
+	- Spark Launcher;
+	- Derp Launcher;
+* RoundedUI обновлен до v3.1 - добавил поддержку NEO Launcher всех вариаций;
+* Universal GMS Doze обновлен до v1.8.7;
+* AIST обновлен до v1.6 (0909);
+* NLSound обновлен до v3.4 STABLE (1109):
+	- Выборы как и были;
+	- Фикс замедленных видео при Dirac;
+	- Отключено отключение всех аудиоэффектов - Фикс Dolby Atmos с отвалом звука и подобного;
+	- Фиксы из прошлых версий;
+	- Фикс отвала абсолютной громкости;
+	- Некоторые объединения с AIST;
+* Lawnchair обновлен до v2.6 - обновил Lawnicons до v2.7;
+* Sushi Launcher обновлен до v1.4 - от 12.09 из riceDroid v5.0;
+* Build Prop Tweaks обновлен до v2.4 - доп строка для safemedia;
+* LSPosed обновлен до v1.8.4 (6609);
+* Фикс показа пункта установки лаунчеров на 13ках когда лаунчеров нормальных ещё нет.
 #### 03.09.22 (86) ####
 * Dolby Atmos обновлен до v1.5:
 	- Убраны выборы и удалены DAX3 v3.5.1.2 и DAX2 v2.6.0.28;
@@ -1566,8 +1589,8 @@
 * Обновил Fullscreen Gestures (он же в патче Without Strip And Working Gestures On The Sides который я кстати перепутал с With Transparent Strip And Working Gestures On The Sides и они работали так как должны, но наоборот - исправил) до v6.2 (Build 8);
 * Добавлен вариант (запрета срать) отключения либов для пунктов фикса хрипа звука на версии 1.0 и 2.0 BETA как Magisk модуль (тестируется);
 * Удалил ReadMe из zip (шиза);
-* Обновил DDVFEC от 05.03.2020;
-* DDVFEC не появляется при прошитии через Magisk Manager (логично);
+* Обновил DDVFE от 05.03.2020;
+* DDVFE не появляется при прошитии через Magisk Manager (логично);
 * Теперь команды find, unzip и подобные отправляются в /dev/null (в дурку);
 * Обновил GPay Fix до версии 2.2 (с доработкой и полной интеграцией скриптов и выбором удаления кэша/данных приложения Gpay (благо мой скрипт изначально на keycheck));
 * Добавил 26 тем для GBoard, c установкой как Magisk модулем, так и нет (на MiRoom и Havoc-OS - работает));
@@ -1924,16 +1947,12 @@
 	- Новый;
 	- Старый;
 
-<h3 align=center>Launchers: Lawn/Shady/CR/Corvus/Sushi/Spark/Derp</h3>
+<h3 align=center>Launchers: Shady/Lawnchair/Sushi</h3>
 
 * Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (Systemless Launcher) (Alt Variant Quick Switch) установка одного из лаунчеров:
-	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка CR Launcher (SL) <a href="https://github.com/crdroidandroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://crdroid.net">OFFSITE</a> || <a href="https://t.me/crDroidAndroid">TG</a>;
-	- Установка Corvus Launcher (SL) <a href="https://github.com/Corvus-AOSP/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.corvusrom.com">OFFSITE</a> || <a href="https://t.me/CorvusCommunityOfficial">TG</a>;
+	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка Sushi Launcher (SL) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
-	- Установка Spark Launcher (SL) <a href="https://github.com/Spark-Rom/packages_apps_Launcher3">GITHUB</a> || <a href="https://spark-os.live">OFFSITE</a> || <a href="https://t.me/SparkOSChannel">TG</a>;
-	- Установка Derp Launcher (SL) <a href="https://github.com/DerpFest-12/packages_apps_DerpLauncher">GITHUB</a> || <a href="https://derpfest.org">OFFSITE</a> || <a href="https://t.me/derpfestupdates">TG</a>;
 
 <h3 align=center>Install App From /sdcard/Application</h3>
 
@@ -2624,10 +2643,10 @@
 	- Не включать ADB WIFI;
 * Пункт (MAGISK & LEGACY) (<11) - (Force MTP) принудительно активирует MTP даже до первой загрузки;
 * Пункт (ALL) (NOT MIUI) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере если находит нужные файлы;
-* Пункт (ALL) (8.1-12.1) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
+* Пункт (ALL) (NOT MIUI) (8.1-12.1) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
 * Пункт (MAGISK & LEGACY) - (Force Idle) для принудительного включения ожидания/простоя;
-* Пункт (MAGISK) (6.0.1-12.1) (TERMINAL) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - (Universal GMS Doze) для оптимизирования сервисов Google;
+* Пункт (MAGISK) (6.0.1-12.1) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - (Universal GMS Doze) для оптимизирования сервисов Google;
 * Пункт (ALL) (8.1-12.1) - (Unlimited Storage Google Photos) бесконечное хранилище для GPhoto - работает как есть;
 * Пункт (MAGISK) (\\) - (Animation Scale) для принудительного выставления анимации системы:
 	- Значение 0.0;
