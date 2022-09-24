@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="16.09.22 (86)"
+VAIOPFMD="24.09.22 (88)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -51,7 +51,7 @@ IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.6"
 IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.1"
 IDEBB="BackgroundBlur"; VIPEBB="v1.1"
 IDBA="BootAnimation"; VIPBA="v1.9"
-IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.1"
+IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.2"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.9"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
@@ -62,30 +62,31 @@ IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.4"; VIPSSULA="v5.0"
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.4"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.8"
-IDDA="DolbyAtmos"; VIPDA="v1.5"
+IDDA="DolbyAtmos"; VIPDA="v1.6"
 IDNLS="NLSound"; VIPNLS="v3.4"; VCIPNLS="1109"
-IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="0909"
+IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="0919"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.2"
 IDAML="AML"; VIPAML="v4.2"; VCIPAML="42"
 IDALCF="ALCF"; VIPALCF="v1.2"
 #AdBlock/Hosts
 IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="15.09.2022"
-IDVSH="SystemlessHostsUnified"; VIPVSH="17.0-220116"; VCIPVSH="170"
-IDEH="EnergizedHosts"; VIPEH="16.09.2022"
+IDVAAH="AdAwayHosts"; VIPVAAH="23.09.2022"
+IDVSH="SystemlessHostsUnified"; VIPVSH="v17.0-220116"; VCIPVSH="170"
+IDEH="EnergizedHosts"; VIPEH="v267.21"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; VIPGPSP="v1.0"
 IDWIFIP="WIFIPatcher"; VIPWIFIP="v1.2"
 IDTTLF="NFQTTL"; VIPTTLF="v2.8"; VCIPTTLF="28"
 IDNT="NetworkTweak"; VIPNT="v6.0"; VCIPNT="60"
 IDAPAUSBTF="APAUSBTF"; VIPAPAUSBTF="v1.0"
-#Utilities: BB/SELC/CC/MMFR/DETACH/LSPosed
+#Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH/LSPosed
 IDBB="BrutalBusyBox"; VIPBB="v1.36.0.1"; VCIPBB="13601"
+IDSQL="SQLITE"; VIPSQL="v3.39.3"
 IDSELC="SELinuxChanger"; VIPSELC="v1.3"
 IDCC="CacheCleaner"; VIPCC="v2.7"
 IDMMFR="MMFR"; VIPMMFR="v1.0"
-IDDETACH="DETACH" VIPDETACH="v1.1"
+IDDETACH="DETACH" VIPDETACH="v1.2"
 IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.8.4 (6609)"; VCIPLSPOSEDZ="6609"
 #Other: FA/LED/FSFM/UAA/SBU/GASL
 IDFPA="FingerprintActions"; VIPFPA="v1.2"
@@ -102,7 +103,7 @@ IDKL="KillLogger"; VIPKL="v1.9"; VCIPKL="19"
 IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.6"
-IDFMTP="ForceMTP"; VIPFMTP="v1.0"
+IDUSBSUC="USBSUC"; VIPUSBSUC="v1.1"
 IDSOOOFUIRC="SOOOFUIRC"; VIPSOOOFUIRC="v2.0"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
@@ -110,7 +111,7 @@ IDFI="ForceIdle"; VIPFI="v1.0"
 IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.7"; VCIPUGMSD="187"
 IDUSGP="USGP"; VIPUSGP="v1.3"
 IDAS="AnimationScale"; VIPAS="v1.1"
-IDGPUR="GPURendering"; VIPGPUR="v1.1"
+IDGPUR="GPURendering"; VIPGPUR="v1.2"
 IDVS="VolumeSteps"; VIPVS="v1.2"
 } #
 
@@ -122,7 +123,7 @@ APMSGASD
 PARTITION_AND_MOUNTS
 IMPORTANT_VARIABLES
 RM_LIST
-CHECKER "miui bb arch sel soc gapps av device magisk" "-x"
+CHECKER "-miui -bb -sqlite -arch -sel -soc -gapps -av -device -magisk" "-x"
 PATCHMODE
 UIP "Copy AIOPFMD To TMPDIR$MSGPMODE"
 (if $DEBUGMODE || $TESTMODE; then mkdir -p $PLOGS/RECOVERY $PLOGS/MM; fi; [ -d $TMPDIR ] && rm -rf $TMPDIR; mkdir -p $TMPDIR; [ -d $ALTTMPDIR ] && rm -rf $ALTTMPDIR; mkdir -p $ALTTMPDIR
@@ -280,6 +281,8 @@ IPDSNS="$IPDS/netstats"
 IPDM="/data/misc"
 IPDMDE="/data/misc_de"
 IPDRESC="/data/resource-cache"
+IPDFF="/data/fonts/files"
+IPDFC="/data/fonts/config"
 STORAGE="/data/media/0"
 ACXML="$(find $SYSTEM $VENDOR -type f -name "audio_configs*.xml")"
 APIXML="$(find $SYSTEM $VENDOR -type f -name "audio_platform_info*.xml")"
@@ -888,12 +891,20 @@ hosts
 systemless-hosts
 "
 
+MMAUDIOFX="
+AudioFX
+MusicFX
+MiSound
+Dirac
+DiracAudioControlService
+"
+
 }
 
 CHECKER () {
 for c in $1; do
 case $c in
-av) ASDK="$(GET_FILE_PROP "ro.build.version.sdk")"
+-av) ASDK="$(GET_FILE_PROP "ro.build.version.sdk")"
 ATEN=false; AELEVEN=false; ATWELVE=false; ATWELVEL=false
 if [ "$ASDK" = "29" ]; then ATEN=true; ACNV="Q"
 elif [ "$ASDK" = "30" ]; then AELEVEN=true; ACNV="R"
@@ -909,8 +920,8 @@ DYNLIB=true
 [ $ASDK -lt 26 ] && DYNLIB=false
 [ -z $DYNLIB ] && DYNLIB=false
 if $DYNLIB; then DYNLIBPATCH="\/vendor\/lib\/soundfx"; else DYNLIBPATCH="\/system\/lib\/soundfx"; fi;;
-miui) if [ -d /data/miui ] || grep "ro.miui.build.region" $IPSBP >/dev/null || grep "ro.miui.region" $IPSBP >/dev/null || grep "ro.miui.ui.version*" $IPSBP >/dev/null || grep "ro.miui.ui.version.name*" $IPSBP >/dev/null; then MIUI=true; else MIUI=false; fi;;
-magisk) ZYGISK=false
+-miui) if [ -d /data/miui ] || grep "ro.miui.build.region" $IPSBP >/dev/null || grep "ro.miui.region" $IPSBP >/dev/null || grep "ro.miui.ui.version*" $IPSBP >/dev/null || grep "ro.miui.ui.version.name*" $IPSBP >/dev/null; then MIUI=true; else MIUI=false; fi;;
+-magisk) ZYGISK=false
 if [ -d $IPDMM ] && [ -f $IPDMM/util_functions.sh ]; then
 MAGISKFIRSTTIME=true; FINDMAGISK=true; MAGISK=true
 MAGISKVC="$(GET_FILE_PROP -s "$IPDMM/util_functions.sh" "MAGISK_VER_CODE")"
@@ -925,11 +936,14 @@ if $MAGISK; then
 mkdir -p $MODPATH $POSTFSDATAD $SERVICED
 chmod 0755 $MODPATH $POSTFSDATAD $SERVICED
 IAMM="(M)"
+[ $BOOTMODE != true ] && UIP "Everything Will Install As Magisk Modules"
 else
 IAMM=""
+[ $BOOTMODE != true ] && UIP "Everything Will Install As Non Magisk Modules"
 fi;;
-bb) if [ -f $IPSB/busybox ]; then BUSYBOX=/bin; FBUSYBOX=true; elif [ -f $IPSXB/busybox ]; then BUSYBOX=/xbin; FBUSYBOX=true; elif [ -d $MODPATH/$IDBB ] || [ -d $MODPATHUPD/$IDBB ] || [ -d $MODPATH/busybox-ndk ] || [ -d $MODPATHUPD/busybox-ndk ]; then FBUSYBOX=true; else FBUSYBOX=false; fi;;
-arch) DARCH="$(GET_FILE_PROP "ro.product.cpu.abi")"
+-bb) if [ -f $IPSB/busybox ]; then BUSYBOX=/bin; FBUSYBOX=true; elif [ -f $IPSXB/busybox ]; then BUSYBOX=/xbin; FBUSYBOX=true; elif [ -d $MODPATH/$IDBB ] || [ -d $MODPATHUPD/$IDBB ]; then FBUSYBOX=true; else FBUSYBOX=false; fi;;
+-sqlite) if [ -d "$IDSQL" ] || [ -f $IPSB/sqlite3 ] || [ -f $IPSXB/sqlite3 ]; then FSQLITE=true; else FSQLITE=false; fi;;
+-arch) DARCH="$(GET_FILE_PROP "ro.product.cpu.abi")"
 case "$DARCH" in
 *arm64*) ARCH="arm64";;
 *armeabi*) ARCH="arm";;
@@ -937,9 +951,9 @@ case "$DARCH" in
 esac
 AAPT="$ADDONS/aapt-$ARCH"
 XMLSTARLET="$ADDONS/xmlstarlet-$ARCH"
-SQLITE3="$ADDONS/sqlite3-$ARCH";;
-sel) if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUX=true; SELINUXS="Enforcing"; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUX=false; SELINUXS="Permissive"; fi;;
-soc) SD617=$(grep "ro.board.platform=msm8952" $PROPFILES)
+SQLITE="$ADDONS/sqlite3-$ARCH";;
+-sel) if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUX=true; SELINUXS="Enforcing"; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUX=false; SELINUXS="Permissive"; fi;;
+-soc) SD617=$(grep "ro.board.platform=msm8952" $PROPFILES)
 SD625=$(grep "ro.board.platform=msm8953" $PROPFILES)
 SD660=$(grep "ro.board.platform=sdm660" $PROPFILES)
 SD662=$(grep "ro.board.platform=bengal" $PROPFILES)
@@ -969,7 +983,7 @@ EXYSOC=true
 elif "$(grep -E "ro.board.platform=hi.*|ro.board.platform=kirin*" $PROPFILES)"; then
 KIRSOC=true
 fi;;
-gapps) FINDGAPPS=false
+-gapps) FINDGAPPS=false
 for f in "$IPSA" "$IPSPA" "$IPSSPA" "$IPSSPPA" "$IPSSEA" "$IPSSEPA"; do
 for gms in "GmsCore" "PrebuiltGmsCore" "GoogleServicesFramework" "Phonesky"; do
 if [ -d $f/$gms ]; then FINDGAPPS=true; break 2; fi
@@ -980,7 +994,7 @@ for gms in "*bitgapps*.sh" "*flame*.sh" "*nikgapps*.sh" "*gapps*.sh"; do
 if find $IPSAD -type f -name $gms >/dev/null; then FINDGAPPS=true; break; fi
 done
 fi;;
-device) case $2 in
+-device) case $2 in
 -x) MI8=$(grep -E "ro.product.vendor.device=dipper.*" $PROPFILES)
 MI8P=$(grep -E "ro.product.vendor.device=equuleus.*" $PROPFILES)
 MI9=$(grep -E "ro.product.vendor.name=cepheus.*|ro.product.name=cepheus.*" $PROPFILES)
@@ -1000,7 +1014,7 @@ RN10PRO=$(grep -E "ro.product.vendor.device=sweet.*" $PROPFILES)
 RN10PROMAX=$(grep -E "ro.product.vendor.device=sweetin.*" $PROPFILES)
 RN5PRO=$(grep -E "ro.product.vendor.device=whyred.*" $PROPFILES);;
 *) local PROPDEVICE=$(echo "$2" | tr '[:upper:]' '[:lower:]')
-for i in $SYSTEM $VENDOR $IPSSP; do
+for i in $SYSTEM $VENDOR; do
 if [ -f $i/build.prop ]; then
 for j in "ro.product.device" "ro.build.product" "ro.product.vendor.device" "ro.vendor.product.device"; do
 [ "$(sed -n "s/^$j=//p" $i/build.prop 2>/dev/null | head -n 1 | tr '[:upper:]' '[:lower:]')" == "$PROPDEVICE" ] && return 0
@@ -1198,7 +1212,7 @@ mkdir -p ${1%/*} 2>/dev/null
 
 REPLACER () {
 case $1 in
--f) local REPLACE=$2; for TARGET in $REPLACE; do for FPATH in "$IPSA" "$IPSPA" "$IPSSPA" "$IPSSPPA" "$IPSSEA" "$IPSSEPA" "$IPVA" "$IPVPA"; do if [ -d $MAGISKMP$FPATH/$TARGET ]; then TOUCHER $MODPATH/$MODID$FPATH/$TARGET/.replace; fi; done; done;;
+-f) local REPLACE=$2; for TARGET in $REPLACE; do for FPATH in "$IPSA" "$IPSPA" "$IPSSPA" "$IPSSPPA" "$IPSSEA" "$IPSSEPA" "$IPVA" "$IPVPA"; do if [ -d $MAGISKMP$FPATH/$TARGET ]; then UIP "Found $TARGET, Replace..."; TOUCHER $MODPATH/$MODID$FPATH/$TARGET/.replace; fi; done; done;;
 -a) local REPLACE=$2; local TPATH=$3; for TARGET in $REPLACE; do for FPATH in $TPATH; do if [ -f $MAGISKMP$FPATH/$TARGET ]; then TOUCHER $MODPATH/$MODID$FPATH/$TARGET; fi; done; done;;
 *) local REPLACE=$1; for TARGET in $REPLACE; do TOUCHER $MODPATH/$MODID$TARGET/.replace; done;;
 esac
@@ -1251,9 +1265,13 @@ done
 }
 
 SET_PERM_RM () {
-if $MAGISK; then SET_PERM_R $MODPATH/$MODID 0 0 0755 0644; [ -d $MODPATH/$MODID$MIPSB ] && chmod -R 0777 $MODPATH/$MODID$MIPSB; [ -d $MODPATH/$MODID$MIPSXB ] && chmod -R 0777 $MODPATH/$MODID$MIPSXB; fi
+if $MAGISK; then
+SET_PERM_R $MODPATH/$MODID 0 0 0755 0644
+[ -d $MODPATH/$MODID$MIPSB ] && chmod -R 0777 $MODPATH/$MODID$MIPSB
+[ -d $MODPATH/$MODID$MIPSXB ] && chmod -R 0777 $MODPATH/$MODID$MIPSXB
 [ -f $MODPATH/$MODID/daemon ] && chmod 0744 $MODPATH/$MODID/daemon
 [ -f $MODPATH/$MODID/nfqttl ] && chmod 0777 $MODPATH/$MODID/nfqttl
+fi
 case $1 in -msgdi) UIP "$MSGDI";; esac
 }
 
@@ -1443,8 +1461,9 @@ esac
 WCANFTP () {
 for c in $1; do
 case $c in
--sl) CHECKER "sel"; if $SELINUX || [ $BOOTMODE != true ]; then if [ ! -d $MODPATH/$IDSELC ]; then UIP "SELinux Not In Switch To Permissive"; PAI=true; IPSELCS; fi; fi;;
--bb) CHECKER "bb"; if [ $FBUSYBOX != true ]; then UIP "Not Found BusyBox"; IPBBS; fi;;
+-sl) CHECKER "-sel"; if $SELINUX || [ $BOOTMODE != true ]; then if [ ! -d $MODPATH/$IDSELC ]; then UIP "SELinux Not In Switch To Permissive"; PAI=true; IPSELCS; fi; fi;;
+-bb) CHECKER "-bb"; if [ $FBUSYBOX != true ]; then UIP "Not Found BusyBox"; IPBBS; fi;;
+-sqlite) CHECKER "-sqlite"; if [ $FSQLITE != true ]; then UIP "Not Found SQLite"; IPSQLS; fi;;
 -ehap) if [ ! -d $MODPATH/$IDHAP ] && [ $ASDK = 30 ]; then UIP "Not Found Enabling Hidden Api Policy"; IPHAPS; fi;;
 -alcf) if [ ! -d $MODPATH/$IDALCF ]; then UIP "Not Found Audio Library Crackling Fix"; IPALCFS; fi;;
 -aml) if [ ! -d $MODPATH/$IDAML ]; then if [[ -d $MODPATH/$IDDA && -d $MODPATH/$IDVFX ]] || [[ -d $MODPATH/$IDDA && -d $MODPATH/$IDVFX && -f $MODPATH/$IDNLS$MIPSVLRA/dirac.so ]] || [[ -d $MODPATH/$IDVFX && -f $MODPATH/$IDNLS$MIPSVLRA/dirac.so ]] || [[ -d $MODPATH/$IDDA && -f $MODPATH/$IDNLS$MIPSVLRA/dirac.so ]]; then UIP "Not Found Audio Modification Library"; IPAMLS; fi; fi;;
@@ -1461,6 +1480,7 @@ if [ $MODID = $IDDA ]; then
 if echo "$GPSF" | grep -Eq m; then sed -i "/^    music {/a\        $3 {\n        }" $PSF; fi
 if echo "$GPSF" | grep -Eq r; then sed -i "/^    ring {/a\        $3 {\n        }" $PSF; fi
 if echo "$GPSF" | grep -Eq a; then sed -i "/^    alarm {/a\        $3 {\n        }" $PSF; fi
+if echo "$GPSF" | grep -Eq s; then sed -i "/^    system {/a\        $3 {\n        }" $PSF; fi
 if echo "$GPSF" | grep -Eq v; then sed -i "/^    voice_call {/a\        $3 {\n        }" $PSF; fi
 if echo "$GPSF" | grep -Eq n; then sed -i "/^    notification {/a\        $3 {\n        }" $PSF; fi
 fi;;
@@ -1470,6 +1490,7 @@ if [ $MODID = $IDDA ]; then
 if echo "$GPSF" | grep -Eq m; then sed -i "/<stream type=\"music\">/a\            <apply effect=\"$3\"\/>" $PSF; fi
 if echo "$GPSF" | grep -Eq r; then sed -i "/<stream type=\"ring\">/a\            <apply effect=\"$3\"\/>" $PSF; fi
 if echo "$GPSF" | grep -Eq a; then sed -i "/<stream type=\"alarm\">/a\            <apply effect=\"$3\"\/>" $PSF; fi
+if echo "$GPSF" | grep -Eq s; then sed -i "/<stream type=\"system\">/a\            <apply effect=\"$3\"\/>" $PSF; fi
 if echo "$GPSF" | grep -Eq v; then sed -i "/<stream type=\"voice_call\">/a\            <apply effect=\"$3\"\/>" $PSF; fi
 if echo "$GPSF" | grep -Eq n; then sed -i "/<stream type=\"notification\">/a\            <apply effect=\"$3\"\/>" $PSF; fi
 fi;;
@@ -4172,8 +4193,9 @@ CHECKER -mmupd "$IDWIFIP" "$VIPWIFIP" "IPWIFIPS"
 CHECKER -mmupd -c "$IDTTLF" "$VIPTTLF" "$VCIPTTLF" "IPTTLFS"
 CHECKER -mmupd -c "$IDNT" "$VIPNT" "$VCIPNT" "IPNTS"
 CHECKER -mmupd "$IDAPAUSBTF" "$VIPAPAUSBTF" "IPAPAUSBTFS"
-#Utilities: BB/SELC/CC/MMFR/DETACH/LSPosed
+#Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH/LSPosed
 CHECKER -mmupd -c "$IDBB" "$VIPBB" "$VCIPBB" "IPBBS"
+CHECKER -mmupd "$IDSQL" "$VIPSQL" "IPSQLS"
 CHECKER -mmupd "$IDSELC" "$VIPSELC" "IPSELCS"
 CHECKER -mmupd "$IDCC" "$VIPCC" "IPCCS"
 CHECKER -mmupd "$IDMMFR" "$VIPMMFR" "IPMMFRS"
@@ -4194,7 +4216,7 @@ CHECKER -mmupd -c "$IDKL" "$VIPKL" "$VCIPKL" "IPKLS"
 CHECKER -mmupd "$IDFMSAAS" "$VIPFMSAAS" "IPFMSAASS"
 CHECKER -mmupd "$IDFDHWO" "$VIPFDHWO" "IPFDHWOS"
 CHECKER -mmupd "$IDFDEVADB" "$VIPFDEVADB" "IPFDEVADBS"
-CHECKER -mmupd "$IDFMTP" "$VIPFMTP" "IPFMTPS"
+CHECKER -mmupd "$IDUSBSUC" "$VIPUSBSUC" "IPUSBSUCS"
 CHECKER -mmupd "$IDSOOOFUIRC" "$VIPSOOOFUIRC" "IPSOOOFUIRCS"
 CHECKER -mmupd "$IDFDM" "$VIPFDM" "IPFDMS"
 CHECKER -mmupd "$IDFDPP" "$VIPFDPP" "IPFDPPS"
@@ -4445,7 +4467,7 @@ fi
 }
 
 IPPHOS () {
-UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Pills Height:" "Height" "10dip"
+UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Pills Height" "Height:" "10dip"
 if $UCSFNM; then
 UIP "Installing Pills Height $IAMM"
 UZTPN "PillsHeight"
@@ -4507,7 +4529,7 @@ fi
 }
 
 IPGBNBSS () {
-UCSA -a "$(seq 0 5 40)" "Choose NavBar Space Size:" "NavBar Space" "40"
+UCSA -a "$(seq 0 5 40)" "Choose NavBar Space Size" "NavBar Space Size:" "40"
 if $UCSFNM; then
 UIP "Installing GBoard NavBar Space $IAMM"
 if $MAGISK; then
@@ -4529,7 +4551,7 @@ fi
 }
 
 IPGBRCS () {
-UCSA -a "$(seq 0 5 50)" "Choose Rounded Size:" "Rounded Size" "50"
+UCSA -a "$(seq 0 5 50)" "Choose Rounded Size" "Rounded Size:" "50"
 if $UCSFNM; then
 UIP "Installing GBoard Rounded Corners $IAMM"
 if $MAGISK; then
@@ -4549,7 +4571,7 @@ UCSA "Install GBoard Themes $VIPGBT?" "IPGBTS" "$IDGBT"
 }
 
 IPGBTS () {
-UCSA -a "$(seq 0 5 30)" "Choose Key Rounded Size:" "Rounded Size" "30"
+UCSA -a "$(seq 0 5 30)" "Choose Key Rounded Size" "Rounded Size:" "30"
 if $UCSFNM; then
 UIP "Installing GBoard Themes $IAMM"
 UZTPN "GBoardThemes"
@@ -4810,8 +4832,8 @@ fi
 }
 
 IPSBINNIS () {
-UCSA -a "$(seq 1 1 10)" "Choose Variant Number Of Icons:" "Number Of Icons" "10"; VAACINN=$UCSFNMC
-if $UCSFNM; then UCSA -a "0dip 2dip 4dip 6dip" "Choose Dot Size" "Size" "6dip"; VAACINND=$UCSFNMC; fi
+UCSA -a "$(seq 1 1 10)" "Choose Variant Number Of Icons" "Number Of Icons:" "10"; VAACINN=$UCSFNMC
+if $UCSFNM; then UCSA -a "0dip 2dip 4dip 6dip" "Choose Dot Size" "Size:" "6dip"; VAACINND=$UCSFNMC; fi
 if $UCSFNM; then
 UIP "Installing Status Bar Increase Number Icons $IAMM"
 UZTPN "SBINNI"
@@ -4884,11 +4906,11 @@ fi
 }
 
 IPBIPS () {
-UCSA -a "20 40 60" "Choose Shift Interval:" "Interval" "60"; SHIFTINTERVAL=$UCSFNMC
-if $UCSFNM; then UCSA -a "4dip 6dip" "Choose Horizontal Shift:" "Shift" "6dip"; HORIZONTALSWIFT=$UCSFNMC; fi
-if $UCSFNM; then UCSA -a "4dip 6dip" "Choose Vertical Shift:" "Shift" "6dip"; VERTICALSWIFT=$UCSFNMC; fi
-if $UCSFNM; then UCSA -a "20dip 30dip 40dip" "Choose AOD Horizontal Shift:" "Shift" "40dip"; AODHORIZONTALSWIFT=$UCSFNMC; fi
-if $UCSFNM; then UCSA -a "20dip 30dip 40dip" "Choose AOD Vertical Shift:" "Shift" "40dip"; AODVERTICALSWIFT=$UCSFNMC; fi
+UCSA -a "20 40 60" "Choose Shift Interval" "Interval:" "60"; SHIFTINTERVAL=$UCSFNMC
+if $UCSFNM; then UCSA -a "4dip 6dip" "Choose Horizontal Shift" "Shift:" "6dip"; HORIZONTALSWIFT=$UCSFNMC; fi
+if $UCSFNM; then UCSA -a "4dip 6dip" "Choose Vertical Shift" "Shift:" "6dip"; VERTICALSWIFT=$UCSFNMC; fi
+if $UCSFNM; then UCSA -a "20dip 30dip 40dip" "Choose AOD Horizontal Shift" "Shift:" "40dip"; AODHORIZONTALSWIFT=$UCSFNMC; fi
+if $UCSFNM; then UCSA -a "20dip 30dip 40dip" "Choose AOD Vertical Shift" "Shift:" "40dip"; AODVERTICALSWIFT=$UCSFNMC; fi
 if $UCSFNM; then
 UIP "Installing Burn In Protection $IAMM"
 UZTPN "BIP"
@@ -4920,8 +4942,8 @@ fi
 }
 
 IPNSPS () {
-UCSA -a "0dip 5dip 10dip 15dip 20dip 25dip 30dip" "Side For Notification:" "Paddings Size" "30dip"; NSPCOS=$UCSFNMC
-if $UCSFNM; then UCSA -a "0dip 5dip 10dip 15dip 20dip 25dip 30dip" "Side For First QS Notification:" "Paddings Size" "30dip"; NSPCOSA=$UCSFNMC; fi
+UCSA -a "0dip 5dip 10dip 15dip 20dip 25dip 30dip" "Side For Notification" "Paddings Size:" "30dip"; NSPCOS=$UCSFNMC
+if $UCSFNM; then UCSA -a "0dip 5dip 10dip 15dip 20dip 25dip 30dip" "Side For First QS Notification" "Paddings Size:" "30dip"; NSPCOSA=$UCSFNMC; fi
 if $UCSFNM; then
 UIP "Installing Notification Side Paddings $IAMM"
 UZTPN "NSP"
@@ -4952,9 +4974,9 @@ fi
 }
 
 IPSBISPS () {
-UCSA -a "14dip 15dip 16dip 17dip 18dip 19dip 20dip" "Choose Space:" "Left Icon" "20dip"; ASBIS=$UCSFNMC
-if $UCSFNM; then UCSA -a "-4dip -3dip -2dip -1dip 0dip 1dip 2dip 3dip 4dip" "Choose Space:" "Right Icon" "4dip"; SUISBIS=$UCSFNMC; fi
-if $UCSFNM; then UCSA -a "0dip 1dip 2dip 3dip 4dip" "Choose Space:" "Battery Icon" "4dip"; BSUISBIS=$UCSFNMC; fi
+UCSA -a "14dip 15dip 16dip 17dip 18dip 19dip 20dip" "Choose Space" "Left Icon:" "20dip"; ASBIS=$UCSFNMC
+if $UCSFNM; then UCSA -a "-4dip -3dip -2dip -1dip 0dip 1dip 2dip 3dip 4dip" "Choose Space" "Right Icon:" "4dip"; SUISBIS=$UCSFNMC; fi
+if $UCSFNM; then UCSA -a "0dip 1dip 2dip 3dip 4dip" "Choose Space" "Battery Icon:" "4dip"; BSUISBIS=$UCSFNMC; fi
 if $UCSFNM; then
 UIP "Installing Status Bar Icon Space $IAMM"
 UZTPN "SBIS"
@@ -4988,7 +5010,7 @@ fi
 }
 
 IPSBISIS () {
-UCSA -a "12dip 13dip 14dip 15dip 16dip 17dip 18dip" "Choose Size:" "Icon Size" "18dip"; ASBISI=$UCSFNMC
+UCSA -a "12dip 13dip 14dip 15dip 16dip 17dip 18dip" "Choose Icon Size" "Icon Size:" "18dip"; ASBISI=$UCSFNMC
 if $UCSFNM; then
 UIP "Installing Status Bar Icon Size $IAMM"
 UZTPN "SBIS"
@@ -5020,7 +5042,7 @@ fi
 }
 
 IPSBCSS () {
-UCSA -a "10sp 11sp 12sp 13sp 14sp 15sp 16sp 17sp 18sp 19sp 20sp" "Choose Size:" "Clock Size" "20sp"
+UCSA -a "10sp 11sp 12sp 13sp 14sp 15sp 16sp 17sp 18sp 19sp 20sp" "Choose Clock Size" "Clock Size:" "20sp"
 if $UCSFNM; then
 UIP "Installing Status Bar Clock Size $IAMM"
 UZTPN "SBCS"
@@ -5065,13 +5087,13 @@ fi
 
 IPSBPS () {
 UIP -s "Choose Variant:" "$MSGVU Choose One Start/End" "$MSGVD Choose Start/End Separately"
-if KEYCHOOSE; then UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Padding Start/End:" "Padding" "10dip"
+if KEYCHOOSE; then UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Padding Start/End" "Padding:" "10dip"
 SCSBPCO=$UCSFNMC; SCSBPCT=$UCSFNMC
 else
-UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Padding Start:" "Padding" "10dip"
+UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Padding Start" "Padding:" "10dip"
 SCSBPCO=$UCSFNMC
 if $UCSFNM; then
-UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Padding End:" "Padding" "10dip"
+UCSA -a "0dip 1dip 2dip 3dip 4dip 5dip 6dip 7dip 8dip 9dip 10dip" "Choose Padding End" "Padding:" "10dip"
 SCSBPCT=$UCSFNMC
 fi
 fi
@@ -5097,7 +5119,7 @@ fi
 }
 
 IPQSCPS () {
-UCSA -a "$(seq 0 5 40)" "Choose Padding Size:" "Padding Size" "40"
+UCSA -a "$(seq 0 5 40)" "Choose Padding Size" "Padding Size:" "40"
 if $UCSFNM; then
 UIP "Installing QS Content Padding $IAMM"
 if $BOOTMODE; then UIP "QS Content Padding Activated Right Now"; $SPSECURE sysui_rounded_content_padding $UCSFNMC; fi
@@ -5114,7 +5136,7 @@ fi
 }
 
 IPSUIRSRSS () {
-if [ "$ASDK" -ge 31 ]; then UCSA -a "0 10 20 30 40 50 60 70 80 90 100" "Choose Rounded Size:" "Rounded Size" "100"; else UCSA -a "0 10 20 33 40 50 60 70 80 90 100" "Choose Rounded Size:" "Rounded Size" "100"; fi
+if [ "$ASDK" -ge 31 ]; then UCSA -a "0 10 20 30 40 50 60 70 80 90 100" "Choose Rounded Size" "Rounded Size:" "100"; else UCSA -a "0 10 20 33 40 50 60 70 80 90 100" "Choose Rounded Size" "Rounded Size:" "100"; fi
 if $UCSFNM; then
 UIP "Installing SUI Rounded Size $IAMM"
 if $BOOTMODE; then UIP "SUI Rounded Size Activated Right Now"; $SPSECURE sysui_rounded_size $UCSFNMC; fi
@@ -5139,14 +5161,14 @@ fi
 
 IPQSCIARS () {
 if [ "$ASDK" -ge 31 ]; then
-UCSA -a "2 3 4" "All QS:" "Count" "4"; SUIQSSNC=$UCSFNMC
-if $UCSFNM; then UCSA -a "$(seq 1 1 10)" "Expand Portrait QS + All QS ($SUIQSSNC):" "Count" "10"; SUIQSMX=$UCSFNMC; fi
+UCSA -a "2 3 4" "All QS" "Count:" "4"; SUIQSSNC=$UCSFNMC
+if $UCSFNM; then UCSA -a "$(seq 1 1 10)" "Expand Portrait QS + All QS ($SUIQSSNC)" "Count:" "10"; SUIQSMX=$UCSFNMC; fi
 else
-UCSA -a "$(seq 4 1 10)" "Minimized QS:" "Count" "10"; SUIQSC=$UCSFNMC
-if $UCSFNM; then UCSA -a "$(seq 4 1 10)" "Expand Portrait QS:" "Count" "10"; SUIQSCP=$UCSFNMC; fi
-if $UCSFNM; then UCSA -a "$(seq 4 1 10)" "Expand Landscape QS:" "Count" "10"; SUIQSCL=$UCSFNMC; fi
-if $UCSFNM; then UCSA -a "$(seq 1 1 3)" "QS Rows Portrait:" "Count" "3"; SUIQSRP=$UCSFNMC; fi
-if $UCSFNM; then UCSA -a "$(seq 1 1 3)" "QS Rows Landscape:" "Count" "3"; SUIQSRL=$UCSFNMC; fi
+UCSA -a "$(seq 4 1 10)" "Minimized QS" "Count:" "10"; SUIQSC=$UCSFNMC
+if $UCSFNM; then UCSA -a "$(seq 4 1 10)" "Expand Portrait QS" "Count:" "10"; SUIQSCP=$UCSFNMC; fi
+if $UCSFNM; then UCSA -a "$(seq 4 1 10)" "Expand Landscape QS" "Count:" "10"; SUIQSCL=$UCSFNMC; fi
+if $UCSFNM; then UCSA -a "$(seq 1 1 3)" "QS Rows Portrait" "Count:" "3"; SUIQSRP=$UCSFNMC; fi
+if $UCSFNM; then UCSA -a "$(seq 1 1 3)" "QS Rows Landscape" "Count:" "3"; SUIQSRL=$UCSFNMC; fi
 fi
 if $UCSFNM; then
 UIP "Installing QS Count Icon And Rows $IAMM"
@@ -5297,12 +5319,12 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/iosemoji ] && [ -f $IPSF/NotoColorEm
 UIP -s "$MSGFI IOS Emoji, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
-BUCKUPER -r "$IPSF/NotoColorEmoji.ttf $IPSF/SamsungColorEmoji.ttf $IPSF/HTC_ColorEmoji.ttf"
+BUCKUPER -r "$IPSF/AndroidEmoji-htc.ttf $IPSF/ColorUniEmoji.ttf $IPSF/CombinedColorEmoji.ttf $IPSF/DcmColorEmoji.ttf $IPSF/HTC_ColorEmoji.ttf $IPSF/NotoColorEmoji.ttf $IPSF/SamsungColorEmoji.ttf"
 rm -f $AIOPFMDPH/iosemoji
 UIP "$MSGDRM"
 fi
 else
-UCSA "Install IOS Emoji From IOS 15.4 $VIPIOSEMOJI?" "IPIOSEMOJIS" "$IDIOSEMOJI"
+UCSA "Install IOS Emoji From IOS 16.0 $VIPIOSEMOJI?" "IPIOSEMOJIS" "$IDIOSEMOJI"
 fi
 }
 
@@ -5310,24 +5332,43 @@ IPIOSEMOJIS () {
 UIP "Installing IOS Emoji $IAMM"
 UZTPN "IOSEmoji"
 if $MAGISK; then
-PTMFI "$IDIOSEMOJI" "iOS14.6_Emoji_for_Android emoji-replacer-809887617 android11emoji EmojiReplacer" "$MIPSF"
-for TTF in NotoColorEmoji SamsungColorEmoji HTC_ColorEmoji; do
-if [ -f $MAGISKMP$IPSF/$TTF.ttf ]; then cp -f $TMPDIR/IOSEmoji/$TTF.ttf $MODPATH/$MODID$MIPSF; fi
+PTMFI "$IDIOSEMOJI" "iOS14.6_Emoji_for_Android emoji-replacer-259830633 emoji-replacer-809887617 android11emoji EmojiReplacer" "$MIPSF"
+for TTF in AndroidEmoji-htc ColorUniEmoji CombinedColorEmoji DcmColorEmoji HTC_ColorEmoji NotoColorEmoji SamsungColorEmoji; do
+if [ -f $MAGISKMP$IPSF/$TTF.ttf ]; then cp -f $TMPDIR/IOSEmoji/NotoColorEmoji.ttf $MODPATH/$MODID$MIPSF/$TTF.ttf; fi
 done
-MMPR -v "IOS Emoji" "$VIPIOSEMOJI" "Emoji From IOS 15.4"
-MSSERVICE -s "sed -i \"/emoji_compat_app_whitelist/d\" $GBFVXML"
+MMPR -v "IOS Emoji" "$VIPIOSEMOJI" "Emoji From IOS 16.0"
+echo "#!$MIPSB/sh
+sed -i \"/emoji_compat_app_whitelist/d\" $GBFVXML
+for FBAN in \"com.facebook.orca\" \"com.facebook.katana\"; do
+if [ -d $IPDD/\$FBAN ]; then
+mkdir -p $IPDD/\$FBAN/app_ras_blobs
+cp -f $MODPATH/$MODID$MIPSF/NotoColorEmoji.ttf $IPDD/\$FBAN/app_ras_blobs/FacebookEmoji.ttf
+fi
+done
+if [ -f $IPDFC/config.xml ]; then
+SFONTS=\$(grep -m1 \"^<updatedFontDir value=\" \"$IPDFC/config.xml\" | cut -d'\"' -f2 | cut -d ' ' -f1)
+if [ -d $IPDFF/\$SFONTS ]; then
+rm -rf $IPDFF/\$SFONTS $IPDFC/config.xml
+fi
+fi" > $MODPATH/$MODID/post-fs-data.sh
 else
 sed -i "/emoji_compat_app_whitelist/d" $GBFVXML
-BUCKUPER -s "$IPSF/NotoColorEmoji.ttf $IPSF/SamsungColorEmoji.ttf $IPSF/HTC_ColorEmoji.ttf"
-for TTF in NotoColorEmoji SamsungColorEmoji HTC_ColorEmoji; do
-if [ -f $MAGISKMP$IPSF/$TTF.ttf ]; then cp -f $TMPDIR/IOSEmoji/$TTF.ttf $IPSF; fi
+BUCKUPER -s "$IPSF/AndroidEmoji-htc.ttf $IPSF/ColorUniEmoji.ttf $IPSF/CombinedColorEmoji.ttf $IPSF/DcmColorEmoji.ttf $IPSF/HTC_ColorEmoji.ttf $IPSF/NotoColorEmoji.ttf $IPSF/SamsungColorEmoji.ttf"
+for TTF in AndroidEmoji-htc ColorUniEmoji CombinedColorEmoji DcmColorEmoji HTC_ColorEmoji NotoColorEmoji SamsungColorEmoji; do
+if [ -f $MAGISKMP$IPSF/$TTF.ttf ]; then cp -f $TMPDIR/IOSEmoji/NotoColorEmoji.ttf $IPSF/$TTF.ttf; fi
 done
 fi
-if [ -f /data/fonts/config/config.xml ]; then
-SFONTS=$(grep -m1 "^<updatedFontDir value=" "/data/fonts/config/config.xml" | cut -d'"' -f2 | cut -d ' ' -f1)
-if [ -d /data/fonts/files/$SFONTS ]; then
-UIP "Found $SFONTS in /data/fonts/files"
-rm -rf /data/fonts/files/$SFONTS /data/fonts/config/config.xml
+for FBAN in "com.facebook.orca" "com.facebook.katana"; do
+if [ -d $IPDD/$FBAN ]; then
+mkdir -p $IPDD/$FBAN/app_ras_blobs
+cp -f $TMPDIR/IOSEmoji/NotoColorEmoji.ttf $IPDD/$FBAN/app_ras_blobs/FacebookEmoji.ttf
+fi
+done
+if [ -f $IPDFC/config.xml ]; then
+SFONTS=$(grep -m1 "^<updatedFontDir value=" "$IPDFC/config.xml" | cut -d '"' -f2 | cut -d ' ' -f1)
+if [ -d $IPDFF/$SFONTS ]; then
+UIP "Found $SFONTS in $IPDFF"
+rm -rf $IPDFF/$SFONTS $IPDFC/config.xml
 fi
 fi
 SET_PERM_RM -msgdi
@@ -5349,7 +5390,7 @@ fi
 
 IPMUISS () {
 MASIKALT=false
-UCSA -a "Masik OnePlus Pixel Samsung Oppo Spark Arcana" "Choose Media Variant:" "Media From" "Arcana"
+UCSA -a "Masik OnePlus Pixel Samsung Oppo Spark Arcana" "Choose Media Variant" "Media From:" "Arcana"
 if $UCSFNM; then
 case $UCSFNMC in
 "Masik") UIP -s "Use Masik Alt Lock Unlock Sound?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then MASIKALT=true; fi;;
@@ -5593,7 +5634,7 @@ echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && ki
 MSSERVICE -uc "if [ ! -d \"$MODPATH/$MODID\" ]; then pm uninstall -k --user 0 com.pittvandewitt.viperfx; rm -rf $SERVICED/V4AFX.sh; break; else break; fi" "V4AFX"
 cp -f $TMPDIR/V4AFX/libv4a_fx_ics.so $MODPATH/$MODID$MIPSVLS
 cp -f $TMPDIR/V4AFX/libstdc++.so $MODPATH/$MODID$MIPSVL
-REPLACER -f "AudioFX MusicFX"
+REPLACER -f "$MMAUDIOFX"
 UIP "$MSGPNF"
 for FAECONFXML in $AECONFXML; do
 UIP "Found $FAECONFXML" "Patching..."
@@ -5687,8 +5728,12 @@ dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file {
 allow { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file open
 allow { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file open
-dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_net dir read
-allow { hal_audio_default mtk_hal_audio audioserver } sysfs_net dir read
+dontaudit { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir read
+allow { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir read
+dontaudit { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
+allow { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
+dontaudit { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
+allow { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
 dontaudit { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
 allow { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
 dontaudit hal_audio_default hal_audio_default capability2 block_suspend
@@ -5762,6 +5807,8 @@ fi
 fi" > $MODPATH/$MODID/post-fs-data.sh
 echo "ro.control_privapp_permissions=disable" > $MODPATH/$MODID/system.prop
 
+PROCL="alarm_helper dirac dlb_alarm_listener dlb_music_listener dlb_notification_listener dlb_ring_listener dlb_system_listener dtsaudio fens lmfv ma_alarm_helper ma_music_helper ma_notification_helper ma_ring_helper ma_system_helper ma_voice_helper music_helper notification_helper ring_helper sa3d voice_helper"
+
 if FINDER "$AECONFXML"; then
 GPSF=`getprop stream.mode`
 UIP "$MSGPNF"
@@ -5771,22 +5818,7 @@ PSF="$MODPATH/$MODID$FAECONFXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAECONFXML $PSF
 case $PSF in
-*.conf) sed -i "/^        ring_helper {/ {;N s/        ring_helper {\n        }//}" $PSF
-sed -i "/^        alarm_helper {/ {;N s/        alarm_helper {\n        }//}" $PSF
-sed -i "/^        music_helper {/ {;N s/        music_helper {\n        }//}" $PSF
-sed -i "/^        voice_helper {/ {;N s/        voice_helper {\n        }//}" $PSF
-sed -i "/^        notification_helper {/ {;N s/        notification_helper {\n        }//}" $PSF
-sed -i "/^        ma_ring_helper {/ {;N s/        ma_ring_helper {\n        }//}" $PSF
-sed -i "/^        ma_alarm_helper {/ {;N s/        ma_alarm_helper {\n        }//}" $PSF
-sed -i "/^        ma_music_helper {/ {;N s/        ma_music_helper {\n        }//}" $PSF
-sed -i "/^        ma_voice_helper {/ {;N s/        ma_voice_helper {\n        }//}" $PSF
-sed -i "/^        ma_system_helper {/ {;N s/        ma_system_helper {\n        }//}" $PSF
-sed -i "/^        ma_notification_helper {/ {;N s/        ma_notification_helper {\n        }//}" $PSF
-sed -i "/^        sa3d {/ {;N s/        sa3d {\n        }//}" $PSF
-sed -i "/^        fens {/ {;N s/        fens {\n        }//}" $PSF
-sed -i "/^        lmfv {/ {;N s/        lmfv {\n        }//}" $PSF
-sed -i "/^        dirac {/ {;N s/        dirac {\n        }//}" $PSF
-sed -i "/^        dtsaudio {/ {;N s/        dtsaudio {\n        }//}" $PSF
+*.conf) for PROC in "$PROCL"; do sed -i "/^        $PROC {/ {;N s/        $PROC {\n        }//}" $PSF; sed -i "/$PROC { }/d;/$PROC {}/d" $PSF; done
 if ! grep -Eq '^output_session_processing {' $PSF; then
 sed -i -e '$a\
 output_session_processing {\
@@ -5796,29 +5828,21 @@ output_session_processing {\
     }\
     alarm {\
     }\
+	system {\
+    }\
     voice_call {\
     }\
     notification {\
     }\
 }\' $PSF
 else
-if ! grep -Eq '^    notification {' $PSF; then
-sed -i "/^output_session_processing {/a\    notification {\n    }" $PSF
+for OSP in notification voice_call system alarm ring music; do
+if ! grep -Eq '^    $OSP {' $PSF; then
+sed -i "/^output_session_processing {/a\    $OSP {\n    }" $PSF
 fi
-if ! grep -Eq '^    voice_call {' $PSF; then
-sed -i "/^output_session_processing {/a\    voice_call {\n    }" $PSF
-fi
-if ! grep -Eq '^    alarm {' $PSF; then
-sed -i "/^output_session_processing {/a\    alarm {\n    }" $PSF
-fi
-if ! grep -Eq '^    ring {' $PSF; then
-sed -i "/^output_session_processing {/a\    ring {\n    }" $PSF
-fi
-if ! grep -Eq '^    music {' $PSF; then
-sed -i "/^output_session_processing {/a\    music {\n    }" $PSF
-fi
+done
 fi;;
-*.xml) for PROC in "alarm_helper dirac dtsaudio fens lmfv ma_alarm_helper ma_music_helper ma_notification_helper ma_ring_helper ma_system_helper ma_voice_helper music_helper notification_helper ring_helper sa3d voice_helper"; do sed -i "/<apply effect=\"$PROC\"/d" $PSF; done
+*.xml) for PROC in "$PROCL"; do sed -i "/<apply effect=\"$PROC\"\/>/d;/<apply effect=\"$PROC\" \/>/d" $PSF; done
 if ! grep -Eq '<postprocess>' $PSF || grep -Eq '<!-- Audio post processor' $PSF; then
 sed -i '/<\/effects>/a\
     <postprocess>\
@@ -5828,27 +5852,19 @@ sed -i '/<\/effects>/a\
         <\/stream>\
         <stream type="alarm">\
         <\/stream>\
+        <stream type="system">\
+        <\/stream>\
         <stream type="voice_call">\
         <\/stream>\
         <stream type="notification">\
         <\/stream>\
     <\/postprocess>' $PSF
 else
-if ! grep -Eq '<stream type="notification">' $PSF || grep -Eq '<!-- YunMang.Xiao@PSW.MM.Dolby' $PSF; then
-sed -i "/<postprocess>/a\        <stream type=\"notification\">\n        <\/stream>" $PSF
+for OSP in notification voice_call system alarm ring music; do
+if ! grep -Eq '<stream type="$OSP">' $PSF || grep -Eq '<!-- YunMang.Xiao@PSW.MM.Dolby' $PSF; then
+sed -i "/<postprocess>/a\        <stream type=\"$OSP\">\n        <\/stream>" $PSF
 fi
-if ! grep -Eq '<stream type="voice_call">' $PSF; then
-sed -i "/<postprocess>/a\        <stream type=\"voice_call\">\n        <\/stream>" $PSF
-fi
-if ! grep -Eq '<stream type="alarm">' $PSF || grep -Eq '<!-- YunMang.Xiao@PSW.MM.Dolby' $PSF; then
-sed -i "/<postprocess>/a\        <stream type=\"alarm\">\n        <\/stream>" $PSF
-fi
-if ! grep -Eq '<stream type="ring">' $PSF || grep -Eq '<!-- YunMang.Xiao@PSW.MM.Dolby' $PSF; then
-sed -i "/<postprocess>/a\        <stream type=\"ring\">\n        <\/stream>" $PSF
-fi
-if ! grep -Eq '<stream type="music">' $PSF || grep -Eq '<!-- YunMang.Xiao@PSW.MM.Dolby' $PSF; then
-sed -i "/<postprocess>/a\        <stream type=\"music\">\n        <\/stream>" $PSF
-fi
+done
 fi;;
 esac
 if ! getprop | grep -Eq "disable.dirac\]: \[0"; then
@@ -5857,7 +5873,7 @@ fi
 if ! getprop | grep -Eq "disable.misoundfx\]: \[0"; then
 PSXCF -rae "libmisoundfx.so misoundfx 5b8e36a5-144a-4c38-b1d7-0002a5d5c51b"
 fi
-PSXCF -rae "dolbyatmos dolbyatmos libatmos.so 74697567-7261-6564-6864-65726f206678"
+PSXCF -rae "dolbyatmos libatmos.so 74697567-7261-6564-6864-65726f206678"
 PSXCF -aae "dolbyatmos" "dolbyatmos" "libatmos.so" "74697567-7261-6564-6864-65726f206678"
 UIP "$MSGFFAP"
 done
@@ -6008,8 +6024,7 @@ sed -i 's/bass-enhancer-enable value="false"/bass-enhancer-enable value="true"/g
 UIP "Changing Bass Enhancer Boost Balues To $GPSF For All Profiles"
 ROW=`grep bass-enhancer-boost $PSF | sed 's/<bass-enhancer-boost value="0"\/>//p'`
 echo $ROW > $TMPDIR/DAB
-sed -i 's/<bass-enhancer-boost value="//g' $TMPDIR/DAB
-sed -i 's/"\/>//g' $TMPDIR/DAB
+sed -i 's/<bass-enhancer-boost value="//g;s/"\/>//g' $TMPDIR/DAB
 ROW=`cat $TMPDIR/DAB`
 UIP "Default Values: $ROW"
 for ROWS in $ROW; do
@@ -6061,7 +6076,7 @@ APKPERM "$TMPDIR/$MODID$MIPSPA/DAXUI/DAXUI.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "
 APKPERM "$TMPDIR/$MODID$MIPSPA/DAXService/DAXService.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
 
 echo -e "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<permissions>\n    <library name=\"dolby_dax\"\n        file=\"/system/framework/dolby_dax.jar\"/>\n</permissions>" > $TMPDIR/$MODID$MIPSEP/dolby_dax.xml
-REPLACER -f "DaxUI daxService AudioFX MusicFX MiSound Dirac DiracAudioControlService"
+REPLACER -f "DaxUI daxService $MMAUDIOFX"
 cp -rf $TMPDIR/DolbyAtmos/system $MODPATH/$MODID
 REPLACER -a "dumpstate" "$IPSB"
 REPLACER -a "vendor.dolby.hardware.dms@2.0-service" "$IPVBHW"
@@ -6147,7 +6162,7 @@ DIRAC=$TMPDIR/NLSound
 UZTPN "NLSound"
 PTMFI -np "$IDNLS" "$IDAIST"
 MMPR -vcs "NLSound" "$VIPNLS" "$VCIPNLS" "NLSound Team" "This Module Globally Improves Audio Quality When Recording Video/Audio And Listening To Audio On Your Device" "https://t.me/nlsound_support"
-REPLACER -f "AudioFX MusicFX"
+REPLACER -f "$MMAUDIOFX"
 if $STEP2 || $STEP3 || $STEP4 || $STEP5 || $STEP6 || $STEP11 || CHECKER "device" "dipper"; then PSXCF -psf "$MPATHS"; fi
 if $STEP1 || $STEP7; then PSXCF -psf "$ACXML"; fi
 if $STEP13; then PSXCF -psf "$AIPAOPCONF"; fi
@@ -6375,7 +6390,7 @@ if $STEP12; then PATCH_IMPROVE_BLUETOOTH -nl; fi
 if $STEP13; then PATCH_AUDIO_POLICY; fi
 if $STEP14; then PATCH_AUDIO_POLICY_CONFIGURATION -nl; fi
 if $STEP15; then PATCH_MEDIA_CODECS; fi
-if CHECKER "device" "dipper"; then PATCH_FIX_MICRO; fi
+if CHECKER "-device" "dipper"; then PATCH_FIX_MICRO; fi
 MOVERPATH
 SET_PERM_RM -msgdi
 WCANFTP "-alcf -aml"
@@ -6413,19 +6428,18 @@ PTMFI -np "$IDAIST" "$IDNLS"
 MMPR -vcs "AIST For Devices Based On Qualcomm" "$VIPAIST" "$VCIPAIST" "Oleg_Skalskiy" "This Module Improving Audio Quality On Android" "https://t.me/AIST_FLOOD"
 echo "# GENERAL PARAMETERS BY AIST
 af.thread.throttle=0
-af.fast_track_multiplier=0
-audio.adm.buffering.ms=7
-vendor.audio.adm.buffering.ms=7
-audio.adm.phaseshift.ms=1
-vendor.audio.adm.phaseshift.ms=1
-audio.hal.boot.timeout.ms=3500
-vendor.audio.hal.boot.timeout.ms=3500
-audio.offload.buffer.size.kb=288
-vendor.audio.offload.buffer.size.kb=288
+audio.adm.buffering.ms=8
+vendor.audio.adm.buffering.ms=8
+audio.adm.phaseshift.ms=0
+vendor.audio.adm.phaseshift.ms=0
+audio.hal.boot.timeout.ms=4000
+vendor.audio.hal.boot.timeout.ms=4000
+audio.offload.buffer.size.kb=256
+vendor.audio.offload.buffer.size.kb=256
 audio.native.dsd.buffer.size.kb=512
 vendor.audio.native.dsd.buffer.size.kb=512
-audio.truehd.buffer.size.kb=512
-vendor.audio.truehd.buffer.size.kb=512
+audio.truehd.buffer.size.kb=128
+vendor.audio.truehd.buffer.size.kb=128
 audio.sys.noisy.broadcast.delay=0
 vendor.audio.sys.noisy.broadcast.delay=0
 audio.sys.offload.pstimeout.secs=0
@@ -6470,8 +6484,8 @@ persist.vendor.audio.ozo.codec.enable=true
 persist.vendor.audio.ambisonic.auto.profile=false
 persist.vendor.audio.ambisonic.capture=false
 persist.vendor.audio.apptype.multirec.enabled=false
-ro.qc.sdk.audio.ssr=false
-ro.vendor.audio.sdk.ssr=false
+ro.qc.sdk.audio.ssr=true
+ro.vendor.audio.sdk.ssr=true
 ro.vendor.audio.dump.mixer=false
 ro.audio.playbackScene=false
 ro.vendor.audio.playbackScene=false
@@ -7177,9 +7191,12 @@ vendor.hab.product.verified=false
 vendor.hab.odm.verified=false
 ro.control_privapp_permissions=disable
 vendor.skip.init=0" > $MODPATH/$MODID/system.prop
-REPLACER -f "AudioFX MusicFX"
-echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" | tee $MODPATH/$MODID/service.sh $MODPATH/$MODID/post-fs-data.sh > /dev/null
-echo -e "\nresetprop -p --delete persist.vendor.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete persist.audio_hal.dsp_bit_width_enforce_mode\nresetprop -p --delete vendor.audio.ultrasound.stoplatency" > $MODPATH/$MODID/service.s
+REPLACER -f "$MMAUDIOFX"
+echo -e "#!$MIPSB/sh
+resetprop -p --delete persist.vendor.audio_hal.dsp_bit_width_enforce_mode
+resetprop -p --delete persist.audio_hal.dsp_bit_width_enforce_mode
+resetprop -p --delete vendor.audio.ultrasound.stoplatency
+SERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" > $MODPATH/$MODID/service.sh
 if FINDER "$MPATHS"; then PSXCF -psf "$MPATHS"; fi
 if FINDER "$ACXML"; then PSXCF -psf "$ACXML"; fi
 if FINDER "$APCXML"; then PSXCF -psf "$APCXML"; fi
@@ -7325,7 +7342,7 @@ fi
 done
 fi
 if [ -d $MAGISKMP$IPSED ] || [ -d $MAGISKMP$IPVED ]; then PATCH_DOLBY; fi
-if CHECKER "device" "dipper"; then PATCH_FIX_MICRO; fi
+if CHECKER "-device" "dipper"; then PATCH_FIX_MICRO; fi
 MOVERPATH
 SET_PERM_RM -msgdi
 WCANFTP "-alcf"
@@ -7566,7 +7583,7 @@ return 0
 
 . $MODPATH/$MODID/uninstall.sh
 rm -rf $NVBASE/$MODID $MODPATH/$MODID/system $MODPATH/$MODID/Errors.txt $MODPATH/$MODID/system.prop
-mkdir $NVBASE/$MODID
+mkdir -p $NVBASE/$MODID
 files=\"\$(find \$MAGISKMP/mirror/system_root/system \$MAGISKMP/mirror/system \$MAGISKMP/mirror/vendor -type f -name \"*audio_effects*.conf\" -o -name \"*audio_effects*.xml\" -o -name \"*audio_*policy*.conf\" -o -name \"*audio_*policy*.xml\" -o -name \"*mixer_paths*.xml\" -o -name \"*mixer_gains*.xml\" -o -name \"*audio_device*.xml\" -o -name \"*sapa_feature*.xml\" -o -name \"*audio_platform_info*.xml\" -o -name \"*audio_configs*.xml\" -o -name \"*audio_device*.xml\")\"
 for file in \$files; do
 name=\$(echo \"\$file\" | sed -e \"s|\$MAGISKMP/mirror||\" -e \"s|/system_root/|/|\" -e \"s|/system/|/|\")
@@ -9008,7 +9025,7 @@ UIP -s "$MSGVU Systemless Hosts $VIPVSH (90000+)" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 IPSHFS
 else
-UIP -s "$MSGVU Energized Hosts $VIPEH (400000+ Or 700000+)" "$MSGVD No $MSGNUS"
+UIP -s "$MSGVU Energized Hosts $VIPEH (400000+ Or 800000+)" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 IPEHFS
 fi
@@ -9060,7 +9077,7 @@ SET_PERM_RM -msgdi
 }
 
 IPEHFS () {
-UIP -s "Choose Basic Or Unified" "$MSGVU Basic (400000+) $MSGRI" "$MSGVD Unified (700000+)"; if KEYCHOOSE; then FEHF="Basic"; else FEHF="Unified"; fi
+UIP -s "Choose Basic Or Unified" "$MSGVU Basic (400000+) $MSGRI" "$MSGVD Unified (800000+)"; if KEYCHOOSE; then FEHF="Basic"; else FEHF="Unified"; fi
 UIP "Installing Energized Hosts Files $IAMM"
 UZTPN "Hosts"
 HOSTSFILE="Energized-$FEHF-hosts"
@@ -9483,7 +9500,7 @@ SET_PERM_RM -msgdi
 }
 
 IPAPAUSBTF () {
-if CHECKER "device" "dipper" && [ -d $IPDSNS ]; then
+if CHECKER "-device" "dipper" && [ -d $IPDSNS ]; then
 UCSA "Install AP & USB Tethering Fix $VIPAPAUSBTF?" "IPAPAUSBTFS" "$IDAPAUSBTF"
 fi
 }
@@ -9501,7 +9518,7 @@ UIP "$MSGDI"
 
 } #
 
-{ #Utilities: BB/SELC/CC/MMFR/DETACH/LSPosed
+{ #Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH/LSPosed
 
 IPBB () {
 if [ $BOOTMODE != true ] && [ -f $SYSTEM/$BUSYBOX/busybox ]; then
@@ -9540,6 +9557,34 @@ SET_PERM_RM -msgdi
 UIP "Usage:" "Run \"su -c busybox\" In Terminal On BootMode"
 }
 
+IPSQL() {
+if [ $BOOTMODE != true ] && [[ -f $IPSB/sqlite3 || -f $IPSXB/sqlite3 ]]; then
+UIP -s "$MSGFI SQLite, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then
+UIP "Remove SQLite"
+rm -f $IPSB/sqlite3 rm -f $IPSXB/sqlite3 $AIOPFMDPH/sqlite3
+UIP "$MSGDRM"
+fi
+else
+UCSA "Install SQLite $VIPSQL?" "IPSQLS" "$IDSQL"
+fi
+}
+
+IPSQLS() {
+UIP "Installing SQLite $IAMM"
+if $MAGISK; then
+PTMFI "$IDSQL" "73sydney.sqlite3 sqlite3" "$IPPSXBM"
+MMPR -v "SQLite" "$VIPSQL" "SQLite Universal Binaries - Usage: Run \"su -c sqlite3\" In Terminal On BootMode"
+cp -f $SQLITE $MODPATH/$MODID$IPPSXBM/sqlite3
+else
+cp -f $SQLITE $IPPSXB/sqlite3
+chmod chmod 0777 $IPPSXB/sqlite3
+touch $AIOPFMDPH/sqlite3
+fi
+SET_PERM_RM -msgdi
+UIP "Usage:" "Run \"su -c sqlite3\" In Terminal On BootMode"
+}
+
 IPSELC () {
 if $MAGISK; then
 PAI=false
@@ -9550,7 +9595,7 @@ fi
 IPSELCS () {
 PTMFI -np "$IDSELC" "SeLinuxChanger"
 SLSP="Permissive"; SLSE="Enforcing"
-CHECKER "sel"
+CHECKER "-sel"
 if $PAI; then
 SLSC=$SLSP; SLSCN=0
 else
@@ -9949,8 +9994,6 @@ OPTIONS
 
 OPTIONS" > $MODPATH/$MODID$MIPSB/DETACH
 
-cp -f $SQLITE3 $MODPATH/$MODID
-
 VENDINGPKG="com.android.vending"
 VENDINGLIBDB="$IPDD/$VENDINGPKG/databases/library.db"
 VENDINGLOCDB="$IPDD/$VENDINGPKG/databases/localappstate.db"
@@ -9973,8 +10016,8 @@ UIP "Detaching Packages"
 while read -r PKGNAME; do
 if [ ! -z "$PKGNAME" ] && [ ! "`echo $PKGNAME | grep "#"`" ]; then
 UIP "Add $PKGNAME"
-$SQLITE3 $VENDINGLIBDB "UPDATE ownership SET doc_type = '$KEY' WHERE doc_id = '$PKGNAME'"
-$SQLITE3 $VENDINGLOCDB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PKGNAME'"
+$SQLITE $VENDINGLIBDB "UPDATE ownership SET doc_type = '$KEY' WHERE doc_id = '$PKGNAME'"
+$SQLITE $VENDINGLOCDB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PKGNAME'"
 fi
 done < "$DETACHCFG"
 fi
@@ -9985,8 +10028,8 @@ while read -r PKGNAME; do
 if [ ! -z "$PKGNAME" ] && [ "`echo $PKGNAME | grep "#"`" ]; then
 UIP "Remove $PKGNAME"
 PKGNAME="`echo $PKGNAME | cut -c 2-`"
-$SQLITE3 $VENDINGLIBDB "UPDATE ownership SET doc_type = '$(($KEY/$KEY))' WHERE doc_id = '$PKGNAME'"
-$SQLITE3 $VENDINGLOCDB "UPDATE appstate SET auto_update = '1' WHERE package_name = '$PKGNAME'"
+$SQLITE $VENDINGLIBDB "UPDATE ownership SET doc_type = '$(($KEY/$KEY))' WHERE doc_id = '$PKGNAME'"
+$SQLITE $VENDINGLOCDB "UPDATE appstate SET auto_update = '1' WHERE package_name = '$PKGNAME'"
 fi
 done < "$DETACHCFG"
 fi
@@ -9997,16 +10040,6 @@ while true; do
 if [ \$(getprop sys.boot_completed) -eq 1 ]; then
 if [ -f $STORAGE/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/DETACH*)\"; FINDDETACHCFG=true; else for f in \$(ls $STORAGE); do if [ -f $STORAGE/\$f/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/\$f/DETACH*)\"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ \$FINDDETACHCFG != true ]; then echo -e \"com.google.android.youtube\ncom.google.android.apps.youtube.music\ncom.google.ar.core\" > $STORAGE/DETACH.conf; DETACHCFG=\"$STORAGE/DETACH.conf\"; fi
 
-SET_PERM () {
-chown \$2:\$3 \$1 || return 1
-chmod \$4 \$1 || return 1
-CON=\$5
-[ -z \$CON ] && CON=u:object_r:system_file:s0
-chcon \$CON \$1 || return 1
-}
-
-SQLITE3=\"$MODPATH/$MODID/sqlite3-$ARCH\"
-SET_PERM \$SQLITE3 0 2000 0755
 KEY=\"\$((5*5))\"
 pm disable \"$VENDINGPKG/com.google.android.finsky.scheduler.process.backgroundimpl.AlarmManagerServiceBackground\" >&2
 pm disable \"$VENDINGPKG/com.google.android.finsky.rollbackmanager.RollbackReceiver\" >&2
@@ -10022,8 +10055,8 @@ echo \"Detaching Packages\"
 while read -r PKGNAME; do
 if [ ! -z \"\$PKGNAME\" ] && [ ! \"\`echo \$PKGNAME | grep \"#\"\`\" ]; then
 echo \"Add \$PKGNAME\"
-\$SQLITE3 $VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$KEY' WHERE doc_id = '\$PKGNAME'\"
-\$SQLITE3 $VENDINGLOCDB \"UPDATE appstate SET auto_update = '2' WHERE package_name = '\$PKGNAME'\"
+sqlite3 $VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$KEY' WHERE doc_id = '\$PKGNAME'\"
+sqlite3 $VENDINGLOCDB \"UPDATE appstate SET auto_update = '2' WHERE package_name = '\$PKGNAME'\"
 fi
 done < \"\$DETACHCFG\"
 fi
@@ -10034,8 +10067,8 @@ while read -r PKGNAME; do
 if [ ! -z \"\$PKGNAME\" ] && [ \"\`echo \$PKGNAME | grep \"#\"\`\" ]; then
 echo \"Remove \$PKGNAME\"
 PKGNAME=\"\`echo \$PKGNAME | cut -c 2-\`\"
-\$SQLITE3 $VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$((\$KEY/\$KEY))' WHERE doc_id = '\$PKGNAME'\"
-\$SQLITE3 $VENDINGLOCDB \"UPDATE appstate SET auto_update = '1' WHERE package_name = '\$PKGNAME'\"
+sqlite3 $VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$((\$KEY/\$KEY))' WHERE doc_id = '\$PKGNAME'\"
+sqlite3 $VENDINGLOCDB \"UPDATE appstate SET auto_update = '1' WHERE package_name = '\$PKGNAME'\"
 fi
 done < \"\$DETACHCFG\"
 fi
@@ -10045,6 +10078,7 @@ done" > $MODPATH/$MODID/service.sh
 
 SET_PERM_RM -msgdi
 UIP "Usage:" "Run \"su -c DETACH\" In Terminal On BootMode"
+WCANFTP "-sqlite"
 }
 
 IPLSPOSEDR () {
@@ -11054,24 +11088,29 @@ service.adb.tcp.port=5555" > $MODPATH/$MODID/system.prop
 MMPR -v "Force DEV & ADB" "$VIPFDEVADB" "Force Activate Developer Settings & ADB/ADB Wifi With Port 5555"; SET_PERM_RM -msgdi
 }
 
-IPFMTP () {
-if $MAGISK && $LEGACYMODE && [ "$ASDK" -le 30 ]; then
-UCSA "Install Force Activate MTP $VIPFMTP?" "IPFMTPS" "$IDFMTP"
+IPUSBSUC () {
+if [ -f $IPDSDE/0/UsbDeviceManagerPrefs.xml ]; then
+UCSA "Install USB Screen Unlocked Config $VIPUSBSUC?" "IPUSBSUCS" "$IDUSBSUC"
 fi
 }
 
-IPFMTPS () {
-UIP "Installing Force Activate MTP $IAMM"
-mkdir -p $IPDSDE/0
-PTMFI -nmp "$IDFMTP"
-MSSERVICE -s "echo \"<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\\\"usb-screen-unlocked-config-0\\\">mtp</string>\n</map>\" > $IPDSDE/0/UsbDeviceManagerPrefs.xml"
-MMPR -v "Force MTP" "$VIPFMTP" "Force Activate MTP In Developer Settings After ReBoot"
-echo -e "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\"usb-screen-unlocked-config-0\">mtp</string>\n</map>" > $IPDSDE/0/UsbDeviceManagerPrefs.xml
+IPUSBSUCS () {
+UCSA -a "MTP Tethering MIDI PTP" "USB Config" "Config:" "PTP"
+if $UCSFNM; then
+UIP "Installing USB Screen Unlocked Config $IAMM"
+case $UCSFNMC in "MTP") USBSUC="mtp";; "Tethering") USBSUC="rndis";; "MIDI") USBSUC="midi";; "PTP") USBSUC="ptp";; esac
+if $MAGISK; then
+PTMFI -nmp "$IDUSBSUC"
+MSSERVICE -s "echo \"<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\\\"usb-screen-unlocked-config-0\\\">$USBSUC</string>\n</map>\" > $IPDSDE/0/UsbDeviceManagerPrefs.xml"
+MMPR -v "USB Screen Unlocked Config" "$VIPUSBSUC" "USB Screen Unlocked Config Set On: $UCSFNMC"
+fi
+echo -e "<?xml version='1.0' encoding='utf-8' standalone='yes' ?>\n<map>\n    <string name=\"usb-screen-unlocked-config-0\">$USBSUC</string>\n</map>" > $IPDSDE/0/UsbDeviceManagerPrefs.xml
 SET_PERM_RM -msgdi
+fi
 }
 
 IPSOOOFUIRC () {
-if CHECKER "device" "dipper" || CHECKER "device" "beryllium"; then
+if CHECKER "-device" "dipper" || CHECKER "-device" "beryllium"; then
 if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/sooofuirc ]; then UIP -s "$MSGFI On/Off Face UnLock IR Camera, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -11727,7 +11766,7 @@ if $MAGISK && CHECKER -sp "$XMLGLOBAL" "window_animation_scale transition_animat
 }
 
 IPASS () {
-UCSA -a "0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0" "Choose Animation Scale:" "Animation Scale" "1.0"
+UCSA -a "0.0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0" "Choose Animation Scale" "Animation Scale:" "1.0"
 if $UCSFNM; then
 UIP "Installing Animation Scale $IAMM"
 PTMFI -nmp "$IDAS"
@@ -11744,32 +11783,14 @@ fi
 }
 
 IPGPURS () {
-MSGGPURVR=true
-for GPURVR in "OpenGL (Default)" "OpenGL Skia (Faster)" "OpenGL Skia Vulkan (Very Fast)"; do
-MSGVGPURVR="$MSGNIS"
-case $GPURVR in
-"OpenGL (Default)") GPURV="opengl";; "OpenGL Skia (Faster)") GPURV="skiagl";; "OpenGL Skia Vulkan (Very Fast)") GPURV="skiavk"; MSGVGPURVR="$MSGNUS";; *) VGPUR=false;;
-esac
-if $MSGGPURVR; then
-UIP -s "Choose GPU Rendering"
-MSGGPURVR=false
-else
-MSGCS
-fi
-UIP "$MSGVU $GPURVR" "$MSGVD No $MSGVGPURVR"
-if KEYCHOOSE; then
-VGPUR=true
-break
-else
-VGPUR=false
-fi
-done
-if $VGPUR; then
+UCSA -a "OpenGL OpenGL-Skia OpenGL-Skia-Vulkan" "Choose GPU Rendering" "Rendering:" "OpenGL-Skia-Vulkan"
+if $UCSFNM; then
 UIP "Installing GPU Rendering $IAMM"
+case $UCSFNMC in "OpenGL") GPURV="opengl";; "OpenGL-Skia") GPURV="skiagl";; "OpenGL-Skia-Vulkan") GPURV="skiavk";; esac
 if $MAGISK; then
 PTMFI -nmp "$IDGPUR"
-echo "$GPURV" > $MODPATH/$MODID/build.prop
-MMPR -v "GPU Rendering" "$VIPGPUR" "GPU Rendering - Set On: $GPURVR"
+echo -e "debug.hwui.renderer=$GPURV\ndebug.composition.type=$GPURV" > $MODPATH/$MODID/system.prop
+MMPR -v "GPU Rendering" "$VIPGPUR" "GPU Rendering - Set On: $UCSFNMC"
 else
 BUCKUPER -bp "$IPSBP"
 echo -e "# GPU Rendering\ndebug.hwui.renderer=$GPURV\ndebug.composition.type=$GPURV" >> $IPSBP
@@ -11862,7 +11883,7 @@ UIP -s "Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF" "$MSGVU Yes $MSGEFTC" "$MS
 if $BOOTMODE; then REMOVAL_PRESETS; else UIP -s "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then REMOVAL_PRESETS; fi; fi
 if $TESTMODE; then UIP -s "Test/Coming Soon" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then TEST_COMING_SOON_PRESETS; fi; fi
 UIP -s "Net: GPS/WIFI/TTL/DNS/APAUSBTF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then NET_PRESETS; fi
-UIP -s "Utilities: BB/SELC/CC/MMFR/DETACH/LSPosed" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UTILITIES_PRESETS; fi
+UIP -s "Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH/LSPosed" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UTILITIES_PRESETS; fi
 UIP -s "Other: FA/LED/FSFM/UAA/SBU/GASL" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then OTHER_PRESETS; fi
 IPHF
 if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi
@@ -11950,6 +11971,7 @@ IPAPAUSBTF
 
 UTILITIES_PRESETS () {
 IPBB
+IPSQL
 IPSELC
 IPCC
 IPMMFR
@@ -11977,7 +11999,7 @@ IPKL
 IPFMSAAS
 IPFDHWO
 IPFDEVADB
-IPFMTP
+IPUSBSUC
 IPSOOOFUIRC
 IPFDM
 IPFDPP

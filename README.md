@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 16.09.22 (87) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/16.09.2022/AIOPFMD-16.09.22-%2887%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/12OE3TuS8BNmCdMXlSlsTvbp3asJLPNRH/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/98">TG</a>
+* Версия AIOPFMD: 24.09.22 (88) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/24.09.2022/AIOPFMD-24.09.22-%2888%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1IJ4pvn7jLbPs_QSL8TZR4yjD8CY8N7-C/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/100">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,35 @@
 <details>
   <summary>Changelog</summary>
 
+#### 24.09.22 (88) ####
+* Dolby Atmos обновлен до v1.6:
+	- Фикс правил;
+	- Улучшено удаление эффектов;
+	- Оптимизация патчинга;
+* Некоторые улучшения и оптимизация патчинга для многих аудиомодов;
+* AIST обновлен до v1.6 (0919) - и фикс битого shшника;
+* Energized Hosts обновлен до v267.21;
+* hosts файл с AdAway обновлен от 23.09.2022;
+* Общий лист нужных AudioFX для аудиомодов где это надо;
+* Добавил надпись в RECOVERY что все патчи будут установлены как Magisk модули или нет;
+* IOS Emoji обновлен до v1.2:
+	- Обновлен файл говна;
+	- Фикс копирования для говно прошивок;
+	- Добавлен поиск Facebook говна;
+	- Доп sh выведен на post и улучшен;
+* Force MTP заменен на USB Screen Unlocked Config:
+	- Обновлен до v1.1;
+	- Убран из LEGACY и ограничение по версии Android;
+	- Выборы:
+		- MTP;
+		- Tethering;
+		- MIDI;
+		- PTP;
+* Добавлены надписи какой AudioFX найден и что он отправлен в Replace (для полных ебланов это сделал но никто читать то не будет);
+* GPU Rendering обновлен до v1.2 - фикс работы для Magisk варианта;
+* Вернул установку SQLite и обновил до v3.39.3;
+* DETACH обновлен до v1.2 - изменения от SQLite и чистка говна; 
+* Улучшения по UI патча и другие оптимизации.
 #### 16.09.22 (87) ####
 * Energized Hosts обновлен от 16.09.2022;
 * hosts файл с AdAway обновлен от 15.09.2022;
@@ -29,7 +58,7 @@
 * RoundedUI обновлен до v3.1 - добавил поддержку NEO Launcher всех вариаций;
 * Universal GMS Doze обновлен до v1.8.7;
 * AIST обновлен до v1.6 (0909);
-* NLSound обновлен до v3.4 STABLE (1109):
+* NLSound обновлен до v3.4 (1109):
 	- Выборы как и были;
 	- Фикс замедленных видео при Dirac;
 	- Отключено отключение всех аудиоэффектов - Фикс Dolby Atmos с отвалом звука и подобного;
@@ -336,7 +365,7 @@
 * Исправлены некоторые опечатки по UI патча;
 * WallpaperPickerGoogle, WallpaperPickerGooglePrebuilt и WallpaperPickerGoogleRelease перемещены в экспериментальный лист так как при удалении на 12ки есть отвал всего;
 * Обнаружение версии Android теперь только по SDK (ебаный 12L прописан как 12/12L а не 12.1) - это убирает некоторые пункты и выборы на 12.1 логично;
-* Force MTP перемещен в Legacy и требует версию до 12ки - пока так;
+* Force MTP перемещен в LEGACY и требует версию до 12ки - пока так;
 * Wifi Patcher обновлен до v1.1 - фикс отвала Wifi на первоначалке на 12ке+;
 * В Режим удаления/replace/restore добавлено приложение в обычный лист: DevicePersonalizationPrebuiltPixel2021, GrapheneCamera, PixelWallpapers2021 и SecurityHubPrebuilt;
 * Форк Detach кстати будет но позже со многими изменениями/улучшениями и UI как в AIO/CC/MMFR.
@@ -368,7 +397,7 @@
 * AIST обновлен до v1.4.30 - фикс TWS/+ и как всегда всего остального;
 * В Режим удаления/replace/restore добавлены приложения в обычный лист: Traceur;
 * Global Optimized GPS заменен на GPS Patcher - полная переделка, улучшения и новый патчинг;
-* Wifi Bonding заменен на Wifi Patcher  - полная переделка, улучшения, новый патчинг, добавил бэкап и восстановление если прошивался не как MM и убран из Legacy;
+* Wifi Bonding заменен на Wifi Patcher  - полная переделка, улучшения, новый патчинг, добавил бэкап и восстановление если прошивался не как MM и убран из LEGACY;
 * Фиксы и чистка чеккеров;
 * IOS Emoji обновлены до 1.1:
 	- Обновлен файл говна;
@@ -625,12 +654,12 @@
 	- Добавил удаления пустых папок и файлов в отдельный пункт но не убирал действие из основного;
 	- Убрал ненужный чеккер который присваивается теперь при создании файла скрипта;
 	- Добавил обнаруживание и удаление зависших vmdl*.tmp и сраных не рабочих com.google.android.trichromelibrary*;
-* Increase Bitrate убран из Legacy потому-что якобы работает нормально;
+* Increase Bitrate убран из LEGACY потому-что якобы работает нормально;
 * NLSound вынут из аддона;
 * Некоторые улучшения по чеккерам;
 * SafetyNet Patch обновлен до v2.1.1 с проверкой на установленный Riru Core и API 24+;
 * Некоторые модули просто были обновлены в цифрах так как имеют изменения которые просто я не использую;
-* Пункт отключения иконок уведомлений появился ещё в пред версии но теперь он перемещен в Legacy (есть баг с пропажей часов вот и в Legacy);
+* Пункт отключения иконок уведомлений появился ещё в пред версии но теперь он перемещен в LEGACY (есть баг с пропажей часов вот и в LEGACY);
 * Charging Led Light Off обновлен до v1.2 - оптимизирован код;
 * LED Light Animation обновлен до v1.2 - оптимизирован код;
 * Media Ui Sounds обновлен до v1.1 - добавил звуки из Oppo (Color OS 7);
@@ -664,7 +693,7 @@
 * MagiskHide Props Config Обновлен до v6.0.1-v132;
 * Systemless Hosts обновлен до v16.9-210829 (ID не менял, но добавил новый в проверку на конфликты);
 * hosts файл с AdAway обновлен от 03.09.2021;
-* Unlimited Storage Google Photos обновлен до v1.1 с файлами из PE+ (соболезную) и вынут из Legacy Mode;
+* Unlimited Storage Google Photos обновлен до v1.1 с файлами из PE+ (соболезную) и вынут из LEGACY;
 * Lawnchair R обновлен до 11 Alpha 6.1 с полностью черной темой;
 * Вернул в NLSound выборы на Full и Lite, поставил что рекомендуется Lite, перемещен в EOL Addon из за кривости;
 * Оба Detach перемещены в EOL Addon;
@@ -708,7 +737,7 @@
 * UIROUNDED обновлен до v2.4 - фикс package name для оверлея категории;
 * Некоторые другие фиксы и улучшения;
 * Riru Core откачен до v25.4.4.r426.05efc94 - новая версия отвальный кусок кривого рандомного говна;
-* Increase Bitrate отправлен в Legacy из за рандома;
+* Increase Bitrate отправлен в LEGACY из за рандома;
 * hosts файл с AdAway обновлен от 11.08.2021;
 * MagiskHide Props Config Обновлен до v5.4.0-v130;
 * OnePlus Launcher обновлен до v7.0;
@@ -716,7 +745,7 @@
 * Из за распаковки аддона в фоне, некоторые пользователи умудрялись выбирать те же Анимации загрузки раньше распаковки в фоне - так что сделал проверку с задержкой если телефон не успел разпаковать (даже актуальнее на бюджетках или при отвале памяти);
 * Ну и ещё что-то по мелочи.
 #### 07.08.21 (50) ####
-* Откат Unlimited Storage For GPhotos до v1.0 и патч отправлен в Legacy из за редкой работы и вообще говно сраное;
+* Откат Unlimited Storage For GPhotos до v1.0 и патч отправлен в LEGACY из за редкой работы и вообще говно сраное;
 * Shady Launcher R обновлен до v2021.08.04;
 * hosts файл с AdAway обновлен от 02.08.2021;
 * Detach3 обновлен до v3.08;
@@ -779,8 +808,8 @@
 * Cache Cleaner обновлен до 2.0;
 * Очередной фикс пермов на бинарники - на этот раз последний;
 * Добавлена установка Audio Compatibility Patch (ACP) v2.3 - портирован в патч и улучшен (надеюсь);
-* Добавлен Legacy Mode: Включает показ старых/устаревших патчей/функций - в него буду перемещены патчи которые не актуальны/для них есть альтернатива новее/рабочее;
-* USB Policy Patcher и фикс bootloop Viper-FX перемещены в Legacy Mode;
+* Добавлен LEGACY: Включает показ старых/устаревших патчей/функций - в него буду перемещены патчи которые не актуальны/для них есть альтернатива новее/рабочее;
+* USB Policy Patcher и фикс bootloop Viper-FX перемещены в LEGACY;
 * Некоторые пункты были перемещены местами;
 * Прочие другие фиксы, улучшения, оптимизация/ускорение и может что-то ещё что забыл;
 * Обновления теперь буду выходить не раз в неделю, а раз в две недели или не будут выходить вообще.
@@ -2547,7 +2576,7 @@
 	- Пустой Hosts (Отключение блокировки);
 	- AdAway Hosts (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts Unified От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
-	- Energized Hosts (400000+/700000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Basic или Unified;
+	- Energized Hosts (400000+/800000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Basic или Unified;
 
 <h3 align=center>Net: GPS/WIFI/TTL/DNS/APAUSBTF</h3>
 
@@ -2561,9 +2590,10 @@
 		- CloudFlare DNS;
 * Пункт (ALL) (MI8) - (AP & USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для MI8;
 
-<h3 align=center>Utilities: BB/SELC/CC/MMFR/DETACH/LSPosed</h3>
+<h3 align=center>Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH/LSPosed</h3>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin (использование: su -c busybox в терминале (BootMode));
+* Пункт (ALL) (TERMINAL) <a href="https://androidfilehost.com/?w=search&s=sqlite&type=files&sort_by=date&sort_dir=DESC">AFH</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=117626235">4PDA</a> - (SQLite) для bin или xbin (использование: su -c sqlite3 в терминале (BootMode));
 * Пункт (MAGISK) - (SELinux Changer) для аудиомодов и не только если надо:
 	- Переключить в Permissive;
 	- Переключить в Enforcing;
@@ -2641,7 +2671,11 @@
 * Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...):
 	- Включить ADB WIFI;
 	- Не включать ADB WIFI;
-* Пункт (MAGISK & LEGACY) (<11) - (Force MTP) принудительно активирует MTP даже до первой загрузки;
+* Пункт (ALL) - (USB Screen Unlocked Config) принудительно активирует что-то одно:
+	- MTP;
+	- Tethering;
+	- MIDI;
+	- PTP;
 * Пункт (ALL) (NOT MIUI) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере если находит нужные файлы;
 * Пункт (ALL) (NOT MIUI) (8.1-12.1) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
