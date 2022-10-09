@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="24.09.22 (88)"
+VAIOPFMD="09.10.22 (89)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -37,7 +37,7 @@ IDGBT="GBoardThemes"; VIPGBT="v1.4"
 IDGBSTE="GboardSilkThemeChanger"; VIPGBSTE="v1.1"
 IDSBINNI="SBINNI"; VIPSBINNI="v1.9"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
-IDRUI="RoundedUI"; VIPRUI="v3.1"
+IDRUI="RoundedUI"; VIPRUI="v3.2"
 IDBIP="BurnInProtection"; VIPBIP="v1.9"
 IDNSP="NotificationSidePaddings"; VIPNSP="v1.4"
 IDSBISP="StatusBarIconSpace"; VIPSBISP="v1.3"
@@ -55,25 +55,26 @@ IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.2"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.9"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
-#Launchers: Shady/Lawnchair/Sushi
-IDSSL="Systemless_ShadyLauncher"; VIPSSLQ="v1.5"; VCIPSSLQ="15"; VIPSSLR="v2021.11.28"; VCIPSSLR="20211128"
-IDSL="Systemless_Lawnchair"; VIPSL="v2.6"; VIPASLSL="12.1.0 Alpha 4"
-IDSSUL="Systemless_SushiLauncher"; VIPSSUL="v1.4"; VIPSSULA="v5.0"
+#Launchers: Shady/Lawnchair/Sushi/Derp
+IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIPSLSHADYR="v2021.11.28"; VCIPSLSHADYR="20211128"
+IDSLLAWNSL="Systemless_Lawnchair"; VIPSLLAWNSL="v2.6"; VIPSLLAWNASL="12.1.0 Alpha 4"
+IDSLSUSHISL="Systemless_SushiLauncher"; VIPSLSUSHISL="v1.4"; VIPSLSUSHISLA="v5.0"
+IDSLDERPT="Systemless_DerpLauncher"; VIPSLDERPT="v1.2"; VIPSLDERPTA="v13"
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.4"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.8"
 IDDA="DolbyAtmos"; VIPDA="v1.6"
 IDNLS="NLSound"; VIPNLS="v3.4"; VCIPNLS="1109"
-IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="0919"
+IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="0710"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.2"
 IDAML="AML"; VIPAML="v4.2"; VCIPAML="42"
 IDALCF="ALCF"; VIPALCF="v1.2"
 #AdBlock/Hosts
 IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
-IDVAAH="AdAwayHosts"; VIPVAAH="23.09.2022"
+IDVAAH="AdAwayHosts"; VIPVAAH="04.10.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v17.0-220116"; VCIPVSH="170"
-IDEH="EnergizedHosts"; VIPEH="v267.21"
+IDEH="EnergizedHosts"; VIPEH="v282.17"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; VIPGPSP="v1.0"
 IDWIFIP="WIFIPatcher"; VIPWIFIP="v1.2"
@@ -86,7 +87,7 @@ IDSQL="SQLITE"; VIPSQL="v3.39.3"
 IDSELC="SELinuxChanger"; VIPSELC="v1.3"
 IDCC="CacheCleaner"; VIPCC="v2.7"
 IDMMFR="MMFR"; VIPMMFR="v1.0"
-IDDETACH="DETACH" VIPDETACH="v1.2"
+IDDETACH="DETACH" VIPDETACH="v1.3"
 IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.8.4 (6609)"; VCIPLSPOSEDZ="6609"
 #Other: FA/LED/FSFM/UAA/SBU/GASL
 IDFPA="FingerprintActions"; VIPFPA="v1.2"
@@ -372,6 +373,7 @@ AndroidAutoPrebuilt
 AndroidAutoStub
 AndroidAutoStubPrebuilt
 AndroidForWork
+Aperture
 AudioFX
 BasicDreams
 BatteryTile
@@ -853,9 +855,13 @@ TrebuchetQuickStep
 "
 
 MMLAUNCHERLIST="
+CorvusOSLauncher_Port
+ExtendedOSLauncher_Port
 MotoLauncher
+NusantaraOSLauncher_Port
 OneUIHome
 PPL
+SparkOSLauncher_Port
 Systemless_AsusLauncher
 Systemless_CRLauncher
 Systemless_CorvusLauncher
@@ -873,6 +879,7 @@ Systemless_PixelLauncherX
 Systemless_ShadyLauncher
 Systemless_SparkLauncher
 Systemless_SushiLauncher
+TequilaOSLauncher_Port
 com.pixelated.launcher
 quickstepswitcher
 quickswitch_terminal
@@ -905,16 +912,14 @@ CHECKER () {
 for c in $1; do
 case $c in
 -av) ASDK="$(GET_FILE_PROP "ro.build.version.sdk")"
-ATEN=false; AELEVEN=false; ATWELVE=false; ATWELVEL=false
+ATEN=false; AELEVEN=false; ATWELVEL=false; ATHIRTEEN=false
 if [ "$ASDK" = "29" ]; then ATEN=true; ACNV="Q"
 elif [ "$ASDK" = "30" ]; then AELEVEN=true; ACNV="R"
-elif [ "$ASDK" = "31" ]; then ATWELVE=true; ACNV="S"
 elif [ "$ASDK" = "32" ]; then ATWELVEL=true; ACNV="SL"
-elif [ "$ASDK" = "33" ]; then UIP -s "Warning! SDK $ASDK Is Not Fully Support!"; ATHIRTEEN=true; ACNV="T"
-elif [ "$ASDK" = "34" ]; then UIP -s "Warning! SDK $ASDK Is Not Fully Support!"; AFOURTEEN=true; ACNV="?"
+elif [ "$ASDK" = "33" ]; then ATHIRTEEN=true; ACNV="T"
 fi
 case $ASDK in
-"19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; "32");; "33");; "34");; *) UIP -s "Warning! SDK Not Supported/Found!";;
+"19");; "21");; "22");; "23");; "24");; "25");; "26");; "27");; "28");; "29");; "30");; "31");; "32");; "33");; *) UIP "Warning! SDK Not Supported/Found!";;
 esac
 DYNLIB=true
 [ $ASDK -lt 26 ] && DYNLIB=false
@@ -1772,6 +1777,43 @@ PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="WSA_RX3 Digital 
 PSXCF -u $PSF '/mixer/ctl[@name="LINEOUT1 Volume"]' "5"
 PSXCF -u $PSF '/mixer/ctl[@name="LINEOUT2 Volume"]' "5";;
 -aist) if $HIRES; then
+PSXCF -u $PSF '/mixer/ctl[@name="RX0 Digital Volume"]' "88"
+PSXCF -u $PSF '/mixer/ctl[@name="RX1 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX2 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX3 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX4 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX5 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX6 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX7 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX8 Digital Volume"]' "90"
+PSXCF -s $PSF '/mixer/ctl[@name="RX8 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="WSA_RX0 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="WSA_RX1 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="WSA_RX2 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="WSA_RX3 Digital Volume"]' "90"
+PSXCF -s $PSF '/mixer/ctl[@name="WSA_RX3 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX_RX0 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX_RX1 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX_RX2 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/ctl[@name="RX_RX3 Digital Volume"]' "90"
+PSXCF -s $PSF '/mixer/ctl[@name="RX_RX3 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX_RX0 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX_RX1 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX_RX2 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX_RX3 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX0 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX1 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX2 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX3 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX4 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX5 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX6 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX7 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="RX8 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX0 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX1 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX2 Digital Volume"]' "90"
+PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX3 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_RX0 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_RX1 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/path[@name="headphones-44.1"]/ctl[@name="RX_RX2 Digital Volume"]' "90"
@@ -1823,7 +1865,9 @@ PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_RX0 Digital Vo
 PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_RX1 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_RX2 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/path[@name="anc-headphones"]/ctl[@name="WSA_RX3 Digital Volume"]' "90"
-fi
+PSXCF -u $PSF '/mixer/ctl[@name="LINEOUT1 Volume"]' "16"
+PSXCF -u $PSF '/mixer/ctl[@name="LINEOUT2 Volume"]' "16"
+else
 PSXCF -u $PSF '/mixer/ctl[@name="RX0 Digital Volume"]' "88"
 PSXCF -u $PSF '/mixer/ctl[@name="RX1 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/ctl[@name="RX2 Digital Volume"]' "90"
@@ -1861,42 +1905,9 @@ PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX0 Digital Volume
 PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX1 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX2 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/path[@name="headphones"]/ctl[@name="WSA_RX3 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX2 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX_RX3 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX0 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX1 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX2 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX3 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX4 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX5 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX6 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX7 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="RX8 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="WSA_RX0 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="WSA_RX1 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="WSA_RX2 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-ce"]/ctl[@name="WSA_RX3 Digital Volume"]' "82"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX0 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX1 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX2 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX_RX3 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX0 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX1 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX2 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX3 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX4 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX5 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX6 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX7 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="RX8 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="WSA_RX0 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="WSA_RX1 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="WSA_RX2 Digital Volume"]' "90"
-PSXCF -u $PSF '/mixer/path[@name="headphones-no-ce"]/ctl[@name="WSA_RX3 Digital Volume"]' "90"
 PSXCF -u $PSF '/mixer/ctl[@name="LINEOUT1 Volume"]' "16"
-PSXCF -u $PSF '/mixer/ctl[@name="LINEOUT2 Volume"]' "16";;
+PSXCF -u $PSF '/mixer/ctl[@name="LINEOUT2 Volume"]' "16"
+fi;;
 esac
 UIP "$MSGFFAP"
 fi
@@ -4165,13 +4176,14 @@ CHECKER -mmupd "$IDIOSEMOJI" "$VIPIOSEMOJI" "IPIOSEMOJIS"
 CHECKER -mmupd "$IDMUIS" "$VIPMUIS" "IPMUISS"
 CHECKER -mmupd "$IDFDNI" "$VIPFDNI" "IPFDNIS"
 CHECKER -mmupd "$IDWFAMDQSOS" "$VIPWFAMDQSOS" "IPWFAMDQSOSS"
-#Launchers: Shady/Lawnchair/Sushi
-if $ATEN; then CHECKER -mmupd -c "$IDSSL" "$VIPSSLQ" "$VCIPSSLQ" "IPSLSLS"; fi
-if $AELEVEN; then CHECKER -mmupd -c "$IDSSL" "$VIPSSLR" "$VCIPSSLR" "IPSLSLS"; fi
+#Launchers: Shady/Lawnchair/Sushi/Derp
+if $ATEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYQ" "$VCIPSLSHADYQ" "IPSLSSHADY"; fi
+if $AELEVEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYR" "$VCIPSLSHADYR" "IPSLSSHADY"; fi
 if $ATWELVEL; then
-CHECKER -mmupd "$IDSL" "$VIPSL" "IPSLLS"
-CHECKER -mmupd "$IDSSUL" "$VIPSSUL" "IPSLSULS"
+CHECKER -mmupd "$IDSLLAWNSL" "$VIPSLLAWNSL" "IPSLLAWNASL"
+CHECKER -mmupd "$IDSLSUSHISL" "$VIPSLSUSHISL" "IPSLSSUSHISL"
 fi
+if $ATHIRTEEN; then CHECKER -mmupd "$IDSLDERPT" "$VIPSLDERPT" "IPSLDERPT"; fi
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 CHECKER -mmupd "$IDVFX" "$VIPVFX" "IPVFXS"
 CHECKER -mmupd "$IDVFXP" "$VIPVFXP" "IPVFXPS"
@@ -4199,7 +4211,7 @@ CHECKER -mmupd "$IDSQL" "$VIPSQL" "IPSQLS"
 CHECKER -mmupd "$IDSELC" "$VIPSELC" "IPSELCS"
 CHECKER -mmupd "$IDCC" "$VIPCC" "IPCCS"
 CHECKER -mmupd "$IDMMFR" "$VIPMMFR" "IPMMFRS"
-CHECKER -mmupd "$IDDETACH" "$VIPDETACH" "IPDETACH"
+CHECKER -mmupd "$IDDETACH" "$VIPDETACH" "IPDETACHS"
 if $ZYGISK; then CHECKER -mmupd -c "$IDLSPOSEDZ" "$VIPLSPOSEDZ" "$VCIPLSPOSEDZ" "IPLSPOSEDS"; fi
 #Other: FA/LED/FSFM/UAA/SBU/GASL
 CHECKER -mmupd "$IDFPA" "$VIPFPA" "IPFPAS"
@@ -4484,7 +4496,7 @@ fi
 }
 
 IPPSHNB () {
-UCSA "Install Show/Hide Navigation Bar $VIPPSHNB?" "IPPSHNBS" "$IDPCO"
+UCSA "Install Show/Hide Navigation Bar $VIPPSHNB?" "IPPSHNBS" "$IDPSHNB"
 }
 
 IPPSHNBS () {
@@ -5471,12 +5483,12 @@ MMPR -v "Wi-Fi & Mobile Data QS Old Style" "$VIPGPPM" "Wi-Fi & Mobile Data QS Ol
 
 } #
 
-{ #Launchers: Shady/Lawnchair/Sushi
+{ #Launchers: Shady/Lawnchair/Sushi/Derp
 
 IPSL () {
-if $MAGISK && [ $MIUI != true ] && [ $ASDK -ge 29 ] && [ $ASDK -ne 31 ] && [ $ASDK -ne 33 ]; then
+if $MAGISK && [ $MIUI != true ] && [[ $ATEN || $AELEVEN || $ATWELVEL || $ATHIRTEEN ]]; then
 SYSTEMLESSLAUNCHERS=false
-UCSA -ent "Install Systemless Launcher?" "IPSLS" "$IDSL $IDSSL $IDSSUL"
+UCSA -ent "Install Systemless Launcher?" "IPSLS" "$IDSLLAWNSL $IDSLSHADY $IDSLSUSHISL $IDSLDERPT"
 fi
 }
 
@@ -5484,20 +5496,24 @@ IPSLS () {
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
 if $ATEN || $AELEVEN; then
 if $ATEN; then
-UIP -s "Install Shady Launcher $VIPSSLQ?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "Install Shady Launcher $VIPSLSHADYQ?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 elif $AELEVEN; then
-UIP -s "Install Shady Launcher $VIPSSLR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "Install Shady Launcher $VIPSLSHADYR?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 fi
-if KEYCHOOSE; then IPSLSLS; fi
-fi
-fi
-if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
-UIP -s "Install Lawnchair $VIPASLSL - $VIPSL?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-if KEYCHOOSE; then IPSLLS; fi
+if KEYCHOOSE; then IPSLSSHADY; fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
-UIP -s "Install Sushi Launcher $VIPSSULA - $VIPSSUL?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if KEYCHOOSE; then IPSLSULS; fi
+UIP -s "Install Lawnchair $VIPSLLAWNASL - $VIPSLLAWNSL?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+if KEYCHOOSE; then IPSLLAWNASL; fi
+fi
+if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
+UIP -s "Install Sushi Launcher $VIPSLSUSHISLA - $VIPSLSUSHISL?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then IPSLSSUSHISL; fi
+fi
+if [ $SYSTEMLESSLAUNCHERS != true ] && $ATHIRTEEN; then
+UIP -s "Install Derp Launcher $VIPSLDERPTA - $VIPSLDERPT?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then IPSLDERPT; fi
+fi
 fi
 }
 
@@ -5514,42 +5530,53 @@ MOVERPATH
 SET_PERM_RM -msgdi
 }
 
-IPSLSLS () {
+IPSLSSHADY () {
 UIP "Installing Shady Launcher $IAMM"
-PTMFI -np "$IDSSL" "$MMLAUNCHERLIST"
+PTMFI -np "$IDSLSHADY" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
 UZTPN "$MODID-$ACNV"
 cp -rf $TMPDIR/Systemless_ShadyLauncher-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSPA/ShadyQuickStep/ShadyQuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 if $ATEN; then
-MMPR -vc "Systemless Shady Launcher" "$VIPSSLQ" "$VCIPSSLQ" "SKULSHADY" "Systemlessly Install Shady Launcher For Android 10 With Recents UI Support. Launcher Created By SKULSHADY."
+MMPR -vc "Systemless Shady Launcher" "$VIPSLSHADYQ" "$VCIPSLSHADYQ" "SKULSHADY" "Systemlessly Install Shady Launcher For Android 10 With Recents UI Support. Launcher Created By SKULSHADY."
 elif $AELEVEN; then
-MMPR -vc "Systemless Shady Launcher" "$VIPSSLR" "$VCIPSSLR" "SKULSHADY" "Systemlessly Install Shady Launcher For Android 11 With Recents UI Support. Launcher Created By SKULSHADY."
+MMPR -vc "Systemless Shady Launcher" "$VIPSLSHADYR" "$VCIPSLSHADYR" "SKULSHADY" "Systemlessly Install Shady Launcher For Android 11 With Recents UI Support. Launcher Created By SKULSHADY."
 fi
 IPSLSE
 }
 
-IPSLLS () {
+IPSLLAWNASL () {
 UIP "Installing Lawnchair $IAMM"
-PTMFI -np "$IDSL" "$MMLAUNCHERLIST"
+PTMFI -np "$IDSLLAWNSL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
 UZTPN "$MODID-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnfeed/Lawnfeed.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnicons/Lawnicons.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnchair/Lawnchair.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
-MMPR -v "Systemless Lawnchair" "$VIPSL" "Systemlessly Install Lawnchair For Android 12.1 With Recents UI Support"
+MMPR -v "Systemless Lawnchair" "$VIPSLLAWNSL" "Systemlessly Install Lawnchair For Android 12.1 With Recents UI Support"
 IPSLSE
 }
 
-IPSLSULS () {
+IPSLSSUSHISL () {
 UIP "Installing Sushi Launcher $IAMM"
-PTMFI -np "$IDSSUL" "$MMLAUNCHERLIST"
+PTMFI -np "$IDSLSUSHISL" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
-UZTPN "$IDSSUL-$ACNV"
+UZTPN "$IDSLSUSHISL-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
-MMPR -v "Systemless Sushi Launcher" "$VIPSSUL" "Systemlessly Install Sushi Launcher For Android 12.1 With Recents UI Support"
+MMPR -v "Systemless Sushi Launcher" "$VIPSLSUSHISL" "Systemlessly Install Sushi Launcher For Android 12.1 With Recents UI Support"
+IPSLSE
+}
+
+IPSLDERPT () {
+UIP "Installing Derp Launcher $IAMM"
+PTMFI -np "$IDSLDERPT" "$MMLAUNCHERLIST"
+SYSTEMLESSLAUNCHERS=true
+UZTPN "$IDSLDERPT-$ACNV"
+cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
+APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
+MMPR -v "Systemless Derp Launcher" "$VIPSLDERPT" "Systemlessly Install Derp Launcher For Android 13.0 With Recents UI Support"
 IPSLSE
 }
 
@@ -8263,6 +8290,7 @@ ROUNDEDUISTRING="	<dimen name=\"abc_control_corner_material\">$ROUNDEDSIZE</dime
 	<dimen name=\"notification_scrim_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"notification_shadow_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"ongoing_appops_chip_bg_corner_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"overlay_button_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"panel_content_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"pip_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"progress_bar_corner_material\">$ROUNDEDSIZE</dimen>
@@ -8271,6 +8299,7 @@ ROUNDEDUISTRING="	<dimen name=\"abc_control_corner_material\">$ROUNDEDSIZE</dime
 	<dimen name=\"qs_control_customizer_others_bg_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"qs_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"qs_footer_action_corner_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"qs_security_footer_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"recents_onboarding_toast_arrow_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"rect_button_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"rounded_corner_radius\">$ROUNDEDSIZE</dimen>
@@ -8286,7 +8315,9 @@ ROUNDEDUISTRING="	<dimen name=\"abc_control_corner_material\">$ROUNDEDSIZE</dime
 	<dimen name=\"subtitle_shadow_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"task_card_menu_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"tooltip_corner_radius\">$ROUNDEDSIZE</dimen>
-	<dimen name=\"volume_dialog_slider_corner_radius\">$ROUNDEDSIZE</dimen>"
+	<dimen name=\"volume_dialog_panel_width_half\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"volume_dialog_slider_corner_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"volume_ringer_drawer_item_size_half\">$ROUNDEDSIZE</dimen>	"
 
 ROUNDEDLSTRING="	<dimen name=\"all_apps_scrim_view_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"arrow_toast_corner_radius\">$ROUNDEDSIZE</dimen>
@@ -9994,84 +10025,54 @@ OPTIONS
 
 OPTIONS" > $MODPATH/$MODID$MIPSB/DETACH
 
-VENDINGPKG="com.android.vending"
-VENDINGLIBDB="$IPDD/$VENDINGPKG/databases/library.db"
-VENDINGLOCDB="$IPDD/$VENDINGPKG/databases/localappstate.db"
-
-if $BOOTMODE; then
-KEY="$((5*5))"
-if [ -f $STORAGE/DETACH* ]; then DETACHCFG="$(find $STORAGE/DETACH*)"; FINDDETACHCFG=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/DETACH* ]; then DETACHCFG="$(find $STORAGE/$f/DETACH*)"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ $FINDDETACHCFG != true ]; then echo -e "com.google.android.youtube\ncom.google.android.apps.youtube.music\ncom.google.ar.core" > $STORAGE/DETACH.conf; DETACHCFG="$STORAGE/DETACH.conf"; fi
-UIP "Disable Vending Components"
-pm disable "$VENDINGPKG/com.google.android.finsky.scheduler.process.backgroundimpl.AlarmManagerServiceBackground" >&2
-pm disable "$VENDINGPKG/com.google.android.finsky.rollbackmanager.RollbackReceiver" >&2
-pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementReceiver" >&2
-pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobService" >&2
-pm disable "$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService" >&2
-cmd appops set --uid $VENDINGPKG GET_USAGE_STATS ignore
-pkill -f $VENDINGPKG
-am force-stop $VENDINGPKG
-
-if [ "`grep -v '#' $DETACHCFG`" ]; then
-UIP "Detaching Packages"
-while read -r PKGNAME; do
-if [ ! -z "$PKGNAME" ] && [ ! "`echo $PKGNAME | grep "#"`" ]; then
-UIP "Add $PKGNAME"
-$SQLITE $VENDINGLIBDB "UPDATE ownership SET doc_type = '$KEY' WHERE doc_id = '$PKGNAME'"
-$SQLITE $VENDINGLOCDB "UPDATE appstate SET auto_update = '2' WHERE package_name = '$PKGNAME'"
-fi
-done < "$DETACHCFG"
-fi
-
-if [ "`grep '#' $DETACHCFG`" ]; then
-UIP "UnDetaching Packages"
-while read -r PKGNAME; do
-if [ ! -z "$PKGNAME" ] && [ "`echo $PKGNAME | grep "#"`" ]; then
-UIP "Remove $PKGNAME"
-PKGNAME="`echo $PKGNAME | cut -c 2-`"
-$SQLITE $VENDINGLIBDB "UPDATE ownership SET doc_type = '$(($KEY/$KEY))' WHERE doc_id = '$PKGNAME'"
-$SQLITE $VENDINGLOCDB "UPDATE appstate SET auto_update = '1' WHERE package_name = '$PKGNAME'"
-fi
-done < "$DETACHCFG"
-fi
-fi
-
 $ECHO "#/sbin/sh
+VENDINGPKG=\"com.android.vending\"
+VENDINGLIBDB=\"$IPDD/\$VENDINGPKG/databases/library.db\"
+VENDINGLOCDB=\"$IPDD/\$VENDINGPKG/databases/localappstate.db\"
 while true; do
 if [ \$(getprop sys.boot_completed) -eq 1 ]; then
 if [ -f $STORAGE/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/DETACH*)\"; FINDDETACHCFG=true; else for f in \$(ls $STORAGE); do if [ -f $STORAGE/\$f/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/\$f/DETACH*)\"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ \$FINDDETACHCFG != true ]; then echo -e \"com.google.android.youtube\ncom.google.android.apps.youtube.music\ncom.google.ar.core\" > $STORAGE/DETACH.conf; DETACHCFG=\"$STORAGE/DETACH.conf\"; fi
 
-KEY=\"\$((5*5))\"
-pm disable \"$VENDINGPKG/com.google.android.finsky.scheduler.process.backgroundimpl.AlarmManagerServiceBackground\" >&2
-pm disable \"$VENDINGPKG/com.google.android.finsky.rollbackmanager.RollbackReceiver\" >&2
-pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementReceiver\" >&2
-pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobService\" >&2
-pm disable \"$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService\" >&2
-cmd appops set --uid $VENDINGPKG GET_USAGE_STATS ignore
-pkill -f $VENDINGPKG
-am force-stop $VENDINGPKG
 
-if [ \"\`grep -v '#' \$DETACHCFG\`\" ]; then
+GL() {
+FA=\$(cat \$DETACHCFG)
+[ -z \"\$FA\" ] && return 1
+DETACH=\$(echo \"\$FA\" | tr -d ' \t\r' | grep -v '^\$' | sed \"s/.*/'&'/\" | paste -sd \",\" -)
+[ -z \"\$DETACH\" ] && return 1
+echo \"\$DETACH\"
+}
+
+DAU() {
+sqlite3 \$VENDINGLOCDB \"UPDATE appstate SET auto_update = 2 WHERE package_name IN (\${1})\"
+}
+
+DETACH() {
+sqlite3 \$VENDINGLIBDB \"DROP TRIGGER IF EXISTS $IDDETACH;
+UPDATE ownership SET doc_type = '25' WHERE doc_id IN (\${1});
+CREATE TRIGGER $IDDETACH
+	BEFORE INSERT ON ownership
+	WHEN NEW.doc_id in (\${1})
+BEGIN
+	SELECT RAISE(FAIL, '$IDDETACH');
+END\"
+}
+
+APPS=\$(GL) && {
+echo \"Force Stopping \$VENDINGPKG\"
+pm disable \"\$VENDINGPKG/com.google.android.finsky.scheduler.process.backgroundimpl.AlarmManagerServiceBackground\" >&2
+pm disable \"\$VENDINGPKG/com.google.android.finsky.rollbackmanager.RollbackReceiver\" >&2
+pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementReceiver\" >&2
+pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobService\" >&2
+pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService\" >&2
+cmd appops set --uid \$VENDINGPKG GET_USAGE_STATS ignore
+pkill -f \$VENDINGPKG
+am force-stop \$VENDINGPKG
 echo \"Detaching Packages\"
-while read -r PKGNAME; do
-if [ ! -z \"\$PKGNAME\" ] && [ ! \"\`echo \$PKGNAME | grep \"#\"\`\" ]; then
-echo \"Add \$PKGNAME\"
-sqlite3 $VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$KEY' WHERE doc_id = '\$PKGNAME'\"
-sqlite3 $VENDINGLOCDB \"UPDATE appstate SET auto_update = '2' WHERE package_name = '\$PKGNAME'\"
-fi
-done < \"\$DETACHCFG\"
-fi
+DAU \"\$APPS\"
+DETACH \"\$APPS\"
+echo \"Detaching Done\"
+}
 
-if [ \"\`grep '#' \$DETACHCFG\`\" ]; then
-echo \"UnDetaching Packages\"
-while read -r PKGNAME; do
-if [ ! -z \"\$PKGNAME\" ] && [ \"\`echo \$PKGNAME | grep \"#\"\`\" ]; then
-echo \"Remove \$PKGNAME\"
-PKGNAME=\"\`echo \$PKGNAME | cut -c 2-\`\"
-sqlite3 $VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$((\$KEY/\$KEY))' WHERE doc_id = '\$PKGNAME'\"
-sqlite3 $VENDINGLOCDB \"UPDATE appstate SET auto_update = '1' WHERE package_name = '\$PKGNAME'\"
-fi
-done < \"\$DETACHCFG\"
-fi
 break
 fi
 done" > $MODPATH/$MODID/service.sh
@@ -11230,21 +11231,20 @@ fi
 done
 echo "#!$MIPSB/sh
 if [ -d $MODPATH/$MODID ] && [ ! -f $MODPATH/$MODID/disable ]; then
-LOCATION=\$(XML=\$(find $MODPATH -name \"*.xml\");for i in \$XML; do if grep -q 'allow-unthrottled-location package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
+LOCATION=\$(XML=\$(find $MODPATH -name \"*.xml\"); for i in \$XML; do if grep -q 'allow-unthrottled-location package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
 SAVE=\$(XML=\$(find $MODPATH -name \"*.xml\"); for i in \$XML; do if grep -q 'allow-in-power-save package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
-IGNORE=\$(XML=\$(find $MODPATH -name \"*.xml\");for i in \$XML; do if grep -q 'allow-ignore-location-settings package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
+IGNORE=\$(XML=\$(find $MODPATH -name \"*.xml\"); for i in \$XML; do if grep -q 'allow-ignore-location-settings package=\"com.google.android.gms\"' \$i 2>/dev/null; then echo \"\$i\"; fi; done)
 for i in \$LOCATION \$SAVE \$IGNORE; do
 SEARCH=\$(echo \"\$i\" | sed -e 's/\// /g' | awk '{print \$4}')
 sed -i '/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-power-save package=\"com.google.android.gms\"/d;/allow-in-data-usage-save package=\"com.google.android.gms\"/d' \$i
 done
-cd $IPDD; find . -type f -name '*gms*' -delete
+find $IPDD -type f -name '*gms*' -delete
 elif [ ! -d $MODPATH/$MODID ]; then
 rm -f $POSTFSDATAD/UGMSD.sh
 fi" > $POSTFSDATAD/UGMSD.sh
 echo "sleep 1m
 pm disable com.google.android.gms/com.google.android.gms.auth.managed.admin.DeviceAdminReceiver
 pm disable com.google.android.gms/com.google.android.gms.mdm.receivers.MdmDeviceAdminReceiver
-pm disable com.google.android.gms/.chimera.GmsIntentOperationService
 cmd appops set com.google.android.gms BOOT_COMPLETED ignore
 cmd appops set com.google.android.ims BOOT_COMPLETED ignore
 cmd appops set com.google.android.gms BOOT_COMPLETED ignore
