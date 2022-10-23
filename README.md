@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 09.10.22 (89) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/09.10.2022/AIOPFMD-09.10.22-%2889%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1R8QSfVk4c_bKlj1L51DdhI-DXwd2KSLc/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/102">TG</a>
+* Версия AIOPFMD: 23.10.22 (90) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.10.2022/AIOPFMD-23.10.22-%2890%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1c3qCk-z2ecKOJUWwTEm9RacGLC8UZ5hX/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/104">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,23 @@
 <details>
   <summary>Changelog</summary>
 
+#### 23.10.22 (90) ####
+* AIST обновлен до v1.6 (1310) - фикс привязки некоторых TWS через приложения;
+* Energized Hosts обновлен до v296.21;
+* Dolby Atmos обновлен до v1.7:
+	- Фикс правил;
+	- Улучшено определение на вырез dirac;
+	- Улучшено определение на вырез эффектов;
+	- Улучшение доп sh;
+* Derp Launcher обновлен до v1.3 от 14.10;
+* Force Install Apps From Unknown Sources обновлен до v1.2 - поддержка Android 10+;
+* Force Dark Mode ушел в LEGACY;
+* Фикс установки Status Bar Privacy Dot для не MAGISK;
+* Добавлена установка QR Code Scanner On Lock Screen - включает или выключает ярлык на экране блокировке;
+* Burn In Protection обновлен до v2.0 - добавлен доп sh и включение Smart Pixels где доступно;
+* Cache Cleaner обновлен до v2.8 - добавлено использование встроенного в MAGISK BusyBox при условии удаления рекомендуемого;
+* Magisk Manager For Recovery обновлен до v1.1 - мелкие фиксы и улучшения;
+* Build Prop Tweaks обновлен до v2.5 - добавлен выбор на активацию Force Fake Encryption отдельно где оно ломало прошивку или делало двойнуб загрузку телефона (на 13ках точно).
 #### 09.10.22 (89) ####
 * AIST обновлен до v1.6 (0710) - откат PATCH_VOLUMES из 1.5;
 * Energized Hosts обновлен до v282.17;
@@ -1242,7 +1259,7 @@
 * Выбор альт версии в UIROUNDED был удален - копируется автоматом;
 * Добавлена установка цвета жестовой "таблетки" в цветах: Blue (ff1a73e8), Red (ffb31818), Green (ff1ed760), Yellow (ffffa842), Orange (ffff8055), Violet (ffa86bd5);
 * Добавлена установка высоты жестовой "таблетки" в значениях: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;
-* Добавлена установка Force Install Apps From Unknown Sources - принудительно включение пункта в разделе безопасности на установку из неизвестных источников(до Android 10);
+* Добавлена установка Force Install Apps From Unknown Sources - принудительно включение пункта в разделе безопасности на установку из неизвестных источников (до Android 10);
 * EdXposed YAHFA и SandHook обновлены до v0.5.1.4 (4656);
 * Force Activate DEV & ADB обновлен до v1.1;
 * Pills Overlay обновлен до v1.4;
@@ -1675,7 +1692,7 @@
 <details> 
   <summary>Принцип/Порядок работы AIOPFMD</summary>
   
-<h3 align=center>UI: Pills/NavBar/Gboard/Themes/BA/Sounds</h3>
+<h3 align=center>UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji</h3>
 
 * Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Pills) Установка разных видов/размеров жестовой "таблетки":
 	- Полное скрытие;
@@ -1985,8 +2002,9 @@
 			- Повышенная громкость всех звуков;
 * Пункт (MAGISK & LEGACY) (NOT MIUI) (10-13.0) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
 * Пункт (MAGISK) (NOT MIUI) (12.0-13.0) - (Wi-Fi & Mobile Data QS Old Style) изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
-	- Новый;
-	- Старый;
+* Пункт (MAGISK) (NOT MIUI) (13.0) - (QR Code Scanner On Lock Screen) - включает или выключает ярлык на экране блокировке:
+	- Включить;
+	- Выключить;
 
 <h3 align=center>Launchers: Shady/Lawnchair/Sushi/Derp</h3>
 
@@ -2676,8 +2694,9 @@
 	- Если установка через Recovery, предлагает установку скрипта синхронизации после перезагрузки;
 * Пункт (MAGISK) (NOT MIUI) (10-13.0) - (Force Gestures) для принудительного переключения кнопки навигации на жесты после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов или подобного;
 * Пункт (MAGISK) (11-13.0) - (Enabling Hidden Api Policy) снимает ограничения Google на некоторые классы приложений - нужен для некоторых аудиомодулей и не только;
-* Пункт (MAGISK) (<9.0) - (Force Install Apps From Unknown Sources) для принудительного включения пункта в разделе безопасности на установку из неизвестных источников;
-* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости и Force Fake Encryption;
+* Пункт (MAGISK) - (Force Install Apps From Unknown Sources) для принудительного включения пункта в разделе безопасности на установку из неизвестных источников;
+* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости и Force Fake Encryption:
+	- Включить Force Fake Encryption - может сломать прошивку или делать двойную загрузку телефона;
 * Пункт (ALL) (|\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105651495">4PDA</a> - (Kill Logger) для отключения и убивания многих процессов/бинарников сбора логов:
 	- Оставить возможность снимать logcat или нет <a href="https://developer.android.com/studio/command-line/logcat">Developer Android</a>;
 * Пункт (MAGISK) - (Force 4X MSAA) для включения 4X MSAA в настройках разработчика после перезагрузки;

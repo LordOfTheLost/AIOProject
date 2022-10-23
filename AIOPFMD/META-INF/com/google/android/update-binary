@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="09.10.22 (89)"
+VAIOPFMD="23.10.22 (90)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -16,16 +16,16 @@ OUTFD="$2"
 ZIPFILE="$3"
 ADDONS="$ALTTMPDIR/Addons"
 BB="$ALTTMPDIR/BB"
-UNTARXZ="$BB/tar"
-UNZIP="$BB/unzip"
-ECHO="$BB/echo"
-HEAD="$BB/head"
+TAR="$BB/busybox tar"
+UNZIP="$BB/busybox unzip"
+ECHO="$BB/busybox echo"
+HEAD="$BB/busybox head"
 ZIPALIGN="$ADDONS/zipalign"
 ZIPPACKER="$ADDONS/zip"
 } #
 
 { #Version Or Date Of Patches In This Patch
-#UI: Pills/NavBar/Gboard/Themes/BA/Sounds
+#UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji
 IDPO="Pills"; VIPPO="v2.0"
 IDPCO="PillsColors"; VIPPCO="v1.5"
 IDPHOS="PillsHeight"; VIPPHO="v1.4"
@@ -38,7 +38,7 @@ IDGBSTE="GboardSilkThemeChanger"; VIPGBSTE="v1.1"
 IDSBINNI="SBINNI"; VIPSBINNI="v1.9"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
 IDRUI="RoundedUI"; VIPRUI="v3.2"
-IDBIP="BurnInProtection"; VIPBIP="v1.9"
+IDBIP="BurnInProtection"; VIPBIP="v2.0"
 IDNSP="NotificationSidePaddings"; VIPNSP="v1.4"
 IDSBISP="StatusBarIconSpace"; VIPSBISP="v1.3"
 IDSBISI="StatusBarIconSize"; VIPSBISI="v1.1"
@@ -55,17 +55,18 @@ IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.2"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.9"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
+IDQRCSOLS="QRCSOLS"; VIPQRCSOLS="v1.0"
 #Launchers: Shady/Lawnchair/Sushi/Derp
 IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIPSLSHADYR="v2021.11.28"; VCIPSLSHADYR="20211128"
 IDSLLAWNSL="Systemless_Lawnchair"; VIPSLLAWNSL="v2.6"; VIPSLLAWNASL="12.1.0 Alpha 4"
-IDSLSUSHISL="Systemless_SushiLauncher"; VIPSLSUSHISL="v1.4"; VIPSLSUSHISLA="v5.0"
-IDSLDERPT="Systemless_DerpLauncher"; VIPSLDERPT="v1.2"; VIPSLDERPTA="v13"
+IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.4"; VIPSLSUSHISLA="v5.0"
+IDSLDERP="Systemless_DerpLauncher"; VIPSLDERP="v1.3"; VIPSLDERPTA="v13"
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.4"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.8"
-IDDA="DolbyAtmos"; VIPDA="v1.6"
+IDDA="DolbyAtmos"; VIPDA="v1.7"
 IDNLS="NLSound"; VIPNLS="v3.4"; VCIPNLS="1109"
-IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="0710"
+IDAIST="AIST"; VIPAIST="v1.6"; VCIPAIST="1310"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.2"
 IDAML="AML"; VIPAML="v4.2"; VCIPAML="42"
@@ -74,7 +75,7 @@ IDALCF="ALCF"; VIPALCF="v1.2"
 IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
 IDVAAH="AdAwayHosts"; VIPVAAH="04.10.2022"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v17.0-220116"; VCIPVSH="170"
-IDEH="EnergizedHosts"; VIPEH="v282.17"
+IDEH="EnergizedHosts"; VIPEH="v296.21"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; VIPGPSP="v1.0"
 IDWIFIP="WIFIPatcher"; VIPWIFIP="v1.2"
@@ -85,8 +86,8 @@ IDAPAUSBTF="APAUSBTF"; VIPAPAUSBTF="v1.0"
 IDBB="BrutalBusyBox"; VIPBB="v1.36.0.1"; VCIPBB="13601"
 IDSQL="SQLITE"; VIPSQL="v3.39.3"
 IDSELC="SELinuxChanger"; VIPSELC="v1.3"
-IDCC="CacheCleaner"; VIPCC="v2.7"
-IDMMFR="MMFR"; VIPMMFR="v1.0"
+IDCC="CacheCleaner"; VIPCC="v2.8"
+IDMMFR="MMFR"; VIPMMFR="v1.1"
 IDDETACH="DETACH" VIPDETACH="v1.3"
 IDLSPOSEDZ="zygisk_lsposed"; VIPLSPOSEDZ="v1.8.4 (6609)"; VCIPLSPOSEDZ="6609"
 #Other: FA/LED/FSFM/UAA/SBU/GASL
@@ -98,8 +99,8 @@ IDFSLFM="FSFM"; VIPFSLFM="v1.2"
 IDFGS="ForceGoogleSync"; VIPFGS="v1.1"
 IDFEG="ForceGestures"; VIPFEG="v1.1"
 IDHAP="EnablingHiddenApiPolicy"; VIPHAP="v1.2"
-IDAFUS="AFUSS"; VIPAFUS="v1.1"
-IDBPT="BuildPropTweaks"; VIPBPT="v2.4"
+IDFIAFUS="FIAFUS"; VIPFIAFUS="v1.2"
+IDBPT="BuildPropTweaks"; VIPBPT="v2.5"
 IDKL="KillLogger"; VIPKL="v1.9"; VCIPKL="19"
 IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
@@ -131,8 +132,8 @@ UIP "Copy AIOPFMD To TMPDIR$MSGPMODE"
 unzip -oq $ZIPFILE BB.zip Addons.tar.xz -d $ALTTMPDIR 2>/dev/null
 unzip -oq $BB.zip -d $ALTTMPDIR 2>/dev/null; rm -f $BB.zip
 chmod -R 0777 $TMPDIR $ALTTMPDIR
-$BB/busybox-$ARCH --install -s $BB
-$UNTARXZ -xf $ADDONS.tar.xz -C $ALTTMPDIR; rm -f $ADDONS.tar.xz
+cp -f $BB/busybox-$ARCH $BB/busybox
+$TAR -xf $ADDONS.tar.xz -C $ALTTMPDIR; rm -f $ADDONS.tar.xz
 [ $BOOTMODE != true ] && mkdir -p $AIOPFMDPH) &
 PRESETS
 END
@@ -946,7 +947,7 @@ else
 IAMM=""
 [ $BOOTMODE != true ] && UIP "Everything Will Install As Non Magisk Modules"
 fi;;
--bb) if [ -f $IPSB/busybox ]; then BUSYBOX=/bin; FBUSYBOX=true; elif [ -f $IPSXB/busybox ]; then BUSYBOX=/xbin; FBUSYBOX=true; elif [ -d $MODPATH/$IDBB ] || [ -d $MODPATHUPD/$IDBB ]; then FBUSYBOX=true; else FBUSYBOX=false; fi;;
+-bb) if [ -f $IPSB/busybox ]; then BUSYBOX=/bin; FBUSYBOX=true; elif [ -f $IPSXB/busybox ]; then BUSYBOX=/xbin; FBUSYBOX=true; elif [ -d $MODPATH/$IDBB ]; then FBUSYBOX=true; else FBUSYBOX=false; fi;;
 -sqlite) if [ -d "$IDSQL" ] || [ -f $IPSB/sqlite3 ] || [ -f $IPSXB/sqlite3 ]; then FSQLITE=true; else FSQLITE=false; fi;;
 -arch) DARCH="$(GET_FILE_PROP "ro.product.cpu.abi")"
 case "$DARCH" in
@@ -1245,7 +1246,7 @@ done
 
 FINDER () {
 case $1 in
--mm) local FIND=$2; for TARGET in $FIND; do if [ -d $MODPATHUPD/$TARGET ] || [ -d $MODPATH/$TARGET ]; then return 0; break; fi; done; return 1;;
+-mm) local FIND=$2; for TARGET in $FIND; do if [ -d $MODPATH/$TARGET ] || [ -d $MODPATHUPD/$TARGET ]; then return 0; break; fi; done; return 1;;
 -nmp) local FIND=$2; for TARGET in $FIND; do if [ -e $TARGET ]; then return 0; break; fi; done; return 1;;
 *) local FIND=$1; for TARGET in $FIND; do if [ -e $MAGISKMP$TARGET ]; then return 0; break; fi; done; return 1;;
 esac
@@ -1284,10 +1285,10 @@ UZTPN () {
 for F in "$1" "$2" "$3" "$4"; do
 if [ "$F" ]; then
 if [ ! -f $TMPDIR/$F.tar.xz ]; then $UNZIP -oq $ZIPFILE $F.tar.xz -d $TMPDIR 2>/dev/null; fi
-$UNTARXZ -xf $TMPDIR/$F.tar.xz -C $TMPDIR
+$TAR -xf $TMPDIR/$F.tar.xz -C $TMPDIR
 if [ ! -d $TMPDIR/$F ]; then
 UIP "Unzip $F Error"
-$UNTARXZ -xf $TMPDIR/$F.tar.xz -C $TMPDIR
+$TAR -xf $TMPDIR/$F.tar.xz -C $TMPDIR
 if [ -d $TMPDIR/$F ]; then UIP "Unzip $F Completed"; fi
 fi
 rm -f $TMPDIR/$F.tar.xz
@@ -4146,7 +4147,7 @@ done
 }
 
 MMUPD_LIST () {
-#UI: Pills/NavBar/Gboard/Themes/BA/Sounds
+#UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji
 CHECKER -mmupd "$IDPO" "$VIPPO" "IPPOS"
 CHECKER -mmupd "$IDPCO" "$VIPPCO" "IPPCOS"
 CHECKER -mmupd "$IDPHOS" "$VIPPHO" "IPPHOS"
@@ -4176,14 +4177,15 @@ CHECKER -mmupd "$IDIOSEMOJI" "$VIPIOSEMOJI" "IPIOSEMOJIS"
 CHECKER -mmupd "$IDMUIS" "$VIPMUIS" "IPMUISS"
 CHECKER -mmupd "$IDFDNI" "$VIPFDNI" "IPFDNIS"
 CHECKER -mmupd "$IDWFAMDQSOS" "$VIPWFAMDQSOS" "IPWFAMDQSOSS"
+CHECKER -mmupd "$IDQRCSOLS" "$VIPQRCSOLS" "IPQRCSOLSS"
 #Launchers: Shady/Lawnchair/Sushi/Derp
 if $ATEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYQ" "$VCIPSLSHADYQ" "IPSLSSHADY"; fi
 if $AELEVEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYR" "$VCIPSLSHADYR" "IPSLSSHADY"; fi
 if $ATWELVEL; then
 CHECKER -mmupd "$IDSLLAWNSL" "$VIPSLLAWNSL" "IPSLLAWNASL"
-CHECKER -mmupd "$IDSLSUSHISL" "$VIPSLSUSHISL" "IPSLSSUSHISL"
+CHECKER -mmupd "$IDSLSUSHI" "$VIPSLSUSHI" "IPSLSSUSHISL"
 fi
-if $ATHIRTEEN; then CHECKER -mmupd "$IDSLDERPT" "$VIPSLDERPT" "IPSLDERPT"; fi
+if $ATHIRTEEN; then CHECKER -mmupd "$IDSLDERP" "$VIPSLDERP" "IPSLDERPT"; fi
 #Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF
 CHECKER -mmupd "$IDVFX" "$VIPVFX" "IPVFXS"
 CHECKER -mmupd "$IDVFXP" "$VIPVFXP" "IPVFXPS"
@@ -4222,7 +4224,7 @@ CHECKER -mmupd "$IDFSLFM" "$VIPFSLFM" "IPFSLFMS"
 CHECKER -mmupd "$IDFGS" "$VIPFGS" "IPFGSS"
 CHECKER -mmupd "$IDFEG" "$VIPFEG" "IPFEGS"
 CHECKER -mmupd "$IDHAP" "$VIPHAP" "IPHAPS"
-CHECKER -mmupd "$IDAFUS" "$VIPAFUS" "IPAFUSS"
+CHECKER -mmupd "$IDFIAFUS" "$VIPFIAFUS" "IPFIAFUSS"
 CHECKER -mmupd "$IDBPT" "$VIPBPT" "IPBPTS"
 CHECKER -mmupd -c "$IDKL" "$VIPKL" "$VCIPKL" "IPKLS"
 CHECKER -mmupd "$IDFMSAAS" "$VIPFMSAAS" "IPFMSAASS"
@@ -4289,7 +4291,7 @@ done
 
 { #All Otval
 
-{ #UI: Pills/NavBar/Gboard/Themes/BA/Sounds
+{ #UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji
 
 IPPO () {
 if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pills ]; then
@@ -4406,7 +4408,7 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pillscolors ]; then
 UIP -s "$MSGFI Pills Colors, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
-rm -f $IPPSO/PillsColors.apk $AIOPFMDPH/pillscolors
+rm -f $IPPSO/PillsColors*.apk $AIOPFMDPH/pillscolors
 UIP "$MSGDRM"
 fi
 else
@@ -4427,7 +4429,7 @@ PTMFI "$IDPCO" "PillsColorsOverlay" "$MIPPSO"
 cp -f $TMPDIR/$MODID/PillsColors-$PILLSLIGHTCOLORS-$PILLSDARKCOLORS.apk $MODPATH/$MODID$MIPPSO
 MMPR -v "Pills Colors" "$VIPPCO" "Pills Colors - Set On: Light - $PILLSLIGHTCOLORS & Dark - $PILLSDARKCOLORS"
 else
-cp -f $TMPDIR/PillsColors/PillsColors-$PILLSLIGHTCOLORS-$PILLSDARKCOLORS.apk $IPPSO/PillsColors.apk
+cp -f $TMPDIR/PillsColors/PillsColors-$PILLSLIGHTCOLORS-$PILLSDARKCOLORS.apk $IPPSO
 touch $AIOPFMDPH/pillscolors
 fi
 SET_PERM_RM -msgdi
@@ -4468,7 +4470,7 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pillsheight ]; then
 UIP -s "$MSGFI Pills Height, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
-rm -f $IPPSO/PillsHeight.apk $AIOPFMDPH/pillsheight
+rm -f $IPPSO/PillsHeight*.apk $AIOPFMDPH/pillsheight
 UIP "$MSGDRM"
 fi
 else
@@ -4488,7 +4490,7 @@ PTMFI "$IDPHOS" "PillsHeightOverlay" "$MIPPSO"
 cp -f $TMPDIR/$MODID/PillsHeight-$UCSFNMC.apk $MODPATH/$MODID$MIPPSO
 MMPR -v "Pills Height" "$VIPPHO" "Pills Height - Set On: $UCSFNMC"
 else
-cp -f $TMPDIR/PillsHeight/PillsHeight-$UCSFNMC.apk $IPPSO/PillsHeight.apk
+cp -f $TMPDIR/PillsHeight/PillsHeight-$UCSFNMC.apk $IPPSO
 touch $AIOPFMDPH/pillsheight
 fi
 SET_PERM_RM -msgdi
@@ -4833,7 +4835,7 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbarincreasenumbernotificationi
 UIP -s "$MSGFI Status Bar Increase Number Icons, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
-rm -f $IPPSO/SUIStatusBarIncreaseNumberNotificationIcons.apk $AIOPFMDPH/cutoutincreasenumbernotificationicons
+rm -f $IPPSO/SUIStatusBarIncreaseNumberNotificationIcons*.apk $AIOPFMDPH/cutoutincreasenumbernotificationicons
 UIP "$MSGDRM"
 fi
 else
@@ -4854,7 +4856,7 @@ PTMFI "$IDSBINNI" "CINNOverlayMod CINNI" "$MIPPSO"
 cp -f $TMPDIR/SBINNI/StatusBarIncreaseNumberNotificationIcons-$VAACINN-$VAACINND.apk $MODPATH/$MODID$MIPPSO
 MMPR -v "Status Bar Increase Number Notification Icons" "$VIPSBINNI" "Status Bar Increase Number Notification Icons - Set On: $VAACINN, Dot Size - Set On: $VAACINND"
 else
-cp -f $TMPDIR/SBINNI/StatusBarIncreaseNumberNotificationIcons-$VAACINN-$VAACINND.apk $IPPSO/StatusBarIncreaseNumberNotificationIcons.apk
+cp -f $TMPDIR/SBINNI/StatusBarIncreaseNumberNotificationIcons-$VAACINN-$VAACINND.apk $IPPSO
 touch $AIOPFMDPH/statusbarincreasenumbernotificationicons
 fi
 SET_PERM_RM -msgdi
@@ -4878,7 +4880,7 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/roundedui ]; then
 UIP -s "$MSGFI RoundedUI, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
-rm -f $IPPSO/RoundedUI*.apk $IPPSO/RoundedSL*.apk $AIOPFMDPH/roundedui
+rm -f $IPPSO/Rounded*3*.apk $AIOPFMDPH/roundedui
 UIP "$MSGDRM"
 fi
 else
@@ -4897,7 +4899,8 @@ PTMFI "$IDRUI" "UIROUNDED" "$MIPPSO"
 cp -f $TMPDIR/$MODID/Rounded*-$UCSFNMC.apk $MODPATH/$MODID$MIPPSO
 MMPR -v "RoundedUI" "$VIPRUI" "RoundedUI For Round Apps, System UI, Launcher Recent & Etc"
 else
-cp -f $TMPDIR/RoundedUI/Rounded*-$UCSFNMC.apk $IPPSO; touch $AIOPFMDPH/roundedui
+cp -f $TMPDIR/RoundedUI/Rounded*-$UCSFNMC.apk $IPPSO
+touch $AIOPFMDPH/roundedui
 fi
 SET_PERM_RM -msgdi
 }
@@ -4907,7 +4910,7 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/burninprotection ]; then
 UIP -s "$MSGFI Burn In Protection, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
-rm -f $IPPSO/AndroidBurnInProtection*.apk $IPPSO/SUIBurnInProtection*.apk
+rm -f $IPPSO/*BurnInProtection*.apk
 UIP "$MSGDRM"
 fi
 else
@@ -4929,6 +4932,9 @@ UZTPN "BIP"
 if $MAGISK; then
 PTMFI -nm "$IDBIP" "$MIPPSO"
 cp -f $TMPDIR/BIP/*BurnInProtection*-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT-$AODHORIZONTALSWIFT-$AODVERTICALSWIFT*.apk $MODPATH/$MODID$MIPPSO
+if CHECKER -sp "$XMLGLOBAL" "burn_in_protection"; then
+MSSERVICE -s "$SPGLOBAL burn_in_protection 1"
+fi
 MMPR -v "Burn In Protection" "$VIPBIP" "Burn In Protection For Status Bar, Gesture Pills/NavBar & AOD - Set On: $SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT-$AODHORIZONTALSWIFT-$AODVERTICALSWIFT"
 else
 cp -f $TMPDIR/BIP/*BurnInProtection*-$SHIFTINTERVAL-$HORIZONTALSWIFT-$VERTICALSWIFT-$AODHORIZONTALSWIFT-$AODVERTICALSWIFT*.apk $IPPSO
@@ -4964,7 +4970,8 @@ PTMFI -nm "$IDNSP" "$MIPPSO"
 cp -f $TMPDIR/NSP/NotificationSidePaddings-$NSPCOS-$NSPCOSA.apk $MODPATH/$MODID$MIPPSO
 MMPR -v "Notification Side Paddings" "$VIPNSP" "Notification Side Paddings For QS/QS Notification/Lock Screen Notification - Set On: $NSPCOS-$NSPCOSA"
 else
-cp -f $TMPDIR/NSP/NotificationSidePaddings-$NSPCOS-$NSPCOSA.apk $IPPSO; touch $AIOPFMDPH/notificationsidepaddings
+cp -f $TMPDIR/NSP/NotificationSidePaddings-$NSPCOS-$NSPCOSA.apk $IPPSO
+touch $AIOPFMDPH/notificationsidepaddings
 fi
 SET_PERM_RM -msgdi
 fi
@@ -5087,7 +5094,7 @@ if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbarpadding ]; then
 UIP -s "$MSGFI Status Bar Padding, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
-rm -f $IPPSO/StatusBarPadding.apk $AIOPFMDPH/statusbarpadding
+rm -f $IPPSO/StatusBarPadding*.apk $AIOPFMDPH/statusbarpadding
 UIP "$MSGDRM"
 fi
 else
@@ -5117,7 +5124,7 @@ PTMFI "$IDSBP" "SUIContentPadding" "$MIPPSO"
 MMPR -v "Status Bar Padding" "$VIPSBP" "Status Bar Padding From The Edges Of The Screen - Set On: Start - $SCSBPCO & End - $SCSBPCT"
 cp -f $TMPDIR/SBP/StatusBarPadding-$SCSBPCO-$SCSBPCT.apk $MODPATH/$MODID$MIPPSO
 else
-cp -f $TMPDIR/SBP/StatusBarPadding-$SCSBPCO-$SCSBPCT.apk $IPPSO/StatusBarPadding.apk
+cp -f $TMPDIR/SBP/StatusBarPadding-$SCSBPCO-$SCSBPCT.apk $IPPSO
 touch $AIOPFMDPH/statusbarpadding
 fi
 SET_PERM_RM -msgdi
@@ -5221,7 +5228,7 @@ fi
 
 IPSBPDS () {
 UIP -s "Choose Variant:" "$MSGVU Disable" "$MSGVD Optimized"
-if KEYCHOOSE; then SBPDV=Disable; else SBPDV=Optimized; fi
+if KEYCHOOSE; then SBPDV="Disable"; else SBPDV="Optimized"; fi
 UIP "Installing Status Bar Privacy Dot $IAMM"
 UZTPN "SBPD"
 if $MAGISK; then
@@ -5229,7 +5236,7 @@ PTMFI -nm "$IDSBPD" "$MIPPSO"
 cp -f $TMPDIR/SBPD/StatusBarPrivacyDot-$SBPDV.apk $MODPATH/$MODID$MIPPSO
 MMPR -v "Status Bar Privacy Dot" "$VIPSBPD" "Status Bar Privacy Dot - Set On: $SBPDV"
 else
-cp -f $TMPDIR/DSBPD/StatusBarPrivacyDot-$SBPDV.apk $IPPSO
+cp -f $TMPDIR/SBPD/StatusBarPrivacyDot-$SBPDV.apk $IPPSO
 touch $AIOPFMDPH/statusbarprivacydot
 fi
 SET_PERM_RM -msgdi
@@ -5242,7 +5249,7 @@ fi
 }
 
 IPEBBS () {
-UIP "Background Blur $IAMM"
+UIP "Installing Background Blur $IAMM"
 if $MAGISK; then
 PTMFI -nmp "$IDEBB"
 echo "ro.surface_flinger.supports_background_blur=1" > $MODPATH/$MODID/system.prop
@@ -5477,8 +5484,40 @@ IPWFAMDQSOSS () {
 UIP "Installing Wi-Fi & Mobile Data QS Old Style $IAMM"
 PTMFI -np "$IDWFAMDQSOS" "OldDataWifiQsStyle WFAMDQSSC"
 MSSERVICE "$SPGLOBAL settings_provider_model true; $SPSECURE sysui_qs_tiles \"internet,\$($SGSECURE sysui_qs_tiles)\"" "$SPGLOBAL settings_provider_model false; $SPSECURE sysui_qs_tiles \"wifi,cell,\$($SGSECURE sysui_qs_tiles)\"" "WFAMDQSOS"
-if $BOOTMODE; then UIP "Wi-Fi & Mobile Data QS Old Style Right Now"; $SPGLOBAL settings_provider_model false; $SPSECURE sysui_qs_tiles "wifi,cell,$($SGSECURE sysui_qs_tiles)"; fi
+if $BOOTMODE; then UIP "Wi-Fi & Mobile Data QS Old Style Activated Right Now"; $SPGLOBAL settings_provider_model false; $SPSECURE sysui_qs_tiles "wifi,cell,$($SGSECURE sysui_qs_tiles)"; fi
 MMPR -v "Wi-Fi & Mobile Data QS Old Style" "$VIPGPPM" "Wi-Fi & Mobile Data QS Old Style"; SET_PERM_RM -msgdi
+}
+
+IPQRCSOLS () {
+if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/qrcodescanneronlockscreen ]; then
+UIP -s "$MSGFI QR Code Scanner On Lock Screen, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then
+UIP "Removing..."
+rm -f $IPPSO/QRCodeScannerOnLockScreen*.apk $AIOPFMDPH/qrcodescanneronlockscreen
+UIP "$MSGDRM"
+fi
+else
+if [ $MIUI != true ] && [ "$ASDK" -ge 33 ]; then UCSA -ent "Install QR Code Scanner On Lock Screen $VIPQRCSOLS?" "IPQRCSOLSS" "$IDQRCSOLS"; fi
+fi
+}
+
+IPQRCSOLSS () {
+UIP -s "Choose Variant:" "$MSGVU Enable" "$MSGVD Disable"
+if KEYCHOOSE; then QRCSOLSV="Enable"; QRCSOLSVO="1"; QRCSOLSVT="0"; else QRCSOLSV="Disable"; QRCSOLSVO="0"; QRCSOLSVT="1"; fi
+UIP "Installing QR Code Scanner On Lock Screen $IAMM"
+UZTPN "QRCSOLS"
+if $MAGISK; then
+PTMFI -nm "$IDQRCSOLS" "$MIPPSO"
+cp -f $TMPDIR/QRCSOLS/QRCodeScannerOnLockScreen-$QRCSOLSV.apk $MODPATH/$MODID$MIPPSO
+if CHECKER -sp "$XMLSECURE" "lock_screen_show_qr_code_scanner"; then
+MSSERVICE "$SPSECURE lock_screen_show_qr_code_scanner $QRCSOLSVT" "$SPSECURE lock_screen_show_qr_code_scanner $QRCSOLSVO" "QRCSOLS"
+fi
+MMPR -v "QR Code Scanner On Lock Screen" "$VIPQRCSOLS" "QR Code Scanner On Lock Screen - Set On: $QRCSOLSV"
+else
+cp -f $TMPDIR/QRCSOLS/QRCodeScannerOnLockScreen-$QRCSOLSV.apk $IPPSO
+touch $AIOPFMDPH/qrcodescanneronlockscreen
+fi
+SET_PERM_RM -msgdi
 }
 
 } #
@@ -5488,7 +5527,7 @@ MMPR -v "Wi-Fi & Mobile Data QS Old Style" "$VIPGPPM" "Wi-Fi & Mobile Data QS Ol
 IPSL () {
 if $MAGISK && [ $MIUI != true ] && [[ $ATEN || $AELEVEN || $ATWELVEL || $ATHIRTEEN ]]; then
 SYSTEMLESSLAUNCHERS=false
-UCSA -ent "Install Systemless Launcher?" "IPSLS" "$IDSLLAWNSL $IDSLSHADY $IDSLSUSHISL $IDSLDERPT"
+UCSA -ent "Install Systemless Launcher?" "IPSLS" "$IDSLLAWNSL $IDSLSHADY $IDSLSUSHI $IDSLDERP"
 fi
 }
 
@@ -5507,11 +5546,11 @@ UIP -s "Install Lawnchair $VIPSLLAWNASL - $VIPSLLAWNSL?" "$MSGVU Yes" "$MSGVD No
 if KEYCHOOSE; then IPSLLAWNASL; fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
-UIP -s "Install Sushi Launcher $VIPSLSUSHISLA - $VIPSLSUSHISL?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "Install Sushi Launcher $VIPSLSUSHISLA - $VIPSLSUSHI?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then IPSLSSUSHISL; fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $ATHIRTEEN; then
-UIP -s "Install Derp Launcher $VIPSLDERPTA - $VIPSLDERPT?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "Install Derp Launcher $VIPSLDERPTA - $VIPSLDERP?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then IPSLDERPT; fi
 fi
 fi
@@ -5560,23 +5599,23 @@ IPSLSE
 
 IPSLSSUSHISL () {
 UIP "Installing Sushi Launcher $IAMM"
-PTMFI -np "$IDSLSUSHISL" "$MMLAUNCHERLIST"
+PTMFI -np "$IDSLSUSHI" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
-UZTPN "$IDSLSUSHISL-$ACNV"
+UZTPN "$IDSLSUSHI-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
-MMPR -v "Systemless Sushi Launcher" "$VIPSLSUSHISL" "Systemlessly Install Sushi Launcher For Android 12.1 With Recents UI Support"
+MMPR -v "Systemless Sushi Launcher" "$VIPSLSUSHI" "Systemlessly Install Sushi Launcher For Android 12.1 With Recents UI Support"
 IPSLSE
 }
 
 IPSLDERPT () {
 UIP "Installing Derp Launcher $IAMM"
-PTMFI -np "$IDSLDERPT" "$MMLAUNCHERLIST"
+PTMFI -np "$IDSLDERP" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
-UZTPN "$IDSLDERPT-$ACNV"
+UZTPN "$IDSLDERP-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
-MMPR -v "Systemless Derp Launcher" "$VIPSLDERPT" "Systemlessly Install Derp Launcher For Android 13.0 With Recents UI Support"
+MMPR -v "Systemless Derp Launcher" "$VIPSLDERP" "Systemlessly Install Derp Launcher For Android 13.0 With Recents UI Support"
 IPSLSE
 }
 
@@ -5723,7 +5762,7 @@ dontaudit init { system_lib_file vendor_file vendor_configs_file hal_dms_default
 allow init { system_lib_file vendor_file vendor_configs_file hal_dms_default_exec vendor_data_file vendor_media_data_file } file relabelfrom
 type same_process_hal_file
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app hal_audio_default mtk_hal_audio audioserver } { default_android_hwservice hal_dms_hwservice dms_hwservice } hwservice_manager find
-allow daxservice_app permission_checker_service service_manager find
+allow daxservice_app { permission_checker_service game_service netstats_service content_capture_service } service_manager find
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { hal_dms_default_exec vendor_displayfeature_prop } file getattr
@@ -5740,10 +5779,14 @@ dontaudit zygote { device unlabeled } file write
 allow zygote { device unlabeled } file write
 dontaudit init system_file file mounton
 allow init system_file file mounton
+dontaudit daxservice_app default_prop file read
+allow daxservice_app default_prop file read
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
 allow { hal_audio_default mtk_hal_audio audioserver } system_suspend_hwservice hwservice_manager find
 dontaudit { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop } file { read open getattr map }
 allow { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop } file { read open getattr map }
@@ -5751,12 +5794,16 @@ dontaudit { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file syst
 allow { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } audio_prop file { read open getattr }
 allow { hal_audio_default mtk_hal_audio audioserver } audio_prop file { read open getattr }
+dontaudit { hal_audio_default mtk_hal_audio audioserver } radio_prop file read
+allow { hal_audio_default mtk_hal_audio audioserver } radio_prop file read
 dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
 allow { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file open
-allow { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file open
+dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file { read open }
+allow { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file { read open }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir read
 allow { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir read
+dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs dir open
+allow { hal_audio_default mtk_hal_audio audioserver } sysfs dir open
 dontaudit { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
 allow { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
 dontaudit { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
@@ -5774,8 +5821,6 @@ echo "#!$MIPSB/sh
 resetprop ro.feature.dolby_enable true
 resetprop vendor.audio.dolby.ds2.enabled false
 resetprop vendor.audio.dolby.ds2.hardbypass false
-
-killall audioserver
 
 for STOPSERVICE in \"dms-hal-1-0\" \"dms-hal-2-0\"; do
 if getprop | grep \"init.svc.\$STOPSERVICE\]: \[running\"; then
@@ -5798,10 +5843,15 @@ VIBRATOR=\`realpath /*/bin/hw/vendor.qti.hardware.vibrator.service*\`
 [ \"\$VIBRATOR\" ] && killall \$VIBRATOR
 POWER=\`realpath /*/bin/hw/vendor.mediatek.hardware.mtkpower@*-service\`
 [ \"\$POWER\" ] && killall \$POWER
+killall android.hardware.usb@1.0-service
+killall android.hardware.usb@1.0-service.basic
+killall android.hardware.sensors@1.0-service
 killall android.hardware.sensors@2.0-service-mediatek
 killall android.hardware.light-service.mt6768
+killall android.hardware.lights-service.xiaomi_mithorium
 CAMERA=\`realpath /*/bin/hw/android.hardware.camera.provider@*-service_64\`
-[ \"\$CAMERA\" ] && killall \$CAMERA" > $MODPATH/$MODID/service.sh
+[ \"\$CAMERA\" ] && killall \$CAMERA
+SERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" > $MODPATH/$MODID/service.sh
 echo "#!$MIPSB/sh
 DIR=/data/vendor/dolby
 if [ ! -d \$DIR ]; then mkdir -p \$DIR; fi
@@ -5888,14 +5938,17 @@ sed -i '/<\/effects>/a\
     <\/postprocess>' $PSF
 else
 for OSP in notification voice_call system alarm ring music; do
-if ! grep -Eq '<stream type="$OSP">' $PSF || grep -Eq '<!-- YunMang.Xiao@PSW.MM.Dolby' $PSF; then
-sed -i "/<postprocess>/a\        <stream type=\"$OSP\">\n        <\/stream>" $PSF
+if ! grep -Eq '<stream type="$OSP">' $PSF; then
+case $OSP in
+notification | alarm | ring | music) if grep -Eq '<!-- YunMang.Xiao@PSW.MM.Dolby' $PSF || grep -Eq '<!-- WuHao@MULTIMEDIA.AUDIOSERVER.EFFECT' $PSF; then sed -i "/<postprocess>/a\        <stream type=\"$OSP\">\n        <\/stream>" $PSF; fi;;
+*) sed -i "/<postprocess>/a\        <stream type=\"$OSP\">\n        <\/stream>" $PSF;;
+esac
 fi
 done
 fi;;
 esac
 if ! getprop | grep -Eq "disable.dirac\]: \[0"; then
-PSXCF -rae "libdiraceffect.so dirac_gef 3799d6d1-22c5-43c3-b3ec-d664cf8d2f0d libdirac.so dirac_controller b437f4de-da28-449b-9673-667f8b9643fe dirac_music b437f4de-da28-449b-9673-667f8b964304 dirac e069d9e0-8329-11df-9168-0002a5d5c51b"
+PSXCF -rae "libdiraceffect.so dirac_gef 3799D6D1-22C5-43C3-B3EC-D664CF8D2F0D dirac_afm 743539F8-1076-451F-8395-84ACFAB0FAC7 dirac_controller 128B9BA2-D0C9-47C6-AFF3-9F761CD0E228 libdirac.so b437f4de-da28-449b-9673-667f8b9643fe dirac_music b437f4de-da28-449b-9673-667f8b964304 dirac e069d9e0-8329-11df-9168-0002a5d5c51b"
 fi
 if ! getprop | grep -Eq "disable.misoundfx\]: \[0"; then
 PSXCF -rae "libmisoundfx.so misoundfx 5b8e36a5-144a-4c38-b1d7-0002a5d5c51b"
@@ -6103,7 +6156,7 @@ APKPERM "$TMPDIR/$MODID$MIPSPA/DAXUI/DAXUI.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "
 APKPERM "$TMPDIR/$MODID$MIPSPA/DAXService/DAXService.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"; MKSCXML "$TMPDIR/$MODID$MIPSES"
 
 echo -e "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<permissions>\n    <library name=\"dolby_dax\"\n        file=\"/system/framework/dolby_dax.jar\"/>\n</permissions>" > $TMPDIR/$MODID$MIPSEP/dolby_dax.xml
-REPLACER -f "DaxUI daxService $MMAUDIOFX"
+REPLACER -f "$MMAUDIOFX DaxUI MotoDolbyDax3 MotoDolbyV3 OPSoundTuner daxService"
 cp -rf $TMPDIR/DolbyAtmos/system $MODPATH/$MODID
 REPLACER -a "dumpstate" "$IPSB"
 REPLACER -a "vendor.dolby.hardware.dms@2.0-service" "$IPVBHW"
@@ -7124,8 +7177,6 @@ persist.sys.bluetooth.rssi_distance.support=true
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.avrcp.controller.enabled=false
-bluetooth.profile.hfp.ag.enabled=false
-bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.gatt.enabled=true
 bluetooth.profile.hid.host.enabled=true
 bluetooth.profile.hid.device.enabled=true
@@ -8722,8 +8773,9 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-	<bool name=\"config_statusBarBurnInProtection\">true</bool>
 	<bool name=\"config_enableBurnInProtection\">true</bool>
+	<bool name=\"config_enableSmartPixels\">true</bool>
+	<bool name=\"config_statusBarBurnInProtection\">true</bool>
 </resources>" | tee $BIPAO/res/values/bools.xml $BIPSUIO/res/values/bools.xml > /dev/null
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
@@ -9024,6 +9076,34 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmln
 </manifest>" > $CSBPDPO-Optimized/AndroidManifest.xml
 
 APKBUILDER "$CSBPDPO-Optimized" "$CSBPDPO-Optimized.apk"
+}
+
+CEQRCSOLSC () {
+UCSA "QR Code Scanner On Lock Screen?" "CEQRCSOLSCS"
+}
+
+CEQRCSOLSCS () {
+OCEQRCSOLS="$STORAGE/AIOCOMPILE/QRCodeScannerOnLockScreen/QRCodeScannerOnLockScreen"
+mkdir -p $OCEQRCSOLS/res/values
+
+for OCEQRCSOLSC in "false" "true"; do
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<bool name=\"config_enableQrCodeScannerOnLockScreen\">$OCEQRCSOLSC</bool>
+</resources>" > $OCEQRCSOLS/res/values/bools.xml
+
+case $OCEQRCSOLSC in
+"true") OCEQRCSOLSN="Enable"; OCEQRCSOLSNA="enable";;
+"false") OCEQRCSOLSN="Disable"; OCEQRCSOLSNA="disable";;
+esac
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.$OCEQRCSOLSNA.qr.code.scanner.on.lock.screen\">
+	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\"/>
+	<application android:hasCode=\"false\" android:label=\"$OCEQRCSOLSN QR Code Scanner On Lock Screen\"/>
+</manifest>" > $OCEQRCSOLS/AndroidManifest.xml
+
+APKBUILDER "$OCEQRCSOLS" "$OCEQRCSOLS-$OCEQRCSOLSN.apk"
+done
 }
 
 } #
@@ -9579,7 +9659,7 @@ else
 FIPBB=$IPPSXB
 touch $AIOPFMDPH/busyboxbrutal
 fi
-cp -f $BB/busybox-$ARCH $FIPBB/busybox
+cp -f $BB/busybox $FIPBB
 UIP "Setting BB Permissions"
 chmod 0777 $FIPBB/busybox
 UIP "Symlinking BB Applets"
@@ -9628,10 +9708,10 @@ PTMFI -np "$IDSELC" "SeLinuxChanger"
 SLSP="Permissive"; SLSE="Enforcing"
 CHECKER "-sel"
 if $PAI; then
-SLSC=$SLSP; SLSCN=0
+SLSC="$SLSP"; SLSCN="0"
 else
 UIP "Change SELinux" "SELinux Now: $SELINUXS" "$MSGVU In $SLSP" "$MSGVD In $SLSE"
-if KEYCHOOSE; then SLSC=$SLSP; SLSCN=0; else SLSC=$SLSE; SLSCN=1; fi
+if KEYCHOOSE; then SLSC="$SLSP"; SLSCN="0"; else SLSC="$SLSE"; SLSCN="1"; fi
 fi
 UIP "Installing SELinux Changer $IAMM"
 MMPR -v "SELinux Changer" "$VIPSELC" "Switch SELinux In $SLSC"
@@ -9804,8 +9884,20 @@ esac
 done
 clear
 echo \"$MSGSD Cache Cleaner $VIPCC\"
-[ -d $MODPATH/$IDBB$MIPSB ] && FIND=$MODPATH/$IDBB$MIPSB/find || FIND=$MODPATH/$IDBB$MIPSXB/find
-[ ! -d $MODPATH/$IDBB ] && echo -e \"$MSGSD Brutal Busybox No Found!\\n$MSGSD Use Stock Find\" && FIND=find
+
+if [ -d $MODPATH/$IDBB$MIPSB ]; then
+FIND=\"$MODPATH/$IDBB$MIPSB/find\"
+elif [ -d $MODPATH/$IDBB$MIPSXB ]; then
+FIND=\"$MODPATH/$IDBB$MIPSXB/find\"
+elif [ -f $NVBASE/magisk/busybox ]; then
+FIND=\"$NVBASE/magisk/busybox find\"
+elif [ -f $IPDMM/busybox ]; then
+FIND=\"$IPDMM/busybox find\"
+else
+echo -e \"$MSGSD Busybox Not Found!\\n$MSGSD Use Stock Find\"
+FIND=\"find\"
+fi
+
 local opt=\"\"
 while :; do
 echo -n \"$MSGCS
@@ -9862,22 +9954,22 @@ UIP "Magisk Manager For Recovery $IAMM"
 PTMFI "$IDMMFR" "mm" "$MIPSB"
 $ECHO "#!/sbin/sh
 
-MMODULES () { ls -1 \$MMFRP | grep -v 'lost+found' || echo \"$MSGSD <None>\"; }
+MMODULES () { ls -1 $MODPATH || echo \"$MSGSD <None>\"; }
 
 MCHANGER () {
 local input=\"\" MODULES=\"\"
 local FILE=\"\$1\" PRESENT=\"\$2\" ABSENT=\"\$3\"
 for MODULES in \$(MMODULES | grep -v \<None\> || :); do
 echo -n \"$MSGSD \$MODULES [\"
-[ -f \$MMFRP/\$MODULES/\$FILE ] && echo \"\$PRESENT]\" || echo \"\$ABSENT]\"
+[ -f $MODPATH/\$MODULES/\$FILE ] && echo \"\$PRESENT]\" || echo \"\$ABSENT]\"
 done
 echo -en \"\\n$MSGSD Input Pattern(s) (NAME Or GBoardThemes|GBoardT|GBoa):\"
 read input
 echo
 for MODULES in \$(MMODULES | grep -v \<None\> || :); do
 if echo \$MODULES | grep -Eq \"\${input:-_noMatch_}\"; then
-[ -f \$MMFRP/\$MODULES/\$FILE ] && { rm \$MMFRP/\$MODULES/\$FILE; echo \"\$MODULES [\$ABSENT]\"; } \
-|| { touch \$MMFRP/\$MODULES/\$FILE; echo \"\$MODULES [\$PRESENT]\"; }
+[ -f $MODPATH/\$MODULES/\$FILE ] && { rm $MODPATH/\$MODULES/\$FILE; echo \"\$MODULES [\$ABSENT]\"; } \
+|| { touch $MODPATH/\$MODULES/\$FILE; echo \"\$MODULES [\$PRESENT]\"; }
 fi
 done
 }
@@ -9911,13 +10003,13 @@ else
 local MODULES=\"\"
 if [ ! -f $NVBASE/magiskcore ]; then
 for MODULES in \$(MMODULES | grep -v \<None\> || :); do
-touch \$MMFRP/\$MODULES/disable
+touch $MODPATH/\$MODULES/disable
 done
 touch $NVBASE/magiskcore
 echo \"$MSGSD Magisk Core [ON]\"
 else
 for MODULES in \$(MMODULES | grep -v \<None\> || :); do
-rm -f \$MMFRP/\$MODULES/disable
+rm -f $MODPATH/\$MODULES/disable
 done
 rm -f $NVBASE/magiskcore
 echo \"$MSGSD Magisk Core [OFF]\"
@@ -9926,7 +10018,6 @@ fi
 }
 
 OPTIONS () {
-MMFRP=$MODPATH
 if [ -f /cache/.disable_magisk ] || [ -f /data/cache/.disable_magisk ] || [ -f $NVBASE/magiskcore ]; then MCS=\"[ON]\"; else MCS=\"[OFF]\"; fi
 if [ -d $IPDMM ] && [ -f $IPDMM/util_functions.sh ]; then
 MAGISKVC=\"\$(grep -m1 \"^MAGISK_VER_CODE=\" \"$IPDMM/util_functions.sh\")\"
@@ -9954,7 +10045,7 @@ $MSGCS
 read opt
 echo
 case \$opt in
-l | L) echo -e \"$MSGSD Installed Modules\\n\"; MMODULES;;
+l | L) echo -e \"$MSGSD Installed Modules:\\n\"; MMODULES;;
 c | C) MCORE;;
 m | M) MMNT;;
 d | D) MDISABLE;;
@@ -10754,16 +10845,16 @@ MSSERVICE -s "$SPGLOBAL hidden_api_policy 1; $SPGLOBAL hidden_api_policy_pre_p_a
 MMPR -v "Enabling Hidden Api Policy" "$VIPHAP" "Enabling Hidden Api Policy"; SET_PERM_RM -msgdi
 }
 
-IPAFUS () {
-if $MAGISK && [ "$ASDK" -le 28 ] && CHECKER -sp "$XMLSECURE" "install_non_market_apps"; then UCSA "Force Install Apps From Unknown Sources $VIPAFUS?" "IPAFUSS" "$IDAFUS"; fi
+IPFIAFUS () {
+if $MAGISK && CHECKER -sp "$XMLSECURE" "install_non_market_apps unknown_sources_default_reversed"; then UCSA "Force Install Apps From Unknown Sources $VIPFIAFUS?" "IPFIAFUSS" "$IDFIAFUS"; fi
 }
 
-IPAFUSS () {
-UIP "Installing AIOAFUS $IAMM"
-if $BOOTMODE; then UIP "Enabling Install Apps From Unknown Sources Right Now"; $SPSECURE install_non_market_apps 1; fi
-PTMFI -nmp "$IDAFUS"
-MSSERVICE -s "$SPSECURE install_non_market_apps 1"
-MMPR -v "Allow Installation Of Apps From Unknown Sources" "$VIPAFUS" "Force Allow Installation Of Apps From Unknown Sources"; SET_PERM_RM -msgdi
+IPFIAFUSS () {
+UIP "Installing Force Install Apps From Unknown Sources $IAMM"
+if $BOOTMODE; then UIP "Force Install Apps From Unknown Sources Activated Right Now"; [ "$ASDK" -le 28 ] && $SPSECURE install_non_market_apps 1 || $SPSECURE unknown_sources_default_reversed 0; fi
+PTMFI -np "$IDFIAFUS" "AFUSS"
+MSSERVICE "[ \"$ASDK\" -le 28 ] && $SPSECURE install_non_market_apps 0 || $SPSECURE unknown_sources_default_reversed 1" "[ \"$ASDK\" -le 28 ] && $SPSECURE install_non_market_apps 1 || $SPSECURE unknown_sources_default_reversed 0" "FIAFUS"
+MMPR -v "Force Install Apps From Unknown Sources" "$VIPFIAFUS" "Force Install Apps From Unknown Sources"; SET_PERM_RM -msgdi
 }
 
 IPBPT () {
@@ -10771,10 +10862,13 @@ UCSA "Install Build Prop Tweaks $VIPBPT?" "IPBPTS" "$IDBPT"
 }
 
 IPBPTS () {
+UIP "Activate Force Fake Encryption?" "It May Break The ROM/FastReBoot" "$MSGVU Yes" "$MSGVD No $MSGEEFTC"
+if KEYCHOOSE; then BPTAFFE=true; BPTMP=", Disable Safemedia & Force Fake Encryption"; else BPTAFFE=false; BPTMP=" & Disable Safemedia"; fi
+
 UIP "Installing Build Prop Tweaks $IAMM"
 if $MAGISK; then
 PTMFI -nmp "$IDBPT"
-MMPR -v "Build Prop Tweaks" "$VIPBPT" "Build Prop Tweaks: Enable 4K in YouTube, Animation AOD & LS Fix, Disable Safemedia & Force Fake Encryption"; IPBPT="$MODPATH/$MODID/system.prop"
+MMPR -v "Build Prop Tweaks" "$VIPBPT" "Build Prop Tweaks: Enable 4K in YouTube, Animation AOD/LS Fix$BPTMP"; IPBPT="$MODPATH/$MODID/system.prop"
 else
 BUCKUPER -bp "$IPSBP"; IPBPT="$IPSBP"
 fi
@@ -10789,10 +10883,13 @@ debug.force_no_blanking=true
 audio.safemedia.bypass=true
 persist.audio.safemedia.bypass=true
 persist.vendor.audio.safemedia.bypass=true
-vendor.audio.safemedia.bypass=true
+vendor.audio.safemedia.bypass=true" >> $IPBPT
 
-# Force Fake Encryption
+if $BPTAFFE; then
+echo -e "\n# Force Fake Encryption
 ro.crypto.state=encrypted" >> $IPBPT
+fi
+
 SET_PERM_RM -msgdi
 }
 
@@ -11167,7 +11264,7 @@ WCANFTP "-sl"
 }
 
 IPFDM () {
-if [ $MIUI != true ] && [ "$ASDK" -ge 27 ]; then
+if [ $MIUI != true ] && [ "$ASDK" -ge 27 ] && $LEGACYMODE; then
 UCSA "Install Force Dark Theme $VIPFDM?" "IPFDMS" "$IDFDM"
 fi
 }
@@ -11876,7 +11973,7 @@ fi
 
 PRESETS () {
 if [ -d $MODPATH ] && [ $MAGISKFIRSTTIME != true ] && $MAGISK && $MMUPDC; then for mmc in $(ls $MODPATH); do if [ -d "$MODPATH/$mmc" ]; then UCSA -ent "Checking Update?" "MMUPD_LIST" && break; fi; done; fi
-UIP -s "UI: Pills/NavBar/Gboard/Themes/BA/Sounds" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS; fi
+UIP -s "UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS; fi
 IPSL
 if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; fi
 UIP -s "Audio: VFX(P)/DOLBY/NLS/AIST/SAQ/IB/AML/ALCF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then AUDIO_PRESETS; fi
@@ -11920,6 +12017,7 @@ IPIOSEMOJI
 IPMUIS
 IPFDNI
 IPWFAMDQSOS
+IPQRCSOLS
 }
 
 AUDIO_PRESETS () {
@@ -11959,6 +12057,7 @@ CSBISC
 QSCIARC
 CSBISIZEC
 CSBPDC
+CEQRCSOLSC
 }
 
 NET_PRESETS () {
@@ -11993,7 +12092,7 @@ TWEAKS_PRESETS () {
 IPFGS
 IPFEG
 IPHAP
-IPAFUS
+IPFIAFUS
 IPBPT
 IPKL
 IPFMSAAS
