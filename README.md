@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 23.10.22 (90) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/23.10.2022/AIOPFMD-23.10.22-%2890%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1c3qCk-z2ecKOJUWwTEm9RacGLC8UZ5hX/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/104">TG</a>
+* Версия AIOPFMD: 01.12.22 (91) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.12.2022/AIOPFMD-01.12.22-%2891%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1rEuZF5gvLUqFIUUx80U6WmhZkTQZq4Pa/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/106">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -10,7 +10,7 @@
 	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники;
 	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй));
 	- Enabling Hidden Api Policy (для ViperFX (Android 11.0));
-	- Audio Modification Library если стоит Dolby и ViperFX;
+	- Audio Modification Library если стоит Dolby и ViperFX или отвал вывода музыки из приложений при установленных Dolby и ViperFX;
 	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск).
 * В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
@@ -18,6 +18,51 @@
 <details>
   <summary>Changelog</summary>
 
+#### 01.12.22 (91) ####
+* Lawnchair обновлен до v2.7 - обновил Lawnicons до v2.8.1;
+* Energized Hosts обновлен до v331.21;
+* LSPosed удален;
+* Добавлена установка Sushi Launcher из RiceDroid 8.5 от 30.11 - СООБЩАЛИ ОБ ОТВАЛЕ ИНТЕРНЕТА. ТАК ЧТО БУДЕТЕ ПОТОМ НАЧИСТО ПРОШИВКУ СТАВИТЬ НО У МЕНЯ ВСЁ НОРМ;
+* ViperFX обновлен до v1.5 - вернул установку v2.5.0.5 для 12+ и один фикс названия блока библиотек в конфинге при патчинге;
+* GPS Patcher обновлен до v1.1 - улучшения конфинга;
+* Добавлено больше модулей-конфликтов;
+* Status Bar Privacy Dot обновлен до v1.2:
+	- Фикс dp на dip;
+	- Сбор с 33го SDK;
+	- Впис версий;
+* GBoard Silk Theme Changer перемещен в LEGACY;
+* GBoard Themes обновлен до v1.5 - удалил MD2 темы;
+* Dolby Atmos обновлен до v1.8 - откат правил из v1.6 что исправляет отвал вывода;
+* WIFI Patcher обновлен до v1.3 - включен SAE WPA3;
+* В Режим удаления/replace/restore добавлены приложения в обычный лист: PixelWallpapers2022, OmniJaws, KidsSupervisionStub, EmergencyInfoGoogleNoUi и DynamicSystemInstallationService а ANGLE перенесен обратно в обычный лист;
+* Switch On/Off Face UnLock IR Camera обновлен до v2.1:
+	- Фикс при отключении IR отключался и пункт фейса на 12+
+	- Обновлен AUX Package List;
+	- Сменил MODID на Face UnLock IR Changer
+* Background Blur обновлен до v1.2 - добавил выбор отключить или включить;
+* Universal GMS Doze обновлен до v1.8 - из изменений ровно нихуя как и в оригинале;
+* Show Hide Navigation Bar сменил MODID на Navigation Bar Visibility Changer;
+* Single User Enabler сменил MODID на Multi Users Changer;
+* Multi Users Changer обновлен до v1.2:
+	- Выбор на включить или отключить;
+	- Установка как не MAGISK;
+* Cache Cleaner обновлен до v2.9 - добавлено глубокое удаление LP;
+* Kill Logger обновлен до v2.9 - добавлено больше строк;
+* В AIST написал в Fixing 96kHz Or 192kHz For Audio Output что может сломать вывод для ViperFX;
+* Rounded UI обновлен до v3.3 - сбор с 33го SDK и впис версий;
+* Pills обновлен до v2.1 - сбор с 33го SDK и впис версий;
+* Pills Colors обновлен до v1.6 - сбор с 33го SDK и впис версий;
+* Pills Height обновлен до v1.5 - сбор с 33го SDK и впис версий;
+* Status Bar Increase Number Notification Icons обновлен до v2.0 - сбор с 33го SDK и впис версий;
+* Burn In Protection обновлен до v2.1 - сбор с 33го SDK и впис версий;
+* Notification Side Paddings обновлен до v1.5 - сбор с 33го SDK и впис версий;
+* Status Bar Padding обновлен до v1.7 - сбор с 33го SDK и впис версий;
+* Status Bar Icon Space обновлен до v1.4 - сбор с 33го SDK и впис версий;
+* Status Bar Icon Size обновлен до v1.2 - сбор с 33го SDK и впис версий;
+* Status Bar Clock Size обновлен до v1.2 - сбор с 33го SDK и впис версий;
+* QS Count Icon And Rows обновлен до v1.7 - сбор с 33го SDK и впис версий;
+* QR Code Scanner On Lock Screen обновлен до v1.1 - сбор с 33го SDK и впис версий;
+* Множественные фиксы, улучшения, вырезы старого говна и оптимизация.
 #### 23.10.22 (90) ####
 * AIST обновлен до v1.6 (1310) - фикс привязки некоторых TWS через приложения;
 * Energized Hosts обновлен до v296.21;
@@ -1771,7 +1816,7 @@
 		- Значение 20;
 		- Значение 25;
 		- Значение 30;
-* Пункт (ALL) - (GBoard Silk Theme Changer) включает/выключает новый дизайн из 12ки:
+* Пункт (ALL) (LEGACY) - (GBoard Silk Theme Changer) включает/выключает новый дизайн из 12ки:
 	- Включить;
 	- Выключить;
 		- Включить пузыри клавиш;
@@ -1796,7 +1841,7 @@
 				- 4dip;
 				- 6dip;	
 * Пункт (MAGISK) (NOT MIUI) (10) - (GPay Power Menu) (он же альтернатива меню выключения расположена с низу);
-* Пункт (ALL) (10-13.0) (\\) - (RoundedUI) для скругления системы, лаунчеров и приложений которые подтягивают строки из системы (и это лучше VGM);
+* Пункт (ALL) (10-13.0) (\\) - (Rounded UI) для скругления системы, лаунчеров и приложений которые подтягивают строки из системы (и это лучше VGM);
 * Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Burn In Protection) включает смещение пикселей в статус баре, жестовой зоне/зоне NavBar и AOD (работает только на тех прошивках, в которых это встроено но отключено):
 	- Время смещения (в секундах):
 		- Значение 20;
@@ -1879,7 +1924,9 @@
 	- Значение 18sp;
 	- Значение 19sp;
 	- Значение 20sp;
-* Пункт (MAGISK) (NOT MIUI) - (Single User Enabler) убирает пункт пользователей в настройках и отключает Гостя и других пользователей;
+* Пункт (NOT MIUI) - (Multi Users Changer) включает или отключает пункт пользователей в настройках и включает или отключает Гостя и других пользователей:
+	- Включить;
+	- Отключить;
 * Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Status Bar Padding) для увеличения/уменьшения отступов от краев начала статусбара;
 	- Выбрать одно одинаковое значение для обоих сторон;
 	- Выбрать два разных значения для каждой стороны;
@@ -1969,7 +2016,9 @@
 * Пункт (ALL) (NOT MIUI) (12.0-13.0) - (Status Bar Privacy Dot) - можно как полностью отключить точку приватности и освободить пространство справа, так и выбрать оптимальный вариант где и точка будет и места больше:
 	- Disable;
 	- Optimized;
-* Пункт (ALL) (NOT MIUI) (11-13.0) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает эффект размытия в шторке и в некоторых других местах системы;
+* Пункт (ALL) (NOT MIUI) (11-13.0) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает эффект размытия в шторке/недавних и в некоторых других местах системы:
+	- Включить;
+	- Отключить;
 * Пункт (ALL) (NOT MIUI) (\\) - (Boot Animation) смена анимации при запуске телефона на одну из:
 	- Pixel:
 		- Black;
@@ -2011,7 +2060,7 @@
 * Пункт (MAGISK) (NOT MIUI) (10-13.0) (\\) - (Systemless Launcher) установка одного из лаунчеров:
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка Sushi Launcher (SL) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
+	- Установка Sushi Launcher (SL/T) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
 	- Установка Derp Launcher (T) <a href="https://github.com/DerpFest-12/packages_apps_DerpLauncher">GITHUB</a> || <a href="https://t.me/derpfestupdates">TG</a>;
 
 <h3 align=center>Install App From /sdcard/Application</h3>
@@ -2052,7 +2101,7 @@
 	- PATCH_MEDIA_CODECS;
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общие качество звука;
 * Пункт (ALL) - (Increase Bitrate) патчит все файлы media_profiles*.xml в /vendor - улучшает качество записи аудио во многих местах;
-* Пункт (MAGISK) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - (Audio Modification Library) исправляет конфликты вывода аудиомодов между друг другом для их нормальной работы вместе;
+* Пункт (MAGISK) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - (Audio Modification Library) исправляет конфликты вывода аудиомодов между друг другом для их нормальной работы вместе либо фиксит вывод музыки из приложений при установленных аудиомодах;
 * Пункт (MAGISK) - (Audio Library Crackling Fix) для исправления потрескивания аудиобиблиотеки для аудиомодулей, стоковых эквалайзеров или библиотек с проблемами и потрескиванием системного звука/уведомлений;
 
 <h3 align=center>Removal: RSL/RSO/RSTA/RWFSB</h3>
@@ -2096,6 +2145,7 @@
 * Другие приложения:
 	- 404Clock
 	- AEXPapers
+	- ANGLE
 	- APlayer
 	- AbleMusic
 	- AboutBliss
@@ -2163,11 +2213,13 @@
 	- DualClockDigital_L
 	- DuckDuckGo
 	- Duo
+	- DynamicSystemInstallationService
 	- EasterEgg
 	- EasymodeContactsWidget
 	- Eleven
 	- Email
 	- EmergencyInfo
+	- EmergencyInfoGoogleNoUi
 	- EngineerMode
 	- Etar
 	- EvoEgg
@@ -2254,6 +2306,7 @@
 	- Joyose
 	- KLMSAgent
 	- Keep
+	- KidsSupervisionStub
 	- KimciRecorder
 	- KoreanIME
 	- KoreanIMEStub
@@ -2329,6 +2382,7 @@
 	- OPWeather
 	- OPWidget
 	- OdadPrebuilt
+	- OmniJaws
 	- OmniSwitch
 	- OneNote
 	- OneOSLogcat
@@ -2352,6 +2406,7 @@
 	- PixelLiveWallpaperPrebuilt
 	- PixelWallpapers2020
 	- PixelWallpapers2021
+	- PixelWallpapers2022
 	- PlayGames
 	- PowerPoint_SamsungStub
 	- PrebuiltBugle
@@ -2481,7 +2536,6 @@
 <details> 
   <summary>Удаление приложений которые могут повлиять на работу прошивки:</summary>
 
-* ANGLE
 * AmbientSensePrebuilt
 * AndroidMigratePrebuilt
 * AndroidPlatformServices
@@ -2622,7 +2676,7 @@
 		- CloudFlare DNS;
 * Пункт (ALL) (MI8) - (AP & USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для MI8;
 
-<h3 align=center>Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH/LSPosed</h3>
+<h3 align=center>Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH</h3>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin (использование: su -c busybox в терминале (BootMode));
 * Пункт (ALL) (TERMINAL) <a href="https://androidfilehost.com/?w=search&s=sqlite&type=files&sort_by=date&sort_dir=DESC">AFH</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=117626235">4PDA</a> - (SQLite) для bin или xbin (использование: su -c sqlite3 в терминале (BootMode));
@@ -2649,7 +2703,6 @@
 	- d) Detaching;
 	- l) Show DETACH List;
 	- q) Quit;
-* Пункт (MAGISK) (TERMINAL) (8.1-13.0) (ZYGISK) <a href="https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-12-0-simple-magisk-module-edxposed-alternative.4228973/">XDA</a> || <a href="https://github.com/Magisk-Modules-Repo/riru_lsposed">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103972132">4PDA</a> || <a href="https://play.google.com/store/apps/details?id=org.lsposed.manager&hl=ru&gl=US">GP</a> || <a href="https://t.me/LSPosed">TG</a> || <a href="https://t.me/LSPosedArchives">TG</a> - (LSPosed) для многих модулей:
 
 <h3 align=center>Other: FA/LED/FSFM/UAA/SBU/GASL</h3>
 
@@ -2709,7 +2762,7 @@
 	- Tethering;
 	- MIDI;
 	- PTP;
-* Пункт (ALL) (NOT MIUI) (MI8 & POCOF1) - (Switch On/Off Face UnLock IR Camera) включение/отключение разблокировки по IR камере если находит нужные файлы;
+* Пункт (ALL) (NOT MIUI) (MI8 & POCOF1) - (Face UnLock IR Changer) включение/отключение разблокировки по IR камере если находит нужные файлы;
 * Пункт (ALL) (NOT MIUI) (8.1-13.0) - (Force Dark Mode) для принудительного переключения темы в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
 * Пункт (MAGISK & LEGACY) - (Force Idle) для принудительного включения ожидания/простоя;
