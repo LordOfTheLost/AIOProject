@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 01.12.22 (91) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/01.12.2022/AIOPFMD-01.12.22-%2891%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1rEuZF5gvLUqFIUUx80U6WmhZkTQZq4Pa/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/106">TG</a>
+* Версия AIOPFMD: 06.12.22 (92) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/06.12.2022/AIOPFMD-06.12.22-%2892%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1PZqknOGiQtkGGViiKeDhGjRdrSNPysWM/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/108">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,11 @@
 <details>
   <summary>Changelog</summary>
 
+#### 06.12.22 (92) ####
+* В Режим удаления/replace/restore добавлены приложения в обычный лист: ParallelSpace, ParallelSpacePrebuilt, EmergencyInfoGms и MtkFMRadio;
+* Background Blur обновлен до v1.3 - добавлена доп строка для говнопрошивок;
+* Face UnLock IR Changer обновлен до v2.2 - добавлена поддержка фейса с PA на 13ке (пиздец);
+* Вернул автоматическую установку SELinux в Permissive для Dolby Atmos потому-что вылетало у некоторых если ставить начисто (если у меня всё работает то у других логично никогда ничего не работает).
 #### 01.12.22 (91) ####
 * Lawnchair обновлен до v2.7 - обновил Lawnicons до v2.8.1;
 * Energized Hosts обновлен до v331.21;
@@ -36,9 +41,9 @@
 * WIFI Patcher обновлен до v1.3 - включен SAE WPA3;
 * В Режим удаления/replace/restore добавлены приложения в обычный лист: PixelWallpapers2022, OmniJaws, KidsSupervisionStub, EmergencyInfoGoogleNoUi и DynamicSystemInstallationService а ANGLE перенесен обратно в обычный лист;
 * Switch On/Off Face UnLock IR Camera обновлен до v2.1:
-	- Фикс при отключении IR отключался и пункт фейса на 12+
+	- Фикс при отключении IR отключался и пункт фейса на 12+;
 	- Обновлен AUX Package List;
-	- Сменил MODID на Face UnLock IR Changer
+	- Сменил MODID на Face UnLock IR Changer;
 * Background Blur обновлен до v1.2 - добавил выбор отключить или включить;
 * Universal GMS Doze обновлен до v1.8 - из изменений ровно нихуя как и в оригинале;
 * Show Hide Navigation Bar сменил MODID на Navigation Bar Visibility Changer;
@@ -2219,6 +2224,7 @@
 	- Eleven
 	- Email
 	- EmergencyInfo
+	- EmergencyInfoGms
 	- EmergencyInfoGoogleNoUi
 	- EngineerMode
 	- Etar
@@ -2354,6 +2360,7 @@
 	- MiuiVideoGlobal
 	- MiuiVideoPlayer
 	- MozillaNlpBackend
+	- MtkFMRadio
 	- Music
 	- Music2
 	- MusicFX
@@ -2394,6 +2401,8 @@
 	- Opera_data
 	- Ornament
 	- Papers
+	- ParallelSpace
+	- ParallelSpacePrebuilt
 	- PartnerBookmarksProvider
 	- PaymentService
 	- PersonalAssistant

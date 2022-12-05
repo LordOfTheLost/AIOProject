@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="01.12.22 (91)"
+VAIOPFMD="06.12.22 (92)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -49,7 +49,7 @@ IDQSCP="QSContentPadding"; VIPQSCP="v1.1"
 IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"
 IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.7"
 IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.2"
-IDEBB="BackgroundBlur"; VIPEBB="v1.2"
+IDEBB="BackgroundBlur"; VIPEBB="v1.3"
 IDBA="BootAnimation"; VIPBA="v1.9"
 IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.2"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.9"
@@ -105,7 +105,7 @@ IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.6"
 IDUSBSUC="USBSUC"; VIPUSBSUC="v1.1"
-IDFULIRC="FaceUnLockIRChanger"; VIPFULIRC="v2.1"
+IDFULIRC="FaceUnLockIRChanger"; VIPFULIRC="v2.2"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
@@ -432,6 +432,7 @@ EasymodeContactsWidget
 Eleven
 Email
 EmergencyInfo
+EmergencyInfoGms
 EmergencyInfoGoogleNoUi
 EngineerMode
 Etar
@@ -567,6 +568,7 @@ MiuiVideo
 MiuiVideoGlobal
 MiuiVideoPlayer
 MozillaNlpBackend
+MtkFMRadio
 Music
 Music2
 MusicFX
@@ -607,6 +609,8 @@ OperaMax_PreinstallProvider
 Opera_data
 Ornament
 Papers
+ParallelSpace
+ParallelSpacePrebuilt
 PartnerBookmarksProvider
 PaymentService
 PersonalAssistant
@@ -869,6 +873,7 @@ OneUIHome
 PPL
 SparkOSLauncher_Port
 SushiLauncher_Port
+SyberiaLauncher_Port
 Systemless_AsusLauncher
 Systemless_CRLauncher
 Systemless_CorvusLauncher
@@ -1255,6 +1260,7 @@ FINDER () {
 case $1 in
 -mm) local FIND=$2; for TARGET in $FIND; do if [ -d $MODPATH/$TARGET ] || [ -d $MODPATHUPD/$TARGET ]; then return 0; break; fi; done; return 1;;
 -nmp) local FIND=$2; for TARGET in $FIND; do if [ -e $TARGET ]; then return 0; break; fi; done; return 1;;
+-aiopfmdph) if [ $BOOTMODE != true ]; then local FIND=$2; for TARGET in $FIND; do if [ -e $TARGET ]; then return 0; break; fi; done; return 1; else return 1; fi;;
 *) local FIND=$1; for TARGET in $FIND; do if [ -e $MAGISKMP$TARGET ]; then return 0; break; fi; done; return 1;;
 esac
 }
@@ -4297,7 +4303,7 @@ done
 { #UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji
 
 IPP () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pills ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/pills"; then
 UIP -s "$MSGFI Pills, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Restore Stock Gestures Overlay..."
@@ -4407,7 +4413,7 @@ fi
 }
 
 IPPC () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pillscolors ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/pillscolors"; then
 UIP -s "$MSGFI Pills Colors, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -4469,7 +4475,7 @@ done
 }
 
 IPPH () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pillsheight ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/pillsheight" ]; then
 UIP -s "$MSGFI Pills Height, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -4830,7 +4836,7 @@ SET_PERM_RM -msgdi
 }
 
 IPSBINNI () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbarincreasenumbernotificationicons ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/statusbarincreasenumbernotificationicons"; then
 UIP -s "$MSGFI Status Bar Increase Number Icons, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -4875,7 +4881,7 @@ MMPR -v "GPay Power Menu" "$VIPGPPM" "Enable Google Pay Quick Wallet Access In T
 }
 
 IPRUI () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/roundedui ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/roundedui"; then
 UIP -s "$MSGFI Rounded UI, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -4905,7 +4911,7 @@ SET_PERM_RM -msgdi
 }
 
 IPBIP () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/burninprotection ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/burninprotection"; then
 UIP -s "$MSGFI Burn In Protection, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -4944,7 +4950,7 @@ fi
 }
 
 IPNSP () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/notificationsidepaddings ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/notificationsidepaddings"; then
 UIP -s "$MSGFI Notification Side Paddings, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -4977,7 +4983,7 @@ fi
 }
 
 IPSBISP () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbariconspace ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/statusbariconspace"; then
 UIP -s "$MSGFI Status Bar Icon Space, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5013,7 +5019,7 @@ fi
 }
 
 IPSBISI () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbariconsize ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/statusbariconsize"; then
 UIP -s "$MSGFI Status Bar Icon Size, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5045,7 +5051,7 @@ fi
 }
 
 IPSBCS () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbarclocksize ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/statusbarclocksize"; then
 UIP -s "$MSGFI Status Bar Clock Size, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5101,7 +5107,7 @@ SET_PERM_RM -msgdi
 }
 
 IPSBP () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbarpadding ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/statusbarpadding"; then
 UIP -s "$MSGFI Status Bar Padding, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5177,7 +5183,7 @@ fi
 }
 
 IPQSCIAR () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/qscounticonandrows ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/qscounticonandrows"; then
 UIP -s "$MSGFI QS Count Icon And Rows, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5225,7 +5231,7 @@ fi
 }
 
 IPSBPD () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/statusbarprivacydot ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/statusbarprivacydot"; then
 UIP -s "$MSGFI Status Bar Privacy Dot, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5265,18 +5271,18 @@ if KEYCHOOSE; then EBB="1"; EBBT="Enable"; else EBB="0"; EBBT="Disable"; fi
 UIP "Installing Background Blur $IAMM"
 if $MAGISK; then
 PTMFI -nmp "$IDEBB"
-echo "ro.surface_flinger.supports_background_blur=$EBB" > $MODPATH/$MODID/system.prop
+echo -e "ro.surface_flinger.supports_background_blur=$EBB\nro.sf.blurs_are_expensive=$EBB" > $MODPATH/$MODID/system.prop
 MMPR -v "Background Blur" "$VIPEBB" "$EBBT Background Blur For QS, Launcher Resents, Etc"
 SET_PERM_RM
 else
 BUCKUPER -bp
-echo -e "\n#Background Blur\nro.surface_flinger.supports_background_blur=$EBB" >> $IPSBP
+echo -e "\n#Background Blur\nro.surface_flinger.supports_background_blur=$EBB\nro.sf.blurs_are_expensive=$EBB" >> $IPSBP
 fi
 UIP "$MSGDI"
 }
 
 IPBA () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/bootanimation ] && [ -f $IPPM/bootanimation.zip.bak ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/bootanimation $IPPM/bootanimation.zip.bak"; then
 UIP -s "$MSGFI Boot Animation, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5347,7 +5353,7 @@ fi
 }
 
 IPIOSEMOJI () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/iosemoji ] && [ -f $IPSF/NotoColorEmoji.ttf.bak ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/iosemoji $IPSF/NotoColorEmoji.ttf.bak"; then
 UIP -s "$MSGFI IOS Emoji, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5407,7 +5413,7 @@ SET_PERM_RM -msgdi
 }
 
 IPMUIS () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/mediauisounds ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/mediauisounds"; then
 UIP -s "$MSGFI Media UI Sounds, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -5502,7 +5508,7 @@ MMPR -v "Wi-Fi & Mobile Data QS Old Style" "$VIPGPPM" "Wi-Fi & Mobile Data QS Ol
 }
 
 IPQRCSOLS () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/qrcodescanneronlockscreen ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/qrcodescanneronlockscreen"; then
 UIP -s "$MSGFI QR Code Scanner On Lock Screen, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -6194,7 +6200,7 @@ DIR=`find $MODPATH/$MODID$MIPSV -type d`
 for DIRS in $DIR; do chown 0.2000 $DIRS; done
 chcon u:object_r:hal_dms_default_exec:s0 $MODPATH/$MODID$MIPSVBHW/vendor.dolby.hardware.dms@*-service
 UIP "$MSGDI"
-WCANFTP "-alcf -aml"
+WCANFTP "-sl -alcf -aml"
 }
 
 IPNLS () {
@@ -7444,7 +7450,7 @@ WCANFTP "-alcf"
 }
 
 IPSAQ () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/systemaudioquality ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/systemaudioquality"; then
 UIP -s "$MSGFI System Audio Quality, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -7525,7 +7531,7 @@ UIP "$MSGDI"
 }
 
 IPIB () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/increasebitrate ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/increasebitrate"; then
 UIP -s "$MSGFI Increase Bitrate, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -9198,7 +9204,7 @@ SET_PERM_RM -msgdi
 { #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 
 IPGPSP () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/gpspatcher ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/gpspatcher"; then
 UIP -s "$MSGFI GPS Patcher, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -9276,7 +9282,7 @@ SET_PERM_RM -msgdi
 }
 
 IPWIFIP () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/wifipatcher ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/wifipatcher"; then
 UIP -s "$MSGFI Wifi Patcher, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -9617,7 +9623,7 @@ UIP "$MSGDI"
 { #Utilities: BB/SQLITE/SELC/CC/MMFR/DETACH
 
 IPBB () {
-if [ $BOOTMODE != true ] && [ -f $SYSTEM/$BUSYBOX/busybox ]; then
+if FINDER -aiopfmdph "$SYSTEM/$BUSYBOX/busybox"; then
 UIP -s "$MSGFI Brutal BusyBox In $BUSYBOX, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Remove Symlinking BB Applets"
@@ -9654,7 +9660,7 @@ UIP "Usage:" "Run \"su -c busybox\" In Terminal On BootMode"
 }
 
 IPSQL() {
-if [ $BOOTMODE != true ] && [[ -f $IPSB/sqlite3 || -f $IPSXB/sqlite3 ]]; then
+if FINDER -aiopfmdph "$IPSB/sqlite3 $IPSXB/sqlite3"; then
 UIP -s "$MSGFI SQLite, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Remove SQLite"
@@ -10166,7 +10172,7 @@ WCANFTP "-sqlite"
 { #Other: FA/LED/FSFM/UAA/SBU/GASL
 
 IPFPA () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/pfpm ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/pfpm"; then
 UIP -s "$MSGFI Fingerprint Actions, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
@@ -10785,7 +10791,7 @@ SET_PERM_RM -msgdi
 }
 
 IPKL () {
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/killlogger ]; then
+if FINDER -aiopfmdph "$AIOPFMDPH/killlogger"; then
 UIP -s "$MSGFI Kill Logger, Remove?" "$MSGVU Yes $MSGEEFTC" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Restore Stock Files"
@@ -11113,7 +11119,8 @@ fi
 
 IPFULIRC () {
 if CHECKER "-device" "dipper" || CHECKER "-device" "beryllium"; then
-if [ $BOOTMODE != true ] && [ -f $AIOPFMDPH/fulirc ]; then UIP -s "$MSGFI Face UnLock IR Changer, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if FINDER -aiopfmdph "$AIOPFMDPH/fulirc"; then
+UIP -s "$MSGFI Face UnLock IR Changer, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "Removing..."
 BUCKUPER -r "$IPPVO/FaceUnlockService__auto_generated_rro_vendor.apk"
@@ -11121,7 +11128,7 @@ rm -f $AIOPFMDPH/fulirc
 UIP "$MSGDRM"
 fi
 else
-if [ -f $IPSEP/com.motorola.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.aospextended.faceunlock.xml ]; then
+if [ -f $IPSEP/com.motorola.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.aospextended.faceunlock.xml ] || [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
 UCSA "Install Face UnLock IR Changer $VIPFULIRC?" "IPFULIRCS" "$IDFULIRC"
 fi
 fi
@@ -11141,12 +11148,16 @@ elif [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ]; then
 FUPNXML="com.crdroid.faceunlock"
 elif [ -f $IPSEP/privapp-permissions-com.aospextended.faceunlock.xml ]; then
 FUPNXML="com.aospextended.faceunlock"
+elif [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
+FUPNXML="co.aospa.sense"
 fi
 if $MAGISK; then
 PTMFI -nmp "$IDFULIRC"
-echo -e "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,$FUPNXML\nro.face_unlock_service.enabled=true" > $MODPATH/$MODID/system.prop
+echo "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,$FUPNXML\nro.face_unlock_service.enabled=true" > $MODPATH/$MODID/system.prop
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "\nro.face.moto_unlock_service.cam_id=$SWITCHIR" > $MODPATH/$MODID/system.prop
+elif [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
+echo -e "\nro.face.sense_service.camera_id=$SWITCHIR" > $MODPATH/$MODID/system.prop
 else
 mkdir -p $MODPATH/$MODID$MIPPVO
 cp -f $TMPDIR/FULIRC/FaceUnlockService-$FUPNXML-$MSGSWITCHIR.apk $MODPATH/$MODID$MIPPVO/FaceUnlockService__auto_generated_rro_vendor.apk
@@ -11157,6 +11168,8 @@ BUCKUPER -bf "$IPSBP"
 echo -e "\n# Face UnLock IR Changer\nvendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,$FUPNXML\nro.face_unlock_service.enabled=true" >> $IPSBP
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "\n# Face UnLock IR Changer\nro.face.moto_unlock_service.cam_id=$SWITCHIR" >> $IPSBP
+elif [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
+echo -e "\n# Face UnLock IR Changer\nro.face.sense_service.camera_id=$SWITCHIR" >> $IPSBP
 else
 touch $AIOPFMDPH/fulirc
 BUCKUPER -s "$IPPVO/FaceUnlockService__auto_generated_rro_vendor.apk"
