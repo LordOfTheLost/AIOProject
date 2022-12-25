@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 06.12.22 (92) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/06.12.2022/AIOPFMD-06.12.22-%2892%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1PZqknOGiQtkGGViiKeDhGjRdrSNPysWM/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/108">TG</a>
+* Версия AIOPFMD: 25.12.22 (93) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.12.2022/AIOPFMD-25.12.22-%2893%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1gF8V8q1oegeE_zI5eh60crY8w4kqtK_J/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/110">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,12 @@
 <details>
   <summary>Changelog</summary>
 
+#### 25.12.22 (93) ####
+* Удалена реализация /system/bin/aiopfmdph и всё что было связано с этой папкой;
+* Burn In Protection обновлен до v2.2 - улучшена поддержка Smart Pixels на оболочках от декабря;
+* Energized Hosts откат до v296.21 - фикс первоначалки, да и он более цельный;
+* Sushi и Derp не будут работать на декабрьском патче;
+* NlSound удален.
 #### 06.12.22 (92) ####
 * В Режим удаления/replace/restore добавлены приложения в обычный лист: ParallelSpace, ParallelSpacePrebuilt, EmergencyInfoGms и MtkFMRadio;
 * Background Blur обновлен до v1.3 - добавлена доп строка для говнопрошивок;
@@ -2081,22 +2087,6 @@
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6 и  v2.7.2.1 в зависимости от версии Android;
 * Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX.
 * Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet;
-* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/nlsound_updates">TG Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=103375912">4PDA</a> || <a href="https://github.com/Briclyaz/NLSound_module_QCom">GITHUB</a> - (NLSound) улучшает качество звука:
-	- PATCH_DEEP_BUFFER;
-	- PATCH_VOLUMES;
-	- PATCH_MICROPHONE;
-	- PATCH_IIR;
-	- PATCH_AUDIO_PLATFORM_INFO;
-	- PATCH_COMPANDERS;
-	- PATCH_AUDIO_CODEC;
-	- PATCH_DEVICE_FEATURES;
-	- PATCH_DIRAC;
-	- GENERAL_TWEAKS;
-	- PATCH_MIXER;
-	- PATCH_IMPROVE_BLUETOOTH;
-	- PATCH_AUDIO_POLICY;
-	- PATCH_AUDIO_POLICY_CONFIGURATION;
-	- PATCH_MEDIA_CODECS;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=116366772">4PDA</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
@@ -2114,7 +2104,7 @@
 * Пункт (RECOVERY) - (Reset Screen Lock) удаляет Пароль/Граф.Ключ/Пин-Код/и тд. (прошивать если пишет неверный пароль и тд.);
 * Пункт (RECOVERY) - (Remove All Swift Installer Overlays) удаление слоев Swift Installer, его кэша и модуля Magisk (APK не удаляет, полезно если у вас с ним проблемы/bootloop/softloop и тд.);
 * Пункт (ALL) (\\) - (Remove/Replace/Restore Mode) (список приложений будет пополнятся). Удаляйте/Затирайте что знаете, я разжёвывать не буду - <a href="https://4pda.to/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску (4PDA)</a>:
-	- Если находит /system/bin/aiopfmdph/Replace.txt:
+	- Если находит /system/app/Replace.txt:
 	- Восстановить apk;
 		- Восстановить Apk с подтверждением каждого только для Сток листа и APPRMLIST.conf;
 		- Восстановить Apk без подтверждения каждого только для Сток листа и APPRMLIST.conf;
@@ -2127,7 +2117,7 @@
 					- Искать что содержится в APPRMLIST.conf и в патче;
 					- Искать только то, что содержится в APPRMLIST.conf;
 				- Если не находит /sdcard/APPRMLIST.conf:
-					- Удаление из под AIL.txt который создается в /system/bin/aiopfmdph если устанавливали приложения из под Пункта установки своих приложений без Magisk - Потому что в патче нету Package Name всех приложений в мире - выбор появляется только если находит AIL.txt;
+					- Удаление из под AIL.txt который создается в /system/app/aiopfmdph если устанавливали приложения из под Пункта установки своих приложений без Magisk - Потому что в патче нету Package Name всех приложений в мире - выбор появляется только если находит AIL.txt;
 					- Удаление приложений которые не влияют на работу прошивки (перенос с AIOIARPFMD и улучшенный список - для обычных пользователей рекомендую с выбором на каждый разумеется но я пользуюсь этим списком и удаляю все что в нем);
 					- Удаление приложений которые могут повлиять на работу прошивки - они лишают GApps и много другого (список смотрите и возможен отвал всего);
 					- (NOT MIUI) Удаление лаунчеров;
