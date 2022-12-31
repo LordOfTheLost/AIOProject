@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="25.12.22 (93)"
+VAIOPFMD="31.12.22 (94)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -58,9 +58,9 @@ IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
 IDQRCSOLS="QRCSOLS"; VIPQRCSOLS="v1.1"
 #Launchers: Shady/Lawnchair/Sushi/Derp
 IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIPSLSHADYR="v2021.11.28"; VCIPSLSHADYR="20211128"
-IDSLLAWNSL="Systemless_Lawnchair"; VIPSLLAWNSL="v2.7"; VIPSLLAWNASL="12.1.0 Alpha 4"
+IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v2.8"; VIPSLLAWNASL="12.1.0 Alpha 4"; VIPSLLAWNAT="12.1.0 Dev"
 IDSLDERP="Systemless_DerpLauncher"; VIPSLDERP="v1.3"; VIPSLDERPTA="v13"
-IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHISLA="v5.0"; VIPSLSUSHITA="v8.5"
+IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHISLA="v5.0"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.5"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.8"
@@ -104,7 +104,7 @@ IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.6"
 IDUSBSUC="USBSUC"; VIPUSBSUC="v1.1"
-IDFULIRC="FaceUnLockIRChanger"; VIPFULIRC="v2.2"
+IDFULIRC="FaceUnLockIRChanger"; VIPFULIRC="v2.3"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
@@ -862,6 +862,7 @@ TrebuchetQuickStep
 "
 
 MMLAUNCHERLIST="
+Amr_Launcher
 CherishLauncher_Port
 CorvusOSLauncher_Port
 ExtendedOSLauncher_Port
@@ -893,6 +894,7 @@ TequilaOSLauncher_Port
 asuslauncher
 com.pixelated.launcher
 crDroidLauncher_Port
+lawnchair.app
 quickstepswitcher
 quickswitch_terminal
 ztelauncher
@@ -3751,11 +3753,9 @@ CHECKER -mmupd "$IDQRCSOLS" "$VIPQRCSOLS" "IPQRCSOLSS"
 #Launchers: Shady/Lawnchair/Sushi/Derp
 if $ATEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYQ" "$VCIPSLSHADYQ" "IPSLSSHADY"; fi
 if $AELEVEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYR" "$VCIPSLSHADYR" "IPSLSSHADY"; fi
-if $ATWELVEL; then
-CHECKER -mmupd "$IDSLLAWNSL" "$VIPSLLAWNSL" "IPSLLAWNASL"
-fi
+if $ATWELVEL || $ATHIRTEEN; then CHECKER -mmupd "$IDSLLAWN" "$VIPSLLAWN" "IPSLLAWNA"; fi
 if $ATHIRTEEN; then CHECKER -mmupd "$IDSLDERP" "$VIPSLDERP" "IPSLDERPT"; fi
-if $ATWELVEL || $ATHIRTEEN; then CHECKER -mmupd "$IDSLSUSHI" "$VIPSLSUSHI" "IPSLSSUSHI"; fi
+if $ATWELVEL; then CHECKER -mmupd "$IDSLSUSHI" "$VIPSLSUSHI" "IPSLSSUSHI"; fi
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
 CHECKER -mmupd "$IDVFX" "$VIPVFX" "IPVFXS"
 CHECKER -mmupd "$IDVFXP" "$VIPVFXP" "IPVFXPS"
@@ -5086,7 +5086,7 @@ SET_PERM_RM -msgdi
 
 IPSL () {
 if $MAGISK && [ $MIUI != true ] && [[ $ATEN || $AELEVEN || $ATWELVEL || $ATHIRTEEN ]]; then
-UCSA -ent "Install Systemless Launcher?" "IPSLS" "$IDSLLAWNSL $IDSLSHADY $IDSLSUSHI $IDSLDERP"
+UCSA -ent "Install Systemless Launcher?" "IPSLS" "$IDSLLAWN $IDSLSHADY $IDSLSUSHI $IDSLDERP"
 fi
 }
 
@@ -5102,19 +5102,19 @@ fi
 if KEYCHOOSE; then IPSLSSHADY; fi
 fi
 fi
-if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
-UIP -s "Install Lawnchair $VIPSLLAWNASL - $VIPSLLAWNSL?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
-if KEYCHOOSE; then IPSLLAWNASL; fi
-fi
 if [ $SYSTEMLESSLAUNCHERS != true ]; then
-if $ATWELVEL || $ATHIRTEEN; then
-if $ATWELVEL; then
-UIP -s "Install Sushi Launcher $VIPSLSUSHISLA - $VIPSLSUSHI?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if $AELEVEN || $ATHIRTEEN; then
+if $AELEVEN; then
+UIP -s "Install Lawnchair $VIPSLLAWNASL - $VIPSLLAWN?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 elif $ATHIRTEEN; then
-UIP -s "Install Sushi Launcher $VIPSLSUSHITA - $VIPSLSUSHI?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+UIP -s "Install Lawnchair $VIPSLLAWNAT - $VIPSLLAWN?" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 fi
+if KEYCHOOSE; then IPSLLAWNA; fi
+fi
+fi
+if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
+UIP -s "Install Sushi Launcher $VIPSLSUSHISLA - $VIPSLSUSHI?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then IPSLSSUSHI; fi
-fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $ATHIRTEEN; then
 UIP -s "Install Derp Launcher $VIPSLDERPTA - $VIPSLDERP?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
@@ -5153,16 +5153,22 @@ fi
 IPSLSE
 }
 
-IPSLLAWNASL () {
+IPSLLAWNA () {
 UIP "Installing Lawnchair $IAMM"
-PTMFI -np "$IDSLLAWNSL" "$MMLAUNCHERLIST"
+PTMFI -np "$IDSLLAWN" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
 UZTPN "$MODID-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
+if $ATWELVEL; then
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnfeed/Lawnfeed.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnicons/Lawnicons.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
+fi
 APKPERM "$TMPDIR/$MODID$MIPSPA/Lawnchair/Lawnchair.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
-MMPR -v "Systemless Lawnchair" "$VIPSLLAWNSL" "Systemlessly Install Lawnchair For Android 12.1 With Recents UI Support"
+if $ATWELVEL; then
+MMPR -v "Systemless Lawnchair" "$VIPSLLAWN" "Systemlessly Install Lawnchair For Android 12.1 With Recents UI Support"
+elif $ATHIRTEEN; then
+MMPR -v "Systemless Lawnchair" "$VIPSLLAWN" "Systemlessly Install Lawnchair For Android 13.0 With Recents UI Support"
+fi
 IPSLSE
 }
 
@@ -5173,11 +5179,7 @@ SYSTEMLESSLAUNCHERS=true
 UZTPN "$IDSLSUSHI-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
 APKPERM "$TMPDIR/$MODID$MIPSPA/Launcher3QuickStep/Launcher3QuickStep.apk" "$TMPDIR/$MODID$MIPSEP"; HAPWL "$TMPDIR/$MODID$MIPSES"
-if $ATWELVEL; then
 MMPR -v "Systemless Sushi Launcher" "$VIPSLSUSHI" "Systemlessly Install Sushi Launcher For Android 12.1 With Recents UI Support"
-elif $ATHIRTEEN; then
-MMPR -v "Systemless Sushi Launcher" "$VIPSLSUSHI" "Systemlessly Install Sushi Launcher For Android 13.0 With Recents UI Support"
-fi
 IPSLSE
 }
 
@@ -8604,7 +8606,7 @@ exit 0" > $MODPATH/$MODID/service.sh
 cp -f $TMPDIR/NFQTTL/nfqttl-$ARCH $MODPATH/$MODID/nfqttl
 if $BOOTMODE; then
 pkill -9 nfqttl
-if $MODPATH/$MODID/nfqttl -d -s4; then
+if $MODPATH/$MODID/nfqttl -d -s4 >/dev/null; then
 UIP "Run nfqttl Success!"
 else
 UIP "Run nfqttl Fail!"
@@ -10382,7 +10384,7 @@ FUPNXML="co.aospa.sense"
 fi
 if $MAGISK; then
 PTMFI -nmp "$IDFULIRC"
-echo "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,$FUPNXML\nro.face_unlock_service.enabled=true" > $MODPATH/$MODID/system.prop
+echo "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,org.lineageos.aperture.dev,$FUPNXML\nro.face_unlock_service.enabled=true" > $MODPATH/$MODID/system.prop
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "\nro.face.moto_unlock_service.cam_id=$SWITCHIR" > $MODPATH/$MODID/system.prop
 elif [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
@@ -10394,7 +10396,7 @@ fi
 MMPR -v "Face UnLock IR Changer" "$VIPFULIRC" "Face UnLock IR Changer For MI8/POCOF1 - Set On: $MSGSWITCHIR"
 else
 BUCKUPER -bf "$IPSBP"
-echo -e "\n# Face UnLock IR Changer\nvendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,$FUPNXML\nro.face_unlock_service.enabled=true" >> $IPSBP
+echo -e "\n# Face UnLock IR Changer\nvendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,org.lineageos.aperture.dev,$FUPNXML\nro.face_unlock_service.enabled=true" >> $IPSBP
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "\n# Face UnLock IR Changer\nro.face.moto_unlock_service.cam_id=$SWITCHIR" >> $IPSBP
 elif [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then

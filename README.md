@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 25.12.22 (93) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.12.2022/AIOPFMD-25.12.22-%2893%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1gF8V8q1oegeE_zI5eh60crY8w4kqtK_J/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/110">TG</a>
+* Версия AIOPFMD: 31.12.22 (94) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.12.2022/AIOPFMD-31.12.22-%2894%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1YJJwBXMP1qOZw2PvucOnAopndeEg_bD-/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/112">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,11 @@
 <details>
   <summary>Changelog</summary>
 
+#### 31.12.22 (94) ####
+* Sushi Launcher для 13.0 удален;
+* Добавлена установка Lawnchair для 13.0 (на патче от декабря не тестировался);
+* Face Un Lock IR Changer обновлен до v2.3 - добавлен org.lineageos.aperture.dev (не работает на ласт CR и может ещё на каких-то но уже заебали кривые LOS Based так что похуй);
+* С первым днем лета.
 #### 25.12.22 (93) ####
 * Удалена реализация /system/bin/aiopfmdph и всё что было связано с этой папкой;
 * Burn In Protection обновлен до v2.2 - улучшена поддержка Smart Pixels на оболочках от декабря;
@@ -2070,8 +2075,8 @@
 
 * Пункт (MAGISK) (NOT MIUI) (10-13.0) (\\) - (Systemless Launcher) установка одного из лаунчеров:
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка Sushi Launcher (SL/T) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
+	- Установка Lawnchair Launcher (SL/T) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+	- Установка Sushi Launcher (SL) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
 	- Установка Derp Launcher (T) <a href="https://github.com/DerpFest-12/packages_apps_DerpLauncher">GITHUB</a> || <a href="https://t.me/derpfestupdates">TG</a>;
 
 <h3 align=center>Install App From /sdcard/Application</h3>
