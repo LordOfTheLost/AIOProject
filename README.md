@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.12.22 (94) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.12.2022/AIOPFMD-31.12.22-%2894%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1YJJwBXMP1qOZw2PvucOnAopndeEg_bD-/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/112">TG</a>
+* Версия AIOPFMD: 31.01.23 (95) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.01.2023/AIOPFMD-31.01.23-%2895%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1ImSpIjoTVACoTl0uPKXEMdux9Tm6CA0G/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/115">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,24 @@
 <details>
   <summary>Changelog</summary>
 
+#### 31.01.23 (95) ####
+* В Режим удаления/replace/restore добавлены приложения в обычный лист: StagWalls и BtHelper;
+* Burn In Protection обновлен до v2.3 - включена работа на прошивках от декабря/января;
+* AML обновлен до v4.3 - добавлена поддержка ViperFX RE (сам ViperFX RE не добавлен так как это даже не отвалище);
+* Rounded UI до v3.4 - закруглил иконку записи экрана а то это даже не пиздец;
+* Force DEV & ADB обновлен до v1.7 - убран доп чеккер и добавлен выбор на ro.secure (альтернатива eng билда для дебагинга);
+* Lawnchair обновлен до v2.9:
+	- Обновил Lawnicons до v2.9;
+	- Фикс показа для 12.1;
+	- Для декабря и января обновил до 12.1.0 Dev cce28ae;
+	- Lawnicons теперь ставятся и для 12.1.0 Dev;
+* Добавлен Show Health Storage для UFS и EMMC если доступно - показывает примерное состояние памяти (альтернатива инфы из SSD);
+* Audio Library Crackling Fix обновлен до v1.3 - убран downmix;
+* AIST обновлен до v1.7 (3001) - со всеми фиксами, улучшениями и пунктами которые были;
+* Cache Cleaner обновлен до v3.0 - улучшено удаление LP;
+* Derp Launcher удален;
+* Добавлена установка AMR Launcher'а для 13.0 (База Sushi);
+* Интересный факт: DETACH не работает после обновлений хуюгла и по тестам других никакой вообще не работает.
 #### 31.12.22 (94) ####
 * Sushi Launcher для 13.0 удален;
 * Добавлена установка Lawnchair для 13.0 (на патче от декабря не тестировался);
@@ -2071,13 +2089,12 @@
 	- Включить;
 	- Выключить;
 
-<h3 align=center>Launchers: Shady/Lawnchair/Sushi/Derp</h3>
+<h3 align=center>Launchers: Shady/Lawnchair/Sushi/AMR</h3>
 
 * Пункт (MAGISK) (NOT MIUI) (10-13.0) (\\) - (Systemless Launcher) установка одного из лаунчеров:
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка Lawnchair Launcher (SL/T) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка Sushi Launcher (SL) <a href="https://github.com/RiceDroid/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
-	- Установка Derp Launcher (T) <a href="https://github.com/DerpFest-12/packages_apps_DerpLauncher">GITHUB</a> || <a href="https://t.me/derpfestupdates">TG</a>;
+	- Установка Sushi Launcher (AMR) (SL/T) <a href="https://github.com/ricedroidOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
 
 <h3 align=center>Install App From /sdcard/Application</h3>
 
@@ -2173,6 +2190,7 @@
 	- Browser
 	- Browser2
 	- BrowserXposed
+	- BtHelper
 	- CMFileManager
 	- CalculatorGoogle
 	- CalculatorGooglePrebuilt
@@ -2471,6 +2489,7 @@
 	- SoundAmplifierPrebuilt
 	- SparkWallpaperStub
 	- SprdQuickSearchBox
+	- StagWalls
 	- StatusBarLyricExt
 	- Street
 	- Superiorwalls
@@ -2708,7 +2727,7 @@
 	- l) Show DETACH List;
 	- q) Quit;
 
-<h3 align=center>Other: FA/LED/FSFM/UAA/SBU/GASL</h3>
+<h3 align=center>Other: FA/LED/FSFM/UAA/SBU/SHS/GASL</h3>
 
 * Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок/телефонов у которых есть uinput-fpc/gf/goodix.kl файлы с выборами:
 	- Кнопка Включения;
@@ -2743,6 +2762,7 @@
 * Пункт (ONLY MAGISK IN RECOVERY) (MIUI) - (Fix Softloop For Miui ) фикс бутлупа на Miui при DPI 800+ (кто сталкивался - тот знает зачем он);
 * Пункт (RECOVERY) - (Unfreeze All Applications) разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);
 * Пункт (ALL) - (Show Battery Usage) проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
+* Пункт (ALL) (UFS & EMMC) - (Show Health Storage) показывает примерное состояние памяти;
 * Пункт (MAGISK MANAGER) - (Get All Settings List) снятие Settings List для тестов;
 
 <h3 align=center>Tweaks: FGS/BP/KL/UGMSD/USGP/VS</h3>
@@ -2759,8 +2779,8 @@
 * Пункт (MAGISK) - (Force 4X MSAA) для включения 4X MSAA в настройках разработчика после перезагрузки;
 * Пункт (MAGISK) - (Disable HW Overlays) для включения отключение наложений после перезагрузки в настройках разработчика;
 * Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...):
-	- Включить ADB WIFI;
-	- Не включать ADB WIFI;
+	- Включить ADB WIFI или нет;
+	- Выключить ro.secure или нет;
 * Пункт (ALL) - (USB Screen Unlocked Config) принудительно активирует что-то одно:
 	- MTP;
 	- Tethering;
