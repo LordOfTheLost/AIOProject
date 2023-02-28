@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="31.01.23 (95)"
+VAIOPFMD="28.02.23 (96)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -37,7 +37,7 @@ IDGBT="GBoardThemes"; VIPGBT="v1.5"
 IDGBSTE="GboardSilkThemeChanger"; VIPGBSTE="v1.1"
 IDSBINNI="SBINNI"; VIPSBINNI="v2.0"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
-IDRUI="RoundedUI"; VIPRUI="v3.4"
+IDRUI="RoundedUI"; VIPRUI="v3.5"
 IDBIP="BurnInProtection"; VIPBIP="v2.3"
 IDNSP="NotificationSidePaddings"; VIPNSP="v1.5"
 IDSBISP="StatusBarIconSpace"; VIPSBISP="v1.4"
@@ -49,13 +49,14 @@ IDQSCP="QSContentPadding"; VIPQSCP="v1.1"
 IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"
 IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.7"
 IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.2"
-IDEBB="BackgroundBlur"; VIPEBB="v1.3"
+IDEBB="BackgroundBlur"; VIPEBB="v1.4"
 IDBA="BootAnimation"; VIPBA="v1.9"
 IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.2"
 IDMUIS="MediaUISounds"; VIPMUIS="v1.9"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
 IDQRCSOLS="QRCSOLS"; VIPQRCSOLS="v1.1"
+IDQSSN="QSSplitNotification"; VIPQSSN="v1.0"
 #Launchers: Shady/Lawnchair/Sushi/AMR
 IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIPSLSHADYR="v2021.11.28"; VCIPSLSHADYR="20211128"
 IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v2.9"; VIPSLLAWNASL="12.1.0 Alpha 4"; VIPSLLAWNAT="12.1.0 Dev cce28ae"
@@ -64,10 +65,10 @@ IDSLAMR="Systemless_AMRLauncher"; VIPSLAMR="v1.0"; VIPSLAMRTA="v10.0"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.5"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.8"
-IDDA="DolbyAtmos"; VIPDA="v1.8"
-IDAIST="AIST"; VIPAIST="v1.7"; VCIPAIST="3001"
+IDDA="DolbyAtmos"; VIPDA="v1.9"
+IDAIST="AIST"; VIPAIST="v1.7"; VCIPAIST="1702"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
-IDIBS="IncreaseBitrate"; VIPIBS="v1.2"
+IDIBS="IncreaseBitrate"; VIPIBS="v1.3"
 IDAML="AML"; VIPAML="v4.3"; VCIPAML="43"
 IDALCF="ALCF"; VIPALCF="v1.3"
 #AdBlock/Hosts
@@ -87,7 +88,7 @@ IDSQL="SQLITE"; VIPSQL="v3.39.3"
 IDSELC="SELinuxChanger"; VIPSELC="v1.3"
 IDCC="CacheCleaner"; VIPCC="v3.0"
 IDMMFR="MMFR"; VIPMMFR="v1.1"
-IDDETACH="DETACH" VIPDETACH="v1.3"
+IDDETACH="DETACH" VIPDETACH="v1.4"
 #Other: FA/LED/FSFM/UAA/SBU/SHS/GASL
 IDFPA="FingerprintActions"; VIPFPA="v1.2"
 IDLEDLO="LEDLightOff"; VIPLEDLO="v1.3"
@@ -122,7 +123,7 @@ BOOT_DETECTED
 APMSGASD
 PARTITION_AND_MOUNTS
 IMPORTANT_VARIABLES
-RM_LIST
+LIST
 CHECKER "-miui -bb -sqlite -arch -sel -soc -gapps -av -magisk"
 PATCHMODE
 UIP "Copy AIOPFMD To TMPDIR$MSGPMODE"
@@ -308,6 +309,7 @@ SDEVFE="$IPSEDF/*.xml"; VDEVFE="$IPVEDF/*.xml"
 XMLGLOBAL="$IPDSU/settings_global.xml"; XMLSECURE="$IPDSU/settings_secure.xml"; XMLSYSTEM="$IPDSU/settings_system.xml"
 SPGLOBAL="settings put global"; SPSECURE="settings put secure"; SPSYSTEM="settings put system"
 SGGLOBAL="settings get global"; SGSECURE="settings get secure"; SGSYSTEM="settings get system"
+BATTERYSTAT="/sys/class/power_supply/battery/uevent"
 if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.conf; PATCHMODEFILE="$STORAGE/PATCHMODE.conf"; fi
 PMODE="$(GET_FILE_PROP -pm "PMODE")"
 HFDURATION="$(GET_FILE_PROP -pm "HFMODE")"
@@ -340,7 +342,7 @@ for f in Fox TWRP SHRP PBRP; do if [ -d $STORAGE/$f ]; then PLOGS="$STORAGE/$f/A
 if [ ! -d $IPSXB ] && [ $BOOTMODE != true ]; then mkdir -p $IPSXB; IPPSXB=$IPSXB; IPPSXBM=$MIPSXB; BINPATH=xbin; elif [ ! -d $IPSXB ] && $BOOTMODE; then IPPSXB=$IPSB; IPPSXBM=$MIPSB; BINPATH=bin; else IPPSXB=$IPSXB; IPPSXBM=$MIPSXB; BINPATH=xbin; fi
 }
 
-RM_LIST () {
+LIST () {
 
 STOCKLISTNOMIUI="
 Calculator
@@ -865,7 +867,9 @@ TrebuchetQuickStep
 "
 
 MMLAUNCHERLIST="
+AlphaDroidLauncher_Port
 Amr_Launcher
+BananaDroidLauncher_Port
 CherishLauncher_Port
 CorvusOSLauncher_Port
 ExtendedOSLauncher_Port
@@ -874,6 +878,7 @@ NusantaraOSLauncher_Port
 OneUIHome
 PPL
 SparkOSLauncher_Port
+SuperiorOSLauncher_Port
 SushiLauncher_Port
 SyberiaLauncher_Port
 Systemless_AMRLauncher
@@ -895,10 +900,12 @@ Systemless_ShadyLauncher
 Systemless_SparkLauncher
 Systemless_SushiLauncher
 TequilaOSLauncher_Port
+XtendedLauncher_Port
 asuslauncher
 com.pixelated.launcher
 crDroidLauncher_Port
 lawnchair.app
+lawnchair_launcher_mod
 quickstepswitcher
 quickswitch_terminal
 ztelauncher
@@ -923,6 +930,44 @@ MusicFX
 MiSound
 Dirac
 DiracAudioControlService
+"
+
+HEXUUID="
+0bbc89fe-52dc-4c40-8211-cae4da538b50
+0e9779c9-4e8f-494d-b2b1-b4ad4e37c54c
+146edfc0-7ed2-11e4-80eb-0002a5d5c51b
+17852d50-161e-11e2-892e-0800200c9a66
+3783c334-d3a0-4d13-874f-0032e5fb80e2
+3799d6d1-22c5-43c3-b3ec-d664cf8d2f0d
+41d3c987-e6cf-11e3-a88a-11aba5d5c51b
+4c6383e0-ff7d-11e0-b6d8-0002a5d5c51b
+50786e95-da76-4557-976b-7981bdf6feb9
+50dbef80-4ad4-11e3-8f96-0800200c9a66
+63509430-52aa-11e3-8f96-0800200c9a66
+6723dd80-f0b7-11e0-98a2-0002a5d5c51b
+6ab06da4-c516-4611-8166-452799218539
+6ab06da4-c516-4611-8166-6168726e6f69
+74697567-7261-6564-6864-65726f206678
+850b6319-bf66-4f93-bec0-dc6964367786
+90380da3-8536-4744-a6a3-5731970e640f
+9626da93-9c71-4bb2-8e23-9fc707fb9703
+9d4921da-8225-4f29-aefa-39537a04bcaa
+9d4921da-8225-4f29-aefa-6e6f69726861
+9d4921da-8225-4f29-aefa-aacb40a73593
+a0c30891-8246-4aef-b8ad-696f6e726861
+a0c30891-8246-4aef-b8ad-d53e26da0253
+ae12da60-99ac-11df-b456-0002a5d5c51b
+af8da7e0-2ca1-11e3-b71d-0002a5d5c51b
+b437f4de-da28-449b-9673-667f8b964304
+b437f4de-da28-449b-9673-667f8b9643fe
+b8a031e0-6bbf-11e5-b9ef-0002a5d5c51b
+bf51a790-512b-11e3-8f96-0800200c9a66
+d92c3a90-3e26-11e2-a25f-0800200c9a66
+e069d9e0-8329-11df-9168-0002a5d5c51b
+e5456320-5391-11e3-8f96-0800200c9a66
+f1c02420-777f-11e3-981f-0800200c9a66
+f27317f4-c984-4de6-9a90-545759495bf2
+f9ed8ae0-1b9c-11e4-8900-0002a5d5c51b
 "
 
 }
@@ -1061,10 +1106,9 @@ done
 
 PATCHMODE () {
 case "$PMODE" in
-D) DEBUGMODE=true; TESTMODE=false; MSGPMODE=", Debug Mode";;
-T) DEBUGMODE=true; TESTMODE=true; MSGPMODE=", Test Mode";;
-U) DEBUGMODE=false; TESTMODE=false; MSGPMODE=", User Mode";;
-*) DEBUGMODE=true; TESTMODE=false; MSGPMODE=", Debug Mode"; echo -e "$MSGPMODE\nPMODE=D" >> $PATCHMODEFILE;;
+T) TESTMODE=true; MSGPMODE=", Test Mode";;
+U) TESTMODE=false; MSGPMODE=", User Mode";;
+*) TESTMODE=false; MSGPMODE=", User Mode"; echo -e "$MSGPMODE\nPMODE=U" >> $PATCHMODEFILE;;
 esac
 if find /sys/class -name leds >/dev/null; then
 LEDPATH="$(find /sys/class -name leds)"
@@ -1128,15 +1172,11 @@ UIP "It's Time To Choose:" "$MSGVU To The Beginning $MSGEFTC" "$MSGVD Exit $MSGE
 if KEYCHOOSE; then PRESETS; END; else ENDMODE=false; END; fi
 else
 UNMOUNT
-if $DEBUGMODE; then
 UIP "Clear TMPDIR, Copy Logs & Exit"; MSGCS
 if [ $BOOTMODE != true ]; then mkdir -p $PLOGS/RECOVERY/$( date +"%Y-%m" ); cp -f /tmp/recovery.log $PLOGS/RECOVERY/$( date +"%Y-%m" )/AIORecovery-$( date +"%d-%H:%M:%S" ).log; fi
 if $BOOTMODE; then input tap 1040 140; sleep 0.5; fi
 mkdir -p $PLOGS/MM/$( date +"%Y-%m" )
 find $STORAGE/Download/ -type f -name 'magisk_install_log*.log' -exec mv {} $PLOGS/MM/$( date +"%Y-%m" )/AIOMagisk-$( date +"%d-%H:%M:%S" ).log \;
-else
-UIP "Clear TMPDIR & Exit"; MSGCS
-fi
 if $BLINKMODE; then echo -n 0 > $LEDPATH/$LEDCOLOR/blink; fi
 rm -rf $TMPDIR $DEVTMPDIR && exit 0
 fi
@@ -1324,7 +1364,6 @@ cp -f $STORAGE/Applications/$APKINPUT $IPDA/$PACKAGENAME.apk
 SET_PERM_R $IPDA/$PACKAGENAME.apk 1000 1000 0771 0644
 fi;;
 -a) if $MAGISK; then
-MODID="AIOIARPFMD"
 PATHINSTALLAPP=$MODPATH/$MODID$MIPSA/$NAMEINSTALLAPP
 else
 PATHINSTALLAPP=$IPSA/$NAMEINSTALLAPP
@@ -1469,7 +1508,20 @@ case $c in
 -sqlite) CHECKER "-sqlite"; if [ $FSQLITE != true ]; then UIP "Not Found SQLite"; IPSQLS; fi;;
 -ehap) if [ ! -d $MODPATH/$IDHAP ] && [ $ASDK = 30 ]; then UIP "Not Found Enabling Hidden Api Policy"; IPHAPS; fi;;
 -alcf) if [ ! -d $MODPATH/$IDALCF ]; then UIP "Not Found Audio Library Crackling Fix"; IPALCFS; fi;;
--aml) if [[ -d $MODPATH/$IDDA && -d $MODPATH/$IDVFX ]] || [[ -d $MODPATH/$IDDA && -d $MODPATH/$IDVFX && -f $MODPATH/NLSound$MIPSVLRA/dirac.so ]] || [[ -d $MODPATH/$IDVFX && -f $MODPATH/NLSound$MIPSVLRA/dirac.so ]] || [[ -d $MODPATH/$IDDA && -f $MODPATH/NLSound$MIPSVLRA/dirac.so ]]; then UIP "Not Found Audio Modification Library"; IPAMLS; fi;;
+-aml) if [ ! -d $MODPATH/$IDAML ]; then
+if [[ -d $MODPATH/$IDDA && -d $MODPATH/$IDVFX ]] || [[ -d $MODPATH/$IDDA && -d $MODPATH/$IDVFX && -f $MODPATH/NLSound$MIPSVLRA/dirac.so ]] || [[ -d $MODPATH/$IDVFX && -f $MODPATH/NLSound$MIPSVLRA/dirac.so ]] || [[ -d $MODPATH/$IDDA && -f $MODPATH/NLSound$MIPSVLRA/dirac.so ]]; then UIP "Not Found Audio Modification Library"; AMLI=true; IPAMLS; else AMLI=false; fi
+if [ $AMLI != true ]; then
+for UUID in $HEXUUID; do
+for PSF in $AECONFXML; do
+if grep $UUID $MAGISKMP$PSF >/dev/null; then
+UIP -s "Found HEXUUID: $UUID" "May Needed Audio Modification Library"
+UCSA "Install Audio Modification Library $VIPAML?" "IPAMLS" "$IDAML"
+break 2
+fi
+done
+done
+fi
+fi;;
 esac
 done
 }
@@ -2786,6 +2838,7 @@ CHECKER -mmupd "$IDMUIS" "$VIPMUIS" "IPMUISS"
 CHECKER -mmupd "$IDFDNI" "$VIPFDNI" "IPFDNIS"
 CHECKER -mmupd "$IDWFAMDQSOS" "$VIPWFAMDQSOS" "IPWFAMDQSOSS"
 CHECKER -mmupd "$IDQRCSOLS" "$VIPQRCSOLS" "IPQRCSOLSS"
+CHECKER -mmupd "$IDQSSN" "$VIPQSSN" "IPQSSNS"
 #Launchers: Shady/Lawnchair/Sushi/AMR
 if $ATEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYQ" "$VCIPSLSHADYQ" "IPSLSSHADY"; fi
 if $AELEVEN; then CHECKER -mmupd -c "$IDSLSHADY" "$VIPSLSHADYR" "$VCIPSLSHADYR" "IPSLSSHADY"; fi
@@ -3853,12 +3906,12 @@ if KEYCHOOSE; then EBB="1"; EBBT="Enable"; else EBB="0"; EBBT="Disable"; fi
 UIP "Installing Background Blur $IAMM"
 if $MAGISK; then
 PTMFI -nmp "$IDEBB"
-echo -e "ro.surface_flinger.supports_background_blur=$EBB\nro.sf.blurs_are_expensive=$EBB" > $MODPATH/$MODID/system.prop
+echo -e "ro.surface_flinger.supports_background_blur=$EBB\nro.sf.blurs_are_expensive=$EBB\nro.launcher.blur.appLaunch=$EBB\npersist.sys.sf.disable_blurs=0" > $MODPATH/$MODID/system.prop
 MMPR -v "Background Blur" "$VIPEBB" "$EBBT Background Blur For QS, Launcher Resents, Etc"
 SET_PERM_RM
 else
 BUCKUPER -bp
-echo -e "\n#Background Blur\nro.surface_flinger.supports_background_blur=$EBB\nro.sf.blurs_are_expensive=$EBB" >> $IPSBP
+echo -e "\n#Background Blur\nro.surface_flinger.supports_background_blur=$EBB\nro.sf.blurs_are_expensive=$EBB\nro.launcher.blur.appLaunch=$EBB\npersist.sys.sf.disable_blurs=0" >> $IPSBP
 fi
 UIP "$MSGDI"
 }
@@ -3950,7 +4003,7 @@ IPIOSEMOJIS () {
 UIP "Installing IOS Emoji $IAMM"
 UZTPN "IOSEmoji"
 if $MAGISK; then
-PTMFI "$IDIOSEMOJI" "iOS14.6_Emoji_for_Android emoji-replacer-259830633 emoji-replacer-809887617 android11emoji EmojiReplacer" "$MIPSF"
+PTMFI "$IDIOSEMOJI" "iOS_Emoji iOS14.6_Emoji_for_Android emoji-replacer-259830633 emoji-replacer-809887617 android11emoji EmojiReplacer" "$MIPSF"
 for TTF in AndroidEmoji-htc ColorUniEmoji CombinedColorEmoji DcmColorEmoji HTC_ColorEmoji NotoColorEmoji SamsungColorEmoji; do
 if [ -f $MAGISKMP$IPSF/$TTF.ttf ]; then cp -f $TMPDIR/IOSEmoji/NotoColorEmoji.ttf $MODPATH/$MODID$MIPSF/$TTF.ttf; fi
 done
@@ -4116,6 +4169,34 @@ fi
 SET_PERM_RM -msgdi
 }
 
+IPQSSN () {
+if FINDER -aiopfmdph "$IPPSO/QSSplitNotification*.apk"; then
+UIP -s "$MSGFI QS Split Notification, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then
+UIP "Removing..."
+rm -f $IPPSO/QSSplitNotification*.apk
+UIP "$MSGDRM"
+fi
+else
+if [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "Install QS Split Notification $VIPQSSN?" "IPQSSNS" "$IDQSSN"; fi
+fi
+}
+
+IPQSSNS () {
+UIP -s "Choose Variant:" "$MSGVU Enable" "$MSGVD Disable"
+if KEYCHOOSE; then QSSNV="Enable"; else QSSNV="Disable"; fi
+UIP "Installing QS Split Notification $IAMM"
+UZTPN "QSSN"
+if $MAGISK; then
+PTMFI "$IDQSSN" "better_qs" "$MIPPSO"
+cp -f $TMPDIR/QSSN/QSSplitNotification-$QSSNV.apk $MODPATH/$MODID$MIPPSO
+MMPR -v "QS Split Notification" "$VIPQSSN" "QS Split Notification - Set On: $QSSNV"
+else
+cp -f $TMPDIR/QSSN/QSSplitNotification-$QSSNV.apk $IPPSO
+fi
+SET_PERM_RM -msgdi
+}
+
 } #
 
 { #Launchers: Shady/Lawnchair/Sushi/AMR
@@ -4246,6 +4327,7 @@ fi
 }
 
 IPAPPS () {
+MODID="AIOIARPFMD"
 UIP -s "Choose Path Variant:" "$MSGVU Install Every App In Data" "$MSGVD Install Every App In System $MSGRI"
 if KEYCHOOSE; then IAPPASD=true; else IAPPASD=false; fi
 UIP -s "Choose Install Variant:" "$MSGVU Install Every App With Confirm" "$MSGVD Install Every App Without Confirm"
@@ -4289,7 +4371,7 @@ UCSA "Install ViperFX $VIPVFX - v2.5.0.5 Or v2.7.1.6?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -le 22 ]; then
 UCSA "Install ViperFX $VIPVFX - v2.5.0.5?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -ge 31 ]; then
-UCSA "Install ViperFX $VIPVFX - v2.5.0.5, v2.7.2.1 & v4.1?" "IPVFXS" "$IDVFX"
+UCSA "Install ViperFX $VIPVFX - v2.5.0.5 & v2.7.2.1?" "IPVFXS" "$IDVFX"
 fi
 fi
 }
@@ -4464,7 +4546,7 @@ if [ \"\$GPSF\" == 1 ]; then
 resetprop ro.audio.monitorRotation true
 fi
 
-killall com.dolby.daxservice com.dolby.atmos
+killall com.dolby.daxservice com.dolby.daxappui com.dolby.atmos
 VIBRATOR=\`realpath /*/bin/hw/vendor.qti.hardware.vibrator.service*\`
 [ \"\$VIBRATOR\" ] && killall \$VIBRATOR
 POWER=\`realpath /*/bin/hw/vendor.mediatek.hardware.mtkpower@*-service\`
@@ -4833,8 +4915,6 @@ if $HIRES; then UIP "Device With Support Hi-Res"; else UIP "Device Without Suppo
 PTMFI -np "$IDAIST" "NLSound"
 MMPR -vcs "AIST For Devices Based On Qualcomm" "$VIPAIST" "$VCIPAIST" "Oleg_Skalskiy" "This Module Improving Audio Quality" "https://t.me/AIST_FLOOD"
 echo "# GENERAL PARAMETERS
-aaudio.mmap_policy=2
-aaudio.mmap_exclusive_policy=2
 af.thread.throttle=0
 audio.adm.phaseshift.ms=0
 vendor.audio.adm.phaseshift.ms=0
@@ -5893,10 +5973,10 @@ for FMPXML in \$ALLMODMPXML; do
 if [ -f \$FMPXML ] && [ ! -f \$FMPXML.bak ]; then
 PMPXML=true
 cp -f \$FMPXML \$FMPXML.bak
-sed -i \"s/192000/320000/g\" $FMPXML
+sed -i \"s/192000/320000/g\" \$FMPXML
 elif [ -f \$FMPXML ] && [ -f \$FMPXML.bak ]; then
 PMPXML=true
-sed -i \"s/192000/320000/g\" $FMPXML
+sed -i \"s/192000/320000/g\" \$FMPXML
 fi
 done
 fi
@@ -5907,7 +5987,7 @@ for FMPXML in \$MPXML; do
 PSF=\"$MODPATH/$MODID\$FMPXML\"
 mkdir -p \`dirname \$PSF\`
 cp -f \$MAGISKMP\$FMPXML \$PSF
-sed -i \"s/192000/320000/g\" $PSF
+sed -i \"s/192000/320000/g\" \$PSF
 mkdir -p $MODPATH/$MODID/system/vendor; cp -rf $MODPATH/$MODID/vendor/* $MODPATH/$MODID/system/vendor; rm -rf $MODPATH/$MODID/vendor
 done
 fi" > $MODPATH/$MODID/post-fs-data.sh
@@ -6655,16 +6735,21 @@ ORSLP="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLPixel"
 ORSLPD="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLPixelated"
 ORSLM="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLMoto"
 ORSLA="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLAsus"
+ORSLNEOO="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLNEOO"
 ORSLNEO="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLNEO"
-ORSLNEOA="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLNEOA"
 ORSLNEOD="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLNEOD"
+ORSLNEOA="$STORAGE/AIOCOMPILE/RoundedUI/RoundedSLNEOA"
 ORUIONE="$STORAGE/AIOCOMPILE/RoundedUI/RoundedUIAndroid"
 ORUITWO="$STORAGE/AIOCOMPILE/RoundedUI/RoundedUISUI"
-mkdir -p $ORSLL3/res/values $ORSLLQ/res/values $ORSLLR/res/values $ORSLOP/res/values $ORSLOUI/res/values $ORSLP/res/values $ORSLPD/res/values $ORSLM/res/values $ORSLA/res/values $ORSLNEO/res/values $ORSLNEOA/res/values $ORSLNEOD/res/values $ORUIONE/res/values $ORUITWO/res/values $ORUITWO/res/drawable
+mkdir -p $ORSLL3/res/values $ORSLLQ/res/values $ORSLLR/res/values $ORSLOP/res/values $ORSLOUI/res/values $ORSLP/res/values $ORSLPD/res/values $ORSLM/res/values $ORSLA/res/values $ORSLNEOO/res/values $ORSLNEO/res/values $ORSLNEOD/res/values $ORSLNEOA/res/values $ORUIONE/res/values $ORUITWO/res/values $ORUITWO/res/drawable
 
 ROUNDEDUISTRING="	<dimen name=\"abc_control_corner_material\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"abc_dialog_corner_radius_material\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"borderless_button_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"car_button_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"car_radius_1\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"car_radius_2\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"car_radius_3\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"cardview_default_elevation\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"cardview_default_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"chooser_corner_radius\">$ROUNDEDSIZE</dimen>
@@ -6672,9 +6757,11 @@ ROUNDEDUISTRING="	<dimen name=\"abc_control_corner_material\">$ROUNDEDSIZE</dime
 	<dimen name=\"config_bottomDialogCornerRadius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"config_buttonCornerRadius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"config_dialogCornerRadius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"config_progressBarCornerRadius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"control_corner_material\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"control_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"corner_size\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"date_picker_day_selector_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"default_dialog_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"default_magnifier_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"dialog_corner_radius\">$ROUNDEDSIZE</dimen>
@@ -6683,10 +6770,12 @@ ROUNDEDUISTRING="	<dimen name=\"abc_control_corner_material\">$ROUNDEDSIZE</dime
 	<dimen name=\"halo_inner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"lb_action_button_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"lb_rounded_rect_corner_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"leanback_dialog_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"logout_button_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"mtrl_badge_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"mtrl_btn_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"mtrl_card_corner_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"notification_action_button_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"notification_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"notification_custom_view_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"notification_group_overflow_bg_radius\">$ROUNDEDSIZE</dimen>
@@ -6720,7 +6809,11 @@ ROUNDEDUISTRING="	<dimen name=\"abc_control_corner_material\">$ROUNDEDSIZE</dime
 	<dimen name=\"seek_bar_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"subtitle_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"subtitle_shadow_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"system_app_widget_inner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"task_card_menu_corner_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"timepicker_center_dot_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"timepicker_selector_dot_radius\">$ROUNDEDSIZE</dimen>
+	<dimen name=\"timepicker_selector_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"tooltip_corner_radius\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"volume_dialog_panel_width_half\">$ROUNDEDSIZE</dimen>
 	<dimen name=\"volume_dialog_slider_corner_radius\">$ROUNDEDSIZE</dimen>
@@ -6859,19 +6952,27 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 	<corners android:radius=\"$ROUNDEDSIZE\" />
 </shape>" > $ORUITWO/res/drawable/brightness_mirror_background.xml
 
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<shape
+  xmlns:android=\"http://schemas.android.com/apk/res/android\">
+	<solid android:color=\"?android:attr/panelColorBackground\" />
+	<corners android:radius=\"$ROUNDEDSIZE\" />
+</shape>" > $ORUITWO/res/drawable/popup_background_material.xml
+
 APKBUILDER "$ORUIONE" "$ORUIONE-$ROUNDEDSIZE.apk"
 APKBUILDER "$ORUITWO" "$ORUITWO-$ROUNDEDSIZE.apk"
 
-for LAUNCHERPNAME in "com.saggitt.omega" "com.saggitt.omega.neo" "com.saggitt.omega.debug" "com.pixelated.launcher" "com.motorola.launcher3" "com.android.launcher3" "ch.deletescape.lawnchair.ci" "app.lawnchair" "net.oneplus.launcher" "com.sec.android.app.launcher" "com.google.android.apps.nexuslauncher" "com.asus.launcher"; do
+for LAUNCHERPNAME in "com.saggitt.omega" "com.saggitt.omega.neo" "com.saggitt.omega.debug" "com.saggitt.omega.alpha" "com.pixelated.launcher" "com.motorola.launcher3" "com.android.launcher3" "ch.deletescape.lawnchair.ci" "app.lawnchair" "net.oneplus.launcher" "com.sec.android.app.launcher" "com.google.android.apps.nexuslauncher" "com.asus.launcher"; do
 case $LAUNCHERPNAME in
-"com.saggitt.omega") LAUNCHERPATH="$ORSLNEO"; LAUNCHERNAME="NEO Launcher";;
-"com.saggitt.omega.neo") LAUNCHERPATH="$ORSLNEOA"; LAUNCHERNAME="NEO Launcher";;
+"com.saggitt.omega") LAUNCHERPATH="$ORSLNEOO"; LAUNCHERNAME="NEO Launcher";;
+"com.saggitt.omega.neo") LAUNCHERPATH="$ORSLNEO"; LAUNCHERNAME="NEO Launcher";;
 "com.saggitt.omega.debug") LAUNCHERPATH="$ORSLNEOD"; LAUNCHERNAME="NEO Launcher Debug";;
+"com.saggitt.omega.alpha") LAUNCHERPATH="$ORSLNEOA"; LAUNCHERNAME="NEO Launcher Alpha";;
 "com.pixelated.launcher") LAUNCHERPATH="$ORSLPD"; LAUNCHERNAME="Pixelated Launcher";;
 "com.motorola.launcher3") LAUNCHERPATH="$ORSLM"; LAUNCHERNAME="Mototola Launcher";;
 "com.android.launcher3") LAUNCHERPATH="$ORSLL3"; LAUNCHERNAME="Launcher3";;
 "ch.deletescape.lawnchair.ci") LAUNCHERPATH="$ORSLLQ"; LAUNCHERNAME="Lawnchair Q";;
-"app.lawnchair") LAUNCHERPATH="$ORSLLR"; LAUNCHERNAME="Lawnchair R/S";;
+"app.lawnchair") LAUNCHERPATH="$ORSLLR"; LAUNCHERNAME="Lawnchair R/S/SL/T";;
 "net.oneplus.launcher") LAUNCHERPATH="$ORSLOP"; LAUNCHERNAME="OnePlus Launcher";;
 "com.sec.android.app.launcher") LAUNCHERPATH="$ORSLOUI"; LAUNCHERNAME="OneUI Launcher";;
 "com.google.android.apps.nexuslauncher") LAUNCHERPATH="$ORSLP"; LAUNCHERNAME="Pixel Launcher";;
@@ -6882,7 +6983,7 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmln
 	<application android:hasCode=\"false\" android:label=\"$LAUNCHERNAME Rounded - $ROUNDEDSIZE\"/>
 </manifest>" > $LAUNCHERPATH/AndroidManifest.xml
 
-echo -e "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n$ROUNDEDUISTRING\n$ROUNDEDLSTRING\n</resources>" | tee $ORSLL3/res/values/dimens.xml $ORSLLQ/res/values/dimens.xml $ORSLLR/res/values/dimens.xml $ORSLOP/res/values/dimens.xml $ORSLOUI/res/values/dimens.xml $ORSLP/res/values/dimens.xml $ORSLPD/res/values/dimens.xml $ORSLM/res/values/dimens.xml $ORSLA/res/values/dimens.xml > /dev/null
+echo -e "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<resources>\n$ROUNDEDUISTRING\n$ROUNDEDLSTRING\n</resources>" | tee $ORSLL3/res/values/dimens.xml $ORSLLQ/res/values/dimens.xml $ORSLLR/res/values/dimens.xml $ORSLOP/res/values/dimens.xml $ORSLOUI/res/values/dimens.xml $ORSLP/res/values/dimens.xml $ORSLPD/res/values/dimens.xml $ORSLM/res/values/dimens.xml $ORSLA/res/values/dimens.xml $ORSLNEOA/res/values/dimens.xml $ORSLNEOD/res/values/dimens.xml $ORSLNEO/res/values/dimens.xml $ORSLNEOO/res/values/dimens.xml > /dev/null
 done
 APKBUILDER "$ORSLL3" "$ORSLL3-$ROUNDEDSIZE.apk"
 APKBUILDER "$ORSLLQ" "$ORSLLQ-$ROUNDEDSIZE.apk"
@@ -6893,9 +6994,10 @@ APKBUILDER "$ORSLP" "$ORSLP-$ROUNDEDSIZE.apk"
 APKBUILDER "$ORSLPD" "$ORSLPD-$ROUNDEDSIZE.apk"
 APKBUILDER "$ORSLM" "$ORSLM-$ROUNDEDSIZE.apk"
 APKBUILDER "$ORSLA" "$ORSLA-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLNEOO" "$ORSLNEOO-$ROUNDEDSIZE.apk"
 APKBUILDER "$ORSLNEO" "$ORSLNEO-$ROUNDEDSIZE.apk"
-APKBUILDER "$ORSLNEOA" "$ORSLNEOA-$ROUNDEDSIZE.apk"
 APKBUILDER "$ORSLNEOD" "$ORSLNEOD-$ROUNDEDSIZE.apk"
+APKBUILDER "$ORSLNEOA" "$ORSLNEOA-$ROUNDEDSIZE.apk"
 done
 }
 
@@ -7054,11 +7156,11 @@ UCSA "QuickStep Compile" "QUICKSTEPCS"
 }
 
 QUICKSTEPCS () {
-for QSRP in "com.saggitt.omega" "com.saggitt.omega.neo" "com.saggitt.omega.debug" "com.pixelated.launcher" "com.pixelated.launcher" "com.motorola.launcher3" "com.android.launcher3" "ch.deletescape.lawnchair.ci" "net.oneplus.launcher" "com.sec.android.app.launcher" "com.google.android.apps.nexuslauncher" "com.asus.launcher" "app.lawnchair" "app.lawnchair.debug"; do
+for QSRP in "com.saggitt.omega" "com.saggitt.omega.neo" "com.saggitt.omega.debug" "com.saggitt.omega.alpha" "com.pixelated.launcher" "com.pixelated.launcher" "com.motorola.launcher3" "com.android.launcher3" "ch.deletescape.lawnchair.ci" "net.oneplus.launcher" "com.sec.android.app.launcher" "com.google.android.apps.nexuslauncher" "com.asus.launcher" "app.lawnchair" "app.lawnchair.debug"; do
 OSL="$STORAGE/AIOCOMPILE/QuickStepRecentsProvider/QuickStepRecentsProvider"
 mkdir -p $OSL/res/values
 echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>
-<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.quickstep.recents.overlay\" android:versionName=\"v1.2\">
+<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.quickstep.recents.overlay\" android:versionName=\"v1.3\">
 	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"android\"/>
 	<application android:hasCode=\"false\" android:label=\"QuickStep Recents Provider\"/>
 </manifest>" > $OSL/AndroidManifest.xml
@@ -7438,6 +7540,54 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmln
 </manifest>" > $OCEQRCSOLS/AndroidManifest.xml
 
 APKBUILDER "$OCEQRCSOLS" "$OCEQRCSOLS-$OCEQRCSOLSN.apk"
+done
+}
+
+QSSNSC () {
+UCSA "QS Split Notification Compile" "QSSNSCS"
+}
+
+QSSNSCS () {
+QSSNSCP="$STORAGE/AIOCOMPILE/QSSplitNotification/QSSplitNotification"
+mkdir -p $QSSNSCP/res/values-land
+
+for QSSNSCSC in "false" "true"; do
+case $QSSNSCSC in
+"false") QSSNSCN="Disable"; QSSNSCNA="disable"
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<bool name=\"config_use_split_notification_shade\">false</bool>
+	<bool name=\"config_skinnyNotifsInLandscape\">true</bool>
+	<bool name=\"can_use_one_handed_bouncer\">false</bool>
+</resources>" > $QSSNSCP/res/values-land/bools.xml;;
+"true") QSSNSCN="Enable"; QSSNSCNA="enable"
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+	<bool name=\"config_use_split_notification_shade\">true</bool>
+	<bool name=\"config_skinnyNotifsInLandscape\">false</bool>
+	<bool name=\"can_use_one_handed_bouncer\">true</bool>
+</resources>" > $QSSNSCP/res/values-land/bools.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+    <dimen name=\"qs_header_system_icons_area_height\">0.0dip</dimen>
+    <dimen name=\"qs_panel_padding_top\">0.0dip</dimen>
+</resources>" > $QSSNSCP/res/values-land/dimens.xml
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<resources>
+    <integer name=\"quick_settings_num_columns\">2</integer>
+    <integer name=\"quick_qs_panel_max_rows\">2</integer>
+    <integer name=\"quick_qs_panel_max_tiles\">6</integer>
+</resources>" > $QSSNSCP/res/values-land/integers.xml;;
+esac
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.$QSSNSCNA.qs.split.notification\" android:versionName=\"$VIPQSSNS\">
+	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
+	<application android:hasCode=\"false\" android:label=\"$QSSNSCN QS Split Notification\"/>
+</manifest>" > $QSSNSCP/AndroidManifest.xml
+
+APKBUILDER "$QSSNSCP" "$QSSNSCP-$QSSNSCN.apk"
 done
 }
 
@@ -7975,7 +8125,7 @@ fi
 IPBBS () {
 UIP "Installing Brutal BusyBox $IAMM"
 if $MAGISK; then
-PTMFI "$IDBB" "busybox-ndk busybox-brutal" "$IPPSXBM"
+PTMFI "$IDBB" "busybox-ndk busybox-brutal BuiltIn-BusyBox" "$IPPSXBM"
 MMPR -vcs "Brutal BusyBox" "$VIPBB" "$VCIPBB" "FeraVolt" "Brutal Busybox With Almost All Available Applets. Compiled With NDK Clang + LTO + Ofast + llvm Polly. Has All Android NDK Patches. ARMv7/ARMv8." "https://github.com/feravolt/Brutal_busybox"
 FIPBB=$MODPATH/$MODID$IPPSXBM
 if [ -d $IPSB ] && [ ! -d $IPSXB ]; then echo -e "#!$MIPSB/sh\nfor sd in $MIPSB/*; do\nrm -f $MODPATH/$MODID/\${sd};\ndone;" > $MODPATH/$MODID/post-fs-data.sh; fi
@@ -8449,45 +8599,39 @@ while true; do
 if [ \$(getprop sys.boot_completed) -eq 1 ]; then
 if [ -f $STORAGE/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/DETACH*)\"; FINDDETACHCFG=true; else for f in \$(ls $STORAGE); do if [ -f $STORAGE/\$f/DETACH* ]; then DETACHCFG=\"\$(find $STORAGE/\$f/DETACH*)\"; FINDDETACHCFG=true; break; else FINDDETACHCFG=false; fi; done; fi; if [ \$FINDDETACHCFG != true ]; then echo -e \"com.google.android.youtube\ncom.google.android.apps.youtube.music\ncom.google.ar.core\" > $STORAGE/DETACH.conf; DETACHCFG=\"$STORAGE/DETACH.conf\"; fi
 
-
-GL() {
-FA=\$(cat \$DETACHCFG)
-[ -z \"\$FA\" ] && return 1
-DETACH=\$(echo \"\$FA\" | tr -d ' \t\r' | grep -v '^\$' | sed \"s/.*/'&'/\" | paste -sd \",\" -)
-[ -z \"\$DETACH\" ] && return 1
-echo \"\$DETACH\"
-}
-
-DAU() {
-sqlite3 \$VENDINGLOCDB \"UPDATE appstate SET auto_update = 2 WHERE package_name IN (\${1})\"
-}
-
-DETACH() {
-sqlite3 \$VENDINGLIBDB \"DROP TRIGGER IF EXISTS $IDDETACH;
-UPDATE ownership SET doc_type = '25' WHERE doc_id IN (\${1});
-CREATE TRIGGER $IDDETACH
-	BEFORE INSERT ON ownership
-	WHEN NEW.doc_id in (\${1})
-BEGIN
-	SELECT RAISE(FAIL, '$IDDETACH');
-END\"
-}
-
-APPS=\$(GL) && {
+KEY=\"\$((5*5))\"
 echo \"Force Stopping \$VENDINGPKG\"
-pm disable \"\$VENDINGPKG/com.google.android.finsky.scheduler.process.backgroundimpl.AlarmManagerServiceBackground\" >&2
-pm disable \"\$VENDINGPKG/com.google.android.finsky.rollbackmanager.RollbackReceiver\" >&2
-pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementReceiver\" >&2
-pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobService\" >&2
-pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService\" >&2
+pm disable \"\$VENDINGPKG/com.google.android.finsky.scheduler.process.backgroundimpl.AlarmManagerServiceBackground\" >/dev/null 2>&1
+pm disable \"\$VENDINGPKG/com.google.android.finsky.rollbackmanager.RollbackReceiver\" >/dev/null 2>&1
+pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementReceiver\" >/dev/null 2>&1
+pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementJobService\" >/dev/null 2>&1
+pm disable \"\$VENDINGPKG/com.google.android.gms.measurement.AppMeasurementService\" >/dev/null 2>&1
 cmd appops set --uid \$VENDINGPKG GET_USAGE_STATS ignore
 pkill -f \$VENDINGPKG
 am force-stop \$VENDINGPKG
+
+if [ \"\`grep -v '#' \$DETACHCFG\`\" ]; then
 echo \"Detaching Packages\"
-DAU \"\$APPS\"
-DETACH \"\$APPS\"
-echo \"Detaching Done\"
-}
+while read -r PKGNAME; do
+if [ ! -z \"\$PKGNAME\" ] && [ ! \"\`echo \$PKGNAME | grep \"#\"\`\" ]; then
+echo \"Add \$PKGNAME\"
+sqlite3 \$VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$KEY' WHERE doc_id = '\$PKGNAME'\"
+sqlite3 \$VENDINGLOCDB \"UPDATE appstate SET auto_update = '2' WHERE package_name = '\$PKGNAME'\"
+fi
+done < \"\$DETACHCFG\"
+fi
+
+if [ \"\`grep '#' \$DETACHCFG\`\" ]; then
+echo \"UnDetaching Packages\"
+while read -r PKGNAME; do
+if [ ! -z \"\$PKGNAME\" ] && [ \"\`echo \$PKGNAME | grep \"#\"\`\" ]; then
+echo \"Remove \$PKGNAME\"
+PKGNAME=\"\`echo \$PKGNAME | cut -c 2-\`\"
+sqlite3 \$VENDINGLIBDB \"UPDATE ownership SET doc_type = '\$((\$KEY/\$KEY))' WHERE doc_id = '\$PKGNAME'\"
+sqlite3 \$VENDINGLOCDB \"UPDATE appstate SET auto_update = '1' WHERE package_name = '\$PKGNAME'\"
+fi
+done < \"\$DETACHCFG\"
+fi
 
 break
 fi
@@ -8975,25 +9119,30 @@ sed -i 's/enabled="3"/enabled="1"/g' $IPDSU/package-restrictions.xml
 UIP "Defrosting Done"
 }
 
-SBATTERYUSAGE () {
-if [ -f /sys/class/power_supply/battery/charge_full_design ] || [ -f /sys/class/power_supply/battery/constant_charge_current_max ]; then
-UCSA "Show Battery Usage?" "SBATTERYUSAGES"
+SBATTERYSTATUS () {
+if [ -f $BATTERYSTAT ]; then
+UCSA "Show Battery Status?" "SBATTERYSTATUSS"
 fi
 }
 
-SBATTERYUSAGES () {
-cat /sys/class/power_supply/battery/uevent >> $TMPDIR/battery.stat
-BATTERYREMAINING="$(GET_FILE_PROP -s "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_FULL")"
+SBATTERYSTATUSS () {
 if [ -f /sys/class/power_supply/battery/charge_full_design ]; then
-CURRENTMAXMAH="$(GET_FILE_PROP -s "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_FULL_DESIGN")"
+POWERSUPPLYCHARGEFULLDESIGN="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CHARGE_FULL_DESIGN")"
 elif [ -f /sys/class/power_supply/battery/constant_charge_current_max ]; then
-CURRENTMAXMAH="$(GET_FILE_PROP -s "$TMPDIR/battery.stat" "POWER_SUPPLY_CONSTANT_CHARGE_CURRENT_MAX")"
+POWERSUPPLYCHARGEFULLDESIGN="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CONSTANT_CHARGE_CURRENT_MAX")"
 fi
-let LOSTMAH=$CURRENTMAXMAH-$BATTERYREMAINING; let LOSTMAHALT=$CURRENTMAXMAH"000"-$BATTERYREMAINING
-MAHATTHEMOMENT="$(GET_FILE_PROP -s "$TMPDIR/battery.stat" "POWER_SUPPLY_CHARGE_COUNTER")"
-MAHATTHEMOMENTCAPACITY="$(GET_FILE_PROP -s "$TMPDIR/battery.stat" "POWER_SUPPLY_CAPACITY")"
-BATTERYCHARGECYCLE="$(GET_FILE_PROP -s "$TMPDIR/battery.stat" "POWER_SUPPLY_CYCLE_COUNT")"
-UIP "Battery Remaining: $BATTERYREMAINING" "Lost mAh: $LOSTMAH Or $LOSTMAHALT" "mAh & % At The Moment: $MAHATTHEMOMENT ($MAHATTHEMOMENTCAPACITY%)" "Battery Charge Cycle: $BATTERYCHARGECYCLE"
+BATTERYREMAINING="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CHARGE_FULL")"
+BATTERYREMAINING="$((BATTERYREMAINING/1000))"
+POWERSUPPLYCHARGECOUNTER="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CHARGE_COUNTER")"
+POWERSUPPLYCHARGECOUNTER="$((POWERSUPPLYCHARGECOUNTER/1000))"
+POWERSUPPLYCAPACITY="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CAPACITY")"
+POWERSUPPLYCYCLECOUNT="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CYCLE_COUNT")"
+POWER_SUPPLY_TEMP="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_TEMP")"
+POWER_SUPPLY_TEMP="$((POWER_SUPPLY_TEMP/10))"
+POWERSUPPLYCHARGEFULLDESIGN="$((POWERSUPPLYCHARGEFULLDESIGN/1000))"
+CURRENTMAXMAH="$((POWERSUPPLYCHARGEFULLDESIGN - BATTERYREMAINING))"
+CURRENTMAXMAHA="$((100-BATTERYREMAINING*100/POWERSUPPLYCHARGEFULLDESIGN))"
+UIP "Declared Capacity: $POWERSUPPLYCHARGEFULLDESIGN mAh" "Current Capacity: $BATTERYREMAINING mAh" "Current Charge: $POWERSUPPLYCHARGECOUNTER mAh ($POWERSUPPLYCAPACITY%)" "Lost Capacity: $CURRENTMAXMAH mAh ($CURRENTMAXMAHA%)" "Charge Cycle: $POWERSUPPLYCYCLECOUNT" "Temperature: $POWER_SUPPLY_TEMP°C"
 }
 
 SHEALTHSTORAGE () {
@@ -10317,6 +10466,7 @@ IPMUIS
 IPFDNI
 IPWFAMDQSOS
 IPQRCSOLS
+IPQSSN
 }
 
 AUDIO_PRESETS () {
@@ -10355,6 +10505,7 @@ QSCIARC
 CSBISIZEC
 CSBPDC
 CEQRCSOLSC
+QSSNSC
 }
 
 NET_PRESETS () {
@@ -10380,7 +10531,7 @@ IPLEDLO
 IPLEDLA
 IPFSLFM
 UFAAPP
-SBATTERYUSAGE
+SBATTERYSTATUS
 SHEALTHSTORAGE
 GASL
 }
