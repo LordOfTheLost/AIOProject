@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 28.02.23 (96) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/28.02.2023/AIOPFMD-28.02.23-%2896%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1PNLlDLXBomenewVaj8Ii7E0ZY6rT47iZ/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/117">TG</a>
+* Версия AIOPFMD: 31.03.23 (97) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.03.2023/AIOPFMD-31.03.23-%2897%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1kdnHjbXg6lEPyVm4_0f_XOKc8nzBCToG/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/119">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Архитектура Arm или Arm64;
@@ -18,6 +18,20 @@
 <details>
   <summary>Changelog</summary>
 
+#### 31.03.23 (97) ####
+* Cache Cleaner обновлен до v3.1 - добавлено больше путей для говна;
+* Изменения по Режиму удаления/replace/restore:
+	- Добавлены приложения в обычный лист: YTMusic, Podcasts, SpeechServicesByGoogle, LensAppStub, GoogleOne, GooglePay, com.facebook.services, com.facebook.system, com.facebook.appmanager, com.sonymobile.support, com.sonymobile.infoapp, clock-widgets-release и app-assist-light-release;
+	- MiuiCamera удалена;
+	- Добавлен лист камер;
+	- Убраны слипы на 3 секунды (аккуратнее теперь не спешите между листами);
+* ViperFX обновлен до v1.6 - добавил v0.3.0 RE MD3;
+* AML обновлен до v4.3 - фикс работы для ViperFX RE;
+* IOS Emoji обновлен до v1.3 - из говна 16.4;
+* Лаунчеры на мартовском и выше патчах работать не будут до обнов что логично;
+* Media UI Sounds обновлен до v2.0 - добавил новый звук на скриншот для самсы и убрал все буст версии;
+* Я знаю что есть баг с отображением QS Split Notification где прошивки с фоном в QS типо PE/EvoX/Awaken но фикса пока не будет мне похуй я на Cherish/Spark (там фона нету);
+* Kill Logger обновлен до v2.1 - добавил одну папку для MGC.
 #### 28.02.23 (96) ####
 * Increase Bitrate обновлен до v1.3 - фикс его основной работы;
 * DEBUGMODE удален из PATCHMODEFILE - его функционал включен по умолчанию;
@@ -2091,15 +2105,12 @@
 	- Oppo (Color OS 7);
 	- Spark (12.6);
 	- Arcana (6.0);
-		- Выбор громкости звуков:
-			- Обычная громкость всех звуков;
-			- Повышенная громкость всех звуков;
 * Пункт (MAGISK & LEGACY) (NOT MIUI) (10-13.0) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
 * Пункт (MAGISK) (NOT MIUI) (12.0-13.0) - (Wi-Fi & Mobile Data QS Old Style) изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
 * Пункт (MAGISK) (NOT MIUI) (13.0) - (QR Code Scanner On Lock Screen) включает или выключает ярлык на экране блокировке:
 	- Включить;
 	- Выключить;
-* Пункт (MAGISK) (NOT MIUI) (12.0+) - (QS Split Notification) делает уведомления в ландшафте как на планшетах:
+* Пункт (MAGISK) (NOT MIUI) (12.1+) - (QS Split Notification) делает уведомления в ландшафте как на планшетах:
 	- Включить;
 	- Выключить;
 
@@ -2120,7 +2131,7 @@
 	
 <h3 align=center>Audio: VFX(P)/DOLBY/NLSOUND/AIST/SAQ/IB/AML/ALCF</h3>
 
-* Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6 и  v2.7.2.1 в зависимости от версии Android;
+* Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6, v2.7.2.1 и v0.3.0 в зависимости от версии Android;
 * Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX.
 * Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=116366772">4PDA</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
@@ -2157,6 +2168,7 @@
 					- Удаление приложений которые не влияют на работу прошивки (перенос с AIOIARPFMD и улучшенный список - для обычных пользователей рекомендую с выбором на каждый разумеется но я пользуюсь этим списком и удаляю все что в нем);
 					- Удаление приложений которые могут повлиять на работу прошивки - они лишают GApps и много другого (список смотрите и возможен отвал всего);
 					- (NOT MIUI) Удаление лаунчеров;
+					- (NOT MIUI) Удаление камер;
 
 Списки приложений которые удаляются:
 
@@ -2170,7 +2182,6 @@
 	- DeskClock
 	- FileExplorer
 	- FileExplorerGlobal
-	- MiuiCamera
 	- Mms
 
 * Другие приложения:
@@ -2192,7 +2203,6 @@
 	- AndroidAutoStub
 	- AndroidAutoStubPrebuilt
 	- AndroidForWork
-	- Aperture
 	- AudioFX
 	- BasicDreams
 	- BatteryTile
@@ -2210,10 +2220,7 @@
 	- CalculatorGooglePrebuilt
 	- CalendarGoogle
 	- CalendarGooglePrebuilt
-	- Camera
-	- Camera2
 	- CameraExtensionsProxy
-	- CameraGo
 	- CarHomeGoogle
 	- CarrierServices
 	- CatchLog
@@ -2274,9 +2281,6 @@
 	- Focus
 	- FotaAgent
 	- GCS
-	- GCam
-	- GCamGOPrebuilt
-	- GCamGo
 	- Galaxy4
 	- GalaxyApps
 	- Gallery
@@ -2288,16 +2292,12 @@
 	- GameCenter
 	- GameCenterGlobal
 	- Gboard
-	- Gcam
 	- GenieWidget
 	- GlobalTrendNews
 	- GlobalUserGuide
 	- Gmail
 	- Gmail2
 	- GoogleCalendar
-	- GoogleCamera
-	- GoogleCameraGo
-	- GoogleCameraLegacy
 	- GoogleCloudPrint
 	- GoogleContacts
 	- GoogleDialer
@@ -2314,12 +2314,13 @@
 	- GoogleMusic
 	- GoogleNow
 	- GoogleNowVoiceSearch
+	- GoogleOne
+	- GooglePay
 	- GooglePinyinIME
 	- GooglePlus
 	- GooglePrintRecommendationService
 	- GoogleTTS
 	- GoogleVrCore
-	- GrapheneCamera
 	- HTMLViewer
 	- Hangouts
 	- HangoutsDialer
@@ -2355,6 +2356,7 @@
 	- Lawnfeed
 	- Leaflet
 	- Lens
+	- LensAppStub
 	- MSA-Global
 	- MSSkype_stub
 	- MaestroPrebuilt
@@ -2444,6 +2446,7 @@
 	- PixelWallpapers2021
 	- PixelWallpapers2022
 	- PlayGames
+	- Podcasts
 	- PowerPoint_SamsungStub
 	- PrebuiltBugle
 	- PrebuiltBugleStub
@@ -2498,10 +2501,10 @@
 	- SmartCookieWeb
 	- SmartManagerSDK
 	- SmartManager_OLEDHD
-	- Snap
 	- SnapdragonMusic
 	- SoundAmplifierPrebuilt
 	- SparkWallpaperStub
+	- SpeechServicesByGoogle
 	- SprdQuickSearchBox
 	- StagWalls
 	- StatusBarLyricExt
@@ -2544,14 +2547,22 @@
 	- Word_SamsungStub
 	- XiaomiKeyboard
 	- YGPS
+	- YTMusic
 	- YellowPage
 	- YouDaoEngine
 	- YouTube
 	- YouTubeMusicPrebuilt
 	- YouTubeVanced
 	- ZVideoMass
+	- app-assist-light-release
 	- arcore
+	- clock-widgets-release
+	- com.facebook.appmanager
+	- com.facebook.services
+	- com.facebook.system
 	- com.google.ar.core
+	- com.sonymobile.infoapp
+	- com.sonymobile.support
 	- crDroidMusic
 	- facebook-appmanager
 	- facebook-installer
@@ -2561,7 +2572,6 @@
 	- iWnnIME
 	- iWnnIME_Kbd_White
 	- mab
-	- madCamera
 	- madLauncher
 	- madWallpapers
 	- messaging
@@ -2685,6 +2695,26 @@
 * TWLauncherESS
 * Trebuchet
 * TrebuchetQuickStep
+
+</details>
+
+<details> 
+  <summary>Удаление камер:</summary>
+
+* Aperture
+* Camera
+* Camera2
+* CameraGo
+* GCam
+* GCamGOPrebuilt
+* GCamGo
+* Gcam
+* GoogleCamera
+* GoogleCameraGo
+* GoogleCameraLegacy
+* GrapheneCamera
+* Snap
+* madCamera
 
 </details>
 
@@ -2838,7 +2868,7 @@
 <h3 align=center>Что на чем и где было протестировано</h3>
 
 * Патчи были протестированный на версиях Android: 5.1.1, 6.0.1, 7.1.2, 8.1, 9.0, 10.0, 11.0, 12.0, 12.1, 13.0 и Miui 10, 11, 12, 12.5 (соответственно от пунктов что показываются).
-* На девайсах протестировано мною лично: <a href="https://4pda.to/devdb/xiaomi_mi8">MI8</a>, <a href="https://4pda.to/devdb/xiaomi_redmi_note_5_pro">RN5</a>, <a href="https://4pda.to/devdb/redmi_note_7">RN7</a>, <a href="https://4pda.to/devdb/jiayu_s3">Jiayu S3</a>, <a href="https://4pda.to/devdb/samsung_gt_i9500_galaxy_s_4">Samsung Galaxy S4</a>, <a href="https://4pda.to/devdb/sony_xperia_z5_dual">Sony Xperia Z5 Dual</a>, <a href="https://4pda.to/devdb/samsung_galaxy_j3_2016_sm_j320f">Samsung Galaxy J3 SM-J320H</a>, <a href="https://4pda.to/devdb/nomi_i5010_evo_m">Nomi i5010 Evo M</a>.
+* На девайсах протестировано мною лично: <a href="https://4pda.to/devdb/xiaomi_mi8">MI8</a>, <a href="https://4pda.to/devdb/xiaomi_redmi_note_5_pro">RN5</a>, <a href="https://4pda.to/devdb/redmi_note_7">RN7</a>, <a href="https://4pda.to/devdb/jiayu_s3">Jiayu S3</a>, <a href="https://4pda.to/devdb/samsung_gt_i9500_galaxy_s_4">Samsung Galaxy S4</a>, <a href="https://4pda.to/devdb/sony_xperia_z5_dual">Sony Xperia Z5 Dual</a>, <a href="https://4pda.to/devdb/samsung_galaxy_j3_2016_sm_j320f">Samsung Galaxy J3 SM-J320H</a>, <a href="https://4pda.to/devdb/nomi_i5010_evo_m">Nomi i5010 Evo M</a>, <a href="https://4pda.to/devdb/google_pixel_2_xl">Google Pixel 2 XL</a>, <a href="https://4pda.to/devdb/sony_xperia_10_ii">Sony Xperia 10 II</a>.
 
 <h3 align=center>Почему, как и зачем</h3>
 

@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="28.02.23 (96)"
+VAIOPFMD="31.03.23 (97)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -51,8 +51,8 @@ IDQSCIAR="QSCountIconAndRows"; VIPQSCIAR="v1.7"
 IDSBPD="StatusBarPrivacyDot"; VIPSBPD="v1.2"
 IDEBB="BackgroundBlur"; VIPEBB="v1.4"
 IDBA="BootAnimation"; VIPBA="v1.9"
-IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.2"
-IDMUIS="MediaUISounds"; VIPMUIS="v1.9"
+IDIOSEMOJI="IOSEmoji"; VIPIOSEMOJI="v1.3"
+IDMUIS="MediaUISounds"; VIPMUIS="v2.0"
 IDFDNI="ForceDisableNotificationIcons"; VIPFDNI="v1.0"
 IDWFAMDQSOS="WFAMDQSOS"; VIPWFAMDQSOS="v1.1"
 IDQRCSOLS="QRCSOLS"; VIPQRCSOLS="v1.1"
@@ -63,13 +63,13 @@ IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v2.9"; VIPSLLAWNASL="12.1.0 Alpha 4"
 IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHISLA="v5.0"
 IDSLAMR="Systemless_AMRLauncher"; VIPSLAMR="v1.0"; VIPSLAMRTA="v10.0"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
-IDVFX="V4AFX"; VIPVFX="v1.5"
+IDVFX="V4AFX"; VIPVFX="v1.6"
 IDVFXP="V4AFXPresets"; VIPVFXP="v1.8"
 IDDA="DolbyAtmos"; VIPDA="v1.9"
 IDAIST="AIST"; VIPAIST="v1.7"; VCIPAIST="1702"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.1"; VCIPSAQ="21"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.3"
-IDAML="AML"; VIPAML="v4.3"; VCIPAML="43"
+IDAML="AML"; VIPAML="v4.4"; VCIPAML="44"
 IDALCF="ALCF"; VIPALCF="v1.3"
 #AdBlock/Hosts
 IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
@@ -86,7 +86,7 @@ IDAPAUSBTF="APAUSBTF"; VIPAPAUSBTF="v1.0"
 IDBB="BrutalBusyBox"; VIPBB="v1.36.0.1"; VCIPBB="13601"
 IDSQL="SQLITE"; VIPSQL="v3.39.3"
 IDSELC="SELinuxChanger"; VIPSELC="v1.3"
-IDCC="CacheCleaner"; VIPCC="v3.0"
+IDCC="CacheCleaner"; VIPCC="v3.1"
 IDMMFR="MMFR"; VIPMMFR="v1.1"
 IDDETACH="DETACH" VIPDETACH="v1.4"
 #Other: FA/LED/FSFM/UAA/SBU/SHS/GASL
@@ -100,7 +100,7 @@ IDFEG="ForceGestures"; VIPFEG="v1.1"
 IDHAP="EnablingHiddenApiPolicy"; VIPHAP="v1.2"
 IDFIAFUS="FIAFUS"; VIPFIAFUS="v1.2"
 IDBPT="BuildPropTweaks"; VIPBPT="v2.5"
-IDKL="KillLogger"; VIPKL="v2.0"; VCIPKL="20"
+IDKL="KillLogger"; VIPKL="v2.1"; VCIPKL="21"
 IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.7"
@@ -351,7 +351,6 @@ Contacts
 DeskClock
 FileExplorer
 FileExplorerGlobal
-MiuiCamera
 Mms
 "
 
@@ -374,7 +373,6 @@ AndroidAutoPrebuilt
 AndroidAutoStub
 AndroidAutoStubPrebuilt
 AndroidForWork
-Aperture
 AudioFX
 BasicDreams
 BatteryTile
@@ -392,10 +390,7 @@ CalculatorGoogle
 CalculatorGooglePrebuilt
 CalendarGoogle
 CalendarGooglePrebuilt
-Camera
-Camera2
 CameraExtensionsProxy
-CameraGo
 CarHomeGoogle
 CarrierServices
 CatchLog
@@ -456,9 +451,6 @@ FitnessPrebuilt
 Focus
 FotaAgent
 GCS
-GCam
-GCamGOPrebuilt
-GCamGo
 Galaxy4
 GalaxyApps
 Gallery
@@ -470,16 +462,12 @@ GalleryPrebuilt
 GameCenter
 GameCenterGlobal
 Gboard
-Gcam
 GenieWidget
 GlobalTrendNews
 GlobalUserGuide
 Gmail
 Gmail2
 GoogleCalendar
-GoogleCamera
-GoogleCameraGo
-GoogleCameraLegacy
 GoogleCloudPrint
 GoogleContacts
 GoogleDialer
@@ -496,12 +484,13 @@ GoogleLatinIme
 GoogleMusic
 GoogleNow
 GoogleNowVoiceSearch
+GoogleOne
+GooglePay
 GooglePinyinIME
 GooglePlus
 GooglePrintRecommendationService
 GoogleTTS
 GoogleVrCore
-GrapheneCamera
 HTMLViewer
 Hangouts
 HangoutsDialer
@@ -537,6 +526,7 @@ LatinImeTutorial
 Lawnfeed
 Leaflet
 Lens
+LensAppStub
 MSA-Global
 MSSkype_stub
 MaestroPrebuilt
@@ -626,6 +616,7 @@ PixelWallpapers2020
 PixelWallpapers2021
 PixelWallpapers2022
 PlayGames
+Podcasts
 PowerPoint_SamsungStub
 PrebuiltBugle
 PrebuiltBugleStub
@@ -680,10 +671,10 @@ SimpleGalleryPro
 SmartCookieWeb
 SmartManagerSDK
 SmartManager_OLEDHD
-Snap
 SnapdragonMusic
 SoundAmplifierPrebuilt
 SparkWallpaperStub
+SpeechServicesByGoogle
 SprdQuickSearchBox
 StagWalls
 StatusBarLyricExt
@@ -726,14 +717,22 @@ WellbeingPrebuilt
 Word_SamsungStub
 XiaomiKeyboard
 YGPS
+YTMusic
 YellowPage
 YouDaoEngine
 YouTube
 YouTubeMusicPrebuilt
 YouTubeVanced
 ZVideoMass
+app-assist-light-release
 arcore
+clock-widgets-release
+com.facebook.appmanager
+com.facebook.services
+com.facebook.system
 com.google.ar.core
+com.sonymobile.infoapp
+com.sonymobile.support
 crDroidMusic
 facebook-appmanager
 facebook-installer
@@ -743,7 +742,6 @@ greenguard
 iWnnIME
 iWnnIME_Kbd_White
 mab
-madCamera
 madLauncher
 madWallpapers
 messaging
@@ -866,9 +864,27 @@ Trebuchet
 TrebuchetQuickStep
 "
 
+CAMERALIST="
+Aperture
+Camera
+Camera2
+CameraGo
+GCam
+GCamGOPrebuilt
+GCamGo
+Gcam
+GoogleCamera
+GoogleCameraGo
+GoogleCameraLegacy
+GrapheneCamera
+Snap
+madCamera
+"
+
 MMLAUNCHERLIST="
 AlphaDroidLauncher_Port
 Amr_Launcher
+AncientOSLauncher_Port
 BananaDroidLauncher_Port
 CherishLauncher_Port
 CorvusOSLauncher_Port
@@ -3995,7 +4011,7 @@ BUCKUPER -r "$IPSF/AndroidEmoji-htc.ttf $IPSF/ColorUniEmoji.ttf $IPSF/CombinedCo
 UIP "$MSGDRM"
 fi
 else
-UCSA "Install IOS Emoji From IOS 16.0 $VIPIOSEMOJI?" "IPIOSEMOJIS" "$IDIOSEMOJI"
+UCSA "Install IOS Emoji From IOS 16.4 $VIPIOSEMOJI?" "IPIOSEMOJIS" "$IDIOSEMOJI"
 fi
 }
 
@@ -4003,7 +4019,7 @@ IPIOSEMOJIS () {
 UIP "Installing IOS Emoji $IAMM"
 UZTPN "IOSEmoji"
 if $MAGISK; then
-PTMFI "$IDIOSEMOJI" "iOS_Emoji iOS14.6_Emoji_for_Android emoji-replacer-259830633 emoji-replacer-809887617 android11emoji EmojiReplacer" "$MIPSF"
+PTMFI "$IDIOSEMOJI" "iOS_Emoji iOS14.6_Emoji_for_Android emoji-replacer-259830633 emoji-replacer-809887617 emoji-replacer--1117766176 android11emoji EmojiReplacer" "$MIPSF"
 for TTF in AndroidEmoji-htc ColorUniEmoji CombinedColorEmoji DcmColorEmoji HTC_ColorEmoji NotoColorEmoji SamsungColorEmoji; do
 if [ -f $MAGISKMP$IPSF/$TTF.ttf ]; then cp -f $TMPDIR/IOSEmoji/NotoColorEmoji.ttf $MODPATH/$MODID$MIPSF/$TTF.ttf; fi
 done
@@ -4066,17 +4082,16 @@ case $UCSFNMC in
 "Masik") UIP -s "Use Masik Alt Lock Unlock Sound?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then MASIKALT=true; fi;;
 "OnePlus") UIP -s "Choose UI Sound From:" "$MSGVU OOS 12" "$MSGVD OOS 11"; if KEYCHOOSE; then MUIC="/12"; else MUIC="/11"; fi;;
 esac
-UIP -s "Choose Sounds Volume:" "$MSGVU Standart Volume" "$MSGVD Boost Volume"; if KEYCHOOSE; then MUIP="VS"; else MUIP="VB"; fi
 UIP "Installing Media UI Sounds $IAMM"
 UZTPN "MediaUISounds"
 if $MAGISK; then
-if $MASIKALT; then mv -f $TMPDIR/MediaUISounds/$MUIP/MasikAlt/* $TMPDIR/MediaUISounds/$MUIP/Masik; fi
+if $MASIKALT; then mv -f $TMPDIR/MediaUISounds/MasikAlt/* $TMPDIR/MediaUISounds/Masik; fi
 PTMFI "$IDMUIS" "MediaUiSounds" "$MIPPMU"
-cp -f $TMPDIR/$MODID/$MUIP/$UCSFNMC$MUIC/* $MODPATH/$MODID$MIPPMU
+cp -f $TMPDIR/$MODID/$UCSFNMC$MUIC/* $MODPATH/$MODID$MIPPMU
 MMPR -v "Media UI Sounds" "$VIPMUIS" "Media UI Sounds From $UCSFNMC"
 else
 IPMUISSA
-cp -f $TMPDIR/MediaUISounds/$MUIP/$UCSFNMC$MUIC/* $IPPMU
+cp -f $TMPDIR/MediaUISounds/$UCSFNMC$MUIC/* $IPPMU
 fi
 SET_PERM_RM -msgdi
 fi
@@ -4178,7 +4193,7 @@ rm -f $IPPSO/QSSplitNotification*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "Install QS Split Notification $VIPQSSN?" "IPQSSNS" "$IDQSSN"; fi
+if [ $MIUI != true ] && [ "$ASDK" -ge 32 ]; then UCSA -ent "Install QS Split Notification $VIPQSSN?" "IPQSSNS" "$IDQSSN"; fi
 fi
 }
 
@@ -4365,37 +4380,51 @@ UIP "$MSGDI"
 { #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
 
 IPVFX () {
-if $MAGISK && FINDER "$AECONFXML"; then
+if $MAGISK; then
 if [ $ASDK -le 30 ] && [ ! $ASDK -le 22 ]; then
 UCSA "Install ViperFX $VIPVFX - v2.5.0.5 Or v2.7.1.6?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -le 22 ]; then
 UCSA "Install ViperFX $VIPVFX - v2.5.0.5?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -ge 31 ]; then
-UCSA "Install ViperFX $VIPVFX - v2.5.0.5 & v2.7.2.1?" "IPVFXS" "$IDVFX"
+UCSA "Install ViperFX $VIPVFX - v2.5.0.5, v2.7.2.1 & v0.3.0?" "IPVFXS" "$IDVFX"
 fi
 fi
 }
 
 IPVFXS () {
+IV4AFX=false
 if [ $ASDK -le 30 ] && [ ! $ASDK -le 22 ]; then
 UIP -s "Choose Version:" "$MSGVU ViperFX v2.5.0.5" "$MSGVD ViperFX v2.7.1.6"
-if KEYCHOOSE; then V4AFX="2.5.0.5"; else V4AFX="2.7.1.6"; fi
+if KEYCHOOSE; then V4AFX="2.5.0.5"; IV4AFX=true; else V4AFX="2.7.1.6"; IV4AFX=true; fi
 elif [ $ASDK -le 22 ]; then
-V4AFX="2.5.0.5"
+V4AFX="2.5.0.5"; IV4AFX=true
 elif [ $ASDK -ge 31 ]; then
-UIP -s "Choose Version:" "$MSGVU ViperFX v2.5.0.5" "$MSGVD ViperFX v2.7.2.1"
-if KEYCHOOSE; then V4AFX="2.5.0.5"; else V4AFX="2.7.2.1"; fi
+UIP -s "ViperFX v2.5.0.5" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+if KEYCHOOSE; then
+V4AFX="2.5.0.5"; IV4AFX=true
+else
+UIP -s "ViperFX v2.7.2.1" "$MSGVU Yes" "$MSGVD No $MSGNIS"
+if KEYCHOOSE; then
+V4AFX="2.7.2.1"; IV4AFX=true
+else
+UIP -s "ViperFX v0.3.0" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then
+V4AFX="0.3.0"; IV4AFX=true
 fi
+fi
+fi
+fi
+if $IV4AFX; then
 UIP "Installing ViperFX $IAMM"
 UZTPN "V4AFX"
 PTMFI "$IDVFX" "ViPER4AndroidFX ViPER4AndroidFX-Legacy ViPER4AndroidXHiFi viper4magisk ViPER4Android-RE" "$MIPSVLS $MIPSPA/ViPER4AndroidFX"
-if [ $ASDK -ge 31 ] && [ $V4AFX = "2.7.2.1" ] && [ $V4AFX != "4.1" ]; then
+if [ $ASDK -ge 31 ] && [ $V4AFX = "2.7.2.1" ] && [ $V4AFX != "0.3.0" ]; then
 mkdir -p $MODPATH/$MODID$MIPPSO
 cp -f $TMPDIR/V4AFX/ViPER4AndroidFX-Black-Blue.apk $MODPATH/$MODID$MIPPSO
 fi
 cp -f $TMPDIR/V4AFX/ViPER4AndroidFX-$V4AFX.apk $MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk
 APKPERM "$MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk" "$MODPATH/$MODID$MIPSEP"; HAPWL "$MODPATH/$MODID$MIPSES"; MKSCXML "$MODPATH/$MODID$MIPSES"
-if [ $V4AFX = "4.1" ]; then
+if [ $V4AFX = "0.3.0" ]; then
 if [ $ARCH = "arm64" ]; then
 mkdir -p $MODPATH/$MODID$MIPSVLS64 $MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/lib/arm64
 cp -f $TMPDIR/V4AFX/libv4a_re-arm64.so $MODPATH/$MODID$MIPSVLS64/libv4a_re.so
@@ -4420,7 +4449,7 @@ PSF="$MODPATH/$MODID$FAECONFXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAECONFXML $PSF
 PSXCF -osp "$PSF"
-if [ $V4AFX = "4.1" ]; then
+if [ $V4AFX = "0.3.0" ]; then
 PSXCF -aae "v4a_re" "v4a_standard_re" "libv4a_re.so" "90380da3-8536-4744-a6a3-5731970e640f"
 else
 PSXCF -aae "v4a_fx" "v4a_standard_fx" "libv4a_fx_ics.so" "41d3c987-e6cf-11e3-a88a-11aba5d5c51b"
@@ -4430,6 +4459,7 @@ done
 MOVERPATH
 SET_PERM_RM -msgdi
 WCANFTP "-sl -ehap -alcf -aml"
+fi
 }
 
 IPVFXP () {
@@ -6030,9 +6060,9 @@ TOUCHER $MODPATH/$MODID/update
 MMPR -vcs "Audio Modification Library" "$VIPAML" "$VCIPAML" "zackptg5, ahrion" "AudModLib Is A Framework That Allows The Seamless Integration Of Multiple Audio Mods In Magisk" "https://forum.xda-developers.com/apps/magisk/module-audio-modification-library-t3579612"
 echo "#!$MIPSB/sh
 if [ -s $IPDADB/$MODID/modlist ]; then
-while read mod; do
-[ -d \"$MODPATH/\$mod\" ] || continue
-for file in \$(find $IPDADB/$MODID/\$mod -type f 2>/dev/null | sed \"s|$IPDADB/$MODID/||\"); do
+while read MOD; do
+[ -d \"$MODPATH/\$MOD\" ] || continue
+for file in \$(find $IPDADB/$MODID/\$MOD -type f 2>/dev/null | sed \"s|$IPDADB/$MODID/||\"); do
 [ -f \"$MODPATH/\$file\" ] || cp -af $IPDADB/$MODID/\$file $MODPATH/\$file
 done
 done < $IPDADB/$MODID/modlist
@@ -6072,19 +6102,19 @@ cp -af \"\$2\" \"\$3\"
 }
 
 OSP_DETECT () {
-local spaces effects type=\"\$1\"
+local SPACES EFFECT type=\"\$1\"
 local files=\$(find $MODPATH/$MODID/system -type f -name \"*audio_effects*.conf\" -o -name \"*audio_effects*.xml\")
 for file in \$files; do
 for osp in \$type; do
 case \$file in
-*.conf) spaces=\$(sed -n \"/^output_session_processing {/,/^}/ {/^ *\$osp {/p}\" \$file | sed -r \"s/( *).*/\1/\")
-effects=\$(sed -n \"/^output_session_processing {/,/^}/ {/^\$spaces\\\$osp {/,/^\$spaces}/p}\" \$file | grep -E \"^\$spaces +[A-Za-z]+\" | sed -r \"s/( *.*) .*/\1/g\")
-for effect in \${effects}; do
-spaces=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effect {/p}\" \$file | sed -r \"s/( *).*/\1/\")
-[ \"\$effect\" != \"atmos\" -a \"\$effect\" != \"dtsaudio\" ] && sed -i \"/^effects {/,/^}/ {/^\$spaces\$effect {/,/^\$spaces}/d}\" \$file
+*.conf) SPACES=\$(sed -n \"/^output_session_processing {/,/^}/ {/^ *\$osp {/p}\" \$file | sed -r \"s/( *).*/\1/\")
+EFFECT=\$(sed -n \"/^output_session_processing {/,/^}/ {/^\$SPACES\\\$osp {/,/^\$SPACES}/p}\" \$file | grep -E \"^\$SPACES +[A-Za-z]+\" | sed -r \"s/( *.*) .*/\1/g\")
+for EFFECT in \${EFFECT}; do
+SPACES=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effect {/p}\" \$file | sed -r \"s/( *).*/\1/\")
+[ \"\$effect\" != \"atmos\" -a \"\$effect\" != \"dtsaudio\" ] && sed -i \"/^effects {/,/^}/ {/^\$SPACES\$effect {/,/^\$SPACES}/d}\" \$file
 done;;
-*.xml) effects=\$(sed -n \"/^ *<postprocess>\$/,/^ *<\/postprocess>\$/ {/^ *<stream type=\\\"\$osp\\\">\$/,/^ *<\/stream>\$/ {/<stream type=\\\"\$osp\\\">/d; /<\/stream>/d; s/<apply effect=\\\"//g; s/\\\"\/>//g; s/ *//g; p}}\" \$file)
-for effect in \${effects}; do
+*.xml) EFFECT=\$(sed -n \"/^ *<postprocess>\$/,/^ *<\/postprocess>\$/ {/^ *<stream type=\\\"\$osp\\\">\$/,/^ *<\/stream>\$/ {/<stream type=\\\"\$osp\\\">/d; /<\/stream>/d; s/<apply effect=\\\"//g; s/\\\"\/>//g; s/ *//g; p}}\" \$file)
+for effect in \${EFFECT}; do
 [ \"\$effect\" != \"atmos\" -a \"\$effect\" != \"dtsaudio\" ] && sed -i \"/^\( *\)<apply effect=\\\"\$effect\\\"\/>/d\" \$file
 done;;
 esac
@@ -6104,15 +6134,15 @@ modfiles=\"/system\$name \$modfiles\"
 done
 OSP_DETECT \"music\"
 
-for mod in \$(find $MODPATH/* -maxdepth 0 -type d ! -name $MODID); do
-modname=\"\$(basename \$mod)\"
-[ -f \"\$mod/disable\" ] && continue
-files=\"\$(find \$mod/system -type f -name \"*audio_effects*.conf\" -o -name \"*audio_effects*.xml\" -o -name \"*audio_*policy*.conf\" -o -name \"*audio_*policy*.xml\" -o -name \"*mixer_paths*.xml\" -o -name \"*mixer_gains*.xml\" -o -name \"*audio_device*.xml\" -o -name \"*sapa_feature*.xml\" -o -name \"*audio_platform_info*.xml\" -o -name \"*audio_configs*.xml\" -o -name \"*audio_device*.xml\" 2>/dev/null)\"
-[ \"\$files\" ] && echo \"\$modname\" >> $IPDADB/$MODID/modlist || continue
+for MOD in \$(find $MODPATH/* -maxdepth 0 -type d ! -name $MODID); do
+MODNAME=\"\$(basename \$MOD)\"
+[ -f \"\$MOD/disable\" ] && continue
+files=\"\$(find \$MOD/system -type f -name \"*audio_effects*.conf\" -o -name \"*audio_effects*.xml\" -o -name \"*audio_*policy*.conf\" -o -name \"*audio_*policy*.xml\" -o -name \"*mixer_paths*.xml\" -o -name \"*mixer_gains*.xml\" -o -name \"*audio_device*.xml\" -o -name \"*sapa_feature*.xml\" -o -name \"*audio_platform_info*.xml\" -o -name \"*audio_configs*.xml\" -o -name \"*audio_device*.xml\" 2>/dev/null)\"
+[ \"\$files\" ] && echo \"\$MODNAME\" >> $IPDADB/$MODID/modlist || continue
 for file in \$files; do
-CP_MV -m \$file $IPDADB/$MODID/\$modname/\$(echo \"\$file\" | sed \"s|\$mod/||\")
+CP_MV -m \$file $IPDADB/$MODID/\$MODNAME/\$(echo \"\$file\" | sed \"s|\$MOD/||\")
 done
-[ $ASDK -ge 29 ] && chcon -R u:object_r:vendor_file:s0 \$mod$MIPSV/lib*/soundfx 2>/dev/null
+[ $ASDK -ge 29 ] && chcon -R u:object_r:vendor_file:s0 \$MOD$MIPSV/lib*/soundfx 2>/dev/null
 done
 
 for file in \$modfiles; do
@@ -6133,7 +6163,7 @@ done
 
 exit 0" > $MODPATH/$MODID/post-fs-data.sh
 $ECHO "[ \"\$(magisk --path 2>/dev/null)\" ] && MAGISKTMP=\"\$(magisk --path 2>/dev/null)/.magisk\" || MAGISKTMP=\"/sbin/.magisk\"
-[ $ASDK -ge 26 ] && libdir=\"/vendor\" || libdir=\"/system\"
+[ $ASDK -ge 26 ] && LIBDIR=\"/vendor\" || LIBDIR=\"/system\"
 
 CP_MV () {
 mkdir -p \"\$(dirname \"\$3\")\"
@@ -6142,19 +6172,19 @@ cp -af \"\$2\" \"\$3\"
 }
 
 OSP_DETECT () {
-local spaces effects type=\"\$1\"
+local SPACES EFFECT type=\"\$1\"
 local files=\$(find $MODPATH/$MODID/system -type f -name \"*audio_effects*.conf\" -o -name \"*audio_effects*.xml\")
 for file in \$files; do
 for osp in \$type; do
 case \$file in
-*.conf) spaces=\$(sed -n \"/^output_session_processing {/,/^}/ {/^ *\$osp {/p}\" \$file | sed -r \"s/( *).*/\1/\")
-effects=\$(sed -n \"/^output_session_processing {/,/^}/ {/^\$spaces\\\$osp {/,/^\$spaces}/p}\" \$file | grep -E \"^\$spaces +[A-Za-z]+\" | sed -r \"s/( *.*) .*/\1/g\")
-for effect in \${effects}; do
-spaces=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effect {/p}\" \$file | sed -r \"s/( *).*/\1/\")
-[ \"\$effect\" != \"atmos\" -a \"\$effect\" != \"dtsaudio\" ] && sed -i \"/^effects {/,/^}/ {/^\$spaces\$effect {/,/^\$spaces}/d}\" \$file
+*.conf) SPACES=\$(sed -n \"/^output_session_processing {/,/^}/ {/^ *\$osp {/p}\" \$file | sed -r \"s/( *).*/\1/\")
+EFFECT=\$(sed -n \"/^output_session_processing {/,/^}/ {/^\$SPACES\\\$osp {/,/^\$SPACES}/p}\" \$file | grep -E \"^\$SPACES +[A-Za-z]+\" | sed -r \"s/( *.*) .*/\1/g\")
+for effect in \${EFFECT}; do
+SPACES=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effect {/p}\" \$file | sed -r \"s/( *).*/\1/\")
+[ \"\$effect\" != \"atmos\" -a \"\$effect\" != \"dtsaudio\" ] && sed -i \"/^effects {/,/^}/ {/^\$SPACES\$effect {/,/^\$SPACES}/d}\" \$file
 done;;
-*.xml) effects=\$(sed -n \"/^ *<postprocess>\$/,/^ *<\/postprocess>\$/ {/^ *<stream type=\\\"\$osp\\\">\$/,/^ *<\/stream>\$/ {/<stream type=\\\"\$osp\\\">/d; /<\/stream>/d; s/<apply effect=\\\"//g; s/\\\"\/>//g; s/ *//g; p}}\" \$file)
-for effect in \${effects}; do
+*.xml) EFFECT=\$(sed -n \"/^ *<postprocess>\$/,/^ *<\/postprocess>\$/ {/^ *<stream type=\\\"\$osp\\\">\$/,/^ *<\/stream>\$/ {/<stream type=\\\"\$osp\\\">/d; /<\/stream>/d; s/<apply effect=\\\"//g; s/\\\"\/>//g; s/ *//g; p}}\" \$file)
+for effect in \${EFFECT}; do
 [ \"\$effect\" != \"atmos\" -a \"\$effect\" != \"dtsaudio\" ] && sed -i \"/^\( *\)<apply effect=\\\"\$effect\\\"\/>/d\" \$file
 done;;
 esac
@@ -6200,12 +6230,12 @@ case \"\$file\" in
 *.conf)
 if \$proxy; then
 if \$replace && [ \"\$(sed -n \"/^effects {/,/^}/ {/^  \$effname {/,/^  }/p}\" \$file)\" ]; then
-spaces=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
-sed -i \"/^effects {/,/^}/ {/^\$spaces\$effname {/,/^\$spaces}/d}\" \$file
+SPACES=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
+sed -i \"/^effects {/,/^}/ {/^\$SPACES\$effname {/,/^\$SPACES}/d}\" \$file
 fi
 [ ! \"\$(sed -n \"/^effects {/,/^}/ {/^  \$effname {/,/^  }/p}\" \$file)\" ] && sed -i \"s/^effects {/effects {\\n  \$effname {\\n    library proxy\\n    uuid \$uid\\n\\n    libsw {\\n      library \$libname_sw\\n      uuid \$uid_sw\\n    }\\n\\n    libhw {\\n      library \$libname_hw\\n      uuid \$uid_hw\\n    }\\n  }/g\" \$file
 if \$lib; then
-PATCH_CFGS -fl \"\$file\" \"proxy\" \"\$libdir/lib/soundfx/libeffectproxy.so\"
+PATCH_CFGS -fl \"\$file\" \"proxy\" \"\$LIBDIR/lib/soundfx/libeffectproxy.so\"
 if \$replace; then
 PATCH_CFGS -frl \"\$file\" \"\$libname_sw\" \"\$libpathsw\"
 PATCH_CFGS -frl \"\$file\" \"\$libname_hw\" \"\$libpathhw\"
@@ -6217,15 +6247,15 @@ fi
 else
 if \$lib; then
 if \$replace && [ \"\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/,/}/p}\" \$file)\" ]; then
-spaces=\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
-sed -i \"/^libraries {/,/^}/ {/^\$spaces\$libname {/,/^\$spaces}/d}\" \$file
+SPACES=\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
+sed -i \"/^libraries {/,/^}/ {/^\$SPACES\$libname {/,/^\$SPACES}/d}\" \$file
 fi
 [ ! \"\$(sed -n \"/^libraries {/,/^}/ {/^ *\$libname {/,/}/p}\" \$file)\" ] && sed -i \"s|^libraries {|libraries {\\n  \$libname {\\n    path \$libpath\\n  }|\" \$file
 fi
 if \$effect; then
 if \$replace && [ \"\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/,/}/p}\" \$file)\" ]; then
-spaces=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
-sed -i \"/^effects {/,/^}/ {/^\$spaces\$effname {/,/^\$spaces}/d}\" \$file
+SPACES=\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/p}\" \$file | sed -r \"s/( *).*/\1/\")
+sed -i \"/^effects {/,/^}/ {/^\$SPACES\$effname {/,/^\$SPACES}/d}\" \$file
 fi
 [ ! \"\$(sed -n \"/^effects {/,/^}/ {/^ *\$effname {/,/}/p}\" \$file)\" ] && sed -i \"s|^effects {|effects {\\n  \$effname {\\n    library \$libname\\n    uuid \$uid\\n  }|\" \$file
 fi
@@ -6251,7 +6281,7 @@ sed -i \"/<effects>/,/<\/effects>/ {/^ *<effect name=\\\"\$effname\\\".*\/>/d}\"
 fi
 [ ! \"\$(sed -n \"/<effects>/,/<\/effects>/ {/^ *<effectProxy name=\"\$effname\".*>/,/^ *<\/effectProxy>/p}\" \$file)\" -a ! \"\$(sed -n \"/<effects>/,/<\/effects>/ {/^ *<effect name=\"\$effname\".*>/,/^ *\/>/p}\" \$file)\" ] && sed -i -e \"/<effects>/ a\        <effectProxy name=\\\"\$effname\\\" library=\\\"proxy\\\" uuid=\\\"\$uid\\\">\\n            <libsw library=\\\"\$libname_sw\\\" uuid=\\\"\$uid_sw\\\"\/>\\n            <libhw library=\\\"\$libname_hw\\\" uuid=\\\"\$uid_hw\\\"\/>\\n        <\/effectProxy>\" \$file
 if \$lib; then
-PATCH_CFGS -fl \"\$file\" \"proxy\" \"\$libdir/lib/soundfx/libeffectproxy.so\"
+PATCH_CFGS -fl \"\$file\" \"proxy\" \"\$LIBDIR/lib/soundfx/libeffectproxy.so\"
 if \$replace; then
 PATCH_CFGS -frl \"\$file\" \"\$libname_sw\" \"\$libpathsw\"
 PATCH_CFGS -frl \"\$file\" \"\$libname_hw\" \"\$libpathhw\"
@@ -6294,12 +6324,12 @@ return 0
 }
 
 LEGACY_SCRIPT () {
-local RUNONCE=false COUNT=1 LIBDIR=\$libdir/lib/soundfx MOD=\$mod
-(. \$mod/.aml.sh) || echo \"Error in \$modname aml.sh script\" >> $MODPATH/$MODID/Errors.txt
+local RUNONCE=false COUNT=1 LIBDIR=\$LIBDIR/lib/soundfx MOD=\$MOD
+(. \$MOD/.aml.sh) || echo \"Error in \$MODNAME aml.sh script\" >> $MODPATH/$MODID/Errors.txt
 for file in \$files; do
-local NAME=\$(echo \"\$file\" | sed \"s|\$mod|system|\")
+local NAME=\$(echo \"\$file\" | sed \"s|\$MOD|system|\")
 \$RUNONCE || { case \$file in
-*audio_effects*) (. \$mod/.aml.sh) || [ \"\$(grep -x \"\$modname\" $MODPATH/$MODID/Errors.txt)\" ] || echo \"Error in \$modname aml.sh script\" >> $MODPATH/$MODID/Errors.txt; COUNT=\$((\$COUNT + 1));;
+*audio_effects*) (. \$MOD/.aml.sh) || [ \"\$(grep -x \"\$MODNAME\" $MODPATH/$MODID/Errors.txt)\" ] || echo \"Error in \$MODNAME aml.sh script\" >> $MODPATH/$MODID/Errors.txt; COUNT=\$((\$COUNT + 1));;
 esac; }
 done
 }
@@ -6308,26 +6338,26 @@ HEXUUID_CHECKER () {
 UUID=\"\$1\"
 HEXUUID=\"\$(echo \$UUID | sed -r -e \"s/^(..)(..)(..)(..)-(..)(..)-(..)(..)-/\4\3\2\1\6\5\8\7-/\" -e \"s/-(..)(..)-(............)\$/\2\1\3/\")\"
 xxd -p \$lib | tr -d '\\n' | grep -q \"\$HEXUUID\" || continue
-\$(grep -xq \"\$modname\" $IPDADB/$MODID/modlist || echo \"\$modname\" >> $IPDADB/$MODID/modlist)
+\$(grep -xq \"\$MODNAME\" $IPDADB/$MODID/modlist || echo \"\$MODNAME\" >> $IPDADB/$MODID/modlist)
 }
 
 (
 
-for mod in \$(find $MODPATH/* -maxdepth 0 -type d ! -name $MODID); do
-modname=\"\$(basename \$mod)\"
-[ -f \"\$mod/disable\" ] && continue
-[ -f \"\$mod/aml.sh\" ] && cp -f \$mod/aml.sh \$mod/.aml.sh
-if [ -f \"\$mod/.aml.sh\" ]; then
-grep -qx \"\$modname\" $IPDADB/$MODID/modlist || echo \"\$modname\" >> $IPDADB/$MODID/modlist
-if grep -qE '$MODPATH/$MODID/\\$NAME|RUNONCE=|COUNT=' \$mod/.aml.sh; then
+for MOD in \$(find $MODPATH/* -maxdepth 0 -type d ! -name $MODID); do
+MODNAME=\"\$(basename \$MOD)\"
+[ -f \"\$MOD/disable\" ] && continue
+[ -f \"\$MOD/aml.sh\" ] && cp -f \$MOD/aml.sh \$MOD/.aml.sh
+if [ -f \"\$MOD/.aml.sh\" ]; then
+grep -qx \"\$MODNAME\" $IPDADB/$MODID/modlist || echo \"\$MODNAME\" >> $IPDADB/$MODID/modlist
+if grep -qE '$MODPATH/$MODID/\\$NAME|RUNONCE=|COUNT=' \$MOD/.aml.sh; then
 LEGACY_SCRIPT
 else
-(. \$mod/.aml.sh) || echo \"Error in \$modname aml.sh script\" >> $MODPATH/$MODID/Errors.txt
+(. \$MOD/.aml.sh) || echo \"Error in \$MODNAME aml.sh script\" >> $MODPATH/$MODID/Errors.txt
 fi
 else
-libs=\"\$(find \$mod$MIPSLS \$mod$MIPSVLS -type f -name \"libam3daudioenhancement.so\" -o -name \"libarkamys.so\" -o -name \"libatmos.so\" -o -name \"libbassboostMz.so\" -o -name \"libdirac.so\" -o -name \"libdirac.so\" -o -name \"libdseffect.so\" -o -name \"libdtsaudio.so\" -o -name \"libhwdap.so\" -o -name \"libhwdax.so\" -o -name \"libicepower.so\" -o -name \"libjamesdsp.so\" -o -name \"libmaxxeffect-cembedded.so\" -o -name \"libsonysweffect.so\" -o -name \"libswdap.so\" -o -name \"libswdap_ds1se.so\" -o -name \"libswdax.so\" -o -name \"libswvlldp.so\" -o -name \"libv4a_fx.so\" -o -name \"libv4a_fx_ics.so\" -o -name \"libv4a_xhifi_ics.so\" -o -name \"libdiraceffect.so\")\"
+libs=\"\$(find \$MOD$MIPSLS \$MOD$MIPSVLS -type f -name \"libam3daudioenhancement.so\" -o -name \"libarkamys.so\" -o -name \"libatmos.so\" -o -name \"libbassboostMz.so\" -o -name \"libdirac.so\" -o -name \"libdirac.so\" -o -name \"libdseffect.so\" -o -name \"libdtsaudio.so\" -o -name \"libhwdap.so\" -o -name \"libhwdax.so\" -o -name \"libicepower.so\" -o -name \"libjamesdsp.so\" -o -name \"libmaxxeffect-cembedded.so\" -o -name \"libsonysweffect.so\" -o -name \"libswdap.so\" -o -name \"libswdap_ds1se.so\" -o -name \"libswdax.so\" -o -name \"libswvlldp.so\" -o -name \"libv4a_fx.so\" -o -name \"libv4a_fx_ics.so\" -o -name \"libv4a_xhifi_ics.so\"  -o -name \"libv4a_re.so\" -o -name \"libdiraceffect.so\")\"
 for lib in \$libs; do
-libfile=\"\$(echo \$lib | sed -e \"s|\$mod||\" -e \"s|$MIPSV|/vendor|\")\"
+libfile=\"\$(echo \$lib | sed -e \"s|\$MOD||\" -e \"s|$MIPSV|/vendor|\")\"
 case \$(basename \$lib) in
 libam3daudioenhancement.so) HEXUUID_CHECKER 6723dd80-f0b7-11e0-98a2-0002a5d5c51b
 PATCH_CFGS am3daudioenhancement \$UUID am3daudioenhancement \$libfile;;
@@ -6338,7 +6368,7 @@ PATCH_CFGS v4a_standard_fx \$UUID v4a_fx \$libfile;;
 libv4a_xhifi_ics.so) HEXUUID_CHECKER d92c3a90-3e26-11e2-a25f-0800200c9a66
 PATCH_CFGS v4a_standard_xhifi \$UUID v4a_xhifi \$libfile;;
 libv4a_re.so) HEXUUID_CHECKER 90380da3-8536-4744-a6a3-5731970e640f
-PATCH_CFGS v4a_re \$UUID v4a_re \$libfile;;
+PATCH_CFGS v4a_standard_re \$UUID v4a_re \$libfile;;
 libhwdax.so) HEXUUID_CHECKER 9d4921da-8225-4f29-aefa-6e6f69726861
 PATCH_CFGS -pl dax \$UUID dax_sw 6ab06da4-c516-4611-8166-6168726e6f69 \$(dirname \$libfile)/libswdax.so dax_hw a0c30891-8246-4aef-b8ad-696f6e726861 \$libfile;;
 libswdax.so) HEXUUID_CHECKER 9d4921da-8225-4f29-aefa-6e6f69726861
@@ -6543,8 +6573,7 @@ fi
 if KEYCHOOSE; then
 RMLISTCHOICECONFIRMATION=true
 else
-RMLISTCHOICECONFIRMATION=false
-DWSGTRRRM=true
+RMLISTCHOICECONFIRMATION=false; DWSGTRRRM=true
 fi
 if [ -f $STORAGE/APPRMLIST* ]; then APPRMLISTFILE="$(find $STORAGE/APPRMLIST*)"; FINDAPPRMLIST=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/APPRMLIST* ]; then APPRMLISTFILE="$(find $STORAGE/$f/APPRMLIST*)"; FINDAPPRMLIST=true; break; else FINDAPPRMLIST=false; fi; done; fi
 if $FINDAPPRMLIST; then
@@ -6559,7 +6588,6 @@ REMOVETRASHNAME="$RMLIST"
 UIP "Search App, Please Wait..."
 GTRRRMSA
 UIP "Other App Not Found"
-sleep 3
 DWSGTRRRM=false
 fi
 if $RMLISTCHOICEVARIANT; then
@@ -6572,7 +6600,6 @@ REMOVETRASHNAME="$AILIST"
 UIP "Search App, Please Wait..."
 GTRRRMSA
 UIP "Other App Not Found"
-sleep 3
 fi
 fi
 UIP -s "Choose Variant:" "$MSGVU Use Stock List" "$MSGVD No, Next List $MSGNUS"
@@ -6585,16 +6612,6 @@ fi
 REMOVETRASHNAME="$STOCKLIST"
 GTRRRMSA
 UIP "Other App Not Found"
-sleep 3
-fi
-UIP -s "Choose Variant:" "$MSGVU Use Experimental List" "$MSGVD No, Next List $MSGNUS"
-if KEYCHOOSE; then
-RMLISTCHOICECONFIRMATION=true
-REMOVETRASHNAME="$EXPERIMENTALLIST"
-UIP "Search App, Please Wait..."
-GTRRRMSA
-UIP "Other App Not Found"
-sleep 3
 fi
 if [ $MIUI != true ]; then
 UIP -s "Choose Variant:" "$MSGVU Use Launchers List" "$MSGVD No $MSGNUS"
@@ -6604,8 +6621,23 @@ REMOVETRASHNAME="$LAUNCHERLIST"
 UIP "Search App, Please Wait..."
 GTRRRMSA
 UIP "Other App Not Found"
-sleep 3
 fi
+UIP -s "Choose Variant:" "$MSGVU Use Cameras List" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then
+RMLISTCHOICECONFIRMATION=true
+REMOVETRASHNAME="$CAMERALIST"
+UIP "Search App, Please Wait..."
+GTRRRMSA
+UIP "Other App Not Found"
+fi
+fi
+UIP -s "Choose Variant:" "$MSGVU Use Experimental List" "$MSGVD No, Next List $MSGNUS"
+if KEYCHOOSE; then
+RMLISTCHOICECONFIRMATION=true
+REMOVETRASHNAME="$EXPERIMENTALLIST"
+UIP "Search App, Please Wait..."
+GTRRRMSA
+UIP "Other App Not Found"
 fi
 fi
 }
@@ -8231,12 +8263,14 @@ $IPDS/procstats
 $IPDS/syncmanager-log
 $IPDS/usagestats
 $IPDSUDE/0/com.android.shell/files/bugreports
+$STORAGE/Download/MGC_CRASH_LOG
 $STORAGE/MIUI/.debug_log
 $STORAGE/mtklog
 /data/anr
 /data/log
 /data/log_other_mode
 /data/tombstones
+/data/vendor/gps/log
 /dev/log
 \"
 
@@ -8271,18 +8305,22 @@ RMFOLDERLIST=\"
 .DataStorage
 .UTSystemConfig
 .com.android.providers.downloads.ui
-.gs_fs0
+.gs
+.gs_fs*
 .temp
 .thumbnails
 .tmfs
 .vdevdir
 .xlDownload
 Crash_Reports
+app_webview
 cache
+code_cache
 dalvik-cache
+no_backup
+package_cache
 resource-cache
 thumbs
-package_cache
 \"
 
 echo \"$MSGSD Search In /data...\"
@@ -9449,12 +9487,14 @@ $IPDS/procstats
 $IPDS/syncmanager-log
 $IPDS/usagestats
 $IPDSUDE/0/com.android.shell/files/bugreports
+$STORAGE/Download/MGC_CRASH_LOG
 $STORAGE/MIUI/.debug_log
 $STORAGE/mtklog
 /data/anr
 /data/log
 /data/log_other_mode
 /data/tombstones
+/data/vendor/gps/log
 /dev/log
 "
 for kll in $KLRML; do if [ -d $kll ]; then UIP "Found Logs In $kll"; rm -rf $kll; elif [ -f $kll ]; then UIP "Found $kll"; rm -f $kll; fi; done
