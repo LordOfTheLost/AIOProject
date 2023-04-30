@@ -1,10 +1,10 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.03.23 (97) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.03.2023/AIOPFMD-31.03.23-%2897%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1kdnHjbXg6lEPyVm4_0f_XOKc8nzBCToG/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/119">TG</a>
+* Версия AIOPFMD: 30.04.23 (98) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.04.2023/AIOPFMD-30.04.23-%2898%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/12VlDfU39XBhZgpgAwDPGwKZ8bpmI62IU/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/122">TG</a>
 * Что нужно/может потребоваться:
-	- Желателен MAGISK 24.3+ (24300+) и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
-	- Архитектура Arm или Arm64;
+	- Желателен MAGISK 24.3/26.1 и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
+	- Работает только на Arm или Arm64;
 	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
 	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет);
 	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники;
@@ -18,6 +18,28 @@
 <details>
   <summary>Changelog</summary>
 
+#### 30.04.23 (98) ####
+* Cache Cleaner обновлен до v3.2 - добавил подсчет сколько было освобождено mb и пару изменений по UI;
+* ViperFX обновлен до v1.7 - улучшения в общей работе v0.3.0 RE MD3;
+* Dolby Atmos обновлен до v2.0 - фикс для Magisk 26.0 и ускорение поиска mirror;
+* System Audio Quality обновлен до v2.2 - фикс для Magisk 26.0 и ускорение поиска mirror;
+* Increase Bitrate обновлен до v1.4 - фикс для Magisk 26.0 и ускорение поиска mirror;
+* Audio Modification Library обновлен до v4.5 - фикс для Magisk 26.0 и ускорение поиска mirror;
+* Audio Library Crackling Fix обновлен до v1.4 - фикс для Magisk 26.0 и ускорение поиска mirror;
+* Начиная с Magisk 26.1 версии выше будут не поддерживаемые и версии ниже 24.3 тоже (потому-что);
+* Фикс и улучшения для обратной совместимости mirror по остальному патчу;
+* Добавлена установка Octavi Launcher для марта и апреля;
+* Добавлен вывод производителя DDR и постоянной памяти в Show Health Storage;
+* ViperFX Presets обновлен до v1.9 - удалены пресеты (они и так не универсальны да и жопа у всех разная) а так же сменил MODID;
+* Напоминаю, что на пункты есть проверки по многим параметрам и если пункта нет, ЗНАЧИТ ЕГО НЕТ;
+* Показ для смертных Get All Settings List убран;
+* Добавил exit на не arm/64 (что б вы даже не пытались);
+* Улучшена работа Режима удаления/replace/restore и добавлены приложения:
+	- Обычный лист: yetCalc, BlissUpdater и FuseWalls;
+	- Лист камер: ApertureLensLauncher, DevCamera и LegacyCamera;
+	- Лист лаунчеров: Launcher3;
+	- Экспериментальный лист: DocumentsUI и DocumentsUIGoogle;
+* WIFIPatcher обновлен до v1.4 - добавил gEnablePowerSaveOffload и gSkipDfsChannelInP2pSearch.
 #### 31.03.23 (97) ####
 * Cache Cleaner обновлен до v3.1 - добавлено больше путей для говна;
 * Изменения по Режиму удаления/replace/restore:
@@ -282,7 +304,7 @@
 	- Фикс Deep Sleep на некоторых прошивках (возможно это фиксит не только Deep Sleep);
 	- Фикс конфликта аудиопатчинга;
 	- Убраны далбинги и улучшен патчинг;
-	- Фикс UUID dirac_gef
+	- Фикс UUID dirac_gef;
 	- Выбор Disabling Ultra Low Latency убран из за полной переделки что позволяет патчить конфликты;
 	- Интеграция с System Audio Quality;
 	- Фикс черных экранов для Miui с репатчингом и двойной перезагрузкой при перепрошиве /vendor;
@@ -2114,12 +2136,13 @@
 	- Включить;
 	- Выключить;
 
-<h3 align=center>Launchers: Shady/Lawnchair/Sushi/AMR</h3>
+<h3 align=center>Launchers: Shady/Lawnchair/Sushi/AMR/Octavi</h3>
 
 * Пункт (MAGISK) (NOT MIUI) (10-13.0) (\\) - (Systemless Launcher) установка одного из лаунчеров:
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка Lawnchair Launcher (SL/T) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
 	- Установка Sushi Launcher (AMR) (SL/T) <a href="https://github.com/ricedroidOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
+	- Установка Octavi Launcher (T) <a href="https://github.com/Octavi-OS/platform_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/octavi_os">TG</a>;
 
 <h3 align=center>Install App From /sdcard/Application</h3>
 
@@ -2132,7 +2155,7 @@
 <h3 align=center>Audio: VFX(P)/DOLBY/NLSOUND/AIST/SAQ/IB/AML/ALCF</h3>
 
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6, v2.7.2.1 и v0.3.0 в зависимости от версии Android;
-* Пункт (ALL) - (ViperFX Presets) пресеты/ядра/конвольтеры для ViperFX.
+* Пункт (ALL) - (DDC & Kernel For ViperFX) ядра и конвольтеры для ViperFX;
 * Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=116366772">4PDA</a> - (AIST) улучшает качество звука и как по мне лучше NLSound:
 	- PATCH_VOLUMES;
@@ -2207,6 +2230,7 @@
 	- BasicDreams
 	- BatteryTile
 	- BetterBug
+	- BlissUpdater
 	- BookmarkProvider
 	- Books
 	- BooksPhone
@@ -2279,6 +2303,7 @@
 	- Firewall
 	- FitnessPrebuilt
 	- Focus
+	- FuseWalls
 	- FotaAgent
 	- GCS
 	- Galaxy4
@@ -2578,6 +2603,7 @@
 	- stats
 	- talkback
 	- wellbeingconf
+	- yetCalc
 </details>
 
 <details> 
@@ -2596,6 +2622,8 @@
 * ConnMO
 * Currents
 * DMAgent
+* DocumentsUI
+* DocumentsUIGoogle
 * EditorsDocs
 * EditorsDocsStub
 * EditorsSheets
@@ -2702,9 +2730,11 @@
   <summary>Удаление камер:</summary>
 
 * Aperture
+* ApertureLensLauncher
 * Camera
 * Camera2
 * CameraGo
+* DevCamera
 * GCam
 * GCamGOPrebuilt
 * GCamGo
@@ -2713,6 +2743,7 @@
 * GoogleCameraGo
 * GoogleCameraLegacy
 * GrapheneCamera
+* LegacyCamera
 * Snap
 * madCamera
 
@@ -2771,7 +2802,7 @@
 	- l) Show DETACH List;
 	- q) Quit;
 
-<h3 align=center>Other: FA/LED/FSFM/UAA/SBU/SHS/GASL</h3>
+<h3 align=center>Other: FA/LED/FSFM/UAA/SBU/SHS</h3>
 
 * Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок/телефонов у которых есть uinput-fpc/gf/goodix.kl файлы с выборами:
 	- Кнопка Включения;
@@ -2807,7 +2838,6 @@
 * Пункт (RECOVERY) - (Unfreeze All Applications) разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);
 * Пункт (ALL) - (Show Battery Status) проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть;
 * Пункт (ALL) (UFS & EMMC) - (Show Health Storage) показывает примерное состояние памяти;
-* Пункт (MAGISK MANAGER) - (Get All Settings List) снятие Settings List для тестов;
 
 <h3 align=center>Tweaks: FGS/BP/KL/UGMSD/USGP/VS</h3>
 
