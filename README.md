@@ -1,10 +1,11 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 30.04.23 (98) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.04.2023/AIOPFMD-30.04.23-%2898%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/12VlDfU39XBhZgpgAwDPGwKZ8bpmI62IU/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/122">TG</a>
+* Версия AIOPFMD: 31.05.23 (99) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.05.2023/AIOPFMD-31.05.23-%2899%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1JzfwjGRdSLxjYGKYZCmfej1VeBca7mVf/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/124">TG</a>
 * Что нужно/может потребоваться:
 	- Желателен MAGISK 24.3/26.1 и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
 	- Работает только на Arm или Arm64;
+	- Желательно последние патчи безопасности (не всегда но всегда);
 	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
 	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет);
 	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники;
@@ -18,6 +19,16 @@
 <details>
   <summary>Changelog</summary>
 
+#### 31.05.23 (99) ####
+* В Режим удаления/replace/restore добавлены приложения в:
+	- Обычный лист: Updates, BetterBugStub, HealthConnectPrebuilt и AmbientStreaming;
+	- Экспериментальный лист: PowerOffAlarm;
+* ViperFX обновлен до v1.8 - обновлен до v0.5.0 RE MD3;
+* AIST обновлен до v1.8 - всё как всегда и посморим что умрет;
+* hosts файл с AdAway обновлен от 01.05.2023;
+* Face UnLock IR Changer обновлен до v2.4 - поддержка канга Spark;
+* В Режим удаления/replace/restore перемещены приложения из обычного листа в экспериментальный: SafetyHubPrebuilt и SecurityHubPrebuilt;
+* Фиксы по Google Sync выводу и выбору.
 #### 30.04.23 (98) ####
 * Cache Cleaner обновлен до v3.2 - добавил подсчет сколько было освобождено mb и пару изменений по UI;
 * ViperFX обновлен до v1.7 - улучшения в общей работе v0.3.0 RE MD3;
@@ -1921,7 +1932,7 @@
 				- 2dip;
 				- 4dip;
 				- 6dip;	
-* Пункт (MAGISK) (NOT MIUI) (10) - (GPay Power Menu) (он же альтернатива меню выключения расположена с низу);
+* Пункт (MAGISK) (NOT MIUI) (10) - (GPay Power Menu) он же альтернатива меню выключения расположена с низу;
 * Пункт (ALL) (10-13.0) (\\) - (Rounded UI) для скругления системы, лаунчеров и приложений которые подтягивают строки из системы (и это лучше VGM);
 * Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Burn In Protection) включает смещение пикселей в статус баре, жестовой зоне/зоне NavBar и AOD (работает только на тех прошивках, в которых это встроено но отключено):
 	- Время смещения (в секундах):
@@ -2220,6 +2231,7 @@
 	- Aegis
 	- AirDots
 	- AirDotsPlugin
+	- AmbientStreaming
 	- AnalyticsCore
 	- AncientClockWidget
 	- AndroidAutoPrebuilt
@@ -2230,6 +2242,7 @@
 	- BasicDreams
 	- BatteryTile
 	- BetterBug
+	- BetterBugStub
 	- BlissUpdater
 	- BookmarkProvider
 	- Books
@@ -2303,8 +2316,8 @@
 	- Firewall
 	- FitnessPrebuilt
 	- Focus
-	- FuseWalls
 	- FotaAgent
+	- FuseWalls
 	- GCS
 	- Galaxy4
 	- GalaxyApps
@@ -2350,6 +2363,7 @@
 	- Hangouts
 	- HangoutsDialer
 	- Health
+	- HealthConnectPrebuilt
 	- HelpRtcPrebuilt
 	- HoloSpiralWallpaper
 	- HotwordEnrollment
@@ -2501,7 +2515,6 @@
 	- SPenSdk3
 	- SPlannerWidget_Essential
 	- SPlanner_Essential
-	- SafetyHubPrebuilt
 	- SamsungIMEv2
 	- SamsungSans
 	- SamsungTTS
@@ -2515,7 +2528,6 @@
 	- SecHTMLViewer
 	- SecMyFiles2015_ESS
 	- SecSetupWizard2015
-	- SecurityHubPrebuilt
 	- SecurityLogAgent
 	- ShiftPapers
 	- SimIcons
@@ -2548,6 +2560,7 @@
 	- TurboPrebuilt
 	- Tycho
 	- UPTsmService
+	- Updates
 	- Velvet
 	- Velvet_update
 	- Via
@@ -2664,6 +2677,7 @@
 * PlayAutoInstallConfig
 * PlayStore
 * PlusOne
+* PowerOffAlarm
 * PrebuiltGmsCore
 * PrebuiltGmsCorePix
 * PrebuiltGmsCoreQt
@@ -2674,7 +2688,9 @@
 * PrintSpooler
 * QuickOffice
 * SPrintSpoolerLMR1
+* SafetyHubPrebuilt
 * SamsungBilling
+* SecurityHubPrebuilt
 * SettingsGoogle
 * SettingsIntelligenceGooglePrebuilt
 * SoundPicker
