@@ -1,6 +1,6 @@
 #!/sbin/sh
 
-VAIOPFMD="31.05.23 (99)"
+VAIOPFMD="30.06.23 (100)"
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 IPDLTMP="/data/local/tmp"
@@ -66,7 +66,7 @@ IDSLO="Systemless_OctaviLauncher"; VIPSLO="v1.0"; VIPSLOTA="v4.2"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
 IDVFX="V4AFX"; VIPVFX="v1.8"
 IDVFXDAK="V4AFXDAK"; VIPVFXDAK="v1.9"
-IDDA="DolbyAtmos"; VIPDA="v2.0"
+IDDA="DolbyAtmos"; VIPDA="v2.1"
 IDAIST="AIST"; VIPAIST="v1.8"; VCIPAIST="1605"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.2"; VCIPSAQ="22"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.4"
@@ -106,11 +106,11 @@ IDFMSAAS="ForceMSAASwitcher"; VIPFMSAAS="v1.0"
 IDFDHWO="ForceDisableHWOverlays"; VIPFDHWO="v1.1"
 IDFDEVADB="ForceDEVADB"; VIPFDEVADB="v1.7"
 IDUSBSUC="USBSUC"; VIPUSBSUC="v1.1"
-IDFULIRC="FaceUnLockIRChanger"; VIPFULIRC="v2.4"
+IDFULIRC="FaceUnLockIRChanger"; VIPFULIRC="v2.5"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
-IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.8.8"; VCIPUGMSD="188"
+IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.9.0"; VCIPUGMSD="190"
 IDUSGP="USGP"; VIPUSGP="v1.3"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.2"
@@ -408,6 +408,7 @@ CalculatorGoogle
 CalculatorGooglePrebuilt
 CalendarGoogle
 CalendarGooglePrebuilt
+CalendarProvider
 CameraExtensionsProxy
 CarHomeGoogle
 CarrierServices
@@ -424,6 +425,7 @@ ColtPapers
 Covers
 CtsShimPrivPrebuilt
 DeskClockGoogle
+DesktopMode
 DeviceIntelligenceNetworkPrebuilt
 DevicePersonalizationPrebuiltPixel2020
 DevicePersonalizationPrebuiltPixel2021
@@ -622,6 +624,7 @@ Ornament
 Papers
 ParallelSpace
 ParallelSpacePrebuilt
+ParanoidPapers
 PartnerBookmarksProvider
 PaymentService
 PersonalAssistant
@@ -722,6 +725,8 @@ VoiceSearch
 VoiceSearchStub
 Wallet
 Wallpaper
+WallpaperEffect
+WallpaperEmojiPrebuilt
 WallpapersBReel2017
 WallpapersBReel2019
 WallpapersBReel2020
@@ -921,6 +926,7 @@ BananaLauncher_Port
 CherishLauncher_Port
 CorvusOSLauncher_Port
 DerpLauncher_Port
+ElixirLauncher_Port
 ExtendedOSLauncher_Port
 MotoLauncher
 NusantaraLauncher_Port
@@ -4294,76 +4300,93 @@ UZTPN "DolbyAtmos"
 PTMFI -np "$IDDA" "dolbyatmos DolbyAudio MotoDolby SoundEnhancement MiSound AudioFxMoto MotoWaves"
 MMPR -v "Dolby Atmos" "$VIPDA" "Dolby Atmos - Is An Audio Enhancing Software To Provide Everyone With A Better Audio Experience"
 echo "dontaudit system_server system_file file write
-allow system_server system_file file write
-type system_lib_file
-type vendor_file
-type vendor_configs_file
-type hal_dms_default_exec
-type vendor_data_file
-type vendor_media_data_file
-dontaudit { system_lib_file vendor_file vendor_configs_file hal_dms_default_exec vendor_data_file vendor_media_data_file } labeledfs filesystem associate
-allow { system_lib_file vendor_file vendor_configs_file hal_dms_default_exec vendor_data_file vendor_media_data_file } labeledfs filesystem associate
-dontaudit init { system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file } dir relabelfrom
-allow init { system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file } dir relabelfrom
-dontaudit init { system_lib_file vendor_file vendor_configs_file hal_dms_default_exec vendor_data_file vendor_media_data_file } file relabelfrom
-allow init { system_lib_file vendor_file vendor_configs_file hal_dms_default_exec vendor_data_file vendor_media_data_file } file relabelfrom
-type same_process_hal_file
+allow     system_server system_file file write
+create { system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file hal_dms_default_exec }
+dontaudit { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file hal_dms_default_exec } labeledfs filesystem associate
+allow     { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file hal_dms_default_exec } labeledfs filesystem associate
+dontaudit init { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file } { dir file } relabelfrom
+allow     init { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file } { dir file } relabelfrom
+dontaudit init hal_dms_default_exec file relabelfrom
+allow     init hal_dms_default_exec file relabelfrom
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app hal_audio_default mtk_hal_audio audioserver } { default_android_hwservice hal_dms_hwservice dms_hwservice } hwservice_manager find
-allow daxservice_app permission_checker_service service_manager find
+allow daxservice_app { permission_checker_service game_service netstats_service content_capture_service } service_manager find
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { hal_dms_default_exec vendor_displayfeature_prop } file getattr
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { hal_dms_default_exec vendor_displayfeature_prop } file getattr
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { hal_dms_default_exec vendor_displayfeature_prop } file getattr
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } bluetooth_prop file map
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } bluetooth_prop file map
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_default_prop file { read open getattr }
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_default_prop file { read open getattr }
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } debug_mtk_gpud_prop file { read open getattr map }
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } debug_mtk_gpud_prop file { read open getattr map }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } system_file file { read open getattr execute }
-allow { hal_audio_default mtk_hal_audio audioserver } system_file file { read open getattr execute }
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } bluetooth_prop file map
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_default_prop qemu_hw_prop } file { read open getattr }
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_default_prop qemu_hw_prop } file { read open getattr }
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { debug_mtk_gpud_prop audio_config_prop } file { read open getattr map }
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { debug_mtk_gpud_prop audio_config_prop } file { read open getattr map }
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_displayfeature_prop file read
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_displayfeature_prop file read
 dontaudit zygote { device unlabeled } file write
-allow zygote { device unlabeled } file write
+allow     zygote { device unlabeled } file write
+dontaudit zygote zygote_tmpfs file { create open }
+allow     zygote zygote_tmpfs file { create open }
 dontaudit init system_file file mounton
-allow init system_file file mounton
+allow     init system_file file mounton
+dontaudit daxservice_app default_prop file read
+allow     daxservice_app default_prop file read
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
 dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
 allow { hal_audio_default mtk_hal_audio audioserver } system_suspend_hwservice hwservice_manager find
-dontaudit { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop } file { read open getattr map }
-allow { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop } file { read open getattr map }
+allow { hal_audio_default mtk_hal_audio audioserver } hal_system_suspend_service service_manager find
+dontaudit { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop audio_prop } file { read open getattr map }
+allow     { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop audio_prop } file { read open getattr map }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
-allow { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } audio_prop file { read open getattr }
-allow { hal_audio_default mtk_hal_audio audioserver } audio_prop file { read open getattr }
+allow     { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
+dontaudit { hal_audio_default mtk_hal_audio audioserver } radio_prop file { read open getattr map }
+allow     { hal_audio_default mtk_hal_audio audioserver } radio_prop file { read open getattr map }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
-allow { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file open
-allow { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file open
-dontaudit { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir read
-allow { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir read
+allow     { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
+dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file { read open getattr }
+allow     { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file { read open getattr }
+dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs file { read open }
+allow     { hal_audio_default mtk_hal_audio audioserver } sysfs file { read open }
+dontaudit { hal_audio_default mtk_hal_audio audioserver } system_prop file map
+allow     { hal_audio_default mtk_hal_audio audioserver } system_prop file map
+dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_pd_locater_dbg_prop file read
+allow     { hal_audio_default mtk_hal_audio audioserver } vendor_pd_locater_dbg_prop file read
+dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_net dir search
+allow     { hal_audio_default mtk_hal_audio audioserver } sysfs_net dir search
+dontaudit { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir { read open }
+allow     { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir { read open }
 dontaudit { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
-allow { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
+allow     { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
 dontaudit { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
-allow { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
+allow     { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
 dontaudit { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
-allow { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
+allow     { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
+dontaudit { hal_audio_default mtk_hal_audio audioserver } device chr_file { read write }
+allow     { hal_audio_default mtk_hal_audio audioserver } device chr_file { read write }
+dontaudit { hal_audio_default mtk_hal_audio audioserver } system_suspend binder call
+allow     { hal_audio_default mtk_hal_audio audioserver } system_suspend binder call
+dontaudit { hal_audio_default mtk_hal_audio audioserver } { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } fifo_file write
+allow     { hal_audio_default mtk_hal_audio audioserver } { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } fifo_file write
 dontaudit hal_audio_default hal_audio_default capability2 block_suspend
-allow hal_audio_default hal_audio_default capability2 block_suspend
+allow     hal_audio_default hal_audio_default capability2 block_suspend
 dontaudit mtk_hal_audio mtk_hal_audio capability2 block_suspend
-allow mtk_hal_audio mtk_hal_audio capability2 block_suspend
+allow     mtk_hal_audio mtk_hal_audio capability2 block_suspend
 dontaudit audioserver audioserver capability2 block_suspend
-allow audioserver audioserver capability2 block_suspend" > $MODPATH/$MODID/sepolicy.rule
+allow     audioserver audioserver capability2 block_suspend" > $MODPATH/$MODID/sepolicy.rule
 echo "#!$MIPSB/sh
 
 resetprop ro.feature.dolby_enable true
 resetprop vendor.audio.dolby.ds2.enabled false
 resetprop vendor.audio.dolby.ds2.hardbypass false
 
-for STOPSERVICE in \"dms-hal-1-0\" \"dms-hal-2-0\"; do
-if getprop | grep \"init.svc.\$STOPSERVICE\]: \[running\"; then
-stop \$STOPSERVICE
+STOPSERVICE=\"dms-hal-1-0\" \"dms-hal-2-0\"
+for NAME in \$STOPSERVICE; do
+if [ \"\`getprop init.svc.$NAME\`\" == running ]\
+|| [ \"\`getprop init.svc.$NAME\`\" == restarting ]; then
+stop \$NAME
 fi
 done
 
@@ -4378,18 +4401,19 @@ resetprop ro.audio.monitorRotation true
 fi
 
 killall com.dolby.daxservice com.dolby.daxappui com.dolby.atmos
-VIBRATOR=\`realpath /*/bin/hw/vendor.qti.hardware.vibrator.service*\`
-[ \"\$VIBRATOR\" ] && killall \$VIBRATOR
-POWER=\`realpath /*/bin/hw/vendor.mediatek.hardware.mtkpower@*-service\`
-[ \"\$POWER\" ] && killall \$POWER
+killall vendor.qti.hardware.vibrator.service
+killall vendor.qti.hardware.vibrator.service.oneplus9
+killall android.hardware.camera.provider@2.4-service_64
+killall vendor.mediatek.hardware.mtkpower@1.0-service
 killall android.hardware.usb@1.0-service
 killall android.hardware.usb@1.0-service.basic
-killall android.hardware.sensors@1.0-service
-killall android.hardware.sensors@2.0-service-mediatek
 killall android.hardware.light-service.mt6768
 killall android.hardware.lights-service.xiaomi_mithorium
-CAMERA=\`realpath /*/bin/hw/android.hardware.camera.provider@*-service_64\`
-[ \"\$CAMERA\" ] && killall \$CAMERA
+killall vendor.samsung.hardware.light-service
+killall android.hardware.sensors@1.0-service
+killall android.hardware.sensors@2.0-service
+killall android.hardware.sensors@2.0-service-mediatek
+killall android.hardware.sensors@2.0-service.multihal
 SERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" > $MODPATH/$MODID/service.sh
 echo "#!$MIPSB/sh
 DIR=/data/vendor/dolby
@@ -9478,7 +9502,7 @@ FUPNXML="co.aospa.sense"
 fi
 if $MAGISK; then
 PTMFI -nmp "$IDFULIRC"
-echo "vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,org.lineageos.aperture.dev,$FUPNXML\nro.face_unlock_service.enabled=true" > $MODPATH/$MODID/system.prop
+echo -e "vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam,org.lineageos.aperture,$FUPNXML\nro.face_unlock_service.enabled=true" > $MODPATH/$MODID/system.prop
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "\nro.face.moto_unlock_service.cam_id=$SWITCHIR" > $MODPATH/$MODID/system.prop
 elif [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
@@ -9490,7 +9514,7 @@ fi
 MMPR -v "Face UnLock IR Changer" "$VIPFULIRC" "Face UnLock IR Changer For MI8/POCOF1 - Set On: $MSGSWITCHIR"
 else
 BUCKUPER -bf "$IPSBP"
-echo -e "\n# Face UnLock IR Changer\nvendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap,org.lineageos.aperture,org.lineageos.aperture.dev,$FUPNXML\nro.face_unlock_service.enabled=true" >> $IPSBP
+echo -e "\n# Face UnLock IR Changer\nvendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam,org.lineageos.aperture,$FUPNXML\nro.face_unlock_service.enabled=true" >> $IPSBP
 if [ -f $IPSEP/com.motorola.faceunlock.xml ]; then
 echo -e "\n# Face UnLock IR Changer\nro.face.moto_unlock_service.cam_id=$SWITCHIR" >> $IPSBP
 elif [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
@@ -9619,7 +9643,7 @@ cmd appops set com.google.android.printservice.recommendation AUTO_START ignore
 cmd appops set com.android.hotwordenrollment.okgoogle AUTO_START ignore
 cmd appops set com.android.hotwordenrollment.xgoogle AUTO_START ignore
 dumpsys deviceidle whitelist -com.google.android.gms" > $MODPATH/$MODID/service.sh
-MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Patches Google Play Services App And Its Background Processes To Be Able To Use Battery Optimizations"
+MMPR -vc "Universal GMS Doze" "$VIPUGMSD" "$VCIPUGMSD" "gloeyisk" "Patches Google Play Services App And Certain Processes/Services To Be Able To Use Battery Optimization"
 MOVERPATH; SET_PERM_RM -msgdi
 }
 
@@ -9632,7 +9656,7 @@ BUCKUPER -r "$IPSES/google-hiddenapi-package-whitelist.xml $IPSES/google.xml $IP
 UIP "$MSGDRM"
 fi
 else
-if [ $ASDK -ge 28 ]; then
+if [ $ASDK -ge 28 ] && $LEGACYMODE; then
 UCSA "$MSGIP Unlimited Storage For GPhotos $VIPUSGP?" "IPUSGPS" "$IDUSGP"
 fi
 fi

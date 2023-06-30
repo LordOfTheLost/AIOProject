@@ -1,9 +1,9 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.05.23 (99) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.05.2023/AIOPFMD-31.05.23-%2899%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1JzfwjGRdSLxjYGKYZCmfej1VeBca7mVf/view?usp=share_link">GD</a> || <a href="https://t.me/AIOProject/124">TG</a>
+* Версия AIOPFMD: 30.06.23 (100) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.06.2023/AIOPFMD-30.06.23-%28100%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1Dxu2cOmhngRiO9qSVw9JK6i271shhMTG/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/126">TG</a>
 * Что нужно/может потребоваться:
-	- Желателен MAGISK 24.3/26.1 и/или RECOVERY с нормальным sh/ash/bash (если на вашем телефоне есть нормальный OF и он у вас не стоит - то вы полная гнида);
+	- Желателен MAGISK 24.3/26.1 и/или RECOVERY с нормальным sh/ash/bash;
 	- Работает только на Arm или Arm64;
 	- Желательно последние патчи безопасности (не всегда но всегда);
 	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
@@ -12,23 +12,37 @@
 	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй));
 	- Enabling Hidden Api Policy (для ViperFX (Android 11.0));
 	- Audio Modification Library если стоит Dolby и ViperFX или отвал вывода музыки из приложений при установленных Dolby и ViperFX;
-	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск).
+	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск);
+	- Поддержки KernelSU, Magisk Delta и прочей такой хуеты нет и не будет.
 * В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details>
   <summary>Changelog</summary>
 
+#### 30.06.23 (100) ####
+* В Режим удаления/replace/restore добавлены приложения в: Обычный лист: CalendarProvider, DesktopMode, WallpaperEffect, ParanoidPapers и WallpaperEmojiPrebuilt;
+* Dolby Atmos обновлен до v2.1:
+	- Вернул dp на 12;
+	- Удалены лишние либы с добавлениями других;
+	- Пару улучшений по исполнению говна;
+	- Изменены правила (если будет отвал на прошивках которых работало значит откачу (но об этом никто не напишет));
+* Universal GMS Doze обновлен до v1.9.0 - только цифры;
+* Unlimited Storage For GPhotos перемещен в LEGACY;
+* Face UnLock IR Changer обновлен до v2.5:
+	- Фикс aux листов где было сломано и мне было насрать;
+	- Фикс echo -e;
+* Поддержки KernelSU, Magisk Delta и прочей такой хуеты нет и не будет.
 #### 31.05.23 (99) ####
 * В Режим удаления/replace/restore добавлены приложения в:
 	- Обычный лист: Updates, BetterBugStub, HealthConnectPrebuilt и AmbientStreaming;
 	- Экспериментальный лист: PowerOffAlarm;
+	- Перемещены приложения из обычного листа в экспериментальный: SafetyHubPrebuilt и SecurityHubPrebuilt;
+* Фиксы по Google Sync выводу и выбору.
 * ViperFX обновлен до v1.8 - обновлен до v0.5.0 RE MD3;
 * AIST обновлен до v1.8 - всё как всегда и посморим что умрет;
 * hosts файл с AdAway обновлен от 01.05.2023;
 * Face UnLock IR Changer обновлен до v2.4 - поддержка канга Spark;
-* В Режим удаления/replace/restore перемещены приложения из обычного листа в экспериментальный: SafetyHubPrebuilt и SecurityHubPrebuilt;
-* Фиксы по Google Sync выводу и выбору.
 #### 30.04.23 (98) ####
 * Cache Cleaner обновлен до v3.2 - добавил подсчет сколько было освобождено mb и пару изменений по UI;
 * ViperFX обновлен до v1.7 - улучшения в общей работе v0.3.0 RE MD3;
@@ -211,7 +225,7 @@
 * Добавлены надписи какой AudioFX найден и что он отправлен в Replace (для полных ебланов это сделал но никто читать то не будет);
 * GPU Rendering обновлен до v1.2 - фикс работы для Magisk варианта;
 * Вернул установку SQLite и обновил до v3.39.3;
-* DETACH обновлен до v1.2 - изменения от SQLite и чистка говна; 
+* DETACH обновлен до v1.2 - изменения от SQLite и чистка говна;
 * Улучшения по UI патча и другие оптимизации.
 #### 16.09.22 (87) ####
 * Energized Hosts обновлен от 16.09.2022;
@@ -928,7 +942,7 @@
 * Notification Side Paddings обновлен до v1.2 - добавил строку для Ancient и подобных;
 * UIROUNDED обновлен до v2.3 - добавил строки и удалил лишний даблинг файлов;
 * Очередной фикс чекера на Setting Put - не ту переменную проверял;
-* Пункт проверки обновлений не будет показываться если в MODPATH ничего нет (хотя я бы сделал проверку только на модули которые ставятся из под патча но лень и смысла мало); 
+* Пункт проверки обновлений не будет показываться если в MODPATH ничего нет (хотя я бы сделал проверку только на модули которые ставятся из под патча но лень и смысла мало);
 * Добавлена установка Riru Momo Hider 0.0.7 с выборами на полную активацию или отдельную;
 * Многие фиксы и улучшения по MODID, чекерам, UI и прочему.
 #### 23.07.21 (48) ####
@@ -1136,7 +1150,7 @@
 * Добавлен arm64 Zip бинарник;
 * Добавлена установка System Audio Quality v2.0 - Этот модуль улучшает общие качество звука (сделал с нахождением и патчингом) - только Magisk:
 * Обновлен IOS Emoji до v13 (unicode 13.1) от EmojiReplacer;
-* Фикс создания privapp-permissions у JamesDSPManager; 
+* Фикс создания privapp-permissions у JamesDSPManager;
 * Добавил удаление логов из /data/user_de/0/com.android.shell/files/bugreports для KillLogger и Cache Cleaner;
 * Cache Cleaner обновлен до v1.8 - добавил удаление папки .xlDownload (кто создал её - сдохнет);
 * В режим удаления/replace добавлены приложения в обычный лист: AirDots, AirDotsPlugin, MiDrive, RomStats, OneOSLogcat и ONESettings;
@@ -1403,7 +1417,7 @@
 * Исправлен показ SUI Content Padding - не показывался из за моей криворукости;
 * Cutout Increase Icons обновлен до 1.4 - были изменены оверлеи и убрана перезапись настоящих файлов и названия самого модуля (это исправляет что могло сломать (а могло));
 * Добавлен hosts файл с AdAway от 31.12.2020;
-* Что означает патч прошивается из под своего архива или нет: 
+* Что означает патч прошивается из под своего архива или нет:
 	- Поскольку тут 80% патчей перенесено вместе с кодом в этот патч, есть патчи на которые я забил и мне лень переносить код с его полной работой вот они и ставятся из под своего архива со своим нетронутым кодом.
 	- Хотя в дальнейшем планы на перенос кода есть.
 	- Так же почему это хреново - вы прошили прошивку и Magisk начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему.
@@ -1826,9 +1840,9 @@
 
 </details>
 
-<details> 
+<details>
   <summary>Принцип/Порядок работы AIOPFMD</summary>
-  
+
 <h3 align=center>UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji</h3>
 
 * Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Pills) Установка разных видов/размеров жестовой "таблетки":
@@ -1915,7 +1929,7 @@
 		- Выключить пузыри клавиш;
 			- Включить новый вид клавиш;
 			- Выключить новый вид клавиш;
-* Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Status Bar Increase Number Notification Icons) для увеличения количества уведомлений и убирания точки (не работает как DotKiller): 
+* Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Status Bar Increase Number Notification Icons) для увеличения количества уведомлений и убирания точки (не работает как DotKiller):
 	- Количество иконок:
 		- 1;
 		- 2;
@@ -2206,10 +2220,10 @@
 
 Списки приложений которые удаляются:
 
-<details> 
+<details>
   <summary>Удаление приложений которые не влияют на работу прошивки:</summary>
 
-* Удаляется если не Miui, но в режиме с выбором если Miui - появляется (больше делал для себя):
+* Удаляется если не MIUI, но в режиме с выбором если MIUI - появляется (больше делал для себя):
 	- Calculator
 	- Calendar
 	- Contacts
@@ -2257,6 +2271,7 @@
 	- CalculatorGooglePrebuilt
 	- CalendarGoogle
 	- CalendarGooglePrebuilt
+	- CalendarProvider
 	- CameraExtensionsProxy
 	- CarHomeGoogle
 	- CarrierServices
@@ -2273,6 +2288,7 @@
 	- Covers
 	- CtsShimPrivPrebuilt
 	- DeskClockGoogle
+	- DesktopMode
 	- DeviceIntelligenceNetworkPrebuilt
 	- DevicePersonalizationPrebuiltPixel2020
 	- DevicePersonalizationPrebuiltPixel2021
@@ -2471,6 +2487,7 @@
 	- Papers
 	- ParallelSpace
 	- ParallelSpacePrebuilt
+	- ParanoidPapers
 	- PartnerBookmarksProvider
 	- PaymentService
 	- PersonalAssistant
@@ -2571,6 +2588,8 @@
 	- VoiceSearchStub
 	- Wallet
 	- Wallpaper
+	- WallpaperEffect
+	- WallpaperEmojiPrebuilt
 	- WallpapersBReel2017
 	- WallpapersBReel2019
 	- WallpapersBReel2020
@@ -2619,7 +2638,7 @@
 	- yetCalc
 </details>
 
-<details> 
+<details>
   <summary>Удаление приложений которые могут повлиять на работу прошивки:</summary>
 
 * AmbientSensePrebuilt
@@ -2715,7 +2734,7 @@
 
 </details>
 
-<details> 
+<details>
   <summary>Удаление лаунчеров:</summary>
 
 * AsusLauncher
@@ -2742,7 +2761,7 @@
 
 </details>
 
-<details> 
+<details>
   <summary>Удаление камер:</summary>
 
 * Aperture
@@ -2934,7 +2953,7 @@
 	- При отключении многих модулей будет отвал пизды (AML момент) либо ничего не произойдет что не логично а тут это реализовано.
 * Патчи были перенесены и улучшены/переделаны в модули и наоборот со многими вариантами и альтернативами которые тоже будут улучшатся/добавляться.
 * В дальнейшем будут добавляться множество новых выборов/методов/фиксов и полезных патчей а также исправление найденных ошибок (нет).
-* Я делал патчи для себя, и выложил для пользователей которым это может будет полезно. 
+* Я делал патчи для себя, и выложил для пользователей которым это может будет полезно.
 * Я тестировал их на своих телефонах но это не означает что мне можно доверять (вдруг я вам /system_root/system/system_ext/product/priv-app/SystemUI форматну), так что ВСЁ, что вы делаете со своим девайсом/телефоном/кокофоном - вы делаете на свой страх и риск.
 * Патчи будут добавляться/улучшаться по мере их нахождения/тестирования/времени и желания.
 * Если есть проблемы(желательно с логами если были ошибки или что-то не сработало как надо)/пожелания/предложения - писать в <a href="https://t.me/AIOProject_Chat">TG Chat</a> (не надо).
