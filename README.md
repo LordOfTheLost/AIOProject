@@ -1,18 +1,19 @@
 ## AIO Project
 
-* <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://drive.google.com/drive/u/1/folders/1y4ckTGH29DlK7MjZ7EwH9m1CdYV42oHK">GD</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 30.06.23 (100) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.06.2023/AIOPFMD-30.06.23-%28100%29.zip/download">SF</a> || <a href="https://drive.google.com/file/d/1Dxu2cOmhngRiO9qSVw9JK6i271shhMTG/view?usp=sharing">GD</a> || <a href="https://t.me/AIOProject/126">TG</a>
-* Что нужно/может потребоваться:
+* <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
+* Версия AIOPFMD: 31.08.23 (101) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.08.2023/AIOPFMD-31.08.23-%28101%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/133">TG</a>
+* Общее/что нужно/может потребоваться:
 	- Желателен MAGISK 24.3/26.1 и/или RECOVERY с нормальным sh/ash/bash;
 	- Работает только на Arm или Arm64;
 	- Желательно последние патчи безопасности (не всегда но всегда);
 	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
 	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет);
-	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники;
-	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй));
-	- Enabling Hidden Api Policy (для ViperFX (Android 11.0));
-	- Audio Modification Library если стоит Dolby и ViperFX или отвал вывода музыки из приложений при установленных Dolby и ViperFX;
-	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск);
+	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники - ставиться автоматом если надо;
+	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй)) - ставиться автоматом если надо;
+	- Enabling Hidden Api Policy (для ViperFX (Android 11.0)) - ставиться автоматом если надо;
+	- Audio Modification Library если стоит Dolby и ViperFX или отвал вывода музыки из приложений при установленных Dolby и ViperFX - ставиться автоматом если надо;
+	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск) - ставиться автоматом если надо;
+	- Некоторых фиксов RO и подобного для новых телефонов нет и возможно будет;
 	- Поддержки KernelSU, Magisk Delta и прочей такой хуеты нет и не будет.
 * В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
@@ -20,6 +21,30 @@
 <details>
   <summary>Changelog</summary>
 
+#### 31.08.23 (101) ####
+* Cache Cleaner обновлен до v3.3 - добавил пару логированных папок и файлов;
+* В Kill Logger убрал даблинг от Cache Cleaner;
+* Face UnLock IR Changer обновлен до v2.6 - фикс для прошивок использующие AOSPA Face;
+* Исправлены ошибки из пришедших логов (охуеть и такое бывает);
+* Lawnchair обновлен до v3.0 а все остальные для 13ки удалены - это осознанный выбор так как на QPR2/3 нет универсального лаунчера и все идут по пизде (особенно порты с других прошивок) и я рекомендую использовать только те что есть в оболочках изначально (соболезную);
+* Media UI Sounds обновлен до v2.1 - добавил звуки из AlphaDroid;
+* В Режиме удаления/replace/restore были переписаны и изменены листы и в основном удалено самое отвальное;
+* Ново-старое логирование через set и exec (это немного уменьшает задержку в конце завершение патча да и вообще пару костылей убрал);
+* Улучшен поиск Show Health Storage для UFS;
+* ViperFX обновлен до v1.9:
+	- Обновлен APK;
+	- Выбор v2.5.0.5, v2.7.2.1 & v0.5.0 только в 12 и 12.1 а для 13 только v0.5.0 (появился охуенный баг возможно связанный с MAGISK и новыми патчами безопасности (О бля а мы и не думали));
+* Добавлена поддержка MAGISK 26.2 (кривое говно) и обновлены модули с его новыми путями (как же разраб заебал желаю что бы ему замки в доме поменяли а ключи от них не дали):
+	- Dolby Atmos обновлен до v2.2;
+	- System Audio Quality обновлен до v2.3;
+	- Increase Bitrate обновлен до v1.5;
+	- Audio Modification Library обновлен до v4.6;
+	- Audio Library Crackling Fix обновлен до v1.5;
+* Force DEV & ADB обновлен до v1.8 - добавил выбор на включение ro.debuggable (на новых патчах на AOSP Based могут вылетать настройки разработчика);
+* Поддержки Spark 13.7 для Face UnLock IR Changer не будет (такого хуевого фейса надо только поискать);
+* Удалены старые пути Magisk и теперь версии с путями /sbin/.magisk/mirror несовместимы (переходите на SuperSU);
+* Добавлена проверка на RW в прямой маунт MAGISK при BOOTMODE и касается только Dolby (соболезную у кого нет нормального RECOVERY или система в жестком RO);
+* Пару фиксов, чистка говна и оптимизация работы.
 #### 30.06.23 (100) ####
 * В Режим удаления/replace/restore добавлены приложения в: Обычный лист: CalendarProvider, DesktopMode, WallpaperEffect, ParanoidPapers и WallpaperEmojiPrebuilt;
 * Dolby Atmos обновлен до v2.1:
@@ -2136,7 +2161,7 @@
 	- OnePlus;
 	- Spark;
 	- Awalen;
-	- VoidU;
+	- VoidUI;
 			- FPS:
 				- 60;
 				- 30;
@@ -2152,6 +2177,7 @@
 	- Oppo (Color OS 7);
 	- Spark (12.6);
 	- Arcana (6.0);
+	- AlphaDroid (1.7);
 * Пункт (MAGISK & LEGACY) (NOT MIUI) (10-13.0) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
 * Пункт (MAGISK) (NOT MIUI) (12.0-13.0) - (Wi-Fi & Mobile Data QS Old Style) изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
 * Пункт (MAGISK) (NOT MIUI) (13.0) - (QR Code Scanner On Lock Screen) включает или выключает ярлык на экране блокировке:
@@ -2161,13 +2187,12 @@
 	- Включить;
 	- Выключить;
 
-<h3 align=center>Launchers: Shady/Lawnchair/Sushi/AMR/Octavi</h3>
+<h3 align=center>Launchers: Shady/Lawnchair/Sushi</h3>
 
-* Пункт (MAGISK) (NOT MIUI) (10-13.0) (\\) - (Systemless Launcher) установка одного из лаунчеров:
+* Пункт (MAGISK) (NOT MIUI) (10-12.1) (\\) - (Systemless Launcher) установка одного из лаунчеров:
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка Lawnchair Launcher (SL/T) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
-	- Установка Sushi Launcher (AMR) (SL/T) <a href="https://github.com/ricedroidOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
-	- Установка Octavi Launcher (T) <a href="https://github.com/Octavi-OS/platform_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/octavi_os">TG</a>;
+	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+	- Установка Sushi Launcher (AMR) (SL) <a href="https://github.com/ricedroidOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
 
 <h3 align=center>Install App From /sdcard/Application</h3>
 
@@ -2271,12 +2296,14 @@
 	- CalculatorGooglePrebuilt
 	- CalendarGoogle
 	- CalendarGooglePrebuilt
-	- CalendarProvider
 	- CameraExtensionsProxy
 	- CarHomeGoogle
+	- CarrierMetrics
 	- CarrierServices
 	- CatchLog
+	- CbrsNetworkMonitor
 	- CellBroadcastApp
+	- CellBroadcastReceiver
 	- ChocoEUKor
 	- Chrome
 	- Chrome-Stub
@@ -2285,8 +2312,13 @@
 	- CloudPrint
 	- CloudPrint2
 	- ColtPapers
+	- ConnMO
+	- ConnMetrics
 	- Covers
 	- CtsShimPrivPrebuilt
+	- Currents
+	- DCMO
+	- DMService
 	- DeskClockGoogle
 	- DesktopMode
 	- DeviceIntelligenceNetworkPrebuilt
@@ -2308,6 +2340,12 @@
 	- DynamicSystemInstallationService
 	- EasterEgg
 	- EasymodeContactsWidget
+	- EditorsDocs
+	- EditorsDocsStub
+	- EditorsSheets
+	- EditorsSheetsStub
+	- EditorsSlides
+	- EditorsSlidesStub
 	- Eleven
 	- Email
 	- EmergencyInfo
@@ -2334,6 +2372,7 @@
 	- Focus
 	- FotaAgent
 	- FuseWalls
+	- GCS
 	- GCS
 	- Galaxy4
 	- GalaxyApps
@@ -2373,8 +2412,11 @@
 	- GooglePinyinIME
 	- GooglePlus
 	- GooglePrintRecommendationService
+	- GoogleQuickSearchBox
+	- GoogleSearch
 	- GoogleTTS
 	- GoogleVrCore
+	- GoogleZhuyinIME
 	- HTMLViewer
 	- Hangouts
 	- HangoutsDialer
@@ -2415,6 +2457,7 @@
 	- MSA-Global
 	- MSSkype_stub
 	- MaestroPrebuilt
+	- Magazines
 	- Maps
 	- MatLog
 	- MatchmakerPrebuilt
@@ -2463,6 +2506,7 @@
 	- NoiseField
 	- Notes
 	- NovaBugreportWrapper
+	- OBDM_Permissions
 	- ONESettings
 	- OPFileManager
 	- OPIconpackOnePlus
@@ -2472,7 +2516,9 @@
 	- OPScreenRecorder
 	- OPWeather
 	- OPWidget
+	- OccamQuickOffice
 	- OdadPrebuilt
+	- OemDmTrigger
 	- OmniJaws
 	- OmniSwitch
 	- OneNote
@@ -2485,8 +2531,6 @@
 	- Opera_data
 	- Ornament
 	- Papers
-	- ParallelSpace
-	- ParallelSpacePrebuilt
 	- ParanoidPapers
 	- PartnerBookmarksProvider
 	- PaymentService
@@ -2502,6 +2546,7 @@
 	- PixelWallpapers2021
 	- PixelWallpapers2022
 	- PlayGames
+	- PlusOne
 	- Podcasts
 	- PowerPoint_SamsungStub
 	- PrebuiltBugle
@@ -2511,10 +2556,14 @@
 	- PrebuiltExchange3Google
 	- PrebuiltGmail
 	- PrebuiltGoogleTelemetryTvp
+	- PrebuiltKeep
+	- PrebuiltKeepStub
+	- PrebuiltNewsWeather
 	- PulseMusic
 	- PureBrowser
 	- QPGallery
 	- QuickAccessWallet
+	- QuickOffice
 	- QuickSearchBox
 	- RRWallpapers
 	- Recorder
@@ -2527,11 +2576,13 @@
 	- RomStats
 	- RoseEUKor
 	- SBrowser_3.0.38_MASS_LATEST
+	- SCONE
 	- SOAgent
 	- SPPPushClient_Prod
 	- SPenSdk3
 	- SPlannerWidget_Essential
 	- SPlanner_Essential
+	- SafetyHubPrebuilt
 	- SamsungIMEv2
 	- SamsungSans
 	- SamsungTTS
@@ -2547,6 +2598,7 @@
 	- SecSetupWizard2015
 	- SecurityLogAgent
 	- ShiftPapers
+	- Showcase
 	- SimIcons
 	- Simple-Calendar
 	- SimpleCalendar
@@ -2560,6 +2612,8 @@
 	- SparkWallpaperStub
 	- SpeechServicesByGoogle
 	- SprdQuickSearchBox
+	- SprintDM
+	- SprintHM
 	- StagWalls
 	- StatusBarLyricExt
 	- Street
@@ -2577,7 +2631,9 @@
 	- TurboPrebuilt
 	- Tycho
 	- UPTsmService
+	- USCCDM
 	- Updates
+	- VZWAPNLib
 	- Velvet
 	- Velvet_update
 	- Via
@@ -2586,6 +2642,7 @@
 	- VinylMusicPlayer
 	- VoiceSearch
 	- VoiceSearchStub
+	- VzwOmaTrigger
 	- Wallet
 	- Wallpaper
 	- WallpaperEffect
@@ -2632,6 +2689,7 @@
 	- madLauncher
 	- madWallpapers
 	- messaging
+	- obdm_stub
 	- stats
 	- talkback
 	- wellbeingconf
@@ -2639,90 +2697,29 @@
 </details>
 
 <details>
-  <summary>Удаление приложений которые могут повлиять на работу прошивки:</summary>
+  <summary>Удаление приложений которые могут повлиять на работу некоторых приложений или функций:</summary>
 
-* AmbientSensePrebuilt
-* AndroidMigratePrebuilt
-* AndroidPlatformServices
-* BackupRestoreConfirmation
-* BrowserProviderProxy
 * BuiltInPrintService
-* CalendarProvider
-* CellBroadcastReceiver
-* ChromeBookmarksSyncAdapter
-* ConfigUpdater
-* ConnMO
-* Currents
-* DMAgent
 * DocumentsUI
 * DocumentsUIGoogle
-* EditorsDocs
-* EditorsDocsStub
-* EditorsSheets
-* EditorsSheetsStub
-* EditorsSlides
-* EditorsSlidesStub
 * EuiccGoogle
-* ExchangeServices
-* FOTAKill
-* FaceLock
-* Finsky
-* GmsCore
-* GmsCoreSetupPrebuilt
-* GmsCore_update
-* GoogleBackupTransport
-* GoogleCalendarSyncAdapter
-* GoogleContactsSyncAdapter
-* GoogleLoginService
-* GoogleOneTimeInitializer
-* GooglePartnerSetup
-* GooglePlay
-* GoogleQuickSearchBox
-* GoogleSearch
-* GoogleServicesFramework
-* GoogleTTS
-* GoogleZhuyinIME
-* LineageSetupWizard
-* LocationHistoryPrebuilt
-* Magazines
-* MarketUpdater
 * Markup
 * MarkupGoogle
-* MediaUploader
-* NetworkLocation
-* OccamQuickOffice
-* OneTimeInitializer
-* Phonesky
+* ParallelSpace
+* ParallelSpacePrebuilt
 * PlayAutoInstallConfig
-* PlayStore
-* PlusOne
 * PowerOffAlarm
-* PrebuiltGmsCore
-* PrebuiltGmsCorePix
-* PrebuiltGmsCoreQt
-* PrebuiltGmsCoreRvc
-* PrebuiltKeep
-* PrebuiltKeepStub
-* PrebuiltNewsWeather
 * PrintSpooler
-* QuickOffice
+* SPrintSpooler
 * SPrintSpoolerLMR1
-* SafetyHubPrebuilt
-* SamsungBilling
-* SecurityHubPrebuilt
-* SettingsGoogle
-* SettingsIntelligenceGooglePrebuilt
 * SoundPicker
 * SoundPickerPrebuilt
 * Stk
 * Stk2
-* StorageManagerGoogle
 * Tag
 * TagGoogle
 * TrichromeLibrary
 * TrichromeLibrary-Stub
-* VZWAPNLib
-* Vending
 * WallpaperPickerGoogle
 * WallpaperPickerGooglePrebuilt
 * WallpaperPickerGoogleRelease
@@ -2933,7 +2930,7 @@
 <h3 align=center>Что на чем и где было протестировано</h3>
 
 * Патчи были протестированный на версиях Android: 5.1.1, 6.0.1, 7.1.2, 8.1, 9.0, 10.0, 11.0, 12.0, 12.1, 13.0 и Miui 10, 11, 12, 12.5 (соответственно от пунктов что показываются).
-* На девайсах протестировано мною лично: <a href="https://4pda.to/devdb/xiaomi_mi8">MI8</a>, <a href="https://4pda.to/devdb/xiaomi_redmi_note_5_pro">RN5</a>, <a href="https://4pda.to/devdb/redmi_note_7">RN7</a>, <a href="https://4pda.to/devdb/jiayu_s3">Jiayu S3</a>, <a href="https://4pda.to/devdb/samsung_gt_i9500_galaxy_s_4">Samsung Galaxy S4</a>, <a href="https://4pda.to/devdb/sony_xperia_z5_dual">Sony Xperia Z5 Dual</a>, <a href="https://4pda.to/devdb/samsung_galaxy_j3_2016_sm_j320f">Samsung Galaxy J3 SM-J320H</a>, <a href="https://4pda.to/devdb/nomi_i5010_evo_m">Nomi i5010 Evo M</a>, <a href="https://4pda.to/devdb/google_pixel_2_xl">Google Pixel 2 XL</a>, <a href="https://4pda.to/devdb/sony_xperia_10_ii">Sony Xperia 10 II</a>.
+* На девайсах протестировано мною лично: <a href="https://www.gsmarena.com/xiaomi_mi_8-9065.php">MI8</a>, <a href="https://www.gsmarena.com/xiaomi_redmi_note_5_pro-8893.php">RN5</a>, <a href="https://www.gsmarena.com/xiaomi_redmi_note_7-9513.php">RN7</a>, <a href="https://www.devicespecifications.com/en/model/e54a3134">Jiayu S3</a>, <a href="https://www.gsmarena.com/samsung_i9500_galaxy_s4-5125.php">Samsung Galaxy S4</a>, <a href="https://www.gsmarena.com/sony_xperia_z5-7534.php">Sony Xperia Z5 Dual</a>, <a href="https://www.gsmarena.com/samsung_galaxy_j3_(2016)-7760.php">Samsung Galaxy J3 SM-J320H</a>, <a href="https://4pda.to/devdb/nomi_i5010_evo_m">Nomi i5010 Evo M</a>, <a href="https://www.gsmarena.com/google_pixel_2_xl-8720.php">Google Pixel 2 XL</a>, <a href="https://www.gsmarena.com/sony_xperia_10_ii-10095.php">Sony Xperia 10 II</a>.
 
 <h3 align=center>Почему, как и зачем</h3>
 
