@@ -2,7 +2,7 @@
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 set -x && exec 2>/sdcard/AIO-$( date +"%d-%H:%M:%S" ).log
-VAIOPFMD="31.08.23 (101)"
+VAIOPFMD="17.09.23 (102)"
 IPDLTMP="/data/local/tmp"
 TMPDIR="$IPDLTMP/AIOPFMD"
 DEVTMPDIR="/dev/AIOPFMD"
@@ -62,7 +62,7 @@ IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIP
 IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v3.0"; VIPSLLAWNASL="12.1.0 Alpha 4"; VIPSLLAWNAT="13 Debug"
 IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHISLA="v5.0"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
-IDVFX="V4AFX"; VIPVFX="v1.9"
+IDVFX="V4AFX"; VIPVFX="v2.0"
 IDVFXDAK="V4AFXDAK"; VIPVFXDAK="v1.9"
 IDDA="DolbyAtmos"; VIPDA="v2.2"
 IDAIST="AIST"; VIPAIST="v1.8"; VCIPAIST="1605"
@@ -122,7 +122,6 @@ BOOT_DETECTED
 APMSGASD
 PARTITION_AND_MOUNTS
 IMPORTANT_VARIABLES
-LIST
 if [ -d $TMPDIR ] || [ -d $DEVTMPDIR ]; then rm -rf $TMPDIR $DEVTMPDIR; fi
 mkdir -p $TMPDIR $DEVTMPDIR $PLOGS
 getprop | sed "s/\]: \[/=/g;s/\]//g;s/\[//g" > $DEVTMPDIR/all.prop
@@ -384,6 +383,7 @@ AndroidAutoStub
 AndroidAutoStubPrebuilt
 AndroidForWork
 AudioFX
+Backgrounds
 BasicDreams
 BatteryTile
 BetterBug
@@ -540,6 +540,7 @@ HyconWallpapers
 IdMipay
 InMipay
 Jelly
+Jellyfish
 Joyose
 KLMSAgent
 Keep
@@ -640,6 +641,7 @@ Papers
 ParanoidPapers
 PartnerBookmarksProvider
 PaymentService
+PdfViewer
 PersonalAssistant
 PersonalAssistantGlobal
 PhaseBeam
@@ -678,6 +680,7 @@ RetroMusicPlayer
 RetroMusicPlayerPrebuilt
 RevengeMessages
 RevengeOSCalculator
+Ripple
 RockClient
 RomStats
 RoseEUKor
@@ -1037,17 +1040,28 @@ if $DYNLIB; then DYNLIBPATCH="\/vendor\/lib\/soundfx"; else DYNLIBPATCH="\/syste
 -magisk) ZYGISK=false
 if [ -d $IPDMM ] && [ -f $IPDMM/util_functions.sh ]; then
 MAGISKFIRSTTIME=true; FINDMAGISK=true; MAGISK=true
-MAGISKVC="$(GET_FILE_PROP -s "$IPDMM/util_functions.sh" "MAGISK_VER_CODE")"
+UFSH="$IPDMM/util_functions.sh"
+MAGISKVC="$(GET_FILE_PROP -s "$UFSH" "MAGISK_VER_CODE")"
 elif [ -d $IPDADB/magisk ] && [ -f $IPDADB/magisk/util_functions.sh ]; then
 MAGISKFIRSTTIME=false; FINDMAGISK=true; MAGISK=true
-MAGISKVC="$(GET_FILE_PROP -s "$IPDADB/magisk/util_functions.sh" "MAGISK_VER_CODE")"
+UFSH="$IPDADB/magisk/util_functions.sh"
+MAGISKVC="$(GET_FILE_PROP -s "$UFSH" "MAGISK_VER_CODE")"
 else
 MAGISKFIRSTTIME=false; FINDMAGISK=false; MAGISK=false
 fi
 if $FINDMAGISK; then
 if [ $MAGISKVC -ge 23010 ]; then ZYGISK=true; fi
-if [ $MAGISKVC -lt 24300 ] || [ $MAGISKVC -gt 26200 ]; then
-UIP "Found Unsupported Magisk!" "Please Install Official Magisk v24.3-v26.2!"
+if [ $MAGISKVC -lt 24300 ] || [ $MAGISKVC -gt 26300 ]; then
+UIP "Found Unsupported Magisk!" "Please Install Official Magisk v24.3-v26.3!"
+fi
+if [ "$(grep "delta" "$UFSH")" ]; then
+UIP "Magisk Delta Unsupported!" "Please Install Official Magisk v24.3-v26.3!"
+fi
+if [ "$(grep "alpha" "$UFSH")" ]; then
+UIP "Magisk Alpha Unsupported!" "Please Install Official Magisk v24.3-v26.3!"
+fi
+if [ "$(grep "Lygisk" "$UFSH")" ]; then
+UIP "Lygisk Unsupported!" "Please Install Official Magisk v24.3-v26.3!"
 fi
 fi
 if $MAGISK; then
@@ -4117,10 +4131,8 @@ if [ $ASDK -le 30 ] && [ ! $ASDK -le 22 ]; then
 UCSA "$MSGIP ViperFX $VIPVFX - v2.5.0.5 Or v2.7.1.6?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -le 22 ]; then
 UCSA "$MSGIP ViperFX $VIPVFX - v2.5.0.5?" "IPVFXS" "$IDVFX"
-elif [ $ASDK -eq 31 ] && [ $ASDK -eq 32 ]; then
+elif [ $ASDK -ge 31 ]; then
 UCSA "$MSGIP ViperFX $VIPVFX - v2.5.0.5, v2.7.2.1 & v0.5.0?" "IPVFXS" "$IDVFX"
-elif [ $ASDK -ge 33 ]; then
-UCSA "$MSGIP ViperFX $VIPVFX - v0.5.0?" "IPVFXS" "$IDVFX"
 fi
 fi
 }
@@ -4132,7 +4144,7 @@ UIP -s "Choose Version:" "$MSGVU ViperFX v2.5.0.5" "$MSGVD ViperFX v2.7.1.6"
 if KEYCHOOSE; then V4AFX="2.5.0.5"; IV4AFX=true; else V4AFX="2.7.1.6"; IV4AFX=true; fi
 elif [ $ASDK -le 22 ]; then
 V4AFX="2.5.0.5"; IV4AFX=true
-elif [ $ASDK -eq 31 ] && [ $ASDK -eq 32 ]; then
+elif [ $ASDK -ge 31 ]; then
 UIP -s "ViperFX v2.5.0.5" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 V4AFX="2.5.0.5"; IV4AFX=true
@@ -4147,18 +4159,14 @@ V4AFX="0.5.0"; IV4AFX=true
 fi
 fi
 fi
-elif [ $ASDK -ge 33 ]; then
-V4AFX="0.5.0"; IV4AFX=true
 fi
 if $IV4AFX; then
 UIP "Installing ViperFX $IAMM"
 UZTPN "V4AFX"
 PTMFI "$IDVFX" "ViPER4AndroidFX ViPER4AndroidFX-Legacy ViPER4AndroidXHiFi viper4magisk ViPER4Android-RE" "$MIPSVLS $MIPSPA/ViPER4AndroidFX"
-if [ $ASDK -eq 31 ] || [ $ASDK -eq 32 ]; then
-if [ $V4AFX = "2.7.2.1" ] && [ $V4AFX != "0.5.0" ]; then
+if [ $ASDK -ge 31 ] && [ $V4AFX = "2.7.2.1" ] && [ $V4AFX != "0.5.0" ]; then
 mkdir -p $MODPATH/$MODID$MIPPSO
 cp -f $TMPDIR/V4AFX/ViPER4AndroidFX-Black-Blue.apk $MODPATH/$MODID$MIPPSO
-fi
 fi
 cp -f $TMPDIR/V4AFX/ViPER4AndroidFX-$V4AFX.apk $MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk
 APKPERM "$MODPATH/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk" "$MODPATH/$MODID$MIPSEP"; HAPWL "$MODPATH/$MODID$MIPSES"; MKSCXML "$MODPATH/$MODID$MIPSES"
@@ -4178,7 +4186,7 @@ fi
 MMPR -v "V4AFX" "$VIPVFX" "V4AFX v$V4AFX Is An Audio Enhancing Software To Provide Everyone With A Better Audio Experience"
 echo -e "tunnel.decode=false\nlpa.use-stagefright=false\nlpa.releaselock=false\nlpa.decode=false\nro.control_privapp_permissions=disable" > $MODPATH/$MODID/system.prop
 echo -e "#!$MIPSB/sh\nSERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" | tee $MODPATH/$MODID/service.sh $MODPATH/$MODID/post-fs-data.sh > /dev/null
-MSSERVICE -uc "if [ ! -d \"$MODPATH/$MODID\" ]; then pm uninstall -k --user 0 com.pittvandewitt.viperfx; rm -rf $SERVICED/V4AFX.sh; break; else break; fi" "V4AFX"
+MSSERVICE -uc "if [ ! -d \"$MODPATH/$MODID\" ]; then pm uninstall -k --user 0 com.pittvandewitt.viperfx; pm uninstall -k --user 0 com.wstxda.viper4android; rm -rf $SERVICED/V4AFX.sh; break; else break; fi" "V4AFX"
 MMAUDIOFX && REPLACER -f "$MMAUDIOFX"
 UIP "$MSGPNF"
 for FAECONFXML in $AECONFXML; do
