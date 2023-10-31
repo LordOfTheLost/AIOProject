@@ -2,7 +2,7 @@
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 set -x && exec 2>/sdcard/AIO-$( date +"%d-%H:%M:%S" ).log
-VAIOPFMD="17.09.23 (102)"
+VAIOPFMD="31.10.23 (103)"
 IPDLTMP="/data/local/tmp"
 TMPDIR="$IPDLTMP/AIOPFMD"
 DEVTMPDIR="/dev/AIOPFMD"
@@ -59,13 +59,13 @@ IDQRCSOLS="QRCSOLS"; VIPQRCSOLS="v1.1"
 IDQSSN="QSSplitNotification"; VIPQSSN="v1.0"
 #Launchers: Shady/Lawnchair/Sushi
 IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIPSLSHADYR="v2021.11.28"; VCIPSLSHADYR="20211128"
-IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v3.0"; VIPSLLAWNASL="12.1.0 Alpha 4"; VIPSLLAWNAT="13 Debug"
+IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v3.1"; VIPSLLAWNASL="12.1.0 Alpha 4"; VIPSLLAWNAT="13 Beta"
 IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHISLA="v5.0"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
-IDVFX="V4AFX"; VIPVFX="v2.0"
+IDVFX="V4AFX"; VIPVFX="v2.1"
 IDVFXDAK="V4AFXDAK"; VIPVFXDAK="v1.9"
-IDDA="DolbyAtmos"; VIPDA="v2.2"
-IDAIST="AIST"; VIPAIST="v1.8"; VCIPAIST="1605"
+IDDA="DolbyAtmos"; VIPDA="v2.3"
+IDAIST="AIST"; VIPAIST="v1.9"; VCIPAIST="1910"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.3"; VCIPSAQ="23"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.5"
 IDAML="AML"; VIPAML="v4.6"; VCIPAML="46"
@@ -305,10 +305,8 @@ AIPAOPCONF="$(find $SYSTEM $VENDOR -type f -name "*audio_io_policy*.conf" -o -na
 APCXML="$(find $SYSTEM $VENDOR -type f -name "*audio_policy_configuration*.xml")"
 A2DPXML="$(find $SYSTEM $VENDOR -type f -name "a2dp*.xml")"
 BTQTIXML="$(find $SYSTEM $VENDOR -type f -name "bluetooth*.xml")"
-VIRTXML="$(find $SYSTEM $VENDOR -type f -name "virtual*.xml")"
 USBXML="$(find $SYSTEM $VENDOR -type f -name "usb*.xml")"
 ACCXML="$(find $SYSTEM $VENDOR -type f -name "audio_cloud_control*.xml")"
-VEHICLEXML="$(find $SYSTEM $VENDOR -type f -name "vehicle*.xml")"
 STPIXML="$(find $SYSTEM $VENDOR -type f -name "sound_trigger_platform_info*.xml")"
 MPXML="$(find $SYSTEM $VENDOR -type f -name "media_profiles*.xml")"
 MCXML="$(find $SYSTEM $VENDOR -type f -name "media_codecs.xml")"
@@ -365,6 +363,7 @@ STOCKLIST () {
 STOCKLIST="
 404Clock
 AEXPapers
+AICorePrebuilt
 ANGLE
 APlayer
 AbleMusic
@@ -373,6 +372,7 @@ Abstruct
 AccuweatherPhone2015_MASS_HD_SWS
 AdAway
 Aegis
+AiWallpapers
 AirDots
 AirDotsPlugin
 AmbientStreaming
@@ -653,6 +653,7 @@ PixelLiveWallpaperPrebuilt
 PixelWallpapers2020
 PixelWallpapers2021
 PixelWallpapers2022
+PixelWallpapers2023
 PlayGames
 PlusOne
 Podcasts
@@ -727,6 +728,7 @@ StagWalls
 StatusBarLyricExt
 Street
 Superiorwalls
+SwitchAccessPrebuilt
 Talk
 TeamOctavi
 Terminal
@@ -749,6 +751,7 @@ Via
 ViaBrowser
 Videos
 VinylMusicPlayer
+VoiceAccessPrebuilt
 VoiceSearch
 VoiceSearchStub
 VzwOmaTrigger
@@ -779,6 +782,7 @@ YouTubeVanced
 ZVideoMass
 app-assist-light-release
 arcore
+bcr
 clock-widgets-release
 com.facebook.appmanager
 com.facebook.services
@@ -826,6 +830,7 @@ Stk
 Stk2
 Tag
 TagGoogle
+TouchGestures
 TrichromeLibrary
 TrichromeLibrary-Stub
 WallpaperPickerGoogle
@@ -1720,7 +1725,6 @@ PSXCF -u $PSF '/configs/property[@name="vendor.audio.use.sw.ape.decoder"]' "true
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.use.sw.mpegh.decoder"]' "true"
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.flac.sw.decoder.24bit"]' "true"
 PSXCF -u $PSF '/configs/property[@name="vendor.audio.hw.aac.encoder"]' "false"
-PSXCF -u $PSF '/configs/flag[@name="compress_voip_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="compress_capture_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="compress_in_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="fm_power_opt"]' "false"
@@ -1746,11 +1750,11 @@ PSXCF -u $PSF '/configs/flag[@name="ext_qdsp_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="ext_spkr_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="ext_spkr_tfa_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="hfp_enabled"]' "true"
+PSXCF -u $PSF '/configs/flag[@name="hifi_audio_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="hwdep_cal_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="keep_alive_enabled"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="kpi_optimize_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="maxx_audio_enabled"]' "true"
-PSXCF -u $PSF '/configs/flag[@name="multi_voice_session"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="spkr_prot_enabled"]' "false"
 PSXCF -u $PSF '/configs/flag[@name="usb_offload_burst_mode"]' "true"
 PSXCF -u $PSF '/configs/flag[@name="usb_offload_enabled"]' "true"
@@ -1984,7 +1988,7 @@ sed -i 's/name="support_interview_record_param">false</name="support_interview_r
 sed -i 's/name="support_hd_record_param">false</name="support_hd_record_param">true</g' $PSF
 sed -i 's/name="support_voip_record">false</name="support_voip_record">true</g' $PSF
 sed -i 's/name="support_dolby">false</name="support_dolby">true</g' $PSF
-sed -i 's/name="support_hifi">false</name="support_hifi">true</g' $PSF
+sed -i 's/name="support_hifi">true</name="support_hifi">false</g' $PSF
 sed -i 's/name="support_lhdc_offload">false</name="support_lhdc_offload">true</g' $PSF
 sed -i 's/name="support_a2dp_latency">false</name="support_a2dp_latency">true</g' $PSF
 sed -i 's/name="support_sound_assist">false</name="support_sound_assist">true</g' $PSF
@@ -2031,10 +2035,6 @@ sed -i 's/Softclip5 Enable" value="1"/Softclip5 Enable" value="0"/g' $PSF
 sed -i 's/Softclip6 Enable" value="1"/Softclip6 Enable" value="0"/g' $PSF
 sed -i 's/Softclip7 Enable" value="1"/Softclip7 Enable" value="0"/g' $PSF
 sed -i 's/Softclip8 Enable" value="1"/Softclip8 Enable" value="0"/g' $PSF
-sed -i 's/SpkrLeft BOOST Switch" value="1"/SpkrLeft BOOST Switch" value="0"/g' $PSF
-sed -i 's/SpkrRight BOOST Switch" value="1"/SpkrRight BOOST Switch" value="0"/g' $PSF
-sed -i 's/SpkrLeft SWR DAC_Port Switch" value="1"/SpkrLeft SWR DAC_Port Switch" value="0"/g' $PSF
-sed -i 's/SpkrRight SWR DAC_Port Switch" value="1"/SpkrRight SWR DAC_Port Switch" value="0"/g' $PSF
 sed -i 's/HPHL_RDAC Switch" value="0"/HPHL_RDAC Switch" value="1"/g' $PSF
 sed -i 's/HPHR_RDAC Switch" value="0"/HPHR_RDAC Switch" value="1"/g' $PSF
 sed -i 's/Boost Class-H Tracking Enable" value="0"/Boost Class-H Tracking Enable" value="1"/g' $PSF
@@ -2044,65 +2044,14 @@ sed -i 's/"RX INT1 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT1 DEM MUX" value="CLSH
 sed -i 's/"RX INT2 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT2 DEM MUX" value="CLSH_DSM_OUT"/g' $PSF
 sed -i 's/"RX INT3 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT3 DEM MUX" value="CLSH_DSM_OUT"/g' $PSF
 sed -i 's/"RX INT4 DEM MUX" value="NORMAL_DSM_OUT"/"RX INT4 DEM MUX" value="CLSH_DSM_OUT"/g' $PSF
+sed -i '/EC Reference Channels/d' $PSF
+sed -i '/EC Reference SampleRate/d' $PSF
+sed -i '/EC Reference Bit Format/d' $PSF
 PSXCF -u $PSF '/mixer/ctl[@name="HPHL Volume"]' "20"
 PSXCF -u $PSF '/mixer/ctl[@name="HPHR Volume"]' "20"
-PSXCF -s $PSF '/mixer/ctl[@name="VBoost Ctrl"]' "AlwaysOff"
 PSXCF -u $PSF '/mixer/ctl[@name="HPHL"]' "Switch"
 PSXCF -u $PSF '/mixer/ctl[@name="HPHR"]' "Switch"
 PSXCF -u $PSF '/mixer/ctl[@name="Load acoustic model"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -u $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference headphones-44.1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip earpiece"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip handset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip display-port"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip display-port1"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip speaker"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-headset"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip usb-headphones"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-wb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference-voip bt-sco-swb"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
-PSXCF -s $PSF '/mixer/path[@name="echo-reference a2dp"]/ctl[@name="EC Reference Bit Format"]' "S24_LE"
 PSXCF -u $PSF '/mixer/ctl[@name="Voice Sidetone Enable"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="Audiosphere Enable"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="Audiosphere Enable"]' "Off"
@@ -2116,12 +2065,12 @@ PSXCF -u $PSF '/mixer/ctl[@name="THD3 Compensation"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="THD3 Compensation"]' "0"
 PSXCF -u $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="MSM ASphere Set Param"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="Codec Wideband"]' "0"
-PSXCF -s $PSF '/mixer/ctl[@name="Codec Wideband"]' "0"
+PSXCF -u $PSF '/mixer/ctl[@name="Codec Wideband"]' "1"
+PSXCF -s $PSF '/mixer/ctl[@name="Codec Wideband"]' "1"
 PSXCF -u $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
 PSXCF -s $PSF '/mixer/ctl[@name="Set Custom Stereo OnOff"]' "0"
-PSXCF -u $PSF '/mixer/ctl[@name="HiFi Function"]' "On"
-PSXCF -s $PSF '/mixer/ctl[@name="HiFi Function"]' "On"
+PSXCF -u $PSF '/mixer/ctl[@name="HiFi Function"]' "Off"
+PSXCF -s $PSF '/mixer/ctl[@name="HiFi Function"]' "Off"
 PSXCF -u $PSF '/mixer/ctl[@name="Virtual Bass Boost"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="Virtual Bass Boost"]' "Off"
 PSXCF -s $PSF '/mixer/ctl[@name="WSA_RX0 EC_HQ Switch"]' "1"
@@ -2281,34 +2230,39 @@ UIP "Found $(basename $FAIPAOPCONF)" "Patching..."
 PSF="$MODPATH/$MODID$FAIPAOPCONF"
 sed -i 's/sampling_rates 44100|48000|88200|96000|176400|192000|352800|384000/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF
 sed -i 's/sampling_rates 32000|44100|48000|88200|96000|176400|192000|352800/sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000/g' $PSF
-sed -i '/deep_buffer_24/,+6d' $PSF
 sed -i 's/AUDIO_FORMAT_PCM_16_BIT_OFFLOAD|//g' $PSF
 sed -i 's/AUDIO_FORMAT_PCM_24_BIT_OFFLOAD|//g' $PSF
-sed -i 's/AUDIO_FORMAT_PCM_32_BIT_OFFLOAD|//g' $PSF
-sed -i '/^outputs/a\
-  deep_buffer_24 {\
-    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 48000\
-    bit_width 24\
-    app_type 69940\
-  }\
-  deep_buffer_24bit {\
-    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 48000\
-    bit_width 24\
-    app_type 69940\
-	
-				  
-								   
-																																			
-  }' $PSF
+sed -i 's/AUDIO_FORMAT_PCM_FLOAT_OFFLOAD|//g' $PSF
+sed -i 's/AUDIO_FORMAT_PCM_32_BIT/AUDIO_FORMAT_PCM_FLOAT/g' $PSF
 sed -i '/AUDIO_FORMAT_MP3/a\
 AIST' $PSF
 sed -i '/AIST/,+1d' $PSF
 sed -i '/AUDIO_FORMAT_MP3/a\
     sampling_rates 8000|11025|12000|16000|22050|24000|32000|44100|48000|88200|96000|176400|192000|352800|384000' $PSF
+sed -i '/default_24/,+6d' $PSF
+sed -i '/proaudio/,+6d' $PSF
+sed -i '/^outputs/a\
+  default_24 {\
+    flags AUDIO_OUTPUT_FLAG_PRIMARY\
+    formats AUDIO_FORMAT_PCM_FLOAT\
+    sampling_rates 48000\
+    bit_width 24\
+    app_type 69937\
+  }\
+  default_24bit {\
+    flags AUDIO_OUTPUT_FLAG_PRIMARY\
+    formats AUDIO_FORMAT_PCM_FLOAT\
+    sampling_rates 48000\
+    bit_width 24\
+    app_type 69937\
+  }\
+  proaudio {\
+    flags AUDIO_OUTPUT_FLAG_FAST\
+    formats AUDIO_FORMAT_PCM_FLOAT\
+    sampling_rates 48000\
+    bit_width 32\
+    app_type 69943\
+  }' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -2322,37 +2276,7 @@ UIP "Found $(basename $FPCXML)" "Patching..."
 PSF="$MODPATH/$MODID$FPCXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FPCXML $PSF
-sed -i 's/speaker_drc_enabled="true"/speaker_drc_enabled="false"/g' $PSF
-sed -i 's/samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/samplingRates="192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/g' $PSF
-sed -i 's/samplingRates="32000,44100,48000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
-sed -i 's/samplingRates="32000,44100,48000,64000,88200,96000,128000,176400,192000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
-sed -i 's/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
-sed -i 's/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
-sed -i 's/samplingRates="44100,48000,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="44100,48000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="32000 44100 48000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
-sed -i 's/samplingRates="32000 44100 48000 64000 88200 96000 128000 176400 192000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
-sed -i 's/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
-sed -i 's/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
-sed -i 's/samplingRates="44100 48000 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
-sed -i 's/samplingRates="44100 48000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
-sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_MONO"/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1,AUDIO_CHANNEL_OUT_6POINT1,AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
-sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_MONO"/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
-sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1,AUDIO_CHANNEL_OUT_6POINT1,AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
-sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="0" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="0" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="0" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_FAST|AUDIO_OUTPUT_FLAG_RAW/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_RAW|AUDIO_OUTPUT_FLAG_FAST/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_FAST AUDIO_OUTPUT_FLAG_RAW/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
-sed -i 's/AUDIO_OUTPUT_FLAG_RAW AUDIO_OUTPUT_FLAG_FAST/AUDIO_OUTPUT_FLAG_FAST/g' $PSF
+sed -i 's/AUDIO_FORMAT_PCM_32_BIT/AUDIO_FORMAT_PCM_FLOAT/g' $PSF
 sed -i '/channelMasks="AUDIO_CHANNEL_OUT_STEREO"/a\
 \
 \
@@ -2383,52 +2307,49 @@ sed -i '/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO"/a\
 \
 \
 ' $PSF
-sed -i '/AUDIO_OUTPUT_FLAG_DEEP_BUFFER/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
+sed -i '/AUDIO_OUTPUT_FLAG_RAW/a\
+                    <profile name="" format="AUDIO_FORMAT_PCM_FLOAT"\
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
-AIST' $PSF
-sed -i '/AUDIO_OUTPUT_FLAG_VIRTUAL_DEEP_BUFFER/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
-                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
-AIST' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_LHDC/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_LHDC/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_LDAC"/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_LDAC"/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_LC3"/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_LC3"/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_FORCE_AOSP"/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/encodedFormats="AUDIO_FORMAT_FORCE_AOSP"/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/encodedFormats="ldac_a2dp"/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/encodedFormats="ldac_a2dp"/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/AUDIO_DEVICE_OUT_USB_ACCESSORY/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/AUDIO_DEVICE_OUT_USB_ACCESSORY/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/name="usb_accessory output" role="source"/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/name="usb_accessory output" role="source"/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
+#AIST' $PSF
+sed -i 's/ AUDIO_FORMAT_FORCE_AOSP_LL//g' $PSF
+sed -i 's/AUDIO_FORMAT_FORCE_AOSP_LL//g' $PSF
+sed -i 's/AUDIO_FORMAT_FORCE_AOSP/AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL/g' $PSF
 sed -i 's/ AUDIO_FORMAT_LHDC_LL//g' $PSF
+sed -i 's/AUDIO_FORMAT_LHDC_LL//g' $PSF
 sed -i 's/AUDIO_FORMAT_LHDC/AUDIO_FORMAT_LHDC AUDIO_FORMAT_LHDC_LL/g' $PSF
+sed -i 's/speaker_drc_enabled="true"/speaker_drc_enabled="false"/g' $PSF
+sed -i 's/samplingRates="32000,44100,48000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
+sed -i 's/samplingRates="32000,44100,48000,64000,88200,96000,128000,176400,192000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
+sed -i 's/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
+sed -i 's/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000,352800,384000"/g' $PSF
+sed -i 's/samplingRates="44100,48000,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
+sed -i 's/samplingRates="44100,48000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
+sed -i 's/samplingRates="32000 44100 48000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
+sed -i 's/samplingRates="32000 44100 48000 64000 88200 96000 128000 176400 192000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
+sed -i 's/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
+sed -i 's/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000 352800 384000"/g' $PSF
+sed -i 's/samplingRates="44100 48000 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
+sed -i 's/samplingRates="44100 48000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
+sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_5POINT1,AUDIO_CHANNEL_OUT_6POINT1,AUDIO_CHANNEL_OUT_7POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1,AUDIO_CHANNEL_OUT_6POINT1,AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
+sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
+sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_MONO"/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1,AUDIO_CHANNEL_OUT_6POINT1,AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
+sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_MONO"/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
+sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO,AUDIO_CHANNEL_OUT_STEREO,AUDIO_CHANNEL_OUT_2POINT1,AUDIO_CHANNEL_OUT_QUAD,AUDIO_CHANNEL_OUT_PENTA,AUDIO_CHANNEL_OUT_5POINT1,AUDIO_CHANNEL_OUT_6POINT1,AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
+sed -i 's/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1"/channelMasks="AUDIO_CHANNEL_OUT_MONO AUDIO_CHANNEL_OUT_STEREO AUDIO_CHANNEL_OUT_2POINT1 AUDIO_CHANNEL_OUT_QUAD AUDIO_CHANNEL_OUT_PENTA AUDIO_CHANNEL_OUT_5POINT1 AUDIO_CHANNEL_OUT_6POINT1 AUDIO_CHANNEL_OUT_7POINT1"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="0" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="0" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="0" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="1" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="0"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="1"/mixPort name="primary input" role="sink"/g' $PSF
+sed -i 's/mixPort name="primary input" role="sink" maxOpenCount="2" maxActiveCount="2"/mixPort name="primary input" role="sink"/g' $PSF
 sed -i '/AIST/,+3d' $PSF
+sed -i 's/flags="AUDIO_OUTPUT_FLAG_FAST|AUDIO_OUTPUT_FLAG_RAW/flags="AUDIO_OUTPUT_FLAG_FAST/g' $PSF
+sed -i 's/flags="AUDIO_OUTPUT_FLAG_RAW|AUDIO_OUTPUT_FLAG_FAST/flags="AUDIO_OUTPUT_FLAG_FAST/g' $PSF
+sed -i 's/flags="AUDIO_OUTPUT_FLAG_FAST AUDIO_OUTPUT_FLAG_RAW/flags="AUDIO_OUTPUT_FLAG_FAST/g' $PSF
+sed -i 's/flags="AUDIO_OUTPUT_FLAG_RAW AUDIO_OUTPUT_FLAG_FAST/flags="AUDIO_OUTPUT_FLAG_FAST/g' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -2519,79 +2440,7 @@ sed -i 's/bass-enhancer-enable value="false"/bass-enhancer-enable value="true"/g
 sed -i 's/graphic-equalizer-enable value="false"/graphic-equalizer-enable value="true"/g' $PSF
 sed -i 's/surround-decoder-enable value="false"/surround-decoder-enable value="true"/g' $PSF
 sed -i 's/volume-leveler-enable value="false"/volume-leveler-enable value="true"/g' $PSF
-sed -i 's/tuned_rate="48000"/tuned_rate="384000"/g' $PSF
-UIP "$MSGFFAP"
-fi
-done
-}
-
-PATCH_FIXING_KHZ () {
-UIP "Start PATCH_FIXING_KHZ" "$MSGPNF"
-for FPCXML in $APCXML; do
-if [ -f $MAGISKMP$FPCXML ]; then
-UIP "Found $(basename $FPCXML)" "Patching..."
-PSF="$MODPATH/$MODID$FPCXML"
-if $SRKHZ; then
-sed -i '/AUDIO_OUTPUT_FLAG_DEEP_BUFFER/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
-                             samplingRates="96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
-$MODID' $PSF
-sed -i '/AUDIO_OUTPUT_FLAG_VIRTUAL_DEEP_BUFFER/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
-                             samplingRates="96000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
-$MODID' $PSF
-else
-sed -i '/AUDIO_OUTPUT_FLAG_DEEP_BUFFER/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
-                             samplingRates="192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
-$MODID' $PSF
-sed -i '/AUDIO_OUTPUT_FLAG_VIRTUAL_DEEP_BUFFER/a\
-                    <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"\
-                             samplingRates="192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>\
-$MODID' $PSF
-fi
-sed -i '/$MODID/,+2d' $PSF
-UIP "$MSGFFAP"
-fi
-done
-for FAPIOCXML in $AIPAOPCONF; do
-if [ -f $MAGISKMP$FAPIOCXML ]; then
-UIP "Found $(basename $FAPIOCXML)" "Patching..."
-PSF="$MODPATH/$MODID$FAPIOCXML"
-sed -i '/deep_buffer_24/,+6d' $PSF
-if $SRKHZ; then
-sed -i '/^outputs/a\
-  deep_buffer_24 {\
-    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 96000\
-    bit_width 24\
-    app_type 69940\
-  }\
-  deep_buffer_24bit {\
-    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 96000\
-    bit_width 24\
-    app_type 69940\
-  }' $PSF
-else
-sed -i '/^outputs/a\
-  deep_buffer_24 {\
-    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 192000\
-    bit_width 24\
-    app_type 69940\
-  }\
-  deep_buffer_24bit {\
-    flags AUDIO_OUTPUT_FLAG_DEEP_BUFFER\
-    formats AUDIO_FORMAT_PCM_24_BIT_PACKED\
-    sampling_rates 192000\
-    bit_width 24\
-    app_type 69940\
-  }' $PSF
-fi
+sed -i 's/tuned_rate="48000"/tuned_rate="192000"/g' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -4238,83 +4087,50 @@ UIP "Installing Dolby Atmos $IAMM"
 UZTPN "DolbyAtmos"
 PTMFI -np "$IDDA" "dolbyatmos DolbyAudio MotoDolby SoundEnhancement MiSound AudioFxMoto MotoWaves"
 MMPR -v "Dolby Atmos" "$VIPDA" "Dolby Atmos - Is An Audio Enhancing Software To Provide Everyone With A Better Audio Experience"
-echo "dontaudit system_server system_file file write
-allow     system_server system_file file write
+echo "allow system_server system_file file write
 create { system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file hal_dms_default_exec }
-dontaudit { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file hal_dms_default_exec } labeledfs filesystem associate
-allow     { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file hal_dms_default_exec } labeledfs filesystem associate
-dontaudit init { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file } { dir file } relabelfrom
-allow     init { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file } { dir file } relabelfrom
-dontaudit init hal_dms_default_exec file relabelfrom
-allow     init hal_dms_default_exec file relabelfrom
+allow { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file hal_dms_default_exec } labeledfs filesystem associate
+allow init { system_file system_lib_file vendor_file vendor_configs_file vendor_data_file vendor_media_data_file } { dir file } relabelfrom
+allow init hal_dms_default_exec file relabelfrom
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app hal_audio_default mtk_hal_audio audioserver } { default_android_hwservice hal_dms_hwservice dms_hwservice } hwservice_manager find
 allow daxservice_app { permission_checker_service game_service netstats_service content_capture_service } service_manager find
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { hal_dms_default_exec vendor_displayfeature_prop } file getattr
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { hal_dms_default_exec vendor_displayfeature_prop } file getattr
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } bluetooth_prop file map
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } bluetooth_prop file map
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_default_prop qemu_hw_prop } file { read open getattr }
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_default_prop qemu_hw_prop } file { read open getattr }
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { debug_mtk_gpud_prop audio_config_prop } file { read open getattr map }
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { debug_mtk_gpud_prop audio_config_prop } file { read open getattr map }
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_displayfeature_prop file read
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_displayfeature_prop file read
-dontaudit zygote { device unlabeled } file write
-allow     zygote { device unlabeled } file write
-dontaudit zygote zygote_tmpfs file { create open }
-allow     zygote zygote_tmpfs file { create open }
-dontaudit init system_file file mounton
-allow     init system_file file mounton
-dontaudit daxservice_app default_prop file read
-allow     daxservice_app default_prop file read
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
-dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
-allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } hal_dms_default binder call
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { hal_dms_default_exec vendor_displayfeature_prop } file getattr
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } bluetooth_prop file map
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_default_prop qemu_hw_prop } file { read open getattr }
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { debug_mtk_gpud_prop audio_config_prop } file { read open getattr map }
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } vendor_displayfeature_prop file read
+allow zygote { device unlabeled } file write
+allow zygote zygote_tmpfs file { create open }
+allow init system_file file mounton
+allow daxservice_app default_prop file read
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
 allow { hal_audio_default mtk_hal_audio audioserver } system_suspend_hwservice hwservice_manager find
 allow { hal_audio_default mtk_hal_audio audioserver } hal_system_suspend_service service_manager find
-dontaudit { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop audio_prop } file { read open getattr map }
-allow     { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop audio_prop } file { read open getattr map }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
-allow     { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } radio_prop file { read open getattr map }
-allow     { hal_audio_default mtk_hal_audio audioserver } radio_prop file { read open getattr map }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
-allow     { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file { read open getattr }
-allow     { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file { read open getattr }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs file { read open }
-allow     { hal_audio_default mtk_hal_audio audioserver } sysfs file { read open }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } system_prop file map
-allow     { hal_audio_default mtk_hal_audio audioserver } system_prop file map
-dontaudit { hal_audio_default mtk_hal_audio audioserver } vendor_pd_locater_dbg_prop file read
-allow     { hal_audio_default mtk_hal_audio audioserver } vendor_pd_locater_dbg_prop file read
-dontaudit { hal_audio_default mtk_hal_audio audioserver } sysfs_net dir search
-allow     { hal_audio_default mtk_hal_audio audioserver } sysfs_net dir search
-dontaudit { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir { read open }
-allow     { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir { read open }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
-allow     { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
-dontaudit { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
-allow     { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
-dontaudit { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
-allow     { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } device chr_file { read write }
-allow     { hal_audio_default mtk_hal_audio audioserver } device chr_file { read write }
-dontaudit { hal_audio_default mtk_hal_audio audioserver } system_suspend binder call
-allow     { hal_audio_default mtk_hal_audio audioserver } system_suspend binder call
-dontaudit { hal_audio_default mtk_hal_audio audioserver } { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } fifo_file write
-allow     { hal_audio_default mtk_hal_audio audioserver } { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } fifo_file write
-dontaudit hal_audio_default hal_audio_default capability2 block_suspend
-allow     hal_audio_default hal_audio_default capability2 block_suspend
-dontaudit mtk_hal_audio mtk_hal_audio capability2 block_suspend
-allow     mtk_hal_audio mtk_hal_audio capability2 block_suspend
-dontaudit audioserver audioserver capability2 block_suspend
-allow     audioserver audioserver capability2 block_suspend" > $MODPATH/$MODID/sepolicy.rule
+allow { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop audio_prop } file { read open getattr map }
+allow { hal_audio_default mtk_hal_audio audioserver } { mnt_vendor_file system_prop } file { read open getattr }
+allow { hal_audio_default mtk_hal_audio audioserver } radio_prop file { read open getattr map }
+allow { hal_audio_default mtk_hal_audio audioserver } sysfs_wake_lock file { write open }
+allow { hal_audio_default mtk_hal_audio audioserver } vendor_default_prop file { read open getattr }
+allow { hal_audio_default mtk_hal_audio audioserver } { sysfs sysfs_boot_mode } file { read open }
+allow { hal_audio_default mtk_hal_audio audioserver } system_prop file map
+allow { hal_audio_default mtk_hal_audio audioserver } vendor_pd_locater_dbg_prop file read
+allow { hal_audio_default mtk_hal_audio audioserver } sysfs_net dir search
+allow { hal_audio_default mtk_hal_audio audioserver } { sysfs_net sysfs } dir { read open }
+allow { hal_audio_default mtk_hal_audio audioserver } logd_socket sock_file write
+allow { hal_audio_default mtk_hal_audio audioserver } logd unix_stream_socket connectto
+allow { hal_audio_default mtk_hal_audio audioserver } { diag_device vendor_diag_device } chr_file { read write open ioctl getattr }
+allow { hal_audio_default mtk_hal_audio audioserver } device chr_file { read write }
+allow { hal_audio_default mtk_hal_audio audioserver } system_suspend binder call
+allow { hal_audio_default mtk_hal_audio audioserver } { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } fifo_file write
+allow hal_audio_default hal_audio_default capability2 block_suspend
+allow mtk_hal_audio mtk_hal_audio capability2 block_suspend
+allow audioserver audioserver capability2 block_suspend
+allow hal_audio_default hal_audio_default capability sys_nice
+allow mtk_hal_audio mtk_hal_audio capability sys_nice
+allow audioserver audioserver capability sys_nice" > $MODPATH/$MODID/sepolicy.rule
 echo "#!$MIPSB/sh
 
 resetprop ro.feature.dolby_enable true
@@ -4356,7 +4172,7 @@ killall android.hardware.sensors@2.0-service.multihal
 SERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" > $MODPATH/$MODID/service.sh
 echo "#!$MIPSB/sh
 DIR=/data/vendor/dolby
-if [ ! -d \$DIR ]; then mkdir -p \$DIR; fi
+mkdir -p \$DIR
 chmod 0770 \$DIR
 chown 1013.1013 \$DIR
 chcon u:object_r:vendor_data_file:s0 \$DIR
@@ -4685,24 +4501,16 @@ fi
 }
 
 IPAISTS () {
-STEP1=false; STEP2=false; STEP3=false; STEP4=false
+STEP1=false; STEP2=false; STEP3=false
 if FINDER "$MPATHS"; then
 UIP -s "Boost Sound Volume Levels?" "This Item Boosting Sound Volume Levels" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then STEP1=true; fi
 UIP -s "Boost Microphones Volume Levels?" "This Item Boosting Microphones Volume Levels" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then STEP2=true; fi
 fi
-if FINDER "$APCXML" || FINDER "$AIPAOPCONF"; then
-UIP -s "Fixing 96kHz Or 192kHz For Audio Output?" "This Breaks The Output ViperFX!" "Sound Failure Possible Or Bootloop!" "$MSGVU Yes" "$MSGVD No $MSGRI $MSGNIS"
-if KEYCHOOSE; then
-STEP3=true
-UIP -s "$MSGVU 96kHz" "$MSGVD 192kHz"
-if KEYCHOOSE; then SRKHZ=true; else SRKHZ=false; fi
-fi
-fi
 if FINDER "$MCGAX"; then
 UIP -s "Patch Media Codecs Files?" "$MSGVU Yes $MSGRI" "$MSGVD No $MSGEEFTC"
-if KEYCHOOSE; then STEP4=true; fi
+if KEYCHOOSE; then STEP3=true; fi
 fi
 UIP "Installing AIST $IAMM"
 if $HIRES; then UIP "Device With Support Hi-Res"; else UIP "Device Without Support Hi-Res"; fi
@@ -4715,12 +4523,12 @@ audio.adm.phaseshift.ms=0
 vendor.audio.adm.phaseshift.ms=0
 audio.hal.boot.timeout.ms=2000
 vendor.audio.hal.boot.timeout.ms=2000
-audio.truehd.buffer.size.kb=96
-vendor.audio.truehd.buffer.size.kb=96
-audio.offload.buffer.size.kb=256
-vendor.audio.offload.buffer.size.kb=256
-audio.native.dsd.buffer.size.kb=512
-vendor.audio.native.dsd.buffer.size.kb=512
+audio.truehd.buffer.size.kb=40
+vendor.audio.truehd.buffer.size.kb=40
+audio.offload.buffer.size.kb=160
+vendor.audio.offload.buffer.size.kb=160
+audio.native.dsd.buffer.size.kb=224
+vendor.audio.native.dsd.buffer.size.kb=224
 audio.sys.noisy.broadcast.delay=100
 vendor.audio.sys.noisy.broadcast.delay=100
 audio.sys.offload.pstimeout.secs=2
@@ -4743,10 +4551,10 @@ media.stagefright.use-awesome=true
 media.stagefright.use-nu=true
 media.recorder.show_manufacturer_and_model=true
 media.aac_51_output_enabled=true
-mm.enable.smoothstreaming=true
-vendor.mm.enable.smoothstreaming=true
+mm.enable.smoothstreaming=false
+mm.enable.vsync.render=1
 vendor.mm.enable.qcom_parser=16777215
-persist.mm.enable.prefetch=false
+persist.mm.enable.prefetch=true
 vendor.audio.offload.multiaac.enable=true
 lpa.encode=false
 lpa30.encode=false
@@ -4757,8 +4565,10 @@ lpa.releaselock=false
 audio.lowpower=false
 vendor.audio.lowpower=false
 ro.vendor.audio.lowpower=false
+vendor.audio.context.manager=true
 vendor.audio.caretaker.at=false
 vendor.audio.AT.blocking=false
+vendor.audio.usb.super_hifi=false
 vendor.audio.spkcal.copy.inhal=false
 vendor.audio.compress_capture.enabled=false
 vendor.audio.compress_capture.aac=false
@@ -4770,11 +4580,9 @@ vendor.audio.ull.rt.prio=false
 vendor.audio.ull.cpu.affinity=false
 vendor.audio.ull.playback.support=false
 vendor.audio.dolby.control.support=true
-vendor.audio.dolby.control.tunning.by.volume.support=true
+vendor.audio.dolby.control.tunning.by.volume.support=false
 persist.audio.format.24bit=true
 persist.vendor.audio.format.24bit=true
-persist.audio.format.32bit=true
-persist.vendor.audio.format.32bit=true
 persist.audio.format.float=true
 persist.vendor.audio.format.float=true
 persist.vendor.audio.spv3.enable=false
@@ -4786,13 +4594,19 @@ persist.vendor.audio.ozo.codec.enable=true
 persist.vendor.audio.spf_restart=true
 persist.vendor.audio.aanc.enable=true
 persist.vendor.audio.zoom.scheme=true
-persist.sys.phh.disable_audio_effects=1
+persist.vendor.audio.cca.enabled=true
 persist.sys.phh.disable_soundvolume_effect=1
+media.resolution.limit.16bit=
+media.resolution.limit.24bit=
+media.resolution.limit.32bit=
+media.resolution.limit.64bit=
+ro.vendor.dolby.dax.version=
+ro.vendor.audio.dolby.dax.version=
 ro.vendor.audio.dump.mixer=false
+ro.audio.offload_wakelock=false
 ro.audio.playbackScene=false
 ro.vendor.audio.playbackScene=false
 ro.vendor.audio.recording.hd=true
-ro.vendor.audio.multiroute=true
 ro.vendor.audio.sos=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
@@ -4821,9 +4635,11 @@ ro.vendor.audio.soundtrigger.lowpower=false
 ro.vendor.audio.soundtrigger.adjconf=false
 ro.vendor.audio.soundtrigger.pangaea=1
 ro.vendor.audio.soundtrigger.permian=1
+ro.vendor.audio.soundtrigger.split_training=1
 ro.vendor.audio.soundtrigger.sva-5.0=1
 ro.vendor.audio.soundtrigger.sva-6.0=1
 ro.vendor.audio.soundtrigger.sva-7.0=1
+ro.vendor.audio.game.effect=true
 ro.vendor.audio.zerodata.upload=true
 ro.vendor.audio.playbackcapture.screen=true
 ro.vendor.audio.meeting.mode=true
@@ -4837,20 +4653,27 @@ ro.vendor.audio.camera.loopback.support=true
 ro.vendor.audio.support.sound.id=true
 ro.vendor.standard.video.enable=true
 ro.vendor.audio.videobox.switch=true
+ro.vendor.audio.multiroute=true
 ro.vendor.audio.multichannel.5point1.headset=false
-ro.vendor.audio.multichannel.5point1=true
-ro.vendor.audio.notify5Point1InUse=true
-ro.vendor.audio.multi.channel=true
-ro.vendor.audio.dolby.eq.half=false
-ro.vendor.audio.dolby.vision.support=true
-ro.vendor.audio.dolby.vision.capture.support=true
-ro.vendor.audio.dolby.surround.enable=true
-ro.vendor.audio.dolby.fade_switch=true
+ro.vendor.audio.multichannel.5point1=false
+ro.vendor.audio.notify5Point1InUse=false
+ro.vendor.audio.multi.channel=false
+ro.vendor.audio.dolby.eq.half=true
+ro.vendor.audio.dolby.vision.support=false
+ro.vendor.audio.dolby.vision.capture.support=false
+ro.vendor.audio.dolby.surround.enable=false
+ro.vendor.audio.dolby.fade_switch=false
 ro.vendor.audio.surround.support=true
 ro.vendor.audio.surround.headphone.only=false
 ro.vendor.audio.elus.enable=true
 ro.vendor.audio.extendtonecallendedlength=true
 ro.vendor.audio.dpaudio=true
+ro.vendor.audio.volume.modeler.enable=true
+ro.vendor.audio.bass.enhancer.enable=false
+ro.vendor.audio.bass.boost.enable=true
+ro.vendor.audio.bass.booster.enable=true
+ro.vendor.audio.virtualizer.enable=false
+ro.vendor.audio.voice.volume.boost=none
 ro.vendor.audio.3d.audio.support=true
 ro.vendor.audio.3daudio.record.enable=true
 vendor.audio.3daudio.record.enable=true
@@ -4872,8 +4695,8 @@ audio.nat.codec.enabled=1
 vendor.audio.nat.codec.enabled=1
 persist.audio.hp=true
 persist.vendor.audio.hp=true
-persist.audio.vr.enable=true
-persist.vendor.audio.vr.enable=true
+persist.audio.vr.enable=false
+persist.vendor.audio.vr.enable=false
 sys.haptic.ignoreWhenCamera=true
 audio.safx.pbe.enabled=true
 vendor.audio.safx.pbe.enabled=true
@@ -4940,7 +4763,7 @@ persist.dirac.acs.ignore_error=1
 persist.vendor.audio_fx.waves.maxxsense=true
 persist.vendor.audio_fx.waves.processing=true
 persist.vendor.audio_fx.waves.proc_twks=true
-persist.vendor.audio_fx.waves.systrace=true
+persist.vendor.audio_fx.waves.systrace=false
 audio.passthrough.volume.route2cec=true
 vendor.audio.passthrough.volume.route2cec=true
 persist.sys.fuse.passthrough.enable=true
@@ -4967,10 +4790,9 @@ ro.audio.spatializer_enabled=true
 ro.vendor.audio.spatializer_enabled=true
 vendor.audio.useXiaomiSpatializer=true
 ro.vendor.audio.spatializer.support.speaker=true
-ro.vendor.audio.dolby.spatial.profile=movie
+ro.vendor.audio.dolby.spatial.profile=music
 ro.audio.headtracking_enabled=true
-
-# OPLUS GENERAL PARAMETERS
+# OPLUS Start
 ro.oplus.audio.dolby.offload=0
 ro.oplus.audio.custom.media_vol_default=false
 ro.oplus.audio.detection.support=0
@@ -4979,8 +4801,10 @@ ro.oplus.platform.audio.bitrate=true
 ro.oplus.audio.hdr_switch=1
 ro.oplus.audio.support.ocar=1
 persist.oplus.audio.spllimit.support=false
-
-# XIAO GENERAL PARAMETERS
+ro.oplus.audio.ringermodeinfo.feedback.support=1
+ro.oplus.audio.thermal_control=0
+# OPLUS End
+# Xiao Start
 ro.vendor.audio.miui.karaoke.show=true
 ro.vendor.audio.miui.karaoke.tencent.show=true
 ro.vendor.audio.karaoke.suppot.lowlatency=true
@@ -4988,6 +4812,7 @@ ro.vendor.audio.soundtrigger.xiaomievent=1
 persist.vendor.audio.misoundasc=false
 dolby.mi.metadata.log=false
 vendor.dolby.mi.metadata.log=false
+# Xiao End
 
 # QC2 PARAMETERS
 vendor.qc2audio.suspend.enabled=false
@@ -5029,169 +4854,84 @@ vendor.qc2audio.per_frame.heif.dec.enabled=false
 vendor.qc2audio.per_frame.pcm.dec.enabled=false
 
 # DECODER/ENCODER PARAMETERS
-vendor.audio.ac3.complexity.default=10
+vendor.audio.ac3.complexity.default=8
 vendor.audio.ac3.quality=100
-vendor.audio.ac4.complexity.default=10
+vendor.audio.ac4.complexity.default=8
 vendor.audio.ac4.quality=100
-vendor.audio.eac3.complexity.default=10
+vendor.audio.eac3.complexity.default=8
 vendor.audio.eac3.quality=100
-vendor.audio.eac3-joc.complexity.default=10
+vendor.audio.eac3-joc.complexity.default=8
 vendor.audio.eac3-joc.quality=100
-vendor.audio.avc.complexity.default=10
+vendor.audio.avc.complexity.default=8
 vendor.audio.avc.quality=100
-vendor.audio.h263sw.complexity.default=10
+vendor.audio.h263sw.complexity.default=8
 vendor.audio.h263sw.quality=100
-vendor.audio.hevc.complexity.default=10
+vendor.audio.hevc.complexity.default=8
 vendor.audio.hevc.quality=100
-vendor.audio.mpeg2.complexity.default=10
+vendor.audio.mpeg2.complexity.default=8
 vendor.audio.mpeg2.quality=100
-vendor.audio.mpeg4sw.complexity.default=10
+vendor.audio.mpeg4sw.complexity.default=8
 vendor.audio.mpeg4sw.quality=100
-vendor.audio.vp8.complexity.default=10
+vendor.audio.vp8.complexity.default=8
 vendor.audio.vp8.quality=100
-vendor.audio.vp9.complexity.default=10
+vendor.audio.vp9.complexity.default=8
 vendor.audio.vp9.quality=100
-vendor.audio.aac.complexity.default=10
+vendor.audio.aac.complexity.default=8
 vendor.audio.aac.quality=100
-vendor.audio.amrnb.complexity.default=10
+vendor.audio.amrnb.complexity.default=8
 vendor.audio.amrnb.quality=100
-vendor.audio.amrwb.complexity.default=10
+vendor.audio.amrwb.complexity.default=8
 vendor.audio.amrwb.quality=100
-vendor.audio.flac.complexity.default=10
+vendor.audio.flac.complexity.default=8
 vendor.audio.flac.quality=100
-vendor.audio.g711.alaw.complexity.default=10
+vendor.audio.g711.alaw.complexity.default=8
 vendor.audio.g711.alaw.quality=100
-vendor.audio.g711.malw.complexity.default=10
+vendor.audio.g711.malw.complexity.default=8
 vendor.audio.g711.malw.quality=100
-vendor.audio.opus.complexity.default=10
+vendor.audio.opus.complexity.default=8
 vendor.audio.opus.quality=100
-vendor.audio.raw.complexity.default=10
+vendor.audio.raw.complexity.default=8
 vendor.audio.raw.quality=100
-vendor.audio.vorbis.complexity.default=10
+vendor.audio.vorbis.complexity.default=8
 vendor.audio.vorbis.quality=100
-vendor.audio.gsm.complexity.default=10
+vendor.audio.gsm.complexity.default=8
 vendor.audio.gsm.quality=100
-vendor.audio.av1.complexity.default=10
+vendor.audio.av1.complexity.default=8
 vendor.audio.av1.quality=100
-vendor.audio.h263.complexity.default=10
+vendor.audio.h263.complexity.default=8
 vendor.audio.h263.quality=100
-vendor.audio.h264.complexity.default=10
+vendor.audio.h264.complexity.default=8
 vendor.audio.h264.quality=100
-vendor.audio.mpeg4.complexity.default=10
+vendor.audio.mpeg4.complexity.default=8
 vendor.audio.mpeg4.quality=100
-vendor.audio.heic.complexity.default=10
+vendor.audio.heic.complexity.default=8
 vendor.audio.heic.quality=100
-vendor.audio.hevc.cq.complexity.default=10
+vendor.audio.hevc.cq.complexity.default=8
 vendor.audio.hevc.cq.quality=100
-vendor.audio.alac.complexity.default=10
+vendor.audio.alac.complexity.default=8
 vendor.audio.alac.quality=100
-vendor.audio.mp4a.complexity.default=10
+vendor.audio.mp4a.complexity.default=8
 vendor.audio.mp4a.quality=100
-vendor.audio.mpegh.complexity.default=10
+vendor.audio.mpegh.complexity.default=8
 vendor.audio.mpegh.quality=100
-vendor.audio.dsd.complexity.default=10
+vendor.audio.dsd.complexity.default=8
 vendor.audio.dsd.quality=100
-vendor.audio.ape.complexity.default=10
+vendor.audio.ape.complexity.default=8
 vendor.audio.ape.quality=100
-vendor.audio.dts.complexity.default=10
+vendor.audio.dts.complexity.default=8
 vendor.audio.dts.quality=100
-vendor.audio.wma.complexity.default=10
+vendor.audio.wma.complexity.default=8
 vendor.audio.wma.quality=100
-vendor.audio.heif.complexity.default=10
+vendor.audio.heif.complexity.default=8
 vendor.audio.heif.quality=100
-vendor.audio.pcm.complexity.default=10
+vendor.audio.pcm.complexity.default=8
 vendor.audio.pcm.quality=100
-vendor.audio.ac3.sw.decoder.24bit=true
-vendor.audio.ac4.sw.decoder.24bit=true
-vendor.audio.eac3.sw.decoder.24bit=true
-vendor.audio.eac3-joc.sw.decoder.24bit=true
-vendor.audio.avc.sw.decoder.24bit=true
-vendor.audio.h263sw.sw.decoder.24bit=true
-vendor.audio.mpeg2.sw.decoder.24bit=true
-vendor.audio.mpeg4sw.sw.decoder.24bit=true
-vendor.audio.vp8.sw.decoder.24bit=true
-vendor.audio.vp9.sw.decoder.24bit=true
-vendor.audio.aac.sw.decoder.24bit=true
-vendor.audio.amrnb.sw.decoder.24bit=true
-vendor.audio.amrwb.sw.decoder.24bit=true
-vendor.audio.flac.sw.decoder.24bit=true
-vendor.audio.g711.alaw.sw.decoder.24bit=true
-vendor.audio.g711.malw.sw.decoder.24bit=true
-vendor.audio.opus.sw.decoder.24bit=true
-vendor.audio.raw.sw.decoder.24bit=true
-vendor.audio.vorbis.sw.decoder.24bit=true
-vendor.audio.gsm.sw.decoder.24bit=true
-vendor.audio.av1.sw.decoder.24bit=true
-vendor.audio.h263.sw.decoder.24bit=true
-vendor.audio.h264.sw.decoder.24bit=true
-vendor.audio.mpeg4.sw.decoder.24bit=true
-vendor.audio.heic.sw.decoder.24bit=true
-vendor.audio.hevc.sw.decoder.24bit=true
-vendor.audio.alac.sw.decoder.24bit=true
-vendor.audio.mp4a.sw.decoder.24bit=true
-vendor.audio.mpegh.sw.decoder.24bit=true
-vendor.audio.dsd.sw.decoder.24bit=true
-vendor.audio.ape.sw.decoder.24bit=true
-vendor.audio.dts.sw.decoder.24bit=true
-vendor.audio.wma.sw.decoder.24bit=true
-vendor.audio.heif.sw.decoder.24bit=true
-vendor.audio.pcm.sw.decoder.24bit=true
-vendor.audio.ac3.sw.encoder.24bit=true
-vendor.audio.ac4.sw.encoder.24bit=true
-vendor.audio.eac3.sw.encoder.24bit=true
-vendor.audio.eac3-joc.sw.encoder.24bit=true
-vendor.audio.avc.sw.encoder.24bit=true
-vendor.audio.h263sw.sw.encoder.24bit=true
-vendor.audio.mpeg2.sw.encoder.24bit=true
-vendor.audio.mpeg4sw.sw.encoder.24bit=true
-vendor.audio.vp8.sw.encoder.24bit=true
-vendor.audio.vp9.sw.encoder.24bit=true
-vendor.audio.aac.sw.encoder.24bit=true
-vendor.audio.amrnb.sw.encoder.24bit=true
-vendor.audio.amrwb.sw.encoder.24bit=true
-vendor.audio.flac.sw.encoder.24bit=true
-vendor.audio.g711.alaw.sw.encoder.24bit=true
-vendor.audio.g711.malw.sw.encoder.24bit=true
-vendor.audio.opus.sw.encoder.24bit=true
-vendor.audio.raw.sw.encoder.24bit=true
-vendor.audio.vorbis.sw.encoder.24bit=true
-vendor.audio.gsm.sw.encoder.24bit=true
-vendor.audio.av1.sw.encoder.24bit=true
-vendor.audio.h263.sw.encoder.24bit=true
-vendor.audio.h264.sw.encoder.24bit=true
-vendor.audio.mpeg4.sw.encoder.24bit=true
-vendor.audio.heic.sw.encoder.24bit=true
-vendor.audio.hevc.sw.encoder.24bit=true
-vendor.audio.alac.sw.encoder.24bit=true
-vendor.audio.mp4a.sw.encoder.24bit=true
-vendor.audio.mpegh.sw.encoder.24bit=true
-vendor.audio.dsd.sw.encoder.24bit=true
-vendor.audio.ape.sw.encoder.24bit=true
-vendor.audio.dts.sw.encoder.24bit=true
-vendor.audio.wma.sw.encoder.24bit=true
-vendor.audio.heif.sw.encoder.24bit=true
-vendor.audio.pcm.sw.encoder.24bit=true
 
 # HiFi/Dolby PARAMETERS
-audio.hifi.int_codec=true
-vendor.audio.hifi.int_codec=true
-audio.hifi.ext_codec=true
-vendor.audio.hifi.ext_codec=true
-persist.audio.hifi.int_codec=true
-persist.vendor.audio.hifi.int_codec=true
-persist.audio.hifi.ext_codec=true
-persist.vendor.audio.hifi.ext_codec=true
-ro.config.hifi_enhance_support=1
-ro.config.hifi_config_state=1
-audio.hifi_adv_support=1
-audio.hifi_dac=ON
-vendor.audio.hifi_adv_support=1
-vendor.audio.hifi_dac=ON
-persist.audio.hifi_adv_support=1
-persist.audio.hifi_dac=ON
-persist.vendor.audio.hifi_adv_support=1
-persist.vendor.audio.hifi_dac=ON
-persist.lge.hifiquaddac=true
+ro.audio.hifi=false
+ro.vendor.audio.hifi=false
+persist.audio.hifi=false
+persist.vendor.audio.hifi=false
 use.dts_eagle=true
 audio.use.dts_eagle=true
 vendor.audio.use.dts_eagle=true
@@ -5200,10 +4940,10 @@ dolby.dap.param.tee=true
 vendor.dolby.dap.param.tee=true
 dolby.dax.param.tee=true
 vendor.dolby.dax.param.tee=true
-audio.gef.enable.traces=true
-audio.gef.debug.flags=true
-vendor.audio.gef.enable.traces=true
-vendor.audio.gef.debug.flags=true
+audio.gef.enable.traces=false
+audio.gef.debug.flags=false
+vendor.audio.gef.enable.traces=false
+vendor.audio.gef.debug.flags=false
 ro.platform.support.dolby=true
 ro.platform.support.dts=true
 ro.vendor.platform.support.dolby=true
@@ -5235,8 +4975,8 @@ persist.vendor.bt.a2dp.addr_check_enabled_for_aac=true
 persist.bluetooth.avrcpversion=avrcp16
 persist.bluetooth.mapversion=map14
 bt.max.hfpclient.connections=5
-persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 sys.fflag.override.settings_bluetooth_hearing_aid=true
+persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.bt.enable.swb=false
 persist.vendor.bt.enable.swbpm=false
 persist.vendor.btstack.enable.swb=false
@@ -5255,19 +4995,16 @@ ro.vendor.bluetooth.lhdcsupport=true
 persist.bluetooth.dualconnection.supported=true
 persist.bluetooth.gamemode=true
 vendor.bluetooth.ldac.abr=false
-persist.vendor.bluetooth.a2dp.hal.implementation=true
-persist.vendor.bt.a2dp.hal.implementation=true
-persist.bluetooth.bluetooth_audio_hal.disabled=false
 persist.vendor.bt.a2dp.mac_whitelist=true
 audio.a2dp.codec.latency=true
 vendor.audio.a2dp.codec.latency=true
 ro.vendor.audio.a2dp.codec.latency=true
 persist.vendor.bluetooth.heif=true
-persist.vendor.service.bt.iot.enablelogging=true
-persist.vendor.bt.iotinfo.report.enable=true
-persist.vendor.service.bt.iotinfo.report.enable=true
-persist.bt.iot.enablelogging=true
-persist.bluetooth.bluetooth_asd_enable=false
+persist.vendor.service.bt.iot.enablelogging=false
+persist.vendor.bt.iotinfo.report.enable=false
+persist.vendor.service.bt.iotinfo.report.enable=false
+persist.bt.iot.enablelogging=false
+persist.bluetooth.bluetooth_asd_enable=true
 persist.sys.bluetooth.linkkey_enc.support=true
 persist.sys.bluetooth.random=true
 persist.sys.bluetooth.wearcheck_support=true
@@ -5275,12 +5012,15 @@ persist.sys.bluetooth.gatt.cache.support=true
 persist.sys.bluetooth.ble.retry.support=true
 persist.sys.bluetooth.rssi_distance.support=true
 persist.sys.bluetooth.rssi_distance.balanced=false
-# Disable LeAudio
+# Disable LeAudio START
 ro.vendor.bluetooth.csip_qti=false
+ro.bluetooth.leaudio_offload.supported=false
+ro.bluetooth.leaudio_switcher.supported=false
 persist.vendor.btstack.lc3_reset_adv_audio_mask=false
 persist.vendor.bt.enable.lpa=false
 persist.vendor.btstack.enable.lpa=false
 persist.vendor.qcom.bluetooth.enable.lpa=false
+persist.bluetooth.leaudio_offload.disabled=true
 # Audio Stream Transitions
 bluetooth.profile.bap.broadcast.assist.enabled=false
 bluetooth.profile.bap.broadcast.source.enabled=false
@@ -5290,11 +5030,13 @@ bluetooth.profile.csip.set_coordinator.enabled=false
 bluetooth.profile.csis.set_coordinator.enabled=false
 bluetooth.profile.pacs.server.enabled=false
 bluetooth.profile.ascs.server.enabled=false
+
 # Capture and Rendering Volume Control
 bluetooth.profile.vcp.controller.enabled=false
 bluetooth.profile.vcs.controller.enabled=false
 bluetooth.profile.micp.controller.enabled=false
-# Content Control
+
+#Content Control
 bluetooth.profile.mcp.server.enabled=false
 bluetooth.profile.mcs.server.enabled=false
 bluetooth.profile.mcp.client.enabled=false
@@ -5304,9 +5046,13 @@ bluetooth.profile.ccp.server.enabled=false
 bluetooth.profile.ccp.client.enabled=false
 bluetooth.profile.tbs.server.enabled=false
 bluetooth.profile.gtbs.server.enabled=false
+
+# Disable LeAudio END
 bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.avrcp.target.enabled=true
-bluetooth.profile.avrcp.controller.enabled=false
+bluetooth.profile.avrcp.controller.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.asha.central.enabled=true
 bluetooth.profile.gatt.enabled=true
 bluetooth.profile.hap.client.enabled=true
 bluetooth.profile.hid.host.enabled=true
@@ -5325,29 +5071,39 @@ ro.qualcomm.bluetooth.sap=false
 ro.qualcomm.bluetooth.ftp=true
 vendor.audio.hfp.enable=true
 persist.bluetooth.specificatcmdsenable=true
-persist.vendor.bluetooth.modem_nv_support=false
-persist.bluetooth.ble_drop_power=false
-persist.vendor.bluetooth.ble_drop_power=false
+persist.bluetooth.ble_drop_power=true
+persist.vendor.bluetooth.ble_drop_power=true
 # System props to enable Bluetooth Quality Report (BQR) feature
 # BQR event mask configuration : disable
 persist.bluetooth.bqr.event_mask=0
 # BQR minimum report interval configuration : disable
 persist.bluetooth.bqr.min_interval_ms=0
+persist.bluetooth.disableinbandringing=false
 persist.bluetooth.a2dp_offload.disabled=false
-# XIAO BT PARAMETERS
+persist.bluetooth.opus.enabled=true
+persist.sys.bluetooth.abnormal_sco_notify=true
+persist.bluetooth.support.sar=00
+persist.bluetooth.carkit_compability_control=true
+persist.sys.bt.oob.support=true
+persist.sys.bluetooth.oob.support=true
+persist.vendor.bt.asd.firmware=true
+persist.vendor.bluetooth.asd.firmware=true
+# Xiao Start
 audio.misound.bluetooth.enable=true
 vendor.audio.misound.bluetooth.enable=true
 ro.vendor.audio.misound.bluetooth.enable=true
-# OPLUS BT PARAMETERS
+# Xiao End
+# OPLUS Start
 persist.sys.oplus.bt.binaural_record=false
 persist.sys.oplus.bt.acl_optimize=true
 persist.sys.oplus.bt.log_off_bt=false
 persist.sys.oplus.bt.switch_log.enable=false
 persist.sys.oplus.bt.cache_hcilog_allow_all_devices=0
 persist.sys.oplus.bt.cache_hcilog_mode=0
-persist.vendor.oneplus.bt.asd.chain=0
-persist.vendor.oneplus.bt.asd.firmware=false
+persist.vendor.oneplus.bt.asd.firmware=true
 persist.sys.oplus.bt.le_audio=false
+persist.sys.oplus.bt.oob.support=true
+# OPLUS End
 
 # AHAL PARAMETERS
 audio.offload.disable=false
@@ -5373,12 +5129,12 @@ vendor.voice.path.for.pcm.voip=true
 audio.decoder_override_check=true
 vendor.audio.decoder_override_check=true
 ro.vendor.audio.decoder_override_check=true
-audio.hw.aac.encoder=false
-audio.hw.aac.decoder=false
-vendor.audio.hw.aac.encoder=false
-vendor.audio.hw.aac.decoder=false
-ro.vendor.audio.hw.aac.encoder=false
-ro.vendor.audio.hw.aac.decoder=false
+audio.hw.aac.encoder=true
+audio.hw.aac.decoder=true
+vendor.audio.hw.aac.encoder=true
+vendor.audio.hw.aac.decoder=true
+ro.vendor.audio.hw.aac.encoder=true
+ro.vendor.audio.hw.aac.decoder=true
 qcom.hw.aac.encoder=true
 qcom.hw.aac.decoder=true
 vendor.audio.kpi_optimize.enable=false
@@ -5391,8 +5147,6 @@ vendor.audio.feature.devicestate_listener.enable=false
 vendor.audio.feature.thermal_listener.enable=false
 vendor.audio.feature.compr_cap.enable=false
 vendor.audio.feature.compress_meta_data.enable=true
-vendor.audio.feature.compr_voip.enable=false
-vendor.audio.feature.compress_in.enable=true
 vendor.audio.feature.extn_compress_format.enable=false
 vendor.audio.feature.custom_stereo.enable=false
 vendor.audio.feature.dsm_feedback.enable=true
@@ -5404,8 +5158,8 @@ vendor.audio.feature.external_qdsp.enable=false
 vendor.audio.feature.external_speaker.enable=false
 vendor.audio.feature.external_speaker_tfa.enable=false
 vendor.audio.feature.hfp.enable=true
+vendor.audio.feature.hifi_audio.enable=false
 vendor.audio.feature.hwdep_cal.enable=true
-vendor.audio.feature.multi_voice_session.enable=true
 vendor.audio.feature.keep_alive.enable=true
 vendor.audio.feature.kpi_optimize.enable=false
 vendor.audio.feature.maxx_audio.enable=true
@@ -5419,19 +5173,25 @@ vendor.audio.feature.asphere.enable=false
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.dmabuf.cma.memory.enable=false
 vendor.audio.feature.power_mode.enable=false" > $MODPATH/$MODID/system.prop
+if [ "$SD888" ] || [ "$SM6375" ] || [ "$SM8450" ] || [ "$SM8550" ]; then
+echo -e "# HI-RES PARAMETERS
+vendor.audio.feature.compr_voip.enable=false
+vendor.audio.feature.compress_in.enable=false
+vendor.audio.feature.dynamic_ecns.enable=true" >> $MODPATH/$MODID/system.prop
+fi
 MMAUDIOFX && REPLACER -f "$MMAUDIOFX"
 echo -e "#!$MIPSB/sh
-resetprop -p --delete persist.vendor.audio_hal.dsp_bit_width_enforce_mode
-resetprop -p --delete persist.audio_hal.dsp_bit_width_enforce_mode
 resetprop -p --delete media.resolution.limit.16bit
 resetprop -p --delete media.resolution.limit.24bit
 resetprop -p --delete media.resolution.limit.32bit
 resetprop -p --delete media.resolution.limit.64bit
+resetprop -p --delete ro.vendor.dolby.dax.version
+resetprop -p --delete ro.vendor.audio.dolby.dax.version
 SERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" > $MODPATH/$MODID/service.sh
 PSXCF -psf "$MPATHS $ACXML $APCXML $AIPAOPCONF $STPIXML $APIXML"
 if $STEP1; then PATCH_VOLUMES; fi
 if $STEP2; then PATCH_MICROPHONE; fi
-if $STEP4; then PATCH_MEDIA_CODECS; fi
+if $STEP3; then PATCH_MEDIA_CODECS; fi
 if FINDER "$MPATHS"; then PATCH_MIXER; fi
 if FINDER "$APIXML"; then PATCH_AUDIO_PLATFORM_INFO; fi
 if FINDER "$ACXML"; then PATCH_DEEP_BUFFER; fi
@@ -5439,22 +5199,21 @@ if FINDER "$APCXML"; then PATCH_AUDIO_POLICY_CONFIGURATION; fi
 if [ -d $MAGISKMP$IPSEDF ] || [ -d $MAGISKMP$IPVEDF ]; then PATCH_DEVICE_FEATURES; fi
 if FINDER "$BTCSCONF" || FINDER "$BTSCONF"; then PATCH_IMPROVE_BLUETOOTH; fi
 if FINDER "$AIPAOPCONF"; then PATCH_AUDIO_POLICY; fi
-if $STEP3; then PATCH_FIXING_KHZ; fi
 if FINDER "$A2DPXML"; then
 for FA2DPXML in $A2DPXML; do
 if [ -f $MAGISKMP$FA2DPXML ]; then
 UIP "Found $(basename $FA2DPXML)" "Patching..."
 PSF="$MODPATH/$MODID$FA2DPXML"
-sed -i 's/samplingRates="44100"/samplingRates="192000"/g' $PSF
-sed -i 's/samplingRates="44100,48000,88200,96000"/samplingRates="48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="44100 48000 88200 96000"/samplingRates="48000 64000 88200 96000 128000 176400 192000"/g' $PSF
-sed -i 's/samplingRates="44100,48000,96000"/samplingRates="48000,64000,88200,96000,128000,176400,192000"/g' $PSF
-sed -i 's/samplingRates="44100 48000 96000"/samplingRates="48000 64000 88200 96000 128000 176400 192000"/g' $PSF
-sed -i '/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP/a\
-           <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
+sed -i 's/samplingRates="44100,48000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
+sed -i 's/samplingRates="44100 48000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
+sed -i 's/samplingRates="44100,48000,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
+sed -i 's/samplingRates="44100 48000 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
+sed -i 's/ AUDIO_FORMAT_FORCE_AOSP_LL//g' $PSF
+sed -i 's/AUDIO_FORMAT_FORCE_AOSP_LL//g' $PSF
+sed -i 's/AUDIO_FORMAT_FORCE_AOSP/AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL/g' $PSF
+sed -i 's/"AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink">/"AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink" encodedFormats="AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL">/g' $PSF
+sed -i 's/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES" role="sink">/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES" role="sink" encodedFormats="AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL">/g' $PSF
+sed -i 's/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER" role="sink">/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER" role="sink" encodedFormats="AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL">/g' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -5464,35 +5223,16 @@ for FBTQTIXML in $BTQTIXML; do
 if [ -f $MAGISKMP$FBTQTIXML ]; then
 UIP "Found $(basename $FBTQTIXML)" "Patching..."
 PSF="$MODPATH/$MODID$FBTQTIXML"
-sed -i 's/samplingRates="44100"/samplingRates="192000"/g' $PSF
 sed -i 's/samplingRates="44100,48000,88200,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
 sed -i 's/samplingRates="44100 48000 88200 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
 sed -i 's/samplingRates="44100,48000,96000"/samplingRates="8000,11025,12000,16000,22050,24000,32000,44100,48000,64000,88200,96000,128000,176400,192000"/g' $PSF
 sed -i 's/samplingRates="44100 48000 96000"/samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000 64000 88200 96000 128000 176400 192000"/g' $PSF
-sed -i '/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP/a\
-           <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-UIP "$MSGFFAP"
-fi
-done
-fi
-if FINDER "$VIRTXML"; then
-for FVIRTXML in $VIRTXML; do
-if [ -f $MAGISKMP$FVIRTXML ]; then
-UIP "Found $(basename $FVIRTXML)" "Patching..."
-PSF="$MODPATH/$MODID$FVIRTXML"
-sed -i '/name="virtual output/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/name="virtual output/a\
-           <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/AUDIO_DEVICE_OUT_IP/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/AUDIO_DEVICE_OUT_IP/a\
-           <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
+sed -i 's/ AUDIO_FORMAT_FORCE_AOSP_LL//g' $PSF
+sed -i 's/AUDIO_FORMAT_FORCE_AOSP_LL//g' $PSF
+sed -i 's/AUDIO_FORMAT_FORCE_AOSP/AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL/g' $PSF
+sed -i 's/"AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink">/"AUDIO_DEVICE_OUT_BLUETOOTH_A2DP" role="sink" encodedFormats="AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL">/g' $PSF
+sed -i 's/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES" role="sink">/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_HEADPHONES" role="sink" encodedFormats="AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL">/g' $PSF
+sed -i 's/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER" role="sink">/AUDIO_DEVICE_OUT_BLUETOOTH_A2DP_SPEAKER" role="sink" encodedFormats="AUDIO_FORMAT_FORCE_AOSP AUDIO_FORMAT_FORCE_AOSP_LL">/g' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -5502,17 +5242,7 @@ for FUSBXML in $USBXML; do
 if [ -f $MAGISKMP$FUSBXML ]; then
 UIP "Found $(basename $FUSBXML)" "Patching..."
 PSF="$MODPATH/$MODID$FUSBXML"
-sed -i 's/samplingRates="44100" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/samplingRates="192000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/g' $PSF
-sed -i '/AUDIO_DEVICE_OUT_USB_ACCESSORY/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/AUDIO_DEVICE_OUT_USB_ACCESSORY/a\
-           <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
-sed -i '/name="usb_accessory output" role="source"/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/name="usb_accessory output" role="source"/a\
-           <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
+sed -i 's/samplingRates="44100"/samplingRates="192000"/g' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -5553,20 +5283,6 @@ sed -i '/<kara_app_name_list>/a\
 sed -i '/<record_unsilence_app_name_list>/a\
         <com.SearingMedia.Parrot/>\
         <com.hitrolab.audioeditor/>' $PSF
-UIP "$MSGFFAP"
-fi
-done
-fi
-if FINDER "$VEHICLEXML"; then
-for FVEHICLEXML in $VEHICLEXML; do
-if [ -f $MAGISKMP$FVEHICLEXML ]; then
-UIP "Found $(basename $FVEHICLEXML)" "Patching..."
-PSF="$MODPATH/$MODID$FVEHICLEXML"
-sed -i '/AUDIO_OUTPUT_FLAG_CAR/a\
-AI2ST' $PSF
-sed -i '/AI2ST/,+1d' $PSF
-sed -i '/AUDIO_OUTPUT_FLAG_CAR/a\
-           <profile name="" format="AUDIO_FORMAT_PCM_24_BIT_PACKED"' $PSF
 UIP "$MSGFFAP"
 fi
 done
@@ -6262,9 +5978,9 @@ RMTSAV=true
 fi
 fi
 if $RMTSAV; then
-UIP -s "Choose Variant For Stock List & APPRMLIST.conf:" "$MSGVU Replace Every App Found Without Confirm" "$MSGVD Replace Every App Found With Confirm $MSGRI" 
+UIP -s "Choose Variant For Stock List & APPRMLIST.conf:" "$MSGVU Replace Every App Found Without Confirm" "$MSGVD Replace Every App Found With Confirm $MSGRI"
 else
-UIP -s "Choose Variant For Stock List & APPRMLIST.conf:" "$MSGVU Remove Every App Found Without Confirm" "$MSGVD Remove Every App Found With Confirm $MSGRI" 
+UIP -s "Choose Variant For Stock List & APPRMLIST.conf:" "$MSGVU Remove Every App Found Without Confirm" "$MSGVD Remove Every App Found With Confirm $MSGRI"
 fi
 if KEYCHOOSE; then
 REAFWC=true
@@ -7295,15 +7011,15 @@ echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-    <dimen name=\"qs_header_system_icons_area_height\">0.0dip</dimen>
-    <dimen name=\"qs_panel_padding_top\">0.0dip</dimen>
+	<dimen name=\"qs_header_system_icons_area_height\">0.0dip</dimen>
+	<dimen name=\"qs_panel_padding_top\">0.0dip</dimen>
 </resources>" > $QSSNSCP/res/values-land/dimens.xml
 
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
-    <integer name=\"quick_settings_num_columns\">2</integer>
-    <integer name=\"quick_qs_panel_max_rows\">2</integer>
-    <integer name=\"quick_qs_panel_max_tiles\">6</integer>
+	<integer name=\"quick_settings_num_columns\">2</integer>
+	<integer name=\"quick_qs_panel_max_rows\">2</integer>
+	<integer name=\"quick_qs_panel_max_tiles\">6</integer>
 </resources>" > $QSSNSCP/res/values-land/integers.xml;;
 esac
 

@@ -1,9 +1,9 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.08.23 (101) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.08.2023/AIOPFMD-31.08.23-%28101%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/133">TG</a>
+* Версия AIOPFMD: 31.10.23 (103) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.10.2023/AIOPFMD-31.10.23-%28103%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/137">TG</a>
 * Общее/что нужно/может потребоваться:
-	- Желателен MAGISK 24.3/26.1 и/или RECOVERY с нормальным sh/ash/bash;
+	- Нужен MAGISK 24.3/26.3 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm или Arm64;
 	- Желательно последние патчи безопасности (не всегда но всегда);
 	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
@@ -13,14 +13,29 @@
 	- Enabling Hidden Api Policy (для ViperFX (Android 11.0)) - ставиться автоматом если надо;
 	- Audio Modification Library если стоит Dolby и ViperFX или отвал вывода музыки из приложений при установленных Dolby и ViperFX - ставиться автоматом если надо;
 	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск) - ставиться автоматом если надо;
-	- Некоторых фиксов RO и подобного для новых телефонов нет и возможно будет;
-	- Поддержки KernelSU, Magisk Delta и прочей такой хуеты нет и не будет.
+	- Некоторых фиксов RO и подобного для новых телефонов не будет;
+	- Поддержки KernelSU, Magisk Delta и прочей такой хуеты нет и не будет (пользуйтесь SuperSU или KingoRoot).
 * В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
 * В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
 
 <details>
   <summary>Changelog</summary>
 
+#### 31.10.23 (103) ####
+* Dolby Atmos обновлен до v2.3 - изменение и чистка правил;
+* В Режим удаления/replace/restore добавлены приложения:
+	- В обычный лист: bcr, VoiceAccessPrebuilt, SwitchAccessPrebuilt, AiWallpapers, AICorePrebuilt и PixelWallpapers2023;
+	- В экспериментальный лист: TouchGestures;
+* ViperFX обновлен до v2.1 - обновлен APK;
+* AIST обновлен до v1.9 - всё как всегда и убрал выбор на FIXING KHZ (ломает много всего);
+* Lawnchair обновлен до v3.1 - обновлен APK.
+#### 17.09.23 (102) ####
+* Добавлена поддержка MAGISK 26.3;
+* ViperFX обновлен до v2.0:
+	- Обновлен APK с фиксом вылета при заходе в настройки или даже просто вылетом если до этого работал;
+	- Вернул выбор под версии Android (те баги что есть это пиздец но фикс неизвестен или не ставьте версии 2.7 по верх 0.5.0 или наоборот но даже так не поможет);
+* В Режим удаления/replace/restore добавлены приложения в: Обычный лист: Backgrounds, Jellyfish, PdfViewer и Ripple;
+* Фиксов для TWRP F3 и подобного говна не будет (потому-что).
 #### 31.08.23 (101) ####
 * Cache Cleaner обновлен до v3.3 - добавил пару логированных папок и файлов;
 * В Kill Logger убрал даблинг от Cache Cleaner;
@@ -2260,6 +2275,7 @@
 * Другие приложения:
 	- 404Clock
 	- AEXPapers
+	- AICorePrebuilt
 	- ANGLE
 	- APlayer
 	- AbleMusic
@@ -2268,6 +2284,7 @@
 	- AccuweatherPhone2015_MASS_HD_SWS
 	- AdAway
 	- Aegis
+	- AiWallpapers
 	- AirDots
 	- AirDotsPlugin
 	- AmbientStreaming
@@ -2278,6 +2295,7 @@
 	- AndroidAutoStubPrebuilt
 	- AndroidForWork
 	- AudioFX
+	- Backgrounds
 	- BasicDreams
 	- BatteryTile
 	- BetterBug
@@ -2434,6 +2452,7 @@
 	- IdMipay
 	- InMipay
 	- Jelly
+	- Jellyfish
 	- Joyose
 	- KLMSAgent
 	- Keep
@@ -2534,6 +2553,7 @@
 	- ParanoidPapers
 	- PartnerBookmarksProvider
 	- PaymentService
+	- PdfViewer
 	- PersonalAssistant
 	- PersonalAssistantGlobal
 	- PhaseBeam
@@ -2545,6 +2565,7 @@
 	- PixelWallpapers2020
 	- PixelWallpapers2021
 	- PixelWallpapers2022
+	- PixelWallpapers2023
 	- PlayGames
 	- PlusOne
 	- Podcasts
@@ -2572,6 +2593,7 @@
 	- RetroMusicPlayerPrebuilt
 	- RevengeMessages
 	- RevengeOSCalculator
+	- Ripple
 	- RockClient
 	- RomStats
 	- RoseEUKor
@@ -2618,6 +2640,7 @@
 	- StatusBarLyricExt
 	- Street
 	- Superiorwalls
+	- SwitchAccessPrebuilt
 	- Talk
 	- TeamOctavi
 	- Terminal
@@ -2640,6 +2663,7 @@
 	- ViaBrowser
 	- Videos
 	- VinylMusicPlayer
+	- VoiceAccessPrebuilt
 	- VoiceSearch
 	- VoiceSearchStub
 	- VzwOmaTrigger
@@ -2670,6 +2694,7 @@
 	- ZVideoMass
 	- app-assist-light-release
 	- arcore
+	- bcr
 	- clock-widgets-release
 	- com.facebook.appmanager
 	- com.facebook.services
@@ -2718,6 +2743,7 @@
 * Stk2
 * Tag
 * TagGoogle
+* TouchGestures
 * TrichromeLibrary
 * TrichromeLibrary-Stub
 * WallpaperPickerGoogle
