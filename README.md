@@ -1,9 +1,9 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.10.23 (103) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.10.2023/AIOPFMD-31.10.23-%28103%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/137">TG</a>
+* Версия AIOPFMD: 30.11.23 (104) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.11.2023/AIOPFMD-30.11.23-%28104%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/139">TG</a>
 * Общее/что нужно/может потребоваться:
-	- Нужен MAGISK 24.3/26.3 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
+	- Нужен MAGISK 24.3/26.4 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm или Arm64;
 	- Желательно последние патчи безопасности (не всегда но всегда);
 	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
@@ -21,6 +21,14 @@
 <details>
   <summary>Changelog</summary>
 
+#### 30.11.23 (104) ####
+* Добавлена поддержка MAGISK 26.4;
+* Dolby Atmos обновлен до v2.4 - изменение и пару улучшений;
+* В Режим удаления/replace/restore добавлены приложения в:
+	- Обычный лист: AccessibilityMenu, Panic, ViMusic, TurboAdapter_NoBatt и WeatherPixelPrebuilt;
+	- Лист камер: ApertureLensLauncher, DevCamera и LegacyCamera;
+	- Лист лаунчеров: OrtusLauncher;
+* ViperFX обновлен до v2.2 - обновлен APK.
 #### 31.10.23 (103) ####
 * Dolby Atmos обновлен до v2.3 - изменение и чистка правил;
 * В Режим удаления/replace/restore добавлены приложения:
@@ -2281,6 +2289,7 @@
 	- AbleMusic
 	- AboutBliss
 	- Abstruct
+	- AccessibilityMenu
 	- AccuweatherPhone2015_MASS_HD_SWS
 	- AdAway
 	- Aegis
@@ -2549,6 +2558,7 @@
 	- OperaMax_PreinstallProvider
 	- Opera_data
 	- Ornament
+	- Panic
 	- Papers
 	- ParanoidPapers
 	- PartnerBookmarksProvider
@@ -2651,6 +2661,7 @@
 	- TranslatePrebuilt
 	- Turbo
 	- TurboAdapter
+	- TurboAdapter_NoBatt
 	- TurboPrebuilt
 	- Tycho
 	- UPTsmService
@@ -2659,6 +2670,7 @@
 	- VZWAPNLib
 	- Velvet
 	- Velvet_update
+	- ViMusic
 	- Via
 	- ViaBrowser
 	- Videos
@@ -2678,6 +2690,7 @@
 	- WarpShare
 	- WaveWidget
 	- WeatherDaemon
+	- WeatherPixelPrebuilt
 	- WeatherTile
 	- WebManual
 	- Wellbeing
@@ -2773,6 +2786,7 @@
 * OPLauncher
 * OPLauncher2
 * OPLauncherReleases
+* OrtusLauncher
 * ParanoidQuickStep
 * PixelLauncher
 * RevengeLauncherQuickStep
@@ -2793,6 +2807,8 @@
 * Camera2
 * CameraGo
 * DevCamera
+* Flash
+* FlashLensLauncher
 * GCam
 * GCamGOPrebuilt
 * GCamGo

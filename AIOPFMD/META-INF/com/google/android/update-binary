@@ -2,7 +2,7 @@
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 set -x && exec 2>/sdcard/AIO-$( date +"%d-%H:%M:%S" ).log
-VAIOPFMD="31.10.23 (103)"
+VAIOPFMD="30.11.23 (104)"
 IPDLTMP="/data/local/tmp"
 TMPDIR="$IPDLTMP/AIOPFMD"
 DEVTMPDIR="/dev/AIOPFMD"
@@ -60,11 +60,11 @@ IDQSSN="QSSplitNotification"; VIPQSSN="v1.0"
 #Launchers: Shady/Lawnchair/Sushi
 IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIPSLSHADYR="v2021.11.28"; VCIPSLSHADYR="20211128"
 IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v3.1"; VIPSLLAWNASL="12.1.0 Alpha 4"; VIPSLLAWNAT="13 Beta"
-IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHISLA="v5.0"
+IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHIA="v5.0"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/IB/AML/ALCF
-IDVFX="V4AFX"; VIPVFX="v2.1"
+IDVFX="V4AFX"; VIPVFX="v2.2"
 IDVFXDAK="V4AFXDAK"; VIPVFXDAK="v1.9"
-IDDA="DolbyAtmos"; VIPDA="v2.3"
+IDDA="DolbyAtmos"; VIPDA="v2.4"
 IDAIST="AIST"; VIPAIST="v1.9"; VCIPAIST="1910"
 IDSAQ="SystemAudioQuality"; VIPSAQ="v2.3"; VCIPSAQ="23"
 IDIBS="IncreaseBitrate"; VIPIBS="v1.5"
@@ -108,7 +108,7 @@ IDFULIRC="FaceUnLockIRChanger"; VIPFULIRC="v2.6"
 IDFDM="ForceDarkMode"; VIPFDM="v1.0"
 IDFDPP="ForceDisablingPlayProtect"; VIPFDPP="v1.0"
 IDFI="ForceIdle"; VIPFI="v1.0"
-IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.9.0"; VCIPUGMSD="190"
+IDUGMSD="UniversalGMSDoze"; VIPUGMSD="v1.9.1"; VCIPUGMSD="191"
 IDUSGP="USGP"; VIPUSGP="v1.3"
 IDAS="AnimationScale"; VIPAS="v1.1"
 IDGPUR="GPURendering"; VIPGPUR="v1.2"
@@ -369,6 +369,7 @@ APlayer
 AbleMusic
 AboutBliss
 Abstruct
+AccessibilityMenu
 AccuweatherPhone2015_MASS_HD_SWS
 AdAway
 Aegis
@@ -637,6 +638,7 @@ OperaMax
 OperaMax_PreinstallProvider
 Opera_data
 Ornament
+Panic
 Papers
 ParanoidPapers
 PartnerBookmarksProvider
@@ -739,6 +741,7 @@ Translate
 TranslatePrebuilt
 Turbo
 TurboAdapter
+TurboAdapter_NoBatt
 TurboPrebuilt
 Tycho
 UPTsmService
@@ -747,6 +750,7 @@ Updates
 VZWAPNLib
 Velvet
 Velvet_update
+ViMusic
 Via
 ViaBrowser
 Videos
@@ -766,6 +770,7 @@ WallpapersBReel2020a
 WarpShare
 WaveWidget
 WeatherDaemon
+WeatherPixelPrebuilt
 WeatherTile
 WebManual
 Wellbeing
@@ -855,17 +860,20 @@ EnigmaLauncher
 FluidLauncherQuickStep
 Launcher3
 Launcher3QuickStep
+Launcher3QuickStepMock
 Lawnchair
 NeLauncher
 NexusLauncher
 NexusLauncherPrebuilt
 NexusLauncherRelease
+NothingLauncher3
 NusantaraLauncherQuickStep
 OPLauncher
 OPLauncher2
 OPLauncherRelease
 OPLauncherReleases
 OmniJaws
+OrtusLauncher
 ParanoidQuickStep
 PixelLauncher
 RevengeLauncherQuickStep
@@ -885,6 +893,8 @@ Camera
 Camera2
 CameraGo
 DevCamera
+Flash
+FlashLensLauncher
 GCam
 GCamGOPrebuilt
 GCamGo
@@ -921,6 +931,7 @@ OneUIHome
 OrtusLauncher_Port
 PPL
 ParanoidLauncher_Port
+PixeldustLauncher_Port
 SparkOSLauncher_Port
 SuperiorLauncher_Port
 SuperiorOSLauncher_Port
@@ -940,12 +951,14 @@ Systemless_LegitCherishOSLauncher_Port
 Systemless_OPLauncher
 Systemless_OctaviLauncher
 Systemless_OneUIHome
+Systemless_OrtusLauncher
 Systemless_PixelLauncher
 Systemless_PixelLauncherX
 Systemless_ShadyLauncher
 Systemless_SparkLauncher
 Systemless_SushiLauncher
 TequilaOSLauncher_Port
+VoltageLauncher_Port
 XtendedLauncher_Port
 asuslauncher
 com.pixelated.launcher
@@ -1056,8 +1069,8 @@ MAGISKFIRSTTIME=false; FINDMAGISK=false; MAGISK=false
 fi
 if $FINDMAGISK; then
 if [ $MAGISKVC -ge 23010 ]; then ZYGISK=true; fi
-if [ $MAGISKVC -lt 24300 ] || [ $MAGISKVC -gt 26300 ]; then
-UIP "Found Unsupported Magisk!" "Please Install Official Magisk v24.3-v26.3!"
+if [ $MAGISKVC -lt 24300 ] || [ $MAGISKVC -gt 26400 ]; then
+UIP "Found Unsupported Magisk!" "Please Install Official Magisk v24.3-v26.4!"
 fi
 if [ "$(grep "delta" "$UFSH")" ]; then
 UIP "Magisk Delta Unsupported!" "Please Install Official Magisk v24.3-v26.3!"
@@ -3865,7 +3878,7 @@ if KEYCHOOSE; then IPSLLAWNA; fi
 fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $ATWELVEL; then
-UIP -s "$MSGIP Sushi Launcher $VIPSLSUSHISLA - $VIPSLSUSHI?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "$MSGIP Sushi Launcher $VIPSLSUSHIA - $VIPSLSUSHI?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then IPSLSSUSHISL; fi
 fi
 }
@@ -4106,7 +4119,14 @@ allow init system_file file mounton
 allow daxservice_app default_prop file read
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } device chr_file { read write open getattr ioctl }
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } migt_file dir search
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } system_file dir write
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } zygote unix_stream_socket getopt
+allow system_app system_app capability { dac_read_search dac_override sys_resource }
+allow platform_app platform_app capability { dac_read_search dac_override sys_resource }
+allow priv_app priv_app capability { dac_read_search dac_override sys_resource }
+allow untrusted_app_29 untrusted_app_29 capability { dac_read_search dac_override sys_resource }
+allow untrusted_app_27 untrusted_app_27 capability { dac_read_search dac_override sys_resource }
+allow untrusted_app untrusted_app capability { dac_read_search dac_override sys_resource }
 allow { hal_audio_default mtk_hal_audio audioserver } system_suspend_hwservice hwservice_manager find
 allow { hal_audio_default mtk_hal_audio audioserver } hal_system_suspend_service service_manager find
 allow { hal_audio_default mtk_hal_audio audioserver } { default_prop boottime_prop audio_prop } file { read open getattr map }
@@ -4128,9 +4148,12 @@ allow { hal_audio_default mtk_hal_audio audioserver } { system_app priv_app plat
 allow hal_audio_default hal_audio_default capability2 block_suspend
 allow mtk_hal_audio mtk_hal_audio capability2 block_suspend
 allow audioserver audioserver capability2 block_suspend
-allow hal_audio_default hal_audio_default capability sys_nice
-allow mtk_hal_audio mtk_hal_audio capability sys_nice
-allow audioserver audioserver capability sys_nice" > $MODPATH/$MODID/sepolicy.rule
+allow hal_audio_default hal_audio_default capability { sys_nice dac_override sys_admin dac_read_search }
+allow mtk_hal_audio mtk_hal_audio capability { sys_nice dac_override sys_admin dac_read_search }
+allow audioserver audioserver capability { sys_nice dac_override sys_admin dac_read_search }
+allow hal_audio_default hal_audio_default tcp_socket create
+allow mtk_hal_audio mtk_hal_audio tcp_socket create
+allow audioserver audioserver tcp_socket create" > $MODPATH/$MODID/sepolicy.rule
 echo "#!$MIPSB/sh
 
 resetprop ro.feature.dolby_enable true
@@ -4159,16 +4182,14 @@ killall com.dolby.daxservice com.dolby.daxappui com.dolby.atmos
 killall vendor.qti.hardware.vibrator.service
 killall vendor.qti.hardware.vibrator.service.oneplus9
 killall android.hardware.camera.provider@2.4-service_64
-killall vendor.mediatek.hardware.mtkpower@1.0-service
 killall android.hardware.usb@1.0-service
 killall android.hardware.usb@1.0-service.basic
-killall android.hardware.light-service.mt6768
 killall android.hardware.lights-service.xiaomi_mithorium
 killall vendor.samsung.hardware.light-service
 killall android.hardware.sensors@1.0-service
 killall android.hardware.sensors@2.0-service
-killall android.hardware.sensors@2.0-service-mediatek
 killall android.hardware.sensors@2.0-service.multihal
+killall android.hardware.health-service.qti
 SERVERPID=\$(pidof audioserver); [ \"\$SERVERPID\" ] && kill \$SERVERPID" > $MODPATH/$MODID/service.sh
 echo "#!$MIPSB/sh
 DIR=/data/vendor/dolby
@@ -4189,11 +4210,6 @@ sed -i '/<manifest/a\\
     <hal format=\"hidl\">\\
         <name>vendor.dolby.hardware.dms</name>\\
         <transport>hwbinder</transport>\\
-        <version>1.0</version>\\
-        <interface>\\
-            <name>IDms</name>\\
-            <instance>default</instance>\\
-        </interface>\\
         <fqname>@1.0::IDms/default</fqname>\\
     </hal>' \$PMANIFESTXML
 mount -o bind \$PMANIFESTXML $MIPSEV/manifest.xml
@@ -4349,11 +4365,6 @@ sed -i '/<manifest/a\\
     <hal format=\"hidl\">\\
         <name>vendor.dolby.hardware.dms</name>\\
         <transport>hwbinder</transport>\\
-        <version>1.0</version>\\
-        <interface>\\
-            <name>IDms</name>\\
-            <instance>default</instance>\\
-        </interface>\\
         <fqname>@1.0::IDms/default</fqname>\\
     </hal>' \$MAGISKMP/vendor/etc/vintf/manifest.xml
 killall hwservicemanager
@@ -4385,11 +4396,6 @@ sed -i '/<manifest/a\
     <hal format=\"hidl\">\
         <name>vendor.dolby.hardware.dms</name>\
         <transport>hwbinder</transport>\
-        <version>1.0</version>\
-        <interface>\
-            <name>IDms</name>\
-            <instance>default</instance>\
-        </interface>\
         <fqname>@1.0::IDms/default</fqname>\
     </hal>' $DAPATH
 UIP "$MSGFFAP"
