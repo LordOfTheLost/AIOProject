@@ -2,7 +2,7 @@
 
 { #TMPDIR, Magisk Default Var, BB & Other Useful Links
 set -x && exec 2>/sdcard/AIO-$( date +"%d-%H:%M:%S" ).log
-VAIOPFMD="31.01.24 (106)"
+VAIOPFMD="06.02.24 (107)"
 IPDLTMP="/data/local/tmp"
 TMPDIR="$IPDLTMP/AIOPFMD"
 DEVTMPDIR="/dev/AIOPFMD"
@@ -34,7 +34,7 @@ IDGBNBS="GboardNavBarSpacing"; VIPGBNBS="v1.3"
 IDGBRC="GBoardRoundedCorners"; VIPGBRC="v1.2"
 IDGBT="GBoardThemes"; VIPGBT="v1.6"
 IDGBSTS="GboardSilkThemeSwitcher"; VIPGBSTS="v1.2"
-IDSBINNI="StatusBarIncreaseNumberIcons"; VIPSBINNI="v2.2"
+IDSINNI="SystemIncreaseNumberIcons"; VIPSINNI="v2.3"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"
 IDRUI="RoundedUI"; VIPRUI="v3.5"
 IDBIP="BurnInProtection"; VIPBIP="v2.4"
@@ -64,7 +64,7 @@ IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v3.1"; VIPSLLAWNASL="12.1.0 Alpha 4"
 IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VIPSLSUSHIA="v5.0"
 IDSLMATRIXX="Systemless_MatrixxLauncher"; VIPSLMATRIXX="v1.0"; VIPSLMATRIXXA="v10.1.2"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF
-IDVFX="V4AFX"; VIPVFX="v2.3"
+IDVFX="V4AFX"; VIPVFX="v2.4"
 IDVFXDAK="V4AFXDAK"; VIPVFXDAK="v1.9"
 IDDA="DolbyAtmos"; VIPDA="v2.5"
 IDAIST="AIST"; VIPAIST="v1.9"; VCIPAIST="3101"
@@ -89,7 +89,7 @@ IDSELS="SELinuxSwitcher"; VIPSELS="v1.4"
 IDCC="CacheCleaner"; VIPCC="v3.4"
 IDMMFR="MagiskManagerForRecovery"; VIPMMFR="v1.2"
 IDDETACH="zygisk-detach" VIPDETACH="v1.11.0"; VCIPDETACH="14"
-IDPIF="playintegrityfix" VIPPIF="v15.4"; VCIPPIF="15400"
+IDPIF="playintegrityfix" VIPPIF="v15.5"; VCIPPIF="15500"
 #Other: FA/LED/FSFM/PSS/UAA/SBU/SHS
 IDFPA="FingerprintActions"; VIPFPA="v1.2"
 IDLEDLO="LEDLightOff"; VIPLEDLO="v1.3"
@@ -969,6 +969,7 @@ asuslauncher
 com.pixelated.launcher
 crDroidLauncher_Port
 lawnchair.app
+lawnchair.app.unofficial
 lawnchair_launcher_mod
 quickstepswitcher
 quickswitch_terminal
@@ -1066,8 +1067,8 @@ MAGISKFIRSTTIME=false; FINDMAGISK=false; MAGISK=false
 fi
 if $FINDMAGISK; then
 if [ $MAGISKVC -ge 23010 ]; then ZYGISK=true; fi
-if [ $MAGISKVC -gt 26400 ] || [ "$(grep "delta" "$UFSH")" ] || [ "$(grep "alpha" "$UFSH")" ] || [ "$(grep "Lygisk" "$UFSH")" ]; then
-UIP "Found Unsupported Magisk!" "Please Install Official Magisk v26.4!"
+if [ $MAGISKVC -gt 27000 ] || [ "$(grep "delta" "$UFSH")" ] || [ "$(grep "alpha" "$UFSH")" ] || [ "$(grep "Lygisk" "$UFSH")" ]; then
+UIP "Found Unsupported Magisk!" "Please Install Official Magisk v27.0!"
 fi
 fi
 if $MAGISK; then
@@ -2434,7 +2435,7 @@ CHECKER -mmupd "$IDGBNBS" "$VIPGBNBS" "IPGBNBSS"
 CHECKER -mmupd "$IDGBRC" "$VIPGBRC" "IPGBRCS"
 CHECKER -mmupd "$IDGBT" "$VIPGBT" "IPGBTS"
 CHECKER -mmupd "$IDGBSTS" "$VIPGBSTS" "IPGBSTSS"
-CHECKER -mmupd "$IDSBINNI" "$VIPSBINNI" "IPSBINNIS"
+CHECKER -mmupd "$IDSINNI" "$VIPSINNI" "IPSINNIS"
 CHECKER -mmupd "$IDGPPM" "$VIPGPPM" "IPGPPMS"
 CHECKER -mmupd "$IDRUI" "$VIPRUI" "IPRUIS"
 CHECKER -mmupd "$IDBIP" "$VIPBIP" "IPBIPS"
@@ -2486,7 +2487,6 @@ CHECKER -mmupd -c "$IDNT" "$VIPNT" "$VCIPNT" "IPNTS"
 CHECKER -mmupd "$IDAPAUSBTF" "$VIPAPAUSBTF" "IPAPAUSBTFS"
 #Utilities: BB/SELS/CC/MMFR/Detach/PIF
 CHECKER -mmupd -c "$IDBBB" "$VIPBBB" "$VCIPBBB" "IPBBBS"
-CHECKER -mmupd "$IDSQL" "$VIPSQL" "IPSQLS"
 CHECKER -mmupd "$IDSELS" "$VIPSELS" "IPSELSS"
 CHECKER -mmupd "$IDCC" "$VIPCC" "IPCCS"
 CHECKER -mmupd "$IDMMFR" "$VIPMMFR" "IPMMFRS"
@@ -3107,30 +3107,30 @@ fi
 SET_PERM_RM -msgdi
 }
 
-IPSBINNI () {
-if FINDER -aiopfmdph "$IPPSO/StatusBarIncreaseNumberNotificationIcons*.apk"; then
-UIP -s "$MSGFI Status Bar Increase Number Icons, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+IPSINNI () {
+if FINDER -aiopfmdph "$IPPSO/SystemIncreaseNumberNotificationIcons*.apk"; then
+UIP -s "$MSGFI System Increase Number Icons, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "$MSGRMIP"
-rm -f $IPPSO/StatusBarIncreaseNumberNotificationIcons*.apk
+rm -f $IPPSO/SystemIncreaseNumberNotificationIcons*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ] && [ $ASDK -le 33 ]; then UCSA -ent "$MSGIP Status Bar Increase Number Icons $VIPSBINNI?" "IPSBINNIS" "$IDSBINNI"; fi
+if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP System Increase Number Icons $VIPSINNI?" "IPSINNIS" "$IDSINNI"; fi
 fi
 }
 
-IPSBINNIS () {
-UCSA -a "$(seq 1 1 10)" "Choose Variant Number Of Icons" "Number Of Icons:" "10"; SBINNIV=$UCSFNMC
+IPSINNIS () {
+UCSA -a "$(seq 1 1 10)" "Choose Variant" "Number Of Icons:" "10"; SINNIV=$UCSFNMC
 if $UCSFNM; then
-UIP "$MSGIPI Status Bar Increase Number Icons $IAMM"
-UZTPN "SBINNI"
+UIP "$MSGIPI System Increase Number Icons $IAMM"
+UZTPN "SINNI"
 if $MAGISK; then
-PTMFI "$IDSBINNI" "CINNOverlayMod CINNI SBINNI" "$MIPPSO"
-cp -f $TMPDIR/SBINNI/StatusBarIncreaseNumberNotificationIcons-$SBINNIV.apk $MODPATH/$MODID$MIPPSO
-MMPR -v "Status Bar Increase Number Notification Icons" "$VIPSBINNI" "Status Bar Increase Number Notification Icons - Set On: $SBINNIV"
+PTMFI "$IDSINNI" "StatusBarIncreaseNumberIcons CINNOverlayMod CINNI SINNI SBINNI" "$MIPPSO"
+cp -f $TMPDIR/SINNI/SystemIncreaseNumberNotificationIcons-$SINNIV.apk $MODPATH/$MODID$MIPPSO
+MMPR -v "System Increase Number Notification Icons" "$VIPSINNI" "System Increase Number Notification Icons For Status Bar, Lock Screen & AOD - Set On: $SINNIV"
 else
-cp -f $TMPDIR/SBINNI/StatusBarIncreaseNumberNotificationIcons-$SBINNIV.apk $IPPSO
+cp -f $TMPDIR/SINNI/SystemIncreaseNumberNotificationIcons-$SINNIV.apk $IPPSO
 fi
 SET_PERM_RM -msgdi
 fi
@@ -6196,7 +6196,7 @@ UIP "$MSGDRM"
 
 } #
 
-{ #Test/Overlay Compile
+{ #Overlay Compile
 
 ROUNDEDUIC () {
 UCSA "Rounded UI Compile" "ROUNDEDUICS"
@@ -6573,25 +6573,28 @@ APKBUILDER "$OPHO" "$OPHO-$PILLSHEIGHTSIZE.apk"
 done
 }
 
-SBINNIC () {
-UCSA "Status Bar Increase Number Notification Icons Compile" "SBINNICS"
+SINNIC () {
+UCSA "System Increase Number Notification Icons Compile" "SINNICS"
 }
 
-SBINNICS () {
-SUISBINNI="$STORAGE/AIOCOMPILE/SBINNI/StatusBarIncreaseNumberNotificationIcons"
-mkdir -p $SUISBINNI/res/values
-echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.status.bar.increase.number.notification.icons\" android:versionName=\"$VIPSBINNI\">
+SINNICS () {
+SUISINNI="$STORAGE/AIOCOMPILE/SINNI/SystemIncreaseNumberNotificationIcons"
+mkdir -p $SUISINNI/res/values
+echo "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><manifest xmlns:android=\"http://schemas.android.com/apk/res/android\" package=\"com.android.systemui.system.increase.number.notification.icons\" android:versionName=\"$VIPSINNI\">
 	<overlay android:isStatic=\"true\" android:priority=\"999\" android:targetPackage=\"com.android.systemui\"/>
-	<application android:hasCode=\"false\" android:label=\"Status Bar Increase Number Notification Icons\"/>
-</manifest>" > $SUISBINNI/AndroidManifest.xml
+	<application android:hasCode=\"false\" android:label=\"System Increase Number Notification Icons\"/>
+</manifest>" > $SUISINNI/AndroidManifest.xml
 for f in 1 2 3 4 5 6 7 8 9 10; do
 echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <resources>
 	<integer name=\"config_maxVisibleNotificationIconsWhenDark\">$f</integer>
 	<integer name=\"config_maxVisibleNotificationIcons\">$f</integer>
 	<integer name=\"config_maxVisibleStatusIcons\">$f</integer>
-</resources>" > $SUISBINNI/res/values/integers.xml
-APKBUILDER "$SUISBINNI" "$SUISBINNI-$f.apk"
+	<integer name=\"max_notif_icons_on_aod\">$f</integer>
+	<integer name=\"max_notif_icons_on_lockscreen\">$f</integer>
+	<integer name=\"max_notif_static_icons\">$f</integer>
+</resources>" > $SUISINNI/res/values/integers.xml
+APKBUILDER "$SUISINNI" "$SUISINNI-$f.apk"
 done
 }
 
@@ -8044,7 +8047,7 @@ UIP "$MSGDI"
 
 IPPIF () {
 if [ $ASDK -ge 27 ] && $MAGISK && $FINDGAPPS && [ $MAGISKFIRSTTIME != true ] && $ZYGISK; then
-UCSA "$MSGIP Zygisk Play Integrity Fix $VIPPIF?" "IPDETACHS" "$IDPIF"
+UCSA "$MSGIP Zygisk Play Integrity Fix $VIPPIF?" "IPPIFS" "$IDPIF"
 fi
 }
 
@@ -9401,7 +9404,7 @@ IPSL
 if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >/dev/null; then IPAPP; fi
 UIP -s "Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then AUDIO_PRESETS; fi
 if $BOOTMODE; then REMOVAL_PRESETS; else UIP -s "Removal: RSL/RSO/RSTA/RWFSB" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then REMOVAL_PRESETS; fi; fi
-if $TESTMODE; then UIP -s "Test/Overlay Compile" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then TEST_PRESETS; fi; fi
+if $TESTMODE; then UIP -s "Overlay Compile" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then TEST_PRESETS; fi; fi
 UIP -s "Net: GPS/WIFI/TTL/DNS/APAUSBTF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then NET_PRESETS; fi
 UIP -s "Utilities: BB/SELS/CC/MMFR/Detach/PIF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UTILITIES_PRESETS; fi
 UIP -s "Other: FA/LED/FSFM/PSS/UAA/SBU/SHS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then OTHER_PRESETS; fi
@@ -9420,7 +9423,7 @@ IPGBNBS
 IPGBRC
 IPGBT
 IPGBSTS
-IPSBINNI
+IPSINNI
 IPGPPM
 IPRUI
 IPBIP
@@ -9470,7 +9473,7 @@ RAPEXA
 TEST_PRESETS () {
 ROUNDEDUIC
 PILLSOVERLAYC
-SBINNIC
+SINNIC
 QUICKSTEPC
 BIPC
 FACEUNLOCKSERVICEC

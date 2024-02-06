@@ -1,9 +1,9 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 31.01.24 (106) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.01.2024/AIOPFMD-31.01.24-%28106%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/143">TG</a>
+* Версия AIOPFMD: 06.02.24 (107) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/06.02.2024/AIOPFMD-06.02.24-%28107%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/145">TG</a>
 * Общее/что нужно/может потребоваться:
-	- Нужен MAGISK v26.4 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
+	- Нужен MAGISK v27.0 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm или Arm64;
 	- Желательно последние патчи безопасности (не всегда но всегда);
 	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
@@ -21,6 +21,15 @@
 <details>
   <summary>Changelog</summary>
 
+#### 06.02.24 (107) ####
+* Теперь нужен MAGISK только v27.0;
+* Status Bar Increase Number Icons обновлен до v2.3:
+	- Переименован в System Increase Number Notification Icons;
+	- Добавлены строки для Android 14;
+	- Вернул выбор для Android 14;
+* Zygisk Play Integrity Fix обновлен до v15.5 и исправлена его установка;
+* ViperFX обновлен до v2.4 - обновлен APK;
+* Пару других улучшений.
 #### 31.01.24 (106) ####
 * Cache Cleaner обновлен до v3.4 - добавил много путей на чистку логов и фикс описания для новых Recovery;
 * Kill Logger обновлен до v2.2 - добавил новые строки и включен доп активатор;
@@ -2074,7 +2083,7 @@
 		- Выключить пузыри клавиш;
 			- Включить новый вид клавиш;
 			- Выключить новый вид клавиш;
-* Пункт (ALL) (NOT MIUI) (10-13.0) (\\) - (Status Bar Increase Number Notification Icons) для увеличения количества уведомлений:
+* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (System Increase Number Notification Icons) для увеличения количества уведомлений на экране блокировки, количества иконок в строке состояния и статусбаре а так же на AOD:
 	- Количество иконок:
 		- 1;
 		- 2;
