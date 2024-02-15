@@ -1,14 +1,13 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 06.02.24 (107) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/06.02.2024/AIOPFMD-06.02.24-%28107%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/145">TG</a>
+* Версия AIOPFMD: 15.02.24 (108) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/15.02.2024/AIOPFMD-15.02.24-%28108%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/147">TG</a>
 * Общее/что нужно/может потребоваться:
 	- Нужен MAGISK v27.0 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm или Arm64;
-	- Желательно последние патчи безопасности (не всегда но всегда);
-	- Кастомный Android 10+ (но можно пробовать на любое говно ставить);
+	- Минимально доступный патч начинается с Android 5.1.1 до Android 14 (основные патчи начинаются с Android 10);
 	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет);
-	- Установленный BB для некоторых модулей которые используют терминал или имеют сложные shшники - ставиться автоматом если надо;
+	- Установленный BusyBox для некоторых модулей которые используют терминал или имеют сложные shшники - ставиться автоматом если надо;
 	- SELinux в Permissive (для аудиомодов с UI (с приложениями на такой же функционал идите нахуй)) - ставиться автоматом если надо;
 	- Enabling Hidden Api Policy (для ViperFX (Android 11.0)) - ставиться автоматом если надо;
 	- Audio Modification Library если стоит Dolby и ViperFX или отвал вывода музыки из приложений при установленных Dolby и ViperFX - ставиться автоматом если надо;
@@ -16,11 +15,27 @@
 	- Некоторых фиксов RO и подобного для новых телефонов (примерно от 2019го года) не будет;
 	- Поддержки KernelSU, Magisk Delta, Magisk Alpha, Kitsune Mask, APatch и прочей такой хуеты нет и не будет (пользуйтесь SuperSU или KingoRoot).
 * В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
-* В данный момент AIOPFMD имеет 70+ пунктов в которых 160+ основных выборов и 400+ в режиме удаления.<br>
+* В данный момент AIOPFMD имеет 90+ пунктов в которых 200+ основных выборов и 500+ в режиме удаления в зависимости от того что найдет.<br>
 
 <details>
   <summary>Changelog</summary>
 
+#### 15.02.24 (108) ####
+* Burn In Protection обновлен до v2.5 - добавил строку для Android 14;
+* Background Blur обновлен до v1.6 - удалены строки для другого типа значений из-за чего не работало оба;
+* Zygisk Play Integrity Fix обновлен до v15.7.2;
+* Переработана система обновлений:
+	- Всем модулям добавлен versionCode;
+	- Все модули со старыми MODID будут в списке поиска;
+	- Некоторые альтернативные MODID будут в списке поиска;
+	- Поиск обновлений только по большему значению versionCode а не сравнении разницы в номере версии (тест);
+* QR Code Scanner On Lock Screen будет показываться только на Android 13;
+* QS Content Padding будет показываться только на Android 9 и 10;
+* Back Gesture Disabler будет показываться только начиная с Android 11;
+* SUI Rounded Size будет показываться только на Android 8.1, 9, 10 и 11;
+* Минимальный разрешенный SDK теперь 22;
+* В Режим удаления/replace/restore добавлены приложения в: Обычный лист: LogViewer, GeminiPrebuilt и AwakenWallpaperStub;
+* Пару других улучшений.
 #### 06.02.24 (107) ####
 * Теперь нужен MAGISK только v27.0;
 * Status Bar Increase Number Icons обновлен до v2.3:
@@ -2042,7 +2057,7 @@
 * Пункт (ALL) - (Nav Bar Visibility Switcher) показать/скрыть навигационную панель либо жестовую таблетку убивая боковые жесты (очень полезно если надо убить боковые стоковые кривые жесты и поставить FNG):
 	- Показать;
 	- Скрыть;
-* Пункт (MAGISK) (NOT MIUI) (10-14.0) (\\) - (Back Gesture Disabler) убивает боковые жесты (очень полезно если надо убить боковые стоковые кривые жесты и поставить свои):
+* Пункт (MAGISK) (NOT MIUI) (11-14.0) (\\) - (Back Gesture Disabler) убивает боковые жесты (очень полезно если надо убить боковые стоковые кривые жесты и поставить свои):
 	- Выключить левый;
 	- Выключить правый;
 * Пункт (ALL) (10-14.0) (\\) - (GBoard NavBar Space) Установка патча на увеличение отступов при использовании клавиатуры:
@@ -2196,7 +2211,7 @@
 		- Значение 8dip;
 		- Значение 9dip;
 		- Значение 10dip;
-* Пункт (MAGISK) (NOT MIUI) (10-14.0) (\\) - (QS Content Padding) для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
+* Пункт (MAGISK) (NOT MIUI) (9-10) (\\) - (QS Content Padding) для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
 	- Значение 0;
 	- Значение 5;
 	- Значение 10;
@@ -2206,7 +2221,7 @@
 	- Значение 30;
 	- Значение 35;
 	- Значение 40;
-* Пункт (MAGISK) (NOT MIUI) (10-14.0) (\\) - (SUI Rounded Size) (не путать с RoundedUI) для скругления экрана по краям если доступно прошивкой;
+* Пункт (MAGISK) (NOT MIUI) (8.1-11) (\\) - (SUI Rounded Size) (не путать с RoundedUI) для скругления экрана по краям если доступно прошивкой;
 	- Значение 10;
 	- Значение 20;
 	- Значение 30; (12+)
@@ -2312,7 +2327,7 @@
 	- AlphaDroid (1.7);
 * Пункт (MAGISK) (NOT MIUI) (10-14.0) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
 * Пункт (MAGISK) (NOT MIUI) (12.0-14.0) - (Wi-Fi And Mobile Data QS Old Style) изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
-* Пункт (MAGISK) (NOT MIUI) (13.0-14.0) - (QR Code Scanner On Lock Screen) включает или выключает ярлык на экране блокировке:
+* Пункт (MAGISK) (NOT MIUI) (13.0) - (QR Code Scanner On Lock Screen) включает или выключает ярлык на экране блокировке:
 	- Включить;
 	- Выключить;
 * Пункт (MAGISK) (NOT MIUI) (12.1-14.0) - (QS Split Notification) делает уведомления в ландшафте как на планшетах:
@@ -2416,6 +2431,7 @@
 	- AndroidForWork
 	- AudioFX
 	- Auxio
+	- AwakenWallpaperStub
 	- Backgrounds
 	- BasicDreams
 	- BatteryTile
@@ -2525,6 +2541,7 @@
 	- GameCenter
 	- GameCenterGlobal
 	- Gboard
+	- GeminiPrebuilt
 	- GenieWidget
 	- GlobalTrendNews
 	- GlobalUserGuide
@@ -2596,6 +2613,7 @@
 	- Leaflet
 	- Lens
 	- LensAppStub
+	- LogViewer
 	- MSA-Global
 	- MSSkype_stub
 	- MaestroPrebuilt
