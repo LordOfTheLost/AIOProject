@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 15.02.24 (108) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/15.02.2024/AIOPFMD-15.02.24-%28108%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/147">TG</a>
+* Версия AIOPFMD: 29.02.24 (109) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/29.02.2024/AIOPFMD-29.02.24-%28109%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/149">TG</a>
 * Общее/что нужно/может потребоваться:
 	- Нужен MAGISK v27.0 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm или Arm64;
@@ -20,6 +20,50 @@
 <details>
   <summary>Changelog</summary>
 
+#### 29.02.24 (109) ####
+* Zygisk Detach обновлен до v1.12.0;
+* Detach Apk выделен в отдельный модуль что бы при обновлении с сервера он не удалялся;
+* Zygisk Play Integrity Fix обновлен до v15.8;
+* Dolby Atmos обновлен до 2.6:
+	- Добавлены выборы вместо автоопределения: Use Virtualizer, Use Volume Leveler Boost и Use Deeper Bass GEQ Frequency;
+	- Фиксы по killall;
+	- Пару улучшений;
+* Добавлена проверка путей в самом mirror (в отличие от сток модулей я патчу из под него так как это ORIGDIR а не блять патчить то что уже было отпатчено другими модулями или версиями до этого - пользователи не ориг Magisk опять отсосали);
+* Добавлена установка AOD State Doze - если просто то:
+	- Enable: AOD темнеет через пару секунд, датчик приближения выключает экран, автояркость не работает и яркость AOD не зависит от яркости телефона;
+	- Disable: AOD не темнеет через пару секунд, датчик приближения не выключает экран, автояркость не работает а яркость AOD зависит от яркости телефона;
+	- Это зависит от Parts и вашего устройства или его отсутствия;
+* Фикс проверки обновлений по versionCode;
+* Background Blur обновлен до v1.7 - добавлено пару строк для работа на некоторых прошивках;
+* Matrixx Launcher заменен на Ortus Launcher;
+* Добавлена установка Just In Time Compiler - для принудительной регенерации файлов vdex/odex/art и увеличения скорости открытия/использования всех приложений (место в /data уменьшиться начиная от 2GB в зависимости от количества всех установленных приложений):
+	- f) Full ReGenerate;
+	- l) Lite ReGenerate If Updated/Install Apps;
+	- r) Reset All;
+	- s) Service On Boot;
+	- q) Quit;
+* Откатил логирование (exec ломал некоторые команды);
+* ViperFX обновлен до 2.5:
+	- Вернул установку в /data при BOOTMODE
+	- pm uninstall теперь не на пользователя что исправляет фантомные ярлыки APK и невозможность его удаления (возможно);
+	- Пару улучшений;
+* Cache Cleaner обновлен до v3.5 - улучшения по UI;
+* Magisk Manager For Recovery обновлен до v1.3 - улучшения по UI;
+* В Режим удаления/replace/restore добавлено приложение в: Обычный лист: Glimpse;
+* Rounded UI обновлен до v3.6 - фикс package name для Launcher3;
+* GBoard Themes обновлен до v1.7 - чистка строк;
+* Lawnchair обновлен до v3.2 - версия для Android 10-14;
+* Фикс versionCode что отваливало описание модуля:
+	- Force Install Apps From Unknown Sources;
+	- Replace Trash System App;
+	- Status Bar Privacy Dot;
+	- Enabling Hidden Api Policy;
+	- USB Screen Unlocked Config;
+	- Face UnLock IR Switcher;
+* Все аудиомодули переведены на loglevel;
+* Все приложения дублируют файл разрешений что фиксит работу лаунчеров у некоторых и подобное;
+* Теперь вы всегда можете перейти к концу патча коснувшись двумя пальцами по экрану (тест);
+* Может ещё что забыл.
 #### 15.02.24 (108) ####
 * Burn In Protection обновлен до v2.5 - добавил строку для Android 14;
 * Background Blur обновлен до v1.6 - удалены строки для другого типа значений из-за чего не работало оба;
@@ -2333,17 +2377,20 @@
 * Пункт (MAGISK) (NOT MIUI) (12.1-14.0) - (QS Split Notification) делает уведомления в ландшафте как на планшетах:
 	- Включить;
 	- Выключить;
-* Пункт (MAGISK) (NOT MIUI) (13.0-14.0) - (Lock Screen User Switcher) включает или отключает выбор пользователей на экране блокировки;
+* Пункт (MAGISK) (NOT MIUI) (13.0-14.0) - (Lock Screen User Switcher) включает или отключает выбор пользователей на экране блокировки:
 	- Включить;
 	- Выключить;
+* Пункт (MAGISK) (NOT MIUI) (8.1-14.0) - (AOD State Doze) включает или отключает выбор пользователей на экране блокировки:
+	- Enable: AOD темнеет через пару секунд, датчик приближения выключает экран, автояркость не работает и яркость AOD не зависит от яркости телефона;
+	- Disable: AOD не темнеет через пару секунд, датчик приближения не выключает экран, автояркость не работает а яркость AOD зависит от яркости телефона;
 
-<h3 align=center>Launchers: Shady/Lawnchair/Sushi/Matrixx</h3>
+<h3 align=center>Launchers: Shady/Lawnchair/Sushi/Ortus</h3>
 
 * Пункт (MAGISK) (NOT MIUI) (10-12.1/14.0 QPR1) (\\) - (Systemless Launcher) установка одного из лаунчеров:
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
-	- Установка Lawnchair Launcher (SL) <a href="https://github.com/LawnchairLauncher/lawnchair">GITHUB</a> || <a href="https://t.me/lawnchairci">TG</a>;
+	- Установка Lawnchair Launcher (Q/SL/T/U) <a href="https://github.com/Goooler/LawnchairRelease/releases/">GITHUB</a>;
 	- Установка Sushi Launcher (SL) <a href="https://github.com/ricedroidOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
-	- Установка Matrixx Launcher (U) <a href="https://github.com/ProjectMatrixx/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/projectmatrixx">TG</a>;
+	- Установка Ortus Launcher (U) <a href="https://github.com/RisingTechOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
 
 <h3 align=center>Install App From /sdcard/Application</h3>
 
@@ -2357,7 +2404,10 @@
 
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6, v2.7.2.1 и v0.3.0 в зависимости от версии Android;
 * Пункт (ALL) - (DDC & Kernel For ViperFX) ядра и конвольтеры для ViperFX;
-* Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet;
+* Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet:
+	- Use Virtualizer;
+	- Use Volume Leveler Boost;
+	- Use Deeper Bass GEQ Frequency;
 * Пункт (MAGISK) (SNAP/SM/SDM) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=116366772">4PDA</a> - (AIST) улучшает качество звука и буст микрофона при надобности:
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
@@ -2543,6 +2593,7 @@
 	- Gboard
 	- GeminiPrebuilt
 	- GenieWidget
+	- Glimpse
 	- GlobalTrendNews
 	- GlobalUserGuide
 	- Gmail
@@ -2909,25 +2960,39 @@
 <details>
   <summary>Удаление лаунчеров:</summary>
 
+* ArrowLauncher
 * AsusLauncher
 * AsusLauncherDev
+* DerpLauncherQuickStep
 * EasyLauncher2_Zero
 * EnigmaLauncher
+* EvolutionXLauncherQuickStep
+* FluidLauncherQuickStep
+* GhostLauncherQuickStep
+* Launcher3
 * Launcher3QuickStep
+* Launcher3QuickStepMock
 * Lawnchair
+* LawnchairQuickStep
+* MatrixxLauncherQuickStep
 * NeLauncher
 * NexusLauncher
 * NexusLauncherPrebuilt
 * NexusLauncherRelease
+* NothingLauncher3
+* NusantaraLauncherQuickStep
 * OPLauncher
 * OPLauncher2
+* OPLauncherRelease
 * OPLauncherReleases
 * OrtusLauncher
+* OrtusLauncherQuickStep
 * ParanoidQuickStep
 * PixelLauncher
 * RevengeLauncherQuickStep
 * ShadyLauncher
 * ShadyQuickStep
+* SuperiorLauncherQuickStep
 * TWLauncherESS
 * Trebuchet
 * TrebuchetQuickStep
@@ -2984,7 +3049,7 @@
 		- CloudFlare DNS;
 * Пункт (ALL) - (AP And USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для MI8;
 
-<h3 align=center>Utilities: BB/SELS/CC/MMFR/Detach/PIF</h3>
+<h3 align=center>Utilities: BB/SELS/CC/MMFR/Detach/PIF/PCS</h3>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin (использование: su -c busybox в терминале (BOOTMODE));
 * Пункт (MAGISK) - (SELinux Switcher) при переключении в Permissive разрешает исполнения многих вещей в системе (для определенных действий):
@@ -3008,6 +3073,12 @@
 	- q) Quit;
 * Пункт (MAGISK) (ZYGISK) (TERMINAL) <a href="https://github.com/j-hc/zygisk-detach">GITHUB</a> - (Zygisk Detach) отключает автообновление приложений в Play Market (использование: su -c detach в терминале (BOOTMODE));
 * Пункт (MAGISK) (ZYGISK) (8.1-14.0) <a href="https://github.com/chiteroman/PlayIntegrityFix">GITHUB</a> - (Zygisk Play Integrity Fix) для прохождения SafetyNet;
+* Пункт (MAGISK) (TERMINAL) (8.1-14.0) - (Just In Time Compiler) <a href="https://source.android.com/docs/core/runtime/jit-compiler">Source Android</a> - для принудительной регенерации файлов vdex/odex/art и увеличения скорости открытия/использования всех приложений (место в /data уменьшиться начиная от 2GB в зависимости от количества всех установленных приложений):
+	- f) Full ReGenerate;
+	- l) Lite ReGenerate If Updated/Install Apps;
+	- r) Reset All;
+	- s) Service On Boot;
+	- q) Quit;
 
 <h3 align=center>Other: FA/LED/FSFM/PSS/UAA/SBU/SHS</h3>
 
@@ -3157,6 +3228,7 @@
 	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
 	- ENDMODE: Добавляет выбор в самом конце патча который позволяет вернутся в начало патча без перевыбора если что-то пропустили - По умолчанию true.
 	- MMUPDC: Добавляет выбор проверку версий MAGISK модулей между патчем и установленными - По умолчанию true.
+* Вы всегда можете перейти к концу патча коснувшись двумя пальцами по экрану (тест);
 * All - Установка патчей из под MM или RECOVERY и/или как модуль MAGISK так и нет.
 * (\\) - Означает что в этом пункте есть возможность выхода из подпунктов к следующему выбору.
 * (|\\) - Означает что в этом пункте есть возможность пропустить подпункты, но установка основного патча будет произведена.
