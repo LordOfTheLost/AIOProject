@@ -1,10 +1,10 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 29.02.24 (109) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/29.02.2024/AIOPFMD-29.02.24-%28109%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/149">TG</a>
+* Версия AIOPFMD: 31.03.24 (110) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/31.03.2024/AIOPFMD-31.03.24-%28110%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/151">TG</a>
 * Общее/что нужно/может потребоваться:
-	- Нужен MAGISK v27.0 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
-	- Работает только на Arm или Arm64;
+	- Нужен официальный MAGISK v27.0 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
+	- Работает только на Arm и/или Arm64;
 	- Минимально доступный патч начинается с Android 5.1.1 до Android 14 (основные патчи начинаются с Android 10);
 	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет);
 	- Установленный BusyBox для некоторых модулей которые используют терминал или имеют сложные shшники - ставиться автоматом если надо;
@@ -18,8 +18,53 @@
 * В данный момент AIOPFMD имеет 90+ пунктов в которых 200+ основных выборов и 500+ в режиме удаления в зависимости от того что найдет.<br>
 
 <details>
-  <summary>Changelog</summary>
+  <summary>All Changelog</summary>
 
+#### 31.03.24 (110) ####
+* Zygisk Play Integrity Fix обновлен до v15.9.6;
+* Полное изменение категорий:
+	- Многие пункты перенесены на более логичные места;
+	- Добавлены новые категории UI;
+	- Remove/Replace/Restore Mode перенесен в отдельный пункт;
+	- Категория Removal удалена и все пункты перенесены в Other;
+* Media UI Sounds обновлен до v2.2:
+	- Добавлены звуки из Rising;
+	- Добавлены звуки из IOS;
+	- Добавлены звуки из HyperOS;
+	- Позже их переберу и отсею сильные дубликаты между собою;
+	- Три альтернативных звука Touch для OnePlus;
+	- Фикс копирования альтернативных звуков для не MAGISK;
+	- Добавлено создание дубликатов для MIUI;
+* Zygisk Detach обновлен до v1.14.0;
+* Lawnchair обновлен до v3.3 - обновлен APK до 14.0.0 (a004df3);
+* Добавлена установка AOD Switcher - если вы вдруг захотели AOD на IPS или ваш офф майнтейнер долбаёб и забыл его включить (офф кастомы такие да);
+* Добавлена установка Shutdown Battery Temperature - от 50 по 80 с шагом 5 если у вас ядерный реактор от POCO или Pixel;
+* Cache Cleaner обновлен до v3.6 - изменен подсчет памяти после команд;
+* Just In Time Compiler обновлен до v1.1 - добавлен подсчет памяти после команд и улучшения по UI;
+* Magisk Manager For Recovery обновлен до v1.4 - улучшения по UI и фикс grep MAGISK_VER_CODE;
+* ViperFX обновлен до 2.6 - обновлен APK;
+* Исправил жест двумя пальцами когда переход в конец патча можно было делать бесконечно пока их не отпустить;
+* Больше пометок LEGACY;
+* Новое обозначение: (I) - Install/Installing для сокращения и маленьких экранов/RECOVERY;
+* Новое обозначение: (S) - тоже что и (M) но наоборот;
+* Новое обозначение: [R] - модуль ждет удаления;
+* Новое обозначение: [D] - модуль ждет отключения/отключен;
+* Новое обозначение: [U] - модуль обновлен;
+* Улучшения по UI патча;
+* Dolby Atmos обновлен до 2.7:
+	- Улучшения в сервисе;
+	- Обновлены apk;
+	- Добавлена либа для корректной работы на некоторых прошивках;
+* Изменения по Remove/Replace/Restore Mode: 
+	- Обычный лист: ARCore, ARDrawing, AREmoji, ARZone, AvatarEmojiSticker_Palette, FBServices, GearManagerStub, LiveStickers, Netflix_activationCommon, Netflix_stub, Netflix, OneDrive_Samsung_v3, OneDrive, StickerFaceARAvatar и TalkbackSE;
+	- Экспериментальный лист: DevicePersonalizationPrebuiltPixel2022;
+	- Все DevicePersonalization перенесены в Экспериментальный лист;
+	- Ускорение работы Replace в два раза (работает быстрее чем ваш гнилой REDMI/POCO);
+* Burn In Protection обновлен до 2.6 - добавлена доп строка;
+* Force Install Apps From Unknown Sources обновлен до v1.3:
+	- Cменил MODID на Force Unknown Sources Switcher;
+	- Объединил активаторы (на всякий);
+* Unfreeze All Applications теперь как модуль из за шифрование файлов патчинга.
 #### 29.02.24 (109) ####
 * Zygisk Detach обновлен до v1.12.0;
 * Detach Apk выделен в отдельный модуль что бы при обновлении с сервера он не удалялся;
@@ -1685,7 +1730,7 @@
 * Другие мелкие изменения.
 #### 22.11.20 (14) ####
 * Time To Live Fix обновлен до v2.5;
-* В увеличение количества иконок добавлен выбор на 34dip в ландшафте для DSB (MI8 и Poco F1);
+* В увеличение количества иконок добавлен выбор на 34dip в ландшафте для DSB (MI 8 и POCO F1);
 * UIROUNDED обновлен до v1.4 (рандомная работа не перестает удивлять) - улучшения и доп скругления;
 * в UIROUNDED добавлена альт версия для "особых" прошивок по типу Nusantara 2.4 (иногда используется с выбором в расширенных настройках на большое скругление если такой выбор есть);
 * в UIROUNDED добавлены оверлеи на 35 и 40 dip - не везде адекватно работает. А где работает там телефон превращается в OneUI;
@@ -2050,13 +2095,12 @@
 * Всё, что ставится как модуль можно поставить поверх модуля (всё перезаписывается (логично));
 * Face UnLock не появляется если не находит сервисы Google (логично);
 * Может ещё что-то я забыл, изменений очень много, 99% патча было перелопачено.
-
 </details>
 
-<details>
-  <summary>Принцип/Порядок работы AIOPFMD</summary>
+## Все пункты и выборы
 
-<h3 align=center>UI: Pills/NavBar/Gboard/Themes/BA/Sounds/Emoji</h3>
+<details>
+  <summary>UI: Pills/NavigationBar/Gestures</summary>
 
 * Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Pills) Установка разных видов/размеров жестовой "таблетки":
 	- Полное скрытие;
@@ -2104,44 +2148,12 @@
 * Пункт (MAGISK) (NOT MIUI) (11-14.0) (\\) - (Back Gesture Disabler) убивает боковые жесты (очень полезно если надо убить боковые стоковые кривые жесты и поставить свои):
 	- Выключить левый;
 	- Выключить правый;
-* Пункт (ALL) (10-14.0) (\\) - (GBoard NavBar Space) Установка патча на увеличение отступов при использовании клавиатуры:
-	- Значение 0 (Сток);
-	- Значение 5;
-	- Значение 10;
-	- Значение 15;
-	- Значение 20;
-	- Значение 25;
-	- Значение 30;
-	- Значение 35;
-	- Значение 40;
-* Пункт (ALL) (10-14.0) (\\) - (GBoard Rounded Corners) Установка патча на увеличение скругления нижних клавиш для GBoard (работает только на темах с контурами):
-	- Значение 0 (Сток);
-	- Значение 5;
-	- Значение 10;
-	- Значение 15;
-	- Значение 20;
-	- Значение 25;
-	- Значение 30;
-	- Значение 35;
-	- Значение 40;
-	- Значение 45;
-	- Значение 50;
-* Пункт (ALL) - (GBoard Themes) Установка Gboard Themes с разными цветами и пару вариантам ипо типу 3D и MD2:
-	- Скругление всего в клавиатуре:
-		- Значение 0;
-		- Значение 5;
-		- Значение 10;
-		- Значение 15;
-		- Значение 20;
-		- Значение 25;
-		- Значение 30;
-* Пункт (ALL) - (GBoard Silk Theme Switcher) включает/выключает новый дизайн из 12ки:
-	- Включить;
-	- Выключить;
-		- Включить пузыри клавиш;
-		- Выключить пузыри клавиш;
-			- Включить новый вид клавиш;
-			- Выключить новый вид клавиш;
+* Пункт (MAGISK) (NOT MIUI) (10-14.0) - (Force Navigation Switcher) для принудительного переключения навигации на жесты или кнопки после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов или подобного;
+</details>
+
+<details>
+  <summary>UI: StatusBar/QuickSettings</summary>
+
 * Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (System Increase Number Notification Icons) для увеличения количества уведомлений на экране блокировки, количества иконок в строке состояния и статусбаре а так же на AOD:
 	- Количество иконок:
 		- 1;
@@ -2154,45 +2166,51 @@
 		- 8;
 		- 9;
 		- 10;
-* Пункт (MAGISK) (NOT MIUI) (10) - (GPay Power Menu) он же альтернатива меню выключения расположена с низу;
-* Пункт (ALL) (10-14.0) (\\) - (Rounded UI) для скругления системы, лаунчеров и приложений которые подтягивают строки из системы (и это лучше VGM);
-* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Burn In Protection) включает смещение пикселей в статус баре, жестовой зоне/зоне NavBar и AOD (работает только на тех прошивках, в которых это встроено но отключено):
-	- Время смещения (в секундах):
-		- Значение 20;
-		- Значение 40;
-		- Значение 60;
-			- Количество dip смещения по горизонтали:
-				- Значение 4dip;
-				- Значение 6dip;
-				- Значение 8dip;
-					- Количество dip смещения по вертикали:
-						- Значение 4dip;
-						- Значение 6dip;
-						- Значение 8dip;
-							- Количество dip смещения для AOD по горизонтали:
-								- 20dip;
-								- 40dip;
-								- 60dip;
-									- Количество dip смещения для AOD по вертикали:
-										- 20dip;
-										- 40dip;
-										- 60dip;
-* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Notification Side Padding) регулирует расстояние между шторкой и краями экрана/уведомлениями шторки и уведомлений на экране блокировки:
-	- Значение 0dip (как у OneUI);
-	- Значение 5dip;
-	- Значение 10dip;
+* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Status Bar Notification Icon Size) регулирует размер иконок уведомлений в статусбаре/свернутом статусбаре:
+	- Значение 12dip;
+	- Значение 13dip;
+	- Значение 14dip;
 	- Значение 15dip;
-	- Значение 20dip;
-	- Значение 25dip;
-	- Значение 30dip;
-		- Регулирует расстояние между первым уведомлением в QS:
-			- Значение 0dip;
-			- Значение 5dip;
-			- Значение 10dip;
-			- Значение 15dip;
-			- Значение 20dip;
-			- Значение 25dip;
-			- Значение 30dip;
+	- Значение 16dip;
+	- Значение 17dip;
+	- Значение 18dip;
+* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Status Bar Clock Size) регулирует размер часов в статусбаре/свернутом статусбаре:
+	- Значение 10sp;
+	- Значение 11sp;
+	- Значение 12sp;
+	- Значение 13sp;
+	- Значение 14sp;
+	- Значение 15sp;
+	- Значение 16sp;
+	- Значение 17sp;
+	- Значение 18sp;
+	- Значение 19sp;
+	- Значение 20sp;
+* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Status Bar Padding) для увеличения/уменьшения отступов от краев начала статусбара;
+	- Выбрать одно одинаковое значение для обоих сторон;
+	- Выбрать два разных значения для каждой стороны;
+		- Значение 0dip;
+		- Значение 1dip;
+		- Значение 2dip;
+		- Значение 3dip;
+		- Значение 4dip;
+		- Значение 5dip;
+		- Значение 6dip;
+		- Значение 7dip;
+		- Значение 8dip;
+		- Значение 9dip;
+		- Значение 10dip;
+* Пункт (ALL) (NOT MIUI) (12.0-14.0) - (Status Bar Privacy Dot) - можно как полностью отключить точку приватности и освободить пространство справа, так и выбрать оптимальный вариант где и точка будет и места больше:
+	- Disable;
+	- Optimized;
+* Пункт (ALL) (NOT MIUI) (10-14.0) - (Status Bar Notification Icon Dot Size) - убирает точку уведомлений или делает её меньше (не работает как DotKiller):
+	- 0dip;
+	- 1dip;
+	- 2dip;
+	- 3dip;
+	- 4dip;
+	- 5dip;
+	- 6dip;
 * Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Status Bar Icon Space) регулирует расстояние между иконками уведомлений в статусбаре/свернутом статусбаре:
 	- Регулировка для левой стороны:
 		- Значение 14dip;
@@ -2218,65 +2236,24 @@
 						- Значение 2dip;
 						- Значение 3dip;
 						- Значение 4dip;
-* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Status Bar Notification Icon Size) регулирует размер иконок уведомлений в статусбаре/свернутом статусбаре:
-	- Значение 12dip;
-	- Значение 13dip;
-	- Значение 14dip;
+* Пункт (MAGISK) (NOT MIUI) (12.0-14.0) - (Wi-Fi And Mobile Data QS Old Style) изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
+* Пункт (MAGISK) (NOT MIUI) (10-14.0) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
+* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Notification Side Padding) регулирует расстояние между шторкой и краями экрана/уведомлениями шторки и уведомлений на экране блокировки:
+	- Значение 0dip (как у OneUI);
+	- Значение 5dip;
+	- Значение 10dip;
 	- Значение 15dip;
-	- Значение 16dip;
-	- Значение 17dip;
-	- Значение 18dip;	
-* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Status Bar Clock Size) регулирует размер часов в статусбаре/свернутом статусбаре:
-	- Значение 10sp;
-	- Значение 11sp;
-	- Значение 12sp;
-	- Значение 13sp;
-	- Значение 14sp;
-	- Значение 15sp;
-	- Значение 16sp;
-	- Значение 17sp;
-	- Значение 18sp;
-	- Значение 19sp;
-	- Значение 20sp;
-* Пункт (NOT MIUI) - (Multi Users Switcher) включает или отключает пункт пользователей в настройках и включает или отключает Гостя и других пользователей:
-	- Включить;
-	- Отключить;
-* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Status Bar Padding) для увеличения/уменьшения отступов от краев начала статусбара;
-	- Выбрать одно одинаковое значение для обоих сторон;
-	- Выбрать два разных значения для каждой стороны;
-		- Значение 0dip;
-		- Значение 1dip;
-		- Значение 2dip;
-		- Значение 3dip;
-		- Значение 4dip;
-		- Значение 5dip;
-		- Значение 6dip;
-		- Значение 7dip;
-		- Значение 8dip;
-		- Значение 9dip;
-		- Значение 10dip;
-* Пункт (MAGISK) (NOT MIUI) (9-10) (\\) - (QS Content Padding) для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
-	- Значение 0;
-	- Значение 5;
-	- Значение 10;
-	- Значение 15;
-	- Значение 20;
-	- Значение 25;
-	- Значение 30;
-	- Значение 35;
-	- Значение 40;
-* Пункт (MAGISK) (NOT MIUI) (8.1-11) (\\) - (SUI Rounded Size) (не путать с RoundedUI) для скругления экрана по краям если доступно прошивкой;
-	- Значение 10;
-	- Значение 20;
-	- Значение 30; (12+)
-	- Значение 33; (<12)
-	- Значение 40;
-	- Значение 50;
-	- Значение 60;
-	- Значение 70;
-	- Значение 80;
-	- Значение 90;
-	- Значение 100;
+	- Значение 20dip;
+	- Значение 25dip;
+	- Значение 30dip;
+		- Регулирует расстояние между первым уведомлением в QS:
+			- Значение 0dip;
+			- Значение 5dip;
+			- Значение 10dip;
+			- Значение 15dip;
+			- Значение 20dip;
+			- Значение 25dip;
+			- Значение 30dip;
 * Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (QS Count Icon & Rows) даже если ваша прошивка с кастомизацией и выставлено например 6 иконок но в не раскрытой видно всего 5 - то этот модуль для вас:
 	- Для 12ки+:
 		- Общее количество для портрета:
@@ -2322,25 +2299,89 @@
 								- Выбор количества строк в портрете:
 									- 1;
 									- 2;
-									- 3;		
+									- 3;
 										- Выбор количества строк в ландшафте:
 											- 1;
 											- 2;
 											- 3;
-* Пункт (ALL) (NOT MIUI) (12.0-14.0) - (Status Bar Privacy Dot) - можно как полностью отключить точку приватности и освободить пространство справа, так и выбрать оптимальный вариант где и точка будет и места больше:
-	- Disable;
-	- Optimized;
-* Пункт (ALL) (NOT MIUI) (10-14.0) - (Status Bar Notification Icon Dot Size) - убирает точку уведомлений или делает её меньше (не работает как DotKiller):
-	- 0dip;
-	- 1dip;
-	- 2dip;
-	- 3dip;
-	- 4dip;
-	- 5dip;
-	- 6dip;
-* Пункт (ALL) (11-14.0) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает или отключает эффект размытия в шторке/недавних и в некоторых других местах системы:
+* Пункт (MAGISK) (NOT MIUI) (12.1-14.0) - (QS Split Notification) делает уведомления в ландшафте как на планшетах:
 	- Включить;
-	- Отключить;
+	- Выключить;
+* Пункт (MAGISK) (NOT MIUI) (9-10) (\\) - (QS Content Padding) для увеличения/уменьшения отступов от краев в панели быстрых настроек если доступно прошивкой;
+	- Значение 0;
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+</details>
+
+<details>
+  <summary>UI: LockScreen/AlwaysOnDisplay</summary>
+
+* Пункт (MAGISK) (NOT MIUI) (13.0) - (QR Code Scanner On Lock Screen) включает или выключает ярлык на экране блокировке:
+	- Включить;
+	- Выключить;
+* Пункт (MAGISK) (NOT MIUI) (13.0-14.0) - (Lock Screen User Switcher) включает или отключает выбор пользователей на экране блокировки:
+	- Включить;
+	- Выключить;
+* Пункт (MAGISK) (NOT MIUI) (8.1-14.0) - (AOD Switcher) если вы вдруг захотели AOD на IPS или ваш майнтейнер долбаёб и забыл его включить (офф кастомы такие да);
+	- Включить;
+	- Выключить;
+* Пункт (MAGISK) (NOT MIUI) (8.1-14.0) - (AOD State Doze) включает или отключает выбор пользователей на экране блокировки:
+	- Включить: AOD темнеет через пару секунд, датчик приближения выключает экран, автояркость не работает и яркость AOD не зависит от яркости телефона;
+	- Выключить: AOD не темнеет через пару секунд, датчик приближения не выключает экран, автояркость не работает а яркость AOD зависит от яркости телефона;
+</details>
+
+<details>
+  <summary>UI: Gboard/GboardThemes</summary>
+
+* Пункт (ALL) (10-14.0) (\\) - (GBoard NavBar Space) Установка патча на увеличение отступов при использовании клавиатуры:
+	- Значение 0 (Сток);
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+* Пункт (ALL) (10-14.0) (\\) - (GBoard Rounded Corners) Установка патча на увеличение скругления нижних клавиш для GBoard (работает только на темах с контурами):
+	- Значение 0 (Сток);
+	- Значение 5;
+	- Значение 10;
+	- Значение 15;
+	- Значение 20;
+	- Значение 25;
+	- Значение 30;
+	- Значение 35;
+	- Значение 40;
+	- Значение 45;
+	- Значение 50;
+* Пункт (ALL) - (GBoard Themes) Установка Gboard Themes с разными цветами и пару вариантам ипо типу 3D и MD2:
+	- Скругление всего в клавиатуре:
+		- Значение 0;
+		- Значение 5;
+		- Значение 10;
+		- Значение 15;
+		- Значение 20;
+		- Значение 25;
+		- Значение 30;
+* Пункт (ALL) (LEGACY) - (GBoard Silk Theme Switcher) включает/выключает новый дизайн из 12ки:
+	- Включить;
+	- Выключить;
+		- Включить пузыри клавиш;
+		- Выключить пузыри клавиш;
+			- Включить новый вид клавиш;
+			- Выключить новый вид клавиш;
+</details>
+
+<details>
+  <summary>UI: BootAnimation/MediaUISounds/Emoji</summary>
+
 * Пункт (ALL) (NOT MIUI) (\\) - (Boot Animation) смена анимации при запуске телефона на одну из:
 	- Pixel:
 		- Black;
@@ -2353,58 +2394,102 @@
 	- Spark;
 	- Awalen;
 	- VoidUI;
-			- FPS:
-				- 60;
-				- 30;
-* Пункт (ALL) - (IOS EMOJI) установка IOS EMOJI (ну логично блять);
+		- FPS:
+			- 60;
+			- 30;
 * Пункт (ALL) (\\) - (Media UI Sounds) установка звуков из разных оболочек и прошивок:
 	- Masik (Miui 12, Android 10):
 		- Альтернативный звук разблокировки из Masik;
 	- OnePlus:
 		- OxygenOS 11;
 		- OxygenOS 12;
+			- Три альтернативных звука Touch;
 	- Pixel (PizdecOS);
 	- Samsung (OneUI 3.0/4.1);
 	- Oppo (ColorOS 7);
 	- Spark (12.6);
 	- Arcana (6.0);
 	- AlphaDroid (1.7);
-* Пункт (MAGISK) (NOT MIUI) (10-14.0) - (Force Disable Notification Icons) отключение иконок уведомлений в строке;
-* Пункт (MAGISK) (NOT MIUI) (12.0-14.0) - (Wi-Fi And Mobile Data QS Old Style) изменение вида переключателя Wi-Fi и Мобильных данных между новым и старым;
-* Пункт (MAGISK) (NOT MIUI) (13.0) - (QR Code Scanner On Lock Screen) включает или выключает ярлык на экране блокировке:
-	- Включить;
-	- Выключить;
-* Пункт (MAGISK) (NOT MIUI) (12.1-14.0) - (QS Split Notification) делает уведомления в ландшафте как на планшетах:
-	- Включить;
-	- Выключить;
-* Пункт (MAGISK) (NOT MIUI) (13.0-14.0) - (Lock Screen User Switcher) включает или отключает выбор пользователей на экране блокировки:
-	- Включить;
-	- Выключить;
-* Пункт (MAGISK) (NOT MIUI) (8.1-14.0) - (AOD State Doze) включает или отключает выбор пользователей на экране блокировки:
-	- Enable: AOD темнеет через пару секунд, датчик приближения выключает экран, автояркость не работает и яркость AOD не зависит от яркости телефона;
-	- Disable: AOD не темнеет через пару секунд, датчик приближения не выключает экран, автояркость не работает а яркость AOD зависит от яркости телефона;
+	- Rising (2.0);
+	- IOS (16.5);
+	- Hyper (1.0);
+* Пункт (ALL) - (IOS EMOJI) установка IOS EMOJI (ну логично блять);
+</details>
 
-<h3 align=center>Launchers: Shady/Lawnchair/Sushi/Ortus</h3>
+<details>
+  <summary>UI: RoundedUI/BIP/BackgroundBlur/Other</summary>
 
-* Пункт (MAGISK) (NOT MIUI) (10-12.1/14.0 QPR1) (\\) - (Systemless Launcher) установка одного из лаунчеров:
+* Пункт (ALL) (10-14.0) (\\) - (Rounded UI) для скругления системы, лаунчеров и приложений которые подтягивают строки из системы (и это лучше VGM);
+* Пункт (ALL) (NOT MIUI) (10-14.0) (\\) - (Burn In Protection) включает смещение пикселей в статус баре, жестовой зоне/зоне NavBar и AOD (работает только на тех прошивках, в которых это встроено но отключено):
+	- Время смещения (в секундах):
+		- Значение 20;
+		- Значение 40;
+		- Значение 60;
+			- Количество dip смещения по горизонтали:
+				- Значение 4dip;
+				- Значение 6dip;
+				- Значение 8dip;
+					- Количество dip смещения по вертикали:
+						- Значение 4dip;
+						- Значение 6dip;
+						- Значение 8dip;
+							- Количество dip смещения для AOD по горизонтали:
+								- 20dip;
+								- 40dip;
+								- 60dip;
+									- Количество dip смещения для AOD по вертикали:
+										- 20dip;
+										- 40dip;
+										- 60dip;
+* Пункт (ALL) (11-14.0) <a href="https://source.android.com/devices/tech/display/window-blurs">Source Android</a> - (Background Blur) - включает или отключает эффект размытия в шторке/недавних и в некоторых других местах системы:
+	- Включить;
+	- Отключить;
+* Пункт (MAGISK) (NOT MIUI) (10) - (GPay Power Menu) он же альтернатива меню выключения расположена с низу;
+* Пункт (MAGISK) (NOT MIUI) (8.1-11) (LEGACY) (\\) - (SUI Rounded Size) (не путать с RoundedUI) для скругления экрана по краям если доступно прошивкой;
+	- Значение 10;
+	- Значение 20;
+	- Значение 30 (12+);
+	- Значение 33 (<12);
+	- Значение 40;
+	- Значение 50;
+	- Значение 60;
+	- Значение 70;
+	- Значение 80;
+	- Значение 90;
+	- Значение 100;
+* Пункт (ALL) (NOT MIUI) (8.1-14.0) - (Force Dark Mode) включение/отключение темного режима во всех приложениях в настройках разработчика после перезагрузки:
+	- Включить;
+	- Отключить;
+* Пункт (MAGISK) (\\) - (Animation Scale) для принудительного выставления анимации системы:
+	- Значение 0.0;
+	- Значение 0.1;
+	- Значение 0.2;
+	- Значение 0.3;
+	- Значение 0.4;
+	- Значение 0.5;
+	- Значение 0.6;
+	- Значение 0.7;
+	- Значение 0.8;
+	- Значение 0.9;
+	- Значение 1.0 (В основном сток);
+</details>
+
+<details>
+  <summary>Launchers: Shady/Lawnchair/Sushi/Ortus</summary>
+
+* Пункт (MAGISK) (NOT MIUI) (10-12.1/14.0) (\\) - (Systemless Launcher) установка одного из лаунчеров:
 	- Установка Shady Launcher (Q/R) <a href="https://github.com/Havoc-OS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://www.pling.com/p/1376074/#files-panel">PLING</a> || <a href="https://t.me/shady_mods_releases">TG</a>;
 	- Установка Lawnchair Launcher (Q/SL/T/U) <a href="https://github.com/Goooler/LawnchairRelease/releases/">GITHUB</a>;
-	- Установка Sushi Launcher (SL) <a href="https://github.com/ricedroidOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
-	- Установка Ortus Launcher (U) <a href="https://github.com/RisingTechOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
+	- Установка Sushi Launcher (SL) (QPR2) <a href="https://github.com/ricedroidOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
+	- Установка Ortus Launcher (U) (QPR1) <a href="https://github.com/RisingTechOSS/android_packages_apps_Launcher3">GITHUB</a> || <a href="https://t.me/riceDroidNews">TG</a>;
+</details>
 
-<h3 align=center>Install App From /sdcard/Application</h3>
+<details>
+  <summary>Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS</summary>
 
-* Пункт (ALL) (\\) - (Install App From /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть apk файлы (apks не поддерживает);
-	- Установка в Data;
-	- Установка в System;
-		- С подтверждением для каждого;
-		- Без подтверждением;
-	
-<h3 align=center>Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF</h3>
-
-* Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6, v2.7.2.1 и v0.3.0 в зависимости от версии Android;
+* Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6, v2.7.2.1 и v0.6.2 в зависимости от версии Android;
 * Пункт (ALL) - (DDC & Kernel For ViperFX) ядра и конвольтеры для ViperFX;
-* Пункт (MAGISK) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet:
+* Пункт (MAGISK) (SNAP/SM/SDM) (|\\) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet:
 	- Use Virtualizer;
 	- Use Volume Leveler Boost;
 	- Use Deeper Bass GEQ Frequency;
@@ -2412,16 +2497,37 @@
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
 	- PATCH_MEDIA_CODECS;
-
 * Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общее качество звука;
 * Пункт (ALL) - (System Increase Bitrate) патчит все файлы media_profiles*.xml в /vendor - улучшает качество записи аудио во многих местах;
 * Пункт (MAGISK) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - (Audio Modification Library) исправляет конфликты вывода аудиомодов между друг другом для их нормальной работы вместе либо фиксит вывод музыки из приложений при установленных аудиомодах;
 * Пункт (MAGISK) - (Audio Library Crackling Fix) для исправления потрескивания аудиобиблиотеки для аудиомодулей, стоковых эквалайзеров или библиотек с проблемами и потрескиванием системного звука/уведомлений;
+* Пункт (ALL) (\\) - (Volume Steps) для изменения шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов и громкость будильника:
+	- Редактировать доступные значения вместе;
+	- Редактировать каждое значение отдельно;
+		- Значение 10;
+		- Значение 15;
+		- Значение 20;
+		- Значение 25;
+		- Значение 30;
+		- Значение 35;
+		- Значение 40;
+		- Значение 45;
+		- Значение 50;
+</details>
 
-<h3 align=center>Removal: RSL/RSO/RSTA/RWFSB</h3>
+<details>
+  <summary>Install App From /sdcard/Application</summary>
+  
+* Пункт (ALL) (\\) - (Install App From /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть apk файлы (apks не поддерживает);
+	- (L) Установка в Data;
+	- Установка в System;
+		- С подтверждением для каждого;
+		- Без подтверждением;
+</details>
 
-* Пункт (RECOVERY) - (Reset Screen Lock) удаляет Пароль/Граф.Ключ/Пин-Код/и тд. (прошивать если пишет неверный пароль и тд.);
-* Пункт (RECOVERY) - (Remove All Swift Installer Overlays) удаление слоев Swift Installer, его кэша и модуля Magisk (APK не удаляет, полезно если у вас с ним проблемы/bootloop/softloop и тд.);
+<details>
+  <summary>Remove/Replace/Restore Mode</summary>
+
 * Пункт (ALL) (\\) - (Remove/Replace/Restore Mode) (список приложений будет пополнятся). Удаляйте/Затирайте что знаете, я разжёвывать не буду - <a href="https://4pda.to/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску (4PDA)</a>:
 	- Если находит /system/app/Replace.txt:
 	- Восстановить apk;
@@ -2462,6 +2568,10 @@
 	- AICorePrebuilt
 	- ANGLE
 	- APlayer
+	- ARCore
+	- ARDrawing
+	- AREmoji
+	- ARZone
 	- AbleMusic
 	- AboutBliss
 	- Abstruct
@@ -2481,6 +2591,7 @@
 	- AndroidForWork
 	- AudioFX
 	- Auxio
+	- AvatarEmojiSticker_Palette
 	- AwakenWallpaperStub
 	- Backgrounds
 	- BasicDreams
@@ -2528,9 +2639,6 @@
 	- DeskClockGoogle
 	- DesktopMode
 	- DeviceIntelligenceNetworkPrebuilt
-	- DevicePersonalizationPrebuiltPixel2020
-	- DevicePersonalizationPrebuiltPixel2021
-	- DevicePersonalizationPrebuiltPixel4
 	- DevicePolicyPrebuilt
 	- DiagMonAgent
 	- DiagnosticsToolPrebuilt
@@ -2566,6 +2674,7 @@
 	- Exchange2
 	- FBAppManager_NS
 	- FBInstaller_NS
+	- FBServices
 	- FDroid
 	- FDroidPrivilegedExtension
 	- FM
@@ -2705,7 +2814,10 @@
 	- MusicPlayerGO
 	- MyVerizonServices
 	- NeMate
+	- Netflix
 	- Netflix_activation
+	- Netflix_activationCommon
+	- Netflix_stub
 	- NewsWeather
 	- Newsstand
 	- NewsstandStub
@@ -2732,6 +2844,8 @@
 	- OemDmTrigger
 	- OmniJaws
 	- OmniSwitch
+	- OneDrive
+	- OneDrive_Samsung_v3
 	- OneNote
 	- OneOSLogcat
 	- OneOSSTATS
@@ -2832,10 +2946,12 @@
 	- SprintHM
 	- StagWalls
 	- StatusBarLyricExt
+	- StickerFaceARAvatar
 	- Street
 	- Superiorwalls
 	- SwitchAccessPrebuilt
 	- Talk
+	- TalkbackSE
 	- TeamOctavi
 	- Terminal
 	- TipsPrebuilt
@@ -2924,6 +3040,10 @@
 
 * BuiltInPrintService
 * DeviceAsWebcam
+* DevicePersonalizationPrebuiltPixel2020
+* DevicePersonalizationPrebuiltPixel2021
+* DevicePersonalizationPrebuiltPixel2022
+* DevicePersonalizationPrebuiltPixel4
 * DocumentsUI
 * DocumentsUIGoogle
 * EuiccGoogle
@@ -2996,7 +3116,6 @@
 * TWLauncherESS
 * Trebuchet
 * TrebuchetQuickStep
-
 </details>
 
 <details>
@@ -3021,23 +3140,21 @@
 * LegacyCamera
 * Snap
 * madCamera
-
+</details>
 </details>
 
-* Пункт (RECOVERY) - (Found FILERMLIST.sh Remove All Files) удаление любых файлов/папок через обнаружение FILERMLIST.sh в /sdcard в формате: product/priv-app/name и/или product/priv-app/name/name.apk и/или fonts/name.ttf;
-* Пункт (RECOVERY) - (Remove Wallpaper) удаление обоев (Fix Softloop (кто сталкивался - тот знает зачем он)) - появляется только если у вас стоят обои картинкой;
-* Пункт (RECOVERY) - (Remove runtime-permissions.xml) удаление runtime-permissions.xml в /data/misc_de/0/apexdata/com.android.permission - не обращайте на него внимание, это для моих постоянных softlooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
-* Пункт (RECOVERY) - (Remove Apex Active) удаление файлов из /data/apex/active - не обращайте на него внимание, это для моих постоянных logolooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
-
-<h3 align=center>AdBlock: Hosts Files</h3>
+<details>
+  <summary>AdBlock: Hosts Files</summary>
 
 * Пункт (ALL) (\\) - (AdBlock: Hosts Files) установка одного из четырех Hosts файлов:
 	- Пустой Hosts (Отключение блокировки);
 	- AdAway Hosts (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts Unified От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
 	- Energized Hosts (400000+/800000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Basic или Unified;
+</details>
 
-<h3 align=center>Net: GPS/WIFI/TTL/DNS/APAUSBTF</h3>
+<details>
+  <summary>Net: GPS/WIFI/TTL/DNS/APAUSBTF</summary>
 
 * Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (GPS Patcher) регенерирует gps.conf добавляет правильные пути сертификатов, отключает логи, улучшает связь GPS (нет), выставляет универсальный pool.ntp.org и прочие улучшения;
 * Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (Wifi Patcher) регенерирует WCNSS_qcom_cfg.ini для увеличения пропускной способности Wifi, отключения ненужных логов и прочих улучшений (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
@@ -3047,9 +3164,11 @@
 	- По отдельности:
 		- Google DNS;
 		- CloudFlare DNS;
-* Пункт (ALL) - (AP And USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для MI8;
+* Пункт (ALL) (LEGACY) - (AP And USB Tethering Fix) фикс отвалов всего из за раздачи интернета по USB или точке доступа для MI8;
+</details>
 
-<h3 align=center>Utilities: BB/SELS/CC/MMFR/Detach/PIF/PCS</h3>
+<details>
+  <summary>Utilities: BB/SELS/CC/MMFR/Detach/PIF/PCS</summary>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin (использование: su -c busybox в терминале (BOOTMODE));
 * Пункт (MAGISK) - (SELinux Switcher) при переключении в Permissive разрешает исполнения многих вещей в системе (для определенных действий):
@@ -3079,10 +3198,12 @@
 	- r) Reset All;
 	- s) Service On Boot;
 	- q) Quit;
+</details>
 
-<h3 align=center>Other: FA/LED/FSFM/PSS/UAA/SBU/SHS</h3>
+<details>
+  <summary>Other: FA/LED/FSFM/PSS/UAA/SBU/SHS</summary>
 
-* Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок/телефонов у которых есть uinput-fpc/gf/goodix.kl файлы с выборами:
+* Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок у которых есть uinput-fpc/gf/goodix.kl файлы с выборами:
 	- Кнопка Включения;
 	- Включение экрана;
 	- Перейти на главный экран;
@@ -3101,7 +3222,7 @@
 	- Закончить звонок;
 	- Запустить/включить/выключить музыку/закончить звонок;
 	- Запуск Gmail/Mail по умолчанию;
-* Пункт (MAGISK) - (LED Light Off) полное отключения индикатора заряда/уведомлений;
+* Пункт (MAGISK) (LEGACY) - (LED Light Off) полное отключения индикатора заряда/уведомлений;
 * Пункт (MAGISK) (\\) - (LED Light Animation) при загрузке телефона будет мелькать светодиод, хард-клавиатура, фонарик (в зависимости какие у вас - поддерживаются красный, зеленый, синий и белый. Есть хардклавиатура или нет. В том разделе файл фонарика или нет):
 	- Тестировать анимации (после этого выбора на каждой анимации будет выбор, выбрать её или нет. После будет тест её и после теста дан выбор: шить или показать следующие анимации и так до конца);
 	- Прошивка без тестирования анимаций (если вы знаете что вам уже нравится);
@@ -3112,19 +3233,32 @@
 		- Вспышка и хардклавишы;
 		- Светодиод и хардклавишы;
 		- Светодиод, вспышка и хардклавишы.
-* Пункт (ONLY MAGISK IN RECOVERY) (MIUI) - (Fix Softloop For Miui ) фикс бутлупа на Miui при DPI 800+ (кто сталкивался - тот знает зачем он);
-* Пункт (RECOVERY) - (Unfreeze All Applications) разморозка всех замороженных приложений (если вы заморозили что-то через TB/тп. после чего bootloop/отвал);
+* Пункт (ALL) (LEGACY) - (Proximity Sensor Switcher) включение/отключение датчика приближения если у вас он кривой (Pcock), наклеено защитное стекло которое его закрывает и срабатывает всегда словно его закрывают рукой или если он был отключен сборщиком изначально:
+	- Включить;
+	- Отключить;
+* Пункт (ONLY MAGISK IN RECOVERY) (MIUI) (LEGACY) - (Fix Softloop For Miui ) фикс бутлупа на Miui при DPI 800+ (кто сталкивался - тот знает зачем он);
+* Пункт (ONLY MAGISK IN RECOVERY) - (Unfreeze All Applications) разморозка всех замороженных приложений (если вы заморозили что-то после чего bootloop/отвал);
 * Пункт (ALL) - (Show Battery Status) проверка батареи (сколько циклов заряда, на сколько износилась и тд) - работает как есть (если аккумулятор извлекался будет показывать не верные результаты так что тестер в руки);
 * Пункт (ALL) (UFS & EMMC) - (Show Health Storage) показывает примерное состояние памяти АнаЛог SMART и бренд памяти UFS/EMMC/DDR;
+* Пункт (RECOVERY) - (Reset Screen Lock) удаляет Пароль/Граф.Ключ/Пин-Код/и тд. (прошивать если пишет неверный пароль и тд.);
+* Пункт (RECOVERY) (LEGACY) (8.1-11) - (Remove All Swift Installer Overlays) удаление слоев Swift Installer, его кэша и модуля Magisk (APK не удаляет, полезно если у вас с ним проблемы/bootloop/softloop и тд.);
+* Пункт (RECOVERY) (LEGACY) - (FILERMLIST.sh For Remove Files) удаление любых файлов/папок через обнаружение FILERMLIST.sh в /sdcard в формате: product/priv-app/name и/или product/priv-app/name/name.apk и/или fonts/name.ttf;
+* Пункт (RECOVERY) (LEGACY) - (Remove Wallpaper) удаление обоев (Fix Softloop (кто сталкивался - тот знает зачем он)) - появляется только если у вас стоят обои картинкой;
+* Пункт (RECOVERY) (LEGACY) - (Remove runtime-permissions.xml) удаление runtime-permissions.xml в /data/misc_de/0/apexdata/com.android.permission - не обращайте на него внимание, это для моих постоянных softlooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
+* Пункт (RECOVERY) (LEGACY) - (Remove Apex Active) удаление файлов из /data/apex/active - не обращайте на него внимание, это для моих постоянных logolooпов (делал для себя и тех, у кого будет то, о чем знают лишь те, кто знает зачем это надо);
+</details>
 
-<h3 align=center>Tweaks: FGS/BP/KL/UGMSD/USGP/VS</h3>
+<details>
+  <summary>Tweaks: FGS/EHAP/BP/KL/4XMSAA/HWO/UGMSD/USGP</summary>
 
 * Пункт (MAGISK/MAGISK MANAGER) <a href="https://4pda.to/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - (Force Google Sync) принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
 	- Если установка через Recovery, предлагает установку скрипта синхронизации после перезагрузки;
-* Пункт (MAGISK) (NOT MIUI) (10-14.0) - (Force Navigation Switcher) для принудительного переключения навигации на жесты или кнопки после загрузки если отвалился/исчез пункт самих настроек жестов после установки другого лаунчера/хайда самих жестов или подобного;
 * Пункт (MAGISK) (11-14.0) - (Enabling Hidden Api Policy) снимает ограничения Google на некоторые классы приложений - нужен для некоторых аудиомодулей и не только;
 * Пункт (MAGISK) - (Force Install Apps From Unknown Sources) для принудительного включения пункта в разделе безопасности на установку из неизвестных источников;
-* Пункт (ALL) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости и Force Fake Encryption:
+* Пункт (NOT MIUI) - (Multi Users Switcher) включает или отключает пункт пользователей в настройках и включает или отключает Гостя и других пользователей:
+	- Включить;
+	- Отключить;
+* Пункт (ALL) (|\\) - (Build Prop Tweaks) - видео в 4К для YouTube, фикс AOD на кастомах (говорят на 12ках и некоторых анимаций), выключение предупреждения об высокой громкости и Force Fake Encryption:
 	- Включить Force Fake Encryption - может сломать прошивку или делать двойную загрузку телефона;
 * Пункт (ALL) (|\\) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=105651495">4PDA</a> - (Kill Logger) для отключения и убивания многих процессов/бинарников сбора логов:
 	- Оставить возможность снимать logcat или нет <a href="https://developer.android.com/studio/command-line/logcat">Developer Android</a>;
@@ -3134,7 +3268,7 @@
 * Пункт (MAGISK) - (Force HW Overlays Switcher) для включения/отключения наложений после перезагрузки в настройках разработчика:
 	- Включить;
 	- Отключить;
-* Пункт (MAGISK) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...):
+* Пункт (MAGISK) (//) - (Force DEV & ADB) для включения пункта разработчика и ADB со всеми пунктами даже до первой загрузки (блин небезопасно...):
 	- Включить ADB WIFI или нет;
 	- Выключить ro.secure или нет;
 	- Включить ro.debuggable или нет;
@@ -3143,50 +3277,28 @@
 	- Tethering;
 	- MIDI;
 	- PTP;
-* Пункт (ALL) (NOT MIUI) (MI8 & POCOF1) - (Face UnLock IR Switcher) включение/отключение разблокировки по IR камере если находит нужные файлы:
-	- Включить;
-	- Отключить;
-* Пункт (ALL) (NOT MIUI) (8.1-14.0) - (Force Dark Mode) включение/отключение темного режима во всех приложениях в настройках разработчика после перезагрузки:
-	- Включить;
-	- Отключить;
-* Пункт (ALL) - (Proximity Sensor Switcher) включение/отключение датчика приближения если у вас он кривой (Pcock), наклеено защитное стекло которое его закрывает и срабатывает всегда словно его закрывают рукой или если он был отключен сборщиком изначально:
+* Пункт (ALL) (NOT MIUI) (MI 8 & POCO F1) - (Face UnLock IR Switcher) включение/отключение разблокировки по IR камере если находит нужные файлы:
 	- Включить;
 	- Отключить;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
-* Пункт (MAGISK) - (Force Idle) для принудительного включения ожидания/простоя;
 * Пункт (MAGISK) (6.0.1-14.0) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - (Universal GMS Doze) для оптимизирования сервисов Google;
 * Пункт (MAGISK) (ZYGISK) (8.1-14.0) <a href="https://gitlab.com/cuynu/gphotos-unlimited-zygisk">GITHUB</a> - (Zygisk Pixelify Photos) бесконечное хранилище для GPhoto;
-* Пункт (MAGISK) (\\) - (Animation Scale) для принудительного выставления анимации системы:
-	- Значение 0.0;
-	- Значение 0.1;
-	- Значение 0.2;
-	- Значение 0.3;
-	- Значение 0.4;
-	- Значение 0.5;
-	- Значение 0.6;
-	- Значение 0.7;
-	- Значение 0.8;
-	- Значение 0.9;
-	- Значение 1.0 (В основном сток);
 * Пункт (ALL) (10-14.0) - (GPU Rendering) для принудительного выставления если нет переключателя в настройках для разработчика:
 	- OpenGL (По умолчанию)
-	- OpenGL Skia (более быстрей чем OpenGL)
+	- OpenGL Skia (более быстрый чем OpenGL)
 	- OpenGL Skia Vulkan (самый быстрый вариант - нужен Linux Kernel 5.10+);
-* Пункт (ALL) (\\) (//) - (Volume Steps) для изменения шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов и громкость будильника:
-	- Редактировать доступные значения вместе;
-	- Редактировать каждое значение отдельно;
-		- Значение 10;
-		- Значение 15;
-		- Значение 20;
-		- Значение 25;
-		- Значение 30;
-		- Значение 35;
-		- Значение 40;
-		- Значение 45;
-		- Значение 50;
+* Пункт (ALL) (NOT MIUI) (8.1-14.0) (Shutdown Battery Temperature) - если у вас ядерный реактор от POCO или Pixel:
+	- 50;
+	- 55;
+	- 60;
+	- 65;
+	- 70;
+	- 75;
+	- 80;
+* Пункт (MAGISK) (LEGACY) (//) - (Force Idle) для принудительного включения ожидания/простоя;
 </details>
 
-## Полезная информация/Доп. Информация
+## Дополнительная Информация
 
 <h3 align=center>Что на чем и где было протестировано</h3>
 
@@ -3201,14 +3313,8 @@
 	- Патчинг/Репатчинг/Регенерация сток файлов;
 	- Отключение модуля срабатывает как удаление до его включения (логично);
 	- Совместный репатчинг аудиомодов для предотвращения конфликтов;
-	- Логичные конфликты между собой;
+	- Логичные конфликты между патчами (в основном в пределах AIO);
 	- И дохуя всего остального чего нету в сток модулях и не будет.
-* Почему сток патчи говно - вы прошили прошивку и MAGISK начисто и НЕ СМОЖЕТЕ прошить какой-либо модуль пока не загрузитесь в систему либо как в случае с NLSound всё полностью сломано;
-	- А этот патч это позволяет (кроме некоторых патчей работающих из BOOTMODE);
-	- Да и уже почти все сток патчи НЕВОЗМОЖНО поставить через RECOVERY из за того что разрабам просто лень делать многие моменты;
-	- Я же стараюсь делать что бы всё было возможно и работало как с MAGISK так и без него параллельно улучшая что реализовано криво теми кто делал модули;
-	- Так же многие модули полностью сломаны и конфликтуют между собою и я это "исправляю";
-	- При отключении многих модулей будет отвал пизды (AML момент) либо ничего не произойдет что не логично а тут это реализовано.
 * Патчи были перенесены и улучшены/переделаны в модули и наоборот со многими вариантами и альтернативами которые тоже будут улучшатся/добавляться.
 * В дальнейшем будут добавляться множество новых выборов/методов/фиксов и полезных патчей а также исправление найденных ошибок (нет).
 * Я делал патчи для себя, и выложил для пользователей которым это может будет полезно.
@@ -3216,18 +3322,15 @@
 * Патчи будут добавляться/улучшаться по мере их нахождения/тестирования/времени и желания.
 * Если есть проблемы(желательно с логами если были ошибки или что-то не сработало как надо)/пожелания/предложения - писать в <a href="https://t.me/AIOProject_Chat">TG Chat</a> (не надо).
 
-<h3 align=center>Особые обозначения и переменные в этих патчах и файле PATCHMODE</h3>
+<h3 align=center>Особые обозначения</h3>
 
-* (М) и/или (MM) - Magisk/Manager/Modules.
-* (R) - Recommended/Рекомендуется к установке/выбору.
-* Надпись возле названий модуля и версии означают: [V] - установлен или [X] - не установлен.
-* Символ (L) будет отображаться и означать что патч старый/не актуальней но иногда может будет работать.
-* PATCHMODE.conf это - файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
-	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
-	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
-	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
-	- ENDMODE: Добавляет выбор в самом конце патча который позволяет вернутся в начало патча без перевыбора если что-то пропустили - По умолчанию true.
-	- MMUPDC: Добавляет выбор проверку версий MAGISK модулей между патчем и установленными - По умолчанию true.
+* (М) - Установка как MAGISK модуль.
+* (S) - Установка как не MAGISK модуль;
+* (NOT MIUI) - логично не для самой высерной оболочки в истории.
+* (R) - означает Recommended/Рекомендуется к установке/выбору.
+* (L) - означает что патч старый/не актуальней но иногда может будет работать.
+* (I) - Install/Installing для сокращения и маленьких экранов/RECOVERY.
+* Надпись возле подтверждения установки модуля означают: [V] - установлен; [X] - не установлен; [R] - модуль ждет удаления; [D] - модуль ждет отключения/отключен; [U] - модуль обновлен.
 * Вы всегда можете перейти к концу патча коснувшись двумя пальцами по экрану (тест);
 * All - Установка патчей из под MM или RECOVERY и/или как модуль MAGISK так и нет.
 * (\\) - Означает что в этом пункте есть возможность выхода из подпунктов к следующему выбору.
@@ -3235,3 +3338,11 @@
 * (|) - Означает что следующий выбор будет в этом подпункте пункта.
 * (/) - Означает что следующий выбор будет последним в этом подпункте пункта с возможность выхода из него и ничего не прошивая.
 * (//) - Если не выбирать этот пункт, будет выход/завершение работы патча.
+
+<h3 align=center>PATCHMODE.conf</h3>
+* PATCHMODE.conf это - файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
+	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
+	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
+	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
+	- ENDMODE: Добавляет выбор в самом конце патча который позволяет вернутся в начало патча без перевыбора если что-то пропустили - По умолчанию true.
+	- MMUPDC: Добавляет выбор проверку версий MAGISK модулей между патчем и установленными - По умолчанию true.
