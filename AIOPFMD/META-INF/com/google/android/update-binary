@@ -1,8 +1,8 @@
 #!/sbin/sh
 
 { #Default Var
-set -x
-VCAIOPFMD="110"; VAIOPFMD="31.03.24 ($VCAIOPFMD)"
+set -x && exec 2>/sdcard/AIO-$( date +"%d-%H:%M:%S" ).log
+VCAIOPFMD="111"; VAIOPFMD="20.04.24 ($VCAIOPFMD)"
 IPDLTMP="/data/local/tmp"
 TMPDIR="$IPDLTMP/AIOPFMD"
 DEVTMPDIR="/dev/AIOPFMD"
@@ -19,8 +19,6 @@ TAR="$BB/busybox tar"
 UNZIP="$BB/busybox unzip"
 ECHO="$BB/busybox echo"
 HEAD="$BB/busybox head"
-ZIPALIGN="$ADDONS/zipalign"
-ZIPPACKER="$ADDONS/zip"
 } #
 
 { #Version Or Date Of Patches In This Patch
@@ -53,12 +51,12 @@ IDAODSD="AODStateDoze"; VIPAODSD="v1.0"; VCIPAODSD="1"
 #UI: Gboard/GboardThemes
 IDGBNBS="GboardNavBarSpacing"; IDAGBNBS="NavBar_Space gboardnavbar"; VIPGBNBS="v1.3"; VCIPGBNBS="4"
 IDGBRC="GBoardRoundedCorners"; VIPGBRC="v1.2"; VCIPGBRC="3"
-IDGBT="GBoardThemes"; IDAGBT="rboard-themes"; VIPGBT="v1.7"; VCIPGBT="8"
+IDGBT="GBoardThemes"; IDAGBT="rboard-themes"; VIPGBT="v1.8"; VCIPGBT="9"
 IDGBSTS="GboardSilkThemeSwitcher"; IDAGBSTS="gboard-silk-theme GboardSilkThemeChanger"; VIPGBSTS="v1.2"; VCIPGBSTS="3"
 #UI: BootAnimation/MediaUISounds/Emoji
 IDBA="BootAnimation"; VIPBA="v1.9"; VCIPBA="10"
 IDMUIS="MediaUISounds"; IDAMUIS="MediaUiSounds"; VIPMUIS="v2.2"; VCIPMUIS="13"
-IDIOSEMOJI="IOSEmoji"; IDAIOSEMOJI="iOS_Emoji iOS14.6_Emoji_for_Android emoji-replacer-259830633 emoji-replacer-809887617 emoji-replacer--1117766176 android11emoji EmojiReplacer"; VIPIOSEMOJI="v1.3"; VCIPIOSEMOJI="4"
+IDIOSEMOJI="IOSEmoji"; IDAIOSEMOJI="ios_emoji iOS_Emoji iOS14.6_Emoji_for_Android emoji-replacer-259830633 emoji-replacer-809887617 emoji-replacer--1117766176 android11emoji EmojiReplacer"; VIPIOSEMOJI="v1.4"; VCIPIOSEMOJI="5"
 #UI: RoundedUI/BIP/BackgroundBlur/Other
 IDRUI="RoundedUI"; IDARUI="UIROUNDED"; VIPRUI="v3.6"; VCIPRUI="27"
 IDBIP="BurnInProtection"; VIPBIP="v2.6"; VCIPBIP="17"
@@ -67,11 +65,12 @@ IDSUIRSRS="SUIRoundedSize"; VIPSUIRSRS="v1.2"; VCIPSUIRSRS="3"
 IDGPPM="GPayPowerMenu"; VIPGPPM="v1.1"; VCIPGPPM="2"
 IDFDM="ForceDarkMode"; VIPFDM="v1.1"; VCIPFDM="2"
 IDAS="AnimationScale"; VIPAS="v1.2"; VCIPAS="3"
-#Launchers: Shady/Lawnchair/Sushi/Ortus
+IDFDPIS="ForceDensitySwitcher"; VIPFDPIS="v1.0"; VCIPFDPIS="1"
+#Launchers: Shady/Lawnchair/Sushi/Matrixx
 IDSLSHADY="Systemless_ShadyLauncher"; VIPSLSHADYQ="v1.5"; VCIPSLSHADYQ="15"; VIPSLSHADYR="v2021.11.28"; VCIPSLSHADYR="20211128"
-IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v3.3"; VCIPSLLAWN="24"; VIPSLLAWNA="14.0.0 (a004df3)"
+IDSLLAWN="Systemless_Lawnchair"; VIPSLLAWN="v3.4"; VCIPSLLAWN="25"; VIPSLLAWNA="14.0.0 (e6416b5)"
 IDSLSUSHI="Systemless_SushiLauncher"; VIPSLSUSHI="v1.5"; VCIPSLSUSHI="6"; VIPSLSUSHIA="v5.0"
-IDSLORTUS="Systemless_OrtusLauncher"; VIPSLORTUS="v1.0"; VCIPSLORTUS="1"; VIPSLORTUSA="v2.0"
+IDSLMATRIXX="Systemless_MatrixxLauncher"; VIPSLMATRIXX="v1.1"; VCIPSLMATRIXX="2"; VIPSLMATRIXXA="v10.4.1"; 
 #Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS
 IDVFX="V4AFX"; IDAVFX="ViPER4AndroidFX ViPER4AndroidFX-Legacy ViPER4AndroidXHiFi viper4magisk ViPER4Android-RE"; VIPVFX="v2.6"; VCIPVFX="17"
 IDVFXDAK="V4AFXDAK"; IDAVFXDAK="V4AFXPresets"; VIPVFXDAK="v1.9"; VCIPVFXDAK="10"
@@ -88,8 +87,8 @@ IDVAAH="AdAwayHosts"; VIPVAAH="v5.9"; VCIPVAAH="50"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v17.0-220116"; VCIPVSH="170"
 IDEH="EnergizedHosts"; VIPEH="v296.21"; VCIPEH="11"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
-IDGPSP="GPSPatcher"; IDAGPSP="optmizedgpsconf"; VIPGPSP="v1.1"; VCIPGPSP="2"
-IDWIFIP="WIFIPatcher"; IDAWIFIP="wifi-bonding"; VIPWIFIP="v1.4"; VCIPWIFIP="5"
+IDGPSP="GPSPatcher"; IDAGPSP="optmizedgpsconf"; VIPGPSP="v1.2"; VCIPGPSP="3"
+IDWIFIP="WIFIPatcher"; IDAWIFIP="wifi-bonding"; VIPWIFIP="v1.5"; VCIPWIFIP="6"
 IDTTLF="NFQTTL"; IDATTLF="nfqttl"; VIPTTLF="v2.8"; VCIPTTLF="19"
 IDNT="NetworkTweak"; VIPNT="v6.0"; VCIPNT="60"
 IDAPAUSBTF="APAndUSBTetheringFix"; IDAAPAUSBTF="APAUSBTF USBTF"; VIPAPAUSBTF="v1.0"; VCIPAPAUSBTF="1"
@@ -98,16 +97,15 @@ IDBBB="BrutalBusyBox"; IDABBB="busybox-ndk busybox-brutal BuiltIn-BusyBox"; VIPB
 IDSELS="SELinuxSwitcher"; IDASELS="SeLinuxChanger SELinuxChanger"; VIPSELS="v1.4"; VCIPSELS="5"
 IDCC="CacheCleaner"; VIPCC="v3.6"; VCIPCC="27"
 IDMMFR="MagiskManagerForRecovery"; IDAMMFR="mm MMFR"; VIPMMFR="v1.4"; VCIPMMFR="5"
-IDDETACH="zygisk-detach" VIPDETACH="v1.14.0"; VCIPDETACH="17"
-IDDETACHA="zygisk-detach-app" VIPDETACHA="v1.13.0"; VCIPDETACHA="16"
-IDPIF="playintegrityfix" VIPPIF="v15.9.6"; VCIPPIF="15960"
-IDJITC="JustInTimeCompiler"; IDAJITC="JIT PackageCompileSpeed"; VIPJITC="v1.1"; VCIPJITC="2"
-#Other: FA/LED/FSFM/PSS/UAA/SBU/SHS
-IDFPA="FingerprintActions"; VIPFPA="v1.2"; VCIPFPA="3"
+IDDETACH="zygisk-detach" VIPDETACH="v1.15.0"; VCIPDETACH="18"
+IDDETACHA="zygisk-detach-app" VIPDETACHA="v1.14.0"; VCIPDETACHA="17"
+IDPIF="playintegrityfix" VIPPIF="v15.9.7"; VCIPPIF="15970"
+IDJITC="JustInTimeCompiler"; IDAJITC="JIT PackageCompileSpeed"; VIPJITC="v1.2"; VCIPJITC="3"
+#Other: FA/LED/PSS/UAA/SBU/SHS
+IDFPA="FingerprintActions"; VIPFPA="v1.3"; VCIPFPA="4"
 IDLEDLO="LEDLightOff"; IDALEDLO="ChargingLedLightOff ChargingLEDLightOff"; VIPLEDLO="v1.3"; VCIPLEDLO="4"
 IDLEDLA="LEDLightAnimation"; VIPLEDLA="v1.2"; VCIPLEDLA="3"
-IDFSLFM="FixSoftloopForMiui"; IDAFSLFM="FSFM"; VIPFSLFM="v1.2"; VCIPFSLFM="3"
-IDPSS="ProximitySensorSwitcher"; IDAPSS="ProximitySensorDisabler"; VIPPSS="v1.0"; VCIPPSS="1"
+DPSS="ProximitySensorSwitcher"; IDAPSS="ProximitySensorDisabler"; VIPPSS="v1.0"; VCIPPSS="1"
 IDUAA="UnfreezeAllApplications"; VIPUAA="v1.0"; VCIPUAA="1"
 #Tweaks: FGS/EHAP/BP/KL/4XMSAA/HWO/UGMSD/USGP
 IDFGS="ForceGoogleSync"; VIPFGS="v1.1"; VCIPFGS="2"
@@ -126,7 +124,7 @@ IDUGMSD="UniversalGMSDoze"; IDAUGMSD="universal-gms-doze"; VIPUGMSD="v1.9.1"; VC
 IDUSGP="PixelifyPhotos"; VIPUSGP="1.1-stable"; VCIPUSGP="002"
 IDGPUR="GPURendering"; VIPGPUR="v1.2"; VCIPGPUR="3"
 IDSBT="ShutdownBatteryTemperature"; VIPSBT="v1.0"; VCIPSBT="1"
-IDFI="ForceIdle"; VIPFI="v1.1"; VCIPFI="2"
+IDFDS="ForceDeepSleep"; IDAFDS="ForceIdle DozeConfig_RVNS"; VIPFDS="v1.2"; VCIPFDS="3"
 } #
 
 { #Functions
@@ -139,7 +137,7 @@ IMPORTANT_VARIABLES
 if [ -d $TMPDIR ] || [ -d $DEVTMPDIR ]; then rm -rf $TMPDIR $DEVTMPDIR; fi
 mkdir -p $TMPDIR $DEVTMPDIR $PLOGS
 getprop | sed "s/\]: \[/=/g;s/\]//g;s/\[//g" > $DEVTMPDIR/all.prop
-CHECKER "-miui -bb -arch -sel -soc -gapps -av -magisk"
+CHECKER "-ui -bb -arch -sel -soc -gapps -av -magisk"
 PATCHMODE
 UIP "Copy AIOPFMD To TMPDIR$MSGPMODE"
 (unzip -oq $ZIPFILE BB.zip Addons.tar.xz -d $DEVTMPDIR 2>/dev/null
@@ -335,11 +333,13 @@ MPXML="$(find $SYSTEM $VENDOR -type f -name "media_profiles*.xml")"
 MCXML="$(find $SYSTEM $VENDOR -type f -name "media_codecs.xml")"
 WCNSQCCFGI="$(find $SYSTEM $VENDOR -type f -name "WCNSS_qcom_cfg.ini")"
 GPSCONF="$(find $SYSTEM $VENDOR -type f -name "gps.conf")"
+UINPUTKL="$(find $SYSTEM $VENDOR -type f -name "uinput-fpc.kl" -o -name "uinput-goodix.kl" -o -name "uinput-gf.kl")"
 SDAXXML="$IPSED/*.xml"; VDAXXML="$IPVED/*.xml"
 SDEVFE="$IPSEDF/*.xml"; VDEVFE="$IPVEDF/*.xml"
 XMLGLOBAL="$IPDSU/settings_global.xml"; XMLSECURE="$IPDSU/settings_secure.xml"; XMLSYSTEM="$IPDSU/settings_system.xml"
 SPGLOBAL="settings put global"; SPSECURE="settings put secure"; SPSYSTEM="settings put system"
 SGGLOBAL="settings get global"; SGSECURE="settings get secure"; SGSYSTEM="settings get system"
+SDGLOBAL="settings delete global"; SDSECURE="settings delete secure"; SDSYSTEM="settings delete system"
 BATTERYSTAT="/sys/class/power_supply/battery/uevent"
 if [ -f $STORAGE/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/PATCHMODE*)"; FINDPATCHMODE=true; else for f in $(ls $STORAGE); do if [ -f $STORAGE/$f/PATCHMODE* ]; then PATCHMODEFILE="$(find $STORAGE/$f/PATCHMODE*)"; FINDPATCHMODE=true; break; else FINDPATCHMODE=false; fi; done; fi; if [ $FINDPATCHMODE != true ]; then touch $STORAGE/PATCHMODE.conf; PATCHMODEFILE="$STORAGE/PATCHMODE.conf"; fi
 PMODE="$(GET_FILE_PROP -pm "PMODE")"
@@ -348,8 +348,9 @@ HFSWAPMODE="$(GET_FILE_PROP -pm "HFSMODE")"
 LEDCOLOR="$(GET_FILE_PROP -pm "LEDCOLOR")"
 ENDMODE="$(GET_FILE_PROP -pm "ENDMODE")"
 MMUPDC="$(GET_FILE_PROP -pm "MMUPDC")"
-PROPFILES="$IPSBP $IPVBP"
+PROPFILES="$DEVTMPDIR/all.prop"
 GBFVXML="$IPDD/com.google.android.inputmethod.latin/shared_prefs/flag_value.xml"
+SYSCV="$(find /sys/class -type d -name vibrator)"
 SYSCL="/sys/class/leds"
 LEDLSC="chmod 0755 /sys/class/*/*/* /sys/module/*/*/*"
 LEDMBRED="$SYSCL/red/max_brightness"
@@ -362,7 +363,15 @@ LEDBLUE="$SYSCL/blue/brightness"
 LEDWHITE="$SYSCL/white/brightness"
 FLASHLIGHT="$SYSCL/flashlight/brightness"
 BUTTONBACKLIGHT="$SYSCL/button-backlight/brightness"
-if [ -d $IPSPO ] && [ -d $IPVO ]; then IPPSO="$IPSPO"; MIPPSO="$MIPSPO"; IPPVO="$IPVO"; MIPPVO="$MIPSVO"; elif [ -d $IPSPO ]; then IPPSO="$IPSPO"; MIPPSO="$MIPSPO"; IPPVO="$IPSPO"; MIPPVO="$MIPSPO"; elif [ -d $IPSO ]; then IPPSO="$IPSO"; MIPPSO="$MIPSO"; IPPVO="$IPSO"; MIPPVO="$MIPSO"; fi
+if [ -d $IPSPO ] && [ -d $IPVO ]; then
+IPPSO="$IPSPO"; MIPPSO="$MIPSPO"; IPPVO="$IPVO"; MIPPVO="$MIPSVO"
+elif [ ! -d $IPSPO ] && [ -d $IPVO ]; then
+IPPSO="$IPVO"; MIPPSO="$MIPSVO"; IPPVO="$IPVO"; MIPPVO="$MIPSVO"
+elif [ -d $IPSPO ]; then
+IPPSO="$IPSPO"; MIPPSO="$MIPSPO"; IPPVO="$IPSPO"; MIPPVO="$MIPSPO"
+elif [ -d $IPSO ]; then
+IPPSO="$IPSO"; MIPPSO="$MIPSO"; IPPVO="$IPSO"; MIPPVO="$MIPSO"
+fi
 if [ -d $IPSMAU ]; then IPPMU="$IPSMAU"; MIPPMU="$MIPSMAU"; elif [ -d $IPSPMAU ]; then IPPMU="$IPSPMAU"; MIPPMU="$MIPSPMAU"; fi
 if [ -d $IPSPM ]; then IPPM="$IPSPM"; MIPPM="$MIPSPM"; elif [ -d $IPSM ]; then IPPM="$IPSM"; MIPPM="$MIPSM"; fi
 for f in Fox TWRP SHRP PBRP; do if [ -d $STORAGE/$f ]; then PLOGS="$STORAGE/$f/AIOLogs/$( date +"%Y-%m" )"; FPLOGS=true; break; else FPLOGS=false; fi; done; if [ $FPLOGS != true ]; then PLOGS="$STORAGE/AIOLogs/$( date +"%Y-%m" )"; fi
@@ -1122,7 +1131,10 @@ DYNLIB=true
 [ $ASDK -lt 26 ] && DYNLIB=false
 [ -z $DYNLIB ] && DYNLIB=false
 if $DYNLIB; then DYNLIBPATCH="\/vendor\/lib\/soundfx"; else DYNLIBPATCH="\/system\/lib\/soundfx"; fi;;
--miui) if [ -d /data/miui ] || grep "ro.miui.build.region" $IPSBP >/dev/null || grep "ro.miui.region" $IPSBP >/dev/null || grep "ro.miui.ui.version*" $IPSBP >/dev/null; then MIUI=true; else MIUI=false; fi;;
+-ui) if [ -d /data/miui ] || grep "ro.miui.build.region" $IPSBP >/dev/null || grep "ro.miui.region" $IPSBP >/dev/null || grep "ro.miui.ui.version*" $IPSBP >/dev/null; then MIUI=true; else MIUI=false; fi
+if [ -d /data/oplus ] || grep "ro.oplus.product.series*" $IPSBP >/dev/null; then OPLUS=true; else OPLUS=false; fi
+if [ -d /data/sec ] || grep "ro.config.knox" $IPSBP >/dev/null; then ONEUI=true; else ONEUI=false; fi
+if $MIUI || $OPLUS || $ONEUI; then ALLUI=true; else ALLUI=false; fi;;
 -magisk) ZYGISK=false
 if [ -d $IPDADB/magisk ] && [ -f $IPDADB/magisk/util_functions.sh ]; then
 MAGISKFIRSTTIME=false; FINDMAGISK=true; MAGISK=true
@@ -1158,9 +1170,11 @@ case "$DARCH" in
 *) UIP "Warning! ARCH Not Supported/Found!"; ENDMODE=false; END;;
 esac
 AAPT="$ADDONS/aapt-$ARCH"
-XMLSTARLET="$ADDONS/xmlstarlet-$ARCH";;
+XMLSTARLET="$ADDONS/xmlstarlet-$ARCH"
+ZIPALIGN="$ADDONS/zipalign-$ARCH"
+ZIPPACKER="$ADDONS/zip-$ARCH";;
 -sel) if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUX=true; SELINUXS="Enforcing"; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUX=false; SELINUXS="Permissive"; fi;;
--soc) KERNEL=$(uname -r)
+-soc) echo -e "\nro.build.kernel.version=$(uname -r)" >> $PROPFILES
 SD617=$(grep "ro.board.platform=msm8952" $PROPFILES)
 SD625=$(grep "ro.board.platform=msm8953" $PROPFILES)
 SD660=$(grep "ro.board.platform=sdm660" $PROPFILES)
@@ -1182,15 +1196,16 @@ SD888=$(grep "ro.board.platform=lahaina" $PROPFILES)
 SM6375=$(grep "ro.board.platform=holi" $PROPFILES)
 SM8450=$(grep "ro.board.platform=taro" $PROPFILES)
 SM8550=$(grep "ro.board.platform=kalama" $PROPFILES)
+SM8650AB=$(grep "ro.board.platform=pineapple" $PROPFILES)
 if [ "$SD662" ] || [ "$SD665" ] || [ "$SD670" ] || [ "$SD690" ] || [ "$SD710" ] || [ "$SD720G" ] || [ "$SD730G" ] || [ "$SD765G" ] || [ "$SD820" ] || [ "$SD835" ] || [ "$SD845" ] || [ "$SD855" ] || [ "$SD865" ] || [ "$SD888" ] || [ "$SM6375" ] || [ "$SM8450" ] || [ "$SM8550" ]; then HIRES=true; else HIRES=false; fi
 SNAPSOC=false; MTKSOC=false; EXYSOC=false; KIRSOC=false
-if [ "$(grep -E "ro.board.platform=apq.*|ro.board.platform=msm*|ro.board.platform=sdm*" $PROPFILES)" ] || $HIRES || [ "$SD617" ] || [ "$SD625" ] || [ "$SD660" ] || [ "$SD662" ] || [ "$SD665" ] || [ "$SD810" ]; then
+if grep -E "ro.soc.model=SM*|ro.soc.manufacturer=Q*|ro.board.platform=apq.*|ro.board.platform=msm*|ro.board.platform=sdm*" $PROPFILES >/dev/null; then
 SNAPSOC=true
-elif "$(grep -E "ro.mediatek.version.*|ro.hardware=mt*|ro.board.platform=mt*|ro.board.platform=MT*|Build.BRAND=MTK*" $PROPFILES)" ]; then
+elif grep -E "ro.soc.manufacturer=M*|ro.mediatek.version.*|ro.hardware=mt*|ro.board.platform=mt*|ro.board.platform=MT*|Build.BRAND=MTK*" $PROPFILES >/dev/null; then
 MTKSOC=true
-elif "$(grep -E "ro.chipname=exynos*|ro.board.platform=exynos*|ro.soc.model=*" $PROPFILES)"; then
+elif grep -E "ro.soc.model=Tensor*|ro.soc.manufacturer=Google*|ro.hardware=exynos*|ro*.*chipname=exynos*|ro.product.board=exynos*|ro.board.platform=exynos*" $PROPFILES >/dev/null; then
 EXYSOC=true
-elif "$(grep -E "ro.board.platform=hi*|ro.board.platform=kirin*" $PROPFILES)"; then
+elif grep -E "ro.board.platform=hi*|ro.board.platform=kirin*" $PROPFILES >/dev/null; then
 KIRSOC=true
 fi;;
 -gapps) FINDGAPPS=false
@@ -1205,12 +1220,8 @@ if find $IPSAD -type f -name $gms >/dev/null; then FINDGAPPS=true; break; fi
 done
 fi;;
 -device) local PROPDEVICE=$(echo "$2" | tr '[:upper:]' '[:lower:]')
-for i in $SYSTEM $VENDOR; do
-if [ -f $i/build.prop ]; then
 for j in "ro.product.device" "ro.build.product" "ro.product.vendor.device" "ro.vendor.product.device"; do
-[ "$(sed -n "s/^$j=//p" $i/build.prop 2>/dev/null | head -n 1 | tr '[:upper:]' '[:lower:]')" == "$PROPDEVICE" ] && return 0
-done
-fi
+[ "$(sed -n "s/^$j=//p" $PROPFILES 2>/dev/null | head -n 1 | tr '[:upper:]' '[:lower:]')" == "$PROPDEVICE" ] && return 0
 done
 return 1;;
 -upd) MODIDCV=false
@@ -1237,8 +1248,7 @@ T) TESTMODE=true; MSGPMODE=", Test Mode";;
 U) TESTMODE=false; MSGPMODE=", User Mode";;
 *) TESTMODE=false; echo -e "$MSGPMODE\nPMODE=U" >> $PATCHMODEFILE; MSGPMODE=", User Mode";;
 esac
-if find /sys/class -name leds >/dev/null; then
-LEDPATH="$(find /sys/class -name leds)"
+if [ -f $SYSCL/blink ]; then
 case "$LEDCOLOR" in
 R) LEDCOLOR=red;;
 G) LEDCOLOR=green;;
@@ -1247,11 +1257,14 @@ W) LEDCOLOR=white;;
 "false") BLINKMODE=false;;
 *) BLINKMODE=false; echo -e "$MSGLEDCOLOR\nLEDCOLOR=false" >> $PATCHMODEFILE;;
 esac
-if [ -f $LEDPATH/$LEDCOLOR/blink ]; then echo -n 1 > $LEDPATH/$LEDCOLOR/blink; BLINKMODE=true; fi
+if [ -f $SYSCL/$LEDCOLOR/blink ]; then echo -n 1 > $SYSCL/$LEDCOLOR/blink; BLINKMODE=true; fi
+else
+BLINKMODE=false
 fi
+if FINDER "$SYSCV"; then
 case "$HFDURATION" in
 "false") HFMODE=false;;
-[0-255]*) HFMODE=true; HFPATH="$(find /sys/class -name vibrator)"; if [ -f $HFPATH/duration ]; then echo -n $HFDURATION > $HFPATH/duration; fi; if [ -f $HFPATH/activate ]; then HFFPATH=$HFPATH/activate; elif [ -f $HFPATH/enable ]; then HFFPATH=$HFPATH/enable; fi;;
+[0-255]*) HFMODE=true; if [ -f $SYSCV/duration ]; then echo -n $HFDURATION > $SYSCV/duration; fi; if [ -f $SYSCV/activate ]; then HFFPATH=$SYSCV/activate; elif [ -f $SYSCV/enable ]; then HFFPATH=$SYSCV/enable; fi;;
 *) HFMODE=false; echo -e "$MSGHFMODE\nHFMODE=false" >> $PATCHMODEFILE;;
 esac
 case "$HFSWAPMODE" in
@@ -1259,6 +1272,9 @@ case "$HFSWAPMODE" in
 "false") HFSWAPMODE=false;;
 *) HFSWAPMODE=false; echo -e "$MSGHFSMODE\nHFSMODE=false" >> $PATCHMODEFILE;;
 esac
+else
+HFMODE=false; HFSWAPMODE=false
+fi
 case "$ENDMODE" in
 "true") ENDMODE=true;;
 "false") ENDMODE=false;;
@@ -1296,11 +1312,9 @@ if KEYCHOOSE; then PRESETS; END; else ENDMODE=false; END; fi
 else
 UNMOUNT
 UIP "Clear TMPDIR, Copy Logs & Exit"; MSGCS
-if $BLINKMODE; then echo -n 0 > $LEDPATH/$LEDCOLOR/blink; fi
+if $BLINKMODE; then echo -n 0 > $SYSCL/$LEDCOLOR/blink; fi
 rm -rf $TMPDIR $DEVTMPDIR
-if [ $BOOTMODE != true ]; then cp -f /tmp/recovery.log $PLOGS/AIO-$( date +"%d-%H:%M:%S" ).log; fi
-if $BOOTMODE; then input tap 1040 140; sleep 0.5; fi
-find $STORAGE/Download/ -type f -name 'magisk_install_log*.log' -exec mv {} $PLOGS/AIO-$( date +"%d-%H:%M:%S" ).log \;
+cp -rf /sdcard/AIO-*.log $PLOGS/ && rm -f /sdcard/AIO-*.log
 exit 0
 fi
 }
@@ -1817,12 +1831,13 @@ CHECKER -upd "$IDSUIRSRS" "$VIPSUIRSRS" "$VCIPSUIRSRS" "IPSUIRSRSS"
 CHECKER -upd "$IDGPPM" "$VIPGPPM" "$VCIPGPPM" "IPGPPMS"
 CHECKER -upd "$IDFDM" "$VIPFDM" "$VCIPFDM" "IPFDMS"
 CHECKER -upd "$IDAS" "$VIPAS" "$VCIPAS" "IPASS"
-#Launchers: Shady/Lawnchair/Sushi/Ortus
+CHECKER -upd "$IDFDPIS" "$VIPFDPIS" "$VCIPFDPIS" "IPFDPISS"
+#Launchers: Shady/Lawnchair/Sushi/Matrixx
 if $ATEN; then CHECKER -upd "$IDSLSHADY" "$VIPSLSHADYQ" "$VCIPSLSHADYQ" "IPSLSSHADY"; fi
 if $AELEVEN; then CHECKER -upd "$IDSLSHADY" "$VIPSLSHADYR" "$VCIPSLSHADYR" "IPSLSSHADY"; fi
 if $ATEN || $AELEVEN || $ATWELVEL || $ATHIRTEEN || $AFOURTEEN; then CHECKER -upd "$IDSLLAWN" "$VIPSLLAWN" "$VCIPSLLAWN" "IPSLLAWNA"; fi
 if $ATWELVEL; then CHECKER -upd "$IDSLSUSHI" "$VIPSLSUSHI" "$VCIPSLSUSHI" "IPSLSSUSHISL"; fi
-if $AFOURTEEN; then CHECKER -upd "$IDSLORTUS" "$VIPSLORTUS" "$VCIPSLORTUS" "IPSLSORTUSU"; fi
+if $AFOURTEEN; then CHECKER -upd "$IDSLMATRIXX" "$VIPSLMATRIXX" "$VCIPSLMATRIXX" "IPSLSMATRIXXU"; fi
 #Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS
 CHECKER -upd "$IDVFX" "$VIPVFX" "$VCIPVFX" "IPVFXS"
 CHECKER -upd "$IDVFXDAK $IDAVFXDAK" "$VIPVFXDAK" "$VCIPVFXDAK" "IPVFXDAKS"
@@ -1852,7 +1867,7 @@ CHECKER -upd "$IDMMFR $IDAMMFR" "$VIPMMFR" "$VCIPMMFR" "IPMMFRS"
 CHECKER -upd "$IDDETACH" "$VIPDETACH" "$VCIPDETACH" "IPDETACHS"
 CHECKER -upd "$IDPIF" "$VIPPIF" "$VCIPPIF" "IPPIFS"
 CHECKER -upd "$IDJITC $IDAJITC" "$VIPJITC" "$VCIPJITC" "IPJITCS"
-#Other: FA/LED/FSFM/PSS/UAA/SBU/SHS
+#Other: FA/LED/PSS/UAA/SBU/SHS
 CHECKER -upd "$IDFPA" "$VIPFPA" "$VCIPFPA" "IPFPAS"
 CHECKER -upd "$IDLEDLO $IDALEDLO" "$VIPLEDLO" "$VCIPLEDLO" "IPLEDLOS"
 CHECKER -upd "$IDLEDLA" "$VIPLEDLA" "$VCIPLEDLA" "IPLEDLAS"
@@ -1874,27 +1889,23 @@ CHECKER -upd "$IDUGMSD $IDAUGMSD" "$VIPUGMSD" "$VCIPUGMSD" "IPUGMSDS"
 CHECKER -upd "$IDUSGP" "$VIPUSGP" "$VCIPUSGP" "IPUSGPS"
 CHECKER -upd "$IDGPUR" "$VIPGPUR" "$VCIPGPUR" "IPGPURS"
 CHECKER -upd "$IDSBT" "$VIPSBT" "$VCIPSBT" "IPSBTS"
-CHECKER -upd "$IDFI" "$VIPFI" "$VCIPFI" "IPFIS"
+CHECKER -upd "$IDFDS $IDAFDS" "$VIPFDS" "$VCIPFDS" "IPFDSS"
 UIP "Other Updates Not Found"
 }
 
 QCDFP () {
-for f in $EQCDFP; do
-if [ -f $f ]; then
-if grep -m1 "^$1" $f >/dev/null; then
-local g=$(grep -m1 "^$1" $f)
-sed -i "s~$g~$1=$2~g" $f
-elif grep -m1 "^#$1" $f >/dev/null; then
-local g=$(grep -m1 "^#$1" $f)
-sed -i "s~$g~$1=$2~g" $f
-elif grep -m1 "^# $1" $f >/dev/null; then
-local g=$(grep -m1 "^# $1" $f)
-sed -i "s~$g~$1=$2~g" $f
+if grep -m1 "^$1" $PSF >/dev/null; then
+local g=$(grep -m1 "^$1" $PSF)
+sed -i "s~$g~$1=$2~g" $PSF
+elif grep -m1 "^#$1" $PSF >/dev/null; then
+local g=$(grep -m1 "^#$1" $PSF)
+sed -i "s~$g~$1=$2~g" $PSF
+elif grep -m1 "^# $1" $PSF >/dev/null; then
+local g=$(grep -m1 "^# $1" $PSF)
+sed -i "s~$g~$1=$2~g" $PSF
 else
-echo -e "\n$3\n$1=$2" >> $f
+echo -e "\n$3\n$1=$2" >> $PSF
 fi
-fi
-done
 }
 
 PTMFI () {
@@ -1951,7 +1962,7 @@ rm -f $IPPSO/Pills.apk $IPPSO/NavigationBarModeGesturalOverlay
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Pills $VIPP?" "IPPS" "$IDP"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Pills $VIPP?" "IPPS" "$IDP"; fi
 fi
 }
 
@@ -2056,7 +2067,7 @@ rm -f $IPPSO/PillsColors*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Pills Colors $VIPPC?" "IPPCS" "$IDPC"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Pills Colors $VIPPC?" "IPPCS" "$IDPC"; fi
 fi
 }
 
@@ -2115,7 +2126,7 @@ rm -f $IPPSO/PillsHeight*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Pills Height $VIPPH?" "IPPHS" "$IDPHS"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Pills Height $VIPPH?" "IPPHS" "$IDPHS"; fi
 fi
 }
 
@@ -2136,7 +2147,9 @@ fi
 }
 
 IPNBVS () {
+if [ $ONEUI != true ]; then
 UCSA "$MSGIP Nav Bar Visibility Switcher $VIPNBVS?" "IPNBVSS" "$IDNBVS"
+fi
 }
 
 IPNBVSS () {
@@ -2156,7 +2169,7 @@ SET_PERM_RM -msgdi
 }
 
 IPBGD () {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 30 ]; then
+if $MAGISK && [ $ALLUI != true ] && [ "$ASDK" -ge 30 ]; then
 UCSA "$MSGIP Back Gesture Disabler $VIPBGD?" "IPBGDS" "$IDBGDS"
 fi
 }
@@ -2173,7 +2186,7 @@ MMPR -v "Back Gesture Disabler" "$VIPBGD" "$VCIPBGD" "Back Gesture Disabler"; SE
 }
 
 IPFNS () {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
+if $MAGISK && [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "$MSGIP Force Navigation Switcher $VIPFNS?" "IPFNSS" "$IDFNS"
 fi
 }
@@ -2200,7 +2213,7 @@ rm -f $IPPSO/SystemIncreaseNumberNotificationIcons*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP System Increase Number Icons $VIPSINNI?" "IPSINNIS" "$IDSINNI"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP System Increase Number Icons $VIPSINNI?" "IPSINNIS" "$IDSINNI"; fi
 fi
 }
 
@@ -2229,7 +2242,7 @@ rm -f $IPPSO/*StatusBarNotificationIconSize*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Notification Icon Size $VIPSBNISI?" "IPSBNISS" "$IDSBNISI"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Notification Icon Size $VIPSBNISI?" "IPSBNISS" "$IDSBNISI"; fi
 fi
 }
 
@@ -2258,7 +2271,7 @@ rm -f $IPPSO/StatusBarClockSize*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Clock Size $VIPSBCS?" "IPSBCSS" "$IDSBCS"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Clock Size $VIPSBCS?" "IPSBCSS" "$IDSBCS"; fi
 fi
 }
 
@@ -2287,7 +2300,7 @@ rm -f $IPPSO/StatusBarPadding*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Padding $VIPSBP?" "IPSBPS" "$IDSBP"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Padding $VIPSBP?" "IPSBPS" "$IDSBP"; fi
 fi
 }
 
@@ -2326,7 +2339,7 @@ rm -f $IPPSO/StatusBarPrivacyDot*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "$MSGIP Status Bar Privacy Dot $VIPSBPD?" "IPSBPDS" "$IDSBPD"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "$MSGIP Status Bar Privacy Dot $VIPSBPD?" "IPSBPDS" "$IDSBPD"; fi
 fi
 }
 
@@ -2354,7 +2367,7 @@ rm -f $IPPSO/StatusBarNotificationIconDotSize*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "$MSGIP Status Bar Notification Icon Dot Size $VIPSBNIDS?" "IPSBNIDSS" "$IDSBNIDS"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA -ent "$MSGIP Status Bar Notification Icon Dot Size $VIPSBNIDS?" "IPSBNIDSS" "$IDSBNIDS"; fi
 fi
 }
 
@@ -2383,7 +2396,7 @@ rm -f $IPPSO/*StatusBarIconSpace*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Icon Space $VIPSBISP?" "IPSBISPS" "$IDSBISP"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Status Bar Icon Space $VIPSBISP?" "IPSBISPS" "$IDSBISP"; fi
 fi
 }
 
@@ -2412,7 +2425,7 @@ fi
 }
 
 IPWFAMDQSOS () {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA "$MSGIPL Wi-Fi And Mobile Data QS Old Style $VIPWFAMDQSOS?" "IPWFAMDQSOSS" "$IDWFAMDQSOS"; fi
+if $MAGISK && [ $ALLUI != true ] && [ "$ASDK" -ge 31 ]; then UCSA "$MSGIPL Wi-Fi And Mobile Data QS Old Style $VIPWFAMDQSOS?" "IPWFAMDQSOSS" "$IDWFAMDQSOS"; fi
 }
 
 IPWFAMDQSOSS () {
@@ -2423,7 +2436,7 @@ MMPR -v "Wi-Fi And Mobile Data QS Old Style" "$VIPWFAMDQSOS" "$VCIPWFAMDQSOS" "W
 }
 
 IPFDNI () {
-if $MAGISK && [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then
+if $MAGISK && [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then
 UCSA "$MSGIPL Force Disable Notification Icons $VIPFDNI?" "IPFDNIS" "$IDFDNI"
 fi
 }
@@ -2444,7 +2457,7 @@ rm -f $IPPSO/NotificationSidePaddings*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Notification Side Paddings $VIPNSP?" "IPNSPS" "$IDNSP"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Notification Side Paddings $VIPNSP?" "IPNSPS" "$IDNSP"; fi
 fi
 }
 
@@ -2474,7 +2487,7 @@ rm -f $IPPSO/QSCountIconAndRows*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP QS Count Icon And Rows $VIPQSCIAR?" "IPQSCIARS" "$IDQSCIAR"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP QS Count Icon And Rows $VIPQSCIAR?" "IPQSCIARS" "$IDQSCIAR"; fi
 fi
 }
 
@@ -2521,7 +2534,7 @@ rm -f $IPPSO/QSSplitNotification*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 32 ]; then UCSA -ent "$MSGIP QS Split Notification $VIPQSSN?" "IPQSSNS" "$IDQSSN"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 32 ]; then UCSA -ent "$MSGIP QS Split Notification $VIPQSSN?" "IPQSSNS" "$IDQSSN"; fi
 fi
 }
 
@@ -2541,7 +2554,7 @@ SET_PERM_RM -msgdi
 }
 
 IPQSCP () {
-if $MAGISK && [ $MIUI != true ]; then
+if $MAGISK && [ $ALLUI != true ]; then
 if [ "$ASDK" -eq 28 ] || [ "$ASDK" -eq 29 ]; then
 UCSA -ent "$MSGIPL QS Content Padding $VIPQSCP?" "IPQSCPS" "$IDQSCP"
 fi
@@ -2571,7 +2584,7 @@ rm -f $IPPSO/QRCodeScannerOnLockScreen*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -eq 33 ]; then UCSA -ent "$MSGIP QR Code Scanner On Lock Screen $VIPQRCSOLS?" "IPQRCSOLSS" "$IDQRCSOLS"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -eq 33 ]; then UCSA -ent "$MSGIP QR Code Scanner On Lock Screen $VIPQRCSOLS?" "IPQRCSOLSS" "$IDQRCSOLS"; fi
 fi
 }
 
@@ -2600,7 +2613,7 @@ rm -f $IPPSO/LockScreenUserSwitcher*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 33 ]; then UCSA -ent "$MSGIP Lock Screen User Switcher $VIPLSUS?" "IPLSUSS" "$IDLSUS"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 33 ]; then UCSA -ent "$MSGIP Lock Screen User Switcher $VIPLSUS?" "IPLSUSS" "$IDLSUS"; fi
 fi
 }
 
@@ -2628,7 +2641,7 @@ rm -f $IPPSO/AODSwitcher*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 27 ]; then UCSA -ent "$MSGIP AOD Switcher $VIPAODS?" "IPAODSS" "$IDAODS"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 27 ]; then UCSA -ent "$MSGIP AOD Switcher $VIPAODS?" "IPAODSS" "$IDAODS"; fi
 fi
 }
 
@@ -2656,7 +2669,7 @@ rm -f $IPPSO/AODStateDoze*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 27 ]; then UCSA -ent "$MSGIP AOD State Doze $VIPAODSD?" "IPAODSDS" "$IDAODSD"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 27 ]; then UCSA -ent "$MSGIP AOD State Doze $VIPAODSD?" "IPAODSDS" "$IDAODSD"; fi
 fi
 }
 
@@ -2752,21 +2765,29 @@ sed -i "s/#ID/$g$n/g" $TMPDIR/GBoardThemes/Compile/metadata.json
 sed -i "s/#NAME/$g$n/g" $TMPDIR/GBoardThemes/Compile/metadata.json
 cd $TMPDIR/GBoardThemes/Compile
 $ZIPPACKER -r -0 $TMPDIR/GBoardThemes/Compile * >/dev/null
-mv $TMPDIR/GBoardThemes/Compile.zip $TMPDIR/GBoardThemes/gboard_theme/$s-$f.zip
+mv $TMPDIR/GBoardThemes/Compile.zip $TMPDIR/GBoardThemes/gboard_theme/user_theme_package_$s-$f.zip
 rm -rf $TMPDIR/GBoardThemes/Compile/*
 done
 done
 if $MAGISK; then
 PTMFI "$IDGBT" "$IDAGBT" "$MIPSE"
 cp -rf $TMPDIR/GBoardThemes/gboard_theme $MODPATH/$MODID$MIPSE
-echo -e "ro.com.google.ime.theme_file=FB-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" > $MODPATH/$MODID/system.prop
+echo -e "ro.com.google.ime.theme_file=user_theme_package_FB-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" > $MODPATH/$MODID/system.prop
 MMPR -v "GBoard Themes" "$VIPGBT" "$VCIPGBT" "GBoard Themes, Key Rounded Size - Set On: $UCSFNMC"
+MSSERVICE -s "if [ -d $IPDD/com.google.android.inputmethod.latin/files ]; then cp -rf $MODPATH/$MODID$MIPSE/gboard_theme/* $IPDD/com.google.android.inputmethod.latin/files; fi"
 else
 BUCKUPER -bf "$IPSBP"
 sed -i "/ro.com.google.ime.theme_file/d;ro.com.google.ime.themes_dir/d" $IPSBP
-echo -e "\n# GBoard Themes\nro.com.google.ime.theme_file=FB-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" >> $IPSBP
+echo -e "\n# GBoard Themes\nro.com.google.ime.theme_file=user_theme_package_FB-1A73E8.zip\nro.com.google.ime.themes_dir=$MIPSE/gboard_theme" >> $IPSBP
 cp -rf $TMPDIR/GBoardThemes/gboard_theme $IPSE
 SET_PERM_R $IPSE/gboard_theme 0 0 0755 0644
+fi
+if [ -d $IPDD/com.google.android.inputmethod.latin/files ]; then
+cp -rf $TMPDIR/GBoardThemes/gboard_theme/* $IPDD/com.google.android.inputmethod.latin/files
+fi
+if $BOOTMODE; then
+am force-stop com.google.android.inputmethod.latin >/dev/null
+am start -a android.intent.action.MAIN -n com.google.android.inputmethod.latin/com.google.android.apps.inputmethod.latin.firstrun.LatinFirstRunActivity >/dev/null
 fi
 SET_PERM_RM -msgdi
 fi
@@ -2986,7 +3007,7 @@ BUCKUPER -r "$IPPM/bootanimation.zip $IPPM/bootanimation-dark.zip"
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ]; then
+if [ $ALLUI != true ]; then
 UCSA "$MSGIP Boot Animation $VIPBA?" "IPBAS" "$IDBA"
 fi
 fi
@@ -3107,7 +3128,7 @@ BUCKUPER -r "$IPSF/AndroidEmoji-htc.ttf $IPSF/ColorUniEmoji.ttf $IPSF/CombinedCo
 UIP "$MSGDRM"
 fi
 else
-UCSA "$MSGIP IOS Emoji From IOS 16.4 $VIPIOSEMOJI?" "IPIOSEMOJIS" "$IDIOSEMOJI"
+UCSA "$MSGIP IOS Emoji From IOS 17.4 $VIPIOSEMOJI?" "IPIOSEMOJIS" "$IDIOSEMOJI"
 fi
 }
 
@@ -3119,7 +3140,7 @@ PTMFI "$IDIOSEMOJI" "$IDAIOSEMOJI" "$MIPSF"
 for TTF in AndroidEmoji-htc ColorUniEmoji CombinedColorEmoji DcmColorEmoji HTC_ColorEmoji NotoColorEmoji SamsungColorEmoji; do
 if [ -f $MAGISKMP$IPSF/$TTF.ttf ]; then cp -f $TMPDIR/IOSEmoji/NotoColorEmoji.ttf $MODPATH/$MODID$MIPSF/$TTF.ttf; fi
 done
-MMPR -v "IOS Emoji" "$VIPIOSEMOJI" "$VCIPIOSEMOJI" "Emoji From IOS 16.4"
+MMPR -v "IOS Emoji" "$VIPIOSEMOJI" "$VCIPIOSEMOJI" "Emoji From IOS 17.4"
 echo "#!$MIPSB/sh
 sed -i \"/emoji_compat_app_whitelist/d\" $GBFVXML
 for FBAN in \"com.facebook.orca\" \"com.facebook.katana\"; do
@@ -3193,7 +3214,7 @@ rm -f $IPPSO/*BurnInProtection*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Burn In Protection $VIPBIP?" "IPBIPS" "$IDBIP"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 29 ]; then UCSA -ent "$MSGIP Burn In Protection $VIPBIP?" "IPBIPS" "$IDBIP"; fi
 fi
 }
 
@@ -3219,7 +3240,7 @@ fi
 }
 
 IPBB () {
-if [ "$ASDK" -ge 30 ]; then UCSA -ent "$MSGIP Background Blur $VIPBB?" "IPBBS" "$IDBB"; fi
+if [ "$ASDK" -ge 30 ] && [ $ONEUI != true ]; then UCSA -ent "$MSGIP Background Blur $VIPBB?" "IPBBS" "$IDBB"; fi
 }
 
 IPBBS () {
@@ -3240,7 +3261,7 @@ UIP "$MSGDI"
 }
 
 IPGPPM () {
-if $MAGISK && $ATEN && [ $MIUI != true ]; then UCSA "Activate GPay Power Menu $VIPGPPM?" "IPGPPMS" "$IDGPPM"; fi
+if $MAGISK && $ATEN && [ $ALLUI != true ]; then UCSA "Activate GPay Power Menu $VIPGPPM?" "IPGPPMS" "$IDGPPM"; fi
 }
 
 IPGPPMS () {
@@ -3251,7 +3272,7 @@ MMPR -v "GPay Power Menu" "$VIPGPPM" "$VCIPGPPM" "Enable Google Pay Quick Wallet
 }
 
 IPSUIRSRS () {
-if $MAGISK && [ $MIUI != true ]; then
+if $MAGISK && [ $ALLUI != true ]; then
 if [ "$ASDK" -ge 27 ] && [ "$ASDK" -le 30 ]; then
 UCSA -ent "$MSGIPL SUI Rounded Size $VIPSUIRSRS?" "IPSUIRSRSS" "$IDSUIRSRS"
 fi
@@ -3269,7 +3290,7 @@ fi
 }
 
 IPFDM () {
-if [ $MIUI != true ] && [ "$ASDK" -ge 27 ]; then UCSA "$MSGIP Force Dark Mode $VIPFDM?" "IPFDMS" "$IDFDM"; fi
+if [ "$ASDK" -ge 27 ]; then UCSA "$MSGIP Force Dark Mode $VIPFDM?" "IPFDMS" "$IDFDM"; fi
 }
 
 IPFDMS () {
@@ -3302,14 +3323,30 @@ MMPR -v "Animation Scale" "$VIPAS" "$VCIPAS" "Animation Scale - Set On: $UCSFNMC
 fi
 }
 
+IPFDPIS () {
+if $MAGISK; then
+UCSA "$MSGIP Force Density Switcher $VIPFDPIS?" "IPFDPISS" "$IDFDPIS"
+fi
+}
+
+IPFDPISS () {
+UCSA -a "300 320 340 360 380 400 420 440 460 480 500" "Choose Density:" "Density" "500"
+if $UCSFNM; then
+UIP "$MSGIAMM Force Density Switcher"
+PTMFI "$IDFDPIS"
+MSSERVICE -s "sleep 20; wm density $UCSFNMC"
+MMPR -v "Force Density Switcher" "$VIPFDPIS" "$VCIPFDPIS" "Force Density Switcher - Set On: $UCSFNMC"; SET_PERM_RM -msgdi
+fi
+}
+
 } #
 
-{ #Launchers: Shady/Lawnchair/Sushi/Ortus
+{ #Launchers: Shady/Lawnchair/Sushi/Matrixx
 
 IPSL () {
-if $MAGISK && [ $MIUI != true ]; then
+if $MAGISK && [ $ALLUI != true ]; then
 if $ATEN || $AELEVEN || $ATWELVEL || $ATHIRTEEN || $AFOURTEEN; then
-UCSA -ent "$MSGIP Systemless Launcher?" "IPSLS" "$IDSLLAWN $IDSLSHADY $IDSLSUSHI $IDSLORTUS"
+UCSA -ent "$MSGIP Systemless Launcher?" "IPSLS" "$IDSLLAWN $IDSLSHADY $IDSLSUSHI $IDSLMATRIXX"
 fi
 fi
 }
@@ -3338,8 +3375,8 @@ UIP -s "$MSGIP Sushi Launcher $VIPSLSUSHIA - $VIPSLSUSHI?" "$MSGVU Yes" "$MSGVD 
 if KEYCHOOSE; then IPSLSSUSHISL; fi
 fi
 if [ $SYSTEMLESSLAUNCHERS != true ] && $AFOURTEEN; then
-UIP -s "$MSGIP Ortus Launcher $VIPSLORTUSA - $VIPSLORTUS?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
-if KEYCHOOSE; then IPSLSORTUSU; fi
+UIP -s "$MSGIP Matrixx Launcher $VIPSLMATRIXXA - $VIPSLMATRIXX?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+if KEYCHOOSE; then IPSLSMATRIXXU; fi
 fi
 }
 
@@ -3392,15 +3429,16 @@ MMPR -v "Systemless Sushi Launcher" "$VIPSLSUSHI" "$VCIPSLSUSHI" "Systemlessly I
 IPSLSE
 }
 
-IPSLSORTUSU () {
-UIP "$MSGIAMM Ortus Launcher"
-PTMFI "$IDSLORTUS" "$MMLAUNCHERLIST"
+IPSLSMATRIXXU () {
+UIP "$MSGIPI Matrixx Launcher $IAMM"
+PTMFI "$IDSLMATRIXX" "$MMLAUNCHERLIST"
 SYSTEMLESSLAUNCHERS=true
-UZTPN "$IDSLORTUS-$ACNV"
+UZTPN "$IDSLMATRIXX-$ACNV"
 cp -rf $TMPDIR/$MODID-$ACNV $TMPDIR/$MODID
-APKPERM "$TMPDIR/$MODID$MIPSSEPA/OrtusThemePicker/OrtusThemePicker.apk" "$TMPDIR/$MODID$MIPSSEPEP"; HAPWL "$TMPDIR/$MODID$MIPSSEPES"
-APKPERM "$TMPDIR/$MODID$MIPSSEPA/OrtusLauncherQuickStep/OrtusLauncherQuickStep.apk" "$TMPDIR/$MODID$MIPSSEPEP"; HAPWL "$TMPDIR/$MODID$MIPSSEPES"
-MMPR -v "Systemless Ortus Launcher" "$VIPSLORTUS" "$VCIPSLORTUS" "Systemlessly Install Ortus Launcher For Android 14.0 With Recents UI Support"
+APKPERM "$TMPDIR/$MODID$MIPSSEPA/MatrixxOmniJaws/MatrixxOmniJaws.apk" "$TMPDIR/$MODID$MIPSSEPEP"; HAPWL "$TMPDIR/$MODID$MIPSSEPES"
+APKPERM "$TMPDIR/$MODID$MIPSSEPA/MatrixxThemePicker/MatrixxThemePicker.apk" "$TMPDIR/$MODID$MIPSSEPEP"; HAPWL "$TMPDIR/$MODID$MIPSSEPES"
+APKPERM "$TMPDIR/$MODID$MIPSSEPA/MatrixxLauncherQuickStep/MatrixxLauncherQuickStep.apk" "$TMPDIR/$MODID$MIPSSEPEP"; HAPWL "$TMPDIR/$MODID$MIPSSEPES"
+MMPR -v "Systemless Matrixx Launcher" "$VIPSLMATRIXX" "$VCIPSLMATRIXX" "Systemlessly Install Matrixx Launcher For Android 14.0 With Recents UI Support"
 IPSLSE
 }
 
@@ -7463,9 +7501,13 @@ fi
 
 IPGPSPS () {
 UIP "$MSGIAMM GPS Patcher"
-[ -f $IPSE/gps.conf ] && cp -f $MAGISKMP$IPSE/gps.conf $TMPDIR/sgps.conf
-[ -f $IPVE/gps.conf ] && cp -f $MAGISKMP$IPVE/gps.conf $TMPDIR/vgps.conf
-EQCDFP="$TMPDIR/sgps.conf $TMPDIR/vgps.conf"
+mkdir -p $TMPDIR/GPSPatcher
+UIP "$MSGPNF"
+for FGPSCONF in $GPSCONF; do
+UIP "Found $(basename $FGPSCONF)" "$MSGPMIP"
+PSF="$TMPDIR/GPSPatcher$FGPSCONF"
+mkdir -p `dirname $PSF`
+cp -f $MAGISKMP$FGPSCONF $PSF
 QCDFP "XTRA_SERVER_QUERY" "0" "# Whether to use the predefined XTRA servers below (XTRA_SERVER_), or to query them from the modem.\n# Values: 0 - use predefined, 1 - query modem"
 QCDFP "XTRA_SERVER_1" "https://xtrapath1.izatcloud.net/xtra3grc.bin" "# The predefined XTRA servers 1 to be used if modem querying (XTRA_SERVER_QUERY) is off.\n# Values: URL"
 QCDFP "XTRA_SERVER_2" "https://xtrapath2.izatcloud.net/xtra3grc.bin" "# The predefined XTRA servers 2 to be used if modem querying (XTRA_SERVER_QUERY) is off.\n# Values: URL"
@@ -7509,15 +7551,16 @@ QCDFP "DR_SYNC_ENABLED" "0" "# This configuration enables the driver to make use
 QCDFP "PPS_DEVICENAME" "/dev/pps0" "# The path to the Linux PPS device.\n# Values: path"
 QCDFP "MISSING_PULSE_TIME_DELTA" "900" "# MAX ms difference to detect missing pulse.\n# Specifies time threshold in ms to validate any missing PPS pulses\n# Values: ms"
 QCDFP "PROPAGATION_TIME_UNCERTAINTY" "1" "# Whether to use time uncertainty propagation logic in the case of missing PPS pulse.\n# Values: 0 - don't use, 1 - use"
+UIP "$MSGFFAP"
+done
 if $MAGISK; then
 PTMFI "$IDGPSP" "$IDAGPSP" "$MIPSVE $MIPSE"
-[ -f $TMPDIR/sgps.conf ] && cp -f $TMPDIR/sgps.conf $MODPATH/$MODID$MIPSVE/gps.conf
-[ -f $TMPDIR/vgps.conf ] && cp -f $TMPDIR/vgps.conf $MODPATH/$MODID$MIPSE/gps.conf
 MMPR -v "GPS Patcher" "$VIPGPSP" "$VCIPGPSP" "GPS Patcher - Patching gps.conf & Adds Correct Certificate Paths, Disables Logs, Improves Gps Communication (None), Exposes Universal Pool.Ntp.Org And Other Improvements"
+cp -rf $TMPDIR/$MODID/* $MODPATH/$MODID
+MOVERPATH
 else
 BUCKUPER -s "$GPSCONF"
-[ -f $TMPDIR/sgps.conf ] && cp -f $TMPDIR/sgps.conf $IPSE/gps.conf
-[ -f $TMPDIR/vgps.conf ] && cp -f $TMPDIR/vgps.conf $IPVE/gps.conf
+cp -f $TMPDIR/GPSPatcher$MIPSVE/* $IPVE; cp -f $TMPDIR/GPSPatcher$MIPSE/* $IPSE
 fi
 SET_PERM_RM -msgdi
 }
@@ -7539,17 +7582,14 @@ fi
 
 IPWIFIPS () {
 UIP "$MSGIAMM Wifi Patcher"
-if $MAGISK; then
-PTMFI "$IDWIFIP" "$IDAWIFIP" "$MIPSVE/wifi"
-MMPR -v "Wifi Patcher" "$VIPWIFIP" "$VCIPWIFIP" "Wifi Patcher - Patching WCNSS_qcom_cfg.ini To Increase Wifi Bandwidth, Disable Unnecessary Logging And Other Improvements (Although In Fact This Module Can Return The Standard Speed On Custom)"
-PWIFIP="$MODPATH/$MODID$MIPSVE/wifi"
-else
-BUCKUPER -s "$WCNSQCCFGI"
-PWIFIP="$IPVE/wifi"
-fi
-cp -f $MAGISKMP$IPVE/wifi/WCNSS_qcom_cfg.ini $TMPDIR
-EQCDFP="$TMPDIR/WCNSS_qcom_cfg.ini"
-sed -i "/END/d" $EQCDFP
+mkdir -p $TMPDIR/WIFIPatcher
+UIP "$MSGPNF"
+for FWCNSQCCFGI in $WCNSQCCFGI; do
+UIP "Found $(basename $FWCNSQCCFGI)" "$MSGPMIP"
+PSF="$TMPDIR/WIFIPatcher$FWCNSQCCFGI"
+mkdir -p `dirname $PSF`
+cp -f $MAGISKMP$FWCNSQCCFGI $PSF
+sed -i "/END/d" $PSF
 QCDFP "gChannelBondingMode24GHz" "1" "# Configures Channel Bonding in 2.4 GHz"
 QCDFP "gChannelBondingMode5GHz" "1" "# Configures Channel Bonding in 5 GHz"
 QCDFP "gEnablePowerSaveOffload" "4" "# Enable Power Save Offload"
@@ -7558,8 +7598,18 @@ QCDFP "sae_enabled" "1" "# SAE WPA3\n# 0: Disable SAE WPA3\n# 1: Enable SAE WPA3
 QCDFP "gEnablefwlog" "0" "# Firmware log mode\n# Valid values are 0,1,2\n# 0=Disable, 1=WMI, 2=DIAG"
 QCDFP "gEnablePacketLog" "0" "# Enable pkt log\n# 1 - enable, 0 - disable"
 QCDFP "gSkipDfsChannelInP2pSearch" "0" "# Skip DFS Channel in case of P2P Search\n# 0 - disable (Scan DFS Channel in P2P Search), 1 - enable (Skip DFS Channel)"
-echo -e "\nEND" >> $EQCDFP
-cp -f $TMPDIR/WCNSS_qcom_cfg.ini $PWIFIP
+echo -e "\nEND" >> $PSF
+UIP "$MSGFFAP"
+done
+if $MAGISK; then
+PTMFI "$IDWIFIP" "$IDAWIFIP" "$MIPSVE/wifi"
+MMPR -v "Wifi Patcher" "$VIPWIFIP" "$VCIPWIFIP" "Wifi Patcher - Patching WCNSS_qcom_cfg.ini To Increase Wifi Bandwidth, Disable Unnecessary Logging And Other Improvements (Although In Fact This Module Can Return The Standard Speed On Custom)"
+cp -rf $TMPDIR/$MODID/* $MODPATH/$MODID
+MOVERPATH
+else
+BUCKUPER -s "$WCNSQCCFGI"
+cp -f $TMPDIR/WIFIPatcher$MIPSVE/* $IPVE; cp -f $TMPDIR/WIFIPatcher$MIPSE/* $IPSE
+fi
 SET_PERM_RM -msgdi
 }
 
@@ -7644,9 +7694,8 @@ UIP "Set Rule IpTables Success!"
 else
 UIP "Set Rule IpTables Fail!"
 fi
-else
-SET_PERM_RM -msgdi
 fi
+SET_PERM_RM -msgdi
 }
 
 IPNT () {
@@ -8371,10 +8420,7 @@ fi
 
 IPJITCS () {
 UIP "$MSGIAMM Just In Time Compiler"
-if $BOOTMODE; then
-UIP -s "Choose Variant:" "$MSGVU ReGenerate Now" "$MSGVD ReGenerate Lates From Terminal"
-if KEYCHOOSE; then cmd package compile -m speed -a | sed -e "s/ / - /;s/\[//;s/\]//;s/^/$MSGSD Optimize: /g"; else touch $IPDADB/jitc-service-off; fi
-fi
+touch $IPDADB/jitc-service-off
 PTMFI "$IDJITC" "$IDAJITC" "$MIPSB"
 $ECHO "#!$MIPSB/sh
 
@@ -8406,9 +8452,9 @@ $MSGCS
 read opt
 echo
 case \$opt in
-f | F) clear; DF -s; cmd package compile -m speed -f -a | sed \"s/ / - /;s/\[//;s/\]//;s/^/$MSGSD Optimize: /g\"; DF -e;;
-l | L) clear; DF -s; cmd package compile -m speed -a | sed \"s/ / - /;s/\[//;s/\]//;s/^/$MSGSD Optimize: /;s/: Error: - / Error: /g\"; DF -e;;
-r | R) clear; DF -s; cmd package compile --reset -a | sed \"s/ / - /;s/\[//;s/\]//;s/^/$MSGSD Reset: /g\"; DF -e;;
+f | F) clear; echo Starting Optimization...; DF -s; cmd package compile -m speed -f -a; echo Optimization Finish; DF -e;;
+l | L) clear; echo Starting Optimization...; DF -s; cmd package compile -m speed -a; echo Optimization Finish; DF -e;;
+r | R) clear; echo Starting Reset...; DF -s; cmd package compile --reset -a; echo Reset Finish; DF -e;;
 s | S) [ ! -f $IPDADB/jitc-service-off ] && touch $IPDADB/jitc-service-off || rm -f $IPDADB/jitc-service-off; OPTIONS;;
 q | Q) exit 0;;
 *) OPTIONS;;
@@ -8432,18 +8478,18 @@ UIP "Usage:" "Run \"su -c JITC\" In Terminal On BOOTMODE"
 
 } #
 
-{ #Other: FA/LED/FSFM/PSS/UAA/SBU/SHS
+{ #Other: FA/LED/PSS/UAA/SBU/SHS
 
 IPFPA () {
-if FINDER -aiopbak "$IPSUKL/uinput-fpc.kl $IPSUKL/uinput-gf.kl $IPSUKL/uinput-goodix.kl $IPVUKL/uinput-fpc.kl $IPVUKL/uinput-gf.kl $IPVUKL/uinput-goodix.kl"; then
+if FINDER -aiopbak "$UINPUTKL"; then
 UIP -s "$MSGFI Fingerprint Actions, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "$MSGRMIP"
-BUCKUPER -r "$IPSUKL/uinput-fpc.kl $IPSUKL/uinput-gf.kl $IPSUKL/uinput-goodix.kl $IPVUKL/uinput-fpc.kl $IPVUKL/uinput-gf.kl $IPVUKL/uinput-goodix.kl"
+BUCKUPER -r "$UINPUTKL"
 UIP "$MSGDRM"
 fi
 else
-if [ -f $IPSUKL/uinput-fpc.kl ] || [ -f $IPSUKL/uinput-gf.kl ] || [ -f $IPSUKL/uinput-goodix.kl ] || [ -f $IPVUKL/uinput-fpc.kl ] || [ -f $IPVUKL/uinput-gf.kl ] || [ -f $IPVUKL/uinput-goodix.kl ]; then
+if FINDER "$UINPUTKL"; then
 UCSA -ent "$MSGIP Fingerprint Actions $VIPFPA?" "IPFPAS" "$IDFPA"
 fi
 fi
@@ -8472,20 +8518,26 @@ fi
 done
 if $FINGERVARIANT; then
 UIP "$MSGIAMM Fingerprint Actions"
-mkdir -p $TMPDIR/FingerprintActions$MIPSVUKL $TMPDIR/FingerprintActions$MIPSUKL
-for kln in fpc gf goodix; do
-if [ -f $MAGISKMP$IPSUKL/uinput-$kln.kl ]; then cp -f $MAGISKMP$IPSUKL/uinput-$kln.kl $TMPDIR/FingerprintActions/$MIPSUKL; sed -i "/96/d;/102/d" $TMPDIR/FingerprintActions/$MIPSUKL/uinput-$kln.kl; echo -e "key 96 $NAMEKEYFUNCTION\nkey 102 $NAMEKEYFUNCTION" >> $TMPDIR/FingerprintActions/$MIPSUKL/uinput-$kln.kl; fi
-if [ -f $MAGISKMP$IPVUKL/uinput-$kln.kl ]; then cp -f $MAGISKMP$IPVUKL/uinput-$kln.kl $TMPDIR/FingerprintActions/$MIPSVUKL; sed -i "/96/d;/102/d" $TMPDIR/FingerprintActions/$MIPSVUKL/uinput-$kln.kl; echo -e "key 96 $NAMEKEYFUNCTION\nkey 102 $NAMEKEYFUNCTION" >> $TMPDIR/FingerprintActions/$MIPSVUKL/uinput-$kln.kl; fi
+mkdir -p $TMPDIR/FingerprintActions
+UIP "$MSGPNF"
+for FUINPUTKL in $UINPUTKL; do
+UIP "Found $(basename $FUINPUTKL)" "$MSGPMIP"
+PSF="$TMPDIR/FingerprintActions$FUINPUTKL"
+mkdir -p `dirname $PSF`
+cp -f $MAGISKMP$FUINPUTKL $PSF
+sed -i "/96/d;/102/d" $PSF
+echo -e "\nkey 96 $NAMEKEYFUNCTION\nkey 102 $NAMEKEYFUNCTION" >> $PSF
+UIP "$MSGFFAP"
 done
 if $MAGISK; then
 PTMFI "$IDFPA"
 cp -rf $TMPDIR/$MODID/* $MODPATH/$MODID
 MMPR -v "Fingerprint Actions" "$VIPFPA" "$VCIPFPA" "This Module Makes The Fingerprint Scanner Work Like The Power Button/Lock/Unlock The Screen/Reboot Menu With A Long Press/etc - Set On: $NAMEKEYFUNCTION"
+MOVERPATH
 else
 BUCKUPER -s "$IPSUKL/uinput-fpc.kl $IPSUKL/uinput-gf.kl $IPSUKL/uinput-goodix.kl $IPVUKL/uinput-fpc.kl $IPVUKL/uinput-gf.kl $IPVUKL/uinput-goodix.kl"
 cp -f $TMPDIR/FingerprintActions$MIPSVUKL/* $IPSUKL; cp -f $TMPDIR/FingerprintActions$MIPSUKL/* $IPVUKL
 fi
-MOVERPATH
 SET_PERM_RM -msgdi
 fi
 }
@@ -8508,7 +8560,7 @@ MMPR -v "LED Light Off" "$VIPLEDLO" "$VCIPLEDLO" "LED Light Off"; SET_PERM_RM -m
 IPLEDLA () {
 if $MAGISK; then
 if [ -f $LEDRED ] || [ -f $LEDGREEN ] || [ -f $LEDBLUE ] || [ -f $LEDWHITE ] || [ -f $FLASHLIGHT ] || [ -f $BUTTONBACKLIGHT ]; then
-UCSA -ent "$MSGIP LED Light Animation $VIPLEDLA?" "IPLEDLAS" "$IDLEDLA"
+UCSA -ent "$MSGIPL LED Light Animation $VIPLEDLA?" "IPLEDLAS" "$IDLEDLA"
 fi
 fi
 }
@@ -8875,19 +8927,6 @@ REMOVER -mm "$MODID"
 fi
 }
 
-IPFSLFM () {
-if $MAGISK && [ $BOOTMODE != true ] && $MIUI; then
-UCSA "$MSGIPL Fix Softloop For Miui (If DPI 800+) $VIPFSLFM?" "IPFSLFMS" "$IDFSLFM"
-fi
-}
-
-IPFSLFMS () {
-UIP "$MSGIAMM Fix Softloop For Miui"
-PTMFI "$IDFSLFM" "$IDAFSLFM"
-MSSERVICE -s "wm density reset; rm -rf $MODPATH/$MODID"
-MMPR -v "Fix Softloop For Miui" "$VIPFSLFM" "$VCIPFSLFM" "Fix Softloop For Miui If DPI 800+"; SET_PERM_RM -msgdi
-}
-
 IPPSS () {
 UCSA "$MSGIPL Proximity Sensor Switcher $VIPPSS?" "IPPSSS" "$IDPSS"
 }
@@ -9147,7 +9186,7 @@ MMPR -v "Force Unknown Sources Switcher" "$VIPFUSS" "$VCIPFUSS" "Force Install A
 }
 
 IPMUS () {
-if [ $MIUI != true ]; then UCSA "$MSGIP Multi Users Switcher $VIPMUS?" "IPMUSS" "$IDMUS"; fi
+if [ $ALLUI != true ]; then UCSA "$MSGIP Multi Users Switcher $VIPMUS?" "IPMUSS" "$IDMUS"; fi
 }
 
 IPMUSS () {
@@ -9495,7 +9534,7 @@ SET_PERM_RM -msgdi
 }
 
 IPFHWOS () {
-if $MAGISK; then
+if $MAGISK && [ $OPLUS != true ] && [ $ONEUI != true ]; then
 UCSA "$MSGIP Force HW Overlays Switcher $VIPFHWOS?" "IPFHWOSS" "$IDFHWOS"
 fi
 }
@@ -9555,6 +9594,7 @@ fi
 IPFULIRS () {
 if CHECKER "-device" "dipper" || CHECKER "-device" "beryllium"; then
 if FINDER -aiopbak "$IPPVO/FaceUnlockService__auto_generated_rro_vendor.apk"; then
+if [ $MIUI != true ]; then
 UIP -s "$MSGFI Face UnLock IR Switcher, Remove?" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 UIP "$MSGRMIP"
@@ -9564,6 +9604,7 @@ fi
 else
 if [ -f $IPSEP/com.motorola.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-org.pixelexperience.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.crdroid.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.spark.faceunlock.xml ] || [ -f $IPSEP/privapp-permissions-com.aospextended.faceunlock.xml ] || [ -f $IPSEP/privapp_whitelist_co.aospa.sense.xml ]; then
 UCSA "$MSGIP Face UnLock IR Switcher $VIPFULIRS?" "IPFULIRSS" "$IDFULIRS"
+fi
 fi
 fi
 fi
@@ -9726,7 +9767,7 @@ fi
 }
 
 IPGPURS () {
-if [ "$KERNEL" = "5.10.*" ]; then
+if grep -E "ro.build.kernel.version=5.10.*|ro.build.kernel.version=5.15.*|ro.build.kernel.version=6.*|ro.build.kernel.id=5.10.*|ro.build.kernel.id=5.15.*|ro.build.kernel.id=6.*" $PROPFILES >/dev/null; then
 UCSA -a "OpenGL OpenGL-Skia OpenGL-Skia-Vulkan" "Choose GPU Rendering" "Rendering:" "OpenGL-Skia-Vulkan"
 else
 UCSA -a "OpenGL OpenGL-Skia" "Choose GPU Rendering" "Rendering:" "OpenGL-Skia"
@@ -9756,7 +9797,7 @@ rm -f $IPPSO/ShutdownBatteryTemperature*.apk
 UIP "$MSGDRM"
 fi
 else
-if [ $MIUI != true ] && [ "$ASDK" -ge 27 ]; then UCSA -ent "$MSGIP Shutdown Battery Temperature $VIPSBT?" "IPSBTS" "$IDSBT"; fi
+if [ $ALLUI != true ] && [ "$ASDK" -ge 27 ]; then UCSA -ent "$MSGIP Shutdown Battery Temperature $VIPSBT?" "IPSBTS" "$IDSBT"; fi
 fi
 }
 
@@ -9776,16 +9817,31 @@ SET_PERM_RM -msgdi
 fi
 }
 
-IPFI () {
+IPFDS () {
 if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi;
-if $MAGISK; then UCSA "$MSGIPL Force Idle $VIPFI?" "IPFIS" "$IDFI"; fi
+if $MAGISK; then UCSA "$MSGIP Force Deep Sleep $VIPFDS?" "IPFDSS" "$IDFDS"; fi
 }
 
-IPFIS () {
-UIP "$MSGIAMM Force Idle"
-PTMFI "$IDFI"
-MSSERVICE -s "$SPGLOBAL aggressive_idle_enabled 1; $SPGLOBAL aggressive_standby_enabled 1; dumpsys deviceidle force-idle; dumpsys deviceidle enable; dumpsys deviceidle force-idle; dumpsys deviceidle enable"
-MMPR -v "Force Idle" "$VIPFI" "$VCIPFI" "Force Idle"; SET_PERM_RM -msgdi
+IPFDSS () {
+UIP -s "Choose Variant:" "Light Idle" "Deep Idle"
+if KEYCHOOSE; then
+MSGFDS="Light Idle"
+FDSC="$SPGLOBAL device_idle_constants light_after_inactive_to=5000,light_pre_idle_to=30000,light_idle_to=43200000,light_idle_factor=2.0,light_max_idle_to=86400000,light_idle_maintenance_min_budget=10000,light_idle_maintenance_max_budget=30000,min_light_maintenance_time=10000,min_deep_maintenance_time=30000,inactive_to=2592000000,sensing_to=0,locating_to=0,location_accuracy=2000,motion_inactive_to=2592000000,idle_after_inactive_to=1800000,idle_pending_to=300000,max_idle_pending_to=600000,idle_pending_factor=2.0,quick_doze_delay_to=86400000,idle_to=3600000,max_idle_to=21600000,idle_factor=2.0,min_time_to_alarm=60000,max_temp_app_whitelist_duration=300000,mms_temp_app_whitelist_duration=60000,sms_temp_app_whitelist_duration=20000,notification_whitelist_duration=30000,wait_for_unlock=false,pre_idle_factor_long=1.67,pre_idle_factor_short=0.33"
+else
+MSGFDS="Deep Idle"
+FDSC="$SPGLOBAL device_idle_constants light_after_inactive_to=30000,light_pre_idle_to=35000,light_idle_to=30000,light_idle_factor=1.7,light_max_idle_to=50000,light_idle_maintenance_min_budget=28000,light_idle_maintenance_max_budget=300000,min_light_maintenance_time=5000,min_deep_maintenance_time=10000,inactive_to=30000,sensing_to=0,locating_to=0,location_accuracy=2000,motion_inactive_to=86400000,idle_after_inactive_to=0,idle_pending_to=30000,max_idle_pending_to=60000,idle_pending_factor=2.1,quick_doze_delay_to=60000,idle_to=3600000,max_idle_to=21600000,idle_factor=1.7,min_time_to_alarm=1800000,max_temp_app_whitelist_duration=20000,mms_temp_app_whitelist_duration=20000,sms_temp_app_whitelist_duration=10000,notification_whitelist_duration=20000,wait_for_unlock=true,pre_idle_factor_long=1.67,pre_idle_factor_short=0.33"
+fi
+UIP "$MSGIAMM Force Deep Sleep"
+PTMFI "$IDFDS"
+echo "$SPGLOBAL aggressive_idle_enabled 1
+$SPGLOBAL aggressive_standby_enabled 1
+$SDGLOBAL device_idle_constants
+$SDGLOBAL device_idle_constants_user
+dumpsys deviceidle force-idle
+dumpsys deviceidle enable light
+dumpsys deviceidle enable deep
+$FDSC" > $MODPATH/$MODID/service.sh
+MMPR -v "Force Deep Sleep" "$VIPFDS" "$VCIPFDS" "Force And Enhancement Deep Sleep - Set On: $MSGFDS"; SET_PERM_RM -msgdi
 }
 
 } #
@@ -9798,9 +9854,13 @@ PRESETS () {
 GESTURES=true
 if [ -d $MODPATH ] && $MAGISK && $MMUPDC; then for MMC in $(ls $MODPATH); do if [ -d "$MODPATH/$MMC" ]; then CEMODID=""; SCEMODID=""; MSGCEMODID=""; UCSA -ent "Checking Update?" "MMUPD_LIST" && break; fi; done; fi
 UIP -s "UI: Show All Categories" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then
+if [ $ONEUI != true ]; then
 UIP -s "UI: Pills/NavigationBar/Gestures" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS1; fi
+fi
+if [ $ALLUI != true ]; then
 UIP -s "UI: StatusBar/QuickSettings" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS2; fi
 UIP -s "UI: LockScreen/AlwaysOnDisplay" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS3; fi
+fi
 UIP -s "UI: Gboard/GboardThemes" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS4; fi
 UIP -s "UI: BootAnimation/MediaUISounds/Emoji" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS5; fi
 UIP -s "UI: RoundedUI/BIP/BackgroundBlur/Other" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UI_PRESETS6; fi
@@ -9812,7 +9872,7 @@ GTRRRM
 if $TESTMODE; then UIP -s "Overlay Compile" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then TEST_PRESETS; fi; fi
 UIP -s "Net: GPS/WIFI/TTL/DNS/APAUSBTF" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then NET_PRESETS; fi
 UIP -s "Utilities: BB/SELS/CC/MMFR/Detach/PIF/JITC" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then UTILITIES_PRESETS; fi
-UIP -s "Other: FA/LED/FSFM/PSS/UAA/SBU/SHS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then OTHER_PRESETS; fi
+UIP -s "Other: FA/LED/PSS/UAA/SBU/SHS" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then OTHER_PRESETS; fi
 IPHF
 if [ $ENDMODE != true ]; then MSGNUS="$MSGEND"; fi
 UIP -s "Tweaks: FGS/EHAP/BP/KL/4XMSAA/HWO/UGMSD/USGP" "$MSGVU Yes $MSGEFTC" "$MSGVD No $MSGNUS"; if KEYCHOOSE; then MSGNUS="(/)"; TWEAKS_PRESETS; fi
@@ -9871,6 +9931,7 @@ IPSUIRSRS
 IPGPPM
 IPFDM
 IPAS
+IPFDPIS
 }
 
 AUDIO_PRESETS () {
@@ -9930,7 +9991,6 @@ OTHER_PRESETS () {
 IPFPA
 IPLEDLO
 IPLEDLA
-IPFSLFM
 IPPSS
 IPUAA
 SBATTERYSTATUS
@@ -9960,7 +10020,7 @@ IPUGMSD
 IPUSGP
 IPGPUR
 IPSBT
-IPFI
+IPFDS
 }
 
 } #
