@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 20.04.24 (111) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/12.12.2024/AIOPFMD-12.12.24-%28112%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/155">TG</a>
+* Версия AIOPFMD: 30.12.24 (113) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.12.2024/AIOPFMD-30.12.24-%28113%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/157">TG</a>
 * Общее/что нужно/может потребоваться:
 	- Нужен официальный MAGISK v27.0/v28.1 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm и/или Arm64;
@@ -19,6 +19,17 @@
 <details>
   <summary>All Changelog</summary>
 
+#### 30.12.24 (113) ####
+* Изменен поиск главных значений в Show Battery Status и он так же может поделить вас на 0 при условии что значение сломано в системе;
+* Логи теперь создаются напрямую в папку логов а не промежуточно в /sdcard;
+* Zygisk Play Integrity Fix обновлен до v18.2;
+* Steven Hosts обновлен до v1.5.8;
+* SH Hosts обновлен до v3.42 и исправлена его установка;
+* Zygisk lSPosed обновлен до v1.10.1 (7162);
+* Почти всем модулям добавлен кликабельный action.sh для MAGISK v28.1 (пока-что без особого функционала);
+* Для лучшей кастомизации на COS/OOS используйте Oxygen Customizer и Lucky Tool (остальным соболезную);
+* Media UI Sounds исправлена ошибка копирования хотя всё и работало;
+* Пару других мелких правок.
 #### 12.12.24 (112) ####
 * Добавлена поддержка Android 15 (как есть и без полного теста на чистом кастоме);
 * Добавлена поддержка MAGISK v28.1:
@@ -89,7 +100,7 @@
 	- Добавил маунт в /my_product/media/bootanimation;
 	- Добавил маунт в /oem/media;
 	- Включил показ для BBK (сомнительная полезность);
-* Zygisk Play Integrity Fix обновлен до v17.9;
+* Zygisk Play Integrity Fix обновлен до v18.0;
 * IOS Emoji обновлен до v1.5 - обновлен файл от iOS 18.
 * Zygisk Detach обновлен до v1.18.0;
 * Just In Time Compiler обновлен до v1.3:

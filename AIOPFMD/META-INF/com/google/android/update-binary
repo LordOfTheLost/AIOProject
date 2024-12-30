@@ -1,8 +1,18 @@
 #!/sbin/sh
 
 { #Default Var
-set -x && exec 2>/sdcard/AIO-$( date +"%d-%H:%M:%S" ).log
-VCAIOPFMD="112"; VAIOPFMD="12.12.24 ($VCAIOPFMD)"
+set -x
+STORAGE="/data/media/0"
+if [ -d $STORAGE/AIOLogs ]; then
+PLOGS="$STORAGE/AIOLogs/$( date +"%Y-%m" )"
+elif [ -d $STORAGE/*/AIOLogs ]; then
+PLOGS="$STORAGE/*/AIOLogs/$( date +"%Y-%m" )"
+else
+PLOGS="$STORAGE/AIOLogs/$( date +"%Y-%m" )"
+fi
+mkdir -p $PLOGS
+exec 2>$PLOGS/AIO-$( date +"%d-%H:%M:%S" ).log
+VCAIOPFMD="113"; VAIOPFMD="30.12.24 ($VCAIOPFMD)"
 IPDLTMP="/data/local/tmp"
 LOCALTMPDIR="$IPDLTMP/AIOPFMD"
 DEVTMPDIR="/dev/AIOPFMD"
@@ -84,8 +94,8 @@ IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
 IDVAAH="AdAwayHosts"; VIPVAAH="v5.9"; VCIPVAAH="50"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v17.2-240906"; VCIPVSH="172"
 IDEH="EnergizedHosts"; VIPEH="v296.21"; VCIPEH="11"
-IDSHH="SHHosts"; VIPSHH="v3.40"; VCIPSHH="340"
-IDSH="StevenHosts"; VIPSH="v1.5.5"; VCIPSH="155"
+IDSHH="SHHosts"; VIPSHH="v3.42"; VCIPSHH="342"
+IDSH="StevenHosts"; VIPSH="v1.5.8"; VCIPSH="158"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; IDAGPSP="optmizedgpsconf"; VIPGPSP="v1.2"; VCIPGPSP="3"
 IDWIFIP="WIFIPatcher"; IDAWIFIP="wifi-bonding"; VIPWIFIP="v1.5"; VCIPWIFIP="6"
@@ -100,8 +110,8 @@ IDMMFR="MagiskManagerForRecovery"; IDAMMFR="mm MMFR"; VIPMMFR="v1.4"; VCIPMMFR="
 IDJITC="JustInTimeCompiler"; IDAJITC="JIT PackageCompileSpeed"; VIPJITC="v1.3"; VCIPJITC="4"
 IDDETACH="zygisk-detach" VIPDETACH="v1.18.0"; VCIPDETACH="22"
 IDDETACHA="zygisk-detach-app" VIPDETACHA="v1.14.0"; VCIPDETACHA="17"
-IDPIF="playintegrityfix" VIPPIF="v18.0"; VCIPPIF="18000"
-IDLSP="zygisk_lsposed"; VIPLSP="v1.10.1 (7159)"; VCIPLSP="7159"
+IDPIF="playintegrityfix" VIPPIF="v18.2"; VCIPPIF="18200"
+IDLSP="zygisk_lsposed"; VIPLSP="v1.10.1 (7162)"; VCIPLSP="7162"
 #Other: FA/LED/PSS/UAA/SBU/SHS
 IDFPA="FingerprintActions"; VIPFPA="v1.3"; VCIPFPA="4"
 IDLEDLO="LEDLightOff"; IDALEDLO="ChargingLedLightOff ChargingLEDLightOff"; VIPLEDLO="v1.4"; VCIPLEDLO="5"
@@ -142,7 +152,7 @@ PATCHMODE
 UIP "Copy AIOPFMD $VAIOPFMD To TMPDIR" "$MSGPMODE, $MSGSRW & $MSGSMM"
 (unzip -oq $FILE BB.zip Addons.tar.xz -d $DEVTMPDIR 2>$NULL
 unzip -oq $BB.zip -d $DEVTMPDIR 2>$NULL; rm -f $BB.zip
-chmod -R 0777 $LOCALTMPDIR $DEVTMPDIR $PLOGS
+chmod -R 0777 $LOCALTMPDIR $DEVTMPDIR
 cp -f $BB/busybox-$ARCH $BB/busybox
 $TAR -xf $ADDONS.tar.xz -C $DEVTMPDIR; rm -f $ADDONS.tar.xz) &
 PRESETS
@@ -186,6 +196,8 @@ MSGPW="Please Wait..."
 MSGSAPW="Search App, $MSGPW"
 MSGIPI="$MSGIP"
 MSGWDI="Community"
+MSGAIODC="@AIOProject"
+MSGAIOSC="@AIOProject_Chat"
 MSGSC="Start Compile"
 MSGEC="End Compile"
 MSGCXML="<?xml version=\"1.0\" encoding=\"utf-8\"?>"
@@ -310,7 +322,6 @@ IPDMDE="/data/misc_de"
 IPDRESC="/data/resource-cache"
 IPDFF="/data/fonts/files"
 IPDFC="/data/fonts/config"
-STORAGE="/data/media/0"
 ACXML="$(find $ALLDP -type f -name "audio_configs*.xml")"
 APIXML="$(find $ALLDP -type f -name "audio_platform_info*.xml")"
 AECONFXML="$(find $ALLDP -type f -name "*audio_effects*.conf" -o -name "*audio_effects*.xml")"
@@ -342,13 +353,6 @@ PATCHMODEFILE="$(find $STORAGE/*/PATCHMODE.conf)"
 else
 touch $STORAGE/PATCHMODE.conf
 PATCHMODEFILE="$STORAGE/PATCHMODE.conf"
-fi
-if [ -d $STORAGE/AIOLogs ]; then
-PLOGS="$STORAGE/AIOLogs/$( date +"%Y-%m" )"
-elif [ -d $STORAGE/*/AIOLogs ]; then
-PLOGS="$STORAGE/*/AIOLogs/$( date +"%Y-%m" )"
-else
-PLOGS="$STORAGE/AIOLogs/$( date +"%Y-%m" )"
 fi
 PMODE="$(GET_FILE_PROP -pm "PMODE")"
 HFDURATION="$(GET_FILE_PROP -pm "HFMODE")"
@@ -383,7 +387,7 @@ if [ -d $IPSMAU ]; then IPPMU="$IPSMAU"; MIPPMU="$MIPSMAU"; elif [ -d $IPSPMAU ]
 if [ -d $IPSPM ]; then IPPM="$IPSPM"; MIPPM="$MIPSPM"; elif [ -d $IPSM ]; then IPPM="$IPSM"; MIPPM="$MIPSM"; fi
 if [ ! -d $IPSXB ] && [ $BOOTMODE != true ] && $SYSTEMRO; then mkdir -p $IPSXB; IPPSXB=$IPSXB; IPPSXBM=$MIPSXB; elif [ ! -d $IPSXB ] && $BOOTMODE; then IPPSXB=$IPSB; IPPSXBM=$MIPSB; else IPPSXB=$IPSXB; IPPSXBM=$MIPSXB; fi
 if [ -d $LOCALTMPDIR ] || [ -d $DEVTMPDIR ]; then rm -rf $LOCALTMPDIR $DEVTMPDIR; fi
-mkdir -p $LOCALTMPDIR $DEVTMPDIR $PLOGS
+mkdir -p $LOCALTMPDIR $DEVTMPDIR
 if [ $BOOTMODE != true ]; then
 for path in $ALLDP; do
 files=$(find "$path" -type f -name "build.prop" 2>$NULL)
@@ -1257,10 +1261,9 @@ GESTURES=false
 if KEYCHOOSE; then PRESETS; END; else ENDMODE=false; END; fi
 else
 UNMOUNT
-UIP "Clear TMPDIR, Copy Logs & Exit"; UIP -cs
+UIP "Clear TMPDIR & Exit"; UIP -cs
 if $BLINKMODE; then echo -n 0 > $SYSCL/$LEDCOLOR/blink; fi
 rm -rf $LOCALTMPDIR $DEVTMPDIR
-cp -rf /sdcard/AIO-*.log $PLOGS/ && rm -f /sdcard/AIO-*.log
 exit 0
 fi
 }
@@ -1581,9 +1584,8 @@ case $1 in
 -v) echo -e "versionCode=$4\nauthor=$MSGWDI\ndescription=$5" >> $MMPROP;;
 -vc) echo -e "versionCode=$4\nauthor=$5\ndescription=$6" >> $MMPROP;;
 -vcs) echo -e "versionCode=$4\nauthor=$5\ndescription=$6\nsupport=$7" >> $MMPROP;;
--vcuj) echo -e "versionCode=$4\nauthor=$5\ndescription=$6\nupdateJson=$7" >> $MMPROP;;
--vs) echo -e "author=$MSGWDI\ndescription=$4\nsupport=$5" >> $MMPROP;;
 esac
+echo -e "#!/bin\sh\necho -e \"$MSGCS\\\n$MSGSD $2 $3 ($4)\\\n$MSGSD Installed From AIO $VAIOPFMD\\\n$MSGSD AIO Chanel: $MSGAIODC\\\n$MSGSD AIO Chat: $MSGAIOSC\\\n$MSGCS\"" > $IPMM/$MODID/action.sh
 }
 
 MSSERVICE () {
@@ -3088,11 +3090,11 @@ UIP "$MSGIAM Media UI Sounds"
 UZTPN "MediaUISounds"
 if $MASIKALT; then cp -f $LOCALTMPDIR/MediaUISounds/MasikAlt/* $LOCALTMPDIR/MediaUISounds/Masik; fi
 if $ONEPLUSALT; then cp -f $LOCALTMPDIR/MediaUISounds/OnePlusAlt/$UCSFNMC.ogg $LOCALTMPDIR/MediaUISounds/OnePlus$MUIC/Effect_Tick.ogg; fi
-cp -f $LOCALTMPDIR/$MODID/$FMUIS$MUIC/ChargingStarted.ogg $LOCALTMPDIR/$MODID/$FMUIS$MUIC/ChargingReverse.ogg
-cp -f $LOCALTMPDIR/$MODID/$FMUIS$MUIC/ChargingStarted.ogg $LOCALTMPDIR/$MODID/$FMUIS$MUIC/charging.ogg
-cp -f $LOCALTMPDIR/$MODID/$FMUIS$MUIC/WirelessChargingStarted.ogg $LOCALTMPDIR/$MODID/$FMUIS$MUIC/charge_wireless.ogg
-cp -f $LOCALTMPDIR/$MODID/$FMUIS$MUIC/camera_click.ogg $LOCALTMPDIR/$MODID/$FMUIS$MUIC/screenshot.ogg
-cp -f $LOCALTMPDIR/$MODID/$FMUIS$MUIC/camera_click.ogg $LOCALTMPDIR/$MODID/$FMUIS$MUIC/screenshot_kr.ogg
+cp -f $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/ChargingStarted.ogg $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/ChargingReverse.ogg
+cp -f $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/ChargingStarted.ogg $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/charging.ogg
+cp -f $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/WirelessChargingStarted.ogg $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/charge_wireless.ogg
+cp -f $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/camera_click.ogg $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/screenshot.ogg
+cp -f $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/camera_click.ogg $LOCALTMPDIR/MediaUISounds/$FMUIS$MUIC/screenshot_kr.ogg
 if $MAGISK; then
 PTMFI "$IDMUIS" "$IDAMUIS" "$MIPPMU"
 cp -f $LOCALTMPDIR/$MODID/$FMUIS$MUIC/* $IPMM/$MODID$MIPPMU
@@ -8933,10 +8935,12 @@ fi
 }
 
 SBATTERYSTATUSS () {
-if [ -f /sys/class/power_supply/battery/charge_full_design ]; then
-POWERSUPPLYCHARGEFULLDESIGN="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CHARGE_FULL_DESIGN")"
-elif [ -f /sys/class/power_supply/battery/constant_charge_current_max ]; then
-POWERSUPPLYCHARGEFULLDESIGN="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CONSTANT_CHARGE_CURRENT_MAX")"
+POWERSUPPLYCHARGEFULLDESIGNC="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CHARGE_FULL_DESIGN")"
+POWERSUPPLYCONSTANTCHARGECURRENTMAXC="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CONSTANT_CHARGE_CURRENT_MAX")"
+if [ -n "$POWERSUPPLYCHARGEFULLDESIGNC" ]; then
+POWERSUPPLYCHARGEFULLDESIGN="$POWERSUPPLYCHARGEFULLDESIGNC"
+else
+POWERSUPPLYCHARGEFULLDESIGN="$POWERSUPPLYCONSTANTCHARGECURRENTMAXC"
 fi
 BATTERYREMAINING="$(GET_FILE_PROP -s "$BATTERYSTAT" "POWER_SUPPLY_CHARGE_FULL")"
 BATTERYREMAINING="$((BATTERYREMAINING/1000))"
