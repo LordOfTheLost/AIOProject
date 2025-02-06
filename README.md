@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 30.12.24 (113) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/30.12.2024/AIOPFMD-30.12.24-%28113%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/157">TG</a>
+* Версия AIOPFMD: 06.02.25 (114) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/06.02.2025/AIOPFMD-06.02.25-%28114%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/159">TG</a>
 * Общее/что нужно/может потребоваться:
 	- Нужен официальный MAGISK v27.0/v28.1 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm и/или Arm64;
@@ -14,11 +14,19 @@
 	- Audio Library Crackling Fix если есть проблемы с системными звуками/уведомлениями (хрип или треск) - ставиться автоматом если надо;
 	- Поддержки KernelSU, Magisk Delta, Magisk Alpha, Kitsune Mask, APatch и прочей такой хуеты нет и не будет (пользуйтесь SuperSU или KingoRoot).
 * В общем что есть: Много патчей/скриптов в одном архиве с форсовой установкой и прочими огромными улучшениями и добавлениями.
-* В данный момент AIOPFMD имеет 90+ пунктов в которых 200+ основных выборов и 500+ в режиме удаления в зависимости от того что найдет.<br>
+* В данный момент AIOPFMD имеет 90+ пунктов в которых 200+ основных выборов и 500+ в режиме удаления в зависимости от того что найдет патч.<br>
 
 <details>
   <summary>All Changelog</summary>
-
+#### 06.02.25 (114) ####
+* Zygisk lSPosed обновлен до v1.10.1 (7169);
+* SH Hosts обновлен до v3.44;
+* Steven Hosts обновлен до v1.6.4;
+* Zygisk Detach обновлен до v1.19.3;
+* Brutal Busybox обновлен до v1.38.0.1;
+* ViperFX обновлен до v2.8 - обновлен APK и драйвера;
+* Zygisk Play Integrity Fix обновлен до v18.5;
+* Оптимизация и переделывание некоторых основных переменных.
 #### 30.12.24 (113) ####
 * Изменен поиск главных значений в Show Battery Status и он так же может поделить вас на 0 при условии что значение сломано в системе;
 * Логи теперь создаются напрямую в папку логов а не промежуточно в /sdcard;

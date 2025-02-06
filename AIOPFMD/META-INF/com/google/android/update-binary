@@ -12,7 +12,7 @@ PLOGS="$STORAGE/AIOLogs/$( date +"%Y-%m" )"
 fi
 mkdir -p $PLOGS
 exec 2>$PLOGS/AIO-$( date +"%d-%H:%M:%S" ).log
-VCAIOPFMD="113"; VAIOPFMD="30.12.24 ($VCAIOPFMD)"
+VCAIOPFMD="114"; VAIOPFMD="06.02.25 ($VCAIOPFMD)"
 IPDLTMP="/data/local/tmp"
 LOCALTMPDIR="$IPDLTMP/AIOPFMD"
 DEVTMPDIR="/dev/AIOPFMD"
@@ -28,8 +28,8 @@ BB="$DEVTMPDIR/BB"
 TAR="$BB/busybox tar"
 UNZIP="$BB/busybox unzip"
 ECHO="$BB/busybox echo"
-HEAD="$BB/busybox head"
 NULL="/dev/null"
+BOOTMODE=$(ps -A 2>$NULL | grep -q zygote && echo true || echo false)
 } #
 
 { #Version Or Date Of Patches In This Patch
@@ -79,7 +79,7 @@ IDFDM="ForceDarkMode"; VIPFDM="v1.1"; VCIPFDM="2"
 IDAS="AnimationScale"; VIPAS="v1.2"; VCIPAS="3"
 IDFDPIS="ForceDensitySwitcher"; VIPFDPIS="v1.1"; VCIPFDPIS="2"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS/DSM
-IDVFX="V4AFX"; IDAVFX="ViPER4AndroidFX ViPER4AndroidFX-Legacy ViPER4AndroidXHiFi viper4magisk ViPER4Android-RE"; VIPVFX="v2.7"; VCIPVFX="18"
+IDVFX="V4AFX"; IDAVFX="ViPER4AndroidFX ViPER4AndroidFX-Legacy ViPER4AndroidXHiFi viper4magisk ViPER4Android-RE"; VIPVFX="v2.8"; VCIPVFX="19"
 IDVFXDAK="V4AFXDAK"; IDAVFXDAK="V4AFXPresets"; VIPVFXDAK="v1.9"; VCIPVFXDAK="10"
 IDDA="DolbyAtmos"; VIPDA="v2.8"; VCIPDA="19"
 IDAIST="AIST"; VIPAIST="v2.0"; VCIPAIST="2000"
@@ -94,8 +94,8 @@ IDDAB="DisableAdBlocker"; VIPDAB="v1.0"; VCIPDAB="1"
 IDVAAH="AdAwayHosts"; VIPVAAH="v5.9"; VCIPVAAH="50"
 IDVSH="SystemlessHostsUnified"; VIPVSH="v17.2-240906"; VCIPVSH="172"
 IDEH="EnergizedHosts"; VIPEH="v296.21"; VCIPEH="11"
-IDSHH="SHHosts"; VIPSHH="v3.42"; VCIPSHH="342"
-IDSH="StevenHosts"; VIPSH="v1.5.8"; VCIPSH="158"
+IDSHH="SHHosts"; VIPSHH="v3.44"; VCIPSHH="344"
+IDSH="StevenHosts"; VIPSH="v1.6.4"; VCIPSH="164"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher"; IDAGPSP="optmizedgpsconf"; VIPGPSP="v1.2"; VCIPGPSP="3"
 IDWIFIP="WIFIPatcher"; IDAWIFIP="wifi-bonding"; VIPWIFIP="v1.5"; VCIPWIFIP="6"
@@ -103,15 +103,15 @@ IDTTLF="NFQTTL"; IDATTLF="nfqttl"; VIPTTLF="v2.8"; VCIPTTLF="19"
 IDNT="NetworkTweak"; VIPNT="v6.0"; VCIPNT="60"
 IDAPAUSBTF="APAndUSBTetheringFix"; IDAAPAUSBTF="APAUSBTF USBTF"; VIPAPAUSBTF="v1.0"; VCIPAPAUSBTF="1"
 #Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP
-IDBBB="BrutalBusyBox"; IDABBB="busybox-ndk busybox-brutal BuiltIn-BusyBox"; VIPBBB="v1.36.0.1"; VCIPBBB="13601"
+IDBBB="BrutalBusyBox"; IDABBB="busybox-ndk busybox-brutal BuiltIn-BusyBox"; VIPBBB="v1.38.0.1"; VCIPBBB="13801"
 IDSELS="SELinuxSwitcher"; IDASELS="SeLinuxChanger SELinuxChanger"; VIPSELS="v1.4"; VCIPSELS="5"
 IDCC="CacheCleaner"; VIPCC="v3.7"; VCIPCC="28"
 IDMMFR="MagiskManagerForRecovery"; IDAMMFR="mm MMFR"; VIPMMFR="v1.4"; VCIPMMFR="5"
 IDJITC="JustInTimeCompiler"; IDAJITC="JIT PackageCompileSpeed"; VIPJITC="v1.3"; VCIPJITC="4"
-IDDETACH="zygisk-detach" VIPDETACH="v1.18.0"; VCIPDETACH="22"
+IDDETACH="zygisk-detach" VIPDETACH="v1.19.3"; VCIPDETACH="26"
 IDDETACHA="zygisk-detach-app" VIPDETACHA="v1.14.0"; VCIPDETACHA="17"
-IDPIF="playintegrityfix" VIPPIF="v18.2"; VCIPPIF="18200"
-IDLSP="zygisk_lsposed"; VIPLSP="v1.10.1 (7162)"; VCIPLSP="7162"
+IDPIF="playintegrityfix" VIPPIF="v18.5"; VCIPPIF="18500"
+IDLSP="zygisk_lsposed"; VIPLSP="v1.10.1 (7169)"; VCIPLSP="7169"
 #Other: FA/LED/PSS/UAA/SBU/SHS
 IDFPA="FingerprintActions"; VIPFPA="v1.3"; VCIPFPA="4"
 IDLEDLO="LEDLightOff"; IDALEDLO="ChargingLedLightOff ChargingLEDLightOff"; VIPLEDLO="v1.4"; VCIPLEDLO="5"
@@ -143,7 +143,6 @@ IDFDS="ForceDeepSleep"; IDAFDS="ForceIdle DozeConfig_RVNS"; VIPFDS="v1.2"; VCIPF
 { #Functions
 
 AIOPFMD () {
-BOOT_DETECTED
 APMSGASD
 PARTITION_AND_MOUNTS
 IMPORTANT_VARIABLES
@@ -157,12 +156,6 @@ cp -f $BB/busybox-$ARCH $BB/busybox
 $TAR -xf $ADDONS.tar.xz -C $DEVTMPDIR; rm -f $ADDONS.tar.xz) &
 PRESETS
 END
-}
-
-BOOT_DETECTED () {
-[ -z $BOOTMODE ] && ps | grep zygote | grep -qv grep && BOOTMODE=true
-[ -z $BOOTMODE ] && ps -A 2>$NULL | grep zygote | grep -qv grep && BOOTMODE=true
-[ -z $BOOTMODE ] && BOOTMODE=false
 }
 
 APMSGASD () {
@@ -1124,38 +1117,18 @@ ZIPALIGN="$ADDONS/zipalign-$ARCH"
 ZIPPACKER="$ADDONS/zip-$ARCH";;
 -sel) if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUX=true; SELINUXS="Enforcing"; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUX=false; SELINUXS="Permissive"; fi;;
 -soc) echo -e "\nro.build.kernel.version=$(uname -r)" >> $ALLPROP
-SD617=$(grep "ro.board.platform=msm8952" $ALLPROP)
-SD625=$(grep "ro.board.platform=msm8953" $ALLPROP)
-SD660=$(grep "ro.board.platform=sdm660" $ALLPROP)
-SD662=$(grep "ro.board.platform=bengal" $ALLPROP)
-SD665=$(grep "ro.board.platform=trinket" $ALLPROP)
-SD670=$(grep "ro.board.platform=sdm670" $ALLPROP)
-SD690=$(grep "ro.board.platform=lito" $ALLPROP)
-SD710=$(grep "ro.board.platform=sdm710" $ALLPROP)
-SD720G=$(grep "ro.board.platform=atoll" $ALLPROP)
-SD730G=$(grep "ro.board.platform=sm6150" $ALLPROP)
-SD765G=$(grep "ro.board.platform=lito" $ALLPROP)
-SD810=$(grep "ro.board.platform=msm8994" $ALLPROP)
-SD820=$(grep "ro.board.platform=msm8996" $ALLPROP)
-SD835=$(grep "ro.board.platform=msm8998" $ALLPROP)
-SD845=$(grep "ro.board.platform=sdm845" $ALLPROP)
-SD855=$(grep "ro.board.platform=msmnile" $ALLPROP)
-SD865=$(grep "ro.board.platform=kona" $ALLPROP)
-SD888=$(grep "ro.board.platform=lahaina" $ALLPROP)
-SM6375=$(grep "ro.board.platform=holi" $ALLPROP)
-SM8450=$(grep "ro.board.platform=taro" $ALLPROP)
-SM8550=$(grep "ro.board.platform=kalama" $ALLPROP)
-SM8650AB=$(grep "ro.board.platform=pineapple" $ALLPROP)
-SM6450=$(grep "ro.board.platform=parrot" $ALLPROP)
-if [ "$SD662" ] || [ "$SD665" ] || [ "$SD670" ] || [ "$SD690" ] || [ "$SD710" ] || [ "$SD720G" ] || [ "$SD730G" ] || [ "$SD765G" ] || [ "$SD820" ] || [ "$SD835" ] || [ "$SD845" ] || [ "$SD855" ] || [ "$SD865" ] || [ "$SD888" ] || [ "$SM6375" ] || [ "$SM8450" ] || [ "$SM8550" ] || [ "$SM8650AB" ] || [ "$SM6450" ]; then HIRES=true; else HIRES=false; fi
+HIRES=false
+for PLATFORM in msm8952 msm8953 sdm660 bengal trinket sdm670 lito sdm710 atoll sm6150 msm8994 msm8996 msm8998 sdm845 msmnile kona lahaina holi taro kalama pineapple parrot; do
+if grep -q "ro.board.platform=$PLATFORM" "$ALLPROP"; then HIRES=true; break; fi
+done
 SNAPSOC=false; MTKSOC=false; EXYSOC=false; KIRSOC=false
-if grep -E "ro.soc.model=SM*|ro.soc.manufacturer=Q*|ro.board.platform=apq.*|ro.board.platform=msm*|ro.board.platform=sdm*" $ALLPROP >$NULL; then
+if grep -qE "ro.soc.model=SM*|ro.soc.manufacturer=Q*|ro.board.platform=apq.*|ro.board.platform=msm*|ro.board.platform=sdm*" "$ALLPROP"; then
 SNAPSOC=true
-elif grep -E "ro.soc.manufacturer=M*|ro.mediatek.version.*|ro.hardware=mt*|ro.board.platform=mt*|ro.board.platform=MT*|Build.BRAND=MTK*" $ALLPROP >$NULL; then
+elif grep -qE "ro.soc.manufacturer=M*|ro.mediatek.version.*|ro.hardware=mt*|ro.board.platform=mt*|ro.board.platform=MT*|Build.BRAND=MTK*" "$ALLPROP"; then
 MTKSOC=true
-elif grep -E "ro.soc.model=Tensor*|ro.soc.manufacturer=Google*|ro.hardware=exynos*|ro*.*chipname=exynos*|ro.product.board=exynos*|ro.board.platform=exynos*" $ALLPROP >$NULL; then
+elif grep -qE "ro.soc.model=Tensor*|ro.soc.manufacturer=Google*|ro.hardware=exynos*|ro*.*chipname=exynos*|ro.product.board=exynos*|ro.board.platform=exynos*" "$ALLPROP"; then
 EXYSOC=true
-elif grep -E "ro.board.platform=hi*|ro.board.platform=kirin*" $ALLPROP >$NULL; then
+elif grep -qE "ro.board.platform=hi*|ro.board.platform=kirin*" "$ALLPROP"; then
 KIRSOC=true
 fi;;
 -gapps) FINDGAPPS=false
@@ -1532,39 +1505,19 @@ PERM=$($AAPT d permissions $APKINPUT | grep "uses-permission:" | \
      sed -r "s|.*='(.*)'|\1|")
 APPPERM=$(echo "$PERM" | \
      sed -re "s|  ||g; s|^|        <permission name=\"|; s|$|\"/>|")
-echo "$MSGCXML
-<!--
-This XML file declares which signature|privileged permissions should be granted to privileged
-applications on GMS or Google-branded devices.
-It allows additional grants on top of privapp-permissions-platform.xml
--->
-<permissions>
-	<privapp-permissions package=\"$PACKAGENAME\">
-$APPPERM
-	</privapp-permissions>
-</permissions>" | tee $APKDIROUTPUT/privapp-permissions-$PACKAGENAME.xml $APKDIROUTPUT/$PACKAGENAME.xml >$NULL
+echo -e "$MSGCXML\n<permissions>\n	<privapp-permissions package=\"$PACKAGENAME\">\n$APPPERM\n	</privapp-permissions>\n</permissions>" | tee $APKDIROUTPUT/privapp-permissions-$PACKAGENAME.xml $APKDIROUTPUT/$PACKAGENAME.xml >$NULL
 chmod 0644 $APKDIROUTPUT/privapp-permissions-$PACKAGENAME.xml $APKDIROUTPUT/$PACKAGENAME.xml
 }
 
 HAPWL () {
 APKDIROUTPUT=$1; mkdir -p $APKDIROUTPUT
-echo "$MSGCXML
-<!--
-This XML file declares which platform apps that need to access internal APIs.
--->
-<config>
-	<hidden-api-whitelisted-app package=\"$PACKAGENAME\" />
-</config>" > $APKDIROUTPUT/$PACKAGENAME-package-whitelist.xml
+echo -e "$MSGCXML\n<config>\n	<hidden-api-whitelisted-app package=\"$PACKAGENAME\" />\n</config>" > $APKDIROUTPUT/$PACKAGENAME-package-whitelist.xml
 chmod 0644 $APKDIROUTPUT/$PACKAGENAME-package-whitelist.xml
 }
 
 MKSCXML () {
 APKDIROUTPUT=$1; mkdir -p $APKDIROUTPUT
-echo "$MSGCXML
-<config>
-	<hidden-api-whitelisted-app package=\"$PACKAGENAME\" />
-	<allow-in-power-save package=\"$PACKAGENAME\" />
-</config>" > $APKDIROUTPUT/config-$PACKAGENAME.xml
+echo -e "$MSGCXML\n<config>\n	<hidden-api-whitelisted-app package=\"$PACKAGENAME\" />\n	<allow-in-power-save package=\"$PACKAGENAME\" />\n</config>" > $APKDIROUTPUT/config-$PACKAGENAME.xml
 chmod 0644 $APKDIROUTPUT/config-$PACKAGENAME.xml
 }
 
@@ -1900,13 +1853,11 @@ if [ $BOOTMODE != true ]; then UIP -s "ReMounting$MOUNTS"; PARTITION_AND_MOUNTS;
 KEYCHOOSE () {
 while true; do
 eval $(getevent -lqc 1 | awk '{print "K=" $3; print "V=" $4}')
-if [[ "$K" = "KEY_VOLUMEUP" && "$V" = "DOWN" ]]; then
-HFBMODE && return 0
-elif [[ "$K" = "KEY_VOLUMEDOWN" && "$V" = "DOWN" ]]; then
-HFBMODE && return 1
-elif $GESTURES && [[ "$K" = "ABS_MT_SLOT" && "$V" = "00000000" ]]; then
-HFBMODE && END
-fi
+case "$K:$V" in
+"KEY_VOLUMEUP:DOWN") HFBMODE && return 0;;
+"KEY_VOLUMEDOWN:DOWN") HFBMODE && return 1;;
+"ABS_MT_SLOT:00000000") if $GESTURES; then HFBMODE && END; fi;;
+esac
 done
 }
 
@@ -2744,7 +2695,7 @@ case $s in
 "FD") g="fd";;
 "FW") g="fw";;
 esac
-local n="$(< /dev/urandom tr -cd "a b c d e f g h i j k l m n o p q r s t u v w x y z" | $HEAD -c 6)"
+local n="$(tr -cd 'a-z' < /dev/urandom | dd bs=6 count=1 2>$NULL)"
 cp -rf $LOCALTMPDIR/GBoardThemes/$s/* $LOCALTMPDIR/GBoardThemes/Compile
 sed -i "s/#ROUNDED/$UCSFNMC/g" $LOCALTMPDIR/GBoardThemes/Compile/style_sheet.css
 sed -i "s/#ACCENT/#$f\FF/g" $LOCALTMPDIR/GBoardThemes/Compile/style_sheet.css
@@ -3338,9 +3289,9 @@ UCSA "$MSGIP ViperFX $VIPVFX - v2.5.0.5 Or v2.7.1.6?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -le 22 ]; then
 UCSA "$MSGIP ViperFX $VIPVFX - v2.5.0.5?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -ge 31 ] && [ $ASDK -le 34 ]; then
-UCSA "$MSGIP ViperFX $VIPVFX - v2.5.0.5, v2.7.2.1 & v0.6.2?" "IPVFXS" "$IDVFX"
+UCSA "$MSGIP ViperFX $VIPVFX - v2.5.0.5, v2.7.2.1 & v0.6.3?" "IPVFXS" "$IDVFX"
 elif [ $ASDK -ge 34 ]; then
-UCSA "$MSGIP ViperFX $VIPVFX - v0.6.2?" "IPVFXS" "$IDVFX"
+UCSA "$MSGIP ViperFX $VIPVFX - v0.6.3?" "IPVFXS" "$IDVFX"
 fi
 fi
 }
@@ -3361,14 +3312,14 @@ UIP -s "ViperFX v2.7.2.1" "$MSGVU Yes" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 V4AFX="2.7.2.1"; IV4AFX=true
 else
-UIP -s "ViperFX v0.6.2" "$MSGVU Yes" "$MSGVD No $MSGNUS"
+UIP -s "ViperFX v0.6.3" "$MSGVU Yes" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
-V4AFX="0.6.2"; IV4AFX=true
+V4AFX="0.6.3"; IV4AFX=true
 fi
 fi
 fi
 elif [ $ASDK -ge 34 ]; then
-V4AFX="0.6.2"; IV4AFX=true
+V4AFX="0.6.3"; IV4AFX=true
 fi
 if $IV4AFX; then
 UIP "$MSGIAM ViperFX"
@@ -3382,7 +3333,7 @@ else
 cp -f $LOCALTMPDIR/V4AFX/ViPER4AndroidFX-$V4AFX.apk $IPMM/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk
 APKPERM "$IPMM/$MODID$MIPSPA/ViPER4AndroidFX/ViPER4AndroidFX.apk" "$IPMM/$MODID$MIPSEP"; HAPWL "$IPMM/$MODID$MIPSES"; MKSCXML "$IPMM/$MODID$MIPSES"
 fi
-if [ $V4AFX = "0.6.2" ]; then
+if [ $V4AFX = "0.6.3" ]; then
 if [ $ARCH = "arm64" ]; then
 mkdir -p $IPMM/$MODID$MIPSVLS64 $IPMM/$MODID$MIPSPA/ViPER4AndroidFX/lib/arm64
 cp -f $LOCALTMPDIR/V4AFX/libv4a_re-arm64.so $IPMM/$MODID$MIPSVLS64/libv4a_re.so
@@ -3395,7 +3346,7 @@ else
 cp -f $LOCALTMPDIR/V4AFX/libv4a_fx_ics.so $IPMM/$MODID$MIPSVLS
 cp -f $LOCALTMPDIR/V4AFX/libstdc++.so $IPMM/$MODID$MIPSVL
 fi
-if [ $ASDK -ge 31 ] && [ $ASDK -le 33 ] && [ $V4AFX = "2.7.2.1" ] && [ $V4AFX != "0.6.2" ]; then
+if [ $ASDK -ge 31 ] && [ $ASDK -le 33 ] && [ $V4AFX = "2.7.2.1" ] && [ $V4AFX != "0.6.3" ]; then
 mkdir -p $IPMM/$MODID$MIPPSO
 cp -f $LOCALTMPDIR/V4AFX/ViPER4AndroidFX-Black-Blue.apk $IPMM/$MODID$MIPPSO
 fi
@@ -3419,7 +3370,7 @@ PSF="$IPMM/$MODID$FAECONFXML"
 mkdir -p `dirname $PSF`
 cp -f $MAGISKMP$FAECONFXML $PSF
 PSXCF -osp "$PSF"
-if [ $V4AFX = "0.6.2" ]; then
+if [ $V4AFX = "0.6.3" ]; then
 PSXCF -aae "v4a_re" "v4a_standard_re" "libv4a_re.so" "90380da3-8536-4744-a6a3-5731970e640f"
 else
 PSXCF -aae "v4a_fx" "v4a_standard_fx" "libv4a_fx_ics.so" "41d3c987-e6cf-11e3-a88a-11aba5d5c51b"
