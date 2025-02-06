@@ -18,6 +18,7 @@
 
 <details>
   <summary>All Changelog</summary>
+
 #### 06.02.25 (114) ####
 * Zygisk lSPosed обновлен до v1.10.1 (7169);
 * SH Hosts обновлен до v3.44;
