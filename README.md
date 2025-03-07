@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 06.02.25 (114) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/06.02.2025/AIOPFMD-06.02.25-%28114%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/159">TG</a>
+* Версия AIOPFMD: 07.03.25 (115) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/07.03.2025/AIOPFMD-07.03.25-%28115%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/163">TG</a>
 * Общее/что нужно/может потребоваться:
 	- Нужен официальный MAGISK v27.0/v28.1 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm и/или Arm64;
@@ -17,8 +17,34 @@
 * В данный момент AIOPFMD имеет 90+ пунктов в которых 200+ основных выборов и 500+ в режиме удаления в зависимости от того что найдет патч.<br>
 
 <details>
-  <summary>All Changelog</summary>
+	<summary>All Changelog</summary>
 
+#### 07.03.25 (115) ####
+* Добавлено новое обозначение (P) - означает что модуль патчит системные файлы и для его обновления нужно перед этим его удалить (касается только если MAGISK MIRROR нету иначе будет патчинг файлов в которых уже есть изменения от предыдущей версии);
+* Добавлено новое обозначение (O) - означает что модуль устанавливается из под своего архива без внесения изменений;
+* AIO Action (action.sh) обновлен до v1.1 - его функционал расширен для всех модули кроме оригинальных:
+	- Добавлен выбор при условии нахождения AIOPFMD в /sdcard или на одну папку выше после чего будет предложена переустановка модуля из которого был запущен AIOPFMD;
+	- После выбора AIOPFMD его так же можно использовать как обычно;
+* В проверку обновлений добавлен выбор на переустановку модулей которые были установлены из под AIOPFMD;
+* Изменения по Remove/Replace/Restore Mode:
+	- Обычный лист: AssistantScreen, Calculator2, ChildrenSpace, Chrome64, FloatAssistant, KeKeMarket, KeKeThemeSpace, KeKeUserCenter, LinktoWindows, LogKit, Olc, OPMemberShip, Portrait, SceneMode и SmartSideBar;
+	- FileExplorer и FileExplorerGlobal перенесены в Эксперементалльный лист;
+	- MIUILIST удален а всё остальное перенесено в обычный список (кончилась эра правления хлаоми);
+* Steven Hosts обновлен до v1.6.8;
+* Всё что касается PATCHMODE.conf удалено - по умолчанию осталось только то что нужно;
+* Zygisk lSPosed обновлен до v1.10.1 (7175);
+* Zygisk Play Integrity Fix обновлен до v18.7;
+* IOS Emoji обновлен до v1.6 - добавлено два имени на замену для некоторых оболочек;
+* SH Hosts обновлен до v3.45;
+* Shutdown Battery Temperature обновлен до v1.2 - исправлена основная работа;
+* Just In Time Compiler обновлен до v1.4:
+	- Убраны ненужные строки;
+	- App Booster убран в replace (его функционал конфликтует так что используйте что-то одно);
+* Energized Hosts обновлен до v0.57 (057) с новыми выборами на Spark (50000+) и Ultimate (300000+);
+* Burn In Protection, AOD Switcher, AOD & Lock Screen Animation Fix и Shutdown Battery Temperature убраны из проверок на оболочку (пробуйте);
+* topjohnwu вернул мне 1984й год и AIO теперь на MAGISK Canary v28.1+ не работает вообще (есть пока два варианта решения но это уже будет решатся после релиза на стабильную версию MAGISK);
+* Если что-то не работает что работало - пишите и я это не исправлю (возможно);
+* Множественная оптимизация, убрано много символов, кода на квадратный метр, переделывание некоторых моментов и улучшения по UI пачта.
 #### 06.02.25 (114) ####
 * Zygisk lSPosed обновлен до v1.10.1 (7169);
 * SH Hosts обновлен до v3.44;
@@ -199,7 +225,7 @@
 	- Улучшения в сервисе;
 	- Обновлены apk;
 	- Добавлена либа для корректной работы на некоторых прошивках;
-* Изменения по Remove/Replace/Restore Mode: 
+* Изменения по Remove/Replace/Restore Mode:
 	- Обычный лист: ARCore, ARDrawing, AREmoji, ARZone, AvatarEmojiSticker_Palette, FBServices, GearManagerStub, LiveStickers, Netflix_activationCommon, Netflix_stub, Netflix, OneDrive_Samsung_v3, OneDrive, StickerFaceARAvatar и TalkbackSE;
 	- Экспериментальный лист: DevicePersonalizationPrebuiltPixel2022;
 	- Все DevicePersonalization перенесены в Экспериментальный лист;
@@ -2244,7 +2270,7 @@
 ## Все пункты и выборы
 
 <details>
-  <summary>UI: Pills/NavigationBar/Gestures</summary>
+	<summary>UI: Pills/NavigationBar/Gestures</summary>
 
 * Пункт (ALL) (NOT MIUI) (NOT BBK) (NOT ONEUI) (10-15.0) (\\) - (Pills) Установка разных видов/размеров жестовой "таблетки":
 	- Полное скрытие;
@@ -2296,7 +2322,7 @@
 </details>
 
 <details>
-  <summary>UI: StatusBar/QuickSettings</summary>
+	<summary>UI: StatusBar/QuickSettings</summary>
 
 * Пункт (ALL) (NOT MIUI) (NOT BBK) (NOT ONEUI) (10-15.0) (\\) - (System Increase Number Notification Icons) для увеличения количества уведомлений на экране блокировки, количества иконок в строке состояния и статусбаре а так же на AOD:
 	- Количество иконок:
@@ -2464,7 +2490,7 @@
 </details>
 
 <details>
-  <summary>UI: LockScreen/AlwaysOnDisplay</summary>
+	<summary>UI: LockScreen/AlwaysOnDisplay</summary>
 
 * Пункт (MAGISK) (NOT MIUI) (NOT BBK) (NOT ONEUI) (13.0) - (QR Code Scanner On Lock Screen) включает или выключает ярлык на экране блокировке:
 	- Включить;
@@ -2472,17 +2498,17 @@
 * Пункт (MAGISK) (NOT MIUI) (NOT BBK) (NOT ONEUI) (13.0-15.0) - (Lock Screen User Switcher) включает или отключает выбор пользователей на экране блокировки:
 	- Включить;
 	- Выключить;
-* Пункт (MAGISK) (NOT MIUI) (NOT BBK) (NOT ONEUI) (8.1-15.0) - (AOD Switcher) если вы вдруг захотели AOD на IPS или ваш майнтейнер долбаёб и забыл его включить (офф кастомы такие да);
+* Пункт (MAGISK) (8.1-15.0) - (AOD Switcher) если вы вдруг захотели AOD на IPS или ваш майнтейнер долбаёб и забыл его включить (офф кастомы такие да);
 	- Включить;
 	- Выключить;
 * Пункт (MAGISK) (NOT MIUI) (NOT BBK) (NOT ONEUI) (8.1-15.0) - (AOD State Doze) включает или отключает выбор пользователей на экране блокировки:
 	- Включить: AOD темнеет через пару секунд, датчик приближения выключает экран, автояркость не работает и яркость AOD не зависит от яркости телефона;
 	- Выключить: AOD не темнеет через пару секунд, датчик приближения не выключает экран, автояркость не работает а яркость AOD зависит от яркости телефона;
-* Пункт (ALL) (NOT MIUI) (NOT BBK) (NOT ONEUI) (9-15.0) - (AOD & Lock Screen Animation Fix) делает то же как и называется;
+* Пункт (ALL) (9-15.0) - (AOD & Lock Screen Animation Fix) делает то же как и называется;
 </details>
 
 <details>
-  <summary>UI: Gboard/GboardThemes</summary>
+	<summary>UI: Gboard/GboardThemes</summary>
 
 * Пункт (ALL) (10-15.0) (\\) - (GBoard NavBar Space) Установка патча на увеличение отступов при использовании клавиатуры:
 	- Значение 0 (Сток);
@@ -2525,7 +2551,7 @@
 </details>
 
 <details>
-  <summary>UI: BootAnimation/MediaUISounds/Emoji</summary>
+	<summary>UI: BootAnimation/MediaUISounds/Emoji</summary>
 
 * Пункт (ALL) (NOT MIUI) (NOT ONEUI) (\\) - (Boot Animation) смена анимации при запуске телефона на одну из:
 	- Pixel:
@@ -2562,10 +2588,10 @@
 </details>
 
 <details>
-  <summary>UI: RoundedUI/BIP/BackgroundBlur/Other</summary>
+	<summary>UI: RoundedUI/BIP/BackgroundBlur/Other</summary>
 
 * Пункт (ALL) (10-15.0) (\\) - (Rounded UI) для скругления системы, лаунчеров и приложений которые подтягивают строки из системы (и это лучше VGM);
-* Пункт (ALL) (NOT MIUI) (NOT BBK) (NOT ONEUI) (10-15.0) (\\) - (Burn In Protection) включает смещение пикселей в статус баре, жестовой зоне/зоне NavBar и AOD (работает только на тех прошивках, в которых это встроено но отключено):
+* Пункт (ALL) (10-15.0) (\\) - (Burn In Protection) включает смещение пикселей в статус баре, жестовой зоне/зоне NavBar и AOD (работает только на тех прошивках, в которых это встроено но отключено):
 	- Время смещения (в секундах):
 		- Значение 20;
 		- Значение 40;
@@ -2632,20 +2658,20 @@
 </details>
 
 <details>
-  <summary>Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS/DSM</summary>
+	<summary>Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS/DSM</summary>
 
-* Пункт (MAGISK) (5.1.1+) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6, v2.7.2.1 и v0.6.2 в зависимости от версии Android;
+* Пункт (MAGISK) (5.1.1+) (P) <a href="https://4pda.to/forum/index.php?showtopic=405989">4PDA</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4AndroidFX-Legacy">GITHUB</a> || <a href="https://github.com/Magisk-Modules-Repo/ViPER4Android-FX">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-viper4android-fx-2-5-0-5-t3577058">XDA</a> - (ViperFX) - установка версий v2.5.0.5, v2.7.1.6, v2.7.2.1 и v0.6.2 в зависимости от версии Android;
 * Пункт (ALL) - (DDC & Kernel For ViperFX) ядра и конвольтеры для ViperFX;
-* Пункт (MAGISK) (SNAP/SM/SDM) (RW ONLY) (9.0+) (|\\) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet:
+* Пункт (MAGISK) (SNAP/SM/SDM) (RW ONLY) (9.0+) (P) (|\\) - (Dolby Atmos) установка Dolby Atmos с поддержкой Monet:
 	- Use Virtualizer;
 	- Use Volume Leveler Boost;
 	- Use Deeper Bass GEQ Frequency;
-* Пункт (MAGISK) (SNAP/SM/SDM) (9.0+) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=116366772">4PDA</a> - (AIST) улучшает качество звука и буст микрофона при надобности:
+* Пункт (MAGISK) (SNAP/SM/SDM) (9.0+) (P) (|\\) <a href="https://t.me/AIST_FLOOD">TG Chat</a> || <a href="https://t.me/AIST_UPDATES">TG Stable Updates</a> || <a href="https://t.me/AIST_Beta_Updates">TG Beta Updates</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=116366772">4PDA</a> - (AIST) улучшает качество звука и буст микрофона при надобности:
 	- PATCH_VOLUMES;
 	- PATCH_MICROPHONE;
 	- PATCH_MEDIA_CODECS;
-* Пункт (MAGISK) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общее качество звука;
-* Пункт (ALL) - (System Increase Bitrate) патчит все файлы media_profiles*.xml в /vendor - улучшает качество записи аудио во многих местах;
+* Пункт (MAGISK) (P) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=106332092">4PDA</a> - (System Audio Quality) этот модуль улучшает общее качество звука;
+* Пункт (ALL) (P) - (System Increase Bitrate) патчит все файлы media_profiles*.xml в /vendor - улучшает качество записи аудио во многих местах;
 * Пункт (MAGISK) <a href="https://github.com/Magisk-Modules-Repo/aml">GITHUB</a> || <a href="https://github.com/Zackptg5/Audio-Modification-Library">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=94802395">4PDA</a> - (Audio Modification Library) исправляет конфликты вывода аудиомодов между друг другом для их нормальной работы вместе либо фиксит вывод музыки из приложений при установленных аудиомодах;
 * Пункт (MAGISK) - (Audio Library Crackling Fix) для исправления потрескивания аудиобиблиотеки для аудиомодулей, стоковых эквалайзеров или библиотек с проблемами и потрескиванием системного звука/уведомлений;
 * Пункт (ALL) (\\) - (Volume Steps) для изменения шагов громкости - по отдельности или нет, на: медиа/музыку, системную громкость, голосовой вызов и громкость будильника:
@@ -2664,7 +2690,7 @@
 </details>
 
 <details>
-  <summary>Install App From /sdcard/Application</summary>
+	<summary>Install App From /sdcard/Application</summary>
 
 * Пункт (ALL) (\\) - (Install App From /sdcard/Applications) начать установку из под /sdcard/Applications если в этой папке есть apk файлы (apks не поддерживает);
 	- (L) Установка в Data;
@@ -2674,7 +2700,7 @@
 </details>
 
 <details>
-  <summary>Remove/Replace/Restore Mode</summary>
+	<summary>Remove/Replace/Restore Mode</summary>
 
 * Пункт (ALL) (\\) - (Remove/Replace/Restore Mode) (список приложений будет пополнятся). Удаляйте/Затирайте что знаете, я разжёвывать не буду - <a href="https://4pda.to/forum/index.php?s=&showtopic=236256&view=findpost&p=7424759">Узнать о почти всех приложения в этих списках можно в этой теме по поиску (4PDA)</a>:
 	- Если находит /system/app/Replace.txt:
@@ -2699,20 +2725,12 @@
 Списки приложений которые удаляются:
 
 <details>
-  <summary>Удаление приложений которые не влияют на работу прошивки:</summary>
+	<summary>Удаление приложений которые не влияют на работу прошивки:</summary>
 
-* Удаляется если не MIUI, но в режиме с выбором если MIUI - появляется (больше делал для себя):
-	- Calculator
-	- Calendar
-	- Contacts
-	- DeskClock
-	- FileExplorer
-	- FileExplorerGlobal
-	- Mms
-
-* Другие приложения:
 	- 404Clock
 	- AEXPapers
+	- Contacts
+	- Mms
 	- AICorePrebuilt
 	- ANGLE
 	- APlayer
@@ -2737,6 +2755,7 @@
 	- AndroidAutoStub
 	- AndroidAutoStubPrebuilt
 	- AndroidForWork
+	- AssistantScreen
 	- AudioFX
 	- Auxio
 	- AvatarEmojiSticker_Palette
@@ -2756,8 +2775,11 @@
 	- BrowserXposed
 	- BtHelper
 	- CMFileManager
+	- Calculator
+	- Calculator2
 	- CalculatorGoogle
 	- CalculatorGooglePrebuilt
+	- Calendar
 	- CalendarGoogle
 	- CalendarGooglePrebuilt
 	- CameraExtensionsProxy
@@ -2768,9 +2790,11 @@
 	- CbrsNetworkMonitor
 	- CellBroadcastApp
 	- CellBroadcastReceiver
+	- ChildrenSpace
 	- ChocoEUKor
 	- Chrome
 	- Chrome-Stub
+	- Chrome64
 	- ChromeCustomizations
 	- ClockPackage_MASS_Le
 	- CloudPrint
@@ -2784,6 +2808,7 @@
 	- DCMO
 	- DMService
 	- DerpWalls
+	- DeskClock
 	- DeskClockGoogle
 	- DesktopMode
 	- DeviceIntelligenceNetworkPrebuilt
@@ -2833,6 +2858,7 @@
 	- FilesPrebuilt
 	- Firewall
 	- FitnessPrebuilt
+	- FloatAssistant
 	- Focus
 	- FotaAgent
 	- FuseWalls
@@ -2903,6 +2929,9 @@
 	- Jellyfish
 	- Joyose
 	- KLMSAgent
+	- KeKeMarket
+	- KeKeThemeSpace
+	- KeKeUserCenter
 	- Keep
 	- KidsSupervisionStub
 	- KimciRecorder
@@ -2921,6 +2950,8 @@
 	- Leaflet
 	- Lens
 	- LensAppStub
+	- LinktoWindows
+	- LogKit
 	- LogViewer
 	- MSA-Global
 	- MSSkype_stub
@@ -2983,6 +3014,7 @@
 	- OPIconpackOnePlus
 	- OPIconpackOxygen
 	- OPIconpackRound
+	- OPMemberShip
 	- OPScreenRecord
 	- OPScreenRecorder
 	- OPWeather
@@ -2990,6 +3022,7 @@
 	- OccamQuickOffice
 	- OdadPrebuilt
 	- OemDmTrigger
+	- Olc
 	- OmniJaws
 	- OmniSwitch
 	- OneDrive
@@ -3024,6 +3057,7 @@
 	- PlayGames
 	- PlusOne
 	- Podcasts
+	- Portrait
 	- PowerPoint_SamsungStub
 	- PrebuiltBugle
 	- PrebuiltBugleStub
@@ -3064,6 +3098,7 @@
 	- SamsungIMEv2
 	- SamsungSans
 	- SamsungTTS
+	- SceneMode
 	- ScribePrebuilt
 	- SecCalculator2_L
 	- SecEmailComposer-mass
@@ -3085,6 +3120,7 @@
 	- SmartCookieWeb
 	- SmartManagerSDK
 	- SmartManager_OLEDHD
+	- SmartSideBar
 	- SnapdragonMusic
 	- SoundAmplifierPrebuilt
 	- SparkWallpaperStub
@@ -3184,7 +3220,7 @@
 </details>
 
 <details>
-  <summary>Удаление приложений которые могут повлиять на работу некоторых приложений или функций:</summary>
+	<summary>Удаление приложений которые могут повлиять на работу некоторых приложений или функций:</summary>
 
 * BuiltInPrintService
 * DeviceAsWebcam
@@ -3195,6 +3231,8 @@
 * DocumentsUI
 * DocumentsUIGoogle
 * EuiccGoogle
+* FileExplorer
+* FileExplorerGlobal
 * Markup
 * MarkupGoogle
 * ParallelSpace
@@ -3226,7 +3264,7 @@
 </details>
 
 <details>
-  <summary>Удаление лаунчеров:</summary>
+	<summary>Удаление лаунчеров:</summary>
 
 * ArrowLauncher
 * AsusLauncher
@@ -3267,7 +3305,7 @@
 </details>
 
 <details>
-  <summary>Удаление камер:</summary>
+	<summary>Удаление камер:</summary>
 
 * Aperture
 * ApertureLensLauncher
@@ -3292,22 +3330,22 @@
 </details>
 
 <details>
-  <summary>AdBlock: Hosts Files</summary>
+	<summary>AdBlock: Hosts Files</summary>
 
-* Пункт (ALL) (\\) - (AdBlock: Hosts Files) установка одного из четырех Hosts файлов:
+* Пункт (ALL) (\\) - (AdBlock: Hosts Files) установка одного из четырех Hosts файлов (количество строк влияет на использование оперативной памяти!):
 	- Пустой Hosts (Отключение блокировки);
-	- AdAway Hosts (12000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
+	- AdAway Hosts (10000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
 	- Hosts Unified От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
-	- Energized Hosts (400000+/800000+ строк) <a href="https://block.energized.pro">OFFSITE</a> || <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Basic или Unified;
-	- SH Hosts От (130000+ строк) <a href="https://github.com/pantsufan/Magisk-Ad-Blocking-Module">GITHUB</a>;
-	- Steven Hosts (150000+ строк) <a href="https://github.com/Magisk-Modules-Alt-Repo/StevenBlock">GITHUB</a>;
+	- Energized Hosts (50000+/300000+ строк) <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Spark или Ultimate;
+	- SH Hosts От (120000+ строк) <a href="https://github.com/pantsufan/Magisk-Ad-Blocking-Module">GITHUB</a>;
+	- Steven Hosts (480000+ строк) <a href="https://github.com/Magisk-Modules-Alt-Repo/StevenBlock">GITHUB</a>;
 </details>
 
 <details>
-  <summary>Net: GPS/WIFI/TTL/DNS/APAUSBTF</summary>
+	<summary>Net: GPS/WIFI/TTL/DNS/APAUSBTF</summary>
 
-* Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (GPS Patcher) регенерирует gps.conf добавляет правильные пути сертификатов, отключает логи, улучшает связь GPS (нет), выставляет универсальный pool.ntp.org и прочие улучшения;
-* Пункт (ALL) (8.1+) (SNAP/SM/SDM) - (Wifi Patcher) регенерирует WCNSS_qcom_cfg.ini для увеличения пропускной способности Wifi, отключения ненужных логов и прочих улучшений (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
+* Пункт (ALL) (8.1+) (SNAP/SM/SDM) (P) - (GPS Patcher) регенерирует gps.conf добавляет правильные пути сертификатов, отключает логи, улучшает связь GPS (нет), выставляет универсальный pool.ntp.org и прочие улучшения;
+* Пункт (ALL) (8.1+) (SNAP/SM/SDM) (P) - (Wifi Patcher) регенерирует WCNSS_qcom_cfg.ini для увеличения пропускной способности Wifi, отключения ненужных логов и прочих улучшений (хотя по факту этот модуль может вернуть стандартную скорость на кастомах);
 * Пункт (MAGISK) <a href="https://github.com/cyborg-one/nfqttl">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=101870586">4PDA</a> - (TTL Fix) для раздачи интернета без ограничений оператора;
 * Пункт (ALL) <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=104647697">4PDA</a> - (Network Tweak) альтернативный DNS-сервер от Google и/или CloudFlare:
 	- Google и CloudFlare DNS;
@@ -3318,7 +3356,7 @@
 </details>
 
 <details>
-  <summary>Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP</summary>
+	<summary>Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP</summary>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin (использование: su -c busybox в терминале (BOOTMODE));
 * Пункт (MAGISK) - (SELinux Switcher) при переключении в Permissive разрешает исполнения многих вещей в системе (для определенных действий):
@@ -3349,15 +3387,15 @@
 	- d) Dexopt Optimization;
 	- r) Reset;
 	- q) Quit;
-* Пункт (MAGISK) (ZYGISK) (TERMINAL) <a href="https://github.com/j-hc/zygisk-detach">GITHUB</a> - (Zygisk Detach) отключает автообновление приложений в Play Market (использование: su -c detach в терминале (BOOTMODE));
-* Пункт (MAGISK) (ZYGISK) (8.1-15.0) <a href="https://github.com/chiteroman/PlayIntegrityFix">GITHUB</a> - (Zygisk Play Integrity Fix) для прохождения SafetyNet;
-* Пункт (MAGISK) (ZYGISK) (8.1-15.0) <a href="https://github.com/pumPCin/LSPosed_mod">GITHUB</a> - (Zygisk LSPosed);
+* Пункт (MAGISK) (ZYGISK) (TERMINAL) (O) <a href="https://github.com/j-hc/zygisk-detach">GITHUB</a> - (Zygisk Detach) отключает автообновление приложений в Play Market (использование: su -c detach в терминале (BOOTMODE) или через APK);
+* Пункт (MAGISK) (ZYGISK) (8.1-15.0) (O) <a href="https://github.com/chiteroman/PlayIntegrityFix">GITHUB</a> - (Zygisk Play Integrity Fix) для прохождения SafetyNet;
+* Пункт (MAGISK) (ZYGISK) (8.1-15.0) (O) <a href="https://github.com/pumPCin/LSPosed_mod">GITHUB</a> - (Zygisk LSPosed);
 </details>
 
 <details>
-  <summary>Other: FA/LED/PSS/UAA/SBU/SHS</summary>
+	<summary>Other: FA/LED/PSS/UAA/SBU/SHS</summary>
 
-* Пункт (ALL) (\\) - (Fingerprint Actions) для многих прошивок у которых есть uinput-fpc/gf/goodix.kl файлы с выборами:
+* Пункт (ALL) (P) (\\) - (Fingerprint Actions) для многих прошивок у которых есть uinput-fpc/gf/goodix.kl файлы с выборами:
 	- Клавиша Включения;
 	- Включение экрана;
 	- Перейти на главный экран;
@@ -3402,7 +3440,7 @@
 </details>
 
 <details>
-  <summary>Tweaks: FGS/EHAP/FFE/E4KIYT/KL/4XMSAA/HWO/UGMSD/USGP</summary>
+	<summary>Tweaks: FGS/EHAP/FFE/E4KIYT/KL/4XMSAA/HWO/UGMSD/USGP</summary>
 
 * Пункт (MAGISK/MAGISK MANAGER) <a href="https://4pda.to/forum/index.php?s=&showtopic=917843&view=findpost&p=95939321">4PDA</a> - (Force Google Sync) принудительная синхронизация Google (Если пишет Waiting to buck up или другие проблемы с синхронизацией);
 	- Если установка через Recovery, предлагает установку скрипта синхронизации после перезагрузки;
@@ -3435,20 +3473,20 @@
 	- Включить;
 	- Отключить;
 * Пункт (MAGISK) - (Force Disabling Play Protect) для принудительного отключения Play защиты до запуска в систему или предотвращения её авто включения (кого раздражало выключать её каждый раз на 100 перепрошивов в день);
-* Пункт (MAGISK) (6.0.1-15.0) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - (Universal GMS Doze) для оптимизирования сервисов Google;
-* Пункт (MAGISK) (ZYGISK) (8.1-15.0) <a href="https://gitlab.com/cuynu/gphotos-unlimited-zygisk">GITHUB</a> - (Zygisk Pixelify Photos) бесконечное хранилище для GPhoto;
+* Пункт (MAGISK) (6.0.1-15.0) (P) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/UniversalGMSDoze">GITHUB</a> || <a href="https://forum.xda-developers.com/apps/magisk/module-universal-gms-doze-t3853710">XDA</a> - (Universal GMS Doze) для оптимизирования сервисов Google;
+* Пункт (MAGISK) (ZYGISK) (8.1-15.0) (O) <a href="https://gitlab.com/cuynu/gphotos-unlimited-zygisk">GITHUB</a> - (Zygisk Pixelify Photos) бесконечное хранилище для GPhoto;
 * Пункт (ALL) (10-15.0) - (GPU Rendering) для принудительного выставления если нет переключателя в настройках для разработчика:
 	- OpenGL (По умолчанию)
 	- OpenGL Skia (более быстрый чем OpenGL)
 	- OpenGL Skia Vulkan (самый быстрый вариант - нужен Linux Kernel 5.10+);
-* Пункт (ALL) (NOT MIUI) (NOT BBK) (NOT ONEUI) (8.1-15.0) (Shutdown Battery Temperature) - если у вас ядерный реактор от POCO или Pixel:
-	- 50;
-	- 55;
-	- 60;
-	- 65;
-	- 70;
-	- 75;
-	- 80;
+* Пункт (ALL) (8.1-15.0) - (Shutdown Battery Temperature) если у вас ядерный реактор от POCO или Pixel:
+	- 50°C;
+	- 55°C;
+	- 60°C;
+	- 65°C;
+	- 70°C;
+	- 75°C;
+	- 80°C;
 * Пункт (MAGISK) (//) - (Force Deep Sleep) для принудительного включения ожидания/простоя:
 	- Light Idle;
 	- Deep Idle;
@@ -3490,9 +3528,11 @@
 * (NOT BBK) - логично не для устройств BBK.
 * (NOT ONEUI) - не для OneUI.
 * (R) - означает Recommended/Рекомендуется к установке/выбору.
-* (L) - означает что патч старый/не актуальней но иногда может будет работать.
+* (L) - означает что модуль старый/не актуальней но иногда может будет работать.
+* (P) - означает что модуль патчит системные файлы и для его обновления нужно перед этим его удалить (касается только если MAGISK MIRROR нету иначе будет патчинг файлов в которых уже есть изменения от предыдущей версии).
+* (O) - означает что модуль устанавливается из под своего архива без внесения изменений.
 * (I) - Install/Installing для сокращения и маленьких экранов/RECOVERY.
-* Надпись возле подтверждения установки модуля означают: [V] - установлен; [X] - не установлен; [R] - модуль ждет удаления; [D] - модуль ждет отключения/отключен; [U] - модуль обновлен.
+* Надпись возле подтверждения установки модуля означают: [V] - установлен; [X] - не установлен; [R] - модуль ждет удаления; [D] - модуль ждет отключения/отключен; [U] - модуль ждет перезагрузки для обновления.
 * Вы всегда можете перейти к концу патча коснувшись двумя пальцами по экрану (тест).
 * All - Установка патчей из под MM или RECOVERY и/или как модуль MAGISK так и нет.
 * (\\) - Означает что в этом пункте есть возможность выхода из подпунктов к следующему выбору.
@@ -3500,12 +3540,3 @@
 * (|) - Означает что следующий выбор будет в этом подпункте пункта.
 * (/) - Означает что следующий выбор будет последним в этом подпункте пункта с возможность выхода из него и ничего не прошивая.
 * (//) - Если не выбирать этот пункт, будет выход/завершение работы патча.
-
-<h3 align=center>PATCHMODE.conf</h3>
-
-* PATCHMODE.conf это - файл, который создается во внутренней памяти (/sdcard) так же может находится (если вы сами его туда перенесете) на одну папку глубже от внутренней памяти для следующего:
-	- LEDCOLOR: в PATCHMODE напротив "LEDCOLOR=" написать: R(ed), G(reen), B(lue) или W(hite) - прописать только букву, это цвет вашего диода. Появляется только если его находит (но на некоторых даже если находит - нормально не работает) - По умолчанию false.
-	- HFMODE: Добавляет тактильный отклик при выборах если поддерживается устройством (может не работать (особенность телефона/прошивки или же значение для самого вибромотора маленькое а это от 1 до 255)) - с возможностью включения/отключения и настройки (в PATCHMODE напротив "HFMODE=" прописать значений от 1 до 255 для слабой/сильной вибрации - По умолчанию false.
-	- HFSMODE: Устанавливает значения из HFMODE не в duration, а в enable и/или activate - полезно для телефонов которые используют файлы активации как одновременно силу/время срабатывания так и саму активацию срабатывания - По умолчанию false.
-	- ENDMODE: Добавляет выбор в самом конце патча который позволяет вернутся в начало патча без перевыбора если что-то пропустили - По умолчанию true.
-	- MMUPDC: Добавляет выбор проверку версий MAGISK модулей между патчем и установленными - По умолчанию true.
