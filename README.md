@@ -1,7 +1,7 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 07.03.25 (115) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/07.03.2025/AIOPFMD-07.03.25-%28115%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/163">TG</a>
+* Версия AIOPFMD: 25.04.25 (116) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2025/AIOPFMD-25.04.25-%28116%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/165">TG</a>
 * Общее/что нужно/может потребоваться:
 	- Нужен официальный MAGISK v27.0/v28.1 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm и/или Arm64;
@@ -19,10 +19,25 @@
 <details>
 	<summary>All Changelog</summary>
 
+#### 25.04.25 (116) ####
+* Zygisk lSPosed обновлен до v1.10.1 (7181);
+* Zygisk Play Integrity Fix обновлен до v19.0;
+* SH Hosts обновлен до v3.49;
+* Steven Hosts обновлен до v1.7.7;
+* Energized Hosts обновлен до v0.100;
+* Исправлено неправильное отображение названия модуля если выбрать переустановку модуля;
+* Добавлена установка Wake On Lan - для пробуждения устройств через Ethernet или в LAN;
+* Cache Cleaner обновлен до v3.8 - добавлена проверка на запуск su;
+* Magisk Manager For Recovery обновлен до v1.5 - добавлена проверка на запуск su;
+* Just In Time Compiler обновлен до v1.5 - добавлена проверка на запуск su;
+* Zygisk Detach обновлен до v1.20.0;
+* Zygisk Detach App обновлен до v1.20.0;
+* ViperFX обновлен до v2.9 - обновлен APK;
+* Что-то ещё по мелочи что забыл.
 #### 07.03.25 (115) ####
 * Добавлено новое обозначение (P) - означает что модуль патчит системные файлы и для его обновления нужно перед этим его удалить (касается только если MAGISK MIRROR нету иначе будет патчинг файлов в которых уже есть изменения от предыдущей версии);
 * Добавлено новое обозначение (O) - означает что модуль устанавливается из под своего архива без внесения изменений;
-* AIO Action (action.sh) обновлен до v1.1 - его функционал расширен для всех модули кроме оригинальных:
+* AIO Action (action.sh) обновлен до v1.1 - его функционал расширен для всех модулей кроме оригинальных:
 	- Добавлен выбор при условии нахождения AIOPFMD в /sdcard или на одну папку выше после чего будет предложена переустановка модуля из которого был запущен AIOPFMD;
 	- После выбора AIOPFMD его так же можно использовать как обычно;
 * В проверку обновлений добавлен выбор на переустановку модулей которые были установлены из под AIOPFMD;
@@ -3335,10 +3350,10 @@
 * Пункт (ALL) (\\) - (AdBlock: Hosts Files) установка одного из четырех Hosts файлов (количество строк влияет на использование оперативной памяти!):
 	- Пустой Hosts (Отключение блокировки);
 	- AdAway Hosts (10000+ строк) <a href="https://github.com/AdAway/adaway.github.io">GITHUB</a>;
-	- Hosts Unified От gloeyisk (90000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
-	- Energized Hosts (50000+/300000+ строк) <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Spark или Ultimate;
+	- Hosts Unified От gloeyisk (270000+ строк) <a href="https://t.me/gldppc">TG</a> || <a href="https://github.com/gloeyisk/SystemlessHosts">GITHUB</a>;
+	- Energized Hosts (80000+/440000+ строк) <a href="https://github.com/EnergizedProtection/block">GITHUB</a> - Spark или Ultimate;
 	- SH Hosts От (120000+ строк) <a href="https://github.com/pantsufan/Magisk-Ad-Blocking-Module">GITHUB</a>;
-	- Steven Hosts (480000+ строк) <a href="https://github.com/Magisk-Modules-Alt-Repo/StevenBlock">GITHUB</a>;
+	- Steven Hosts (150000+ строк) <a href="https://github.com/Magisk-Modules-Alt-Repo/StevenBlock">GITHUB</a>;
 </details>
 
 <details>
@@ -3356,7 +3371,7 @@
 </details>
 
 <details>
-	<summary>Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP</summary>
+	<summary>Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP/WOL</summary>
 
 * Пункт (ALL) (TERMINAL) <a href="https://github.com/feravolt/Brutal_busybox">GITHUB</a> || <a href="https://4pda.to/forum/index.php?s=&showtopic=915158&view=findpost&p=95475185">4PDA</a> - (Brutal BusyBox) с активацией симлинков для bin или xbin (использование: su -c busybox в терминале (BOOTMODE));
 * Пункт (MAGISK) - (SELinux Switcher) при переключении в Permissive разрешает исполнения многих вещей в системе (для определенных действий):
@@ -3390,6 +3405,12 @@
 * Пункт (MAGISK) (ZYGISK) (TERMINAL) (O) <a href="https://github.com/j-hc/zygisk-detach">GITHUB</a> - (Zygisk Detach) отключает автообновление приложений в Play Market (использование: su -c detach в терминале (BOOTMODE) или через APK);
 * Пункт (MAGISK) (ZYGISK) (8.1-15.0) (O) <a href="https://github.com/chiteroman/PlayIntegrityFix">GITHUB</a> - (Zygisk Play Integrity Fix) для прохождения SafetyNet;
 * Пункт (MAGISK) (ZYGISK) (8.1-15.0) (O) <a href="https://github.com/pumPCin/LSPosed_mod">GITHUB</a> - (Zygisk LSPosed);
+* Пункт (MAGISK) (TERMINAL) - (Wake On Lan) Для пробуждения устройств через Ethernet или в LAN. (использование: su -c WOL в терминале (BOOTMODE):
+	- m) Add Device Manually;
+	- l) Add Device From Local Network;
+	- s) Show Device List And Send WOL;
+	- p) Ping Device From List;
+	- q) Quit;
 </details>
 
 <details>

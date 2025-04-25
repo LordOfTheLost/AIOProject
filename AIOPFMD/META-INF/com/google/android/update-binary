@@ -2,33 +2,17 @@
 
 { #Default Var
 set -x
-STORAGE="/data/media/0" AIOLOG="AIOLogs/$(date +"%Y-%m")"
-if [ -d $STORAGE/AIOLogs ]; then
-PLOGS="$STORAGE/$AIOLOG"
-elif [ -d $STORAGE/*/AIOLogs ]; then
-PLOGS="$STORAGE/*/$AIOLOG"
-else
-PLOGS="$STORAGE/$AIOLOG"
-fi
-mkdir -p $PLOGS
-exec 2>$PLOGS/AIO-$( date +"%d-%H:%M:%S" ).log
-VCAIOPFMD="115" VAIOPFMD="07.03.25 ($VCAIOPFMD)" VAIOASH="v1.1" VCAIOASH="2"
-IPDLTMP="/data/local/tmp"
-LOCALTMPDIR="$IPDLTMP/AIOPFMD"
-DEVTMPDIR="/dev/AIOPFMD"
-IPDADB="/data/adb"
-IPDMM="/data/magisk"
-SERVICED="$IPDADB/service.d"
-POSTFSDATAD="$IPDADB/post-fs-data.d"
-IPMM="$IPDADB/modules"
-IPMMU="$IPDADB/modules_update"
+STORAGE="/data/media/0" AIOLOG="AIOLogs/$(date +"%Y-%m")" NULL="/dev/null"
+if realpath $STORAGE/*/AIOLogs >$NULL; then PLOGS="$(realpath $STORAGE/*/$AIOLOG)"; else PLOGS="$STORAGE/$AIOLOG"; fi
+mkdir -p $PLOGS; exec 2>$PLOGS/AIO-$( date +"%d-%H:%M:%S" ).log
+VCAIOPFMD="116" VAIOPFMD="25.04.25 ($VCAIOPFMD)" VAIOASH="v1.1" VCAIOASH="2"
+IPDLTMP="/data/local/tmp" LOCALTMPDIR="$IPDLTMP/AIOPFMD" DEVTMPDIR="/dev/AIOPFMD"
+IPDADB="/data/adb" IPDMM="/data/magisk"
+SERVICED="$IPDADB/service.d" POSTFSDATAD="$IPDADB/post-fs-data.d"
+IPMM="$IPDADB/modules" IPMMU="${IPMM}_update"
 FILEIN="$1" FILEOUT="$2" FILE="$3"
 ADDONS="$DEVTMPDIR/Addons"
-BB="$DEVTMPDIR/BB"
-TAR="$BB/busybox tar"
-UNZIP="$BB/busybox unzip"
-ECHO="$BB/busybox echo"
-NULL="/dev/null"
+BB="$DEVTMPDIR/BB" TAR="$BB/busybox tar" UNZIP="$BB/busybox unzip" ECHO="$BB/busybox echo"
 BOOTMODE=$(ps -A 2>$NULL | grep -q zygote && echo true || echo false)
 ENDMODE=true
 } #
@@ -80,7 +64,7 @@ IDFDM="ForceDarkMode" VIPFDM="v1.1" VCIPFDM="2"
 IDAS="AnimationScale" VIPAS="v1.2" VCIPAS="3"
 IDFDPIS="ForceDensitySwitcher" VIPFDPIS="v1.1" VCIPFDPIS="2"
 #Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS/DSM
-IDVFX="V4AFX" IDAVFX="ViPER4AndroidFX ViPER4AndroidFX-Legacy ViPER4AndroidXHiFi viper4magisk ViPER4Android-RE" VIPVFX="v2.8" VCIPVFX="19"
+IDVFX="V4AFX" IDAVFX="ViPER4AndroidFX ViPER4AndroidFX-Legacy ViPER4AndroidXHiFi viper4magisk ViPER4Android-RE" VIPVFX="v2.9" VCIPVFX="20"
 IDVFXDAK="V4AFXDAK" IDAVFXDAK="V4AFXPresets" VIPVFXDAK="v1.9" VCIPVFXDAK="10"
 IDDA="DolbyAtmos" VIPDA="v2.8" VCIPDA="19"
 IDAIST="AIST" VIPAIST="v2.0" VCIPAIST="2000"
@@ -94,25 +78,26 @@ IDDSM="DisableSafemediaMessage" VIPDSM="v1.0" VCIPDSM="1"
 IDDAB="DisableAdBlocker" VIPDAB="v1.0" VCIPDAB="1"
 IDVAAH="AdAwayHosts" VIPVAAH="v5.9" VCIPVAAH="50"
 IDVSH="SystemlessHostsUnified" VIPVSH="v17.2-240906" VCIPVSH="172"
-IDEH="EnergizedHosts" VIPEH="v0.57" VCIPEH="057"
-IDSHH="SHHosts" VIPSHH="v3.46" VCIPSHH="346"
-IDSH="StevenHosts" VIPSH="v1.6.8" VCIPSH="168"
+IDEH="EnergizedHosts" VIPEH="v0.100" VCIPEH="0100"
+IDSHH="SHHosts" VIPSHH="v3.49" VCIPSHH="349"
+IDSH="StevenHosts" VIPSH="v1.7.7" VCIPSH="177"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher" IDAGPSP="optmizedgpsconf" VIPGPSP="v1.2" VCIPGPSP="3"
 IDWIFIP="WIFIPatcher" IDAWIFIP="wifi-bonding" VIPWIFIP="v1.5" VCIPWIFIP="6"
 IDTTLF="NFQTTL" IDATTLF="nfqttl" VIPTTLF="v2.8" VCIPTTLF="19"
 IDNT="NetworkTweak" VIPNT="v6.0" VCIPNT="60"
 IDAPAUSBTF="APAndUSBTetheringFix" IDAAPAUSBTF="APAUSBTF USBTF" VIPAPAUSBTF="v1.0" VCIPAPAUSBTF="1"
-#Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP
+#Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP/WOL
 IDBBB="BrutalBusyBox" IDABBB="busybox-ndk busybox-brutal BuiltIn-BusyBox" VIPBBB="v1.38.0.1" VCIPBBB="13801"
 IDSELS="SELinuxSwitcher" IDASELS="SeLinuxChanger SELinuxChanger" VIPSELS="v1.4" VCIPSELS="5"
-IDCC="CacheCleaner" VIPCC="v3.7" VCIPCC="28"
-IDMMFR="MagiskManagerForRecovery" IDAMMFR="mm MMFR" VIPMMFR="v1.4" VCIPMMFR="5"
-IDJITC="JustInTimeCompiler" IDAJITC="JIT PackageCompileSpeed" VIPJITC="v1.4" VCIPJITC="5"
-IDDETACH="zygisk-detach" VIPDETACH="v1.19.3" VCIPDETACH="26"
-IDDETACHA="zygisk-detach-app" VIPDETACHA="v1.14.0" VCIPDETACHA="17"
-IDPIF="playintegrityfix" VIPPIF="v18.7" VCIPPIF="18700"
-IDLSP="zygisk_lsposed" VIPLSP="v1.10.1 (7175)" VCIPLSP="7175"
+IDCC="CacheCleaner" VIPCC="v3.8" VCIPCC="29"
+IDMMFR="MagiskManagerForRecovery" IDAMMFR="mm MMFR" VIPMMFR="v1.5" VCIPMMFR="6"
+IDJITC="JustInTimeCompiler" IDAJITC="JIT PackageCompileSpeed" VIPJITC="v1.5" VCIPJITC="6"
+IDDETACH="zygisk-detach" VIPDETACH="v1.20.0" VCIPDETACH="27"
+IDDETACHA="zygisk-detach-app" VIPDETACHA="v1.20.0" VCIPDETACHA="27"
+IDPIF="playintegrityfix" VIPPIF="v19.0" VCIPPIF="19000"
+IDLSP="zygisk_lsposed" VIPLSP="v1.10.1 (7181)" VCIPLSP="7181"
+IDWOL="WakeOnLan" VIPWOL="v1.0" VCIPWOL="1"
 #Other: FA/LED/PSS/UAA/SBU/SHS
 IDFPA="FingerprintActions" VIPFPA="v1.3" VCIPFPA="4"
 IDLEDLO="LEDLightOff" IDALEDLO="ChargingLedLightOff ChargingLEDLightOff" VIPLEDLO="v1.4" VCIPLEDLO="5"
@@ -151,10 +136,10 @@ CHECKER "-ui -bb -arch -sel -soc -gapps -av -magisk"
 UIP "Copy AIOPFMD $VAIOPFMD To TMPDIR"
 $BOOTMODE && UIP "System In $MSGSRW & $MSGSMM"
 (unzip -oq $FILE BB.zip Addons.tar.xz -d $DEVTMPDIR 2>$NULL
-unzip -oq $BB.zip -d $DEVTMPDIR 2>$NULL; rm -f $BB.zip
+unzip -oq $BB.zip -d $DEVTMPDIR 2>$NULL
 chmod -R 0777 $LOCALTMPDIR $DEVTMPDIR
 cp -f $BB/busybox-$ARCH $BB/busybox
-$TAR -xf $ADDONS.tar.xz -C $DEVTMPDIR; rm -f $ADDONS.tar.xz) &
+$TAR -xf $ADDONS.tar.xz -C $DEVTMPDIR; rm -f $ADDONS.tar.xz $BB.zip) &
 PRESETS
 END
 }
@@ -1079,7 +1064,7 @@ case "$DARCH" in
 *armeabi*) ARCH="arm";;
 *) UIP "Warning! ARCH Not Supported/Found!"; ENDMODE=false; END;;
 esac
-AAPT="$ADDONS/aapt-$ARCH" XMLSTARLET="$ADDONS/xmlstarlet-$ARCH" ZIPALIGN="$ADDONS/zipalign-$ARCH" ZIPPACKER="$ADDONS/zip-$ARCH";;
+AAPT="$ADDONS/aapt-$ARCH" XMLSTARLET="$ADDONS/xmlstarlet-$ARCH" ZIPALIGN="$ADDONS/zipalign-$ARCH" ZIPPACKER="$ADDONS/zip-$ARCH" WOL="$ADDONS/wol";;
 -sel) if grep -q "1" /sys/fs/selinux/enforce || [ $BOOTMODE != true ]; then SELINUX=true SELINUXS="Enforcing"; elif grep -q "0" /sys/fs/selinux/enforce; then SELINUX=false SELINUXS="Permissive"; fi;;
 -soc) echo -e "\nro.build.kernel.version=$(uname -r)" >> $ALLPROP
 HIRES=false
@@ -1123,14 +1108,14 @@ if [ "$MODIDVAR" = "$ALLMMUPDID" ]; then
 unset MODIDVAR
 UIP -cs
 UIP "$MSGMMFUPD $ALLMMUPDID" "Version Installed: $MODVERSION/$MODCVERSION" "New Version: $MMUPDV/$MMUPDVC, $MSGMMUPD?" "$MSGVU Yes" "$MSGVD No $MSGNUS"; KEYCHOOSE && $5
-break
+break 3
 fi
 fi
 if $MMUPD; then
 if [ -z "$MODCVERSION" ] || [ "$MMUPDVC" -gt "$MODCVERSION" ]; then MODIDCV=true MSGMMFUPD="Found Update For" MSGMMUPD="Update"; fi
 break
 else
-MODIDCV=true
+MODIDCV=true; break
 fi
 fi
 done
@@ -1513,7 +1498,7 @@ sh \"\$OFPATHZIP/$METAINF\" \"$FILEIN\" \"$FILEOUT\" \"\$AIOFILE\"
 
 echo -e \"$MSGCS\\\n$MSGSD AIO Action $VAIOASH ($VCAIOASH)\\\n$MSGSD $2 $3 ($4)\\\n$MSGSD Installed From AIO $VAIOPFMD\\\n$MSGSD AIO Chanel: $MSGAIODC\\\n$MSGSD AIO Chat: $MSGAIOSC\\\n$MSGCS\"
 
-AIOFILE=\$(find /sdcard/* -maxdepth 1 -type f -name 'AIOPFMD*.zip' 2>$NULL | head -n 1)
+AIOFILE=\$(find $STORAGE/* -maxdepth 1 -type f -name 'AIOPFMD*.zip' 2>$NULL | head -n 1)
 if [[ -n \"\$AIOFILE\" ]]; then
 echo -e \"$MSGSD Found \$AIOFILE, Install?\\\n$MSGSD ▲ ► Yes $MSGEEFTC\\\n$MSGSD ▼ ► No $MSGEND\"
 if KEYCHOOSE; then
@@ -1757,7 +1742,7 @@ CHECKER -upd "$IDWIFIP $IDAWIFIP" "$VIPWIFIP" "$VCIPWIFIP" "IPWIFIPS"
 CHECKER -upd "$IDTTLF $IDATTLF" "$VIPTTLF" "$VCIPTTLF" "IPTTLFS"
 CHECKER -upd "$IDNT" "$VIPNT" "$VCIPNT" "IPNTS"
 CHECKER -upd "$IDAPAUSBTF $IDAAPAUSBTF" "$VIPAPAUSBTF" "$VCIPAPAUSBTF" "IPAPAUSBTFS"
-#Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP
+#Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP/WOL
 CHECKER -upd "$IDBBB $IDABBB" "$VIPBBB" "$VCIPBBB" "IPBBBS"
 CHECKER -upd "$IDSELS $IDASELS" "$VIPSELS" "$VCIPSELS" "IPSELSS"
 CHECKER -upd "$IDCC" "$VIPCC" "$VCIPCC" "IPCCS"
@@ -1766,6 +1751,7 @@ CHECKER -upd "$IDJITC $IDAJITC" "$VIPJITC" "$VCIPJITC" "IPJITCS"
 CHECKER -upd "$IDDETACH" "$VIPDETACH" "$VCIPDETACH" "IPDETACHS"
 CHECKER -upd "$IDPIF" "$VIPPIF" "$VCIPPIF" "IPPIFS"
 CHECKER -upd "$IDLSP" "$VIPLSP" "$VCIPLSP" "IPLSPS"
+CHECKER -upd "$IDWOL" "$VIPWOL" "$VCIPWOL" "IPWOLS"
 #Other: FA/LED/PSS/UAA/SBU/SHS
 CHECKER -upd "$IDFPA" "$VIPFPA" "$VCIPFPA" "IPFPAS"
 CHECKER -upd "$IDLEDLO $IDALEDLO" "$VIPLEDLO" "$VCIPLEDLO" "IPLEDLOS"
@@ -6126,11 +6112,11 @@ UIP -s "$MSGVU AdAway Hosts $VIPVAAH (10000+)" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 IPAAHFS
 else
-UIP -s "$MSGVU Systemless Hosts $VIPVSH (90000+)" "$MSGVD No $MSGNIS"
+UIP -s "$MSGVU Systemless Hosts $VIPVSH (270000+)" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 IPSHFS
 else
-UIP -s "$MSGVU Energized Hosts $VIPEH (50000+ Or 300000+)" "$MSGVD No $MSGNIS"
+UIP -s "$MSGVU Energized Hosts $VIPEH (80000+ Or 440000+)" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 IPEHFS
 else
@@ -6138,7 +6124,7 @@ UIP -s "$MSGVU SH Hosts $VIPSHH (120000+)" "$MSGVD No $MSGNIS"
 if KEYCHOOSE; then
 IPSHHFS
 else
-UIP -s "$MSGVU Steven Hosts $VIPSH (480000+)" "$MSGVD No $MSGNUS"
+UIP -s "$MSGVU Steven Hosts $VIPSH (150000+)" "$MSGVD No $MSGNUS"
 if KEYCHOOSE; then
 IPSTEVENHFS
 fi
@@ -6189,7 +6175,7 @@ SETPERM -mm -msg
 }
 
 IPEHFS () {
-UIP -s "Choose Spark Or Ultimate" "$MSGVU Spark (50000+) $MSGRI" "$MSGVD Ultimate (300000+)"; KEYCHOOSE && FEHF="Spark" || FEHF="Ultimate"
+UIP -s "Choose Spark Or Ultimate" "$MSGVU Spark (80000+) $MSGRI" "$MSGVD Ultimate (440000+)"; KEYCHOOSE && FEHF="Spark" || FEHF="Ultimate"
 UZTI "Hosts" "Energized Hosts Files"
 HOSTSFILE="Energized-$FEHF-hosts"
 if $MAGISK; then
@@ -6656,7 +6642,7 @@ UIP "$MSGDI"
 
 } #
 
-{ #Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP
+{ #Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP/WOL
 
 IPBBB () {
 if FINDER -aiop "$SYSTEM/$BUSYBOX/busybox"; then
@@ -7023,9 +7009,13 @@ echo
 OPTIONS
 }
 
-OPTIONS" | tee /data/CC $IPMM/$MODID$MIPSB/CC >$NULL
+ID=\"\$(id -u)\"
+case \$ID in
+0) OPTIONS;;
+*) echo -e \"$MSGSD Superuser (su) Rights Is Needed!\"; exit 1;;
+esac" | tee /data/CC $IPMM/$MODID$MIPSB/CC >$NULL
 MSSERVICE -u "rm -f /data/CC" "CC"
-sed -i "s/#!\/system\/bin\/sh/#!\/sbin\/sh/g" /data/CC
+sed -i "s/#!\/system\/bin\/sh/#!\/sbin\/sh/g" /data/CC; sed -i '/ID/,/esac/d' /data/CC
 SETPERM -s /data/CC 0 0 0700
 SETPERM -mm -msg
 UIP "Usage:" "Run \"su -c CC\" In Terminal On BOOTMODE" "Or Run \"/*/CC\" In RECOVERY Terminal"
@@ -7042,6 +7032,11 @@ IPMMFRS () {
 UIP "$MSGIAM Magisk Manager For Recovery"
 PTMFI "$IDMMFR" "$IDAMMFR" "$MIPSB"
 $ECHO "#!$MIPSB/sh
+ID=\"\$(id -u)\"
+case \$ID in
+0) OPTIONS;;
+*) echo -e \"$MSGSD Superuser (su) Rights Is Needed!\"; exit 1;;
+esac
 
 MMODULES () { ls -1 $IPMM || echo \"$MSGSD <None>\"; }
 
@@ -7149,10 +7144,8 @@ read opt
 [ -z \"\$opt\" ] || exit 0
 echo
 OPTIONS
-}
-
-OPTIONS" | tee /data/MMFR $IPMM/$MODID$MIPSB/MMFR >$NULL
-sed -i "s/#!\/system\/bin\/sh/#!\/sbin\/sh/g" /data/MMFR
+}" | tee /data/MMFR $IPMM/$MODID$MIPSB/MMFR >$NULL
+sed -i "s/#!\/system\/bin\/sh/#!\/sbin\/sh/g" /data/MMFR; sed -i '/ID/,/esac/d' /data/MMFR
 SETPERM -s /data/MMFR 0 0 0700
 MMPR -v "Magisk Manager For Recovery" "$VIPMMFR" "$VCIPMMFR" "Magisk Manager For Recovery - Usage: Run \"su -c MMFR\" In Terminal On BOOTMODE Or Run \"/*/MMFR\" In RECOVERY Terminal"
 MSSERVICE -u "rm -f /data/MMFR" "MMFR"
@@ -7215,7 +7208,11 @@ echo
 OPTIONS
 }
 
-OPTIONS" > $IPMM/$MODID$MIPSB/JITC
+ID=\"\$(id -u)\"
+case \$ID in
+0) OPTIONS;;
+*) echo -e \"$MSGSD Superuser (su) Rights Is Needed!\"; exit 1;;
+esac" > $IPMM/$MODID$MIPSB/JITC
 MMPR -v "Just In Time Compiler" "$VIPJITC" "$VCIPJITC" "Just In Time Compiler For Force ReGenerate vdex/odex/art Files & Adding A Little Speed Open/Usage All Apps - Usage: Run \"su -c JITC\" In Terminal On BOOTMODE"
 echo -e "dalvik.vm.dex2oat-filter=everything
 dalvik.vm.dex2oat-threads=8
@@ -7271,6 +7268,184 @@ fi
 
 IPLSPS () {
 UZTI -i "LSPosed" "Zygisk LSPosed"
+}
+
+IPWOL () {
+if $MAGISK; then
+UCSA "$MSGIP Wake On Lan $VIPWOL?" "IPWOLS" "$IDWOL"
+fi
+}
+
+IPWOLS () {
+UIP "$MSGIAM Wake On Lan"
+PTMFI -nm  "$IDWOL" "$MIPSB"
+cp -rf $WOL $IPMM/$MODID$MIPSB/wolup
+$ECHO "#!$MIPSB/sh
+
+ADDMANUALLY() {
+clear
+echo \"$MSGSD Add New Device Manually\"
+echo -n \"$MSGSD Enter IP Address: \"
+read IP; [ -z \"\$IP\" ] && IP=\"192.168.1.1\"
+echo -n \"$MSGSD Enter MAC Address: \"
+read MAC; [ -z \"\$MAC\" ] && MAC=\"DO:LB:AY:OB:IN:AA\"
+echo -n \"$MSGSD Enter Port (Default Is 9): \"
+read PORT; [ -z \"\$PORT\" ] && PORT=9
+echo -n \"$MSGSD Enter Ping Port (Default Is 9): \"
+read PINGPORT; [ -z \"\$PINGPORT\" ] && PINGPORT=9
+echo -n \"$MSGSD Enter Name (Default Is NONAME): \"
+read NAME; [ -z \"\$NAME\" ] && NAME=NONAME
+echo \"\$IP|\$MAC|\$PORT|\$PINGPORT|\$NAME\" >> \"\$WOL_FILE\"
+echo \"$MSGSD Device Saved!\"
+SHOWDEVICES
+}
+
+ADDFROMLAN() {
+clear
+echo \"$MSGSD Devices From Local Network\"
+TMP_FILE=\"$IPDLTMP/lan_scan.txt\" INDEX=1
+> \"\$TMP_FILE\"
+
+ip neigh | while read -r LINE; do
+IP=\$(echo \"\$LINE\" | awk '{print \$1}') MAC=\$(echo \"\$LINE\" | awk '{print \$5}')
+if [ \"\$MAC\" != \"FAILED\" ] && [ -n \"\$MAC\" ]; then
+echo \"$MSGSD \$INDEX) IP: \$IP | MAC: \$MAC\"
+echo \"\$IP|\$MAC\" >> \"\$TMP_FILE\"
+INDEX=\$((INDEX + 1))
+fi
+done
+
+if [ ! -s \"\$TMP_FILE\" ]; then
+echo \"$MSGSD No Devices Found On The Network\"
+return
+fi
+
+echo -n \"$MSGSD Select Device Number (Or Press Enter To Cancel): \"
+read CHOICE
+[ -z \"\$CHOICE\" ] && return
+
+SELECTED=\$(sed -n \"\${CHOICE}p\" \"\$TMP_FILE\") IP=\$(echo \"\$SELECTED\" | cut -d'|' -f1) MAC=\$(echo \"\$SELECTED\" | cut -d'|' -f2)
+
+echo -n \"$MSGSD Enter Port (Default Is 9): \"
+read PORT; [ -z \"\$PORT\" ] && PORT=9
+echo -n \"$MSGSD Enter WOL Port (Default Is 9): \"
+read PINGPORT; [ -z \"\$PINGPORT\" ] && PINGPORT=9
+echo -n \"$MSGSD Enter Name (Default Is NONAME): \"
+read NAME; [ -z \"\$NAME\" ] && NAME=NONAME
+echo \"\$IP|\$MAC|\$PORT|\$PINGPORT|\$NAME\" >> \"\$WOL_FILE\"
+echo \"$MSGSD Device Added From LAN!\"
+rm -f \"\$TMP_FILE\"
+SHOWDEVICES
+}
+
+SHOWDEVICES() {
+clear
+if [ ! -f \"\$WOL_FILE\" ] || [ ! -s \"\$WOL_FILE\" ]; then
+echo \"$MSGSD No Saved Devices. Add One Using Option (f)\"
+return
+fi
+
+echo \"$MSGSD Saved Devices List\"
+local INDEX=1
+while IFS='|' read -r IP MAC PORT PINGPORT NAME; do
+echo \"$MSGSD \$INDEX) \$IP|\$MAC|\$PORT|\$PINGPORT|\$NAME\"
+INDEX=\$((INDEX + 1))
+done < \"\$WOL_FILE\"
+
+echo -n \"$MSGSD Select Device Number To Send WOL (Or Press Enter To Exit): \"
+read CHOICE
+
+if [ -z \"\$CHOICE\" ]; then return; fi
+
+local LINE=\$(sed -n \"\${CHOICE}p\" \"\$WOL_FILE\")
+IP=\$(echo \"\$LINE\" | cut -d'|' -f1) MAC=\$(echo \"\$LINE\" | cut -d'|' -f2) PORT=\$(echo \"\$LINE\" | cut -d'|' -f3) PINGPORT=\$(echo \"\$LINE\" | cut -d'|' -f4) NAME=\$(echo \"\$LINE\" | cut -d'|' -f5)
+
+echo -e \"$MSGSD Waking Up: \$IP|\$MAC|\$PORT|\$PINGPORT|\$NAME\"
+\$WOL \"\$MAC\" -i \"\$IP\" -p \"\$PORT\" >$NULL 2>&1
+}
+
+PINGDEVICE() {
+clear
+if [ ! -f \"\$WOL_FILE\" ] || [ ! -s \"\$WOL_FILE\" ]; then
+echo \"$MSGSD No Saved Devices. Add One Using Option (f)\"
+return
+fi
+
+echo \"$MSGSD Saved Devices List For Ping\"
+local INDEX=1
+while IFS='|' read -r IP MAC PORT PINGPORT NAME; do
+echo \"$MSGSD \$INDEX) \$IP|\$MAC|\$PORT|\$PINGPORT|\$NAME\"
+INDEX=\$((INDEX + 1))
+done < \"\$WOL_FILE\"
+
+echo -n \"$MSGSD Select Device Number To Ping (Or Press Enter To Cancel): \"
+read CHOICE
+
+[ -z \"\$CHOICE\" ] && return
+
+local LINE=\$(sed -n \"\${CHOICE}p\" \"\$WOL_FILE\")
+IP=\$(echo \"\$LINE\" | cut -d'|' -f1) PINGPORT=\$(echo \"\$LINE\" | cut -d'|' -f4)
+
+echo \"$MSGSD Pinging \$IP...\"
+nc -z \"\$IP\" \"\$PINGPORT\" >$NULL 2>&1
+
+if [ \$? -eq 0 ]; then
+echo \"\$MSGSD Device Is ONLINE And Responding On Port \$PINGPORT\"
+else
+echo \"$MSGSD nc Failed, Trying Regular Ping...\"
+ping -c 1 -W 1 \"\$IP\" >$NULL 2>&1
+if [ \$? -eq 0 ]; then
+echo \"$MSGSD Device Is ONLINE And Responding On Port \$PINGPORT\"
+else
+echo \"$MSGSD Device Is OFFLINE Or Not Responding On Port \$PINGPORT\"
+fi
+fi
+}
+
+OPTIONS() {
+clear
+echo -e \"$MSGCS\n$MSGSD Wake On Lan $VIPWOL\"
+local opt=\"\"
+while :; do
+echo -n \"$MSGCS
+$MSGSD Choose Varian:
+$MSGCS
+m) Add Device Manually
+l) Add Device From Local Network
+s) Show Device List And Send WOL
+p) Ping Device From List
+q) Quit
+$MSGCS
+?\"
+read opt
+echo
+case \$opt in
+m | M) ADDMANUALLY;;
+l | L) ADDFROMLAN;;
+s | S) SHOWDEVICES;;
+p | P) PINGDEVICE;;
+q | Q) exit 0;;
+*) OPTIONS;;
+esac
+break
+done
+
+echo -n \"$MSGCS
+$MSGSD Press <Enter> To Continue Or Write \\\"q <Enter>\\\" To Quit \"
+read opt
+[ -z \"\$opt\" ] || exit 0
+OPTIONS
+}
+
+ID=\"\$(id -u)\"
+case \$ID in
+0) if realpath $STORAGE/*/.WOL_DEVICES.txt >$NULL; then WOL_FILE=\"\$(realpath $STORAGE/*/.WOL_DEVICES.txt)\"; else WOL_FILE=\"$STORAGE/.WOL_DEVICES.txt\"; fi; WOL=\"$IPMM/$MODID$MIPSB/wolup\"; OPTIONS;;
+*) echo -e \"$MSGSD Superuser (su) Rights Is Needed!\"; exit 1;;
+esac" > $IPMM/$MODID$MIPSB/WOL
+MMPR -v "Wake On Lan" "$VIPWOL" "$VCIPWOL" "Wake On Lan - Usage: Run \"su -c WOL\" In Terminal On BOOTMODE"
+SETPERM -mm -msg
+UIP "Usage:" "Run \"su -c WOL\" In Terminal On BOOTMODE"
+WCANFTP "-bb"
 }
 
 } #
@@ -9205,7 +9380,7 @@ UCSA -ent "Audio: VFX(P)/DOLBY/AIST/SAQ/SIB/AML/ALCF/VS/DSM" "AUDIO_PRESETS"
 if [ -d $STORAGE/Applications ] && find $STORAGE/Applications -type f -name "*.apk" >$NULL; then IPAPP; fi
 GTRRRM
 UCSA -ent "Net: GPS/WIFI/TTL/DNS/APAUSBTF" "NET_PRESETS"
-UCSA -ent "Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP" "UTILITIES_PRESETS"
+UCSA -ent "Utilities: BB/SELS/CC/MMFR/JITC/Detach/PIF/LSP/WOL" "UTILITIES_PRESETS"
 UCSA -ent "Other: FA/LED/PSS/UAA/SBU/SHS" "OTHER_PRESETS"
 IPHF
 UCSA -ent "Tweaks: FGS/EHAP/FFE/E4KIYT/KL/4XMSAA/HWO/UGMSD/USGP" "TWEAKS_PRESETS"
@@ -9298,6 +9473,7 @@ IPDETACH
 IPPIF
 IPJITC
 IPLSP
+IPWOL
 }
 
 OTHER_PRESETS () {
