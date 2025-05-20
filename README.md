@@ -1,9 +1,9 @@
 ## AIO Project
 
 * <a href="https://sourceforge.net/projects/aioproject/">SF</a> || <a href="https://t.me/AIOProject">TG</a> || <a href="https://t.me/AIOProject_Chat">TG Chat</a> || <a href="https://github.com/LordOfTheLost/AIOProject">GITHUB</a><br>
-* Версия AIOPFMD: 25.04.25 (116) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/25.04.2025/AIOPFMD-25.04.25-%28116%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/165">TG</a>
+* Версия AIOPFMD: 20.05.25 (117) - Скачать: <a href="https://sourceforge.net/projects/aioproject/files/20.05.2025/AIOPFMD-20.05.25-%28117%29.zip/download">SF</a> || <a href="https://t.me/AIOProject/167">TG</a>
 * Общее/что нужно/может потребоваться:
-	- Нужен официальный MAGISK v27.0/v28.1 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
+	- Нужен официальный MAGISK v27.0/v28.1/v29.0 и/или RECOVERY с нормальным sh/ash/bash и монтированием с нормальными путями;
 	- Работает только на Arm и/или Arm64;
 	- Минимально доступный патч начинается с Android 5.1.1 до Android 15 (основные патчи начинаются с Android 10);
 	- Некоторые патчи только для Snapdragon (для MTK и подобного говна тут ничего нет и не будет);
@@ -19,6 +19,13 @@
 <details>
 	<summary>All Changelog</summary>
 
+#### 20.05.25 (117) ####
+* Откатил изменения по UIP (это ломало вывод в RECOVERY);
+* Добавлена поддержка MAGISK v29.0;
+* Zygisk lSPosed обновлен до v1.10.1 (7183);
+* Zygisk Play Integrity Fix обновлен до v19.1;
+* SH Hosts обновлен до v3.51;
+* Steven Hosts обновлен до v1.8.0.
 #### 25.04.25 (116) ####
 * Zygisk lSPosed обновлен до v1.10.1 (7181);
 * Zygisk Play Integrity Fix обновлен до v19.0;

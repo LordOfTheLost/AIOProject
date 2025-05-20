@@ -5,12 +5,12 @@ set -x
 STORAGE="/data/media/0" AIOLOG="AIOLogs/$(date +"%Y-%m")" NULL="/dev/null"
 if realpath $STORAGE/*/AIOLogs >$NULL; then PLOGS="$(realpath $STORAGE/*/$AIOLOG)"; else PLOGS="$STORAGE/$AIOLOG"; fi
 mkdir -p $PLOGS; exec 2>$PLOGS/AIO-$( date +"%d-%H:%M:%S" ).log
-VCAIOPFMD="116" VAIOPFMD="25.04.25 ($VCAIOPFMD)" VAIOASH="v1.1" VCAIOASH="2"
+VCAIOPFMD="117" VAIOPFMD="20.05.25 ($VCAIOPFMD)" VAIOASH="v1.1" VCAIOASH="2"
 IPDLTMP="/data/local/tmp" LOCALTMPDIR="$IPDLTMP/AIOPFMD" DEVTMPDIR="/dev/AIOPFMD"
 IPDADB="/data/adb" IPDMM="/data/magisk"
 SERVICED="$IPDADB/service.d" POSTFSDATAD="$IPDADB/post-fs-data.d"
 IPMM="$IPDADB/modules" IPMMU="${IPMM}_update"
-FILEIN="$1" FILEOUT="$2" FILE="$3"
+[ -n "$ZIPFILE" ] && { FILEIN="dummy"; FILEOUT="1"; FILE="$ZIPFILE"; } || { FILEIN="$1"; FILEOUT="$2"; FILE="$3"; }
 ADDONS="$DEVTMPDIR/Addons"
 BB="$DEVTMPDIR/BB" TAR="$BB/busybox tar" UNZIP="$BB/busybox unzip" ECHO="$BB/busybox echo"
 BOOTMODE=$(ps -A 2>$NULL | grep -q zygote && echo true || echo false)
@@ -79,8 +79,8 @@ IDDAB="DisableAdBlocker" VIPDAB="v1.0" VCIPDAB="1"
 IDVAAH="AdAwayHosts" VIPVAAH="v5.9" VCIPVAAH="50"
 IDVSH="SystemlessHostsUnified" VIPVSH="v17.2-240906" VCIPVSH="172"
 IDEH="EnergizedHosts" VIPEH="v0.100" VCIPEH="0100"
-IDSHH="SHHosts" VIPSHH="v3.49" VCIPSHH="349"
-IDSH="StevenHosts" VIPSH="v1.7.7" VCIPSH="177"
+IDSHH="SHHosts" VIPSHH="v3.51" VCIPSHH="351"
+IDSH="StevenHosts" VIPSH="v1.8.0" VCIPSH="180"
 #Net: GPS/WIFI/TTL/DNS/APAUSBTF
 IDGPSP="GPSPatcher" IDAGPSP="optmizedgpsconf" VIPGPSP="v1.2" VCIPGPSP="3"
 IDWIFIP="WIFIPatcher" IDAWIFIP="wifi-bonding" VIPWIFIP="v1.5" VCIPWIFIP="6"
@@ -95,8 +95,8 @@ IDMMFR="MagiskManagerForRecovery" IDAMMFR="mm MMFR" VIPMMFR="v1.5" VCIPMMFR="6"
 IDJITC="JustInTimeCompiler" IDAJITC="JIT PackageCompileSpeed" VIPJITC="v1.5" VCIPJITC="6"
 IDDETACH="zygisk-detach" VIPDETACH="v1.20.0" VCIPDETACH="27"
 IDDETACHA="zygisk-detach-app" VIPDETACHA="v1.20.0" VCIPDETACHA="27"
-IDPIF="playintegrityfix" VIPPIF="v19.0" VCIPPIF="19000"
-IDLSP="zygisk_lsposed" VIPLSP="v1.10.1 (7181)" VCIPLSP="7181"
+IDPIF="playintegrityfix" VIPPIF="v19.1" VCIPPIF="19100"
+IDLSP="zygisk_lsposed" VIPLSP="v1.10.1 (7183)" VCIPLSP="7183"
 IDWOL="WakeOnLan" VIPWOL="v1.0" VCIPWOL="1"
 #Other: FA/LED/PSS/UAA/SBU/SHS
 IDFPA="FingerprintActions" VIPFPA="v1.3" VCIPFPA="4"
@@ -1041,7 +1041,7 @@ MAGISKVC="$(GET_FILE_PROP -s "$UFSH" "MAGISK_VER_CODE")"
 fi
 if $FINDMAGISK; then
 [ $MAGISKVC -ge 23010 ] && ZYGISK=true
-if [ $MAGISKVC -lt 27000 ] || [ $MAGISKVC -gt 28100 ] || [ "$(grep "delta" "$UFSH")" ] || [ "$(grep "alpha" "$UFSH")" ] || [ "$(grep "Lygisk" "$UFSH")" ]; then
+if [ $MAGISKVC -lt 27000 ] || [ $MAGISKVC -gt 29000 ] || [ "$(grep "delta" "$UFSH")" ] || [ "$(grep "alpha" "$UFSH")" ] || [ "$(grep "Lygisk" "$UFSH")" ]; then
 UIP "Found Unsupported Magisk!" "Please Install Official Magisk v27.0 Or 28.1!"
 fi
 fi
@@ -1154,12 +1154,15 @@ exit 0
 fi
 }
 
+ui_print () {
+$BOOTMODE && echo "$MSGSD $1" || echo -e "ui_print $MSGSD $1\nui_print" >> /proc/self/fd/$FILEOUT
+}
+
 UIP () {
 case $1 in
--s) UIP -cs; for uip in "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "${10}" "${11}"; do [ "$uip" ] && UIP -p "$uip" || break; done;;
--cs) $BOOTMODE && echo "$MSGCS" || echo -e "UIP -p $MSGCS\nUIP -p" >> /proc/self/fd/$FILEOUT;;
--p) $BOOTMODE && echo "$MSGSD $2" || echo -e "UIP -p $MSGSD $2\nUIP -p" >> /proc/self/fd/$FILEOUT;;
-*) for uip in "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "${10}"; do [ "$uip" ] && UIP -p "$uip" || break; done;;
+-s) UIP -cs; for uip in "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "${10}" "${11}"; do if [ "$uip" ]; then ui_print "$uip"; else break; fi; done;;
+-cs) $BOOTMODE && echo "$MSGCS" || echo -e "ui_print $MSGCS\nui_print" >> /proc/self/fd/$FILEOUT;;
+*) for uip in "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8" "$9" "${10}"; do if [ "$uip" ]; then ui_print "$uip"; else break; fi; done;;
 esac
 }
 
